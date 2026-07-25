@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Page not found — {{ meta.site_name }}{% endblock %}
+{% block content %}
+<h1>Page not found</h1>
+<p class="lede">That address doesn't match anything on this site.</p>
+<p>Agreements are retired from the register when they expire, so a page that existed in an earlier edition may have gone. Try searching:</p>
+<ul>
+  <li><a href="{{ meta.base_path }}/agreements/">All agreements</a></li>
+  <li><a href="{{ meta.base_path }}/organisations/">All organisations</a></li>
+  <li><a href="{{ meta.base_path }}/datasets/">All datasets</a></li>
+</ul>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}{{ dataset.name }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ dataset.agreement_count }} agreements cover the release of {{ dataset.name }} to {{ dataset.organisations|length }} organisations.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li><a href="{{ meta.base_path }}/datasets/">Datasets</a></li>
+    <li aria-current="page">{{ dataset.name }}</li>
+  </ol>
+</nav>
+
+<h1>{{ dataset.name }}</h1>
+
+<dl class="key-facts">
+  <div><dt>Agreements naming it</dt><dd>{{ dataset.agreement_count|commas }}</dd></div>
+  <div><dt>Organisations</dt><dd>{{ dataset.organisations|length|commas }}</dd></div>
+  <div><dt>Files released</dt><dd>{{ dataset.files_released|commas }}</dd></div>
+</dl>
+
+<h2>How it is described in the register</h2>
+<p class="hint">Where several values are listed, different agreements record this dataset differently.</p>
+<dl class="key-facts wide">
+  {% for label, key in [("Type of data", "type_of_data"), ("Sensitivity", "sensitivity"), ("Frequency", "frequency"), ("Legal basis for provision", "legal_basis")] %}
+  {% set values = dataset.attributes.get(key, []) %}
+  <div>
+    <dt>{{ label }}</dt>
+    {% if values|length > 1 %}
+    <dd><ul class="value-list">{% for value in values %}<li>{{ value }}</li>{% endfor %}</ul></dd>
+    {% else %}
+    <dd>{{ values[0] if values else "Not stated" }}</dd>
+    {% endif %}
+  </div>
+  {% endfor %}
+</dl>
+
+<h2>Agreements covering this dataset</h2>
+<form class="filters" data-filter-form data-target="dataset-agreements" role="search" aria-label="Filter agreements">
+  <div class="field">
+    <label for="q">Search these agreements</label>
+    <input type="search" id="q" data-filter-text autocomplete="off" placeholder="organisation or title">
+  </div>
+  <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
+</form>
+<p class="result-count" role="status" data-filter-count>Showing all {{ dataset.agreement_count|commas }} agreements.</p>
+
+<div class="table-scroll">
+<table class="data-table" id="dataset-agreements">
+  <caption class="visually-hidden">Agreements covering {{ dataset.name }}</caption>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Type</th><th scope="col">Latest term</th><th scope="col">Commercial</th></tr></thead>
+  <tbody>
+  {% for a in dataset.agreements|sort(attribute='coverage_end', reverse=true) %}
+    <tr data-search="{{ (a.title ~ ' ' ~ a.organisation ~ ' ' ~ a.base_reference)|lower }}">
+      <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
+        <span class="ref">{{ a.base_reference }}</span></th>
+      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation }}</a></td>
+      <td>{{ a.organisation_type or "—" }}</td>
+      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td>{{ a.commercial or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

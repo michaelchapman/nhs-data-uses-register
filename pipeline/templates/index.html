@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Who has access to NHS data, and what for?</h1>
+
+<p class="lede">Every month NHS England publishes the Data Uses Register: a spreadsheet of every agreement under which patient data has been released to an organisation outside NHS England. This site turns that spreadsheet into pages you can read, search, link to and cite.</p>
+
+<div class="stat-grid">
+  <div class="stat"><span class="stat-number">{{ stats.agreements|commas }}</span><span class="stat-label">data sharing agreements</span></div>
+  <div class="stat"><span class="stat-number">{{ stats.organisations|commas }}</span><span class="stat-label">organisations</span></div>
+  <div class="stat"><span class="stat-number">{{ stats.datasets|commas }}</span><span class="stat-label">datasets released</span></div>
+  <div class="stat"><span class="stat-number">{{ stats.files_released|commas }}</span><span class="stat-label">files released</span></div>
+</div>
+
+<p class="stat-note">Across {{ stats.agreement_versions|commas }} agreement versions in the {{ meta.edition|edition }} register. {{ stats.active_agreements|commas }} agreements have not yet reached their end date. {{ stats.commercial|commas }} are recorded as being for commercial purposes.</p>
+
+<div class="cards">
+  <section class="card">
+    <h2><a href="{{ meta.base_path }}/agreements/">Browse agreements</a></h2>
+    <p>All {{ stats.agreements|commas }} agreements, each on one page with its full purpose, expected outputs, benefits, datasets and renewal history — instead of one row per renewal spread across a {{ stats.agreement_versions|commas }}-row spreadsheet.</p>
+  </section>
+  <section class="card">
+    <h2><a href="{{ meta.base_path }}/organisations/">By organisation</a></h2>
+    <p>See everything a single university, council, trust or company has been given, in one place.</p>
+  </section>
+  <section class="card">
+    <h2><a href="{{ meta.base_path }}/datasets/">By dataset</a></h2>
+    <p>Start from a dataset — Hospital Episode Statistics, civil registration deaths, GP data — and see who receives it.</p>
+  </section>
+  <section class="card">
+    <h2><a href="{{ meta.base_path }}/changes/">What changed this month</a></h2>
+    <p>{% if changes.comparable %}{{ changes.added|length|commas }} added and {{ changes.amended|length|commas }} amended since the {{ changes.previous_edition|edition }} edition.{% else %}Month-on-month comparison starts from the next published edition.{% endif %}</p>
+  </section>
+  <section class="card">
+    <h2><a href="{{ meta.base_path }}/downloads/">Download the data</a></h2>
+    <p>Flat CSV extracts of agreements, datasets and releases — ready for a spreadsheet or a script, no 29&nbsp;MB workbook required.</p>
+  </section>
+  <section class="card">
+    <h2><a href="{{ meta.base_path }}/about/">How this works</a></h2>
+    <p>What the register does and does not cover, how this site transforms it, and the caveats that matter.</p>
+  </section>
+</div>
+
+<h2 id="types">Who holds agreements</h2>
+<table class="data-table">
+  <caption>Agreements by applicant organisation type</caption>
+  <thead><tr><th scope="col">Organisation type</th><th scope="col" class="num">Agreements</th></tr></thead>
+  <tbody>
+  {% for name, count in stats.organisation_types[:12] %}
+    <tr><th scope="row">{{ name }}</th><td class="num">{{ count|commas }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
