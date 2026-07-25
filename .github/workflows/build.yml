@@ -1,0 +1,75 @@
+name: Build and deploy
+
+on:
+  # NHS England publishes a new edition each month. Run on the 5th to give the
+  # page time to settle, and again on the 12th in case the 5th was too early.
+  schedule:
+    - cron: "17 6 5,12 * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      skip_snapshot:
+        description: "Build without recording an edition fingerprint"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # to commit the edition snapshot
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Build site
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io
+          # GitHub project pages are served from /<repo>/. Set this to an empty
+          # string if you move the site to a custom domain or a user page.
+          SITE_BASE_PATH: /${{ github.event.repository.name }}
+        run: |
+          python -m pipeline.run ${{ inputs.skip_snapshot && '--no-snapshot' || '' }}
+
+      - name: Commit edition snapshot
+        if: ${{ !inputs.skip_snapshot }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots
+          if git diff --cached --quiet; then
+            echo "No new edition to record."
+          else
+            edition=$(python -c "import json,pathlib;print(json.loads(pathlib.Path('_site/meta.json').read_text())['edition'])")
+            git commit -m "Record $edition edition of the data uses register"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

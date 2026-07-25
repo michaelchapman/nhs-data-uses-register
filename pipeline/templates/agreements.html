@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Agreements — {{ meta.site_name }}{% endblock %}
+{% block description %}Search all {{ stats.agreements }} data sharing agreements in the NHS England Data Uses Register by organisation, dataset, purpose or type.{% endblock %}
+{% block content %}
+<h1>Data sharing agreements</h1>
+<p class="lede">{{ stats.agreements|commas }} agreements, each shown once with its renewals grouped underneath. Filtering happens in your browser — the whole table is on this page, so it also works with JavaScript turned off.</p>
+
+<form class="filters" data-filter-form data-target="agreements-table" role="search" aria-label="Filter agreements">
+  <div class="field">
+    <label for="q">Search agreements</label>
+    <input type="search" id="q" name="q" data-filter-text autocomplete="off"
+           placeholder="e.g. cancer, Kings College, HES">
+    <p class="hint" id="q-hint">Matches title, reference number, organisation and dataset names.</p>
+  </div>
+  <div class="field">
+    <label for="type">Organisation type</label>
+    <select id="type" data-filter-select data-key="type">
+      <option value="">All types</option>
+      {% for name, count in stats.organisation_types %}
+      <option value="{{ name }}">{{ name }} ({{ count|commas }})</option>
+      {% endfor %}
+    </select>
+  </div>
+  <fieldset class="field checkboxes">
+    <legend>Show only</legend>
+    <label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Commercial purposes</label>
+    <label><input type="checkbox" data-filter-flag data-key="active" value="yes"> Currently in term</label>
+    <label><input type="checkbox" data-filter-flag data-key="sublicensing" value="yes"> Sublicensing allowed</label>
+  </fieldset>
+  <p class="filter-actions">
+    <button type="button" data-filter-reset>Clear filters</button>
+  </p>
+</form>
+
+<p class="result-count" role="status" data-filter-count>Showing all {{ stats.agreements|commas }} agreements.</p>
+
+<div class="table-scroll">
+<table class="data-table sortable" id="agreements-table">
+  <caption class="visually-hidden">Data sharing agreements in the {{ meta.edition|edition }} register</caption>
+  <thead>
+    <tr>
+      <th scope="col">Agreement</th>
+      <th scope="col">Organisation</th>
+      <th scope="col">Type</th>
+      <th scope="col" class="num">Datasets</th>
+      <th scope="col" class="num">Files</th>
+      <th scope="col">Latest term</th>
+      <th scope="col">Commercial</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in agreements %}
+    <tr data-type="{{ a.organisation_type }}"
+        data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}"
+        data-sublicensing="{{ 'yes' if a.sublicensing == 'Yes' else 'no' }}"
+        data-active="{{ 'yes' if a.coverage_end >= meta.today else 'no' }}"
+        data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.organisation ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
+      <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
+        <span class="ref">{{ a.base_reference }}</span></th>
+      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation }}</a></td>
+      <td>{{ a.organisation_type or "—" }}</td>
+      <td class="num">{{ a.dataset_names|length }}</td>
+      <td class="num">{{ a.files_released|commas }}</td>
+      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td>{{ a.commercial or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

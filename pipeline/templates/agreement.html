@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% set v = agreement.latest %}
+{% block title %}{{ agreement.title }} — {{ agreement.organisation }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ agreement.organisation }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li><a href="{{ meta.base_path }}/agreements/">Agreements</a></li>
+    <li aria-current="page">{{ agreement.base_reference }}</li>
+  </ol>
+</nav>
+
+<h1>{{ agreement.title or agreement.base_reference }}</h1>
+<p class="lede"><a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation }}</a>{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+
+<dl class="key-facts">
+  <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
+  <div><dt>Current version</dt><dd>{{ v.reference }}</dd></div>
+  <div><dt>Term of current version</dt><dd>{{ v.start_date|date }} to {{ v.end_date|date }}</dd></div>
+  <div><dt>First seen from</dt><dd>{{ agreement.first_start|date }}</dd></div>
+  <div><dt>Data controller</dt><dd>{{ v.controller_basis or "Not stated" }}</dd></div>
+  <div><dt>Commercial purposes</dt><dd>{{ v.commercial or "Not stated" }}</dd></div>
+  <div><dt>Sublicensing</dt><dd>{{ v.sublicensing or "Not stated" }}</dd></div>
+  <div><dt>Files released to date</dt><dd>{{ agreement.files_released|commas }}</dd></div>
+</dl>
+
+{% if v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}
+<h2>Data controllers</h2>
+<ul class="plain">
+  {% for controller in v.controllers %}<li>{{ controller }}</li>{% endfor %}
+</ul>
+{% endif %}
+
+<h2>Why the data was released</h2>
+{% for section, text in [
+  ("Objective for processing", v.objective),
+  ("Processing activities", v.activities),
+  ("Expected output", v.expected_output),
+  ("Expected measurable benefits", v.expected_benefits),
+  ("Benefits reported so far", v.yielded_benefits),
+] %}
+<section class="prose-block">
+  <h3>{{ section }}</h3>
+  {% if text %}
+    {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
+  {% else %}
+    <p class="empty">Not stated in the register.</p>
+  {% endif %}
+</section>
+{% endfor %}
+
+<h2 id="datasets">Datasets on the current version</h2>
+{% if v.datasets %}
+<div class="table-scroll">
+<table class="data-table">
+  <caption class="visually-hidden">Datasets approved under {{ v.reference }}</caption>
+  <thead><tr>
+    <th scope="col">Dataset</th><th scope="col">Type of data</th><th scope="col">Sensitivity</th>
+    <th scope="col">Frequency</th><th scope="col">Legal basis</th><th scope="col">Confidential data</th>
+  </tr></thead>
+  <tbody>
+  {% for d in v.datasets %}
+    <tr>
+      <th scope="row"><a href="{{ meta.base_path }}/datasets/{{ d.name|slug }}/">{{ d.name }}</a></th>
+      <td>{{ d.type_of_data or "—" }}</td>
+      <td>{{ d.sensitivity or "—" }}</td>
+      <td>{{ d.frequency or "—" }}</td>
+      <td>{{ d.legal_basis or "—" }}</td>
+      <td>{{ d.confidentiality or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+<p class="empty">No datasets are listed against the current version in the register.</p>
+{% endif %}
+
+<h2 id="releases">Files released</h2>
+{% if v.releases %}
+<p>Files released against version {{ v.version }} of this agreement, summarised by dataset.</p>
+<div class="table-scroll">
+<table class="data-table">
+  <caption class="visually-hidden">Files released under {{ v.reference }}</caption>
+  <thead><tr><th scope="col">Dataset</th><th scope="col" class="num">Files</th><th scope="col">First released</th><th scope="col">Last released</th><th scope="col">Opt-outs applied</th></tr></thead>
+  <tbody>
+  {% for r in v.releases %}
+    <tr><th scope="row">{{ r.dataset }}</th><td class="num">{{ r.files|commas }}</td>
+      <td>{{ r.first_month|month }}</td><td>{{ r.last_month|month }}</td><td>{{ r.opt_outs_applied or "—" }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+<p class="empty">No file releases are recorded against the current version.</p>
+{% endif %}
+
+<h2 id="history">Version history</h2>
+<p>The register lists each renewal of this agreement as a separate row. There {{ "is" if agreement.versions|length == 1 else "are" }} {{ agreement.versions|length }}.</p>
+{% for version in agreement.versions|reverse %}
+<details class="version" {% if loop.first %}open{% endif %}>
+  <summary>
+    <span class="version-ref">{{ version.reference }}</span>
+    <span class="version-term">{{ version.start_date|date }} to {{ version.end_date|date }}</span>
+    {% if change_status.get(version.reference) == 'new' %}<span class="tag tag-new">New this month</span>
+    {% elif change_status.get(version.reference) == 'renewal' %}<span class="tag tag-new">Added this month</span>
+    {% elif change_status.get(version.reference) == 'amended' %}<span class="tag tag-amended">Amended this month</span>{% endif %}
+  </summary>
+  <dl class="key-facts compact">
+    <div><dt>Title</dt><dd>{{ version.title or "—" }}</dd></div>
+    <div><dt>Commercial</dt><dd>{{ version.commercial or "—" }}</dd></div>
+    <div><dt>Sublicensing</dt><dd>{{ version.sublicensing or "—" }}</dd></div>
+    <div><dt>Datasets</dt><dd>{{ version.datasets|length }}</dd></div>
+    <div><dt>Files released</dt><dd>{{ version.files_released|commas }}</dd></div>
+  </dl>
+  {% if version.datasets %}
+  <p class="dataset-line"><strong>Datasets:</strong> {{ version.datasets|map(attribute='name')|join('; ') }}</p>
+  {% endif %}
+  {% if version.reference != v.reference %}
+    {% for section, text in [("Objective for processing", version.objective), ("Expected output", version.expected_output), ("Benefits reported", version.yielded_benefits)] %}
+      {% if text %}
+      <h4>{{ section }}</h4>
+      {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</details>
+{% endfor %}
+
+<p class="source-note">Source: <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>, {{ meta.edition|edition }} edition of the NHS England Data Uses Register. Search that workbook for <code>{{ agreement.base_reference }}</code> to see the original rows.</p>
+{% endblock %}

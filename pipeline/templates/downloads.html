@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Download the data — {{ meta.site_name }}{% endblock %}
+{% block description %}Flat CSV extracts of the NHS England Data Uses Register: agreements, datasets and file releases.{% endblock %}
+{% block content %}
+<h1>Download the data</h1>
+<p class="lede">The register's own format is a single 29&nbsp;MB workbook with three sheets. These are the same records as flat CSVs, one row per thing, ready for a spreadsheet or a script. Regenerated with every build from the {{ meta.edition|edition }} edition.</p>
+
+{% for file in downloads %}
+<section class="download">
+  <h2><a href="{{ meta.base_path }}/downloads/{{ file.name }}" download>{{ file.name }}</a> <span class="filesize">{{ file.size_kb|commas }} KB</span></h2>
+  <p class="columns"><strong>Columns:</strong> {{ file.header|join(", ") }}</p>
+</section>
+{% endfor %}
+
+<h2>Machine-readable metadata</h2>
+<p><a href="{{ meta.base_path }}/meta.json">meta.json</a> gives the edition, source URL, retrieval time and headline counts for the current build. Per-edition fingerprints used for change tracking live in <code>data/snapshots/</code> in the <a href="{{ meta.repo_url }}">repository</a>.</p>
+
+<h2>The original workbook</h2>
+<p>For the authoritative version, including the file-by-file release rows that are summarised here, download it from NHS England: <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>, listed on the <a href="{{ meta.source_page }}">Data Uses Register page</a>.</p>
+
+<h2>Reuse</h2>
+<p>Register content is under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Please attribute NHS England as the source rather than this site.</p>
+{% endblock %}

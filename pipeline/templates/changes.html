@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}What changed — {{ meta.site_name }}{% endblock %}
+{% block description %}Agreements added, amended and removed between editions of the NHS England Data Uses Register.{% endblock %}
+{% macro rows(items, show_kind=false) %}
+<div class="table-scroll">
+<table class="data-table">
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Reference</th>{% if show_kind %}<th scope="col">Kind</th>{% endif %}</tr></thead>
+  <tbody>
+  {% for item in items %}
+    <tr>
+      <th scope="row">
+        {% if by_slug.get(item.base) %}
+        <a href="{{ meta.base_path }}/agreements/{{ by_slug[item.base].slug }}/">{{ item.title or item.base }}</a>
+        {% else %}{{ item.title or item.base }}{% endif %}
+      </th>
+      <td>{{ item.org }}</td>
+      <td class="ref-cell">{{ item.reference }}</td>
+      {% if show_kind %}<td>{{ "New agreement" if item.kind == "new" else "New version of an existing agreement" }}</td>{% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endmacro %}
+{% block content %}
+<h1>What changed</h1>
+
+{% if not changes.comparable %}
+<p class="lede">This is the first edition this site has processed, so there is nothing to compare it with yet.</p>
+<p>From the next monthly publication onwards, this page will list agreements that were added, amended or withdrawn between editions. The comparison works by fingerprinting every agreement version in each edition and storing that fingerprint in the site's repository, so the history builds up over time.</p>
+{% else %}
+<p class="lede">Comparing the {{ meta.edition|edition }} edition with {{ changes.previous_edition|edition }}.</p>
+
+<div class="stat-grid">
+  <div class="stat"><span class="stat-number">{{ changes.added|length|commas }}</span><span class="stat-label">added</span></div>
+  <div class="stat"><span class="stat-number">{{ changes.amended|length|commas }}</span><span class="stat-label">amended</span></div>
+  <div class="stat"><span class="stat-number">{{ changes.removed|length|commas }}</span><span class="stat-label">no longer listed</span></div>
+</div>
+
+<h2 id="added">Added ({{ changes.added|length|commas }})</h2>
+{% if changes.added %}
+<p>Agreement versions that appear in this edition but not the last. A "new version of an existing agreement" is usually a renewal or amendment of something already in the register.</p>
+{{ rows(changes.added, show_kind=true) }}
+{% else %}<p class="empty">Nothing added.</p>{% endif %}
+
+<h2 id="amended">Amended ({{ changes.amended|length|commas }})</h2>
+{% if changes.amended %}
+<p>Agreement versions whose details changed in place — a revised purpose, a different end date, a change to the datasets listed, or a benefits statement that has been filled in.</p>
+{{ rows(changes.amended) }}
+{% else %}<p class="empty">Nothing amended.</p>{% endif %}
+
+<h2 id="removed">No longer listed ({{ changes.removed|length|commas }})</h2>
+{% if changes.removed %}
+<p>Present in the previous edition and absent from this one. This usually means an expired agreement has been retired from the published register rather than anything being withdrawn.</p>
+{{ rows(changes.removed) }}
+{% else %}<p class="empty">Nothing removed.</p>{% endif %}
+{% endif %}
+
+<h2>Editions processed</h2>
+<ul class="plain">
+  {% for edition in meta.editions %}
+  <li>{{ edition.edition|edition }} — {{ edition.counts.agreement_versions|commas }} agreement versions, retrieved {{ edition.retrieved[:10]|date }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for path in ["/", "/agreements/", "/organisations/", "/datasets/", "/changes/", "/downloads/", "/about/"] %}
+  <url><loc>{{ meta.site_url }}{{ meta.base_path }}{{ path }}</loc></url>
+{% endfor %}
+{% for a in agreements %}
+  <url><loc>{{ meta.site_url }}{{ meta.base_path }}/agreements/{{ a.slug }}/</loc></url>
+{% endfor %}
+{% for o in organisations %}
+  <url><loc>{{ meta.site_url }}{{ meta.base_path }}/organisations/{{ o.slug }}/</loc></url>
+{% endfor %}
+{% for d in datasets %}
+  <url><loc>{{ meta.site_url }}{{ meta.base_path }}/datasets/{{ d.slug }}/</loc></url>
+{% endfor %}
+</urlset>

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}About — {{ meta.site_name }}{% endblock %}
+{% block description %}How this site reformats the NHS England Data Uses Register, what the register covers, and the caveats that matter.{% endblock %}
+{% block content %}
+<h1>About this site</h1>
+
+<p class="lede">NHS England publishes the Data Uses Register as a monthly spreadsheet. It is complete and authoritative, and it is also a {{ stats.agreement_versions|commas }}-row, 29&nbsp;MB workbook with three sheets you have to join by hand. This site is the same data, rearranged so a person can read it.</p>
+
+<h2>What the register covers</h2>
+<p>The Data Uses Register records data sharing agreements under which NHS England has released data to organisations outside NHS England, through the Data Access Request Service (DARS). For each agreement it gives the applicant organisation, the data controllers, the term, the stated purpose and expected benefits, the datasets approved, and the individual files released.</p>
+<p>It does <strong>not</strong> cover NHS England's internal uses of data (a separate internal register), the Data Sharing Framework Contracts that sit above individual agreements, or releases made by other organisations. Links to those are on the <a href="{{ meta.source_page }}">official register page</a>.</p>
+
+<h2>What this site changes</h2>
+<ul>
+  <li><strong>One page per agreement, not one row per renewal.</strong> The register lists every version of an agreement separately — {{ stats.agreement_versions|commas }} rows for {{ stats.agreements|commas }} agreements. Here versions are grouped under the agreement, with the history kept underneath.</li>
+  <li><strong>The three sheets are joined.</strong> Datasets and file releases are shown on the agreement they belong to, rather than in separate sheets keyed on a reference number.</li>
+  <li><strong>Free text is readable.</strong> Purpose, processing activities, expected outputs and benefits are laid out as prose instead of a single overflowing cell.</li>
+  <li><strong>Organisations and datasets get their own pages,</strong> so you can start from "what has this university received" or "who gets Hospital Episode Statistics".</li>
+  <li><strong>Everything has a stable URL</strong> you can link to or cite.</li>
+  <li><strong>Month-on-month changes are tracked</strong> on the <a href="{{ meta.base_path }}/changes/">what changed</a> page.</li>
+  <li><strong>Flat CSVs are available</strong> on the <a href="{{ meta.base_path }}/downloads/">download</a> page for anyone who wants to do their own analysis.</li>
+</ul>
+
+<h2>Accessibility</h2>
+<p>Pages are plain semantic HTML: one <code>h1</code> per page, real table headers with scope, visible focus outlines, a skip link, and text that reflows to 400% zoom. Filtering is a progressive enhancement — every table is fully present in the HTML, so the site works with JavaScript disabled and with a screen reader. There are no cookies, no analytics and no third-party requests.</p>
+<p>If something here is hard to use, please <a href="{{ meta.repo_url }}/issues">open an issue</a>.</p>
+
+<h2>Caveats</h2>
+<ul>
+  <li><strong>This is a mirror, not the source.</strong> Transformation bugs are possible. For anything consequential, check the <a href="{{ meta.source_url }}">original workbook</a>.</li>
+  <li><strong>The register describes agreements, not outcomes.</strong> "Expected benefits" is what an applicant said they intended, not an audited result.</li>
+  <li><strong>An agreement is not the same as an active data flow.</strong> The files-released figures give a better sense of what actually moved.</li>
+  <li><strong>Counts change between editions</strong> as NHS England corrects entries and retires expired agreements, so figures here will not always reconcile with earlier published analyses.</li>
+  <li><strong>File releases are summarised by dataset</strong> rather than listed file by file. The full file-level rows are in the source workbook.</li>
+</ul>
+
+<h2>How it stays up to date</h2>
+<p>A GitHub Actions workflow runs monthly. It reads the official register page, finds the current workbook link, downloads it, rebuilds every page, and deploys. It also records a fingerprint of each agreement version so the next run can report what changed. The whole pipeline is in the <a href="{{ meta.repo_url }}">repository</a> — corrections and pull requests welcome.</p>
+
+<h2>Licence</h2>
+<p>The register content is published by NHS England under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a> and remains under that licence here. The site's own code is MIT licensed.</p>
+{% endblock %}

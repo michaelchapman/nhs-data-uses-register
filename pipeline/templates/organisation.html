@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}{{ organisation.name }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ organisation.name }} holds {{ organisation.agreement_count }} data sharing agreements with NHS England covering {{ organisation.dataset_names|length }} datasets.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li><a href="{{ meta.base_path }}/organisations/">Organisations</a></li>
+    <li aria-current="page">{{ organisation.name }}</li>
+  </ol>
+</nav>
+
+<h1>{{ organisation.name }}</h1>
+<p class="lede">{{ organisation.type or "Organisation type not stated" }}</p>
+
+<dl class="key-facts">
+  <div><dt>Agreements</dt><dd>{{ organisation.agreement_count|commas }}</dd></div>
+  <div><dt>Distinct datasets</dt><dd>{{ organisation.dataset_names|length }}</dd></div>
+  <div><dt>Files released</dt><dd>{{ organisation.files_released|commas }}</dd></div>
+  <div><dt>Latest agreement end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
+</dl>
+
+<h2>Agreements</h2>
+<div class="table-scroll">
+<table class="data-table">
+  <caption class="visually-hidden">Agreements held by {{ organisation.name }}</caption>
+  <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Commercial</th></tr></thead>
+  <tbody>
+  {% for a in organisation.agreements|sort(attribute='coverage_end', reverse=true) %}
+    <tr>
+      <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
+        <span class="ref">{{ a.base_reference }}</span></th>
+      <td class="num">{{ a.dataset_names|length }}</td>
+      <td class="num">{{ a.files_released|commas }}</td>
+      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td>{{ a.commercial or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<h2>Datasets received</h2>
+<ul class="pill-list">
+  {% for name in organisation.dataset_names %}
+  <li><a href="{{ meta.base_path }}/datasets/{{ name|slug }}/">{{ name }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Datasets — {{ meta.site_name }}{% endblock %}
+{% block description %}The {{ stats.datasets }} NHS datasets released under agreements in the Data Uses Register, ranked by how many organisations receive them.{% endblock %}
+{% block content %}
+<h1>Datasets</h1>
+<p class="lede">{{ stats.datasets|commas }} distinct datasets appear in the {{ meta.edition|edition }} register, ordered by how many agreements name them.</p>
+
+<form class="filters" data-filter-form data-target="datasets-table" role="search" aria-label="Filter datasets">
+  <div class="field">
+    <label for="q">Search datasets</label>
+    <input type="search" id="q" data-filter-text autocomplete="off" placeholder="e.g. mortality, HES, mental health">
+  </div>
+  <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
+</form>
+
+<p class="result-count" role="status" data-filter-count>Showing all {{ stats.datasets|commas }} datasets.</p>
+
+<div class="table-scroll">
+<table class="data-table" id="datasets-table">
+  <caption class="visually-hidden">Datasets released under the Data Uses Register</caption>
+  <thead><tr><th scope="col">Dataset</th><th scope="col" class="num">Agreements</th><th scope="col" class="num">Organisations</th><th scope="col" class="num">Files released</th></tr></thead>
+  <tbody>
+  {% for d in datasets %}
+    <tr data-search="{{ d.name|lower }}">
+      <th scope="row"><a href="{{ meta.base_path }}/datasets/{{ d.slug }}/">{{ d.name }}</a></th>
+      <td class="num">{{ d.agreement_count|commas }}</td>
+      <td class="num">{{ d.organisations|length|commas }}</td>
+      <td class="num">{{ d.files_released|commas }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

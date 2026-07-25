@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Organisations — {{ meta.site_name }}{% endblock %}
+{% block description %}The {{ stats.organisations }} organisations that hold data sharing agreements with NHS England under the Data Uses Register.{% endblock %}
+{% block content %}
+<h1>Organisations</h1>
+<p class="lede">{{ stats.organisations|commas }} organisations hold at least one agreement in the {{ meta.edition|edition }} register.</p>
+
+<form class="filters" data-filter-form data-target="organisations-table" role="search" aria-label="Filter organisations">
+  <div class="field">
+    <label for="q">Search organisations</label>
+    <input type="search" id="q" data-filter-text autocomplete="off" placeholder="e.g. Oxford, IQVIA, council">
+  </div>
+  <div class="field">
+    <label for="type">Organisation type</label>
+    <select id="type" data-filter-select data-key="type">
+      <option value="">All types</option>
+      {% for name, count in stats.organisation_types %}<option value="{{ name }}">{{ name }}</option>{% endfor %}
+    </select>
+  </div>
+  <fieldset class="field checkboxes">
+    <legend>Show only</legend>
+    <label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Has a commercial-purpose agreement</label>
+  </fieldset>
+  <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
+</form>
+
+<p class="result-count" role="status" data-filter-count>Showing all {{ stats.organisations|commas }} organisations.</p>
+
+<div class="table-scroll">
+<table class="data-table" id="organisations-table">
+  <caption class="visually-hidden">Organisations holding data sharing agreements</caption>
+  <thead><tr>
+    <th scope="col">Organisation</th><th scope="col">Type</th>
+    <th scope="col" class="num">Agreements</th><th scope="col" class="num">Datasets</th>
+    <th scope="col" class="num">Files released</th><th scope="col">Latest end date</th>
+  </tr></thead>
+  <tbody>
+  {% for o in organisations %}
+    <tr data-type="{{ o.type }}" data-commercial="{{ 'yes' if o.commercial else 'no' }}"
+        data-search="{{ (o.name ~ ' ' ~ o.type)|lower }}">
+      <th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name }}</a></th>
+      <td>{{ o.type or "—" }}</td>
+      <td class="num">{{ o.agreement_count|commas }}</td>
+      <td class="num">{{ o.dataset_names|length }}</td>
+      <td class="num">{{ o.files_released|commas }}</td>
+      <td class="nowrap">{{ o.latest_end|date }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}
