@@ -107,22 +107,22 @@ Using a custom domain or a user page instead of a project page? Set
 ## Layout
 
 ```
-pipeline/sources.py    register definitions, filename and edition rules
-pipeline/ingest.py     workbook -> committed edition store
-pipeline/editions.py   the edition store and its manifest
-pipeline/extract.py    workbook -> agreements / organisations / datasets
-pipeline/snapshot.py   per-edition fingerprints and the month-on-month diff
-pipeline/build.py      renders the site and the CSV extracts
-pipeline/orgcheck.py   finds organisation names that might be duplicates
-pipeline/aliases.py    applies reviewed organisation-name merges
-pipeline/templates/    Jinja2 templates
-assets/                CSS and the table-filter script
+pipeline/sources.py             register definitions, filename and edition rules
+pipeline/ingest.py              workbook -> committed edition store
+pipeline/editions.py            the edition store and its manifest
+pipeline/extract.py             workbook -> agreements / organisations / datasets
+pipeline/snapshot.py            per-edition fingerprints and the month-on-month diff
+pipeline/build.py               renders the site and the CSV extracts
+pipeline/orgcheck.py            finds organisation names that might be duplicates
+pipeline/aliases.py             applies reviewed organisation-name merges
+pipeline/templates/             Jinja2 templates
+assets/                         CSS and the table-filter script
 data/raw/                       downloaded workbooks (gitignored)
 data/editions/                  committed extracts, and the manifest
 data/snapshots/                 committed edition fingerprints
 data/organisation-aliases.json  reviewed organisation-name merges
-docs/manual-updates.md      the monthly routine
-docs/organisation-names.md  reviewing and merging organisation names
+docs/manual-updates.md          the monthly routine
+docs/organisation-names.md      reviewing and merging organisation names
 ```
 
 ## Adding another register
