@@ -109,9 +109,17 @@ def read_extract(register_slug: str, edition: str) -> dict:
 
 def rehydrate(agreements: list[dict]) -> dict:
     """Rebuild the derived views that `write_extract` deliberately dropped."""
-    from .extract import _group_datasets, _group_organisations, slugify
+    from .extract import _group_datasets, _group_organisations, resplit_list, slugify
 
     for agreement in agreements:
+        # Re-splitting is idempotent (a string with none of the separators just
+        # comes back as itself), so this is safe to apply unconditionally rather
+        # than tracking whether a given extract predates a particular splitting
+        # rule — a committed extract whose controllers were split by an older,
+        # narrower rule gets the current rule applied every time it's read.
+        for version in agreement["versions"]:
+            version["controllers"] = resplit_list(version["controllers"])
+        agreement["controllers"] = agreement["versions"][-1]["controllers"]
         agreement["latest"] = agreement["versions"][-1]
         # An extract written before a field existed won't have it. Backfilling
         # here — from data the extract does store — means an older committed

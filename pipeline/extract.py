@@ -72,12 +72,32 @@ def parse_release_month(value) -> str:
     return f"{year:04d}-{month:02d}"
 
 
+# Multiple controllers are usually separated by ";" or a newline, but the
+# register often uses a plain comma instead — "HULL UNIVERSITY TEACHING
+# HOSPITALS NHS TRUST, UNIVERSITY OF YORK" is two joint controllers, not one
+# organisation with a comma in its name. Split on those commas too, except one
+# inside unclosed parentheses, so an abbreviation like "HEALTHCARE QUALITY
+# IMPROVEMENT PARTNERSHIP (HQIP), NHS ENGLAND - X26" still splits after the
+# ")" rather than inside it.
+LIST_SEPARATOR = re.compile(r"\s*;\s*|\n+|,\s*(?![^(]*\))")
+
+
 def split_list(value) -> list[str]:
     text = clean(value)
     if not text:
         return []
-    parts = re.split(r"\s*;\s*|\n+", text)
-    return [p.strip() for p in parts if p.strip()]
+    return [p.strip() for p in LIST_SEPARATOR.split(text) if p.strip()]
+
+
+def resplit_list(items: list[str]) -> list[str]:
+    """Re-apply `split_list`'s rules to an already-split list.
+
+    For a committed extract written before this file's splitting rules
+    changed: its controller lists are split by the *old* rules already, so
+    re-joining and re-splitting the whole string isn't needed — splitting
+    each existing item again is equivalent and cheaper.
+    """
+    return [part for item in items for part in split_list(item)]
 
 
 def _read_sheet(workbook, name: str) -> list[dict]:
