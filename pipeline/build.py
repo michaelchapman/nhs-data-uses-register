@@ -169,7 +169,7 @@ def write_csvs(data: dict, out: Path) -> list[dict]:
     return written
 
 
-def build(data: dict, meta: dict, changes: dict, out: Path) -> None:
+def build(data: dict, meta: dict, changes: dict, out: Path, changes_history: list[dict] | None = None) -> None:
     env = environment()
     if out.exists():
         shutil.rmtree(out)
@@ -194,23 +194,44 @@ def build(data: dict, meta: dict, changes: dict, out: Path) -> None:
     }
 
     def render(template: str, path: str, **kwargs) -> None:
-        _write(out, path, env.get_template(template).render(**context, **kwargs))
+        # kwargs can legitimately override a context key (a historical changes
+        # page overrides `meta` to show its own edition, for instance), so merge
+        # rather than spread both as separate keyword arguments — spreading both
+        # would raise on any key they share.
+        _write(out, path, env.get_template(template).render(**{**context, **kwargs}))
 
-    render("index.html", "index.html", agreements=data["agreements"])
+    top_organisations = sorted(
+        data["organisations"], key=lambda o: (-o["agreement_count"], o["name"].lower())
+    )[:15]
+    render("index.html", "index.html", agreements=data["agreements"], top_organisations=top_organisations)
     render("agreements.html", "agreements/index.html", agreements=data["agreements"])
     render("organisations.html", "organisations/index.html", organisations=data["organisations"])
     render("datasets.html", "datasets/index.html", datasets=data["datasets"])
-    render("changes.html", "changes/index.html", by_slug={a["base_reference"]: a for a in data["agreements"]})
+    changes_by_slug = {a["base_reference"]: a for a in data["agreements"]}
+    render("changes.html", "changes/index.html", by_slug=changes_by_slug)
+    # A same-shaped page for every earlier edition pair, so "what changed" isn't
+    # limited to the current edition — the fingerprints exist for the whole
+    # backfilled history even when only the newest edition has a full extract.
+    for entry in changes_history or []:
+        render(
+            "changes.html",
+            f"changes/{entry['edition']}/index.html",
+            changes=entry,
+            by_slug=changes_by_slug,
+            meta={**meta, "edition": entry["edition"]},
+        )
     render("about.html", "about/index.html")
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
+    org_slugs = {o["slug"] for o in data["organisations"]}
     for agreement in data["agreements"]:
         render(
             "agreement.html",
             f"agreements/{agreement['slug']}/index.html",
             agreement=agreement,
             change_status={v["reference"]: changed_refs.get(v["reference"]) for v in agreement["versions"]},
+            org_slugs=org_slugs,
         )
     for organisation in data["organisations"]:
         render(

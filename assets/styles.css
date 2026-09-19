@@ -162,7 +162,10 @@ p, li { max-width: 68ch; }
 
 /* Agreement detail -------------------------------------------------------- */
 
-.prose-block { margin-bottom: 1.5rem; }
+.prose-block { border: 1px solid var(--line); border-radius: 4px; padding: 0.25rem 1rem; margin-bottom: 0.75rem; }
+.prose-block summary { cursor: pointer; padding: 0.5rem 0; }
+.prose-block summary h3 { display: inline; margin: 0; font-size: 1.0625rem; }
+.prose-block[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 0.5rem; }
 .prose-block p { white-space: pre-wrap; }
 .plain { list-style: none; padding: 0; }
 .plain li { padding: 0.25rem 0; border-bottom: 1px solid var(--line); max-width: 60ch; }

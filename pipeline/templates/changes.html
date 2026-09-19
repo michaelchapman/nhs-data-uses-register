@@ -57,9 +57,19 @@
 {% endif %}
 
 <h2>Editions processed</h2>
+<p class="hint">Every edition below has its own "what changed" page against the one before it — not just the latest.</p>
 <ul class="plain">
   {% for edition in meta.editions %}
-  <li>{{ edition.edition|edition }} — {{ edition.counts.agreement_versions|commas }} agreement versions, retrieved {{ edition.retrieved[:10]|date }}</li>
+  <li>
+    {% if loop.first %}
+    {{ edition.edition|edition }}
+    {% elif loop.last %}
+    <a href="{{ meta.base_path }}/changes/">{{ edition.edition|edition }}</a> <span class="tag tag-new">Current</span>
+    {% else %}
+    <a href="{{ meta.base_path }}/changes/{{ edition.edition }}/">{{ edition.edition|edition }}</a>
+    {% endif %}
+    — {{ edition.counts.agreement_versions|commas }} agreement versions, retrieved {{ edition.retrieved[:10]|date }}
+  </li>
   {% endfor %}
 </ul>
 {% endblock %}
