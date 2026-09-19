@@ -112,9 +112,11 @@ pipeline/ingest.py              workbook -> committed edition store
 pipeline/editions.py            the edition store and its manifest
 pipeline/extract.py             workbook -> agreements / organisations / datasets
 pipeline/snapshot.py            per-edition fingerprints and the month-on-month diff
+pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site and the CSV extracts
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/aliases.py             applies reviewed organisation-name merges
+pipeline/probe.py               field-level diff between two editions (diagnostic)
 pipeline/templates/             Jinja2 templates
 assets/                         CSS and the table-filter script
 data/raw/                       downloaded workbooks (gitignored)
@@ -123,6 +125,7 @@ data/snapshots/                 committed edition fingerprints
 data/organisation-aliases.json  reviewed organisation-name merges
 docs/manual-updates.md          the monthly routine
 docs/organisation-names.md      reviewing and merging organisation names
+docs/plan-*.md                  design notes, accepted and proposed
 ```
 
 ## Adding another register
