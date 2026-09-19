@@ -12,6 +12,10 @@
 
 <h1>{{ organisation.name }}</h1>
 <p class="lede">{{ organisation.type or "Organisation type not stated" }}</p>
+{% if organisation.known_as %}
+<p class="hint">Also recorded in the register as: {{ organisation.known_as|join("; ") }}.
+{%- if organisation.reviewed_merge %} These spellings have been reviewed and merged onto this page — see <a href="{{ meta.repo_url }}/blob/main/data/organisation-aliases.json">data/organisation-aliases.json</a> in the repository.{% endif %}</p>
+{% endif %}
 
 <dl class="key-facts">
   <div><dt>Agreements as applicant</dt><dd>{{ organisation.agreement_count|commas }}</dd></div>
