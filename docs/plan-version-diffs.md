@@ -374,14 +374,28 @@ expensive except the extraction itself, which is bounded by openpyxl.
 
 **Probe before building.** One question drives how much of this
 machinery is worth writing: were March 2026's 122 amendments substantive,
-or a bulk template restatement? The answer is two workbooks and a short
-script away, and it does not need any of the code in this plan:
+or a bulk template restatement? The answer is two workbooks away, and it
+needs none of the code proposed here — `pipeline/probe.py` is written and
+changes nothing:
 
+```bash
+.venv/bin/python -m pipeline.probe \
+    data/raw/datausesregister_february2026.xlsx \
+    data/raw/datausesregister_march2026.xlsx
 ```
-extract(feb2026) and extract(march2026)
-  -> for each version present in both with a different digest,
-     report which of the 13 fields differ, before and after normalisation
-```
+
+It reports every field that differs for each version present in both
+editions, counted twice — as published, and after the normalisation
+proposed in §3 — so the cosmetic share can be read straight off. It also
+compares `controllers` and the per-dataset attributes, which the current
+fingerprint ignores, and counts the amendments that are invisible today.
+Its added/amended/removed totals mirror `snapshot.diff` exactly, so the
+numbers are comparable with the table in §2. `--show N` prints word-level
+redlines for the largest prose rewrites.
+
+Either argument may be a committed extract rather than a workbook, which
+loads in a second or so instead of minutes. Two workbooks is about
+800 MB of memory.
 
 If most of the 122 are whitespace or punctuation churn, R3's
 normalisation is the highest-value item here and the redline renderer is
