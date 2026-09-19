@@ -109,10 +109,28 @@ def read_extract(register_slug: str, edition: str) -> dict:
 
 def rehydrate(agreements: list[dict]) -> dict:
     """Rebuild the derived views that `write_extract` deliberately dropped."""
-    from .extract import _group_datasets, _group_organisations
+    from .extract import _group_datasets, _group_organisations, slugify
 
     for agreement in agreements:
         agreement["latest"] = agreement["versions"][-1]
+        # An extract written before a field existed won't have it. Backfilling
+        # here — from data the extract does store — means an older committed
+        # extract keeps working without a re-ingest, as long as the field is a
+        # deterministic function of what's already there.
+        if "controller_slugs" not in agreement:
+            agreement["controller_slugs"] = [slugify(c) for c in agreement["controllers"]]
+        if "first_start_known" not in agreement:
+            earliest_version = agreement["versions"][0].get("version", "")
+            agreement["first_start_known"] = earliest_version in ("", "1", "1.0")
+        if "legal_bases" not in agreement:
+            agreement["legal_bases"] = sorted(
+                {
+                    d["legal_basis"]
+                    for v in agreement["versions"]
+                    for d in v["datasets"]
+                    if d.get("legal_basis")
+                }
+            )
     return {
         "agreements": agreements,
         "organisations": _group_organisations(agreements),

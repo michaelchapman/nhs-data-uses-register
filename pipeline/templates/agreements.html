@@ -3,7 +3,7 @@
 {% block description %}Search all {{ stats.agreements }} data sharing agreements in the NHS England Data Uses Register by organisation, dataset, purpose or type.{% endblock %}
 {% block content %}
 <h1>Data sharing agreements</h1>
-<p class="lede">{{ stats.agreements|commas }} agreements, each shown once with its renewals grouped underneath. Filtering happens in your browser — the whole table is on this page, so it also works with JavaScript turned off.</p>
+<p class="lede">{{ stats.agreements|commas }} agreements, each shown once with its renewals grouped underneath.</p>
 
 <form class="filters" data-filter-form data-target="agreements-table" role="search" aria-label="Filter agreements">
   <div class="field">

@@ -16,9 +16,9 @@
 
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
-  <div><dt>Current version</dt><dd>{{ v.reference }}</dd></div>
+  <div><dt>Current version</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>
   <div><dt>Term of current version</dt><dd>{{ v.start_date|date }} to {{ v.end_date|date }}</dd></div>
-  <div><dt>First seen from</dt><dd>{{ agreement.first_start|date }}</dd></div>
+  <div><dt>Start date</dt><dd>{{ "Before " if not agreement.first_start_known else "" }}{{ agreement.first_start|date }}</dd></div>
   <div><dt>Data controller</dt><dd>{{ v.controller_basis or "Not stated" }}</dd></div>
   <div><dt>Commercial purposes</dt><dd>{{ v.commercial or "Not stated" }}</dd></div>
   <div><dt>Sublicensing</dt><dd>{{ v.sublicensing or "Not stated" }}</dd></div>
@@ -28,7 +28,9 @@
 {% if v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}
 <h2>Data controllers</h2>
 <ul class="plain">
-  {% for controller in v.controllers %}<li>{{ controller }}</li>{% endfor %}
+  {% for controller in v.controllers %}
+  <li>{% if agreement.controller_slugs[loop.index0] in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.controller_slugs[loop.index0] }}/">{{ controller }}</a>{% else %}{{ controller }}{% endif %}</li>
+  {% endfor %}
 </ul>
 {% endif %}
 
@@ -40,24 +42,26 @@
   ("Expected measurable benefits", v.expected_benefits),
   ("Benefits reported so far", v.yielded_benefits),
 ] %}
-<section class="prose-block">
-  <h3>{{ section }}</h3>
+<details class="prose-block" {% if loop.first %}open{% endif %}>
+  <summary><h3>{{ section }}</h3></summary>
   {% if text %}
     {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
   {% else %}
     <p class="empty">Not stated in the register.</p>
   {% endif %}
-</section>
+</details>
 {% endfor %}
 
 <h2 id="datasets">Datasets on the current version</h2>
 {% if v.datasets %}
+{% set legal_bases = v.datasets|map(attribute='legal_basis')|select|unique|list %}
+<p class="hint"><strong>Legal basis for provision:</strong> {{ legal_bases|join("; ") if legal_bases else "Not stated" }}</p>
 <div class="table-scroll">
 <table class="data-table">
   <caption class="visually-hidden">Datasets approved under {{ v.reference }}</caption>
   <thead><tr>
     <th scope="col">Dataset</th><th scope="col">Type of data</th><th scope="col">Sensitivity</th>
-    <th scope="col">Frequency</th><th scope="col">Legal basis</th><th scope="col">Confidential data</th>
+    <th scope="col">Frequency</th><th scope="col">Confidential data</th>
   </tr></thead>
   <tbody>
   {% for d in v.datasets %}
@@ -66,7 +70,6 @@
       <td>{{ d.type_of_data or "—" }}</td>
       <td>{{ d.sensitivity or "—" }}</td>
       <td>{{ d.frequency or "—" }}</td>
-      <td>{{ d.legal_basis or "—" }}</td>
       <td>{{ d.confidentiality or "—" }}</td>
     </tr>
   {% endfor %}
@@ -97,7 +100,7 @@
 {% endif %}
 
 <h2 id="history">Version history</h2>
-<p>The register lists each renewal of this agreement as a separate row. There {{ "is" if agreement.versions|length == 1 else "are" }} {{ agreement.versions|length }}.</p>
+<p>The register lists each renewal of this agreement as a separate row. This tool shows the {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }} present in the editions ingested so far{% if not agreement.first_start_known %} — earlier versions existed before the earliest edition this tool has{% endif %}.</p>
 {% for version in agreement.versions|reverse %}
 <details class="version" {% if loop.first %}open{% endif %}>
   <summary>

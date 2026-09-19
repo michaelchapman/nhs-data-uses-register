@@ -179,9 +179,17 @@ def extract(workbook_bytes: bytes) -> dict:
     for base, versions in versions_by_base.items():
         versions.sort(key=lambda v: (_version_key(v["version"]), v["start_date"]))
         latest = versions[-1]
+        earliest = versions[0]
         dataset_names = sorted({d["name"] for v in versions for d in v["datasets"] if d["name"]})
         starts = [v["start_date"] for v in versions if v["start_date"]]
         ends = [v["end_date"] for v in versions if v["end_date"]]
+        # An unversioned reference (no "-vN" suffix) has exactly one version, which
+        # is trivially the first. Otherwise the earliest version we hold is only
+        # really "the first" if its own number says so — a backfill that starts
+        # partway through an agreement's history has an earliest version that
+        # isn't v1, and the page needs to say "before", not "from".
+        first_known = earliest["version"] in ("", "1", "1.0")
+        legal_bases = sorted({d["legal_basis"] for v in versions for d in v["datasets"] if d["legal_basis"]})
         agreements.append(
             {
                 "base_reference": base,
@@ -194,12 +202,15 @@ def extract(workbook_bytes: bytes) -> dict:
                 "sublicensing": latest["sublicensing"],
                 "controller_basis": latest["controller_basis"],
                 "controllers": latest["controllers"],
+                "controller_slugs": [slugify(c) for c in latest["controllers"]],
                 "first_start": min(starts) if starts else "",
+                "first_start_known": first_known,
                 "latest_start": latest["start_date"],
                 "latest_end": latest["end_date"],
                 "coverage_end": max(ends) if ends else "",
                 "dataset_names": dataset_names,
                 "dataset_slugs": [slugify(n) for n in dataset_names],
+                "legal_bases": legal_bases,
                 "files_released": sum(v["files_released"] for v in versions),
                 "versions": versions,
                 "latest": latest,
@@ -225,14 +236,47 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
                 "slug": slugify(name),
                 "type": agreement["organisation_type"],
                 "agreements": [],
+                "controller_agreements": [],
             },
         )
         entry["agreements"].append(agreement)
+
+    # An organisation can also appear only as a data controller on someone else's
+    # agreement, never as the applicant — this matches controller free text
+    # against organisation names by slug, so it's approximate: a controller
+    # recorded under a different spelling won't be matched. Track membership by
+    # base_reference rather than comparing agreement dicts, which is both faster
+    # and correct regardless of dict identity.
+    by_slug = {entry["slug"]: entry for entry in grouped.values()}
+    seen_refs = {slug: {a["base_reference"] for a in entry["agreements"]} for slug, entry in by_slug.items()}
+    for agreement in agreements:
+        applicant_slug = agreement["organisation_slug"]
+        for controller, controller_slug in zip(agreement["controllers"], agreement["controller_slugs"]):
+            if not controller_slug or controller_slug == applicant_slug:
+                continue
+            entry = by_slug.get(controller_slug)
+            if entry is None:
+                entry = {
+                    "name": controller,
+                    "slug": controller_slug,
+                    "type": "",
+                    "agreements": [],
+                    "controller_agreements": [],
+                }
+                grouped[controller] = entry
+                by_slug[controller_slug] = entry
+                seen_refs[controller_slug] = set()
+            if agreement["base_reference"] not in seen_refs[controller_slug]:
+                entry["controller_agreements"].append(agreement)
+                seen_refs[controller_slug].add(agreement["base_reference"])
+
     for entry in grouped.values():
         entry["agreement_count"] = len(entry["agreements"])
+        entry["controller_agreement_count"] = len(entry["controller_agreements"])
+        all_agreements = entry["agreements"] + entry["controller_agreements"]
         entry["files_released"] = sum(a["files_released"] for a in entry["agreements"])
         entry["dataset_names"] = sorted(
-            {n for a in entry["agreements"] for n in a["dataset_names"]}
+            {n for a in all_agreements for n in a["dataset_names"]}
         )
         entry["latest_end"] = max((a["coverage_end"] for a in entry["agreements"]), default="")
         entry["commercial"] = any(a["commercial"] == "Yes" for a in entry["agreements"])
