@@ -11,6 +11,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from . import compare
+from . import sources
 from .extract import slugify
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -41,10 +42,7 @@ def format_month(value: str) -> str:
 
 
 def format_edition(edition: str) -> str:
-    for index, name in enumerate(MONTH_NAMES, start=1):
-        if edition.lower().startswith(name.lower()):
-            return f"{name} {edition[len(name):]}"
-    return edition.title()
+    return sources.edition_label(edition)
 
 
 def paragraphs(text: str) -> list[str]:
