@@ -87,10 +87,13 @@ def parse_release_month(value) -> str:
 # register often uses a plain comma instead — "HULL UNIVERSITY TEACHING
 # HOSPITALS NHS TRUST, UNIVERSITY OF YORK" is two joint controllers, not one
 # organisation with a comma in its name. Split on those commas too, except one
-# inside unclosed parentheses, so an abbreviation like "HEALTHCARE QUALITY
-# IMPROVEMENT PARTNERSHIP (HQIP), NHS ENGLAND - X26" still splits after the
-# ")" rather than inside it.
-LIST_SEPARATOR = re.compile(r"\s*;\s*|\n+|,\s*(?![^(]*\))")
+# inside unclosed parentheses or square brackets, so an abbreviation like
+# "HEALTHCARE QUALITY IMPROVEMENT PARTNERSHIP (HQIP), NHS ENGLAND - X26" still
+# splits after the ")" rather than inside it, and a name that spells its parts
+# out in brackets — "BCP COUNCIL [BOURNEMOUTH, CHRISTCHURCH AND POOLE]" — stays
+# whole instead of becoming two organisations, one of them called
+# "CHRISTCHURCH AND POOLE]".
+LIST_SEPARATOR = re.compile(r"\s*;\s*|\n+|,\s*(?![^(]*\))(?![^\[]*\])")
 
 
 def split_list(value) -> list[str]:
