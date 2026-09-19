@@ -11,72 +11,84 @@ different NHS trusts, two different councils), so nothing is merged
 automatically. A merge only happens because a person looked at a candidate
 and added it to `data/organisation-aliases.json`.
 
-## The workflow
+## The easy way: `--review`
 
-1. **Find candidates.**
+```bash
+.venv/bin/python -m pipeline.orgcheck --review
+```
 
-   ```bash
-   .venv/bin/python -m pipeline.orgcheck
-   ```
+Goes through candidates one at a time:
 
-   Prints two groups:
+```
+[1/87] same reference code "03W"
+  1) LEICESTERSHIRE AND RUTLAND ICB - 03W  (5 agreements)
+  2) NHS LEICESTER, LEICESTERSHIRE AND RUTLAND ICB - 03W  (3 agreements)
+  [m]erge  [i]gnore  [k]skip  [q]uit >
+```
 
-   - **Same trailing reference code** (an ICB's "- M1J4Y", say) — near-certain.
-     The reference code is the statutory identifier; two names ending in the
-     same one are the same body under different amounts of its name.
-   - **Weighted name similarity** — needs a person to look. This is
-     deliberately noisy. It's ranked so that a word most organisations share
-     (TRUST, COUNCIL, NHS, INTEGRATED CARE BOARD) counts for very little and a
-     word only two names share (a place, a company) counts for a lot, but it
-     still surfaces genuinely different organisations that happen to share
-     a lot of boilerplate — two different metropolitan borough councils, two
-     different ambulance trusts. Expect most of this group to be "no", not
-     "yes".
+- **`m`** — merge. Asks which name to keep as canonical (or type your own),
+  then an optional one-line reason. Written to
+  `data/organisation-aliases.json` immediately.
+- **`i`** — ignore. Also written immediately, to the same file's `ignored`
+  list, so this exact candidate is never asked about again — not "not now",
+  permanently, until someone edits the file.
+- **`k`** — skip. Does nothing; asked again next run, useful for "not sure,
+  need to check something first".
+- **`q`** — quit. Whatever you've already decided this run is already saved;
+  everything else shows up again next time.
 
-2. **Decide, for each candidate.** Ask: is this the same legal entity
-   recorded inconsistently, or two different organisations that happen to
-   look similar? When in doubt, leave it — an unmerged near-duplicate is a
-   cosmetic inconvenience; a wrong merge attributes one organisation's data
-   sharing to another.
+Rebuild afterwards to see the result:
 
-3. **Record a confirmed merge** in `data/organisation-aliases.json`:
+```bash
+.venv/bin/python -m pipeline.run
+```
 
-   ```json
-   {
-     "aliases": [
-       {
-         "canonical": "NHS Bedfordshire, Luton and Milton Keynes ICB - M1J4Y",
-         "variants": ["Luton and Milton Keynes ICB - M1J4Y"],
-         "reason": "Same ICB reference code (M1J4Y) recorded under a shorter name on some agreement rows."
-       }
-     ]
-   }
-   ```
+No re-ingest needed — aliases are applied fresh on every build, so editing
+this file (by hand or through `--review`) and rebuilding is enough. Open the
+merged organisation's page: it lists every raw spelling it was recorded under
+under "Also recorded in the register as", linking back to this file, so the
+merge is always checkable against what the register actually says. Agreement
+pages are never affected — they always show the applicant name exactly as
+that row recorded it; only which organisation page it links to changes.
 
-   `canonical` is what the organisation page shows. `variants` is every other
-   spelling seen in the register that should land on that page — matching
-   ignores case and extra whitespace, but not wording, so list each spelling
-   that actually occurs (`orgcheck`'s output can be pasted straight in). A
-   short `reason` is for the next person reading the file, yourself included
-   in six months.
+Commit `data/organisation-aliases.json` once you're happy with a session's
+decisions — the reasons in the file are usually enough for the commit
+message too.
 
-4. **Rebuild and check.**
+## The manual way
 
-   ```bash
-   .venv/bin/python -m pipeline.run
-   ```
+`--review` is `data/organisation-aliases.json` written for you; nothing about
+its format is special. To add a merge by hand instead:
 
-   No re-ingest needed — aliases are applied fresh on every build, so editing
-   this file and rebuilding is enough to see the result. Open the merged
-   organisation's page: it lists every raw spelling it was recorded under
-   under "Also recorded in the register as", linking back to this file, so
-   the merge is always checkable against what the register actually says.
-   Agreement pages are never affected — they always show the applicant name
-   exactly as that row recorded it; only which organisation page it links to
-   changes.
+```json
+{
+  "aliases": [
+    {
+      "canonical": "NHS Bedfordshire, Luton and Milton Keynes ICB - M1J4Y",
+      "variants": ["Luton and Milton Keynes ICB - M1J4Y"],
+      "reason": "Same ICB reference code (M1J4Y) recorded under a shorter name on some agreement rows."
+    }
+  ],
+  "ignored": []
+}
+```
 
-5. **Commit it,** with the reason in the commit message too if it's not
-   obvious from the file.
+`canonical` is what the organisation page shows. `variants` is every other
+spelling seen in the register that should land on that page — matching
+ignores case and extra whitespace, but not wording, so list each spelling
+that actually occurs. `ignored` is a list of candidates (each the sorted list
+of names involved) that `--review` should stop suggesting.
+
+`python -m pipeline.orgcheck` on its own — no `--review` — prints the same
+candidates without prompting, if you'd rather read the whole list first.
+
+## Deciding
+
+For each candidate ask: is this the same legal entity recorded
+inconsistently, or two different organisations that happen to look similar?
+When in doubt, skip or ignore it — an unmerged near-duplicate is a cosmetic
+inconvenience; a wrong merge attributes one organisation's data sharing to
+another.
 
 ## What this does and doesn't do
 

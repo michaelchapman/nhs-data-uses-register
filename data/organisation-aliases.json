@@ -1,4 +1,5 @@
 {
-  "_comment": "Reviewed by a person, not inferred. See docs/organisation-names.md and `python -m pipeline.orgcheck` for the review workflow this feeds. Each group: canonical (the name shown on the organisation page) and variants (every spelling in the register that should map to it, canonical included or not — either is fine, extra entries are ignored).",
-  "aliases": []
+  "_comment": "Reviewed by a person, not inferred — see docs/organisation-names.md and `python -m pipeline.orgcheck --review`. Each alias group: canonical (the name shown on the organisation page) and variants (every spelling in the register that should map to it). `ignored` records candidates a reviewer looked at and decided were not the same organisation, so orgcheck doesn't keep re-suggesting them — each entry is the sorted list of names in that candidate.",
+  "aliases": [],
+  "ignored": []
 }
