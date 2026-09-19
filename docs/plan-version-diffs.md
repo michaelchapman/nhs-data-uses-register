@@ -2,9 +2,11 @@
 
 Status: **proposed.** Nothing here is implemented yet.
 
-Revised twice: after confirming that all 19 published workbooks are held
-locally, and again after running the probe (§7), which overturned part
-of what follows. That changes the plan materially: field-level history can be
+Revised three times: after confirming that all 19 published workbooks
+are held locally, after running the probe (§7), and after the re-ingest
+that applied the new fingerprint rules to the whole archive (§8). Each
+pass overturned part of the one before; §8 corrects a conclusion drawn
+in §7. That changes the plan materially: field-level history can be
 backfilled across the whole archive rather than starting from whichever
 edition the work lands in, so this is no longer a race against the next
 publication. See [§6](#6-backfilling-the-archive).
@@ -371,10 +373,10 @@ stated point of the project.
 | R1 register history + R4 version-to-version redlines | **done** | Shipped; needed no new data |
 | R3 normalisation, applied to the fingerprint | **done** | Shipped; takes effect on re-ingest |
 | R5 vocabulary and page structure | next | High |
-| Full re-ingest, to apply the new rules | **next** | Turns the fix on; see docs/manual-updates.md |
+| Full re-ingest, to apply the new rules | **done** | 494 amendments across the archive became 297; see §8 |
 | `ingest` memory fix | **done** | Peak drops from ~7.5 GB to ~800 MB |
 | R2 per-field digests + the missing fields | **done** | Shipped; takes effect on re-ingest |
-| R3 amendment log | todo | Scalar and list changes first, prose last |
+| R3 amendment log | **next** | Scalar and list first — it is what would say who October 2025's controllers became |
 | Full re-ingest of all 19 editions | todo | Restates the whole archive's counts honestly |
 | R6 exports | todo | Medium |
 
@@ -518,22 +520,17 @@ was substantively touched in either month.
 ### What follows from it
 
 1. **Normalisation is the highest-value change in this plan**, not the
-   housekeeping item the first two drafts called it. It is the
-   difference between reporting 122 amendments and reporting 17.
+   housekeeping item the first two drafts called it.
 2. **Spikes and ordinary months differ in kind, not degree.** March is
-   a reformatting pass; July is dataset churn. Once per-field digests
-   exist (R2), the page can say which kind of month it is describing in
-   a single line, which is more useful than any per-row detail.
+   a reformatting pass; July is dataset churn.
 3. **The edition-to-edition prose redline has little to show.** Neither
-   pair contained one substantive prose change. Build R3's log for the
-   scalar and list cases first.
-4. **The blind spots are real but not urgent.** No amendment in either
-   pair was invisible to the current fingerprint. The controller changes
-   in March travelled with an `organisation` change that was already
-   caught.
+   pair contained one substantive prose change.
+4. **The blind spots looked marginal.** No amendment in either pair was
+   invisible to the fingerprint of the day.
 5. **Two pairs are not eighteen.** Both conclusions above rest on a
-   sample of two. April→May 2026 (73 amendments) is the obvious third,
-   and the full re-ingest settles it for the whole archive.
+   sample of two.
+
+Point 5 turned out to matter, and point 4 was wrong. See §8.
 
 ### Version-to-version, for contrast
 
@@ -552,3 +549,85 @@ between *versions* of an agreement it is rewritten nine times out of
 ten. The redline belongs on the version history — where it now is — and
 the edition comparison needs a change summary far more than it needs a
 redline.
+
+## 8. What the re-ingest found
+
+The archive was re-ingested under rules v3 on 19 September 2026: every
+edition re-fingerprinted with normalised text, data controllers and
+dataset attributes included, and a digest per field. The table below is
+computed from the committed snapshots alone — no workbook needed, which
+is what the per-field digests bought.
+
+| Edition (vs previous) | Was | Now | Δ | Dominant fields |
+| --- | ---: | ---: | ---: | --- |
+| April 2025 | 2 | 3 | +1 | controllers, output, objective |
+| May 2025 | 0 | 0 | — | |
+| June 2025 | 3 | 3 | — | applicant organisation 3 |
+| July 2025 | 41 | 60 | +19 | **controllers 51**, organisation 39 |
+| August 2025 | 1 | 6 | +5 | controllers 4 |
+| September 2025 | 0 | 0 | — | |
+| October 2025 | 52 | **154** | **+102** | **controllers 135**, organisation 37, datasets 14 |
+| November 2025 | 16 | 16 | — | datasets 15 |
+| December 2025 | 2 | 6 | +4 | controllers 6 |
+| January 2026 | 0 | 0 | — | |
+| February 2026 | 72 | **0** | **−72** | |
+| March 2026 | 122 | **17** | **−105** | organisation 17, controllers 17 |
+| April 2026 | 1 | 1 | — | end date 1 |
+| May 2026 | 73 | **1** | **−72** | |
+| June 2026 | 73 | **0** | **−73** | |
+| July 2026 | 15 | 12 | −3 | datasets 12 |
+| August 2026 | 20 | 17 | −3 | organisation 15, controllers 10 |
+| September 2026 | 1 | 1 | — | datasets 1 |
+| **Total** | **494** | **297** | **−197** | |
+
+### The net figure hides two opposite movements
+
+**340-odd amendments disappeared**, and they were the spikes. February,
+May and June 2026 fall to nothing at all; March 2026 falls from 122 to
+17, matching the probe's prediction almost exactly. Four of the five
+largest "change events" in the site's history were reformatting passes.
+
+**131 appeared**, and these are the interesting half. They are changes
+the register made and the old fingerprint could not see.
+
+### Correction: the blind spots were not marginal
+
+§7 concluded from two edition pairs that the missing fields were "real
+but not urgent", since neither pair contained an amendment invisible to
+the fingerprint of the day. Across all eighteen pairs, **130 amendments
+were a change of data controller and nothing else** — invisible, in a
+register whose whole purpose is recording who holds patient data. The
+two pairs probed happened to be the wrong two. The sample was flagged as
+thin at the time; it was thinner than it looked.
+
+### October 2025
+
+One edition accounts for most of it. Its 154 amendments break down as:
+
+| | Count |
+| --- | ---: |
+| Data controllers alone | 101 |
+| Data controllers *and* applicant organisation | 34 |
+| Datasets | 14 |
+| Applicant organisation alone | 3 |
+| Prose (benefits) | 2 |
+
+135 agreements had their data controller changed in a single month,
+across 29 organisations, concentrated in NHS England — X26 (39), the
+Royal College of Physicians of London (18) and the National Institute
+for Cardiovascular Outcomes Research (10). No version numbers were
+issued and no changelog was published. Under the old rules the site
+reported 52 amendments that month, none of them about controllers.
+
+This is the largest finding the project has produced, and it is exactly
+the class of change the register makes hardest to see: an edit in place,
+to the field that says who holds the data, across a hundred-odd
+agreements at once.
+
+**What this cannot yet say is what the controllers changed *to*.** The
+snapshots hold digests, not values, so the site can say that a
+controller changed and not how. Answering that needs either R3's
+amendment log or a probe run over the September and October 2025
+workbooks — which is now the most interesting thing left to do, and
+argues for building R3's log for the scalar and list cases first, as §4
+already concluded for a different reason.
