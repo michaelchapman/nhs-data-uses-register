@@ -103,17 +103,23 @@ def main() -> None:
     # further back than the manifest: fingerprints predate the edition store,
     # and a fingerprints-only backfill writes no manifest extract.
     by_edition = {e["edition"]: e for e in editions_module.read_manifest(register.slug)}
-    known = []
-    for path in snapshot_module.existing_editions(register.slug):
-        fingerprint = snapshot_module.read_snapshot(path)
-        entry = by_edition.get(fingerprint["edition"], {})
-        known.append(
-            {
-                "edition": fingerprint["edition"],
-                "retrieved": entry.get("ingested") or fingerprint.get("retrieved", ""),
-                "counts": fingerprint["counts"],
-            }
-        )
+    fingerprints = [snapshot_module.read_snapshot(p) for p in snapshot_module.existing_editions(register.slug)]
+    known = [
+        {
+            "edition": fp["edition"],
+            "retrieved": by_edition.get(fp["edition"], {}).get("ingested") or fp.get("retrieved", ""),
+            "counts": fp["counts"],
+        }
+        for fp in fingerprints
+    ]
+    # A same-shaped changes page for every edition that has one before it, not
+    # only the newest — the fingerprints (unlike the full extract) go back over
+    # the whole backfilled archive, so this doesn't need to wait for anything.
+    changes_history = []
+    for i in range(1, len(fingerprints)):
+        entry = snapshot_module.diff(fingerprints[i], fingerprints[i - 1])
+        entry["edition"] = fingerprints[i]["edition"]
+        changes_history.append(entry)
     meta = {
         "site_name": "NHS Data Uses Register, readable",
         "site_url": args.site_url.rstrip("/"),
@@ -133,7 +139,7 @@ def main() -> None:
         "editions": known,
     }
 
-    build_module.build(data, meta, changes, args.output)
+    build_module.build(data, meta, changes, args.output, changes_history=changes_history)
 
 
 if __name__ == "__main__":

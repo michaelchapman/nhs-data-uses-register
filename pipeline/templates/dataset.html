@@ -18,22 +18,6 @@
   <div><dt>Files released</dt><dd>{{ dataset.files_released|commas }}</dd></div>
 </dl>
 
-<h2>How it is described in the register</h2>
-<p class="hint">Where several values are listed, different agreements record this dataset differently.</p>
-<dl class="key-facts wide">
-  {% for label, key in [("Type of data", "type_of_data"), ("Sensitivity", "sensitivity"), ("Frequency", "frequency"), ("Legal basis for provision", "legal_basis")] %}
-  {% set values = dataset.attributes.get(key, []) %}
-  <div>
-    <dt>{{ label }}</dt>
-    {% if values|length > 1 %}
-    <dd><ul class="value-list">{% for value in values %}<li>{{ value }}</li>{% endfor %}</ul></dd>
-    {% else %}
-    <dd>{{ values[0] if values else "Not stated" }}</dd>
-    {% endif %}
-  </div>
-  {% endfor %}
-</dl>
-
 <h2>Agreements covering this dataset</h2>
 <form class="filters" data-filter-form data-target="dataset-agreements" role="search" aria-label="Filter agreements">
   <div class="field">
