@@ -35,7 +35,8 @@
 </ul>
 
 <h2>How it stays up to date</h2>
-<p>A GitHub Actions workflow runs monthly. It reads the official register page, finds the current workbook link, downloads it, rebuilds every page, and deploys. It also records a fingerprint of each agreement version so the next run can report what changed. The whole pipeline is in the <a href="{{ meta.repo_url }}">repository</a> — corrections and pull requests welcome.</p>
+<p>By hand, and not automatically. This site shows the <strong>{{ meta.edition|edition }}</strong> edition, added on {{ meta.retrieved[:10]|date }}. NHS England publishes a new one each month, and it appears here once somebody downloads it and adds it — so if a newer edition is out, this site does not have it yet. The <a href="{{ meta.source_page }}">official register page</a> always has the current workbook, and the <a href="{{ meta.archive_page }}">release archive</a> has previous ones.</p>
+<p>It used to update itself. NHS England's website refuses automated requests from datacentre networks, so the scheduled job could never download the workbook; rather than work around a block the publisher put there deliberately, the download step was removed. A fingerprint of every agreement version is kept for each edition added, which is what the <a href="{{ meta.base_path }}/changes/">what changed</a> page compares. The whole pipeline is in the <a href="{{ meta.repo_url }}">repository</a> — corrections and pull requests welcome.</p>
 
 <h2>Licence</h2>
 <p>The register content is published by NHS England under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a> and remains under that licence here. The site's own code is MIT licensed.</p>

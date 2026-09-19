@@ -1,6 +1,7 @@
 # Plan: back out of live fetching, build from a local edition archive
 
-Status: proposal, awaiting a decision on Option A / B / C below.
+Status: **accepted (Option B), implemented.** The monthly routine is in
+[manual-updates.md](manual-updates.md); this document records why.
 
 ## 1. What is actually broken
 
@@ -106,9 +107,28 @@ a growing tail of small fingerprints — the backfill costs ~200 KB an edition, 
 
 ### Option D — keep fetching, from somewhere reachable
 
-Wayback Machine, `data.gov.uk`, or a residential proxy. Adds a dependency on a
-third party's coverage of a 29 MB binary, or on evading a block the publisher
-put there deliberately. Rejected.
+Wayback Machine, the UK Government Web Archive, `data.gov.uk`, or a residential
+proxy. Adds a dependency on a third party's coverage of a 29 MB binary, or on
+evading a block the publisher put there deliberately.
+
+The National Archives copy was checked directly, at
+`webarchive.nationalarchives.gov.uk/ukgwa/20250327085227/…/release-register-archive`.
+It is not a way round the block:
+
+- The page returns **HTTP 405 with an AWS WAF "Human Verification" JavaScript
+  challenge**, with a plain client and with full browser headers alike.
+- `webarchive.nationalarchives.gov.uk/robots.txt` is **`User-agent: * Disallow: /`**
+  — the National Archives disallows automated access to the whole archive, and
+  enforces it with the challenge.
+
+So getting at it automatically would mean defeating a bot challenge on a site
+that has asked crawlers to stay out. That is a line worth not crossing for a
+file a person can download in one click. Rejected — and the check confirms the
+manual route is the right one rather than merely the convenient one.
+
+The archive page itself is still exactly what we want; a human just has to open
+it. Its URL is now recorded as `sources.ARCHIVE_PAGE` and linked from the site's
+about page.
 
 **Recommendation: Option B**, with Option A as the fallback if byte-exact source
 retention turns out to matter more than repo size. The two are compatible — the
@@ -117,30 +137,40 @@ only means adding the files.
 
 One number to check on first ingest: if a full extract gzips to more than ~10 MB,
 Option B's "current edition" file is uncomfortably large, and the answer is
-either LFS for that one file or splitting the extract per page-type. The
-fingerprint sizes make ~3–6 MB the likely outcome, but it is worth measuring
-before committing the first one.
+either LFS for that one file or splitting the extract per page-type. Ingest
+prints the size and warns past 45 MB.
 
-## 4. Proposed work
+Measured so far: recompressing the existing July 2026 fingerprint took it from
+1.13 MB to **212 KB**, so a three-year backfill is ~8 MB of history. The full
+extract is smaller than a naive estimate suggests, because only `agreements` is
+stored — `organisations` and `datasets` are pure functions of it, and
+`agreement["latest"]` aliases a dict already inside `agreement["versions"]`, so
+serialising all four would have duplicated most of the file.
 
-### Phase 0 — confirm the archive (human, 10 minutes)
+## 4. The work
 
-Open the landing page in a browser, and report back: how many previous editions
-are listed, the earliest one, and whether they are plain `.xlsx` links. Then
-download the current edition plus as many archived ones as are offered into
-`data/raw/`.
+Phases 1–3 are done. Phase 0 is the one step that has to be a person.
+
+### Phase 0 — fetch the archive (human)
+
+Open the
+[release register archive](https://digital.nhs.uk/services/data-access-request-service-dars/data-uses-register/release-register-archive)
+in a browser and save the editions you want history for into `data/raw/`, keeping
+the published filenames. Then `python -m pipeline.ingest data/raw/*.xlsx`.
+Nothing else is blocked on this — the pipeline is in place and tested, it just
+has one edition of data in it.
 
 ### Phase 1 — ingest and the edition store
 
-1. `pipeline/editions.py` — read/write the gzipped edition store and
+1. **Done.** `pipeline/editions.py` — read/write the gzipped edition store and
    `data/editions/<register>/manifest.json`. Manifest entry per edition:
    `edition`, `published` (YYYY-MM), `source_file`, `source_url`, `sha256`,
    `ingested`, `counts`, `has_full_extract`.
-2. `pipeline/ingest.py` — `python -m pipeline.ingest data/raw/*.xlsx`. Extracts,
+2. **Done.** `pipeline/ingest.py` — `python -m pipeline.ingest data/raw/*.xlsx`. Extracts,
    writes a fingerprint per edition, writes the full extract for the newest
    edition only (`--full` to force others), updates the manifest. Idempotent, so
    re-running is safe.
-3. **Fix edition ordering.** `snapshot.existing_editions` sorts by the
+3. **Done. Fixed edition ordering.** `snapshot.existing_editions` sorts by the
    `retrieved` timestamp, which is the moment *we* ran the pipeline. Backfilling
    a two-year archive in one afternoon gives every edition near-identical
    timestamps, so "previous edition" becomes whatever order we happened to
@@ -149,33 +179,33 @@ download the current edition plus as many archived ones as are offered into
 
 ### Phase 2 — build offline
 
-4. `pipeline/run.py` — default to building the newest edition in the store;
+4. **Done.** `pipeline/run.py` — defaults to building the newest edition in the store;
    `--edition <label>` to build an older one. `--workbook` stays, as the escape
    hatch for a one-off build without ingesting.
-5. `pipeline/sources.py` — delete `discover()` and `fetch()` and the landing-page
+5. **Done.** `pipeline/sources.py` — deleted `discover()` and `fetch()` and the landing-page
    scrape. Keep the `Register` definitions (slug, name, description, sheets) and
    a filename pattern used to *recognise* a downloaded file rather than to find
    one online. Leave a comment recording why the network path went, so nobody
    re-adds it.
-6. `meta` for the templates comes from the manifest instead of the live fetch, so
+6. **Done.** `meta` for the templates comes from the manifest instead of the live fetch, so
    the per-agreement "Source: …" footers keep pointing at the right workbook URL
    for that edition.
 
 ### Phase 3 — CI and docs
 
-7. `.github/workflows/build.yml` — remove the `schedule:` block (nothing changes
+7. **Done.** `.github/workflows/build.yml` — removed the `schedule:` block (nothing changes
    between manual ingests, so a cron run is a guaranteed no-op or a failure) and
    remove the "Commit edition snapshot" step and its `contents: write`
    permission. Build on push to `main` and on `workflow_dispatch`, from committed
    data, with no external requests. The workflow then cannot fail the way it has
    been failing.
-8. **Add a `.gitignore`.** There isn't one — the README says `data/raw/` is
-   gitignored and it is not, which with Option B is how a 29 MB workbook ends up
-   committed by accident. Ignore `data/raw/`, `_site/`, `.venv/`,
-   `__pycache__/`.
-9. README — replace "How it stays current" with the manual procedure, and say
+8. **Done. Added a `.gitignore`.** There wasn't one — the README claimed
+   `data/raw/` was gitignored and it was not, which under Option B is how a
+   29 MB workbook ends up committed by accident. Now ignores `data/raw/`,
+   `_site/`, `.venv/`, `__pycache__/`.
+9. **Done.** README — replaced "How it stays current" with the manual procedure, and says
    plainly that automated retrieval is blocked by the publisher's WAF.
-10. `pipeline/templates/about.html` — one line on how current the mirror is and
+10. **Done.** `pipeline/templates/about.html` — a paragraph on how current the mirror is and
     how it is updated, so a reader is not left assuming it tracks the source
     automatically.
 
@@ -187,13 +217,15 @@ download the current edition plus as many archived ones as are offered into
   fingerprints — the thing the archive makes possible that a live fetch never
   could.
 
-## 5. The monthly routine after this lands
+## 5. The monthly routine
+
+See [manual-updates.md](manual-updates.md) for the full version.
 
 ```bash
 # 1. Download the new workbook from the landing page in a browser, into data/raw/
 # 2. Ingest it
 .venv/bin/python -m pipeline.ingest data/raw/datausesregister_august2026.xlsx
-# 3. Check the diff it reports, then commit the two small files it wrote
+# 3. Check the diff it reports, then commit the small files it wrote
 git add data/snapshots data/editions
 git commit -m "Add the August 2026 edition"
 git push

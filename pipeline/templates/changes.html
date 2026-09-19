@@ -27,7 +27,7 @@
 
 {% if not changes.comparable %}
 <p class="lede">This is the first edition this site has processed, so there is nothing to compare it with yet.</p>
-<p>From the next monthly publication onwards, this page will list agreements that were added, amended or withdrawn between editions. The comparison works by fingerprinting every agreement version in each edition and storing that fingerprint in the site's repository, so the history builds up over time.</p>
+<p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them. The comparison works by fingerprinting every agreement version in each edition and keeping that fingerprint in the site's repository, so earlier editions from NHS England's release archive can be backfilled as well as new ones added.</p>
 {% else %}
 <p class="lede">Comparing the {{ meta.edition|edition }} edition with {{ changes.previous_edition|edition }}.</p>
 
