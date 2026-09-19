@@ -1,4 +1,4 @@
-# NHS Data Uses Register, readable
+# NHS Data Access Explorer
 
 A static site that reformats the [NHS England Data Uses Register](https://digital.nhs.uk/services/data-access-request-service-dars/data-uses-register)
 — published monthly as a 29 MB, three-sheet spreadsheet — into pages you can

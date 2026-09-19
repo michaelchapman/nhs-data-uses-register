@@ -121,7 +121,7 @@ def main() -> None:
         entry["edition"] = fingerprints[i]["edition"]
         changes_history.append(entry)
     meta = {
-        "site_name": "NHS Data Uses Register, readable",
+        "site_name": "NHS Data Access Explorer",
         "site_url": args.site_url.rstrip("/"),
         "base_path": args.base_path.rstrip("/"),
         "repo_url": REPO_URL,
