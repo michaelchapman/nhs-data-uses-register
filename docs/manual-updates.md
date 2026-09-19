@@ -79,7 +79,7 @@ site is currently built from.
 
 Fingerprints carry a rule version — `fingerprint_version` in each snapshot —
 saying what counted as a change when they were written. **The rules are now
-v3**, and every edition committed so far is v1. Three things changed:
+v4.** Four things changed:
 
 - Text is normalised before hashing, so reformatting is no longer reported as
   an amendment. Between the February and March 2026 editions, 105 of the 122
@@ -91,6 +91,12 @@ v3**, and every edition committed so far is v1. Three things changed:
   changed" page can say *which* fields moved rather than only that something
   did. This roughly doubles a snapshot, from about 208 KB to about 390 KB —
   call it 4 MB more across the whole archive.
+- `extract.split_list` no longer breaks an organisation name on a comma
+  inside it, so "MCKINSEY & COMPANY, INC. UNITED KINGDOM" stays one
+  controller instead of becoming two, one of them called "INC.". This one is
+  a parsing fix: rehydrating a stored extract cannot undo the damage, because
+  re-splitting a list can only divide it further, so it takes effect on
+  re-ingest and not before.
 
 Every digest moves when the rules change, so editions fingerprinted under
 different versions cannot be compared — a comparison would mark the whole

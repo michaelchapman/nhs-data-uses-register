@@ -97,9 +97,9 @@ def main() -> None:
     if stored_version < snapshot_module.FINGERPRINT_VERSION:
         print(
             f"  warning: the {edition} fingerprint was written under rules v{stored_version}; "
-            f"this code writes v{snapshot_module.FINGERPRINT_VERSION}. Its amendment counts are the "
-            "old ones, which count reformatting as change. Re-ingest the archive to refresh them "
-            "(docs/manual-updates.md).",
+            f"this code writes v{snapshot_module.FINGERPRINT_VERSION}. Its amendment counts are "
+            "whatever those older rules produced. Re-ingest the archive to refresh them "
+            "(docs/manual-updates.md lists what each version changed).",
             file=sys.stderr,
         )
 
