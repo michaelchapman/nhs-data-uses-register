@@ -166,9 +166,12 @@
   <summary>
     <span class="version-ref">{{ version.reference }}</span>
     <span class="version-term">{{ version.start_date|date }} to {{ version.end_date|date }}</span>
-    {% if change_status.get(version.reference) == 'new' %}<span class="tag tag-new">New this month</span>
-    {% elif change_status.get(version.reference) == 'renewal' %}<span class="tag tag-new">Added this month</span>
-    {% elif change_status.get(version.reference) == 'amended' %}<span class="tag tag-amended">Amended this month</span>{% endif %}
+    {% set status = change_status.get(version.reference) %}
+    {% if status and status.kind == 'new' %}<span class="tag tag-new">New this month</span>
+    {% elif status and status.kind == 'renewal' %}<span class="tag tag-new">Added this month</span>
+    {% elif status and status.kind == 'amended' %}
+      <span class="tag tag-amended">Amended this month{% if status.fields %}: {{ status.fields|join(", ") }}{% endif %}</span>
+    {% endif %}
   </summary>
   <dl class="key-facts compact">
     <div><dt>Title</dt><dd>{{ version.title or "—" }}</dd></div>
@@ -199,18 +202,39 @@
 {% if history %}
 <p>When this agreement appeared in, or was edited in, each monthly edition of the register. Built by comparing every edition this site holds{% if history.first_is_earliest %}, the earliest of which is {{ meta.editions[0].edition|edition }}{% endif %}.</p>
 <ul class="timeline">
-  {% if history.first_is_earliest %}
-  <li><strong>{{ history.first_edition|edition }}</strong> — already listed in the earliest edition this site holds, so it may be older.</li>
-  {% else %}
-  <li><strong>{{ history.first_edition|edition }}</strong> — first listed.</li>
-  {% endif %}
+  <li>
+    <strong>{{ history.first_edition|edition }}</strong> —
+    {% if history.first_is_earliest %}already listed in the earliest edition this site holds, so it may be older.{% else %}first listed.{% endif %}
+    {% if history.first_versions %}
+    <div class="timeline-line">{{ history.first_versions|length }} version{{ "s" if history.first_versions|length != 1 }}:
+      {% for reference in history.first_versions %}<span class="version-ref">{{ reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+    </div>
+    {% endif %}
+  </li>
   {% for event in history.events %}
   <li>
-    <strong>{{ event.edition|edition }}</strong> —
-    {% if event.added %}{{ event.added|length }} version{{ "s" if event.added|length != 1 }} added ({{ event.added|join(", ") }}){% endif %}
-    {% if event.added and event.amended %}; {% endif %}
-    {% if event.amended %}{{ event.amended|length }} version{{ "s" if event.amended|length != 1 }} amended in place ({{ event.amended|join(", ") }}){% endif %}
-    {% if event.removed %}{% if event.added or event.amended %}; {% endif %}{{ event.removed|length }} no longer listed ({{ event.removed|join(", ") }}){% endif %}
+    <strong>{{ event.edition|edition }}</strong>
+    {% if event.added %}
+    <div class="timeline-line">{{ event.added|length }} version{{ "s" if event.added|length != 1 }} added:
+      {% for item in event.added %}<span class="version-ref">{{ item.reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+    </div>
+    {% endif %}
+    {% for item in event.amended %}
+    <div class="timeline-line">
+      <span class="tag tag-amended">Amended</span>
+      <span class="version-ref">{{ item.reference }}</span>
+      {% if item.fields %}
+      — changed: {% for field in item.fields %}<strong>{{ field }}</strong>{% if not loop.last %}, {% endif %}{% endfor %}
+      {% else %}
+      — fields not recorded for this edition
+      {% endif %}
+    </div>
+    {% endfor %}
+    {% if event.removed %}
+    <div class="timeline-line">{{ event.removed|length }} no longer listed:
+      {% for item in event.removed %}<span class="version-ref">{{ item.reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+    </div>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>

@@ -260,3 +260,5 @@ details.diff .hint { margin: 0.25rem 0 0.5rem; }
 .timeline { list-style: none; padding: 0; margin: 0.5rem 0 1rem; }
 .timeline li { padding: 0.4rem 0 0.4rem 0.875rem; border-left: 2px solid var(--line); }
 .timeline li:first-child { border-left-color: var(--accent); }
+.timeline-line { margin: 0.3rem 0 0; font-size: 0.9375rem; display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: baseline; }
+.timeline .version-ref { font-size: 0.875rem; color: var(--ink-muted); }

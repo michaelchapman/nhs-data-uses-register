@@ -203,9 +203,15 @@ def build(
     by_slug = {a["slug"]: a for a in data["agreements"]}
 
     # Attach change status to agreements so detail pages can flag recent activity.
-    changed_refs = {item["reference"]: "amended" for item in changes.get("amended", [])}
+    changed_refs = {
+        item["reference"]: {"kind": "amended", "fields": item.get("fields") or []}
+        for item in changes.get("amended", [])
+    }
     changed_refs.update(
-        {item["reference"]: item.get("kind", "new") for item in changes.get("added", [])}
+        {
+            item["reference"]: {"kind": item.get("kind", "new"), "fields": []}
+            for item in changes.get("added", [])
+        }
     )
 
     context = {
