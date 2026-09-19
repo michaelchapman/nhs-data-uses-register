@@ -20,9 +20,18 @@ import hashlib
 import json
 from pathlib import Path
 
+from . import compare
 from . import sources
 
 SNAPSHOT_ROOT = Path(__file__).resolve().parent.parent / "data" / "snapshots"
+
+# Bumped whenever the rules below change what counts as a change. Snapshots
+# written under different versions are not comparable: every digest moves, so a
+# naive comparison reports the entire register as amended. `diff` refuses
+# instead, and the fix is to re-ingest the archive so every edition is
+# fingerprinted under the same rules. Snapshots written before this existed are
+# version 1.
+FINGERPRINT_VERSION = 2
 
 # Fields whose change we consider a substantive amendment to an agreement.
 FINGERPRINTED = (
@@ -43,10 +52,27 @@ FINGERPRINTED = (
 
 
 def _fingerprint(version: dict) -> str:
-    fields = {key: version.get(key, "") for key in FINGERPRINTED}
-    fields["datasets"] = sorted(d["name"] for d in version["datasets"])
+    """A digest of the fields whose change we call an amendment.
+
+    Text is normalised before hashing (`compare.normalise`: NFKC, smart
+    punctuation folded, whitespace collapsed, case ignored) so that an edition
+    which merely reformats the register does not read as thousands of
+    amendments. This is not hypothetical — of the 122 amendments between the
+    February and March 2026 editions, 105 were typography alone, and the site
+    reported all 122. See docs/plan-version-diffs.md §7.
+
+    The same normalisation decides what the agreement pages call a change, so
+    the two never disagree.
+    """
+    fields = {key: compare.normalise(version.get(key, "")) for key in FINGERPRINTED}
+    fields["datasets"] = sorted(compare.normalise(d["name"]) for d in version["datasets"])
     payload = json.dumps(fields, sort_keys=True)
     return hashlib.sha256(payload.encode()).hexdigest()[:16]
+
+
+def fingerprint_version(snapshot: dict) -> int:
+    """Which rules a snapshot's digests were computed under."""
+    return snapshot.get("fingerprint_version", 1)
 
 
 def build_snapshot(data: dict, register_slug: str, edition: str, source_url: str, retrieved: str) -> dict:
@@ -62,6 +88,7 @@ def build_snapshot(data: dict, register_slug: str, edition: str, source_url: str
     return {
         "register": register_slug,
         "edition": edition,
+        "fingerprint_version": FINGERPRINT_VERSION,
         "source_url": source_url,
         "retrieved": retrieved,
         "counts": {
@@ -147,7 +174,27 @@ def previous_snapshot(register_slug: str, edition: str) -> dict | None:
 def diff(current: dict, previous: dict | None) -> dict:
     """Agreement-version level changes between two editions."""
     if not previous:
-        return {"comparable": False, "previous_edition": None, "added": [], "amended": [], "removed": []}
+        return {
+            "comparable": False,
+            "reason": "first-edition",
+            "previous_edition": None,
+            "added": [],
+            "amended": [],
+            "removed": [],
+        }
+    if fingerprint_version(current) != fingerprint_version(previous):
+        # Comparing across rule changes would mark every version amended, which
+        # is worse than saying nothing: it looks like a real event.
+        return {
+            "comparable": False,
+            "reason": "fingerprint-rules-changed",
+            "previous_edition": previous["edition"],
+            "previous_fingerprint_version": fingerprint_version(previous),
+            "fingerprint_version": fingerprint_version(current),
+            "added": [],
+            "amended": [],
+            "removed": [],
+        }
 
     old, new = previous["versions"], current["versions"]
     old_bases = {v["base"] for v in old.values()}
@@ -172,6 +219,7 @@ def diff(current: dict, previous: dict | None) -> dict:
     key = lambda item: (item["org"].lower(), item["reference"])
     return {
         "comparable": True,
+        "reason": "",
         "previous_edition": previous["edition"],
         "added": sorted(added, key=key),
         "amended": sorted(amended, key=key),

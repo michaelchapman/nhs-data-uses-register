@@ -106,6 +106,18 @@ def ingest_one(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
             f"~{len(changes['amended'])} amended, -{len(changes['removed'])} removed"
         )
+    elif changes.get("reason") == "fingerprint-rules-changed":
+        # The common case for this is ingesting one new edition after the
+        # fingerprint rules changed, while the rest of the archive still holds
+        # digests from the old ones. Nothing is wrong with either file; they
+        # simply cannot be compared until both sides agree.
+        print(
+            f"  vs {changes['previous_edition']}: not compared — fingerprint rules "
+            f"v{changes['previous_fingerprint_version']} vs v{changes['fingerprint_version']}. "
+            "Re-ingest the whole archive so every edition uses the current rules:\n"
+            "    python -m pipeline.ingest data/raw/*.xlsx",
+            file=sys.stderr,
+        )
     print(f"  fingerprint -> {relative(snapshot_module.write_snapshot(current))}")
 
     return {

@@ -75,6 +75,53 @@ rest contribute a ~210 KB fingerprint each, so a three-year backfill costs about
 Add `--fingerprints-only` to extend the history without touching the extract the
 site is currently built from.
 
+## Re-fingerprinting the archive
+
+Fingerprints carry a rule version — `fingerprint_version` in each snapshot —
+saying what counted as a change when they were written. **The rules changed in
+v2:** text is normalised before hashing, so that reformatting is no longer
+reported as an amendment. Between the February and March 2026 editions, 105 of
+the 122 "amendments" were punctuation, spacing and capitalisation alone.
+
+Every digest moves when the rules change, so editions fingerprinted under
+different versions cannot be compared — a comparison would mark the whole
+register as amended. `ingest` and `run` detect the mismatch, refuse the
+comparison, and say so; nothing is silently wrong, but the "what changed" page
+will have a gap until both sides agree.
+
+The fix is a one-off re-ingest of every edition, in one command:
+
+```bash
+.venv/bin/python -m pipeline.ingest data/raw/*.xlsx
+```
+
+Editions are sorted by publication month regardless of the order they are
+listed, so each one is compared against the edition before it. Expect this to
+take a while — it parses every workbook — and to rewrite every file under
+`data/snapshots/`. Verify your local copies against the manifest first
+(see below), commit the whole `data/snapshots/` directory afterwards, and
+check that the amendment counts printed along the way are markedly lower than
+they were.
+
+Until that happens the site keeps working and keeps showing the old counts,
+with a warning on every build.
+
+### Checking the local workbooks
+
+The manifest records a SHA-256 for every edition ingested, so the local set can
+be verified before a long run:
+
+```bash
+.venv/bin/python - <<'EOF'
+import hashlib, json
+from pathlib import Path
+for e in json.load(open("data/editions/data-uses-register/manifest.json"))["editions"]:
+    f = Path("data/raw") / e["source_file"]
+    got = hashlib.sha256(f.read_bytes()).hexdigest() if f.is_file() else "MISSING"
+    print(("ok  " if got == e["sha256"] else "BAD "), e["edition"], f.name)
+EOF
+```
+
 ## Useful flags
 
 | Command | Effect |

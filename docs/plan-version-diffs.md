@@ -144,6 +144,12 @@ counts stay honest all the way back to March 2025. Land the
 normalisation and the new fields together, in one change, followed by
 one full re-ingest.
 
+**Update:** the normalisation has shipped, versioned as fingerprint rules
+v2, and the re-ingest that applies it has not happened yet. The new
+fields (`controllers`, per-dataset attributes) and R2's per-field digests
+should go in *before* that re-ingest so one pass covers all three —
+after it, adding them costs a second pass over every workbook.
+
 ## 4. Recommendations
 
 ### R1 — Per-agreement edition timeline (no new data required)
@@ -360,9 +366,10 @@ stated point of the project.
 | Verify the local workbook set against the manifest ([§6](#6-backfilling-the-archive)) | done | Precondition |
 | Probe three edition pairs ([§7](#7-what-the-probe-found)) | done | Sized the problem, and changed it |
 | R1 register history + R4 version-to-version redlines | **done** | Shipped; needed no new data |
-| R3 normalisation, applied to the fingerprint | next | Highest — corrects a live overstatement |
+| R3 normalisation, applied to the fingerprint | **done** | Shipped; takes effect on re-ingest |
 | R5 vocabulary and page structure | next | High |
-| `ingest` memory fix | todo | Precondition for the backfill |
+| Full re-ingest, to apply the new rules | **next** | Turns the fix on; see docs/manual-updates.md |
+| `ingest` memory fix | todo | Precondition for the re-ingest |
 | R2 per-field digests + the missing fields | todo | High for the field summary, marginal for the blind spots |
 | R3 amendment log | todo | Scalar and list changes first, prose last |
 | Full re-ingest of all 19 editions | todo | Restates the whole archive's counts honestly |
