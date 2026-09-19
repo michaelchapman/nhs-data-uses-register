@@ -2,8 +2,9 @@
 
 Status: **proposed.** Nothing here is implemented yet.
 
-Revised after confirming that all 19 published workbooks are held
-locally. That changes the plan materially: field-level history can be
+Revised twice: after confirming that all 19 published workbooks are held
+locally, and again after running the probe (§7), which overturned part
+of what follows. That changes the plan materially: field-level history can be
 backfilled across the whole archive rather than starting from whichever
 edition the work lands in, so this is no longer a race against the next
 publication. See [§6](#6-backfilling-the-archive).
@@ -69,14 +70,13 @@ version has left the register. The "No longer listed" section of
 (a withdrawal would be the single most newsworthy event on the site) but
 it should not be given equal visual weight to a bucket with 122 entries.
 
-**Amendment volume is spiky and unexplained.** March 2026 amended 122
-versions — five times that month's new agreements. February, May and
-June 2026 amended 70+. July and October 2025 amended 41 and 52. Those
-spikes are exactly what a reader would want explained, and the site
-cannot distinguish "NHS England restated the benefits text on 122
-agreements after a template change" from "122 agreements had their end
-dates extended". Those are very different stories and today they render
-identically.
+**Amendment volume is spiky, and the spikes are mostly not real.** March
+2026 amended 122 versions — five times that month's new agreements.
+February, May and June 2026 amended 70+. The probe has since measured
+two of these pairs (§7): 86% of March's amendments are typographic
+churn, and the site is currently reporting 122 changes in a month where
+17 happened. The spike was worth explaining, and the explanation turns
+out to be mostly an artefact of how the fingerprint compares text.
 
 **The user-reported case is real and is this month's only amendment.**
 `DARS-NIC-788663-G4F2D-v0.2` (Office for National Statistics, *Health
@@ -128,8 +128,8 @@ every edition and drown the signal.
 
 **Normalisation.** `_fingerprint` hashes `clean()`ed text, which collapses
 `\r\n` and runs of blank lines but preserves trailing spaces, double
-spaces, non-breaking spaces, smart-vs-straight quotes and case. A fair
-share of the 122-amendment spike is plausibly that kind of churn. For
+spaces, non-breaking spaces, smart-vs-straight quotes and case. The probe has since measured
+this: 86% of the 122-amendment spike is exactly that kind of churn (§7). For
 hashing only — never for display — normalise: `NFKC`, collapse all
 whitespace runs to a single space, strip, and fold the register's `~`
 bullet markers to a consistent form. Keep the displayed text exactly as
@@ -148,7 +148,7 @@ one full re-ingest.
 
 ### R1 — Per-agreement edition timeline (no new data required)
 
-Ship this first. It needs no format change, no re-ingest and no new
+**Implemented.** Ship this first. It needs no format change, no re-ingest and no new
 dependency: every fingerprint file is already committed, and loading all
 19 and indexing them by base reference takes 0.26s.
 
@@ -200,15 +200,24 @@ roughly 2x per edition, ~4 MB across the full archive. That is an
 acceptable price for turning "something changed" into "the end date
 changed", and it scales: every future edition carries it for free.
 
-It also makes the spikes readable. If March 2026's 122 amendments were
-all `yielded_benefits`, the page can say so in one line instead of
-listing 122 rows that look alike.
+It also makes the spikes readable, which §7 shows is the main thing
+standing between the "what changed" page and being trustworthy.
+
+One caveat the probe has since added: the *invisible* changes this was
+partly justified by did not appear. In both pairs measured, no version
+changed only in `controllers` or a dataset attribute — every such change
+came alongside a field the fingerprint already sees. The field additions
+are still right (a controller change that happens to travel alone would
+be missed, and the next months may differ), but they are a correctness
+fix at the margin, not the headline. The per-field digests earn their
+keep on the cosmetic/substantive split instead.
 
 ### R3 — An amendment log, for genuine redline
 
 Field names are enough for a change summary. A redline needs the old
-text, and after pruning the old text is gone. So write it at ingest time,
-when both editions are briefly in hand, into a small permanent file:
+text, and after pruning the old text is gone. So write it at ingest
+time, when both editions are briefly in hand, into a small permanent
+file:
 
 ```
 data/amendments/<register>/<edition>.json.gz
@@ -228,6 +237,22 @@ Even the worst month is smaller than one edition fingerprint. Compare
 that with the alternative of raising `editions.DEFAULT_KEEP` to 2, which
 costs **32 MB of git history per edition** and still only lets you diff
 one month back.
+
+**The probe has weakened the case for the redline half of this.** Across
+both pairs measured, not one amendment had a substantive prose change:
+every edition-to-edition change to a long free-text field was
+typography. The substantive edits were scalar (an organisation renamed)
+or list-shaped (datasets added and removed) — before/after pairs, not
+redlines. So the log is still worth writing, because a before/after pair
+needs the old value just as much as a redline does and the old value is
+what pruning destroys. But it should be built for the scalar and list
+cases first, and the prose redline treated as a path that may rarely
+fire between editions.
+
+Note this says nothing about version-to-version prose, which is a
+different question and comes out the other way: 3,370 of 3,663
+consecutive version pairs in the September 2026 extract have genuinely
+rewritten prose. That case is implemented and needs no stored history.
 
 Mechanics: `ingest` already has the new extract; it needs the previous
 edition's to compare against. `ingest.main` already sorts its workbooks
@@ -260,6 +285,9 @@ newest for its register. Peak drops to about two extracts, ~800 MB. Do
 this before attempting the backfill, not after discovering it swaps.
 
 ### R4 — Rendering: summary by default, redline on request
+
+**Implemented for the version-to-version case** (`pipeline/compare.py`).
+The edition-to-edition case still waits on R3's stored history.
 
 Three levels, in increasing cost to the reader:
 
@@ -327,28 +355,29 @@ stated point of the project.
 
 ## 5. Suggested sequencing
 
-| Step | Needs | Value |
+| Step | State | Value |
 | --- | --- | --- |
-| Verify the local workbook set against the manifest ([§6](#6-backfilling-the-archive)) | nothing | Precondition |
-| Probe February vs March 2026 ([§6](#6-backfilling-the-archive)) | two workbooks | High — sizes the problem |
-| R1 register history + R4(3) version-to-version diffs | committed fingerprints and the current extract, both already present | High — ships now |
-| R5 vocabulary and page structure | nothing | High |
-| `ingest` memory fix | nothing | Precondition for the backfill |
-| R2 per-field digests + R3 normalisation and new fields | snapshot format change | High |
-| R3 amendment log | the memory fix; `ingest` reordered before `prune_extracts` | High |
-| Full re-ingest of all 19 editions | all of the above | Turns 18 pairs of history from counts into content |
-| R6 exports | R2 | Medium |
+| Verify the local workbook set against the manifest ([§6](#6-backfilling-the-archive)) | done | Precondition |
+| Probe three edition pairs ([§7](#7-what-the-probe-found)) | done | Sized the problem, and changed it |
+| R1 register history + R4 version-to-version redlines | **done** | Shipped; needed no new data |
+| R3 normalisation, applied to the fingerprint | next | Highest — corrects a live overstatement |
+| R5 vocabulary and page structure | next | High |
+| `ingest` memory fix | todo | Precondition for the backfill |
+| R2 per-field digests + the missing fields | todo | High for the field summary, marginal for the blind spots |
+| R3 amendment log | todo | Scalar and list changes first, prose last |
+| Full re-ingest of all 19 editions | todo | Restates the whole archive's counts honestly |
+| R6 exports | todo | Medium |
 
-The first draft argued for landing R2 and R3 before the October 2026
-workbook was ingested, on the grounds that anything not captured at
-ingest was lost. That urgency is gone: a re-ingest recovers it whenever
-the work is ready. Sequence for correctness instead — get the definition
-of "changed" right (R3's normalisation and the missing fields), then
-re-ingest once, rather than rushing a format into the archive and
-needing a second reset later.
+The probe reorders this. Normalisation was housekeeping in the first
+two drafts and is now the single most valuable change on the list: it is
+the difference between the "what changed" page reporting 122 amendments
+and reporting 17. Everything else on the page is accurate; that number
+is not.
 
-Steps R1 and R5 remain pure rendering over data already in git and
-should not wait for any of it.
+It also demotes the edition-to-edition redline, which was the headline
+of the first draft. There was no substantive prose change to redline in
+either pair measured. The version-to-version redline, which turned out
+to be the case with the real prose rewrites, is already shipped.
 
 ## 6. Backfilling the archive
 
@@ -372,9 +401,10 @@ for e in json.load(open("data/editions/data-uses-register/manifest.json"))["edit
 The whole set is 530 MB across 19 files. Nothing about the backfill is
 expensive except the extraction itself, which is bounded by openpyxl.
 
-**Probe before building.** One question drives how much of this
-machinery is worth writing: were March 2026's 122 amendments substantive,
-or a bulk template restatement? The answer is two workbooks away, and it
+**Probe before building.** *Run — see [§7](#7-what-the-probe-found) for
+the results.* One question drove how much of this machinery was worth
+writing: were March 2026's 122 amendments substantive, or a bulk
+template restatement? The answer is two workbooks away, and it
 needs none of the code proposed here — `pipeline/probe.py` is written and
 changes nothing:
 
@@ -422,3 +452,93 @@ edited twice in one month shows as one amendment, because a monthly
 snapshot cannot see inside the month. Worth stating on the page:
 amendments are attributed to the edition they first appear in, not to the
 date the edit was made.
+
+## 7. What the probe found
+
+Run on 19 September 2026 against the workbooks, with `pipeline.probe`.
+
+### February 2026 → March 2026 — the 122-amendment spike
+
+```
+added        25     amended  122     removed  0
+  substantive after normalising    17
+  cosmetic only                   105   (86% of the amendments)
+  controllers or dataset attributes only   0
+
+field              as published  normalised  fingerprinted
+expected_benefits            67           0  yes
+expected_output              19           0  yes
+controllers                  17          17  NO — proposed
+organisation                 17          17  yes
+title                        10           0  yes
+activities                    6           0  yes
+objective                     5           0  yes
+yielded_benefits              3           0  yes
+```
+
+Every prose field normalises to zero. All 105 cosmetic amendments are
+typography — punctuation, spacing or case — in text whose meaning did
+not move. What did happen is narrower and more interesting than the
+headline: 17 versions changed `organisation` *and* `controllers`, the
+same count in both, which reads as an organisational rename carried
+across both fields rather than 17 unrelated edits.
+
+So the register's largest recent "change" event is a formatting pass
+over roughly a hundred agreements plus one rename. The site currently
+presents that as 122 amendments.
+
+### June 2026 → July 2026 — a different shape entirely
+
+```
+added        59     amended   15     removed  0
+  substantive after normalising    12
+  cosmetic only                     3   (20% of the amendments)
+  controllers or dataset attributes only   0
+
+field               as published  normalised  fingerprinted
+dataset_attributes            15          12  NO — proposed
+dataset_names                 12          12  yes
+expected_output                3           0  yes
+```
+
+Here the amendments are real and they are all about datasets: which
+datasets an agreement covers, and their recorded attributes. No prose
+was substantively touched in either month.
+
+### What follows from it
+
+1. **Normalisation is the highest-value change in this plan**, not the
+   housekeeping item the first two drafts called it. It is the
+   difference between reporting 122 amendments and reporting 17.
+2. **Spikes and ordinary months differ in kind, not degree.** March is
+   a reformatting pass; July is dataset churn. Once per-field digests
+   exist (R2), the page can say which kind of month it is describing in
+   a single line, which is more useful than any per-row detail.
+3. **The edition-to-edition prose redline has little to show.** Neither
+   pair contained one substantive prose change. Build R3's log for the
+   scalar and list cases first.
+4. **The blind spots are real but not urgent.** No amendment in either
+   pair was invisible to the current fingerprint. The controller changes
+   in March travelled with an `organisation` change that was already
+   caught.
+5. **Two pairs are not eighteen.** Both conclusions above rest on a
+   sample of two. April→May 2026 (73 amendments) is the obvious third,
+   and the full re-ingest settles it for the whole archive.
+
+### Version-to-version, for contrast
+
+Measured directly on the September 2026 extract while implementing R1
+and R4, across all 3,663 consecutive version pairs:
+
+| | Pairs |
+| --- | ---: |
+| With any change | 3,651 |
+| With substantively rewritten prose | 3,370 |
+| With a changed scalar field | 3,606 |
+| With changed datasets or controllers | 1,189 |
+
+The contrast is the point. Between *editions* the prose barely moves;
+between *versions* of an agreement it is rewritten nine times out of
+ten. The redline belongs on the version history — where it now is — and
+the edition comparison needs a change summary far more than it needs a
+redline.
