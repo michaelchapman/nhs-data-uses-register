@@ -119,6 +119,7 @@ data/raw/              downloaded workbooks (gitignored)
 data/editions/         committed extracts, and the manifest
 data/snapshots/        committed edition fingerprints
 docs/manual-updates.md the monthly routine
+docs/plan-*.md         design notes, accepted and proposed
 ```
 
 ## Adding another register
