@@ -22,6 +22,8 @@ from collections import defaultdict
 
 import openpyxl
 
+from . import aliases
+
 VERSION_SUFFIX = re.compile(r"-v([0-9]+(?:\.[0-9]+)?)$", re.IGNORECASE)
 MONTH_ABBR = {
     m: i
@@ -32,8 +34,17 @@ MONTH_ABBR = {
 }
 
 
+# "Smart" punctuation the register uses inconsistently for the same name —
+# ST GEORGE'S vs ST GEORGE’S. NFKD + ascii-encode drops these silently rather
+# than folding them to their plain-ASCII equivalent, which used to give the
+# same organisation two different slugs (and so two different pages) purely
+# because one row used a curly apostrophe and another a straight one.
+SMART_PUNCTUATION = str.maketrans("’‘“”–—", "''\"\"--")
+
+
 def slugify(value: str, max_length: int = 80) -> str:
-    value = unicodedata.normalize("NFKD", value or "").encode("ascii", "ignore").decode()
+    value = (value or "").translate(SMART_PUNCTUATION)
+    value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode()
     value = re.sub(r"[^a-zA-Z0-9]+", "-", value).strip("-").lower()
     return value[:max_length].strip("-") or "unknown"
 
@@ -195,6 +206,8 @@ def extract(workbook_bytes: bytes) -> dict:
             }
         )
 
+    alias_map = aliases.load_map()
+
     agreements = []
     for base, versions in versions_by_base.items():
         versions.sort(key=lambda v: (_version_key(v["version"]), v["start_date"]))
@@ -210,19 +223,25 @@ def extract(workbook_bytes: bytes) -> dict:
         # isn't v1, and the page needs to say "before", not "from".
         first_known = earliest["version"] in ("", "1", "1.0")
         legal_bases = sorted({d["legal_basis"] for v in versions for d in v["datasets"] if d["legal_basis"]})
+        # `organisation`/`controllers` stay exactly as the register recorded them —
+        # what an agreement page shows is always the literal source text. Only the
+        # slugs used for grouping and links go through the alias map, so a
+        # human-reviewed merge (see aliases.py) changes which page something links
+        # to, never what it displays.
+        organisation_canonical = aliases.resolve(latest["organisation"], alias_map)
         agreements.append(
             {
                 "base_reference": base,
                 "slug": slugify(base),
                 "title": latest["title"] or base,
                 "organisation": latest["organisation"],
-                "organisation_slug": slugify(latest["organisation"]),
+                "organisation_slug": slugify(organisation_canonical),
                 "organisation_type": latest["organisation_type"],
                 "commercial": latest["commercial"],
                 "sublicensing": latest["sublicensing"],
                 "controller_basis": latest["controller_basis"],
                 "controllers": latest["controllers"],
-                "controller_slugs": [slugify(c) for c in latest["controllers"]],
+                "controller_slugs": [slugify(aliases.resolve(c, alias_map)) for c in latest["controllers"]],
                 "first_start": min(starts) if starts else "",
                 "first_start_known": first_known,
                 "latest_start": latest["start_date"],
@@ -246,27 +265,51 @@ def extract(workbook_bytes: bytes) -> dict:
 
 
 def _group_organisations(agreements: list[dict]) -> list[dict]:
+    alias_map = aliases.load_map()
+    # The exact text a reviewer wrote as `canonical` in the alias file, keyed
+    # by its own slug. Falling back to `aliases.resolve()` per agreement isn't
+    # enough on its own: whichever raw name happens to be processed first
+    # becomes the display name, which is only the reviewer's chosen spelling
+    # by coincidence if the register's own text already matches it.
+    canonical_by_slug = {slugify(g["canonical"]): g["canonical"] for g in aliases.load_groups()}
+
+    # Group by the already-canonical `organisation_slug`, not by the raw
+    # `organisation` text: a human-reviewed alias means two different strings
+    # in the register belong on one page. `known_as` collects every raw
+    # spelling actually seen, so the merge is always visible on the page
+    # rather than silently applied.
     grouped: dict[str, dict] = {}
     for agreement in agreements:
-        name = agreement["organisation"] or "Unnamed organisation"
+        raw_name = agreement["organisation"] or "Unnamed organisation"
+        slug = agreement["organisation_slug"]
+        canonical_name = canonical_by_slug.get(slug) or aliases.resolve(raw_name, alias_map)
         entry = grouped.setdefault(
-            name,
+            slug,
             {
-                "name": name,
-                "slug": slugify(name),
+                "name": canonical_name,
+                "slug": slug,
                 "type": agreement["organisation_type"],
                 "agreements": [],
                 "controller_agreements": [],
+                "known_as": set(),
+                # Distinguishes a human-reviewed merge (data/organisation-aliases.json)
+                # from two spellings that were never really different — a curly vs
+                # straight apostrophe — which slugify() already treats as one
+                # organisation without anyone having to review anything.
+                "reviewed_merge": slug in canonical_by_slug,
             },
         )
+        if raw_name != entry["name"]:
+            entry["known_as"].add(raw_name)
         entry["agreements"].append(agreement)
 
     # An organisation can also appear only as a data controller on someone else's
     # agreement, never as the applicant — this matches controller free text
     # against organisation names by slug, so it's approximate: a controller
-    # recorded under a different spelling won't be matched. Track membership by
-    # base_reference rather than comparing agreement dicts, which is both faster
-    # and correct regardless of dict identity.
+    # recorded under a different spelling won't be matched unless that spelling
+    # is in the alias file. Track membership by base_reference rather than
+    # comparing agreement dicts, which is both faster and correct regardless of
+    # dict identity.
     by_slug = {entry["slug"]: entry for entry in grouped.values()}
     seen_refs = {slug: {a["base_reference"] for a in entry["agreements"]} for slug, entry in by_slug.items()}
     for agreement in agreements:
@@ -276,16 +319,21 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
                 continue
             entry = by_slug.get(controller_slug)
             if entry is None:
+                canonical_controller = canonical_by_slug.get(controller_slug) or aliases.resolve(controller, alias_map)
                 entry = {
-                    "name": controller,
+                    "name": canonical_controller,
                     "slug": controller_slug,
                     "type": "",
                     "agreements": [],
                     "controller_agreements": [],
+                    "known_as": set(),
+                    "reviewed_merge": controller_slug in canonical_by_slug,
                 }
-                grouped[controller] = entry
+                grouped[controller_slug] = entry
                 by_slug[controller_slug] = entry
                 seen_refs[controller_slug] = set()
+            if controller != entry["name"]:
+                entry["known_as"].add(controller)
             if agreement["base_reference"] not in seen_refs[controller_slug]:
                 entry["controller_agreements"].append(agreement)
                 seen_refs[controller_slug].add(agreement["base_reference"])
@@ -300,6 +348,7 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
         )
         entry["latest_end"] = max((a["coverage_end"] for a in entry["agreements"]), default="")
         entry["commercial"] = any(a["commercial"] == "Yes" for a in entry["agreements"])
+        entry["known_as"] = sorted(entry["known_as"])
     return sorted(grouped.values(), key=lambda o: o["name"].lower())
 
 
@@ -324,7 +373,9 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
                             entry["attributes"].setdefault(key, set()).add(value)
     for entry in grouped.values():
         entry["agreement_count"] = len(entry["agreements"])
-        entry["organisations"] = sorted({a["organisation"] for a in entry["agreements"]})
+        # Counted by canonical slug, not raw name, so two aliased spellings of
+        # the same organisation count once rather than twice.
+        entry["organisations"] = sorted({a["organisation_slug"] for a in entry["agreements"]})
         entry["files_released"] = sum(
             r["files"]
             for a in entry["agreements"]

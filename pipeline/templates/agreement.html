@@ -100,7 +100,7 @@
 {% endif %}
 
 <h2 id="history">Version history</h2>
-<p>The register lists each renewal of this agreement as a separate row. This tool shows the {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }} present in the editions ingested so far{% if not agreement.first_start_known %} — earlier versions existed before the earliest edition this tool has{% endif %}.</p>
+<p>The register lists each renewal of this agreement as a separate row. This site has {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }}{% if not agreement.first_start_known %} — earlier versions existed before this site's records begin{% endif %}.</p>
 {% for version in agreement.versions|reverse %}
 <details class="version" {% if loop.first %}open{% endif %}>
   <summary>

@@ -109,8 +109,10 @@ def read_extract(register_slug: str, edition: str) -> dict:
 
 def rehydrate(agreements: list[dict]) -> dict:
     """Rebuild the derived views that `write_extract` deliberately dropped."""
+    from . import aliases as aliases_module
     from .extract import _group_datasets, _group_organisations, resplit_list, slugify
 
+    alias_map = aliases_module.load_map()
     for agreement in agreements:
         # Re-splitting is idempotent (a string with none of the separators just
         # comes back as itself), so this is safe to apply unconditionally rather
@@ -121,12 +123,17 @@ def rehydrate(agreements: list[dict]) -> dict:
             version["controllers"] = resplit_list(version["controllers"])
         agreement["controllers"] = agreement["versions"][-1]["controllers"]
         agreement["latest"] = agreement["versions"][-1]
+        # Always recomputed, never backfilled-if-missing: unlike the fields
+        # below, organisation_slug and controller_slugs need to reflect the
+        # *current* data/organisation-aliases.json on every read, not whatever
+        # was true at ingest time — otherwise reviewing and adding an alias
+        # would need a re-ingest to take effect, rather than just a rebuild.
+        agreement["organisation_slug"] = slugify(aliases_module.resolve(agreement["organisation"], alias_map))
+        agreement["controller_slugs"] = [slugify(aliases_module.resolve(c, alias_map)) for c in agreement["controllers"]]
         # An extract written before a field existed won't have it. Backfilling
         # here — from data the extract does store — means an older committed
         # extract keeps working without a re-ingest, as long as the field is a
         # deterministic function of what's already there.
-        if "controller_slugs" not in agreement:
-            agreement["controller_slugs"] = [slugify(c) for c in agreement["controllers"]]
         if "first_start_known" not in agreement:
             earliest_version = agreement["versions"][0].get("version", "")
             agreement["first_start_known"] = earliest_version in ("", "1", "1.0")
