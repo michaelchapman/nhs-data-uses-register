@@ -1,1 +1,17 @@
-IyBXb3JrYm9va3MgYXJlIGRvd25sb2FkZWQgYnkgaGFuZCBhbmQgbmV2ZXIgY29tbWl0dGVkOyBzZWUgZG9jcy9tYW51YWwtdXBkYXRlcy5tZC4KZGF0YS9yYXcvCl9zaXRlLwoudmVudi8KX19weWNhY2hlX18vCioucHljCm5vZGVfbW9kdWxlcy8KCiMgVGhlIGdpdGlnbm9yZWQgcGF0aHMgYWJvdmUgYXJlbid0IGVub3VnaCBvbiBhIG1hY2hpbmUgd2l0aCBhIHBlcnNvbmFsCiMgZ2xvYmFsIGdpdGlnbm9yZSAoY29yZS5leGNsdWRlc2ZpbGUpIHRoYXQgaWdub3JlcyAqLmd6IG9yIHNpbWlsYXIgLSB0aGF0CiMgc2lsZW50bHkgZHJvcHMgdGhlIGNvbXBhY3QgZWRpdGlvbiBmaW5nZXJwcmludHMgYW5kIGV4dHJhY3QgdGhhdAojIHBpcGVsaW5lLmluZ2VzdCB3cml0ZXMsIHdoaWNoIGFyZSB0aGUgd2hvbGUgcG9pbnQgb2YgdGhpcyByZXBvc2l0b3J5J3MKIyBkYXRhIHN0b3JlIGFuZCBtdXN0IGJlIGNvbW1pdHRlZC4gQSBuZWdhdGlvbiBpbiB0aGlzIHRyYWNrZWQgLmdpdGlnbm9yZQojIHRha2VzIHByZWNlZGVuY2Ugb3ZlciBhIGdsb2JhbCBydWxlLCBzbyBzcGVsbCBpdCBvdXQgZXhwbGljaXRseSByYXRoZXIKIyB0aGFuIHJlbHkgb24gZXZlcnlvbmUncyBtYWNoaW5lIG5vdCBoYXZpbmcgb25lLgohZGF0YS9zbmFwc2hvdHMvKiovKgohZGF0YS9lZGl0aW9ucy8qKi8qCg==
+# Workbooks are downloaded by hand and never committed; see docs/manual-updates.md.
+data/raw/
+_site/
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+
+# The gitignored paths above aren't enough on a machine with a personal
+# global gitignore (core.excludesfile) that ignores *.gz or similar - that
+# silently drops the compact edition fingerprints and extract that
+# pipeline.ingest writes, which are the whole point of this repository's
+# data store and must be committed. A negation in this tracked .gitignore
+# takes precedence over a global rule, so spell it out explicitly rather
+# than rely on everyone's machine not having one.
+!data/snapshots/**/*
+!data/editions/**/*
