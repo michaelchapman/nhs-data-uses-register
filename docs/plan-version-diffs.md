@@ -750,9 +750,19 @@ code:
     data/raw/datausesregister_october2025.xlsx
 ```
 
-It will name the 154 amended versions and their changed fields. Seeing
-the actual before and after on a dozen of them is worth more than any
-further design work here: if those 135 changes turn out to be one
-organisation renamed, R7's rename handling is the feature and the
-from-to display is a detail. If they are genuine transfers, it is the
-other way round.
+It names the amended versions and their changed fields, and tallies the
+departures and arrivals for controllers and datasets across the whole
+edition — so a hundred agreements renamed from one organisation to
+another collapse into one row, while genuine one-off transfers stand
+apart at a count of one. That distinction decides which half of R7 is
+the feature: if October 2025 is one organisation renamed, the rename
+handling matters and the from-to display is a detail; if they are
+transfers, it is the other way round.
+
+The probe has since been run over that pair. It confirmed the counts
+this section was built on from the snapshots alone — 135 controller
+changes, 37 organisation changes, 102 amendments invisible to the old
+rules — and, unlike every other month examined, **nothing cosmetic at
+all**: 52 of 52 amendments substantive, against 86% cosmetic in March
+2026. October 2025 and March 2026 are opposite kinds of event, and the
+site previously reported them the same way.

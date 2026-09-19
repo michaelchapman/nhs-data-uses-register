@@ -11,7 +11,13 @@ two questions docs/plan-version-diffs.md leaves open:
    amendments in March 2026 may be whitespace, quote-character or case churn
    rather than substance. Every field is compared twice — as published, and
    after normalisation — so the two counts can be read side by side.
-2. How much is the current fingerprint missing? `snapshot.FINGERPRINTED` omits
+2. Who the data controllers became. Where a list-shaped field changed,
+   the departures and arrivals are tallied across the whole edition, so a
+   hundred agreements renamed from one organisation to another collapse into
+   a single row and genuine one-off transfers stand apart from it. This is
+   the question digests cannot answer at all: they say a controller changed,
+   never from whom to whom.
+3. How much is the current fingerprint missing? `snapshot.FINGERPRINTED` omits
    data controllers entirely and hashes only dataset *names*, so a change of
    controller or of a dataset's legal basis registers as no change at all.
    Those fields are compared too, and reported separately.
@@ -41,6 +47,10 @@ normalise = compare.normalise
 # Proposed additions to snapshot.FINGERPRINTED, compared here so the cost of
 # leaving them out can be counted rather than guessed at. See the plan, §3.
 DATASET_ATTRIBUTES = ("name", "legal_basis", "sensitivity", "type_of_data", "confidentiality")
+
+# List-shaped fields, where the useful question is what joined and what left.
+MEMBERSHIP = ("controllers", "dataset_names")
+FIELD_TITLES = {"controllers": "Data controller changes", "dataset_names": "Dataset changes"}
 
 
 def comparable(version: dict) -> dict[str, object]:
@@ -140,6 +150,13 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--field", action="append", help="restrict --show to these fields (repeatable)"
     )
+    parser.add_argument(
+        "--transitions",
+        type=int,
+        default=10,
+        metavar="N",
+        help="how many distinct controller/dataset changes to list (default 10)",
+    )
     args = parser.parse_args(argv)
 
     unknown = sorted(set(args.field or ()) - set(PROSE))
@@ -165,6 +182,7 @@ def main(argv: list[str] | None = None) -> None:
     print(f"in both   {len(shared):5,}\n")
 
     raw_tally, normalised_tally = Counter(), Counter()
+    transitions: dict[str, Counter] = {field: Counter() for field in MEMBERSHIP}
     visible_now, cosmetic_only, invisible_now = [], [], []
     samples: list[tuple[int, str, str, str, str]] = []
 
@@ -185,6 +203,13 @@ def main(argv: list[str] | None = None) -> None:
             cosmetic_only.append(reference)
         if not seen_today and (normalised & PROPOSED_KEYS):
             invisible_now.append(reference)
+
+        # Who went, who arrived. A digest can say the controllers changed; only
+        # the values say whether one organisation was renamed across a hundred
+        # agreements or a hundred agreements changed hands.
+        for field in normalised & set(MEMBERSHIP):
+            was, now = set(before[field]), set(after[field])
+            transitions[field][(tuple(sorted(was - now)), tuple(sorted(now - was)))] += 1
 
         for field in normalised & set(PROSE):
             if args.field and field not in args.field:
@@ -208,6 +233,26 @@ def main(argv: list[str] | None = None) -> None:
         for field, count in raw_tally.most_common():
             flag = "yes" if field in FINGERPRINTED_KEYS else "NO — proposed"
             print(f"{field:<{width}}  {count:>12,}  {normalised_tally[field]:>10,}  {flag}")
+
+    for field in MEMBERSHIP:
+        tally = transitions[field]
+        if not tally:
+            continue
+        label = FIELD_TITLES[field]
+        total = sum(tally.values())
+        shown = tally.most_common(args.transitions)
+        print(f"\n{label} — {total:,} version{'s' if total != 1 else ''} changed, "
+              f"{len(tally):,} distinct change{'s' if len(tally) != 1 else ''}")
+        for (went, arrived), count in shown:
+            print(f"  {count:>5,} ×")
+            for name in went:
+                print(f"           − {name}")
+            for name in arrived:
+                print(f"           + {name}")
+        if len(tally) > len(shown):
+            rest = total - sum(c for _, c in shown)
+            print(f"  {rest:>5,} ×  across {len(tally) - len(shown):,} further distinct changes "
+                  f"(--transitions {len(tally)} to list them)")
 
     if args.show and not samples:
         # Samples are drawn from substantive prose changes only, so "nothing to
