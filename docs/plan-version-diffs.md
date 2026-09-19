@@ -631,3 +631,128 @@ amendment log or a probe run over the September and October 2025
 workbooks — which is now the most interesting thing left to do, and
 argues for building R3's log for the scalar and list cases first, as §4
 already concluded for a different reason.
+
+## 9. Making data-controller changes visible, with from and to
+
+§8 established that a change of data controller is the most common
+amendment in the archive — 130 of them invisible until the rules
+changed, 135 in October 2025 alone — and the one the site is least able
+to explain. It can now say *that* the controller changed. It cannot say
+from whom, to whom. Snapshots hold digests, and a digest is not
+reversible.
+
+This section recommends the cheapest fix, which turns out to be much
+cheaper than the amendment log proposed in R3.
+
+### R7 — Store values for short fields, digests for long ones
+
+The reason the snapshot holds digests is prose. Measured on the
+September 2026 edition, stored per version:
+
+| Stored | Raw | Gzipped | On a 426 KB snapshot |
+| --- | ---: | ---: | ---: |
+| Controllers alone | 404 KB | **46 KB** | +11% |
+| Controllers + the short scalar fields | 1.0 MB | 92 KB | +22% |
+| Both, plus dataset names | 2.7 MB | 144 KB | +34% |
+| The five prose fields | 128 MB | **21 MB** | +5,000% |
+
+Prose is roughly 150 times the cost of everything else put together.
+That is why the snapshot hashes rather than stores — and it is an
+argument for hashing *prose*, not for hashing the fields people
+actually want to read. Controllers cost 46 KB an edition, about
+870 KB across the whole archive: less than a fifth of what the
+per-field digests already added, for the answer to the question §8
+raised.
+
+So: keep digests for the five prose fields, and store the values of the
+short ones — controllers first, then the scalars and dataset names if
+they prove as useful.
+
+Interning the names into a lookup table was measured too. There are 587
+distinct controller names across 7,305 entries, so the raw saving is
+large (404 KB to 217 KB) and the compressed saving is not (46 KB to
+41 KB): gzip already exploits the repetition. Store them inline and
+skip the indirection.
+
+**Why this beats R3's amendment log for this purpose.** The log records
+what changed *between* two editions, so writing it needs both extracts
+in hand at ingest, which is what forced the ordering and pruning
+constraints in R3 and the memory fix that preceded it. Stored values
+need none of that: each edition's snapshot is independently meaningful,
+any two can be compared at any time, and the whole archive backfills
+with the re-ingest that is now routine. It also answers questions the
+log cannot, because the log only holds the versions that changed —
+"who were the controllers on this agreement in March 2025" is a
+question about an edition, not about a change.
+
+R3 remains the only way to get from-and-to for *prose*. Given §7 found
+no substantive prose change between editions in either pair probed,
+that is a narrower prize than it looked, and R7 should come first.
+
+### What it makes possible
+
+1. **On the agreement page.** The register history already names the
+   changed field; with values it can show the change itself, in the
+   same added/removed form `compare_versions` already produces for
+   version-to-version dataset changes:
+
+   > **October 2025** — Amended `DARS-NIC-139035-X4B7K-v10.2`
+   > Data controllers: **+** UNIVERSITY OF SHEFFIELD · **−** NHS DIGITAL
+
+2. **On the changes page.** The "what changed" column becomes the
+   change, not the field name, for short fields.
+
+3. **An organisation-level view, which is the one that matters.** On an
+   organisation page: the agreements where this organisation was added
+   or removed as a controller, and in which edition. That is what makes
+   October 2025 legible — not 135 separate agreement pages, but one
+   page saying what NHS England — X26 took on that month. It needs
+   nothing beyond the stored values and the history index that already
+   exists.
+
+4. **A controller-change feed** at `/changes/controllers/`, across all
+   editions rather than one pair. The register's least visible and most
+   consequential field deserves its own page, and the archive now has
+   eighteen editions of history to fill it.
+
+### Three things to get right
+
+**A rename is not a transfer.** Controller names drift in spelling, and
+the alias work already on `main` exists precisely because of it.
+Compare and group by canonical slug through `aliases.resolve`, but
+display the raw text: "NHS DIGITAL" becoming "NHS ENGLAND" is a
+renaming, and showing it as one organisation replacing another would be
+wrong. These should carry different labels on the page — *renamed*
+against *added* and *removed* — and the rename case should probably not
+count as an amendment at all, which is the same argument normalisation
+already won for typography.
+
+**Attribution is to an edition, not a date.** An edit appearing in the
+October 2025 edition happened at some point between two publication
+dates. The page says this already; it matters more when the sentence is
+"these 135 agreements changed hands in October 2025", which is a claim
+a reader may repeat.
+
+**The register records the field, not the reason.** A controller change
+may be a transfer, a restructuring, or the correction of a data-entry
+error made three years earlier. The site should report the change and
+resist narrating it — the same discipline the existing caveats apply to
+expected benefits.
+
+### Before any of this
+
+The probe answers October 2025 today, from two workbooks and no new
+code:
+
+```bash
+.venv/bin/python -m pipeline.probe \
+    data/raw/datausesregister_september2025.xlsx \
+    data/raw/datausesregister_october2025.xlsx
+```
+
+It will name the 154 amended versions and their changed fields. Seeing
+the actual before and after on a dozen of them is worth more than any
+further design work here: if those 135 changes turn out to be one
+organisation renamed, R7's rename handling is the feature and the
+from-to display is a detail. If they are genuine transfers, it is the
+other way round.
