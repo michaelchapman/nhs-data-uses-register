@@ -26,7 +26,6 @@ from dataclasses import dataclass
 from . import aliases
 from . import editions as editions_module
 from . import sources
-from .extract import slugify
 
 DROP_TOKENS = {"THE", "LIMITED", "LTD", "LLC", "LLP", "PLC", "AND", "&", "CO", "OF"}
 CODE_RE = re.compile(r"-\s*([A-Z0-9]{2,6})$")
