@@ -10,6 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from . import compare
 from .extract import slugify
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -169,7 +170,29 @@ def write_csvs(data: dict, out: Path) -> list[dict]:
     return written
 
 
-def build(data: dict, meta: dict, changes: dict, out: Path, changes_history: list[dict] | None = None) -> None:
+def version_diffs(agreement: dict) -> dict[str, dict]:
+    """What each version changed from the one before it, keyed by reference.
+
+    Both versions are in the same extract, so this needs no stored history —
+    unlike the edition-to-edition case, which cannot be answered until the
+    amendment log in docs/plan-version-diffs.md exists.
+    """
+    diffs = {}
+    for older, newer in zip(agreement["versions"], agreement["versions"][1:]):
+        difference = compare.compare_versions(older, newer)
+        if difference:
+            diffs[newer["reference"]] = {**difference, "previous": older["reference"]}
+    return diffs
+
+
+def build(
+    data: dict,
+    meta: dict,
+    changes: dict,
+    out: Path,
+    changes_history: list[dict] | None = None,
+    history: dict[str, dict] | None = None,
+) -> None:
     env = environment()
     if out.exists():
         shutil.rmtree(out)
@@ -232,6 +255,8 @@ def build(data: dict, meta: dict, changes: dict, out: Path, changes_history: lis
             agreement=agreement,
             change_status={v["reference"]: changed_refs.get(v["reference"]) for v in agreement["versions"]},
             org_slugs=org_slugs,
+            history=(history or {}).get(agreement["base_reference"]),
+            diffs=version_diffs(agreement),
         )
     for organisation in data["organisations"]:
         render(

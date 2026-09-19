@@ -16,6 +16,10 @@
   --tag-new-ink: #10503f;
   --tag-amended-bg: #fdf0d8;
   --tag-amended-ink: #6b4708;
+  --ins-bg: #dff0e4;
+  --ins-ink: #10401f;
+  --del-bg: #fbe3e3;
+  --del-ink: #6d1d1d;
   --focus: #ffbf47;
   --max: 76rem;
 }
@@ -35,6 +39,10 @@
     --tag-new-ink: #97e0cb;
     --tag-amended-bg: #3d3116;
     --tag-amended-ink: #f0cd8a;
+    --ins-bg: #17351f;
+    --ins-ink: #a6e3b8;
+    --del-bg: #3a1c1c;
+    --del-ink: #f0aaaa;
   }
 }
 
@@ -172,12 +180,14 @@ summary::-webkit-details-marker { display: none; }
 summary::marker { content: ""; }
 
 .prose-block summary,
-details.version summary {
+details.version summary,
+details.diff summary {
   position: relative;
   padding-left: 1.375rem;
 }
 .prose-block summary::before,
-details.version summary::before {
+details.version summary::before,
+details.diff summary::before {
   content: "";
   position: absolute;
   left: 0.125rem;
@@ -228,3 +238,25 @@ details.version summary::before { top: 0.85rem; }
   .site-header nav, .filters, .notice-bar { display: none; }
   body { font-size: 11pt; }
 }
+
+/* Version-to-version diffs -------------------------------------------------
+   Colour is never the only signal: <ins> keeps its underline and <del> its
+   strikethrough, so the diff survives greyscale, high-contrast mode and
+   colour blindness. */
+
+details.diff { border-left: 3px solid var(--accent); padding: 0.25rem 0 0.25rem 0.875rem; margin: 0.75rem 0; }
+details.diff summary { font-weight: 600; color: var(--accent); }
+details.diff summary::before { border-color: var(--accent); }
+details.diff h4 { margin: 0.875rem 0 0.25rem; font-size: 0.9375rem; }
+details.diff .hint { margin: 0.25rem 0 0.5rem; }
+
+.diff-text { line-height: 1.7; }
+.diff-text ins, .diff-list ins, .data-table ins { background: var(--ins-bg); color: var(--ins-ink); text-decoration: underline; padding: 0 0.15em; }
+.diff-text del, .diff-list del, .data-table del { background: var(--del-bg); color: var(--del-ink); text-decoration: line-through; padding: 0 0.15em; }
+.diff-elided { color: var(--ink-muted); font-size: 0.8125rem; font-style: italic; white-space: nowrap; }
+.diff-list { margin: 0.35rem 0; }
+.data-table.compact th, .data-table.compact td { padding: 0.35rem 0.5rem; font-size: 0.875rem; }
+
+.timeline { list-style: none; padding: 0; margin: 0.5rem 0 1rem; }
+.timeline li { padding: 0.4rem 0 0.4rem 0.875rem; border-left: 2px solid var(--line); }
+.timeline li:first-child { border-left-color: var(--accent); }

@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import os
+import sys
 from pathlib import Path
 
 from . import build as build_module
@@ -92,11 +93,29 @@ def main() -> None:
         current = snapshot_module.build_snapshot(data, register.slug, edition, source_url, ingested)
         if not args.no_snapshot:
             print(f"  snapshot -> {snapshot_module.write_snapshot(current)}")
+    stored_version = snapshot_module.fingerprint_version(current)
+    if stored_version < snapshot_module.FINGERPRINT_VERSION:
+        print(
+            f"  warning: the {edition} fingerprint was written under rules v{stored_version}; "
+            f"this code writes v{snapshot_module.FINGERPRINT_VERSION}. Its amendment counts are the "
+            "old ones, which count reformatting as change. Re-ingest the archive to refresh them "
+            "(docs/manual-updates.md).",
+            file=sys.stderr,
+        )
+
     changes = snapshot_module.diff(current, snapshot_module.previous_snapshot(register.slug, edition))
     if changes["comparable"]:
         print(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
             f"~{len(changes['amended'])} amended, -{len(changes['removed'])} removed"
+        )
+    elif changes.get("reason") == "fingerprint-rules-changed":
+        print(
+            f"  vs {changes['previous_edition']}: not compared — that edition was fingerprinted "
+            f"under rules v{changes['previous_fingerprint_version']} and this one under "
+            f"v{changes['fingerprint_version']}. Every digest differs between rule versions, so a "
+            "comparison would report the whole register as amended. Re-ingest both editions.",
+            file=sys.stderr,
         )
 
     # The timeline is every edition we hold a fingerprint for, which reaches
@@ -139,7 +158,13 @@ def main() -> None:
         "editions": known,
     }
 
-    build_module.build(data, meta, changes, args.output, changes_history=changes_history)
+    # Every edition's fingerprints are committed, so an agreement's history
+    # reaches back over the whole archive even though only the newest edition
+    # keeps a full extract.
+    history = snapshot_module.history_index(register.slug)
+    build_module.build(
+        data, meta, changes, args.output, changes_history=changes_history, history=history
+    )
 
 
 if __name__ == "__main__":

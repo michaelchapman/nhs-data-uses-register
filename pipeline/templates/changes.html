@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}What changed — {{ meta.site_name }}{% endblock %}
 {% block description %}Agreements added, amended and removed between editions of the NHS England Data Uses Register.{% endblock %}
-{% macro rows(items, show_kind=false) %}
+{% macro rows(items, show_kind=false, show_fields=false) %}
 <div class="table-scroll">
 <table class="data-table">
-  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Reference</th>{% if show_kind %}<th scope="col">Kind</th>{% endif %}</tr></thead>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Reference</th>{% if show_kind %}<th scope="col">Kind</th>{% endif %}{% if show_fields %}<th scope="col">What changed</th>{% endif %}</tr></thead>
   <tbody>
   {% for item in items %}
     <tr>
@@ -16,6 +16,7 @@
       <td>{{ item.org }}</td>
       <td class="ref-cell">{{ item.reference }}</td>
       {% if show_kind %}<td>{{ "New agreement" if item.kind == "new" else "New version of an existing agreement" }}</td>{% endif %}
+      {% if show_fields %}<td>{% if item.fields %}{{ item.fields|join(", ") }}{% else %}<span class="hint">Not recorded for this edition</span>{% endif %}</td>{% endif %}
     </tr>
   {% endfor %}
   </tbody>
@@ -25,7 +26,10 @@
 {% block content %}
 <h1>What changed</h1>
 
-{% if not changes.comparable %}
+{% if not changes.comparable and changes.reason == "fingerprint-rules-changed" %}
+<p class="lede">This edition cannot be compared with {{ changes.previous_edition|edition }}.</p>
+<p>The two were fingerprinted under different rules for what counts as a change, and every fingerprint differs between those rules — so a comparison would report the entire register as amended, which would be worse than reporting nothing. The comparison returns once both editions have been processed under the same rules.</p>
+{% elif not changes.comparable %}
 <p class="lede">This is the first edition this site has processed, so there is nothing to compare it with yet.</p>
 <p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them.</p>
 {% else %}
@@ -45,8 +49,12 @@
 
 <h2 id="amended">Amended ({{ changes.amended|length|commas }})</h2>
 {% if changes.amended %}
-<p>Agreement versions whose details changed in place — a revised purpose, a different end date, a change to the datasets listed, or a benefits statement that has been filled in.</p>
-{{ rows(changes.amended) }}
+<p>Agreement versions whose details changed in place — a revised purpose, a different end date, a change to the datasets listed, or a benefits statement that has been filled in. NHS England issues no new version number for these and publishes no changelog; they are found by comparing one edition with the last.</p>
+{% set field_tally = changes.amended|map(attribute="fields")|select|sum(start=[]) %}
+{% if field_tally %}
+<p class="hint">Changes here are counted only where the wording itself moved. An edition that reformats text — different quote characters, spacing or capitalisation — no longer counts as an amendment.</p>
+{% endif %}
+{{ rows(changes.amended, show_fields=true) }}
 {% else %}<p class="empty">Nothing amended.</p>{% endif %}
 
 <h2 id="removed">No longer listed ({{ changes.removed|length|commas }})</h2>

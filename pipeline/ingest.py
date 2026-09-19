@@ -106,6 +106,18 @@ def ingest_one(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
             f"~{len(changes['amended'])} amended, -{len(changes['removed'])} removed"
         )
+    elif changes.get("reason") == "fingerprint-rules-changed":
+        # The common case for this is ingesting one new edition after the
+        # fingerprint rules changed, while the rest of the archive still holds
+        # digests from the old ones. Nothing is wrong with either file; they
+        # simply cannot be compared until both sides agree.
+        print(
+            f"  vs {changes['previous_edition']}: not compared — fingerprint rules "
+            f"v{changes['previous_fingerprint_version']} vs v{changes['fingerprint_version']}. "
+            "Re-ingest the whole archive so every edition uses the current rules:\n"
+            "    python -m pipeline.ingest data/raw/*.xlsx",
+            file=sys.stderr,
+        )
     print(f"  fingerprint -> {relative(snapshot_module.write_snapshot(current))}")
 
     return {
@@ -139,22 +151,25 @@ def main(argv: list[str] | None = None) -> None:
     # Oldest first, so each edition's diff compares against the one before it.
     ordered = sorted(args.workbooks, key=lambda p: sources.edition_sort_key(sources.parse_edition(p.stem)))
 
-    extracts: dict[tuple[str, str], dict] = {}
-    entries: dict[str, list[dict]] = {}
+    # Only the newest edition of each register keeps a full extract, and
+    # `ordered` runs oldest first, so the last one seen for a register is the
+    # one to write. Holding every extract until the end instead — which is what
+    # this used to do — costs 393 MB each: a 19-workbook backfill retained
+    # about 7.5 GB, and swapped or died on a smaller machine. Keeping just the
+    # latest per register bounds it at roughly two.
+    latest: dict[str, tuple[dict, dict]] = {}
     for path in ordered:
         register = resolve_register(path, args.register)
         entry, data = ingest_one(path, register, args.source_url)
         editions_module.upsert(register.slug, entry)
-        entries.setdefault(register.slug, []).append(entry)
-        extracts[(register.slug, entry["edition"])] = data
+        # Replacing the entry releases the previous edition's extract.
+        latest[register.slug] = (entry, data)
 
     if args.fingerprints_only:
         print("fingerprints only; no full extract written")
         return
 
-    for slug, slug_entries in entries.items():
-        newest = max(slug_entries, key=lambda e: sources.edition_sort_key(e["edition"]))
-        data = extracts[(slug, newest["edition"])]
+    for slug, (newest, data) in latest.items():
         path = editions_module.write_extract(slug, newest["edition"], data)
         size = path.stat().st_size
         print(f"extract -> {relative(path)} ({size / 1e6:.1f} MB)")
