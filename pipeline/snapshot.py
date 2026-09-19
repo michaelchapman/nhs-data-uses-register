@@ -31,7 +31,7 @@ SNAPSHOT_ROOT = Path(__file__).resolve().parent.parent / "data" / "snapshots"
 # instead, and the fix is to re-ingest the archive so every edition is
 # fingerprinted under the same rules. Snapshots written before this existed are
 # version 1.
-FINGERPRINT_VERSION = 2
+FINGERPRINT_VERSION = 3
 
 # Fields whose change we consider a substantive amendment to an agreement.
 FINGERPRINTED = (
@@ -51,8 +51,26 @@ FINGERPRINTED = (
 )
 
 
-def _fingerprint(version: dict) -> str:
-    """A digest of the fields whose change we call an amendment.
+# Two more things a reader would call a change, which the digest used to miss
+# entirely: who the data controllers are, and what the register records about
+# each dataset beyond its name — a dataset re-classified as sensitive, or its
+# legal basis moving to Section 251, used to register as no change at all.
+DATASET_ATTRIBUTES = ("name", "legal_basis", "sensitivity", "type_of_data", "confidentiality")
+
+# `releases` and `files_released` stay out on purpose. They move every month by
+# design, and folding them in would mark most of the register amended every
+# edition, which is the same failure as counting typography.
+
+FIELD_LABELS = {
+    **{key: label for key, label in compare.SCALAR_FIELDS},
+    **{key: label for key, label in compare.PROSE_FIELDS},
+    "controllers": "Data controllers",
+    "datasets": "Datasets",
+}
+
+
+def _fingerprints(version: dict) -> dict[str, str]:
+    """A digest per field, so a comparison can name what moved.
 
     Text is normalised before hashing (`compare.normalise`: NFKC, smart
     punctuation folded, whitespace collapsed, case ignored) so that an edition
@@ -63,11 +81,46 @@ def _fingerprint(version: dict) -> str:
 
     The same normalisation decides what the agreement pages call a change, so
     the two never disagree.
+
+    One digest per field rather than one for the whole version: the combined
+    answer is still just "are these equal", recovered by comparing the maps,
+    but the per-field form also says *which* field moved — the difference
+    between "122 agreements changed" and "122 agreements had their benefits
+    text reformatted". Eight hex characters is ample when the only question
+    asked of a digest is whether it equals the one field it is compared with.
     """
-    fields = {key: compare.normalise(version.get(key, "")) for key in FINGERPRINTED}
-    fields["datasets"] = sorted(compare.normalise(d["name"]) for d in version["datasets"])
-    payload = json.dumps(fields, sort_keys=True)
-    return hashlib.sha256(payload.encode()).hexdigest()[:16]
+    fields: dict[str, object] = {
+        key: compare.normalise(version.get(key, "")) for key in FINGERPRINTED
+    }
+    fields["controllers"] = sorted(compare.normalise(c) for c in version.get("controllers") or [])
+    fields["datasets"] = sorted(
+        [compare.normalise(dataset.get(key, "")) for key in DATASET_ATTRIBUTES]
+        for dataset in version["datasets"]
+    )
+    return {
+        key: hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()[:8]
+        for key, value in fields.items()
+    }
+
+
+def _digest(entry: dict):
+    """What identifies a version's content, whichever snapshot format holds it.
+
+    Rules v1 and v2 stored a single combined `hash`; v3 stores a digest per
+    field. `diff` refuses to compare across rule versions, so both sides of any
+    comparison are always the same shape — this only has to read either one.
+    """
+    return entry["hashes"] if "hashes" in entry else entry.get("hash")
+
+
+def changed_fields(before: dict, after: dict) -> list[str]:
+    """Which fields differ, labelled for display. Empty for older snapshots."""
+    old, new = before.get("hashes"), after.get("hashes")
+    if not old or not new:
+        return []
+    keys = [key for key in new if old.get(key) != new[key]]
+    keys += [key for key in old if key not in new]
+    return sorted(FIELD_LABELS.get(key, key) for key in set(keys))
 
 
 def fingerprint_version(snapshot: dict) -> int:
@@ -83,7 +136,7 @@ def build_snapshot(data: dict, register_slug: str, edition: str, source_url: str
                 "base": agreement["base_reference"],
                 "org": agreement["organisation"],
                 "title": version["title"],
-                "hash": _fingerprint(version),
+                "hashes": _fingerprints(version),
             }
     return {
         "register": register_slug,
@@ -202,8 +255,14 @@ def diff(current: dict, previous: dict | None) -> dict:
     added, amended = [], []
     for reference, version in new.items():
         if reference in old:
-            if old[reference]["hash"] != version["hash"]:
-                amended.append({"reference": reference, **version})
+            if _digest(old[reference]) != _digest(version):
+                amended.append(
+                    {
+                        "reference": reference,
+                        **version,
+                        "fields": changed_fields(old[reference], version),
+                    }
+                )
             continue
         added.append(
             {
@@ -269,7 +328,7 @@ def history_index(register_slug: str) -> dict[str, dict]:
             )
             if reference not in previous:
                 event(base, "added", reference)
-            elif previous[reference]["hash"] != version["hash"]:
+            elif _digest(previous[reference]) != _digest(version):
                 event(base, "amended", reference)
         for reference, version in previous.items():
             if reference not in versions and version["base"] in index:

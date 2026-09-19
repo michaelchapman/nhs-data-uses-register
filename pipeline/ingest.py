@@ -151,22 +151,25 @@ def main(argv: list[str] | None = None) -> None:
     # Oldest first, so each edition's diff compares against the one before it.
     ordered = sorted(args.workbooks, key=lambda p: sources.edition_sort_key(sources.parse_edition(p.stem)))
 
-    extracts: dict[tuple[str, str], dict] = {}
-    entries: dict[str, list[dict]] = {}
+    # Only the newest edition of each register keeps a full extract, and
+    # `ordered` runs oldest first, so the last one seen for a register is the
+    # one to write. Holding every extract until the end instead — which is what
+    # this used to do — costs 393 MB each: a 19-workbook backfill retained
+    # about 7.5 GB, and swapped or died on a smaller machine. Keeping just the
+    # latest per register bounds it at roughly two.
+    latest: dict[str, tuple[dict, dict]] = {}
     for path in ordered:
         register = resolve_register(path, args.register)
         entry, data = ingest_one(path, register, args.source_url)
         editions_module.upsert(register.slug, entry)
-        entries.setdefault(register.slug, []).append(entry)
-        extracts[(register.slug, entry["edition"])] = data
+        # Replacing the entry releases the previous edition's extract.
+        latest[register.slug] = (entry, data)
 
     if args.fingerprints_only:
         print("fingerprints only; no full extract written")
         return
 
-    for slug, slug_entries in entries.items():
-        newest = max(slug_entries, key=lambda e: sources.edition_sort_key(e["edition"]))
-        data = extracts[(slug, newest["edition"])]
+    for slug, (newest, data) in latest.items():
         path = editions_module.write_extract(slug, newest["edition"], data)
         size = path.stat().st_size
         print(f"extract -> {relative(path)} ({size / 1e6:.1f} MB)")

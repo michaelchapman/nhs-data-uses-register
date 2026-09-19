@@ -144,11 +144,10 @@ counts stay honest all the way back to March 2025. Land the
 normalisation and the new fields together, in one change, followed by
 one full re-ingest.
 
-**Update:** the normalisation has shipped, versioned as fingerprint rules
-v2, and the re-ingest that applies it has not happened yet. The new
-fields (`controllers`, per-dataset attributes) and R2's per-field digests
-should go in *before* that re-ingest so one pass covers all three —
-after it, adding them costs a second pass over every workbook.
+**Update:** all three have shipped, together, as fingerprint rules v3 —
+the normalisation, the missing fields, and R2's per-field digests. They
+were deliberately landed in one reset so a single re-ingest applies them
+all; that re-ingest is the remaining step and has not happened yet.
 
 ## 4. Recommendations
 
@@ -177,6 +176,9 @@ page and no measurable build time.
 
 ### R2 — Per-field digests, so the site can name the fields that moved
 
+**Implemented**, as fingerprint rules v3, together with the missing fields
+from §3. Takes effect on re-ingest.
+
 Replace the single `hash` per version in the snapshot with a map of
 per-field digests:
 
@@ -200,9 +202,10 @@ and `/changes/` can show:
 > ONS — `DARS-NIC-788663-G4F2D-v0.2` — *expected measurable benefits,
 > end date*
 
-Measured cost: per-field digests for 5,613 versions are 1.8 MB raw and
-**202 KB gzipped**, against 210 KB for the whole current snapshot. So
-roughly 2x per edition, ~4 MB across the full archive. That is an
+Measured cost, now that it is built: a September 2026 snapshot under the
+new rules is 3.2 MB raw and **387 KB gzipped**, against 208 KB under the
+old ones. So 1.9x per edition and about 4 MB more across the full
+archive — as estimated. That is an
 acceptable price for turning "something changed" into "the end date
 changed", and it scales: every future edition carries it for free.
 
@@ -369,8 +372,8 @@ stated point of the project.
 | R3 normalisation, applied to the fingerprint | **done** | Shipped; takes effect on re-ingest |
 | R5 vocabulary and page structure | next | High |
 | Full re-ingest, to apply the new rules | **next** | Turns the fix on; see docs/manual-updates.md |
-| `ingest` memory fix | todo | Precondition for the re-ingest |
-| R2 per-field digests + the missing fields | todo | High for the field summary, marginal for the blind spots |
+| `ingest` memory fix | **done** | Peak drops from ~7.5 GB to ~800 MB |
+| R2 per-field digests + the missing fields | **done** | Shipped; takes effect on re-ingest |
 | R3 amendment log | todo | Scalar and list changes first, prose last |
 | Full re-ingest of all 19 editions | todo | Restates the whole archive's counts honestly |
 | R6 exports | todo | Medium |
