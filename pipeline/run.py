@@ -1,8 +1,12 @@
-"""End-to-end build: discover the current register, extract it, render the site.
+"""Render the site from the committed edition store.
 
-    python -m pipeline.run                     # fetch the live register and build
-    python -m pipeline.run --workbook a.xlsx   # build from a local copy
-    python -m pipeline.run --no-snapshot       # don't record this edition
+    python -m pipeline.run                        # build the newest ingested edition
+    python -m pipeline.run --edition june2026     # build an older one
+    python -m pipeline.run --workbook a.xlsx      # one-off, without ingesting
+
+Editions get into the store with `python -m pipeline.ingest`; workbooks are
+downloaded by hand because NHS England's WAF blocks automated requests. See
+docs/manual-updates.md.
 
 Run from the repository root.
 """
@@ -11,11 +15,11 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import json
 import os
 from pathlib import Path
 
 from . import build as build_module
+from . import editions as editions_module
 from . import snapshot as snapshot_module
 from . import sources
 
@@ -29,68 +33,87 @@ REPO_URL = "https://github.com/michaelchapman/nhs-data-uses-register"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--register", default="data-uses-register", help="register slug to build")
-    parser.add_argument("--workbook", type=Path, help="build from a local .xlsx instead of downloading")
-    parser.add_argument("--edition", help="edition label to use with --workbook (e.g. july2026)")
+    parser.add_argument("--edition", help="edition to build (default: the newest in the store)")
+    parser.add_argument("--workbook", type=Path, help="build straight from a local .xlsx, without ingesting")
     parser.add_argument("--output", type=Path, default=ROOT / "_site", help="output directory")
-    parser.add_argument("--cache", type=Path, default=ROOT / "data" / "raw", help="where downloads are kept")
     parser.add_argument("--no-snapshot", action="store_true", help="do not write an edition fingerprint")
     parser.add_argument("--site-url", default=os.environ.get("SITE_URL", DEFAULT_SITE_URL))
     parser.add_argument("--base-path", default=os.environ.get("SITE_BASE_PATH", DEFAULT_BASE_PATH))
     return parser.parse_args()
 
 
-def obtain_workbook(args, register) -> tuple[bytes, str, str]:
-    """Return `(bytes, source_url, edition)` from the network or a local file."""
-    if args.workbook:
-        edition = args.edition or args.workbook.stem.split("_")[-1].lower()
-        print(f"using local workbook {args.workbook} (edition {edition})")
-        return args.workbook.read_bytes(), args.workbook.as_uri(), edition
+def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
+    """`(data, edition, manifest_entry)` for the edition we are building."""
+    edition = edition or editions_module.latest_edition(register.slug)
+    if not edition:
+        raise SystemExit(
+            f"nothing ingested for {register.slug}.\n"
+            "Download a workbook from the register page and ingest it:\n"
+            "    python -m pipeline.ingest data/raw/<workbook>.xlsx\n"
+            "See docs/manual-updates.md."
+        )
+    data = editions_module.read_extract(register.slug, edition)
+    entry = editions_module.manifest_entry(register.slug, edition) or {}
+    return data, edition, entry
 
-    url, edition = sources.discover(register)
-    args.cache.mkdir(parents=True, exist_ok=True)
-    cached = args.cache / f"{register.slug}_{edition}.xlsx"
-    if cached.exists():
-        print(f"using cached download {cached} (edition {edition})")
-        return cached.read_bytes(), url, edition
 
-    print(f"downloading {url}")
-    payload = sources.fetch(url)
-    cached.write_bytes(payload)
-    print(f"  {len(payload) / 1e6:.1f} MB -> {cached}")
-    return payload, url, edition
+def from_workbook(path: Path, register) -> tuple[dict, str, dict]:
+    from .extract import extract
+
+    edition = sources.parse_edition(path.stem)
+    print(f"building straight from {path} (edition {edition}); not ingesting")
+    return (
+        extract(path.read_bytes()),
+        edition,
+        {"source_file": path.name, "source_url": sources.asset_url(path.name)},
+    )
 
 
 def main() -> None:
     args = parse_args()
     register = sources.registers(args.register)[0]
 
-    payload, source_url, edition = obtain_workbook(args, register)
-    retrieved = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
-
-    print("extracting…")
-    data = extract_register(payload)
+    if args.workbook:
+        data, edition, entry = from_workbook(args.workbook, register)
+    else:
+        data, edition, entry = from_store(register, args.edition)
     print(
-        f"  {len(data['agreements']):,} agreements, "
+        f"{edition}: {len(data['agreements']):,} agreements, "
         f"{len(data['organisations']):,} organisations, {len(data['datasets']):,} datasets"
     )
 
-    current = snapshot_module.build_snapshot(data, register.slug, edition, source_url, retrieved)
-    previous = snapshot_module.previous_snapshot(register.slug, edition)
-    changes = snapshot_module.diff(current, previous)
+    source_url = entry.get("source_url", "")
+    ingested = entry.get("ingested") or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+
+    current = snapshot_module.load_snapshot(register.slug, edition)
+    if current is None:
+        current = snapshot_module.build_snapshot(data, register.slug, edition, source_url, ingested)
+        if not args.no_snapshot:
+            print(f"  snapshot -> {snapshot_module.write_snapshot(current)}")
+    changes = snapshot_module.diff(current, snapshot_module.previous_snapshot(register.slug, edition))
     if changes["comparable"]:
         print(
-            f"  vs {changes['previous_edition']}: "
-            f"+{len(changes['added'])} added, ~{len(changes['amended'])} amended, "
-            f"-{len(changes['removed'])} removed"
+            f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
+            f"~{len(changes['amended'])} amended, -{len(changes['removed'])} removed"
         )
-    if not args.no_snapshot:
-        print(f"  snapshot -> {snapshot_module.write_snapshot(current)}")
 
-    editions = [
-        json.loads(path.read_text()) for path in snapshot_module.existing_editions(register.slug)
-    ]
+    # The timeline is every edition we hold a fingerprint for, which reaches
+    # further back than the manifest: fingerprints predate the edition store,
+    # and a fingerprints-only backfill writes no manifest extract.
+    by_edition = {e["edition"]: e for e in editions_module.read_manifest(register.slug)}
+    known = []
+    for path in snapshot_module.existing_editions(register.slug):
+        fingerprint = snapshot_module.read_snapshot(path)
+        entry = by_edition.get(fingerprint["edition"], {})
+        known.append(
+            {
+                "edition": fingerprint["edition"],
+                "retrieved": entry.get("ingested") or fingerprint.get("retrieved", ""),
+                "counts": fingerprint["counts"],
+            }
+        )
     meta = {
         "site_name": "NHS Data Uses Register, readable",
         "site_url": args.site_url.rstrip("/"),
@@ -99,21 +122,18 @@ def main() -> None:
         "register": register.slug,
         "register_name": register.name,
         "edition": edition,
-        "retrieved": retrieved,
+        # When we ingested this edition, not when the build ran: the site is only
+        # as current as the last workbook someone added by hand.
+        "retrieved": ingested,
         "source_url": source_url,
-        "source_file": source_url.rsplit("/", 1)[-1],
+        "source_file": entry.get("source_file", ""),
         "source_page": sources.LANDING_PAGE,
+        "archive_page": sources.ARCHIVE_PAGE,
         "today": dt.date.today().isoformat(),
-        "editions": [{k: e[k] for k in ("edition", "retrieved", "counts")} for e in editions],
+        "editions": known,
     }
 
     build_module.build(data, meta, changes, args.output)
-
-
-def extract_register(payload: bytes) -> dict:
-    from .extract import extract
-
-    return extract(payload)
 
 
 if __name__ == "__main__":

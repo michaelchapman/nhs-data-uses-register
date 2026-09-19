@@ -1,17 +1,26 @@
 """Per-edition fingerprints, so the site can show what changed each month.
 
-The published workbooks are far too large to keep in git. Instead each run
-writes a small fingerprint file per edition (`data/snapshots/<register>/<edition>.json`)
-holding a hash of every agreement version. Comparing the current edition with
-the previous one gives the "new and changed this month" view, and keeping the
-files in git gives a durable history of editions the site has seen.
+The published workbooks are far too large to keep in git. Instead each ingest
+writes a small fingerprint file per edition
+(`data/snapshots/<register>/<edition>.json.gz`) holding a hash of every
+agreement version. Comparing an edition with the one published before it gives
+the "new and changed this month" view, and keeping the files in git gives a
+durable history — cheap enough that every edition in NHS England's archive can
+have one.
+
+Editions are ordered by the month in their label, never by when we ingested
+them: a backfill runs through years of archived workbooks in one afternoon, so
+ingest timestamps say nothing about publication order.
 """
 
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 from pathlib import Path
+
+from . import sources
 
 SNAPSHOT_ROOT = Path(__file__).resolve().parent.parent / "data" / "snapshots"
 
@@ -71,24 +80,68 @@ def snapshot_dir(register_slug: str) -> Path:
     return path
 
 
+def edition_of(path: Path) -> str:
+    """The edition label a snapshot file holds, from its name."""
+    return path.name.split(".", 1)[0]
+
+
 def existing_editions(register_slug: str) -> list[Path]:
-    """Snapshot files, oldest first, ordered by the edition date inside them."""
-    files = list(snapshot_dir(register_slug).glob("*.json"))
-    return sorted(files, key=lambda p: json.loads(p.read_text()).get("retrieved", ""))
+    """Snapshot files, oldest first, ordered by the edition each one covers.
+
+    Both `.json.gz` and plain `.json` are read; new files are always gzipped.
+    """
+    directory = snapshot_dir(register_slug)
+    by_edition: dict[str, Path] = {}
+    for path in sorted(directory.glob("*.json*")):
+        if path.suffix not in (".json", ".gz"):
+            continue
+        # A gzipped file wins over a stale plain one for the same edition.
+        edition = edition_of(path)
+        if edition not in by_edition or path.name.endswith(".gz"):
+            by_edition[edition] = path
+    return [by_edition[e] for e in sorted(by_edition, key=sources.edition_sort_key)]
+
+
+def read_snapshot(path: Path) -> dict:
+    if path.name.endswith(".gz"):
+        with gzip.open(path, "rt", encoding="utf-8") as handle:
+            return json.load(handle)
+    return json.loads(path.read_text())
 
 
 def write_snapshot(snapshot: dict) -> Path:
-    path = snapshot_dir(snapshot["register"]) / f"{snapshot['edition']}.json"
-    # Compact: one of these lands in git every month, forever.
-    path.write_text(json.dumps(snapshot, sort_keys=True, separators=(",", ":")) + "\n")
+    directory = snapshot_dir(snapshot["register"])
+    path = directory / f"{snapshot['edition']}.json.gz"
+    # Compact: one of these lands in git for every edition, forever.
+    payload = json.dumps(snapshot, sort_keys=True, separators=(",", ":")) + "\n"
+    with gzip.open(path, "wt", encoding="utf-8", compresslevel=9) as handle:
+        handle.write(payload)
+    # An earlier run may have left an uncompressed file for this edition.
+    plain = directory / f"{snapshot['edition']}.json"
+    if plain.exists():
+        plain.unlink()
     return path
 
 
+def load_snapshot(register_slug: str, edition: str) -> dict | None:
+    for path in existing_editions(register_slug):
+        if edition_of(path) == edition:
+            return read_snapshot(path)
+    return None
+
+
 def previous_snapshot(register_slug: str, edition: str) -> dict | None:
-    candidates = [p for p in existing_editions(register_slug) if p.stem != edition]
-    if not candidates:
+    """The snapshot of the edition published immediately before `edition`.
+
+    Not simply "the last one we wrote": rebuilding or backfilling an older
+    edition must compare against what came before *it*, not against whatever
+    happens to be newest on disk.
+    """
+    key = sources.edition_sort_key(edition)
+    earlier = [p for p in existing_editions(register_slug) if sources.edition_sort_key(edition_of(p)) < key]
+    if not earlier:
         return None
-    return json.loads(candidates[-1].read_text())
+    return read_snapshot(earlier[-1])
 
 
 def diff(current: dict, previous: dict | None) -> dict:
