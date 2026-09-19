@@ -82,6 +82,50 @@ of names involved) that `--review` should stop suggesting.
 `python -m pipeline.orgcheck` on its own — no `--review` — prints the same
 candidates without prompting, if you'd rather read the whole list first.
 
+## Renames: names that changed between editions
+
+The candidates above all come from one edition — names sitting side by side
+in the current data that might be the same organisation. A **rename** is
+invisible to that, because the old spelling is not in the current edition at
+all. It is only in the previous one.
+
+This is not a rare case. In the October 2025 edition NHS England relabelled
+itself from "NHS ENGLAND (QUARRY HOUSE)" to "NHS ENGLAND - X26" on 126
+agreements, and the register issued no new version numbers and published no
+changelog. The site read that as 126 agreements amended.
+
+To find them, compare editions:
+
+```bash
+.venv/bin/python -m pipeline.orgcheck --renames --review
+```
+
+With no arguments it reads every workbook in `data/raw/`; name specific ones
+to compare just those. It walks consecutive editions oldest first and looks
+for a version whose organisation or controller changed from exactly one name
+to exactly one other — a one-for-one swap. Anything less clear-cut (two names
+leaving, three arriving) is a change of controller rather than a change of
+name, and is not offered.
+
+Rename candidates are listed first, and the review prompt marks the current
+spelling and offers it as the canonical name, so accepting one is a keypress:
+
+```
+[1/29] renamed in October 2025, on 126 agreement versions
+  1) NHS ENGLAND (QUARRY HOUSE)  (not in the current edition)
+  2) NHS ENGLAND - X26  (46 agreements)  <- current
+```
+
+Only the Agreements sheet is read, so this is much faster than a re-ingest,
+but it still parses every workbook — expect minutes, not seconds, across a
+full archive.
+
+Two things worth knowing. A rename found this way is still only a candidate:
+"CITY, UNIVERSITY OF LONDON" becoming "CITY ST GEORGE'S UNIVERSITY OF LONDON"
+is a real merger of two institutions, not a relabelling, and whether those
+should share a page is a judgement. And the register sometimes reuses a name
+for a genuinely different body, so a swap is evidence, not proof.
+
 ## Deciding
 
 For each candidate ask: is this the same legal entity recorded

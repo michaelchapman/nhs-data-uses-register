@@ -1,7 +1,8 @@
 """Find organisation names that might be the same real organisation.
 
-    python -m pipeline.orgcheck            # list candidates
-    python -m pipeline.orgcheck --review   # go through them one at a time
+    python -m pipeline.orgcheck             # list candidates
+    python -m pipeline.orgcheck --review    # go through them one at a time
+    python -m pipeline.orgcheck --renames   # also find renames between editions
 
 `--review` is the easy path from here to data/organisation-aliases.json: it
 shows one candidate at a time and asks what to do —
@@ -22,6 +23,7 @@ import math
 import re
 from collections import defaultdict
 from dataclasses import dataclass
+from pathlib import Path
 
 from . import aliases
 from . import editions as editions_module
@@ -30,6 +32,7 @@ from . import sources
 DROP_TOKENS = {"THE", "LIMITED", "LTD", "LLC", "LLP", "PLC", "AND", "&", "CO", "OF"}
 CODE_RE = re.compile(r"-\s*([A-Z0-9]{2,6})$")
 SIMILARITY_THRESHOLD = 0.55
+ROOT = Path(__file__).resolve().parent.parent
 
 
 def normalize(name: str) -> str:
@@ -45,9 +48,12 @@ def token_set(name: str) -> frozenset:
 
 @dataclass
 class Candidate:
-    kind: str  # "code" or "similarity"
+    kind: str  # "code", "similarity" or "rename"
     label: str  # why it was flagged, for display
     names: list[str]
+    # For a rename we know which spelling is current, so the review loop can
+    # offer it as the canonical name rather than defaulting to the first.
+    canonical: str | None = None
 
 
 def same_reference_code(names: list[str]) -> list[Candidate]:
@@ -121,9 +127,108 @@ def gather(names: list[str]) -> list[Candidate]:
     return same_reference_code(names) + weighted_similarity(names)
 
 
+def names_in_workbook(path: Path) -> dict[str, tuple[str, frozenset]]:
+    """`{reference: (applicant organisation, controllers)}` from one workbook.
+
+    Only the Agreements sheet is read. A full `extract` also parses Datasets
+    and the hundred-thousand-row DataReleases sheet, none of which carries an
+    organisation name, and doing that nineteen times to find renames would
+    take far longer than the question is worth.
+    """
+    import openpyxl
+
+    from .extract import _read_sheet, clean, split_list
+
+    workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
+    try:
+        found = {}
+        for row in _read_sheet(workbook, "Agreements"):
+            reference = clean(row.get("Reference Number"))
+            if reference:
+                found[reference] = (
+                    clean(row.get("Applicant Organisation")),
+                    frozenset(split_list(row.get("Data Controller(s)"))),
+                )
+        return found
+    finally:
+        workbook.close()
+
+
+def renames_between(before: dict, after: dict) -> list[tuple[str, str]]:
+    """One-for-one name swaps on the same agreement version.
+
+    A rename is invisible to everything else in this module: `orgcheck`
+    compares the names in a single edition, and the old spelling of a renamed
+    organisation is not in that edition — it is only in the previous one. So
+    the evidence for a rename is a version whose organisation or controller
+    changed from exactly one name to exactly one other, which is what this
+    looks for. Anything less clear-cut (two names leaving, three arriving) is
+    a change of controller rather than a change of name, and is left alone.
+    """
+    swaps = []
+    for reference, (organisation, controllers) in after.items():
+        if reference not in before:
+            continue
+        was_organisation, was_controllers = before[reference]
+        if was_organisation and organisation and was_organisation != organisation:
+            swaps.append((was_organisation, organisation))
+        gone, arrived = was_controllers - controllers, controllers - was_controllers
+        if len(gone) == 1 and len(arrived) == 1:
+            swaps.append((next(iter(gone)), next(iter(arrived))))
+    return swaps
+
+
+def gather_renames(paths: list[Path]) -> list[Candidate]:
+    """Rename candidates across every consecutive pair of editions.
+
+    Workbooks are read oldest first and only the previous edition's names are
+    held, so the memory cost is two small maps rather than two extracts.
+    """
+    ordered = sorted(paths, key=lambda p: sources.edition_sort_key(sources.parse_edition(p.stem)))
+    tally: dict[tuple[str, str], dict] = {}
+    previous = None
+    for path in ordered:
+        edition = sources.parse_edition(path.stem)
+        print(f"  reading {path.name} …", flush=True)
+        current = names_in_workbook(path)
+        if previous is not None:
+            for swap in renames_between(previous, current):
+                entry = tally.setdefault(swap, {"count": 0, "editions": set()})
+                entry["count"] += 1
+                entry["editions"].add(edition)
+        previous = current
+
+    candidates = []
+    for (was, now), entry in sorted(tally.items(), key=lambda kv: -kv[1]["count"]):
+        when = ", ".join(
+            sources.edition_label(e)
+            for e in sorted(entry["editions"], key=sources.edition_sort_key)
+        )
+        candidates.append(
+            Candidate(
+                "rename",
+                f"renamed in {when}, on {entry['count']} agreement version"
+                f"{'s' if entry['count'] != 1 else ''}",
+                [was, now],
+                canonical=now,
+            )
+        )
+    return candidates
+
+
 def list_mode(candidates: list[Candidate], counts: dict[str, int]) -> None:
     code = [c for c in candidates if c.kind == "code"]
     similarity = [c for c in candidates if c.kind == "similarity"]
+    renames = [c for c in candidates if c.kind == "rename"]
+
+    if renames:
+        print("=== Renames between editions ===")
+        print("One name replaced by one other on the same agreement. The old spelling")
+        print("is usually absent from the current edition, so nothing else here finds it.\n")
+        for c in renames:
+            was, now = c.names
+            print(f"  {was!r}")
+            print(f"    -> {now!r}  ({c.label})\n")
 
     print('=== A. Same trailing reference code (e.g. an ICB "- M1J4Y") ===')
     print("Different text, same code — about as certain as this gets.\n")
@@ -144,8 +249,9 @@ def list_mode(candidates: list[Candidate], counts: dict[str, int]) -> None:
     if not similarity:
         print("  none outstanding")
 
-    if code or similarity:
-        print(f"\n{len(code) + len(similarity)} outstanding. Run with --review to go through them.")
+    total = len(code) + len(similarity) + len(renames)
+    if total:
+        print(f"\n{total} outstanding. Run with --review to go through them.")
 
 
 def prompt(text: str) -> str:
@@ -159,7 +265,14 @@ def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> 
     """Returns 'quit' to stop the loop, anything else to continue."""
     print(f"\n[{index}/{total}] {c.label}")
     for i, n in enumerate(c.names, start=1):
-        print(f"  {i}) {n}  ({counts.get(n, 0)} agreements)")
+        # A renamed organisation's old spelling is gone from the current
+        # edition, so its agreement count is zero — which reads as "this
+        # organisation has nothing" rather than "this name is no longer used".
+        if n in counts:
+            where = f"{counts[n]} agreements"
+        else:
+            where = "not in the current edition"
+        print(f"  {i}) {n}  ({where})")
 
     choice = prompt("  [m]erge  [i]gnore  [k]skip  [q]uit > ").strip().lower()
 
@@ -186,9 +299,16 @@ def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> 
             print("  need at least two to merge — nothing done.")
             return "continue"
 
+        # For a rename the current spelling is known, so it is the default;
+        # otherwise fall back to the first, as before.
+        default_canonical = c.canonical if c.canonical in selected else selected[0]
         for i, n in enumerate(selected, start=1):
-            print(f"    {i}) {n}")
-        canon_choice = prompt(f"  canonical name — 1-{len(selected)}, or [c]ustom, Enter for 1: ").strip().lower()
+            marker = "  <- current" if n == default_canonical and c.canonical else ""
+            print(f"    {i}) {n}{marker}")
+        canon_choice = prompt(
+            f"  canonical name — 1-{len(selected)}, or [c]ustom, "
+            f"Enter for {selected.index(default_canonical) + 1}: "
+        ).strip().lower()
         if canon_choice in ("c", "custom"):
             canonical = prompt("  type the canonical name: ").strip()
             if not canonical:
@@ -197,7 +317,7 @@ def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> 
         elif canon_choice.isdigit() and 1 <= int(canon_choice) <= len(selected):
             canonical = selected[int(canon_choice) - 1]
         else:
-            canonical = selected[0]
+            canonical = default_canonical
 
         reason = prompt("  reason (optional, Enter to skip): ").strip()
         aliases.add_alias(canonical, selected, reason)
@@ -227,6 +347,17 @@ def review_mode(candidates: list[Candidate], counts: dict[str, int]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--review", action="store_true", help="go through candidates one at a time")
+    parser.add_argument(
+        "--renames",
+        nargs="*",
+        type=Path,
+        metavar="WORKBOOK",
+        help=(
+            "also look for renames across editions, reading workbooks "
+            "(default: data/raw/*.xlsx). A renamed organisation cannot be found "
+            "within one edition, because its old spelling is only in the previous one."
+        ),
+    )
     args = parser.parse_args()
 
     register = sources.registers()[0]
@@ -238,7 +369,18 @@ def main() -> None:
     counts = {o["name"]: o["agreement_count"] + o.get("controller_agreement_count", 0) for o in data["organisations"]}
     print(f"{edition}: {len(names)} organisation names\n")
 
-    candidates = outstanding(gather(names))
+    candidates = gather(names)
+    if args.renames is not None:
+        workbooks = args.renames or sorted((ROOT / "data" / "raw").glob("*.xlsx"))
+        if not workbooks:
+            raise SystemExit(
+                "no workbooks to compare. Put the published .xlsx files in data/raw/ "
+                "or name them on the command line; see docs/manual-updates.md."
+            )
+        print(f"scanning {len(workbooks)} workbook(s) for renames between editions")
+        candidates = gather_renames(workbooks) + candidates
+        print()
+    candidates = outstanding(candidates)
     if args.review:
         review_mode(candidates, counts)
     else:

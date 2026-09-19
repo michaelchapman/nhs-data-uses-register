@@ -759,10 +759,78 @@ the feature: if October 2025 is one organisation renamed, the rename
 handling matters and the from-to display is a detail; if they are
 transfers, it is the other way round.
 
-The probe has since been run over that pair. It confirmed the counts
-this section was built on from the snapshots alone — 135 controller
-changes, 37 organisation changes, 102 amendments invisible to the old
-rules — and, unlike every other month examined, **nothing cosmetic at
-all**: 52 of 52 amendments substantive, against 86% cosmetic in March
-2026. October 2025 and March 2026 are opposite kinds of event, and the
-site previously reported them the same way.
+The probe has since been run over that pair, with the transition
+tally. It answers the question.
+
+### October 2025 was a relabelling, not a transfer
+
+135 controller changes, and **three distinct changes** between them:
+
+```
+    126 ×   − NHS ENGLAND (QUARRY HOUSE)
+            + NHS ENGLAND - X26
+
+      7 ×   − CITY
+            − UNIVERSITY OF LONDON
+            + CITY ST GEORGE'S UNIVERSITY OF LONDON
+
+      2 ×   − BCP COUNCIL  [BOURNEMOUTH
+            − CHRISTCHURCH AND POOLE]
+            + BCP COUNCIL  (BOURNEMOUTH, CHRISTCHURCH AND POOLE)
+```
+
+No agreement changed hands. NHS England relabelled itself from its Leeds
+building to its organisation code on 126 agreements; City, University of
+London became City St George's after its merger with St George's; and
+BCP Council swapped square brackets for round ones. The 13 dataset
+changes in the same edition are the same kind of thing — NICOR audits
+losing their version suffixes, so "NICOR Heart Failure V5_Full" becomes
+"NICOR Heart Failure".
+
+That settles what §7 and §9 could not. **The rename handling is the
+feature and the from-and-to display is the detail.** The largest
+apparent governance event in the register's recent history is an
+editorial pass, and the site would currently report it as 154
+agreements amended.
+
+It also strengthens the case for resolving through the alias map before
+counting: NHS England — X26 and NHS England (Quarry House) are one
+organisation, so 126 of those amendments are cosmetic at the level a
+reader cares about, exactly as the March 2026 typography was. The
+difference is that normalisation catches typography automatically,
+while this needs a human-reviewed alias. Two of the three changes here
+are already candidates `orgcheck` would surface.
+
+**A caveat on the middle row, which is a bug in this repository rather
+than a change in the register.** "CITY, UNIVERSITY OF LONDON" and "BCP
+COUNCIL [BOURNEMOUTH, CHRISTCHURCH AND POOLE]" are single organisations
+whose names contain commas. `extract.split_list` treated those commas
+as list separators, so the *before* side of both rows is an artefact of
+our own parsing: the register never named an organisation "CITY" or
+"CHRISTCHURCH AND POOLE]". The square-bracket case is now fixed. The
+comma-inside-a-name case is not fixable by bracket rules and still
+produces phantom controllers — "INC", "INC." and "INC. UNITED KINGDOM"
+across 15 versions of the current edition, from names like "MCKINSEY &
+COMPANY, INC. UNITED KINGDOM". That wants either a corporate-suffix
+exception in the splitter or an alias, and either changes controller
+values, so it should ride a re-ingest.
+
+### What to build now
+
+1. **Resolve controllers through the alias map before calling something
+   an amendment.** A relabelling is not a change of controller, and on
+   the evidence it is the common case. This is the single highest-value
+   item left.
+2. **Store the values** (R7) — still right, and now clearly for the
+   rename display as much as for transfers: "NHS England (Quarry House)
+   → NHS England — X26" is a useful thing for a page to say, provided it
+   is labelled a renaming.
+3. **Fix the remaining splitter artefact**, so the register's own
+   organisation names survive parsing.
+
+An honest note for the site: on this evidence the register's in-place
+amendments are, so far, overwhelmingly editorial — typography,
+relabelling, and dropped version suffixes. That is worth saying plainly
+rather than implying a governance event every time a field moves. It
+also makes the rare substantive amendment much easier to spot, which
+was the point.

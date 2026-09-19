@@ -140,6 +140,18 @@ def edition_sort_key(edition: str) -> tuple[int, int]:
     return (int(match.group(2)), MONTH_NUMBER.get(match.group(1).lower(), 0))
 
 
+MONTH_NAMES = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+]
+
+
+def edition_label(edition: str) -> str:
+    """``july2026`` -> ``July 2026``, for anything a person reads."""
+    year, month = edition_sort_key(edition)
+    return f"{MONTH_NAMES[month - 1]} {year}" if year and month else edition
+
+
 def edition_published(edition: str) -> str:
     """``july2026`` -> ``2026-07``."""
     year, month = edition_sort_key(edition)

@@ -31,7 +31,14 @@ SNAPSHOT_ROOT = Path(__file__).resolve().parent.parent / "data" / "snapshots"
 # instead, and the fix is to re-ingest the archive so every edition is
 # fingerprinted under the same rules. Snapshots written before this existed are
 # version 1.
-FINGERPRINT_VERSION = 3
+#
+# v4 is a parsing fix rather than a rule change: `extract.split_list` stopped
+# breaking organisation names on the commas inside them, so the controller
+# lists of a handful of versions differ. The digests move all the same, and
+# `rehydrate` cannot repair a stored extract — re-splitting an already-split
+# list can divide it further but never put it back together — so the fix only
+# lands on a re-ingest, and this makes a half-applied archive say so.
+FINGERPRINT_VERSION = 4
 
 # Fields whose change we consider a substantive amendment to an agreement.
 FINGERPRINTED = (

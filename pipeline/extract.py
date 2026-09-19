@@ -87,10 +87,31 @@ def parse_release_month(value) -> str:
 # register often uses a plain comma instead — "HULL UNIVERSITY TEACHING
 # HOSPITALS NHS TRUST, UNIVERSITY OF YORK" is two joint controllers, not one
 # organisation with a comma in its name. Split on those commas too, except one
-# inside unclosed parentheses, so an abbreviation like "HEALTHCARE QUALITY
-# IMPROVEMENT PARTNERSHIP (HQIP), NHS ENGLAND - X26" still splits after the
-# ")" rather than inside it.
-LIST_SEPARATOR = re.compile(r"\s*;\s*|\n+|,\s*(?![^(]*\))")
+# inside unclosed parentheses or square brackets, so an abbreviation like
+# "HEALTHCARE QUALITY IMPROVEMENT PARTNERSHIP (HQIP), NHS ENGLAND - X26" still
+# splits after the ")" rather than inside it, and a name that spells its parts
+# out in brackets — "BCP COUNCIL [BOURNEMOUTH, CHRISTCHURCH AND POOLE]" — stays
+# whole instead of becoming two organisations, one of them called
+# "CHRISTCHURCH AND POOLE]".
+# Corporate suffixes that follow a comma inside one organisation's name
+# rather than starting the next one: "MCKINSEY & COMPANY, INC. UNITED KINGDOM"
+# is one company, and splitting it invented an organisation called "INC.".
+# Deliberately excludes the ambiguous short ones — "CO" would break "CO
+# DURHAM", and AB/AS/SA are as often words or places as company forms.
+CORPORATE_SUFFIX = (
+    "INC", "INCORPORATED", "LTD", "LIMITED", "LLC", "LLP", "PLC",
+    "GMBH", "CORP", "CORPORATION", "PTY", "PTE", "SARL", "SRL", "BV", "NV",
+)
+# Every guard sits immediately after the comma, before any whitespace is
+# consumed: with `,\s*` in front of them the engine simply backtracks `\s*`
+# to empty, the lookahead then sees a leading space instead of the word it
+# was checking for, and the guard silently passes.
+LIST_SEPARATOR = re.compile(
+    r"\s*;\s*|\n+|"
+    r",(?![^(]*\))(?![^\[]*\])"
+    r"(?!\s*(?i:" + "|".join(CORPORATE_SUFFIX) + r")\b)"
+    r"\s*"
+)
 
 
 def split_list(value) -> list[str]:
