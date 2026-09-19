@@ -32,6 +32,9 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Check for LLM-cliché phrasing
+        run: python -m pipeline.clichecheck
+
       - name: Build site
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io

@@ -115,6 +115,7 @@ pipeline/snapshot.py            per-edition fingerprints and the month-on-month 
 pipeline/build.py               renders the site and the CSV extracts
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/aliases.py             applies reviewed organisation-name merges
+pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
 pipeline/templates/             Jinja2 templates
 assets/                         CSS and the table-filter script
 data/raw/                       downloaded workbooks (gitignored)
