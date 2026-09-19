@@ -170,8 +170,39 @@ p, li { max-width: 68ch; }
 
 /* Agreement detail -------------------------------------------------------- */
 
+/* A custom chevron replaces the browser's native <details> marker for both
+   accordion types on this page. The native marker is inconsistent across
+   browsers (size, vertical alignment) and disappears entirely once a summary
+   is set to display: flex, as the version list below needs — so rather than
+   fight that per element, hide it everywhere and draw one shape ourselves. */
+summary { list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+summary::marker { content: ""; }
+
+.prose-block summary,
+details.version summary,
+details.diff summary {
+  position: relative;
+  padding-left: 1.375rem;
+}
+.prose-block summary::before,
+details.version summary::before,
+details.diff summary::before {
+  content: "";
+  position: absolute;
+  left: 0.125rem;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--ink-muted);
+  border-bottom: 2px solid var(--ink-muted);
+  transform: translateY(-60%) rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+details[open] > summary::before { transform: translateY(-40%) rotate(45deg); }
+
 .prose-block { border: 1px solid var(--line); border-radius: 4px; padding: 0.25rem 1rem; margin-bottom: 0.75rem; }
-.prose-block summary { cursor: pointer; padding: 0.5rem 0; }
+.prose-block summary { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 .prose-block summary h3 { display: inline; margin: 0; font-size: 1.0625rem; }
 .prose-block[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 0.5rem; }
 .prose-block p { white-space: pre-wrap; }
@@ -182,7 +213,8 @@ p, li { max-width: 68ch; }
 .pill-list li { border: 1px solid var(--line); border-radius: 999px; padding: 0.25rem 0.75rem; font-size: 0.875rem; max-width: none; }
 
 details.version { border: 1px solid var(--line); border-radius: 4px; padding: 0.75rem 1rem; margin-bottom: 0.75rem; }
-details.version summary { cursor: pointer; font-weight: 600; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; }
+details.version summary { font-weight: 600; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; }
+details.version summary::before { top: 0.85rem; }
 .version-ref { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 .version-term { font-weight: 400; color: var(--ink-muted); font-size: 0.9375rem; }
 .dataset-line { font-size: 0.9375rem; }
@@ -213,7 +245,8 @@ details.version summary { cursor: pointer; font-weight: 600; display: flex; flex
    colour blindness. */
 
 details.diff { border-left: 3px solid var(--accent); padding: 0.25rem 0 0.25rem 0.875rem; margin: 0.75rem 0; }
-details.diff summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+details.diff summary { font-weight: 600; color: var(--accent); }
+details.diff summary::before { border-color: var(--accent); }
 details.diff h4 { margin: 0.875rem 0 0.25rem; font-size: 0.9375rem; }
 details.diff .hint { margin: 0.25rem 0 0.5rem; }
 

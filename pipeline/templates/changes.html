@@ -31,7 +31,7 @@
 <p>The two were fingerprinted under different rules for what counts as a change, and every fingerprint differs between those rules — so a comparison would report the entire register as amended, which would be worse than reporting nothing. The comparison returns once both editions have been processed under the same rules.</p>
 {% elif not changes.comparable %}
 <p class="lede">This is the first edition this site has processed, so there is nothing to compare it with yet.</p>
-<p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them. The comparison works by fingerprinting every agreement version in each edition and keeping that fingerprint in the site's repository, so earlier editions from NHS England's release archive can be backfilled as well as new ones added.</p>
+<p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them.</p>
 {% else %}
 <p class="lede">Comparing the {{ meta.edition|edition }} edition with {{ changes.previous_edition|edition }}.</p>
 
