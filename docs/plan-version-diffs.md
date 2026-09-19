@@ -2,6 +2,12 @@
 
 Status: **proposed.** Nothing here is implemented yet.
 
+Revised after confirming that all 19 published workbooks are held
+locally. That changes the plan materially: field-level history can be
+backfilled across the whole archive rather than starting from whichever
+edition the work lands in, so this is no longer a race against the next
+publication. See [§6](#6-backfilling-the-archive).
+
 The site already answers *which* agreements changed this month
 (`/changes/`, and one page per edition pair). It cannot answer *what*
 changed in any of them. This document proposes closing that gap, in four
@@ -84,13 +90,18 @@ september2026  cda7c782d1f38cc4
 ```
 
 It is the sole amendment in the September edition. The site can say so.
-It cannot say what was edited, and neither can anyone reading it, because
-the August full extract has been pruned (`editions.DEFAULT_KEEP = 1`) and
-the August workbook was never committed (`data/raw/` is gitignored). The
-information needed to answer the obvious follow-up question no longer
-exists anywhere in this repository. That is the strongest argument for
-recording amendment detail at ingest time rather than trying to
-reconstruct it later.
+It cannot say what was edited, because the August full extract has been
+pruned (`editions.DEFAULT_KEEP = 1`) and the August workbook is not in
+this repository (`data/raw/` is gitignored).
+
+It is, however, recoverable — the August and September workbooks both
+exist on the maintainer's machine. That is the difference between this
+revision and the first draft. The argument for recording amendment
+detail at ingest is no longer "otherwise it is lost forever"; it is that
+reconstructing it requires a 530 MB local archive that only one person
+has, which is not a basis for a published site. Capture it at ingest so
+it lives in git, and use the local workbooks to backfill what was never
+captured.
 
 ## 3. Blind spots in what counts as a change
 
@@ -124,10 +135,14 @@ whitespace runs to a single space, strip, and fold the register's `~`
 bullet markers to a consistent form. Keep the displayed text exactly as
 published.
 
-This changes every digest, so it is a one-off reset: either re-ingest the
-archive (18 manual downloads) or accept that the edition where it lands
-shows an artificial mass amendment. Do it in the same change as the new
-fields, once, and note it on the page.
+This changes every digest. In the first draft that was a real cost — the
+edition where it landed would have shown an artificial mass amendment,
+with 19 editions of inconsistent digests behind it. With the workbooks
+available it is a non-issue: re-ingest the archive in publication order
+and every digest is recomputed under the same rules, so the amendment
+counts stay honest all the way back to March 2025. Land the
+normalisation and the new fields together, in one change, followed by
+one full re-ingest.
 
 ## 4. Recommendations
 
@@ -215,17 +230,34 @@ costs **32 MB of git history per edition** and still only lets you diff
 one month back.
 
 Mechanics: `ingest` already has the new extract; it needs the previous
-edition's extract to compare against. Two workable routes —
+edition's to compare against. `ingest.main` already sorts its workbooks
+oldest first precisely so each edition diffs against the one before it,
+so a whole-archive run has both extracts in hand at the right moment.
+Compute the amendment log there, *before* `prune_extracts` runs, holding
+the previous edition's extract in memory for exactly one iteration.
+`DEFAULT_KEEP` stays at 1 and nothing extra lands in git.
 
-- **Preferred:** compute the amendment log inside `ingest`, *before*
-  `prune_extracts` runs, whenever the previous edition still has a full
-  extract. Keep `DEFAULT_KEEP = 1` and simply order the operations so the
-  outgoing extract is read before it is deleted. This works for every
-  future month with no storage increase at all.
-- **Fallback:** if the previous extract is already gone (a backfill, a
-  skipped month), write no log for that pair and record `"comparable":
-  false`. The per-field digests from R2 still give the field names; only
-  the text is missing. Degrade to a summary rather than blocking.
+Two cases still need handling. A single monthly ingest has no previous
+extract on disk (it was pruned last month), so it either re-extracts the
+previous workbook from `data/raw/` when it is there, or writes no log for
+that pair and records `"comparable": false` — the per-field digests from
+R2 still name the changed fields, only the text is missing. And a skipped
+or unavailable edition leaves a genuine gap, which the page should state
+rather than paper over.
+
+With the full archive re-ingested in one pass, the log covers all 18
+pairs from the start, so this degraded path should be rare.
+
+**Fix `ingest`'s memory use first.** `main` currently accumulates every
+extracted workbook in a dict (`extracts[(slug, edition)]`) so it can
+write the newest one after the loop. One extract is **393 MB** in memory
+(measured, September 2026), so a 19-workbook backfill retains roughly
+7.5 GB — survivable on a 16 GB machine and nothing else. Adding the
+amendment log on top of that is not. The fix is small and wanted anyway:
+process oldest first, keep only the previous edition's extract per
+register, and write the full extract when the current edition is the
+newest for its register. Peak drops to about two extracts, ~800 MB. Do
+this before attempting the backfill, not after discovering it swaps.
 
 ### R4 — Rendering: summary by default, redline on request
 
@@ -295,28 +327,84 @@ stated point of the project.
 
 ## 5. Suggested sequencing
 
-| Step | Needs | Blocked on a re-ingest? | Value |
-| --- | --- | --- | --- |
-| R1 register history + R4(3) version-to-version diffs | committed fingerprints and the current extract, both already present | No | High — ships now |
-| R5 vocabulary and page structure | nothing | No | High |
-| R2 per-field digests + R3 normalisation and new fields | snapshot format change | Only to backfill history; forward-looking from the next edition | High |
-| R3 amendment log | reordering `ingest` before `prune_extracts` | No, for future editions | High |
-| R6 exports | R2 | No | Medium |
+| Step | Needs | Value |
+| --- | --- | --- |
+| Verify the local workbook set against the manifest ([§6](#6-backfilling-the-archive)) | nothing | Precondition |
+| Probe February vs March 2026 ([§6](#6-backfilling-the-archive)) | two workbooks | High — sizes the problem |
+| R1 register history + R4(3) version-to-version diffs | committed fingerprints and the current extract, both already present | High — ships now |
+| R5 vocabulary and page structure | nothing | High |
+| `ingest` memory fix | nothing | Precondition for the backfill |
+| R2 per-field digests + R3 normalisation and new fields | snapshot format change | High |
+| R3 amendment log | the memory fix; `ingest` reordered before `prune_extracts` | High |
+| Full re-ingest of all 19 editions | all of the above | Turns 18 pairs of history from counts into content |
+| R6 exports | R2 | Medium |
 
-Steps 1 and 2 are pure rendering over data already in git, so they should
-not wait for the format work. R2 and R3 change what is captured and
-therefore only help from the edition they land in — which is an argument
-for landing them before the October 2026 workbook is ingested, not after.
+The first draft argued for landing R2 and R3 before the October 2026
+workbook was ingested, on the grounds that anything not captured at
+ingest was lost. That urgency is gone: a re-ingest recovers it whenever
+the work is ready. Sequence for correctness instead — get the definition
+of "changed" right (R3's normalisation and the missing fields), then
+re-ingest once, rather than rushing a format into the archive and
+needing a second reset later.
 
-## 6. What this cannot recover
+Steps R1 and R5 remain pure rendering over data already in git and
+should not wait for any of it.
 
-Field-level detail for the 18 historical edition pairs cannot be
-reconstructed from what is committed: the snapshots hold only digests and
-the workbooks were never kept. Backfilling it means re-downloading 18
-workbooks by hand from NHS England's archive and re-running `ingest` in
-publication order with the amendment log enabled — roughly an afternoon,
-and worth doing once if the historical amendments (the 122 in March 2026
-especially) are interesting enough to justify it. If they are not, the
-per-field digests and the amendment log simply start from the edition
-they ship in, and the archive keeps the coarse added/amended/removed view
-it has now.
+## 6. Backfilling the archive
+
+All 19 editions have a manifest entry carrying the SHA-256, byte count
+and source URL of the workbook they came from, so the local set can be
+verified rather than assumed — `source_file` in the manifest is the
+published filename, which is also what `sources.parse_edition` reads. A
+mismatch means a re-download, not a re-ingest, and it is worth knowing
+before a multi-hour run rather than during it. Worth adding as a
+`--verify` flag on `ingest`, or as a few lines in the runbook:
+
+```python
+import hashlib, json
+from pathlib import Path
+for e in json.load(open("data/editions/data-uses-register/manifest.json"))["editions"]:
+    f = Path("data/raw") / e["source_file"]
+    got = hashlib.sha256(f.read_bytes()).hexdigest() if f.is_file() else "MISSING"
+    print(("ok  " if got == e["sha256"] else "BAD "), e["edition"], f.name)
+```
+
+The whole set is 530 MB across 19 files. Nothing about the backfill is
+expensive except the extraction itself, which is bounded by openpyxl.
+
+**Probe before building.** One question drives how much of this
+machinery is worth writing: were March 2026's 122 amendments substantive,
+or a bulk template restatement? The answer is two workbooks and a short
+script away, and it does not need any of the code in this plan:
+
+```
+extract(feb2026) and extract(march2026)
+  -> for each version present in both with a different digest,
+     report which of the 13 fields differ, before and after normalisation
+```
+
+If most of the 122 are whitespace or punctuation churn, R3's
+normalisation is the highest-value item here and the redline renderer is
+a nicety. If they are rewritten benefits statements and shifted end
+dates, the redline is the point and normalisation is housekeeping. Run
+the probe first; it is an afternoon's difference in what gets built.
+
+**What the backfill yields.** Across the 18 edition pairs there are 494
+amended versions. Storing old and new text for changed fields only — at
+the observed mean of 23.7 KB of fingerprinted text per version, and
+assuming two or three changed fields per amendment — puts the whole
+historical amendment log in the low single-digit megabytes gzipped, in
+the same order as the fingerprints already committed. Every one of those
+494 edits becomes a readable redline on the agreement page it belongs
+to, including whatever NHS England did to 122 agreements in March 2026,
+which is currently the largest unexplained event in the register's
+recent history and the kind of thing this site exists to surface.
+
+**What is still unrecoverable.** Editions published before March 2025.
+The site's history starts where NHS England's release archive does, and
+no amount of local storage changes that. Anything the register itself
+overwrote between two publication dates is also gone — an agreement
+edited twice in one month shows as one amendment, because a monthly
+snapshot cannot see inside the month. Worth stating on the page:
+amendments are attributed to the edition they first appear in, not to the
+date the edit was made.
