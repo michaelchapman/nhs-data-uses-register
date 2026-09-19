@@ -314,11 +314,11 @@ def history_index(register_slug: str) -> dict[str, dict]:
         edition, versions = snapshot["edition"], snapshot["versions"]
         touched: dict[str, dict] = {}
 
-        def event(base: str, kind: str, reference: str) -> None:
+        def event(base: str, kind: str, reference: str, fields: list[str] | None = None) -> None:
             entry = touched.setdefault(
-                base, {"edition": edition, "added": [], "amended": [], "removed": []}
+                base, {"edition": edition, "added": [], "amended": [], "removed": [], "fields": []}
             )
-            entry[kind].append(reference)
+            entry[kind].append({"reference": reference, "fields": fields or []})
 
         for reference, version in versions.items():
             base = version["base"]
@@ -329,23 +329,34 @@ def history_index(register_slug: str) -> dict[str, dict]:
             if reference not in previous:
                 event(base, "added", reference)
             elif _digest(previous[reference]) != _digest(version):
-                event(base, "amended", reference)
+                # Naming the fields is the difference between "this was edited"
+                # and "the data controller was changed" — the second is what a
+                # reader came for, and the register itself never says it.
+                event(base, "amended", reference, changed_fields(previous[reference], version))
         for reference, version in previous.items():
             if reference not in versions and version["base"] in index:
                 event(version["base"], "removed", reference)
 
         for base, entry in touched.items():
             for kind in ("added", "amended", "removed"):
-                entry[kind].sort()
+                entry[kind].sort(key=lambda item: item["reference"])
+            # The union across the edition's amendments, for a one-line summary
+            # when several versions were restated together.
+            entry["fields"] = sorted({f for item in entry["amended"] for f in item["fields"]})
             index[base]["events"].append(entry)
         previous = versions
 
     for entry in index.values():
         entry["amendments"] = sum(len(e["amended"]) for e in entry["events"])
         # The edition an agreement first appears in always produces an "added"
-        # event, which duplicates the "first listed" line the page already
-        # shows. Drop it, keeping any later version added in the same edition.
+        # event, which repeats the "first listed" line the page already shows.
+        # Fold its references into that line and drop the event, so the page
+        # does not print the same edition twice in a row. An edition that also
+        # amended or removed something is left alone: it has more to say.
         first = [e for e in entry["events"] if e["edition"] == entry["first_edition"]]
-        if first and not (first[0]["amended"] or first[0]["removed"]) and len(first[0]["added"]) == 1:
+        if first and not (first[0]["amended"] or first[0]["removed"]):
+            entry["first_versions"] = [item["reference"] for item in first[0]["added"]]
             entry["events"].remove(first[0])
+        else:
+            entry["first_versions"] = []
     return index
