@@ -177,3 +177,68 @@ def diff(current: dict, previous: dict | None) -> dict:
         "amended": sorted(amended, key=key),
         "removed": sorted(removed, key=key),
     }
+
+
+def history_index(register_slug: str) -> dict[str, dict]:
+    """When each agreement and each of its versions appeared or changed.
+
+    Every edition's fingerprints are committed, so this reaches back over the
+    whole archive even though only the newest edition keeps a full extract.
+    Reading all of them costs about a second.
+
+    Returns `{base_reference: {"first_edition", "first_is_earliest", "events"}}`
+    with one event per edition in which something happened, oldest first so it
+    reads as a timeline under the "first listed" line. Events are grouped by
+    edition rather than one per version: NHS England restates every version of
+    an agreement at once often enough that the ungrouped list runs to sixteen
+    near-identical lines for a single edition's edit.
+
+    An agreement present in the earliest edition we hold may well be older than
+    that, so `first_is_earliest` marks the ones whose start we cannot see.
+    """
+    snapshots = [read_snapshot(path) for path in existing_editions(register_slug)]
+    if not snapshots:
+        return {}
+    earliest = snapshots[0]["edition"]
+
+    index: dict[str, dict] = {}
+    previous: dict[str, dict] = {}
+    for snapshot in snapshots:
+        edition, versions = snapshot["edition"], snapshot["versions"]
+        touched: dict[str, dict] = {}
+
+        def event(base: str, kind: str, reference: str) -> None:
+            entry = touched.setdefault(
+                base, {"edition": edition, "added": [], "amended": [], "removed": []}
+            )
+            entry[kind].append(reference)
+
+        for reference, version in versions.items():
+            base = version["base"]
+            index.setdefault(
+                base,
+                {"first_edition": edition, "first_is_earliest": edition == earliest, "events": []},
+            )
+            if reference not in previous:
+                event(base, "added", reference)
+            elif previous[reference]["hash"] != version["hash"]:
+                event(base, "amended", reference)
+        for reference, version in previous.items():
+            if reference not in versions and version["base"] in index:
+                event(version["base"], "removed", reference)
+
+        for base, entry in touched.items():
+            for kind in ("added", "amended", "removed"):
+                entry[kind].sort()
+            index[base]["events"].append(entry)
+        previous = versions
+
+    for entry in index.values():
+        entry["amendments"] = sum(len(e["amended"]) for e in entry["events"])
+        # The edition an agreement first appears in always produces an "added"
+        # event, which duplicates the "first listed" line the page already
+        # shows. Drop it, keeping any later version added in the same edition.
+        first = [e for e in entry["events"] if e["edition"] == entry["first_edition"]]
+        if first and not (first[0]["amended"] or first[0]["removed"]) and len(first[0]["added"]) == 1:
+            entry["events"].remove(first[0])
+    return index

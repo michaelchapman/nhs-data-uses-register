@@ -26,30 +26,21 @@ Two workbooks is roughly 800 MB of memory — one extract is ~390 MB.
 from __future__ import annotations
 
 import argparse
-import difflib
-import re
-import unicodedata
 from collections import Counter
 from pathlib import Path
 
+from . import compare
 from . import snapshot as snapshot_module
 from . import sources
 
-# The long free-text fields, where a word-level redline is worth reading and a
-# before/after pair is not.
-PROSE = ("objective", "activities", "expected_output", "expected_benefits", "yielded_benefits")
+# Compared, normalised and redlined exactly as the agreement pages do it, so
+# the two answers are comparable. See pipeline/compare.py.
+PROSE = tuple(key for key, _ in compare.PROSE_FIELDS)
+normalise = compare.normalise
 
 # Proposed additions to snapshot.FINGERPRINTED, compared here so the cost of
 # leaving them out can be counted rather than guessed at. See the plan, §3.
 DATASET_ATTRIBUTES = ("name", "legal_basis", "sensitivity", "type_of_data", "confidentiality")
-
-
-def normalise(text: str) -> str:
-    """The proposed hashing normalisation. For comparison only, never display."""
-    text = unicodedata.normalize("NFKC", text or "")
-    # Smart quotes and dashes drift between editions without the meaning moving.
-    text = text.translate(str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-"}))
-    return re.sub(r"\s+", " ", text).strip().casefold()
 
 
 def comparable(version: dict) -> dict[str, object]:
@@ -140,38 +131,6 @@ def load(path: Path) -> tuple[str, dict[str, dict]]:
     return edition, versions
 
 
-def _run(words: list[str], limit: int) -> str:
-    """`words` as text, truncated once it stops being readable in a terminal."""
-    if len(words) <= limit:
-        return " ".join(words)
-    return " ".join(words[:limit]) + f" … (+{len(words) - limit:,} more words)"
-
-
-def redline(old: str, new: str, context: int = 6, limit: int = 60) -> str:
-    """A word-level redline, eliding long unchanged and long changed runs alike.
-
-    These fields run to several thousand words and a wholesale rewrite is a
-    single opcode, so both sides need capping: without it one amendment prints
-    the entire new text and the probe's summary scrolls away.
-    """
-    old_words, new_words = old.split(), new.split()
-    matcher = difflib.SequenceMatcher(None, old_words, new_words, autojunk=False)
-    out: list[str] = []
-    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
-        if tag == "equal":
-            words = old_words[i1:i2]
-            if len(words) > 2 * context:
-                out.append(" ".join(words[:context]) + " […] " + " ".join(words[-context:]))
-            else:
-                out.append(" ".join(words))
-        else:
-            if tag in ("replace", "delete"):
-                out.append("[-" + _run(old_words[i1:i2], limit) + "-]")
-            if tag in ("replace", "insert"):
-                out.append("{+" + _run(new_words[j1:j2], limit) + "+}")
-    return " ".join(out)
-
-
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
@@ -260,7 +219,7 @@ def main(argv: list[str] | None = None) -> None:
         print(f"\n{'=' * 72}\nSample redlines ([-removed-] {{+added+}})")
         for _, reference, field, old_text, new_text in samples[: args.show]:
             print(f"\n{reference} — {field}\n{'-' * 72}")
-            print(redline(old_text, new_text))
+            print(compare.redline(old_text, new_text))
 
 
 if __name__ == "__main__":

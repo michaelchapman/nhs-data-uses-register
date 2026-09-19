@@ -139,7 +139,13 @@ def main() -> None:
         "editions": known,
     }
 
-    build_module.build(data, meta, changes, args.output, changes_history=changes_history)
+    # Every edition's fingerprints are committed, so an agreement's history
+    # reaches back over the whole archive even though only the newest edition
+    # keeps a full extract.
+    history = snapshot_module.history_index(register.slug)
+    build_module.build(
+        data, meta, changes, args.output, changes_history=changes_history, history=history
+    )
 
 
 if __name__ == "__main__":

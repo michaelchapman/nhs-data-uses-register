@@ -2,6 +2,66 @@
 {% set v = agreement.latest %}
 {% block title %}{{ agreement.title }} — {{ agreement.organisation }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ agreement.organisation }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
+{% macro prose_diff(blocks) %}
+<p class="diff-text">
+  {% for block in blocks %}
+    {% if block.op == "equal" %}<span class="diff-elided">[{{ block.paragraphs }} paragraph{{ "s" if block.paragraphs != 1 }} unchanged]</span>
+    {% elif block.op == "insert" %}<ins>{{ block.text }}</ins>
+    {% elif block.op == "delete" %}<del>{{ block.text }}</del>
+    {% else %}
+      {% for run in block.runs %}
+        {% if run.op == "equal" %}{{ run.text }}
+        {% elif run.op == "insert" %}<ins>{{ run.text }}</ins>
+        {% elif run.op == "delete" %}<del>{{ run.text }}</del>
+        {% else %}<span class="diff-elided">[{{ run.words|commas }} words unchanged]</span>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</p>
+{% endmacro %}
+{% macro version_diff(diff) %}
+<details class="diff">
+  <summary>What changed from {{ diff.previous }}</summary>
+  <p class="hint">Text removed is <del>struck through</del>; text added is <ins>underlined</ins>. Unchanged paragraphs are summarised rather than repeated.</p>
+  {% if diff.scalars %}
+  <table class="data-table compact">
+    <caption class="visually-hidden">Fields changed from {{ diff.previous }}</caption>
+    <thead><tr><th scope="col">Field</th><th scope="col">Was</th><th scope="col">Became</th></tr></thead>
+    <tbody>
+    {% for change in diff.scalars %}
+      <tr><th scope="row">{{ change.label }}</th><td><del>{{ change.before or "Not stated" }}</del></td><td><ins>{{ change.after or "Not stated" }}</ins></td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+  {% for change in diff.lists %}
+  <p class="diff-list"><strong>{{ change.label }}:</strong>
+    {% for name in change.added %}<ins>+ {{ name }}</ins>{% if not loop.last %}; {% endif %}{% endfor %}
+    {% if change.added and change.removed %} · {% endif %}
+    {% for name in change.removed %}<del>− {{ name }}</del>{% if not loop.last %}; {% endif %}{% endfor %}
+  </p>
+  {% endfor %}
+  {% for change in diff.prose %}
+  <h4>{{ change.label }}</h4>
+  {% if change.blocks %}
+    {{ prose_diff(change.blocks) }}
+  {% elif change.filled_in %}
+    <p class="hint">Not stated in the previous version; added here.</p>
+    {% for para in change.text|paragraphs %}<p><ins>{{ para }}</ins></p>{% endfor %}
+  {% else %}
+    <p class="hint">Stated in the previous version and removed here.</p>
+    {% for para in change.text|paragraphs %}<p><del>{{ para }}</del></p>{% endfor %}
+  {% endif %}
+  {% endfor %}
+  {% if diff.cosmetic %}
+  <p class="hint">Changed only in punctuation, spacing or capitalisation: {{ diff.cosmetic|join(", ") }}.</p>
+  {% endif %}
+  {% if diff.unchanged %}
+  <p class="hint">Unchanged: {{ diff.unchanged|join(", ") }}.</p>
+  {% endif %}
+</details>
+{% endmacro %}
 {% block content %}
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
@@ -120,16 +180,46 @@
   {% if version.datasets %}
   <p class="dataset-line"><strong>Datasets:</strong> {{ version.datasets|map(attribute='name')|join('; ') }}</p>
   {% endif %}
+  {% if diffs.get(version.reference) %}
+  {{ version_diff(diffs[version.reference]) }}
+  {% endif %}
   {% if version.reference != v.reference %}
     {% for section, text in [("Objective for processing", version.objective), ("Expected output", version.expected_output), ("Benefits reported", version.yielded_benefits)] %}
       {% if text %}
-      <h4>{{ section }}</h4>
+      <details class="prose-block"><summary><h4>{{ section }}</h4></summary>
       {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
+      </details>
       {% endif %}
     {% endfor %}
   {% endif %}
 </details>
 {% endfor %}
+
+<h2 id="register-history">Register history</h2>
+{% if history %}
+<p>When this agreement appeared in, or was edited in, each monthly edition of the register. Built by comparing every edition this site holds{% if history.first_is_earliest %}, the earliest of which is {{ meta.editions[0].edition|edition }}{% endif %}.</p>
+<ul class="timeline">
+  {% if history.first_is_earliest %}
+  <li><strong>{{ history.first_edition|edition }}</strong> — already listed in the earliest edition this site holds, so it may be older.</li>
+  {% else %}
+  <li><strong>{{ history.first_edition|edition }}</strong> — first listed.</li>
+  {% endif %}
+  {% for event in history.events %}
+  <li>
+    <strong>{{ event.edition|edition }}</strong> —
+    {% if event.added %}{{ event.added|length }} version{{ "s" if event.added|length != 1 }} added ({{ event.added|join(", ") }}){% endif %}
+    {% if event.added and event.amended %}; {% endif %}
+    {% if event.amended %}{{ event.amended|length }} version{{ "s" if event.amended|length != 1 }} amended in place ({{ event.amended|join(", ") }}){% endif %}
+    {% if event.removed %}{% if event.added or event.amended %}; {% endif %}{{ event.removed|length }} no longer listed ({{ event.removed|join(", ") }}){% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% if history.amendments %}
+<p class="hint">"Amended in place" means NHS England changed the record without issuing a new version number. The register publishes no changelog for those edits; this site infers them by comparing editions. An edit is attributed to the edition it first appears in, not to the date it was made.</p>
+{% endif %}
+{% else %}
+<p class="empty">No edition history is available for this agreement.</p>
+{% endif %}
 
 <p class="source-note">Source: <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>, {{ meta.edition|edition }} edition of the NHS England Data Uses Register. Search that workbook for <code>{{ agreement.base_reference }}</code> to see the original rows.</p>
 {% endblock %}
