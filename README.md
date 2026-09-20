@@ -41,7 +41,7 @@ Useful flags:
 
 | Flag | Effect |
 | --- | --- |
-| `--edition june2026` | Build an older edition instead of the newest |
+| `--edition september2026` | Name the edition to build; only the edition held in the store can be (older ones: use `--workbook`) |
 | `--workbook path.xlsx` | One-off build from a local file; nothing is ingested or written to `data/` |
 | `--no-snapshot` | Don't record a fingerprint for an edition that lacks one |
 | `--base-path /repo-name` | Serve under a subpath (GitHub project pages) |
@@ -69,10 +69,16 @@ git add data/snapshots data/editions && git commit -m "Add the August 2026 editi
 committed data only. Because it never reaches outside the repository, it cannot
 fail the way the scheduled job did.
 
-Two things are committed per edition, both gzipped:
+Two things are committed:
 
-- **`data/editions/<register>/<edition>.json.gz`** — the full extract the site is
-  rendered from. Only the newest edition keeps one.
+- **`data/editions/<register>/agreements/<slug>.json`** — the newest edition's
+  full extract, which the site is rendered from: one uncompressed file per
+  agreement, holding its versions. They are deliberately not gzipped or bundled
+  into one file. Consecutive editions restate almost all of the same prose, and
+  git stores that as a small delta between two copies of the same file — a
+  monthly ingest adds well under 1 MB to the repository, where a gzipped extract
+  added about 30 MB. `git log` on one of these files is that agreement's history.
+  `extract.json` beside them says which edition they are.
 - **`data/snapshots/<register>/<edition>.json.gz`** — a hash of every agreement
   version, ~210 KB. One per edition, kept forever; this is what the "what
   changed" page compares.

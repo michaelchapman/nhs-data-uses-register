@@ -29,9 +29,13 @@ Budget about two minutes a month.
 
    - `data/snapshots/data-uses-register/<edition>.json.gz` — the fingerprint of
      every agreement version, ~210 KB. One per edition, kept forever.
-   - `data/editions/data-uses-register/<edition>.json.gz` — the full extract the
-     site is rendered from. Only the newest edition keeps one; the previous
-     edition's is pruned automatically.
+   - `data/editions/data-uses-register/agreements/<slug>.json` — the full
+     extract the site is rendered from, one uncompressed file per agreement, with
+     `extract.json` naming the edition. Only the newest edition is held; ingesting
+     it replaces the last one's files, leaving unchanged agreements untouched and
+     removing any that have left the register. Git stores the difference, usually
+     well under 1 MB. Check `git diff --stat` before committing: a change of tens
+     of megabytes means something other than a monthly update happened.
 
    It also updates `data/editions/data-uses-register/manifest.json` with the
    workbook's SHA-256, size and source URL, so the file we ingested can always
@@ -149,10 +153,8 @@ EOF
 | Command | Effect |
 | --- | --- |
 | `ingest --fingerprints-only` | History only; leaves the current extract alone |
-| `ingest --keep 2` | Keep full extracts for the newest two editions |
-| `ingest --keep -1` | Keep every full extract (watch the repository size) |
 | `ingest --source-url URL` | Record a different source URL for one workbook |
-| `run --edition june2026` | Build an older edition (needs its full extract) |
+| `run --workbook datausesregister_june2026.xlsx` | Build an older edition (the store holds only the newest) |
 | `run --workbook a.xlsx` | One-off build from a file, without ingesting |
 | `run --base-path /repo-name` | Serve under a subpath (GitHub project pages) |
 

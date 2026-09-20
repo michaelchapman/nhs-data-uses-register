@@ -7,7 +7,7 @@ NHS England's WAF blocks automated downloads (see ``sources``), so workbooks are
 fetched by hand from the register page and its release archive, dropped in
 ``data/raw/`` — which is gitignored — and ingested here. This writes the small
 files that *are* committed: a fingerprint for every edition, and a full extract
-for the newest one, which is what the site is built from.
+for the newest one — one file per agreement — which is what the site is built from.
 
 Re-running on a file already ingested is safe; it overwrites in place.
 """
@@ -37,15 +37,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--source-url",
         help="the URL this workbook came from; derived from the filename when omitted",
-    )
-    parser.add_argument(
-        "--keep",
-        type=int,
-        default=editions_module.DEFAULT_KEEP,
-        help=(
-            "how many of the newest editions keep a full extract "
-            f"(default {editions_module.DEFAULT_KEEP}; -1 to keep all)"
-        ),
     )
     parser.add_argument(
         "--fingerprints-only",
@@ -167,22 +158,29 @@ def main(argv: list[str] | None = None) -> None:
 
     if args.fingerprints_only:
         print("fingerprints only; no full extract written")
+        for slug in latest:
+            # Re-ingesting rewrote the manifest entry; keep it saying which
+            # edition the store still holds an extract for.
+            if editions_module.latest_edition(slug):
+                editions_module.mark_full_extract(slug, editions_module.latest_edition(slug))
         return
 
     for slug, (newest, data) in latest.items():
-        path = editions_module.write_extract(slug, newest["edition"], data)
-        size = path.stat().st_size
-        print(f"extract -> {relative(path)} ({size / 1e6:.1f} MB)")
-        if size > 45_000_000:
+        held = editions_module.latest_edition(slug)
+        if held and sources.edition_sort_key(newest["edition"]) < sources.edition_sort_key(held):
+            # The store keeps one extract, and it should be the newest.
             print(
-                "  warning: over GitHub's 50 MB file warning threshold. Consider "
-                "splitting the extract or tracking it with Git LFS.",
-                file=sys.stderr,
+                f"not replacing the {held} extract with the older {newest['edition']}; "
+                "its fingerprint was written"
             )
+            editions_module.mark_full_extract(slug, held)
+            continue
+        directory = editions_module.write_extract(slug, newest["edition"], data)
+        print(f"extract -> {relative(directory)}/ ({len(data['agreements']):,} agreements, edition {newest['edition']})")
         newest["has_full_extract"] = True
         editions_module.upsert(slug, newest)
-        for dropped in editions_module.prune_extracts(slug, args.keep):
-            print(f"  pruned older extract for {dropped}")
+        # Only the newest edition keeps an extract; the manifest says which.
+        editions_module.mark_full_extract(slug, newest["edition"])
         print(f"manifest -> {relative(editions_module.manifest_path(slug))}")
 
 

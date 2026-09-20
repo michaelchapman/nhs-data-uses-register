@@ -1,23 +1,31 @@
 """The committed edition store: what the site is built from.
 
 Workbooks cannot be fetched in CI (see ``sources``), so the build input lives in
-git instead. Two kinds of file, both gzipped:
+git instead. Two kinds of file:
 
-``data/editions/<register>/<edition>.json.gz``
-    The full normalised extract — everything needed to render the site for that
-    edition. Only the newest edition normally needs one; older editions are
-    reachable through their fingerprints alone.
+``data/editions/<register>/agreements/<slug>.json``
+    The newest edition's extract, one uncompressed file per agreement, holding
+    that agreement's versions and nothing derived from them. This shape is
+    deliberate. Consecutive editions restate almost every version's prose, and
+    git can only store that cheaply as a delta between two copies of the same
+    file: a gzipped extract has no such delta and cost about 30 MB per edition,
+    where these files cost well under 1 MB. Keeping one file per agreement also
+    makes ``git log`` on a file that agreement's history.
+
+``data/editions/<register>/extract.json``
+    Which edition the files above are. Only the newest is stored; an older one
+    is rebuilt from its workbook, or from an earlier commit.
 
 ``data/snapshots/<register>/<edition>.json.gz``
     The per-edition fingerprint, written by ``snapshot``. Small enough to keep
     one for every edition in NHS England's archive.
 
-``data/editions/<register>/manifest.json`` indexes them: one entry per edition
-we have ingested, with the checksum of the workbook it came from.
+``data/editions/<register>/manifest.json`` indexes what has been ingested: one
+entry per edition, with the checksum of the workbook it came from.
 
-Only ``agreements`` is stored. ``organisations`` and ``datasets`` are pure
-functions of it, and ``agreement["latest"]`` aliases a dict already inside
-``agreement["versions"]`` — serialising them would duplicate most of the file.
+Only each agreement's versions are stored. Everything else on an agreement, and
+the organisation and dataset views, is a function of them (`extract.assemble`),
+so it is rebuilt on every read and is never stale against the alias files.
 """
 
 from __future__ import annotations
@@ -30,9 +38,8 @@ from . import sources
 
 EDITION_ROOT = Path(__file__).resolve().parent.parent / "data" / "editions"
 MANIFEST_NAME = "manifest.json"
-# How many editions keep a full extract. The site renders one edition at a time;
-# a second is a cheap safety net for rebuilding the previous month.
-DEFAULT_KEEP = 1
+EXTRACT_META = "extract.json"
+AGREEMENTS_DIR = "agreements"
 
 
 def register_dir(register_slug: str) -> Path:
@@ -41,8 +48,12 @@ def register_dir(register_slug: str) -> Path:
     return path
 
 
-def extract_path(register_slug: str, edition: str) -> Path:
-    return register_dir(register_slug) / f"{edition}.json.gz"
+def agreements_dir(register_slug: str) -> Path:
+    return register_dir(register_slug) / AGREEMENTS_DIR
+
+
+def extract_meta_path(register_slug: str) -> Path:
+    return register_dir(register_slug) / EXTRACT_META
 
 
 def manifest_path(register_slug: str) -> Path:
@@ -82,12 +93,43 @@ def manifest_entry(register_slug: str, edition: str) -> dict | None:
     return None
 
 
+def _agreement_json(agreement: dict) -> str:
+    """One agreement as stored: its versions, stable and readable in a diff.
+
+    Indented so a change to one field is one changed line, and sorted so an
+    unchanged agreement is byte-identical from one ingest to the next.
+    """
+    stored = {"base_reference": agreement["base_reference"], "versions": agreement["versions"]}
+    return json.dumps(stored, indent=1, sort_keys=True, ensure_ascii=False, default=_no_aliases) + "\n"
+
+
 def write_extract(register_slug: str, edition: str, data: dict) -> Path:
-    path = extract_path(register_slug, edition)
-    payload = {"register": register_slug, "edition": edition, "agreements": data["agreements"]}
-    with gzip.open(path, "wt", encoding="utf-8", compresslevel=9) as handle:
-        json.dump(payload, handle, separators=(",", ":"), sort_keys=True, default=_no_aliases)
-    return path
+    """Replace the stored extract with `edition`'s, touching only what changed.
+
+    A file whose content is unchanged is left alone, an agreement no longer in
+    the register is removed, and git records the rest as the edition's diff.
+    """
+    directory = agreements_dir(register_slug)
+    directory.mkdir(parents=True, exist_ok=True)
+    wanted: dict[str, str] = {}
+    for agreement in data["agreements"]:
+        name = f"{agreement['slug']}.json"
+        if name in wanted:
+            raise SystemExit(
+                f"two agreements share the file name {name}: "
+                f"{agreement['base_reference']} collides with an earlier one"
+            )
+        wanted[name] = _agreement_json(agreement)
+    for path in directory.glob("*.json"):
+        if path.name not in wanted:
+            path.unlink()
+    for name, text in wanted.items():
+        path = directory / name
+        if not path.exists() or path.read_text(encoding="utf-8") != text:
+            path.write_text(text, encoding="utf-8")
+    meta = {"register": register_slug, "edition": edition, "agreements": len(wanted)}
+    extract_meta_path(register_slug).write_text(json.dumps(meta, indent=1, sort_keys=True) + "\n")
+    return directory
 
 
 def _no_aliases(value):
@@ -95,98 +137,55 @@ def _no_aliases(value):
 
 
 def read_extract(register_slug: str, edition: str) -> dict:
-    path = extract_path(register_slug, edition)
-    if not path.exists():
+    stored = stored_editions(register_slug)
+    if edition not in stored:
+        held = f"only the {stored[0]} edition" if stored else "no edition"
         raise SystemExit(
-            f"no full extract for the {edition} edition of {register_slug}.\n"
-            f"Expected {path.relative_to(Path.cwd()) if path.is_relative_to(Path.cwd()) else path}. "
-            "Ingest the workbook first:\n"
+            f"no full extract for the {edition} edition of {register_slug}: the store holds {held}.\n"
+            "Build an older edition from its workbook with --workbook, or ingest the workbook:\n"
             f"    python -m pipeline.ingest data/raw/<workbook>.xlsx"
         )
-    with gzip.open(path, "rt", encoding="utf-8") as handle:
-        return rehydrate(json.load(handle)["agreements"])
+    versions_by_base = {}
+    for path in sorted(agreements_dir(register_slug).glob("*.json")):
+        stored_agreement = json.loads(path.read_text(encoding="utf-8"))
+        versions_by_base[stored_agreement["base_reference"]] = stored_agreement["versions"]
+    return rehydrate(versions_by_base)
 
 
-def rehydrate(agreements: list[dict]) -> dict:
-    """Rebuild the derived views that `write_extract` deliberately dropped."""
-    from . import aliases as aliases_module
-    from .extract import (
-        _group_datasets,
-        _group_organisations,
-        known_organisation_names,
-        resplit_list,
-        slugify,
-    )
+def rehydrate(versions_by_base: dict[str, list[dict]]) -> dict:
+    """Rebuild everything the store leaves out, from each agreement's versions."""
+    from .extract import assemble, known_organisation_names, resplit_list
 
-    alias_map = aliases_module.load_map()
-    # The same authoritative list `extract` builds from the workbook, rebuilt
-    # from the stored extract so a rebuild splits controllers the same way an
-    # ingest does.
+    # The same authoritative list `extract` builds from the workbook, so a
+    # rebuild splits controllers the way an ingest does. Re-splitting is
+    # idempotent, so an extract written under an older, narrower rule gets the
+    # current one applied every time it is read.
     known = known_organisation_names(
-        v["organisation"] for a in agreements for v in a["versions"]
+        version["organisation"] for versions in versions_by_base.values() for version in versions
     )
-    for agreement in agreements:
-        # Re-splitting is idempotent (a string with none of the separators just
-        # comes back as itself), so this is safe to apply unconditionally rather
-        # than tracking whether a given extract predates a particular splitting
-        # rule — a committed extract whose controllers were split by an older,
-        # narrower rule gets the current rule applied every time it's read.
-        for version in agreement["versions"]:
+    for versions in versions_by_base.values():
+        for version in versions:
             version["controllers"] = resplit_list(version["controllers"], known)
-        agreement["controllers"] = agreement["versions"][-1]["controllers"]
-        agreement["latest"] = agreement["versions"][-1]
-        # Always recomputed, never backfilled-if-missing: unlike the fields
-        # below, organisation_slug and controller_slugs need to reflect the
-        # *current* data/organisation-aliases.json on every read, not whatever
-        # was true at ingest time — otherwise reviewing and adding an alias
-        # would need a re-ingest to take effect, rather than just a rebuild.
-        agreement["organisation_slug"] = slugify(aliases_module.resolve(agreement["organisation"], alias_map))
-        agreement["controller_slugs"] = [slugify(aliases_module.resolve(c, alias_map)) for c in agreement["controllers"]]
-        # An extract written before a field existed won't have it. Backfilling
-        # here — from data the extract does store — means an older committed
-        # extract keeps working without a re-ingest, as long as the field is a
-        # deterministic function of what's already there.
-        if "first_start_known" not in agreement:
-            earliest_version = agreement["versions"][0].get("version", "")
-            agreement["first_start_known"] = earliest_version in ("", "1", "1.0")
-        if "legal_bases" not in agreement:
-            agreement["legal_bases"] = sorted(
-                {
-                    d["legal_basis"]
-                    for v in agreement["versions"]
-                    for d in v["datasets"]
-                    if d.get("legal_basis")
-                }
-            )
-    return {
-        "agreements": agreements,
-        "organisations": _group_organisations(agreements),
-        "datasets": _group_datasets(agreements),
-    }
+    return assemble(versions_by_base)
 
 
 def stored_editions(register_slug: str) -> list[str]:
-    """Editions with a full extract on disk, oldest first."""
-    editions = [p.name[: -len(".json.gz")] for p in register_dir(register_slug).glob("*.json.gz")]
-    return sorted(editions, key=sources.edition_sort_key)
+    """The edition whose extract is on disk: at most one."""
+    path = extract_meta_path(register_slug)
+    if not path.exists():
+        return []
+    return [json.loads(path.read_text())["edition"]]
 
 
 def latest_edition(register_slug: str) -> str | None:
-    """The newest edition we can actually build — one with a full extract."""
+    """The newest edition we can actually build — the one with a full extract."""
     editions = stored_editions(register_slug)
     return editions[-1] if editions else None
 
 
-def prune_extracts(register_slug: str, keep: int = DEFAULT_KEEP) -> list[str]:
-    """Drop all but the newest `keep` full extracts. Fingerprints are untouched."""
-    editions = stored_editions(register_slug)
-    dropped = editions[: max(0, len(editions) - keep)] if keep >= 0 else []
-    for edition in dropped:
-        extract_path(register_slug, edition).unlink()
-    if dropped:
-        remaining = set(stored_editions(register_slug))
-        entries = read_manifest(register_slug)
-        for entry in entries:
-            entry["has_full_extract"] = entry["edition"] in remaining
-        write_manifest(register_slug, entries)
-    return dropped
+def mark_full_extract(register_slug: str, edition: str) -> None:
+    """Record in the manifest that `edition` is the one with a stored extract."""
+    entries = read_manifest(register_slug)
+    for entry in entries:
+        entry["has_full_extract"] = entry["edition"] == edition
+    write_manifest(register_slug, entries)

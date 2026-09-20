@@ -282,66 +282,80 @@ def extract(workbook_bytes: bytes) -> dict:
             }
         )
 
+    return assemble(versions_by_base)
+
+
+def assemble(versions_by_base: dict[str, list[dict]]) -> dict:
+    """`{agreements, organisations, datasets}` from each agreement's versions.
+
+    Everything but the versions themselves is derived from them, plus the
+    reviewed alias files. That is why the committed extract stores only the
+    versions (see `editions`): a workbook and a stored extract both arrive here
+    and come out the same, and an alias reviewed since the extract was written
+    takes effect on the next build without a re-ingest.
+    """
     alias_map = aliases.load_map()
     dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-
-    agreements = []
-    for base, versions in versions_by_base.items():
-        versions.sort(key=lambda v: (_version_key(v["version"]), v["start_date"]))
-        latest = versions[-1]
-        earliest = versions[0]
-        dataset_names = sorted({d["name"] for v in versions for d in v["datasets"] if d["name"]})
-        starts = [v["start_date"] for v in versions if v["start_date"]]
-        ends = [v["end_date"] for v in versions if v["end_date"]]
-        # An unversioned reference (no "-vN" suffix) has exactly one version, which
-        # is trivially the first. Otherwise the earliest version we hold is only
-        # really "the first" if its own number says so — a backfill that starts
-        # partway through an agreement's history has an earliest version that
-        # isn't v1, and the page needs to say "before", not "from".
-        first_known = earliest["version"] in ("", "1", "1.0")
-        legal_bases = sorted({d["legal_basis"] for v in versions for d in v["datasets"] if d["legal_basis"]})
-        # `organisation`/`controllers` stay exactly as the register recorded them —
-        # what an agreement page shows is always the literal source text. Only the
-        # slugs used for grouping and links go through the alias map, so a
-        # human-reviewed merge (see aliases.py) changes which page something links
-        # to, never what it displays.
-        organisation_canonical = aliases.resolve(latest["organisation"], alias_map)
-        agreements.append(
-            {
-                "base_reference": base,
-                "slug": slugify(base),
-                "title": latest["title"] or base,
-                "organisation": latest["organisation"],
-                "organisation_slug": slugify(organisation_canonical),
-                "organisation_type": latest["organisation_type"],
-                "commercial": latest["commercial"],
-                "sublicensing": latest["sublicensing"],
-                "controller_basis": latest["controller_basis"],
-                "controllers": latest["controllers"],
-                "controller_slugs": [slugify(aliases.resolve(c, alias_map)) for c in latest["controllers"]],
-                "first_start": min(starts) if starts else "",
-                "first_start_known": first_known,
-                "latest_start": latest["start_date"],
-                "latest_end": latest["end_date"],
-                "coverage_end": max(ends) if ends else "",
-                "dataset_names": dataset_names,
-                # Resolved through the dataset alias map, so a renamed
-                # dataset links to one page rather than two.
-                "dataset_slugs": [
-                    slugify(aliases.resolve(n, dataset_alias_map)) for n in dataset_names
-                ],
-                "legal_bases": legal_bases,
-                "files_released": sum(v["files_released"] for v in versions),
-                "versions": versions,
-                "latest": latest,
-            }
-        )
-
+    agreements = [
+        build_agreement(base, versions, alias_map, dataset_alias_map)
+        for base, versions in versions_by_base.items()
+    ]
     agreements.sort(key=lambda a: (a["organisation"].lower(), a["base_reference"]))
     return {
         "agreements": agreements,
         "organisations": _group_organisations(agreements),
         "datasets": _group_datasets(agreements),
+    }
+
+
+def build_agreement(base: str, versions: list[dict], alias_map: dict, dataset_alias_map: dict) -> dict:
+    """One agreement page's worth of data, derived from its versions."""
+    versions.sort(key=lambda v: (_version_key(v["version"]), v["start_date"]))
+    latest = versions[-1]
+    earliest = versions[0]
+    dataset_names = sorted({d["name"] for v in versions for d in v["datasets"] if d["name"]})
+    starts = [v["start_date"] for v in versions if v["start_date"]]
+    ends = [v["end_date"] for v in versions if v["end_date"]]
+    # An unversioned reference (no "-vN" suffix) has exactly one version, which
+    # is trivially the first. Otherwise the earliest version we hold is only
+    # really "the first" if its own number says so — a backfill that starts
+    # partway through an agreement's history has an earliest version that
+    # isn't v1, and the page needs to say "before", not "from".
+    first_known = earliest["version"] in ("", "1", "1.0")
+    legal_bases = sorted({d["legal_basis"] for v in versions for d in v["datasets"] if d["legal_basis"]})
+    # `organisation`/`controllers` stay exactly as the register recorded them —
+    # what an agreement page shows is always the literal source text. Only the
+    # slugs used for grouping and links go through the alias map, so a
+    # human-reviewed merge (see aliases.py) changes which page something links
+    # to, never what it displays.
+    organisation_canonical = aliases.resolve(latest["organisation"], alias_map)
+    return {
+        "base_reference": base,
+        "slug": slugify(base),
+        "title": latest["title"] or base,
+        "organisation": latest["organisation"],
+        "organisation_slug": slugify(organisation_canonical),
+        "organisation_type": latest["organisation_type"],
+        "commercial": latest["commercial"],
+        "sublicensing": latest["sublicensing"],
+        "controller_basis": latest["controller_basis"],
+        "controllers": latest["controllers"],
+        "controller_slugs": [slugify(aliases.resolve(c, alias_map)) for c in latest["controllers"]],
+        "first_start": min(starts) if starts else "",
+        "first_start_known": first_known,
+        "latest_start": latest["start_date"],
+        "latest_end": latest["end_date"],
+        "coverage_end": max(ends) if ends else "",
+        "dataset_names": dataset_names,
+        # Resolved through the dataset alias map, so a renamed
+        # dataset links to one page rather than two.
+        "dataset_slugs": [
+            slugify(aliases.resolve(n, dataset_alias_map)) for n in dataset_names
+        ],
+        "legal_bases": legal_bases,
+        "files_released": sum(v["files_released"] for v in versions),
+        "versions": versions,
+        "latest": latest,
     }
 
 
