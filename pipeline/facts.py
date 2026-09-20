@@ -41,9 +41,10 @@ Three kinds of file:
     One line per version, so consecutive editions differ in about a hundred of
     5,613 lines and git stores each as a small delta.
 
-``data/facts/<register>/manifest.json``
-    Unchanged from ``editions``: the checksum of the workbook each edition came
-    from.
+The checksum of the workbook each edition came from is not here: it is still
+``editions.manifest_path``, written by ``ingest``, and it moves beside these
+files when the edition store is retired. It records provenance rather than
+register content, so moving it is a file move and never a re-parse.
 
 Four properties this file is responsible for keeping:
 

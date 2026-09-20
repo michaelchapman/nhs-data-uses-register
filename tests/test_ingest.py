@@ -68,6 +68,16 @@ class Ingest(unittest.TestCase):
         self.assertIn("facts -> 0 new version states in 0 agreement file(s)", output)
         self.assertIn("0 newly released file(s)", output)
 
+    def test_facts_only_leaves_the_stores_the_site_still_uses_alone(self):
+        self.run_ingest(str(self.workbook("july2026")))
+        before = sorted(p.stat().st_mtime_ns for p in snapshot.snapshot_dir(REGISTER).glob("*"))
+        self.run_ingest("--facts-only", str(self.workbook("august2026")))
+        self.assertEqual(facts.stored_editions(REGISTER), ["august2026", "july2026"][::-1])
+        # No new fingerprint, and the one already written is untouched.
+        self.assertEqual(sorted(p.stat().st_mtime_ns for p in snapshot.snapshot_dir(REGISTER).glob("*")), before)
+        self.assertEqual(editions.stored_editions(REGISTER), ["july2026"])
+        self.assertEqual([e["edition"] for e in editions.read_manifest(REGISTER)], ["july2026"])
+
     def test_the_legacy_extract_does_not_gain_the_row_by_row_detail(self):
         self.run_ingest(str(self.workbook("august2026")))
         stored = (editions.agreements_dir(REGISTER) / "dars-nic-1-aaaaa.json").read_text()

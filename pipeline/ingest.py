@@ -45,6 +45,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="write fingerprints but no full extract (backfilling history alone)",
     )
+    parser.add_argument(
+        "--facts-only",
+        action="store_true",
+        help="write only the facts store, leaving the fingerprints and extract alone",
+    )
     return parser.parse_args(argv)
 
 
@@ -65,7 +70,7 @@ def resolve_register(path: Path, override: str | None) -> sources.Register:
 
 
 def ingest_one(
-    path: Path, register: sources.Register, source_url: str | None
+    path: Path, register: sources.Register, source_url: str | None, facts_only: bool = False
 ) -> tuple[dict, dict]:
     """Extract one workbook and write its fingerprint.
 
@@ -93,8 +98,10 @@ def ingest_one(
 
     current = snapshot_module.build_snapshot(data, register.slug, edition, url, ingested)
     previous = snapshot_module.previous_snapshot(register.slug, edition)
-    changes = snapshot_module.diff(current, previous)
-    if changes["comparable"]:
+    changes = snapshot_module.diff(current, previous) if not facts_only else {"comparable": False}
+    if facts_only:
+        pass
+    elif changes["comparable"]:
         print(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
             f"~{len(changes['amended'])} amended, -{len(changes['removed'])} removed"
@@ -111,7 +118,8 @@ def ingest_one(
             "    python -m pipeline.ingest data/raw/*.xlsx",
             file=sys.stderr,
         )
-    print(f"  fingerprint -> {relative(snapshot_module.write_snapshot(current))}")
+    if not facts_only:
+        print(f"  fingerprint -> {relative(snapshot_module.write_snapshot(current))}")
 
     # The facts store keeps every edition, not just the newest, so this runs
     # for each workbook including a `--fingerprints-only` backfill. It writes
@@ -123,6 +131,13 @@ def ingest_one(
         f"{counts['files_written']:,} agreement file(s), "
         f"{counts['new_released_files']:,} newly released file(s)"
     )
+    # The row-by-row release detail is in the facts store now, and no store
+    # written later in this run holds it. Dropping it keeps a 63-workbook
+    # parse from carrying an extra few hundred megabytes of dead weight.
+    for versions in versions_by_base.values():
+        for version in versions:
+            version.pop("released_files", None)
+
     if counts["release_conflicts"]:
         print(
             f"  note: {counts['release_conflicts']:,} released file(s) reported differently "
@@ -170,10 +185,19 @@ def main(argv: list[str] | None = None) -> None:
     latest: dict[str, tuple[dict, dict]] = {}
     for path in ordered:
         register = resolve_register(path, args.register)
-        entry, data = ingest_one(path, register, args.source_url)
-        editions_module.upsert(register.slug, entry)
+        entry, data = ingest_one(path, register, args.source_url, args.facts_only)
+        if not args.facts_only:
+            editions_module.upsert(register.slug, entry)
         # Replacing the entry releases the previous edition's extract.
         latest[register.slug] = (entry, data)
+
+    if args.facts_only:
+        # Used to parse the archive into the facts store without touching the
+        # stores the site is still built from. Rewriting those would churn
+        # every fingerprint for a `retrieved` timestamp, on files that are
+        # being retired anyway.
+        print("facts only; fingerprints and extract left alone")
+        return
 
     if args.fingerprints_only:
         print("fingerprints only; no full extract written")
