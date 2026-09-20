@@ -1,5 +1,386 @@
 {
   "_comment": "Dataset name merges, for datasets the register has relabelled — see docs/organisation-names.md and `python -m pipeline.datasetcheck`. Each group: canonical (the name shown on the dataset page) and variants (every spelling that should map to it). An entry marked \"source\": \"auto\" was added by --auto on unambiguous evidence and nobody reviewed it. `ignored` records candidates a reviewer decided were different datasets.",
-  "aliases": [],
+  "aliases": [
+    {
+      "canonical": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+      "variants": [
+        "Hospital Episode Statistics Admitted Patient Care",
+        "Hospital Episode Statistics Admitted Patient Care (HES APC)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Hospital Episode Statistics Admitted Patient Care (HES APC) appeared on the same 1,505 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Hospital Episode Statistics Outpatients (HES OP)",
+      "variants": [
+        "Hospital Episode Statistics Outpatients",
+        "Hospital Episode Statistics Outpatients (HES OP)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Hospital Episode Statistics Outpatients (HES OP) appeared on the same 1,059 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+      "variants": [
+        "Hospital Episode Statistics Accident and Emergency",
+        "Hospital Episode Statistics Accident and Emergency (HES A and E)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Hospital Episode Statistics Accident and Emergency (HES A and E) appeared on the same 1,040 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+      "variants": [
+        "Hospital Episode Statistics Critical Care",
+        "Hospital Episode Statistics Critical Care (HES Critical Care)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Hospital Episode Statistics Critical Care (HES Critical Care) appeared on the same 866 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Civil Registrations of Death",
+      "variants": [
+        "Civil Registration - Deaths",
+        "Civil Registrations of Death"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Civil Registrations of Death appeared on the same 788 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Mental Health Services Data Set (MHSDS)",
+      "variants": [
+        "Mental Health Services Data Set",
+        "Mental Health Services Data Set (MHSDS)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Mental Health Services Data Set (MHSDS) appeared on the same 649 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Diagnostic Imaging Data Set (DID)",
+      "variants": [
+        "Diagnostic Imaging Data Set (DID)",
+        "Diagnostic Imaging Dataset"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Diagnostic Imaging Data Set (DID) appeared on the same 606 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Mental Health and Learning Disabilities Data Set (MHLDDS)",
+      "variants": [
+        "Mental Health and Learning Disabilities Data Set",
+        "Mental Health and Learning Disabilities Data Set (MHLDDS)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Mental Health and Learning Disabilities Data Set (MHLDDS) appeared on the same 592 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Mental Health Minimum Data Set (MHMDS)",
+      "variants": [
+        "Mental Health Minimum Data Set",
+        "Mental Health Minimum Data Set (MHMDS)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Mental Health Minimum Data Set (MHMDS) appeared on the same 583 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Improving Access to Psychological Therapies Data Set_v1.5",
+      "variants": [
+        "Improving Access to Psychological Therapies (IAPT) v1.5",
+        "Improving Access to Psychological Therapies Data Set_v1.5",
+        "Improving Access to Psychological Therapies Data Set"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Improving Access to Psychological Therapies (IAPT) v1.5 appeared on the same 539 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Community Services Data Set (CSDS)",
+      "variants": [
+        "Community Services Data Set",
+        "Community Services Data Set (CSDS)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Community Services Data Set (CSDS) appeared on the same 539 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+      "variants": [
+        "National Cancer Waiting Times Monitoring DataSet (CWT)",
+        "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)"
+      ],
+      "reason": "renamed in September 2021: absent from the register afterwards, and National Cancer Waiting Times Monitoring DataSet (NCWTMDS) appeared on the same 436 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Civil Registrations of Death - Secondary Care Cut",
+      "variants": [
+        "Civil Registration (Deaths) - Secondary Care Cut",
+        "Civil Registrations of Death - Secondary Care Cut"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Civil Registrations of Death - Secondary Care Cut appeared on the same 421 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Patient Reported Outcome Measures (PROMs)",
+      "variants": [
+        "Patient Reported Outcome Measures",
+        "Patient Reported Outcome Measures (PROMs)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Patient Reported Outcome Measures (PROMs) appeared on the same 405 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Maternity Services Data Set v1.5",
+      "variants": [
+        "Maternity Services Data Set",
+        "Maternity Services Data Set v1.5"
+      ],
+      "reason": "renamed in September 2021: absent from the register afterwards, and Maternity Services Data Set appeared on the same 382 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "COVID-19 General Practice Extraction Service (GPES) Data for Pandemic Planning and Research (GDPPR)",
+      "variants": [
+        "COVID-19 General Practice Extraction Service (GPES) Data for Pandemic Planning and Research (GDPPR)",
+        "GPES Data for Pandemic Planning and Research (COVID-19)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and COVID-19 General Practice Extraction Service (GPES) Data for Pandemic Planning and Research (GDPPR) appeared on the same 275 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Summary Hospital-level Mortality Indicator (SHMI)",
+      "variants": [
+        "Summary Hospital-level Mortality Indicator",
+        "Summary Hospital-level Mortality Indicator (SHMI)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Summary Hospital-level Mortality Indicator (SHMI) appeared on the same 208 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "COVID-19 Second Generation Surveillance System (SGSS)",
+      "variants": [
+        "COVID-19 Second Generation Surveillance System",
+        "COVID-19 Second Generation Surveillance System (SGSS)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and COVID-19 Second Generation Surveillance System (SGSS) appeared on the same 90 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+      "variants": [
+        "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+        "COVID-19 Second Generation Surveillance System (SGSS)"
+      ],
+      "reason": "renamed in April 2023: absent from the register afterwards, and COVID-19 SGSS First Positives (Second Generation Surveillance System) appeared on the same 90 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)",
+      "variants": [
+        "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+        "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2) appeared on the same 83 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Adult Psychiatric Morbidity Survey (APMS)",
+      "variants": [
+        "Adult Psychiatric Morbidity Survey",
+        "Adult Psychiatric Morbidity Survey (APMS)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Adult Psychiatric Morbidity Survey (APMS) appeared on the same 58 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "MSDS (Maternity Services Data Set) v1.5",
+      "variants": [
+        "MSDS (Maternity Services Data Set) v1.5",
+        "Maternity Services Data Set (MSDS) v1.5",
+        "MSDS (Maternity Services Data Set)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Maternity Services Data Set (MSDS) v1.5 appeared on the same 42 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NDRS Cancer Registrations",
+      "variants": [
+        "NDRS Cancer Registrations",
+        "NDRS Cancer Registry"
+      ],
+      "reason": "renamed in June 2023: absent from the register afterwards, and NDRS Cancer Registrations appeared on the same 34 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Electronic Prescribing and Medicines Administration (EPMA) data in Secondary Care for COVID-19",
+      "variants": [
+        "COVID-19 Electronic Prescribing and Medicines Administration (ePMA) in Secondary Care",
+        "Electronic Prescribing and Medicines Administration (EPMA) data in Secondary Care for COVID-19"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and COVID-19 Electronic Prescribing and Medicines Administration (ePMA) in Secondary Care appeared on the same 18 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Mental Health of Children and Young People (MHCYP) Survey",
+      "variants": [
+        "Mental Health of Children and Young People (MHCYP)",
+        "Mental Health of Children and Young People (MHCYP) Survey"
+      ],
+      "reason": "renamed in November 2025: absent from the register afterwards, and Mental Health of Children and Young People (MHCYP) Survey appeared on the same 10 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Mental Health of Children and Young People (MHCYP)",
+      "variants": [
+        "Mental Health of Children and Young People",
+        "Mental Health of Children and Young People (MHCYP)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Mental Health of Children and Young People (MHCYP) appeared on the same 7 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "COVID-19 Sentinel Stroke National Audit Programme (SSNAP)",
+      "variants": [
+        "COVID-19 Sentinel Stroke National Audit Programme (SSNAP)",
+        "Sentinel Stroke National Audit Programme (SSNAP)"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and COVID-19 Sentinel Stroke National Audit Programme (SSNAP) appeared on the same 6 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Personal Social Services - Survey of Adult Carers in England (SACE)",
+      "variants": [
+        "Personal Social Services - Survey of Adult Carers in England (SACE)",
+        "Personal Social Services Survey of Adult Carers"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Personal Social Services - Survey of Adult Carers in England (SACE) appeared on the same 6 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NICOR National Audit of Percutaneous Coronary Interventions (NAPCI) V5.6.6",
+      "variants": [
+        "NICOR National Audit of Percutaneous Coronary Interventions (NAPCI)",
+        "NICOR National Audit of Percutaneous Coronary Interventions (NAPCI) V5.6.6"
+      ],
+      "reason": "renamed in October 2025: absent from the register afterwards, and NICOR National Audit of Percutaneous Coronary Interventions (NAPCI) appeared on the same 6 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Specialist Advice Broken Down By Treatment Function - UDAL",
+      "variants": [
+        "Specialist Advice Broken Down By Treatment Function",
+        "Specialist Advice Broken Down By Treatment Function - UDAL"
+      ],
+      "reason": "renamed in July 2026: absent from the register afterwards, and Specialist Advice Broken Down By Treatment Function - UDAL appeared on the same 6 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Continuing Healthcare Dataset_UDAL",
+      "variants": [
+        "Continuing Healthcare Dataset",
+        "Continuing Healthcare Dataset_UDAL"
+      ],
+      "reason": "renamed in July 2026: absent from the register afterwards, and Continuing Healthcare Dataset_UDAL appeared on the same 6 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Personal Social Services - Adult Social Care Survey (ASCS)",
+      "variants": [
+        "Personal Social Services - Adult Social Care Survey (ASCS)",
+        "Personal Social Services Adult Social Care Survey"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Personal Social Services - Adult Social Care Survey (ASCS) appeared on the same 5 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "COVID-19 ICNARC Case Mix Programme for Adult Critical Care",
+      "variants": [
+        "COVID-19 ICNARC Case Mix Programme for Adult Critical Care",
+        "ICNARC Case Mix Programme for Adult Critical Care"
+      ],
+      "reason": "renamed in November 2025: absent from the register afterwards, and ICNARC Case Mix Programme for Adult Critical Care appeared on the same 5 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NDRS Linked HES A&E",
+      "variants": [
+        "NDRS Linked HES A&E",
+        "NDRS Linked HES AE"
+      ],
+      "reason": "renamed in February 2023: absent from the register afterwards, and NDRS Linked HES AE appeared on the same 4 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NICOR Heart Failure V5_Full",
+      "variants": [
+        "NICOR Heart Failure",
+        "NICOR Heart Failure V5_Full"
+      ],
+      "reason": "renamed in October 2025: absent from the register afterwards, and NICOR Heart Failure appeared on the same 4 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "SUS - CFA (Counter Fraud Authority)_UDAL",
+      "variants": [
+        "SUS - CFA (Counter Fraud Authority)",
+        "SUS - CFA (Counter Fraud Authority)_UDAL"
+      ],
+      "reason": "renamed in July 2026: absent from the register afterwards, and SUS - CFA (Counter Fraud Authority)_UDAL appeared on the same 4 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "MSDS (Maternity Services Data Set) v2.0",
+      "variants": [
+        "MSDS (Maternity Services Data Set) v2.0",
+        "Maternity Services Data Set (MSDS) v2"
+      ],
+      "reason": "renamed in January 2023: absent from the register afterwards, and Maternity Services Data Set (MSDS) v2 appeared on the same 3 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "Ambulance Data Set",
+      "variants": [
+        "Ambulance Data",
+        "Ambulance Data Set"
+      ],
+      "reason": "renamed in May 2023: absent from the register afterwards, and Ambulance Data Set appeared on the same 2 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "COVID-19 Therapeutics Programme Data Set’",
+      "variants": [
+        "COVID-19 Therapeutics Programme Data Set",
+        "COVID-19 Therapeutics Programme Data Set’"
+      ],
+      "reason": "renamed in April 2023: absent from the register afterwards, and COVID-19 Therapeutics Programme Data Set appeared on the same 1 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NICOR Transcatheter Aortic Valve Implantation (TAVI) V4.09",
+      "variants": [
+        "NICOR Transcatheter Aortic Valve Implantation (TAVI)",
+        "NICOR Transcatheter Aortic Valve Implantation (TAVI) V4.09"
+      ],
+      "reason": "renamed in October 2025: absent from the register afterwards, and NICOR Transcatheter Aortic Valve Implantation (TAVI) appeared on the same 1 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NHSE Screening Data - Screening Research Office",
+      "variants": [
+        "NHS England Screening data",
+        "NHSE Screening Data - Screening Research Office"
+      ],
+      "reason": "renamed in July 2026: absent from the register afterwards, and NHSE Screening Data - Screening Research Office appeared on the same 1 agreement versions",
+      "source": "auto"
+    },
+    {
+      "canonical": "NHSE Health and Growth Accelerator Programme Minimum Data Set (HGAPMDS) - IDS",
+      "variants": [
+        "NHSE Health and Growth Accelerator Programme Minimum Data Set (HGAPMDS)",
+        "NHSE Health and Growth Accelerator Programme Minimum Data Set (HGAPMDS) - IDS"
+      ],
+      "reason": "renamed in September 2026: absent from the register afterwards, and NHSE Health and Growth Accelerator Programme Minimum Data Set (HGAPMDS) appeared on the same 1 agreement versions",
+      "source": "auto"
+    }
+  ],
   "ignored": []
 }
