@@ -154,12 +154,15 @@ def read_extract(register_slug: str, edition: str) -> dict:
 
 def rehydrate(versions_by_base: dict[str, list[dict]]) -> dict:
     """Rebuild everything the store leaves out, from each agreement's versions."""
-    from .extract import assemble, known_organisation_names, resplit_list
+    from .extract import assemble, known_organisation_names, resplit_list, tidy_version
 
     # The same authoritative list `extract` builds from the workbook, so a
     # rebuild splits controllers the way an ingest does. Re-splitting is
     # idempotent, so an extract written under an older, narrower rule gets the
     # current one applied every time it is read.
+    for versions in versions_by_base.values():
+        for version in versions:
+            tidy_version(version)
     known = known_organisation_names(
         version["organisation"] for versions in versions_by_base.values() for version in versions
     )

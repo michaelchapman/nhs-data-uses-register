@@ -61,6 +61,37 @@ def clean(value) -> str:
     return re.sub(r"\n{3,}", "\n\n", text)
 
 
+def clean_line(value) -> str:
+    """`clean`, then every run of whitespace — newlines included — as one space.
+
+    For fields that hold a name or a short label. The register leaves double
+    spaces and stray line breaks in them ("BCP COUNCIL  [BOURNEMOUTH…]"), which
+    HTML hides but which splits one name into two for anything that compares
+    the text: an alias lookup, a search, a sort, a CSV.
+    """
+    return " ".join(clean(value).split())
+
+
+def tidy_version(version: dict) -> dict:
+    """Apply `clean_line` to every name-like field of a version, in place.
+
+    One definition for both ways in: `extract` runs it on a fresh workbook, and
+    `editions.rehydrate` runs it on a stored extract, so an extract written
+    before a field was tidied gets the same treatment on the next build without
+    a re-ingest. Idempotent. Free text (objective, activities, benefits) is
+    left alone: its line breaks are paragraphs.
+    """
+    for key in ("title", "organisation", "organisation_type", "controller_basis"):
+        version[key] = clean_line(version[key])
+    version["controllers"] = [c for c in (clean_line(c) for c in version["controllers"]) if c]
+    for dataset in version["datasets"]:
+        for key in ("name", "type_of_data", "sensitivity", "frequency", "legal_basis", "confidentiality"):
+            dataset[key] = clean_line(dataset[key])
+    for release in version["releases"]:
+        release["dataset"] = clean_line(release["dataset"])
+    return version
+
+
 def parse_date(value) -> str:
     if isinstance(value, (dt.datetime, dt.date)):
         return (value.date() if isinstance(value, dt.datetime) else value).isoformat()
@@ -144,7 +175,10 @@ def split_list(value, known: tuple[str, ...] = ()) -> list[str]:
     so the names appearing there are authoritative. Pass them as `known` and
     the commas inside them stop being separators.
     """
-    text = clean(value)
+    # Horizontal whitespace only: a newline is a separator here. Collapsed so
+    # that a known name written with one space matches the same name written
+    # with two.
+    text = re.sub(r"[^\S\n]+", " ", clean(value))
     if not text:
         return []
     spans = protected_spans(text, known) if known else []
@@ -221,7 +255,7 @@ def extract(workbook_bytes: bytes) -> dict:
     releases_by_ref: dict[str, dict[str, dict]] = defaultdict(dict)
     for row in _read_sheet(workbook, "DataReleases"):
         reference = clean(row.get("Reference Number"))
-        dataset = clean(row.get("Dataset"))
+        dataset = clean_line(row.get("Dataset"))
         month = parse_release_month(row.get("Month File Released"))
         summary = releases_by_ref[reference].setdefault(
             dataset,
@@ -245,7 +279,7 @@ def extract(workbook_bytes: bytes) -> dict:
     # split, so it is the register telling us which names contain a comma.
     # Read them first, then use them to keep those names whole in the
     # controller lists, where the same organisations appear comma-joined.
-    known = known_organisation_names(clean(r.get("Applicant Organisation")) for r in agreement_rows)
+    known = known_organisation_names(clean_line(r.get("Applicant Organisation")) for r in agreement_rows)
 
     versions_by_base: dict[str, list[dict]] = defaultdict(list)
     for row in agreement_rows:
@@ -259,7 +293,7 @@ def extract(workbook_bytes: bytes) -> dict:
             key=lambda r: (-r["files"], r["dataset"]),
         )
         versions_by_base[base].append(
-            {
+            tidy_version({
                 "reference": reference,
                 "version": version,
                 "title": clean(row.get("Application Title")),
@@ -279,7 +313,7 @@ def extract(workbook_bytes: bytes) -> dict:
                 "datasets": datasets,
                 "releases": releases,
                 "files_released": sum(r["files"] for r in releases),
-            }
+            })
         )
 
     return assemble(versions_by_base)

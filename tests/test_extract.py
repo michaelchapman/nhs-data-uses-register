@@ -1,6 +1,7 @@
 import unittest
 
-from pipeline.extract import extract, slugify, split_list
+from pipeline import editions
+from pipeline.extract import clean_line, extract, slugify, split_list, tidy_version
 
 from .fixtures import NEW_NAME, OLD_NAME, dataset_aliases, workbook_bytes
 
@@ -23,6 +24,58 @@ class SplitList(unittest.TestCase):
             split_list("NHS Bristol, North Somerset and South Gloucestershire ICB - 15C, UNIVERSITY OF YORK", known),
             ["NHS Bristol, North Somerset and South Gloucestershire ICB - 15C", "UNIVERSITY OF YORK"],
         )
+
+
+class Whitespace(unittest.TestCase):
+    def test_clean_line_collapses_spaces_and_line_breaks(self):
+        self.assertEqual(clean_line("BCP COUNCIL  [BOURNEMOUTH,\n CHRISTCHURCH]"), "BCP COUNCIL [BOURNEMOUTH, CHRISTCHURCH]")
+        self.assertEqual(clean_line(None), "")
+        self.assertEqual(clean_line("  a\u00a0b\t"), "a b")
+
+    def test_a_known_name_matches_however_its_spaces_fall(self):
+        known = ("BCP COUNCIL [BOURNEMOUTH, CHRISTCHURCH AND POOLE]",)
+        self.assertEqual(
+            split_list("BCP COUNCIL  [BOURNEMOUTH, CHRISTCHURCH AND POOLE]; NHS X", known),
+            ["BCP COUNCIL [BOURNEMOUTH, CHRISTCHURCH AND POOLE]", "NHS X"],
+        )
+
+    def test_a_newline_still_separates_controllers(self):
+        self.assertEqual(split_list("A  B\nC"), ["A B", "C"])
+
+    def version(self, **overrides):
+        base = {
+            "reference": "X-v1", "version": "1", "title": "A  title\nsplit", "organisation": "ORG  ONE",
+            "organisation_type": "Academic ", "controller_basis": "Sole", "controllers": ["ORG  ONE", " "],
+            "datasets": [{"name": "Data  Set", "type_of_data": "", "sensitivity": "", "frequency": "",
+                          "legal_basis": "Other-a\nb", "confidentiality": ""}],
+            "releases": [{"dataset": "Data  Set", "files": 1}],
+            "objective": "Line one.\n\nLine  two.",
+        }
+        return {**base, **overrides}
+
+    def test_tidy_version_cleans_names_but_leaves_prose_paragraphs(self):
+        tidied = tidy_version(self.version())
+        self.assertEqual(tidied["title"], "A title split")
+        self.assertEqual(tidied["organisation"], "ORG ONE")
+        self.assertEqual(tidied["controllers"], ["ORG ONE"])
+        self.assertEqual(tidied["datasets"][0]["name"], "Data Set")
+        self.assertEqual(tidied["datasets"][0]["legal_basis"], "Other-a b")
+        self.assertEqual(tidied["releases"][0]["dataset"], "Data Set")
+        self.assertEqual(tidied["objective"], "Line one.\n\nLine  two.")
+
+    def test_tidy_version_is_idempotent(self):
+        once = tidy_version(self.version())
+        self.assertEqual(tidy_version(dict(once)), once)
+
+    def test_a_stored_extract_is_tidied_when_read(self):
+        stored = {"X": [{**self.version(), "start_date": "2020-01-01", "end_date": "2021-01-01",
+                         "sublicensing": "No", "commercial": "No", "files_released": 0}]}
+        with dataset_aliases():
+            data = editions.rehydrate(stored)
+        agreement = data["agreements"][0]
+        self.assertEqual(agreement["organisation"], "ORG ONE")
+        self.assertEqual(agreement["title"], "A title split")
+        self.assertEqual(agreement["dataset_names"], ["Data Set"])
 
 
 class Slugify(unittest.TestCase):
