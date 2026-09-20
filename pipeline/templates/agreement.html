@@ -204,7 +204,8 @@
 <ul class="timeline">
   <li>
     <strong>{{ history.first_edition|edition }}</strong> —
-    {% if history.first_is_earliest %}already listed in the earliest edition this site holds, so it may be older.{% else %}first listed.{% endif %}
+    {% if history.first_skipped %}first held in this edition, but {{ history.first_skipped|map("edition")|join(" and ") }} {{ "is" if history.first_skipped|length == 1 else "are" }} not held, so it may have appeared then.
+    {% elif history.first_is_earliest %}already listed in the earliest edition this site holds, so it may be older.{% else %}first listed.{% endif %}
     {% if history.first_versions %}
     <div class="timeline-line">{{ history.first_versions|length }} version{{ "s" if history.first_versions|length != 1 }}:
       {% for reference in history.first_versions %}<span class="version-ref">{{ reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
@@ -214,6 +215,7 @@
   {% for event in history.events %}
   <li>
     <strong>{{ event.edition|edition }}</strong>
+    {% if event.skipped %}<span class="hint">({{ event.skipped|map("edition")|join(" and ") }} {{ "is" if event.skipped|length == 1 else "are" }} not held, so this may have happened in {{ "that month" if event.skipped|length == 1 else "one of those months" }})</span>{% endif %}
     {% if event.added %}
     <div class="timeline-line">{{ event.added|length }} version{{ "s" if event.added|length != 1 }} added:
       {% for item in event.added %}<span class="version-ref">{{ item.reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}

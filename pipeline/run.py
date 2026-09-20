@@ -111,6 +111,8 @@ def main() -> None:
         print(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
             f"~{len(changes['amended'])} amended, -{len(changes['removed'])} removed"
+            + (f" (spans {len(changes['skipped']) + 1} months: {', '.join(changes['skipped'])} not held)"
+               if changes["skipped"] else "")
         )
     elif changes.get("reason") == "fingerprint-rules-changed":
         print(
@@ -161,6 +163,7 @@ def main() -> None:
         # build's, so it doesn't drift as the deployed page ages.
         "as_of": sources.edition_date(edition),
         "editions": known,
+        "missing_editions": snapshot_module.missing_editions([e["edition"] for e in known]),
     }
 
     # Every edition's fingerprints are committed, so an agreement's history

@@ -190,3 +190,31 @@ class Csvs(unittest.TestCase):
                 urls = [row["url"] for row in csv.DictReader(handle)]
         self.assertTrue(urls)
         self.assertTrue(all(u.startswith("https://example.test/repo/agreements/") for u in urls), urls)
+
+
+class EditionGap(unittest.TestCase):
+    def build(self, out: Path, changes: dict, missing: list[str]) -> None:
+        meta = {**site_meta(), "missing_editions": missing}
+        with dataset_aliases():
+            build.build(extract(workbook_bytes()), meta, changes, out)
+
+    def test_a_comparison_across_a_gap_is_labelled_as_spanning_two_months(self):
+        changes = {**FIRST_EDITION, "comparable": True, "reason": "", "previous_edition": "december2024",
+                   "skipped": ["january2025"]}
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            self.build(out, changes, ["january2025"])
+            page = (out / "changes" / "index.html").read_text()
+        self.assertIn("This covers 2 months, not one.", page)
+        self.assertIn("January 2025 is not held here", page)
+        self.assertIn("Not held: January 2025.", page)
+
+    def test_a_month_on_month_comparison_says_nothing_about_gaps(self):
+        changes = {**FIRST_EDITION, "comparable": True, "reason": "", "previous_edition": "august2026",
+                   "skipped": []}
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            self.build(out, changes, [])
+            page = (out / "changes" / "index.html").read_text()
+        self.assertNotIn("not one", page)
+        self.assertNotIn("Not held", page)

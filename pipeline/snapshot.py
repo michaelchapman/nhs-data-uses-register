@@ -236,6 +236,29 @@ def previous_snapshot(register_slug: str, edition: str) -> dict | None:
     return read_snapshot(earlier[-1])
 
 
+def skipped_editions(previous: str, current: str) -> list[str]:
+    """The months between two editions that have no edition of their own here.
+
+    Editions are monthly, so an empty answer means they are neighbours. A gap
+    means a workbook was never added, and whatever changed in the months it
+    covered is folded into the later edition.
+    """
+    before_year, before_month = sources.edition_sort_key(previous)
+    after_year, after_month = sources.edition_sort_key(current)
+    start = before_year * 12 + before_month - 1
+    months = after_year * 12 + after_month - 1 - start
+    skipped = []
+    for offset in range(1, months):
+        year, month = divmod(start + offset, 12)
+        skipped.append(f"{sources.MONTHS[month]}{year}")
+    return skipped
+
+
+def missing_editions(editions: list[str]) -> list[str]:
+    """Every month between the first and last of `editions` (oldest first) that is absent."""
+    return [gap for a, b in zip(editions, editions[1:]) for gap in skipped_editions(a, b)]
+
+
 def diff(current: dict, previous: dict | None) -> dict:
     """Agreement-version level changes between two editions."""
     if not previous:
@@ -243,6 +266,7 @@ def diff(current: dict, previous: dict | None) -> dict:
             "comparable": False,
             "reason": "first-edition",
             "previous_edition": None,
+            "skipped": [],
             "added": [],
             "amended": [],
             "removed": [],
@@ -254,6 +278,7 @@ def diff(current: dict, previous: dict | None) -> dict:
             "comparable": False,
             "reason": "fingerprint-rules-changed",
             "previous_edition": previous["edition"],
+            "skipped": skipped_editions(previous["edition"], current["edition"]),
             "previous_fingerprint_version": fingerprint_version(previous),
             "fingerprint_version": fingerprint_version(current),
             "added": [],
@@ -292,6 +317,9 @@ def diff(current: dict, previous: dict | None) -> dict:
         "comparable": True,
         "reason": "",
         "previous_edition": previous["edition"],
+        # Editions absent between the two, so the page can say it spans more
+        # than a month rather than presenting it as month-on-month.
+        "skipped": skipped_editions(previous["edition"], current["edition"]),
         "added": sorted(added, key=key),
         "amended": sorted(amended, key=key),
         "removed": sorted(removed, key=key),
@@ -329,13 +357,19 @@ def history_index(register_slug: str, snapshots: list[dict] | None = None) -> di
 
     index: dict[str, dict] = {}
     previous: dict[str, dict] = {}
+    previous_edition = ""
     for snapshot in snapshots:
         edition, versions = snapshot["edition"], snapshot["versions"]
+        # Months between this edition and the last one held. Anything seen
+        # for the first time here, or changed, may have happened in any of them.
+        skipped = skipped_editions(previous_edition, edition) if previous_edition else []
+        previous_edition = edition
         touched: dict[str, dict] = {}
 
         def event(base: str, kind: str, reference: str, fields: list[str] | None = None) -> None:
             entry = touched.setdefault(
-                base, {"edition": edition, "added": [], "amended": [], "removed": [], "fields": []}
+                base,
+                {"edition": edition, "skipped": skipped, "added": [], "amended": [], "removed": [], "fields": []},
             )
             entry[kind].append({"reference": reference, "fields": fields or []})
 
@@ -343,7 +377,12 @@ def history_index(register_slug: str, snapshots: list[dict] | None = None) -> di
             base = version["base"]
             index.setdefault(
                 base,
-                {"first_edition": edition, "first_is_earliest": edition == earliest, "events": []},
+                {
+                    "first_edition": edition,
+                    "first_is_earliest": edition == earliest,
+                    "first_skipped": skipped,
+                    "events": [],
+                },
             )
             if reference not in previous:
                 event(base, "added", reference)

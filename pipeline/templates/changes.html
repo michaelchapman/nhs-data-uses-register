@@ -34,6 +34,10 @@
 <p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them.</p>
 {% else %}
 <p class="lede">Comparing the {{ meta.edition|edition }} edition with {{ changes.previous_edition|edition }}.</p>
+{% if changes.skipped %}
+<p class="notice"><strong>This covers {{ changes.skipped|length + 1 }} months, not one.</strong>
+  {{ changes.skipped|map("edition")|join(" and ") }} {{ "is" if changes.skipped|length == 1 else "are" }} not held here, so whatever changed in {{ "that month" if changes.skipped|length == 1 else "those months" }} is included below, and nothing says which month it happened in.</p>
+{% endif %}
 
 <div class="stat-grid">
   <div class="stat"><span class="stat-number">{{ changes.added|length|commas }}</span><span class="stat-label">added</span></div>
@@ -80,4 +84,7 @@
   </li>
   {% endfor %}
 </ul>
+{% if meta.missing_editions %}
+<p class="hint">Not held: {{ meta.missing_editions|map("edition")|join(", ") }}. The workbook for {{ "that month has" if meta.missing_editions|length == 1 else "those months has" }} not been added, so the edition after {{ "it" if meta.missing_editions|length == 1 else "each" }} is compared with the one before the gap.</p>
+{% endif %}
 {% endblock %}
