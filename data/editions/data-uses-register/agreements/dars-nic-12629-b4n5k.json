@@ -1,0 +1,402 @@
+{
+ "base_reference": "DARS-NIC-12629-B4N5K",
+ "versions": [
+  {
+   "activities": "All organisations party to this agreement must comply with the Data Sharing Framework Contract, including requirements on the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Centre for Cancer Prevention at QMUL will send IBIS-I cohort data, i.e. a list of IBIS-I study participants, to NHS Digital for linkage. The following identifiers will be sent to NHS Digital by the CCP team at QMUL: \n\n-Full Name,\n-Date Of Birth, \n-NHS Number,\n-Postcode,\n-Study ID.\n\nThe data received by the Centre for Cancer Prevention at QMUL will not be used for any purpose other than to meet objectives as stated in the trial protocol and will not be shared with any other third party or organisation.\n\nData received from NHS Digital by CCP will contain information on outpatient visits, cancer registrations such as new cancer or recurrence and mortality data in the event a patient passes away. The data sets returned by NHS Digital to QMUL will contain identifiable data. This is so that the applicant can confirm the accuracy and strength of each linkage for IBIS-I participant in the study cohort. This ensures that all side effects, survival and cancer incidence data are correctly attributed to the each IBIS-I participant, thus avoiding any errors which would invalidate the study.\n\nOn receipt of the returned data set from NHS Digital, the Centre for Cancer Prevention at QMUL will link this data set to the data set contained in the applicant's IBIS-I study database via the full name, date of birth, postcode, NHS number and study ID. As mentioned, the data linkage enables the correct identification of the IBIS-I patients from the data set sent by NHS Digital. \n\nOnce the patients are identified, researchers at QMUL will then update the participant entries in the IBIS-I study database with date and cause of death, cancer recurrence, diagnosis and coding, and any HES data relevant to the study (fractures, cardiovascular and thrombo-embolic events). Following the linkage and participant identification, all identifiers except the study ID will be removed from the data set returned by NHS Digital and stored as a reference for analysis until study completion.\n\nFollowing receipt of the data sets by NHS Digital, if further information is required in addition to that provided from the HES/Mortality data sites, the IBIS-I CCO will request supporting information from the participant's general practitioner (GP) or IBIS-I study file. The supporting information requested by the IBIS-I CCO would comprise cancer recurrence (i.e. grade, site, receptor status) and side effects (i.e. fractures, cardiovascular events, thrombo-embolic events). The s251 support covers the linkage to the GP data. Additionally, the IBIS-I Informed Consent Form (version dated 26/10/2001), approved by the REC, informed the participant that the above-mentioned further details will be requested from their GP. \n\nProcessed data sets with all identifiers removed except the Study ID will be retained for analysis until study completion, following which it will be archived for 20 years. The original data set returned by NHS Digital containing identifiable data will be stored on a separate server meeting NHS Digital security requirements, as according to DARS Guidance Notes on Security.\n\nThe applicant would like to emphasise that data is stored on the secure network and never on the local drives of unencrypted QMUL desktop PCs.\n\nQMUL creates back-ups of the data stored on its network. The encrypted backup tapes are stored offsite with Iron Mountain UK Ltd. The data is not accessible by any Iron Mountain employee.\n\nAll personal identifiable data received at the Centre for Cancer Prevention are stored electronically on a database, local to and administered by substantive employees of QMUL only. Personal identifiers of study participants are stored separately to the clinical data, with access strictly restricted to only QMUL substantive members of staff. Only these members of staff will have access to the personal identifiable data. Additionally, access to the personal identifiers on the Oracle database is controlled by separate username and password access and is controlled by the IT Department.\n\nThe separate Mortality and HES servers are self-contained within the Centre for Cancer Prevention network within the QMUL network. They are firewalled from external connections and the rest of the network. All traffic through the checkpoint firewall is logged. \n\nAccess to data will be from within the network using workstations that have a currently supported operating system which includes security patches. Users are not permitted to download the data from these workstations.\n\nNo remote access (i.e. through a VPN/RDP connection) is permitted. No mobile devices will be used to access any data. The network is externally scanned on a regular basis.\n\nThe data sets will be stored until the end date of the Data Sharing Agreement with NHS Digital. The storage architecture is compliant with the NHS Digital Data Sharing Framework Contract and once QMUL is issued with a Data Destruction notice, the data from all storage including backups can be securely and permanently removed within 14 days. Data can be securely wiped to NHS Digital standards (multi pass pattern wiped to at least HMG S5 Enhanced on site and if end of life, degaussed and physically destroyed).\n\nUnder this agreement, it is not permitted so share the raw data with international partners or any other bodies. Only aggregated data with small numbers suppressed in line with the HES Analysis Guide is permitted to be shared.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "QUEEN MARY UNIVERSITY OF LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2022-11-14",
+   "expected_benefits": "The data sets returned by NHS Digital will provide vital information on side effects, survival and breast cancer incidence. IBIS-I is currently the only cancer prevention study to have achieved a 20 year follow-up so far.\n\nUsing these data sets, the IBIS-I Central Coordinating Office (CCO) will conduct research and analyses that will help provide further information on:\n• the efficacy of tamoxifen prophylaxis in reduction of the risk of breast cancer in high-risk women (pre- and post-menopausal);\n• the safety of tamoxifen prophylaxis in reduction of the risk of breast cancer in high-risk women (pre- and post-menopausal);\n• the long-term all-cause mortality rate related to tamoxifen;\n• a thorough risk-benefit assessment of tamoxifen.\n\nThe research will help further inform public health bodies such as NICE on the safety and efficacy of tamoxifen as a chemopreventive agent. These analyses will enable patients and women at risk of developing breast cancer to make a more informed decision on the preventive treatment options available to them. An estimated 15% of women in the UK could benefit from preventive tamoxifen therapy and therefore results from the IBIS-I study are of great relevance to these women.\n\nThe target date for these benefits are anticipated in line with the expected analyses of the 20 and 25 year follow-ups respectively. The study had not achieved its anticipated output of 2019 as the study is waiting to collect up to date data from devolved nations so that it could continue to carry out analyses.",
+   "expected_output": "The first results of the IBIS-I have already been published (Cuzick J, et al. The Lancet. 2002;360: 817-24; Cuzick J, et al. J Natl Cancer Inst. 2004;96:621-628; Cuzick J, et al. J Natl Cancer Ins. 2007;99:272-82; Cuzick J, et al. San Antonio Breast Cancer Symposium. 2014, Dec 9-13;  Cuzick J, et al. Lancet Oncol. 2015;16(1):67-75).\n\nFurther outputs and analyses of the IBIS-I trials will be published in peer-reviewed medical journals such as The Lancet, The Lancet Oncology, Breast Cancer Research and Treatment and the British Journal of Cancer with at least two anticipated publication dates in 2020 and 2025\n\nOutputs were anticipated in 2019 when there is 20 years of median follow-up data available. This output is still anticipated when current data is collected from devolved nations. It is further anticipated that Queen Mary University of London will run an updated analysis in 2024 (25 years median follow-up).\n\nThe public will be made aware of the research progress through two web pages (http://www.ibis-trials.org/thetrials/yourstories/press-articles and https://www.qmul.ac.uk/wolfson/research-/current-projects/projects/ibis-1.html). The anticipated audiences of the above outputs are researchers, scientists, stakeholders for the wider project and research participants.\n\nPublications with significant findings may be accompanied by press releases and subsequent news stories. Additionally, the study is planning on holding a PPI event in January 2020 whereby discussion will take place about the work carried out in the CCP covering breast cancer research. This will be a useful way to disseminate outputs and discuss the future of following up patients in the long term follow up method.\n\nPolicy makers - such as NICE will also be targeted with the outputs of the study. NICE will be informed on the safety and efficacy of tamoxifen as a chemopreventive agent, allowing more information available to women at risk of developing breast cancer on the options available to them. An estimated 15% of women in the UK could benefit from preventive tamoxifen therapy and therefore results from the IBIS-I study are of great relevance to these women.\n\nNew publications, attendance of conference and meetings will be shared with international partners. Data contained in any outputs will be aggregated with small numbers suppressed in line with the HES analysis guide. There will be no onward sharing of data. Data received at the Centre for Cancer Prevention is only used to meet the objectives as stated in the trial protocol and will not be shared with any other third party or organisation. Individual patient data is never shared.",
+   "files_released": 13,
+   "objective": "Established in 1992, the IBIS-I Study investigated the efficacy of tamoxifen (a hormonal drug used to prevent breast cancer) versus a placebo drug (taken daily for five years) in terms of reduction of breast cancer incidence in pre and post-menopausal women at high risk of developing breast cancer (e.g. through family history of breast cancer: full details in protocol). It was a double-blind, randomised placebo-controlled trial that recruited 7,154 women internationally (of which 4,277 were UK participants and 2,877 from Australia, New Zealand, Spain and Ireland), aged 35-70 years. The primary outcome measure was the incidence of breast cancer, including ductal carcinoma in situ (cancer cells in the lining of the breast milk duct) and side effects present in the patients were also investigated. \n\nRecruitment to the study completed in 2001 and the intervention (placebo/tamoxifen) ended in 2007. In early 2008 the Research Ethics Committee (REC) approved the conversion of IBIS-I to an epidemiological cohort study. During 2007–2016 participants were followed-up via an annual postal questionnaire. \n \nIn 2002, initial results found that tamoxifen reduced the risk of invasive breast cancer by 31%. Mortality from non-breast-cancer causes was not increased by tamoxifen. However, the analysis concluded that the overall risk/benefit ratio for the use of tamoxifen in prevention remained unclear and that continued follow-up of trial participants was essential. A 2007 analysis on long-term tamoxifen prophylaxis for breast cancer confirmed the preventive effect of tamoxifen in terms of breast cancer incidence and that this was constant for the entire follow-up period. No reduction in size of benefit was observed for up to ten years following participant randomisation. Additionally, tamoxifen-related side effects such as thrombo-embolism were not increased anymore after the 5-year treatment period. These results therefore demonstrate that the benefit-to-risk ratio of tamoxifen improves with increasing duration of follow-up. Thus, how much additional benefit will be seen long-term remains an important question. \n\nBased on these above-mentioned results, the Central Coordinating Office (CCO) at the Centre for Cancer Prevention (CCP) at Queen Mary University London (QMUL)  seek to continue to passively collect cancer registration and mortality data via MRIS and HES products provided by NHS Digital. The identifiable data sets returned by NHS Digital will provide vital information on side effects, survival and breast cancer incidence. \n\nThe international centres that participated in the study would be co-ordinated through the IBCSG (International Breast Cancer Study Group). Where possible except for Australia and New Zealand, all foreign centres would be randomised through the central London coordinating office but data collection and cholesterol assays will be carried out nationally. Data forms and blood sample aliquots will be transferred to the central office on a regular basis. The cohort has now decreased from 4,277 to approximately 3,603 due to either patients passing away or the study losing contact with the patients. \n\nThese data are essential in enabling the CCO to determine whether tamoxifen continues to have a long-term beneficial impact in terms of breast cancer incidence, survival and side effects after the initial 5-year treatment period. The CCO will be able to perform a thorough risk-benefit assessment of tamoxifen and a 30-year median follow-up analysis. These analyses will enable the research community to make more informed decisions on tamoxifen vis-a-vis patient safety and both short- and long-term effectiveness. The results so far have been very important for breast cancer in the preventive setting. \n\nGDPR Legal Basis:\nArticle 6(1)(e): processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.\nArticle 9(2)(j): Processing is necessary for archiving purposes in the public interest, scientific or historical research purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.",
+   "organisation": "QUEEN MARY UNIVERSITY OF LONDON",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-12629-B4N5K-v1.13",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 5,
+     "first_month": "2020-03",
+     "last_month": "2022-11",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 5,
+     "first_month": "2020-03",
+     "last_month": "2022-11",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "files": 1,
+     "first_month": "2020-03",
+     "last_month": "2020-03",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "files": 1,
+     "first_month": "2020-03",
+     "last_month": "2020-03",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "files": 1,
+     "first_month": "2020-03",
+     "last_month": "2020-03",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2019-11-15",
+   "sublicensing": "No",
+   "title": "IBIS-I The International Breast Cancer Intervention Study - MR710",
+   "version": "1.13",
+   "yielded_benefits": "Registry data provided to date has identified numerous cases of breast cancers, other cancers and side-effects in participants with whom the Centre for Cancer Prevention at Queen Mary University London have no direct contact and therefore not already known by the study team. Collection of this data has contributed directly to the primary endpoints of the trial and will continue to provide valuable information on the long-term risk/benefit status of the trial intervention. This long term data is essential for informing bodies such as NICE to inform the prescribing utility of these drugs as chemopreventive agents. The CCP use registry reported events as a prompt for further investigation by asking participants' current GP practice to confirm the event and also provide any further information e.g. cancer grade, size, receptor status that is required to meet secondary and exploratory objectives.\n\nSo far the long-term follow-up has shown that tamoxifen significantly reduces breast cancer incidence in women at risk of developing the disease (see for example Cuzick J, et al. J Natl Cancer Ins. 2007; 99: 272-82). The thromboembolic side effects and increase in gynaecological problems (including endometrial cancer) disappear after the active treatment phase has ended. The trial has also provided further information on the impact of tamoxifen on breast density: mammographic density appears to be a prognostic marker for improved long-term survival in participants receiving adjuvant tamoxifen.\n\nNotably, the IBIS-I study won the Cancer Research UK Prize for Translational Cancer Research at the 2014 NCRI Cancer Conference for its improvements in cancer research (http://www.ibis-trials.org/thetrials/ibistrials/ibis-i-award). Moreover, NICE updated its guidelines on prescription of tamoxifen to women at high risk of developing breast cancer, a decision partly based on results of the IBIS-I Study (first published June 2013, update August 2015; https://www.nice.org.uk/guidance/CG164 and https://www.nice.org.uk/guidance/cg164/evidence/surveillance-review-decision-november-2015-pdf-2178797581)."
+  },
+  {
+   "activities": "The Centre for Cancer Prevention at QMUL will send IBIS-I cohort data, i.e. a list of IBIS-I study participants, to NHS England for linkage. The following identifiers will be sent to NHS England by the CCP team at QMUL: \n\n-Full Name,\n-Date Of Birth, \n-NHS Number,\n-Postcode,\n-Study ID.\n\nThe data received from NHS England by CCP at QMUL will contain information on outpatient visits, cancer registrations such as new cancer or recurrence and mortality data in the event a patient passes away. The data sets returned by NHS England to QMUL will contain identifiable data. This is so that CCP can confirm the accuracy and strength of each linkage for IBIS-I participant in the study cohort. This ensures that all side effects, survival and cancer incidence data are correctly attributed to the each IBIS-I participant, thus avoiding any errors which would invalidate the study.\n\nOn receipt of the returned data set from NHS England, CCP at QMUL will link this data set to the data set contained in the IBIS-I study database via the full name, date of birth, postcode, NHS number and study ID. As mentioned, the data linkage enables the correct identification of the IBIS-I patients from the data set sent by NHS England. \n\nOnce the patients are identified, researchers at QMUL will then update the participant entries in the IBIS-I study database with date and cause of death, cancer recurrence, diagnosis and coding, and any HES data relevant to the study (fractures, cardiovascular and thrombo-embolic events). Following the linkage and participant identification, all identifiers except the study ID will be removed from the data set returned by NHS England and stored as a reference for analysis until study completion.\n\nFollowing receipt of the data sets by NHS England, if further information is required in addition to that provided from the HES/Mortality data sites, the IBIS-I CCO will request supporting information from the participant's general practitioner (GP) or IBIS-I study file. The supporting information requested by the IBIS-I CCO would comprise cancer recurrence (i.e. grade, site, receptor status) and side effects (i.e. fractures, cardiovascular events, thrombo-embolic events). The s251 support covers the linkage to the GP data. Additionally, the IBIS-I Informed Consent Form (version dated 26/10/2001), approved by the REC, informed the participant that the above-mentioned further details will be requested from their GP. \n\nProcessed data sets with all identifiers removed except the Study ID will be retained for analysis until study completion, following which it will be archived for 20 years. The original data set returned by NHS England containing identifiable data will be stored on a separate server meeting NHS England security requirements, as according to DARS Guidance Notes on Security.\n\nThe data received by the Centre for Cancer Prevention at QMUL will not be used for any purpose other than to meet objectives as stated in the trial protocol and will not be shared with any other third party or organisation.\n\nQMUL would like to emphasise that data is stored on the secure network and never on the local drives of unencrypted QMUL desktop PCs.\n\nQMUL creates back-ups of the data stored on its network. The encrypted backup tapes are stored offsite with Iron Mountain UK Ltd. The data is not accessible by any Iron Mountain employee.\n\nAll personal identifiable data received at the Centre for Cancer Prevention are stored electronically on a database, local to and administered by substantive employees of QMUL only. Personal identifiers of study participants are stored separately to the clinical data, with access strictly restricted to only QMUL substantive members of staff. Only these members of staff will have access to the personal identifiable data. Additionally, access to the personal identifiers on the Oracle database is controlled by separate username and password access and is controlled by the IT Department.\n\nThe separate Mortality and HES servers are self-contained within the Centre for Cancer Prevention network within the QMUL network. They are firewalled from external connections and the rest of the network. All traffic through the checkpoint firewall is logged. \n\nAccess to data will be from within the network using workstations that have a currently supported operating system which includes security patches. Users are not permitted to download the data from these workstations.\n\nNo remote access (i.e. through a VPN/RDP connection) is permitted. No mobile devices will be used to access any data. The network is externally scanned on a regular basis.\n\nThe data sets will be stored until the end date of the Data Sharing Agreement with NHS England. The storage architecture is compliant with the NHS England Data Sharing Framework Contract and once QMUL is issued with a Data Destruction notice, the data from all storage including backups can be securely and permanently removed within 14 days. Data can be securely wiped to NHS England standards (multi pass pattern wiped to at least HMG S5 Enhanced on site and if end of life, degaussed and physically destroyed).\n\nUnder this agreement, it is not permitted to share the raw data with international partners or any other bodies. Only aggregated data with small numbers suppressed in line with the HES Analysis Guide is permitted to be shared.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "QUEEN MARY UNIVERSITY OF LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2025-11-14",
+   "expected_benefits": "The data sets returned by NHS England will provide vital information on side effects, survival and breast cancer incidence. IBIS-I is currently the only cancer prevention study to have achieved a 20 year follow-up so far.\n\nUsing these data sets, the IBIS-I Central Coordinating Office (CCO) will conduct research and analyses that will help provide further information on:\n• the efficacy of tamoxifen prophylaxis in reduction of the risk of breast cancer in high-risk women (pre- and post-menopausal);\n• the safety of tamoxifen prophylaxis in reduction of the risk of breast cancer in high-risk women (pre- and post-menopausal);\n• the long-term all-cause mortality rate related to tamoxifen;\n• a thorough risk-benefit assessment of tamoxifen.\n\nThe research will help further inform public health bodies such as NICE on the safety and efficacy of tamoxifen as a chemopreventive agent. These analyses will enable patients and women at risk of developing breast cancer to make a more informed decision on the preventive treatment options available to them. An estimated 15% of women in the UK could benefit from preventive tamoxifen therapy and therefore results from the IBIS-I study are of great relevance to these women.\n\nThe target date for these benefits are anticipated in line with the expected analyses of the 20 and 25 year follow-ups respectively. The study had not achieved its anticipated output of 2019 as the study is waiting to collect up to date data from devolved nations so that it could continue to carry out analyses.",
+   "expected_output": "The first results of the IBIS-I have already been published (Cuzick J, et al. The Lancet. 2002;360: 817-24; Cuzick J, et al. J Natl Cancer Inst. 2004;96:621-628; Cuzick J, et al. J Natl Cancer Ins. 2007;99:272-82; Cuzick J, et al. San Antonio Breast Cancer Symposium. 2014, Dec 9-13;  Cuzick J, et al. Lancet Oncol. 2015;16(1):67-75).\n\nFurther outputs and analyses of the IBIS-I trials will be published in peer-reviewed medical journals such as The Lancet, The Lancet Oncology, Breast Cancer Research and Treatment and the British Journal of Cancer with at least a publication date in 2025.\n\nOutputs were anticipated in 2019 when there is 20 years of median follow-up data available. This output is still anticipated when current data is collected from devolved nations. It is further anticipated that Queen Mary University of London will run an updated analysis in 2024 (25 years median follow-up).\n\nThe public will be made aware of the research progress through two web pages (http://www.ibis-trials.org/thetrials/yourstories/press-articles and https://www.qmul.ac.uk/wolfson/research-/current-projects/projects/ibis-1.html). The anticipated audiences of the above outputs are researchers, scientists, stakeholders for the wider project and research participants.\n\nPolicy makers - such as NICE will also be targeted with the outputs of the study. NICE will be informed on the safety and efficacy of tamoxifen as a chemopreventive agent, allowing more information available to women at risk of developing breast cancer on the options available to them. An estimated 15% of women in the UK could benefit from preventive tamoxifen therapy and therefore results from the IBIS-I study are of great relevance to these women.\n\nNew publications, attendance of conference and meetings will be shared with international partners. Data contained in any outputs will be aggregated with small numbers suppressed in line with the HES analysis guide. There will be no onward sharing of data. Data received at the Centre for Cancer Prevention is only used to meet the objectives as stated in the trial protocol and will not be shared with any other third party or organisation. Individual patient data is never shared.\n\nPublications with significant findings may be accompanied by press releases and subsequent news stories. Two recent papers (Tamoxifen related side effects and their impact on breast cancer incidence. ‘A retrospective analysis of the randomised IBIS-I trial. The Breast vol 54 Dec. 2020’ and ‘The impact of body mass index on breast cancer incidence among women with increased risk: an observational study from the International Breast Intervention Studies. Breast Cancer Res Treat Mar. 2021)’ have been published continuing to prove the benefits of being able to obtain long term follow up data through NHS England. These 2 papers were expected to be released in 2019 (as above), however were subject to delays. Additionally, the study held a PPI event in January 2020 whereby discussion took place about the work carried out in the CCP covering breast cancer research. This proved to be a useful way to disseminate outputs and discuss the future of following up patients in the long term follow up method.",
+   "files_released": 22,
+   "objective": "Queen Mary University of London (QMUL) requires access to NHS England data for the purpose of the following research project: the International Breast Cancer Intervention (IBIS-I) Study.\n\nEstablished in 1992, the IBIS-I Study investigated the efficacy of tamoxifen (a hormonal drug used to prevent breast cancer) versus a placebo drug (taken daily for five years) in terms of reduction of breast cancer incidence in pre and post-menopausal women at high risk of developing breast cancer (e.g. through family history of breast cancer). It was a double-blind, randomised placebo-controlled trial that recruited 7,154 women internationally (of which 4,277 were UK participants and 2,877 from Australia, New Zealand, Spain and Ireland), aged 35-70 years. The primary outcome measure was the incidence of breast cancer, including ductal carcinoma in situ (cancer cells in the lining of the breast milk duct) and side effects present in the patients were also investigated. \n\nRecruitment to the study completed in 2001 and the intervention (placebo/tamoxifen) ended in 2007. In early 2008 the Research Ethics Committee (REC) approved the conversion of IBIS-I to an epidemiological cohort study. During 2007–2016 participants were followed-up via an annual postal questionnaire. \n \nIn 2002, initial results found that tamoxifen reduced the risk of invasive breast cancer by 31%. Mortality from non-breast-cancer causes was not increased by tamoxifen. However, the analysis concluded that the overall risk/benefit ratio for the use of tamoxifen in prevention remained unclear and that continued follow-up of trial participants was essential. A 2007 analysis on long-term tamoxifen prophylaxis for breast cancer confirmed the preventive effect of tamoxifen in terms of breast cancer incidence and that this was constant for the entire follow-up period. No reduction in size of benefit was observed for up to ten years following participant randomisation. Additionally, tamoxifen-related side effects such as thrombo-embolism were not increased anymore after the 5-year treatment period. These results therefore demonstrate that the benefit-to-risk ratio of tamoxifen improves with increasing duration of follow-up. Thus, how much additional benefit will be seen long-term remains an important question. \n\nBased on these above-mentioned results, the Central Coordinating Office (CCO) at the Centre for Cancer Prevention (CCP) at QMUL seek to continue to passively collect cancer registration, mortality data and Hospital Episode Statistics (HES) products provided by NHS England. The identifiable data sets returned by NHS England will provide vital information on side effects, survival and breast cancer incidence. \n\nThe international centres that participated in the study would be co-ordinated through the IBCSG (International Breast Cancer Study Group). Where possible except for Australia and New Zealand, all foreign centres would be randomised through the central London coordinating office but data collection and cholesterol assays will be carried out nationally. Data forms and blood sample aliquots will be transferred to the central office on a regular basis. The cohort has now decreased from 4,277 to approximately 3,603 due to either patients passing away or the study losing contact with the patients. \n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe processing is in the public interest as these data are essential in enabling the CCO to determine whether tamoxifen continues to have a long-term beneficial impact in terms of breast cancer incidence, survival and side effects after the initial 5-year treatment period. The CCO will be able to perform a thorough risk-benefit assessment of tamoxifen and a 30-year median follow-up analysis. These analyses will enable the research community to make more informed decisions on tamoxifen vis-a-vis patient safety and both short- and long-term effectiveness. The results so far have been very important for breast cancer in the preventive setting. \n\nQMUL is the controller as the organisation responsible for ensuring that the data will only be processed for the purpose described above.",
+   "organisation": "QUEEN MARY UNIVERSITY OF LONDON",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-12629-B4N5K-v2.11",
+   "releases": [
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 6,
+     "first_month": "2023-12",
+     "last_month": "2025-10",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "files": 4,
+     "first_month": "2023-12",
+     "last_month": "2025-09",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 4,
+     "first_month": "2023-12",
+     "last_month": "2025-09",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 4,
+     "first_month": "2023-12",
+     "last_month": "2025-09",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 3,
+     "first_month": "2023-12",
+     "last_month": "2025-09",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2023-08-28",
+   "sublicensing": "No",
+   "title": "IBIS-I The International Breast Cancer Intervention Study - MR710",
+   "version": "2.11",
+   "yielded_benefits": "Registry data provided to date has identified numerous cases of breast cancers, other cancers and side-effects in participants with whom the Centre for Cancer Prevention at Queen Mary University London have no direct contact and therefore not already known by the study team. Collection of this data has contributed directly to the primary endpoints of the trial and will continue to provide valuable information on the long-term risk/benefit status of the trial intervention. This long term data is essential for informing bodies such as NICE to inform the prescribing utility of these drugs as chemopreventive agents. The CCP use registry reported events as a prompt for further investigation by asking participants' current GP practice to confirm the event and also provide any further information e.g. cancer grade, size, receptor status that is required to meet secondary and exploratory objectives.\n\nSo far the long-term follow-up has shown that tamoxifen significantly reduces breast cancer incidence in women at risk of developing the disease (see for example Cuzick J, et al. J Natl Cancer Ins. 2007; 99: 272-82). The thromboembolic side effects and increase in gynaecological problems (including endometrial cancer) disappear after the active treatment phase has ended. The trial has also provided further information on the impact of tamoxifen on breast density: mammographic density appears to be a prognostic marker for improved long-term survival in participants receiving adjuvant tamoxifen.\n\nNotably, the IBIS-I study won the Cancer Research UK Prize for Translational Cancer Research at the 2014 NCRI Cancer Conference for its improvements in cancer research (http://www.ibis-trials.org/thetrials/ibistrials/ibis-i-award). Moreover, NICE updated its guidelines on prescription of tamoxifen to women at high risk of developing breast cancer, a decision partly based on results of the IBIS-I Study (first published June 2013, update August 2015; https://www.nice.org.uk/guidance/CG164 and https://www.nice.org.uk/guidance/cg164/evidence/surveillance-review-decision-november-2015-pdf-2178797581)."
+  },
+  {
+   "activities": "The Centre for Cancer Prevention at QMUL will send IBIS-I cohort data, i.e. a list of IBIS-I study participants, to NHS England for linkage. The following identifiers will be sent to NHS England by the CCP team at QMUL: \n\n-Full Name,\n-Date Of Birth, \n-NHS Number,\n-Postcode,\n-Study ID.\n\nThe data received from NHS England by CCP at QMUL will contain information on outpatient visits, cancer registrations such as new cancer or recurrence and mortality data in the event a patient passes away. The data sets returned by NHS England to QMUL will contain identifiable data. This is so that CCP can confirm the accuracy and strength of each linkage for IBIS-I participant in the study cohort. This ensures that all side effects, survival and cancer incidence data are correctly attributed to the each IBIS-I participant, thus avoiding any errors which would invalidate the study.\n\nOn receipt of the returned data set from NHS England, CCP at QMUL will link this data set to the data set contained in the IBIS-I study database via the full name, date of birth, postcode, NHS number and study ID. As mentioned, the data linkage enables the correct identification of the IBIS-I patients from the data set sent by NHS England. \n\nOnce the patients are identified, researchers at QMUL will then update the participant entries in the IBIS-I study database with date and cause of death, cancer recurrence, diagnosis and coding, and any HES data relevant to the study (fractures, cardiovascular and thrombo-embolic events). Following the linkage and participant identification, all identifiers except the study ID will be removed from the data set returned by NHS England and stored as a reference for analysis until study completion.\n\nFollowing receipt of the data sets by NHS England, if further information is required in addition to that provided from the HES/Mortality data sites, the IBIS-I CCO will request supporting information from the participant's general practitioner (GP) or IBIS-I study file. The supporting information requested by the IBIS-I CCO would comprise cancer recurrence (i.e. grade, site, receptor status) and side effects (i.e. fractures, cardiovascular events, thrombo-embolic events). The s251 support covers the linkage to the GP data. Additionally, the IBIS-I Informed Consent Form (version dated 26/10/2001), approved by the REC, informed the participant that the above-mentioned further details will be requested from their GP. \n\nProcessed data sets with all identifiers removed except the Study ID will be retained for analysis until study completion, following which it will be archived for 20 years. The original data set returned by NHS England containing identifiable data will be stored on a separate server meeting NHS England security requirements, as according to DARS Guidance Notes on Security.\n\nThe data received by the Centre for Cancer Prevention at QMUL will not be used for any purpose other than to meet objectives as stated in the trial protocol and will not be shared with any other third party or organisation.\n\nQMUL would like to emphasise that data is stored on the secure network and never on the local drives of unencrypted QMUL desktop PCs.\n\nQMUL creates back-ups of the data stored on its network. The encrypted backup tapes are stored offsite with Iron Mountain UK Ltd. The data is not accessible by any Iron Mountain employee.\n\nAll personal identifiable data received at the Centre for Cancer Prevention are stored electronically on a database, local to and administered by substantive employees of QMUL only. Personal identifiers of study participants are stored separately to the clinical data, with access strictly restricted to only QMUL substantive members of staff. Only these members of staff will have access to the personal identifiable data. Additionally, access to the personal identifiers on the Oracle database is controlled by separate username and password access and is controlled by the IT Department.\n\nThe separate Mortality and HES servers are self-contained within the Centre for Cancer Prevention network within the QMUL network. They are firewalled from external connections and the rest of the network. All traffic through the checkpoint firewall is logged. \n\nAccess to data will be from within the network using workstations that have a currently supported operating system which includes security patches. Users are not permitted to download the data from these workstations.\n\nNo remote access (i.e. through a VPN/RDP connection) is permitted. No mobile devices will be used to access any data. The network is externally scanned on a regular basis.\n\nThe data sets will be stored until the end date of the Data Sharing Agreement with NHS England. The storage architecture is compliant with the NHS England Data Sharing Framework Contract and once QMUL is issued with a Data Destruction notice, the data from all storage including backups can be securely and permanently removed within 14 days. Data can be securely wiped to NHS England standards (multi pass pattern wiped to at least HMG S5 Enhanced on site and if end of life, degaussed and physically destroyed).\n\nUnder this agreement, it is not permitted to share the raw data with international partners or any other bodies. Only aggregated data with small numbers suppressed in line with the HES Analysis Guide is permitted to be shared.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "QUEEN MARY UNIVERSITY OF LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+     "name": "NDRS Cancer Consolidated Data Set",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2026-11-20",
+   "expected_benefits": "The data sets returned by NHS England will provide vital information on side effects, survival and breast cancer incidence. IBIS-I is currently the only cancer prevention study to have achieved a 20 year follow-up so far.\n\nUsing these data sets, the IBIS-I Central Coordinating Office (CCO) will conduct research and analyses that will help provide further information on:\n• the efficacy of tamoxifen prophylaxis in reduction of the risk of breast cancer in high-risk women (pre- and post-menopausal);\n• the safety of tamoxifen prophylaxis in reduction of the risk of breast cancer in high-risk women (pre- and post-menopausal);\n• the long-term all-cause mortality rate related to tamoxifen;\n• a thorough risk-benefit assessment of tamoxifen.\n\nThe research will help further inform public health bodies such as NICE on the safety and efficacy of tamoxifen as a chemopreventive agent. These analyses will enable patients and women at risk of developing breast cancer to make a more informed decision on the preventive treatment options available to them. An estimated 15% of women in the UK could benefit from preventive tamoxifen therapy and therefore results from the IBIS-I study are of great relevance to these women.\n\nThe target date for these benefits are anticipated in line with the expected analyses of the 20 and 25 year follow-ups respectively. The study had not achieved its anticipated output of 2019 as the study is waiting to collect up to date data from devolved nations so that it could continue to carry out analyses.",
+   "expected_output": "The first results of the IBIS-I have already been published (Cuzick J, et al. The Lancet. 2002;360: 817-24; Cuzick J, et al. J Natl Cancer Inst. 2004;96:621-628; Cuzick J, et al. J Natl Cancer Ins. 2007;99:272-82; Cuzick J, et al. San Antonio Breast Cancer Symposium. 2014, Dec 9-13;  Cuzick J, et al. Lancet Oncol. 2015;16(1):67-75).\n\nFurther outputs and analyses of the IBIS-I trials will be published in peer-reviewed medical journals such as The Lancet, The Lancet Oncology, Breast Cancer Research and Treatment and the British Journal of Cancer with at least a publication date in 2025.\n\nOutputs were anticipated in 2019 when there is 20 years of median follow-up data available. This output is still anticipated when current data is collected from devolved nations. It is further anticipated that Queen Mary University of London will run an updated analysis in 2024 (25 years median follow-up).\n\nThe public will be made aware of the research progress through two web pages (http://www.ibis-trials.org/thetrials/yourstories/press-articles and https://www.qmul.ac.uk/wolfson/research-/current-projects/projects/ibis-1.html). The anticipated audiences of the above outputs are researchers, scientists, stakeholders for the wider project and research participants.\n\nPolicy makers - such as NICE will also be targeted with the outputs of the study. NICE will be informed on the safety and efficacy of tamoxifen as a chemopreventive agent, allowing more information available to women at risk of developing breast cancer on the options available to them. An estimated 15% of women in the UK could benefit from preventive tamoxifen therapy and therefore results from the IBIS-I study are of great relevance to these women.\n\nNew publications, attendance of conference and meetings will be shared with international partners. Data contained in any outputs will be aggregated with small numbers suppressed in line with the HES analysis guide. There will be no onward sharing of data. Data received at the Centre for Cancer Prevention is only used to meet the objectives as stated in the trial protocol and will not be shared with any other third party or organisation. Individual patient data is never shared.\n\nPublications with significant findings may be accompanied by press releases and subsequent news stories. Two recent papers (Tamoxifen related side effects and their impact on breast cancer incidence. ‘A retrospective analysis of the randomised IBIS-I trial. The Breast vol 54 Dec. 2020’ and ‘The impact of body mass index on breast cancer incidence among women with increased risk: an observational study from the International Breast Intervention Studies. Breast Cancer Res Treat Mar. 2021)’ have been published continuing to prove the benefits of being able to obtain long term follow up data through NHS England. These 2 papers were expected to be released in 2019 (as above), however were subject to delays. Additionally, the study held a PPI event in January 2020 whereby discussion took place about the work carried out in the CCP covering breast cancer research. This proved to be a useful way to disseminate outputs and discuss the future of following up patients in the long term follow up method.",
+   "files_released": 3,
+   "objective": "Queen Mary University of London (QMUL) requires access to NHS England data for the purpose of the following research project: the International Breast Cancer Intervention (IBIS-I) Study.\n\nEstablished in 1992, the IBIS-I Study investigated the efficacy of tamoxifen (a hormonal drug used to prevent breast cancer) versus a placebo drug (taken daily for five years) in terms of reduction of breast cancer incidence in pre and post-menopausal women at high risk of developing breast cancer (e.g. through family history of breast cancer). It was a double-blind, randomised placebo-controlled trial that recruited 7,154 women internationally (of which 4,277 were UK participants and 2,877 from Australia, New Zealand, Spain and Ireland), aged 35-70 years. The primary outcome measure was the incidence of breast cancer, including ductal carcinoma in situ (cancer cells in the lining of the breast milk duct) and side effects present in the patients were also investigated. \n\nRecruitment to the study completed in 2001 and the intervention (placebo/tamoxifen) ended in 2007. In early 2008 the Research Ethics Committee (REC) approved the conversion of IBIS-I to an epidemiological cohort study. During 2007–2016 participants were followed-up via an annual postal questionnaire. \n \nIn 2002, initial results found that tamoxifen reduced the risk of invasive breast cancer by 31%. Mortality from non-breast-cancer causes was not increased by tamoxifen. However, the analysis concluded that the overall risk/benefit ratio for the use of tamoxifen in prevention remained unclear and that continued follow-up of trial participants was essential. A 2007 analysis on long-term tamoxifen prophylaxis for breast cancer confirmed the preventive effect of tamoxifen in terms of breast cancer incidence and that this was constant for the entire follow-up period. No reduction in size of benefit was observed for up to ten years following participant randomisation. Additionally, tamoxifen-related side effects such as thrombo-embolism were not increased anymore after the 5-year treatment period. These results therefore demonstrate that the benefit-to-risk ratio of tamoxifen improves with increasing duration of follow-up. Thus, how much additional benefit will be seen long-term remains an important question. \n\nBased on these above-mentioned results, the Central Coordinating Office (CCO) at the Centre for Cancer Prevention (CCP) at QMUL seek to continue to passively collect and hold cancer registration, Hospital Episode Statistics (HES) and mortality data products provided by NHS England. The identifiable data sets returned by NHS England will provide vital information on side effects, survival and breast cancer incidence. \n\nQMUL require access to the NDRS Cancer Consolidated dataset. The use of this data is crucial during the passive follow-up phase of the IBIS-I trial. It allows QMUL to revisit and build upon earlier analyses that assess how well tamoxifen prevents breast cancer over the long term. A key feature of this dataset is its detailed information on whether each breast cancer diagnosis was estrogen receptor (ER) positive or negative. This distinction is vital because tamoxifen is only effective in preventing ER-positive cancers. By identifying the ER status of each case, researchers can determine whether tamoxifen’s protective effect continues more than 20 years after treatment, and refine previous findings from the trial.\n\nThe international centres that participated in the study would be co-ordinated through the IBCSG (International Breast Cancer Study Group). Where possible except for Australia and New Zealand, all foreign centres would be randomised through the central London coordinating office but data collection and cholesterol assays will be carried out nationally. Data forms and blood sample aliquots will be transferred to the central office on a regular basis. The cohort has now decreased from 4,277 to approximately 3,603 due to either patients passing away or the study losing contact with the patients. \n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe processing is in the public interest as these data are essential in enabling the CCO to determine whether tamoxifen continues to have a long-term beneficial impact in terms of breast cancer incidence, survival and side effects after the initial 5-year treatment period. The CCO will be able to perform a thorough risk-benefit assessment of tamoxifen and a 30-year median follow-up analysis. These analyses will enable the research community to make more informed decisions on tamoxifen vis-a-vis patient safety and both short- and long-term effectiveness. The results so far have been very important for breast cancer in the preventive setting. \n\nQMUL is the controller as the organisation responsible for ensuring that the data will only be processed for the purpose described above.",
+   "organisation": "QUEEN MARY UNIVERSITY OF LONDON",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-12629-B4N5K-v3.2",
+   "releases": [
+    {
+     "dataset": "Cancer Registration Data",
+     "files": 1,
+     "first_month": "2025-12",
+     "last_month": "2025-12",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2025-12",
+     "last_month": "2025-12",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "NDRS Cancer Consolidated Data Set",
+     "files": 1,
+     "first_month": "2026-01",
+     "last_month": "2026-01",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2025-11-21",
+   "sublicensing": "No",
+   "title": "IBIS-I The International Breast Cancer Intervention Study - MR710",
+   "version": "3.2",
+   "yielded_benefits": "Registry data provided to date has identified numerous cases of breast cancers, other cancers and side-effects in participants with whom researchers at Queen Mary University London have no direct contact and therefore not already known by the study team. In the past collection of this data has contributed directly to the primary endpoints of the trial. The most recent publication was on the primary endpoint was in 2015 (https://pubmed.ncbi.nlm.nih.gov/25497694/). The results showed that tamoxifen is effective at preventing breast cancer for at least 20 years. This long term data was essential for informing NICE on their recommendations regarding the utility of tamoxifen for preventive therapy (https://www.nice.org.uk/guidance/CG164).  No other study worldwide is able to provide information beyond 20y follow-up. Such additional follow-up from the registries will provide valuable information on the extent to which tamoxifen is effective for breast cancer prevention more than 15y after the end of prescription, and the even longer-term risk/benefit ratio of the trial intervention. It will also provide more precise information on mortality, the analysis of which has been limited hitherto by the small number of breast cancer deaths. In addition, blood samples from the trial have been used in several nested case-control studies, and the registry data will also contribute to these. In summary, the registry data provided will be of very high scientific value for the primary endpoint in the trial, and further sub-studies."
+  }
+ ]
+}

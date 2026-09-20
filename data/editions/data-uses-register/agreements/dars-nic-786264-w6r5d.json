@@ -1,0 +1,61 @@
+{
+ "base_reference": "DARS-NIC-786264-W6R5D",
+ "versions": [
+  {
+   "activities": "University of Southampton will transfer data to NHS England. The data will consist of identifying details (specifically: NHS Number, Date of Birth, Gender, Full Name and a unique person ID) for the cohort to be linked with NHS England data. Date of randomisation and date of 5- year post-randomisation will also be provided.  \n\nNHS England will provide the relevant records from the HES APC and CRD datasets to University of Southampton. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient. Whilst the Data provided by NHS England to the University of Southampton is pseudonymised the applicant would have the technical means of re-identifying participants. \n\nThe Data will not be transferred to any other location. \n\nThe Data will be stored and backed-up on servers at University of Southampton. \n\nData and all back-ups will be stored at the University of Southampton only. \n\nThe Data will be accessed onsite at the premises of University of Southampton only. \n\nData will be access by employees from the University of Southampton and the University Hospital Southampton NHS Foundation Trust.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+    "UNIVERSITY OF SOUTHAMPTON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2029-02-26",
+   "expected_benefits": "The long-term follow-up data will provide evidence on whether initial investigation with CT coronary angiography (CTCA) ± FFRct reduces long-term adverse cardiac outcomes, avoids unnecessary invasive procedures, and improves efficiency in resource utilisation across the NHS. This will directly inform the ongoing optimisation of diagnostic strategies for patients presenting with stable chest pain to Rapid Access Chest Pain Clinics (RACPC). \n\nSpecifically, this research is expected to generate public benefit by: \n\nSupporting evidence-based policy-making: Findings will further support national guidelines (e.g. NICE CG95) and local decision-making by demonstrating whether CTCA ± FFRct offers improved clinical outcomes compared to standard diagnostic pathways. \n\nImproving patient care and experience: By potentially identifying a safe, effective, and less invasive diagnostic strategy, the study could reduce the need for unnecessary invasive angiography, minimise patient risk, and speed up time to definitive diagnosis and treatment. \n\nEnhancing system efficiency: A diagnostic strategy that provides both anatomical and physiological information in a single test may reduce the number of appointments and investigations required, resulting in shorter care pathways, reduced waiting lists, and lower costs to the NHS. \n\nHelping allocate resources more effectively: the findings could support better allocation of healthcare funding and infrastructure at both local and national levels.",
+   "expected_output": "The expected outputs of the processing will be: \n\n- Final analysis reports for internal and external stakeholders \n\n- Submissions to high-impact peer-reviewed journals (e.g., The Lancet, Heart, European Heart Journal [EHJ]) \n\n- Abstracts and presentations at national and international conferences (e.g., European Society of Cardiology [ESC], The British Cardiovascular Society [BCS], American College of Cardiology [ACC]) \n\n- Reports tailored to NICE and NHS England to inform service planning and guideline development \n\nAll outputs will only contain aggregated data with small number suppression in accordance with NHS England disclosure guidance \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\n \nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n\n- Dissemination and Communication Plan \n\n- Dissemination activities will include: \n   - Journal articles and conference proceedings \n   - Webinars and academic workshops \n   - Publicly accessible lay summaries shared via NHS and university networks \n   - Internal reports for hospital management and research governance teams \n   - Communications with NICE and NHS England where applicable \n   - Communication will also include updates to clinical stakeholders via Trust bulletins and direct communication with site Principal Investigators and Rapid Access Chest Pain Clinic (RACPC) leads. Updates to participants will be coordinated through local research teams using prepared lay summaries.",
+   "files_released": 9,
+   "objective": "The Data will be used for the purpose of a clinical trial: Fractional Flow Reserve Derived from CT Coronary Angiography in the Assessment and Management of Stable Chest Pain (FORECAST): 5 Year Follow-Up \n\n The objective is to enable long-term follow-up of participants from the completed FORECAST trial- a multicentre, UK-based randomised controlled trial comparing CT coronary angiography with computed fractional flow reserve (FFRCT) versus standard care in patients with stable chest pain. \n\n These outcomes will allow assessment of the sustained impact of FFRCT versus standard diagnostic pathways on clinical outcomes and NHS resource use over a 5-year period.\n\nHeartFlow Inc is a funder of the original study and the funder for the Follow-Up Study. No NHS England data or clinical data will flow to HeartFlow Inc and they will not make any decisions as a Data Controller or perform any Data Controllership activities.  HeartFlow Inc will not have the ability to suppress outputs.",
+   "organisation": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-786264-W6R5D-v0.2",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 8,
+     "first_month": "2026-04",
+     "last_month": "2026-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2026-04",
+     "last_month": "2026-04",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2026-02-27",
+   "sublicensing": "No",
+   "title": "Fractional Flow Reserve Derived from CT Coronary Angiography in the Assessment and Management of Stable Chest Pain (FORECAST): 5 Year Follow-Up",
+   "version": "0.2",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

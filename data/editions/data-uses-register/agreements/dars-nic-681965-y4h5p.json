@@ -1,0 +1,215 @@
+{
+ "base_reference": "DARS-NIC-681965-Y4H5P",
+ "versions": [
+  {
+   "activities": "There is no flow of data into NHS England to support this request.\n\nNHS England will flow pseudonymised sub-sets of the following datasets to the CUHFT via a secure file transfer system (SEFT)\n\n•\tNDRS Linked Hospital Episode Statistics (HES)- inclusive of the Admitted Patient Care and Outpatient subsets \n•\tNDRS Linked Diagnostic Imaging Data Set (DIDS)\n•\tNDRS Linked Cancer Registry\n•\tNDRS Linked Radiotherapy Dataset (RTDS)\n•\tNDRS Linked Systemic Anti-Cancer Therapy Dataset (SACT)\n•\tNDRS Linked Somatic Molecular Tables\n\nThere will be no subsequent flows of data and data will not be linked to datasets not already referenced within the agreement. Linkage will only be undertaken by the data custodian NHS England.\n\nThe study team will conduct an analysis of patient risk factors and how these appear to influence patient outcomes in cutaneous Melanoma. The disseminated data will be divided into two main groups. The data will be divided at random. A piece of software will pull out a random cohort of a certain size. One of these groups will serve to provide data for analysis and to determine the mathematical model to be used for prediction.  The second group will be utilised as the validation group.  This group will serve as a test data set for the model, to confirm the accuracy and validity of its predictions. Ultimately the analysis will allow CUHFT to generate a mathematical model which can be used to predict the outcome of new patients, based on their individual characteristics and the characteristics of their melanoma.  \n\nAll those processing the data disseminated under this Agreement will be substantive employees of the CUHFT or undertake duties via an honorary contract. The PI of this project is employed by the University of Cambridge but working under an honorary contract with CUHFT for the purposes of the project. Those accessing data will receive appropriate data protection and confidentiality training. CUHFT will act as sole processor at all stages of the project.  Data will be processed by project team members only, and only for the purposes outlined within this DSA.\n\nData will be downloaded directly to the Cambridge University Hospital NHS Foundation Trust (CUHFT) secure servers and will remain stored there for the duration of the study.  Analysts will conduct all data processing including the statistical analyses to fulfil the project aims in this secure environment. Accessed to the secure system will be via direct login to the CUHFT computer system and remotely via a secure VPN system. This agreement prohibits downloading or copying data to local devices. All IT infrastructure is maintained by the CUHFT IT service team. The project team members undertake annual governance/ data protection training from CUHFT and will comply with the Data Protection Act and the CUHFT’s information Security and Data Protection Policies. Data backups are not held in the cloud as standard and utilise Trust storage solutions.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked DIDs",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Somatic Molecular Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2026-08-22",
+   "expected_benefits": "The Melanoma PREDICT tool, once made available will be the first individual patient prognostic tool created for melanoma based on a population level dataset from the UK. Currently there isn’t an accessible and reliable way of predicting individual patient outcomes based on their specific pathological factors for a UK cohort of patients. The Melanoma PREDICT tool will inform the patient in their specific cancer and given condition what the likely outcomes will be, with the recommended treatment options. Once the initial statistical models are developed, the study team will be engaging with PPI partnerships to develop the interactive tools that patients may be using in the future. Some of this background work has already been done as part of PREDICT Breast and PREDICT prostate tools. Online, it is hoped to be regularly used by clinicians and patients as part of the decision-making regarding investigation and treatment of melanoma. Benefits include: \n\n•\tThe ability to estimate melanoma specific survival.  \n•\tTo provide a valuable resource for individual patients to learn about their disease and gain insight into their individual risk factors and prognostic information. \n•\tAssist in the decision-making process for further investigations and treatments \n•\tWill present information to patients in a way that is both interactive and easy to understand. \n\nThe melanoma PREDICT tool is hoped to be a powerful aid for these patients to recognise their individual risk factors and prognostication. Additionally, patients often find it hard to comprehend the volume of information dispensed at a time of cancer diagnoses. It is hoped this tool will allow patients to visualise prospective care pathways and choices which are individualised in a way which is palatable, interactive, and easy to understand.\n\nIn 2020, the PREDICT breast tool was accessed by 30,000 users per month and used by well over 100,000 women in the UK, of whom at least 18,500 have been able to make better decisions about whether adjuvant chemotherapy is right for them. Since 2019 the Prostate PREDICT tool was visited by 40,000 users from over 110 countries. Approximately 16,000 people are diagnosed with cutaneous melanoma in the UK each year and this number is rising. It is hoped that the Melanoma PREDICT tool will follow a similar trajectory as the Prostate and Breast tools in helping patients and clinicians make better informed decisions about which treatment options will provide the greatest chance of extending or increasing quality of life.",
+   "expected_output": "The initial expected outputs of the processing will be to create a mathematical model to enable outcome predictions given for specific patient and melanoma factors. It is anticipated that the model will be available by October 2023. This tool is expected to be utilised as a resource for health research and in ultimately in routine clinical practice. A study to assess utilisation will be planned once the initial tool is available. The study team would expect that such a utilisation study could be performed and have preliminary results by October 2024.  Between 2024-2025 further external validation work of the mathematical model will be undertaken using external datasets and cohorts to test the model validity. Once the tool is validated and safety implications approved it can be presented as a tool to be used in the public domain.  \n\nAlthough NHS England Data isn’t used as an ‘output’, the data will be aggregated in the sense that the model is using those data points aggregated across a core. For example, for a patient aged 50 – the mathematical model will aggregate all patients aged 50 to predict the prognostic likelihood of that individual with their type of melanoma. No individual data point is used, it is aggregated datapoints only. \n\nThe mathematical model will be trained on the data disseminated under this agreement to make a prediction on the patient outcome trajectory. None of the data provided to CUHFT will be provided as an ‘output’. Once the mathematical model is completed and validated it will not be linking back to the dataset. It will be a standalone algorithm. It is hoped the Melanoma PREDICT tool can be implemented from 2025 once externally validated and endorsement from clinically approved national organisations like NICE is complete.\n\nThe tool, once made available online is aimed to be regularly used by clinicians and patients as part of the decision making regarding investigation and treatment of melanoma.  It is also expected that it will be used in skin cancer multidisciplinary team meetings to enable prediction of outcomes for patients on a nationwide scale.  The PREDICT website is widely known amongst clinicians and is already endorsed by NICE and The American Joint Committee on Cancer (AJCC). This creates precedence for this and would be a key future goal for this project. \n\nFrom 2025 CUHFT aim to present ‘The Melanoma PREDICT tool’ at two of the biggest national conferences which deal with melanoma care in the UK. Specifically, The British Association of Dermatology (BAD) and the British Association of Plastic Reconstructive Surgery (BAPRAS). Publications will arise from the conferences for wider dissemination amongst the clinical teams. These include journals such as the British Journal of Cancer (BJC). Additionally, public awareness will also be sought through charities like Melanoma UK.",
+   "files_released": 8,
+   "objective": "Cambridge University Hospitals NHS Foundation Trust (CUHFT) aim to gain access to data on patients who have been diagnosed with cutaneous melanoma between 1995 and 2018.  The purpose of this project is to create an online, interactive tool ‘PREDICT Melanoma tool’.  The tool is designed for patients diagnosed with cutaneous melanoma and the healthcare professionals providing their care.  This tool will provide predictions, based on a national population level dataset, to assist in making decisions about further investigations and treatments that are advised by current clinical guidelines currently available based on the specifics of that individual and the type of melanoma. The tool will present this information in a format that is easy to understand and will be interactive, such that patients will be able to toggle various treatment options to see how this affects their ongoing outcome.  Similar tools already exist for both breast and prostate cancer and are used widely.  The use of these tools has prompted further updates to increase the amount of information and detail available through them.\n\nThe work for the Breast and Prostate tools has been performed at University of Cambridge since 2007.  The lead investigator has been integral in the creation of the PREDICT Breast and Prostate tools which have been endorsed by the American Joint Committee on Cancer (AJCC) and National Institute for Health and Care Excellence (NICE). CUHFT have received funding from the Addenbrooke’s Charitable Trust and the Royal College of Surgeons to create a similar tool for those patients diagnosed with cutaneous melanoma.  \n\nThe data being requested under this agreement is solely to be used for the purposes of creating the PREDICT Melanoma tool.  As with the previous PREDICT tools, as more patient, research and specific clinical trial data becomes available it will be prudent for CUHFT to run further analysis to ensure that the model is as accurate and relevant as possible.  It is necessary that the study team have specific information about the various known risk factors for melanoma which include:\n\n• Age\n• Sex\n• Ethnicity\n• Body site/area – affected by melanoma\n• Date of diagnosis\n• Date of surgery\n• Histological information about tumour\no Excision margin\no Lesion thickness\no TNM stage\no Presence or absence of ulceration\no Presence of absence of lymphovascular invasion\n• Lymph node status\n• Presence of absence of regional or metastatic disease\n• Co-morbidities\n• Primary treatment received\no Any subsequent treatments\n\nTo support this work the CUHFT requests pseudonymised sub-sets of the following datasets:  \n\n•\tNDRS Linked Hospital Episode Statistics (HES)- inclusive of the Admitted Patient Care and Outpatient subsets \n•\tNDRS Linked Diagnostic Imaging Data Set (DIDS)\n•\tNDRS Linked Cancer Registry\n•\tNDRS Linked Radiotherapy Dataset (RTDS)\n•\tNDRS Linked Systemic Anti-Cancer Therapy Dataset (SACT)\n•\tNDRS Linked Somatic Molecular Tables\n\nThe quantum of data requested is the minimum necessary and could not be further reduced without impacting the ability to achieve the stated aims. The justification for the data products requested is that the study team need to acquire data which will provide a detailed patient level picture of the overall pathway of melanoma care. This includes admitted patient care which refers to surgical care and recurrence picked up through imaging or outpatient assessment. All these factors impact overall survival outcomes.   All the above datasets will aid in determining to what extent each known risk factor contributes to the patient outcome and will undergo a statistical analysis. This initial analysis will allow CUHFT to generate a mathematical model which the study team can use to predict the outcome of new patients, based on their individual characteristics and the characteristics of their melanoma.  \n\nOnce this initial model has been generated, CUHFT intend to test it on a further set of patient data from this request to check that its predictions are accurate and valid.  Any necessary adjustments will be made to the model to increase its accuracy and further testing will take place.  When the model has been demonstrated to be accurate and valid it will serve as the backend of an online and interactive tool that will be available to the public and clinicians.  Here individuals will be able to enter information about themselves and their melanoma.  This information will be run through the model and its predictions presented in an easy to understand and interactive manner.  This information can be used in conjunction with advice and assistance from clinicians to make decisions about further investigations and treatment.  Should further data from NDRS be required for this purpose then a separate application would be made at that point as was deemed necessary.  Further changes to this model in the future may require updated data which would necessitate another application.\n\nTo address the UK General Data Protection Regulation (GDPR) Principal of Data Minimisation CUHFT intend to be specific in requesting data only on patients with the appropriate diagnosis and in a time period where CUHFT believe the information available will be informative to the project and hence to future patients and the clinicians involved in their care. The data requested is limited to individuals aged over 18 with a diagnosis of Cutaneous Melanoma for the period from 1995 – 2018. \n\nCUHFT require record level, Pseudonymised data for as UK wide an area as is possible.  Pseudonymised record level data is necessary to provide the study team with as many data points for each risk factor and outcome measure as possible.  This will enable the PREDICT model to be more accurate, providing better predictions to those who use the tool in the future.  The study team have chosen the period 1995-2018 because they believe that this represents a period in which many current practices for treating melanoma were in use, necessary data points will have been recorded and outcomes will be applicable to those who may use the prediction tool in the coming years.  A population level dataset will provide the greatest degree of detail for predicting the outcomes of future patients in the United Kingdom.  It will also allow the study team to make the tool accurate across the areas that the NHS operates.\n\nThe study team are conducting an analysis of risk factors and how these appear to influence patient outcomes. As such, CUHFT are only requesting data items which the study team believe is necessary to create an effective prediction tool.  No patient identifiable information will be requested in this application. The identity of the individual patient is not relevant to the study and the study protocol does not require such information to provide the suggested outcomes.  Data is not being requested that would make it easy to identify individual patients, and there is no requirement to reidentify individuals and there will be no attempt to do so.  \n\nThere are no alternative or less intrusive ways of creating a prediction tool of this type with specific detail suggested by the project aims. The study are taking the appropriate steps to obtain HRA approval. \n\nThe lawful basis for processing falls under the following UK General Data Protection (GDPR) Articles: \n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller. Justification being on the basis that tools have been created for such purposes for patients with other types of cancer (breast: https://breast.predict.nhs.uk/ and prostate: https://prostate.predict.nhs.uk/).  Both projects have utilised population level data sets to conduct appropriate data analysis in production of these tools.  They are widely used and provide valuable information both to patients and clinicians alike. CUHFT tool, like the current predict breast and prostate tools, will provide a valuable resource for individual patients to learn about their disease and gain insight into their individual risk factors and prognostic information.  This will assist in the decision-making process for further investigations and treatments and will present information to patients in a way that is both interactive and easy to understand.   \n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject. This project is deemed to be in the public interest because as approximately 16,000 people are diagnosed with cutaneous melanoma in the UK each year and this number is rising.  The online tool that this project aims to create will be of benefit to every one of them.  They will have more information about their condition and the expected outcomes of it and some treatments that will be offered to them.  This will enable patients to make more informed decisions about which treatments and investigations they wish to undergo and what the likely impact of these will be on them and the chance of effectively treating the melanoma they have been diagnosed with.  \n\nCambridge University Hospital NHS Foundation Trust is the sole data controller and sole data processor for this project. Data will be processed only for the purposes outlined within this Agreement.  Addenbrooke’s Charitable Trust (ACT) and Royal College of Surgeons of England both are providing financial support for the project.  Neither will be involved in the storing or processing of the data requested under this application and neither have contributed to the purpose or scope of this project.  \n\nIn line with the National data opt-out policy, opt-outs are not applied because the data is not Confidential Patient Information as defined in section 251(10) and (11) of the National Health Service Act 2006\n\nWhere individuals have opted out of disease registration by the National Disease Registration Service (NDRS), their data has been permanently removed from the registry and therefore will not be disseminated under this Data Sharing Agreement (DSA). https://digital.nhs.uk/ndrs/patients/opting-out",
+   "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-681965-Y4H5P-v0.5",
+   "releases": [
+    {
+     "dataset": "NDRS Cancer Registrations",
+     "files": 2,
+     "first_month": "2023-12",
+     "last_month": "2025-09",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Linked DIDs",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Linked HES APC",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Linked HES Outpatient",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS National Radiotherapy Dataset (RTDS)",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Somatic Molecular Dataset",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "files": 1,
+     "first_month": "2023-12",
+     "last_month": "2023-12",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2023-08-23",
+   "sublicensing": "No",
+   "title": "Melanoma PREDICT Tool - Individualising prognostic stratification in melanoma ODR1920_246",
+   "version": "0.5",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA). \n\nNHS England will provide the relevant records from the NDRS datasets to CUHFT. The Data will contain no direct identifying data items.  The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient. \n\nThe Data will not be transferred to any other location. \n\nThe Data will be stored on servers at CUHFT.\n\nThe Data will be accessed by authorised personnel both onsite at the premises of CUHFT and via remote access.   \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n•\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA. \n•\tAccess controls granting users the minimum level of access required are in place. \n•\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data. \n•\tMultifactor authentication (MFA) is required for remote access. \n•\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access. \n•\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThis Agreement prohibits downloading or copying data to local devices. All IT infrastructure is maintained by the CUHFT IT service team. The project team members undertake annual governance/ data protection training from CUHFT and will comply with the Data Protection Act and the CUHFT’s information Security and Data Protection Policies.\n\nThe Data will not be linked with any other data outside of this agreement.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked DIDs",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Somatic Molecular Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2027-02-22",
+   "expected_benefits": "The Melanoma PREDICT tool, once made available will be the first individual patient prognostic tool created for melanoma based on a population level dataset from the UK. Currently there isn’t an accessible and reliable way of predicting individual patient outcomes based on their specific pathological factors for a UK cohort of patients. The Melanoma PREDICT tool will inform the patient in their specific cancer and given condition what the likely outcomes will be, with the recommended treatment options. Once the initial statistical models are developed, the study team will be engaging with PPI partnerships to develop the interactive tools that patients may be using in the future. Some of this background work has already been done as part of PREDICT Breast and PREDICT prostate tools. Online, it is hoped to be regularly used by clinicians and patients as part of the decision-making regarding investigation and treatment of melanoma. Benefits include: \n\n•\tThe ability to estimate melanoma specific survival.  \n•\tTo provide a valuable resource for individual patients to learn about their disease and gain insight into their individual risk factors and prognostic information. \n•\tAssist in the decision-making process for further investigations and treatments \n•\tWill present information to patients in a way that is both interactive and easy to understand. \n\nThe melanoma PREDICT tool is hoped to be a powerful aid for these patients to recognise their individual risk factors and prognostication. Additionally, patients often find it hard to comprehend the volume of information dispensed at a time of cancer diagnoses. It is hoped this tool will allow patients to visualise prospective care pathways and choices which are individualised in a way which is palatable, interactive, and easy to understand.\n\nIn 2020, the PREDICT breast tool was accessed by 30,000 users per month and used by well over 100,000 women in the UK, of whom at least 18,500 have been able to make better decisions about whether adjuvant chemotherapy is right for them. Since 2019 the Prostate PREDICT tool was visited by 40,000 users from over 110 countries. Approximately 16,000 people are diagnosed with cutaneous melanoma in the UK each year and this number is rising. It is hoped that the Melanoma PREDICT tool will follow a similar trajectory as the Prostate and Breast tools in helping patients and clinicians make better informed decisions about which treatment options will provide the greatest chance of extending or increasing quality of life.",
+   "expected_output": "The initial expected outputs of the processing will be to create a mathematical model to enable outcome predictions given for specific patient and melanoma factors. It is anticipated that the model will be available by October 2023. This tool is expected to be utilised as a resource for health research and in ultimately in routine clinical practice. A study to assess utilisation will be planned once the initial tool is available. The study team would expect that such a utilisation study could be performed and have preliminary results by October 2024.  Between 2024-2025 further external validation work of the mathematical model will be undertaken using external datasets and cohorts to test the model validity. Once the tool is validated and safety implications approved it can be presented as a tool to be used in the public domain.  \n\nAlthough NHS England Data isn’t used as an ‘output’, the data will be aggregated in the sense that the model is using those data points aggregated across a core. For example, for a patient aged 50 – the mathematical model will aggregate all patients aged 50 to predict the prognostic likelihood of that individual with their type of melanoma. No individual data point is used, it is aggregated datapoints only. \n\nThe mathematical model will be trained on the data disseminated under this agreement to make a prediction on the patient outcome trajectory. None of the data provided to CUHFT will be provided as an ‘output’. Once the mathematical model is completed and validated it will not be linking back to the dataset. It will be a standalone algorithm. It is hoped the Melanoma PREDICT tool can be implemented from 2025 once externally validated and endorsement from clinically approved national organisations like NICE is complete.\n\nThe tool, once made available online is aimed to be regularly used by clinicians and patients as part of the decision making regarding investigation and treatment of melanoma.  It is also expected that it will be used in skin cancer multidisciplinary team meetings to enable prediction of outcomes for patients on a nationwide scale.  The PREDICT website is widely known amongst clinicians and is already endorsed by NICE and The American Joint Committee on Cancer (AJCC). This creates precedence for this and would be a key future goal for this project. \n\nFrom 2025 CUHFT aim to present ‘The Melanoma PREDICT tool’ at two of the biggest national conferences which deal with melanoma care in the UK. Specifically, The British Association of Dermatology (BAD) and the British Association of Plastic Reconstructive Surgery (BAPRAS). Publications will arise from the conferences for wider dissemination amongst the clinical teams. These include journals such as the British Journal of Cancer (BJC). Additionally, public awareness will also be sought through charities like Melanoma UK.",
+   "files_released": 0,
+   "objective": "​​The Data will be used for the purpose of the following project: Melanoma PREDICT Tool - Individualising prognostic stratification in melanoma\n\nCambridge University Hospitals NHS Foundation Trust (CUHFT) aim to gain access to data on patients who have been diagnosed with cutaneous melanoma between 1995 and 2018.  The purpose of this project is to create an online, interactive tool ‘PREDICT Melanoma tool’.  The tool is designed for patients diagnosed with cutaneous melanoma and the healthcare professionals providing their care.  This tool will provide predictions, based on a national population level dataset, to assist in making decisions about further investigations and treatments that are advised by current clinical guidelines currently available based on the specifics of that individual and the type of melanoma. The tool will present this information in a format that is easy to understand and will be interactive, such that patients will be able to toggle various treatment options to see how this affects their ongoing outcome.  Similar tools already exist for both breast and prostate cancer and are used widely.  The use of these tools has prompted further updates to increase the amount of information and detail available through them.\n\nThe work for the Breast and Prostate tools has been performed at University of Cambridge since 2007.  The lead investigator has been integral in the creation of the PREDICT Breast and Prostate tools which have been endorsed by the American Joint Committee on Cancer (AJCC) and National Institute for Health and Care Excellence (NICE). CUHFT have received funding from the Addenbrooke’s Charitable Trust and the Royal College of Surgeons to create a similar tool for those patients diagnosed with cutaneous melanoma.  \n\nThe data being requested under this agreement is solely to be used for the purposes of creating the PREDICT Melanoma tool.  As with the previous PREDICT tools, as more patient, research and specific clinical trial data becomes available it will be prudent for CUHFT to run further analysis to ensure that the model is as accurate and relevant as possible.  It is necessary that the study team have specific information about the various known risk factors for melanoma which include:\n\n• Age\n• Sex\n• Ethnicity\n• Body site/area – affected by melanoma\n• Date of diagnosis\n• Date of surgery\n• Histological information about tumour\no Excision margin\no Lesion thickness\no TNM stage\no Presence or absence of ulceration\no Presence of absence of lymphovascular invasion\n• Lymph node status\n• Presence of absence of regional or metastatic disease\n• Co-morbidities\n• Primary treatment received\no Any subsequent treatments\n\nOnce this initial model has been generated, CUHFT intend to test it on a further set of patient data from this request to check that its predictions are accurate and valid.  Any necessary adjustments will be made to the model to increase its accuracy and further testing will take place.  When the model has been demonstrated to be accurate and valid it will serve as the backend of an online and interactive tool that will be available to the public and clinicians.  Here individuals will be able to enter information about themselves and their melanoma.  This information will be run through the model and its predictions presented in an easy to understand and interactive manner.  This information can be used in conjunction with advice and assistance from clinicians to make decisions about further investigations and treatment.  Should further data from NDRS be required for this purpose then a separate application would be made at that point as was deemed necessary.  Further changes to this model in the future may require updated data which would necessitate another application.\n\nWhere individuals have opted out of disease registration by the National Disease Registration Service (NDRS), their data has been permanently removed from the registry and therefore will not be disseminated under this Data Sharing Agreement (DSA). https://digital.nhs.uk/ndrs/patients/opting-out",
+   "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-681965-Y4H5P-v1.4",
+   "releases": [],
+   "start_date": "2026-07-31",
+   "sublicensing": "No",
+   "title": "Melanoma PREDICT Tool - Individualising prognostic stratification in melanoma ODR1920_246",
+   "version": "1.4",
+   "yielded_benefits": "The data has enabled CUHFT to begin the creation of a online calculator for members of the public and health professionals to use to estimate risks for patients diagnosed with cutaneous melanoma.  These outputs will enable patients to make more informed decisions about their treatment.  \n\nUnfortunately due to delays in the release of a complete dataset, data processing has not yet been completed to yield benefits."
+  }
+ ]
+}

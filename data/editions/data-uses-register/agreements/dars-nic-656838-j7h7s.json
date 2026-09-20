@@ -1,0 +1,197 @@
+{
+ "base_reference": "DARS-NIC-656838-J7H7S",
+ "versions": [
+  {
+   "activities": "The study team will analyse summary treatment patterns at centre level and at centre-dyad level. Centre-dyads will be defined based on patterns of co-care; two centres that share >=33% of their patients is a centre-dyad. Each centre-dyad will be modelled as a single unit (the partner-actor interaction model is not appropriate here). Analyses will examine rates of histological diagnosis, surgical extent, 30 day mortality and prolonged admission (>75th centile duration of admission), rates of maximal treatment and patient safety events (Objectives A, B, C). Patient safety events will be based on the translated AHRQ patient safety indicators 14,15. Novel endpoints will be defined in conjunction with our charity partners, patients and carers.  \n\nThe study team will conduct sensitivity analyses based on geographic patterns of referral (in-areas only vs. all) 16. Estimates of absolute cost but cannot be used to calculate relative cost-effectiveness; but within each pathway the study team will calculate the relative costs of treatment vs. non-treatment inpatient care (Objective D). \n \n\nAs an illustrative example, if the study team assume the impact on oncology volume is the same as the impact of surgical volume,  the study team would expect to find a difference in HR of ~0.6 between low-volume (<20) and high volume (>80) centres 6. 12 month mortality then might be expected to vary between 50% and 30%, with 95% CIs of +/- < 4%.  The study team are therefore confident that the study will have the power to detect differences that exist, in part due to the poor prognosis, and high event rates, for patients primary or secondary with brain tumours. In addition, these provide a direct route to improving outcomes in the short-term: this magnitude of difference would equate to ~ 200 patients per year in the GBM cohort alone. \n\n7.2\tStatistical methods \n\nThe study team will evaluate the impact of patient, tumour and treatment factors on outcomes in patients with primary or secondary brain tumours in England.  The study team will carry out analyses using patient-level data, but analyse volume effects for centres and dyads using a centre/dyad volumes in a random-effects model; Assessment of risks and outcomes will be carried out at individual patient level on all the patients in the dataset 17. \n\nThe study team will include sex and exact age, tumour diagnosis using combined ICD-10 and ICD-O3 (5 categories), Charlson index derived from secondary ICD-10 diagnostic codes, presence of 16 comorbidities included in the Charlson index, ethnic group, deprivation quintile and distance from both oncology and surgical centre. All these data items are in, or derivable from, our linked dataset. \n\nThe study team will construct proportional hazards models. The models will be used to predict the n-year probability of event for every patient, and aggregated to construct n-year probabilities of event by (hospital/ surgeon/ region). The adequacy of the proportional hazards model will be assessed using martingale residual plots and Schoenberg residual plots. If there the model does not meet the criteria for a Cox model, we will consider other modelling approaches (e.g. AFT models); in all cases we will construct parsimonious models using Akaike’s information criterion. We will use binary indicators for mortality at 30 and 90 days after diagnosis and use regression coefficients to predict expected outcome. \n\nThe study team will assess the impact of biology and treatment (Objective E) in carefully defined sub-cohorts, then further adjusted using propensity methods. Comparisons of the consequences of a brain tumour diagnosis will be made between primary and secondary diagnosis with the comparison inversely weighted by a propensity score calculated from relevant confounding variables such as age and gender. The study team will use the inverse PS method as none of the groups are “unexposed”. The study will conduct multiple independent analyses in an attempt to reduce bias, and report methods and results in line with recommendations 17. \n\n7.3\tHealth Economics \n\nThe study team will use reference costs from NHS Tariffs for 2015. We will estimate direct costs for 3 months before diagnosis and 12 months after diagnosis. We will distinguish between costs incurred in the in-patient and outpatient setting, planned and emergency care, during and after treatment. We will use NHS reference costs, length of stay and other measures of resource (e.g. intensive care days and treatment procedures) to estimate costs and will examine the impact on care and patient characteristics on total pathway costs. \n\nThe study team will distinguish direct treatment costs – neurosurgery, radiotherapy and chemotherapy from indirect treatment costs, based on procedure codes (HES) and data on chemotherapy and radiotherapy (RTDS and SACT)",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked DIDs",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES AE",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2024-06-25",
+   "expected_benefits": "To provide a comprehensive view of patterns of care (surgery, chemotherapy & radiotherapy), patient events (hospital admissions, death), outcomes (overall survival and novel outcomes) and costs of care (in-patient, outpatient; direct and indirect care costs) in adult patients with primary, secondary brain tumours or with a suspicion of brain tumour in England.\nTo assess variations in care, systematic drivers of variation in care, and associations between variations in care and outcomes and costs.\nTo explore the correlation between biology and outcomes by comparing the relative impact of tumour biology vs. treatment effect on outcomes, admissions and costs.",
+   "expected_output": "To provide a comprehensive view of patterns of care (surgery, chemotherapy & radiotherapy), patient events (hospital admissions, death), outcomes (overall survival and novel outcomes) and costs of care (in-patient, outpatient; direct and indirect care costs) in adult patients with primary, secondary brain tumours or with a suspicion of brain tumour in England.\nTo assess variations in care, systematic drivers of variation in care, and associations between variations in care and outcomes and costs.\nTo explore the correlation between biology and outcomes by comparing the relative impact of tumour biology vs. treatment effect on outcomes, admissions and costs.\nSince the data extraction (August 2020), we had two more updates, in May 2021 and October 2022 as Public Health England, NHS Digital and NHS England realised the data sent was incomplete, hence this data extension.",
+   "files_released": 0,
+   "objective": "Primary brain tumours are the leading cause of cancer death in the under the 40s and have the highest average number of years of life lost. Although primary brain metastases are rare, they are the leading cause of cancer death in the under the 40s, and 10 – 15% of all patients with extra-cranial cancers develop brain metastases, with a poor prognosis.\nThe aims of this project are to:\n• To provide a comprehensive view of patterns of care (surgery, chemotherapy & radiotherapy), patient events (hospital admissions, death), outcomes (overall survival and novel outcomes) and costs of care (in-patient, outpatient; direct and indirect care costs) in adult patients with primary Central Nervous System (CNS) tumours in England.\n• To assess variations in care, systematic drivers of variation in care, and associations between variations in care and outcomes and costs.\n• To explore the correlation between biology and outcomes by comparing the relative impact of tumour biology vs. treatment effect on outcomes, admissions and costs.\nReviewed and Approved\n\nIn line with the National data opt-out policy, opt-outs are not applied because the data is not Confidential Patient Information as defined in section 251(10) and (11) of the National Health Service Act 2006\n\nWhere individuals have opted out of disease registration by the National Disease Registration Service (NDRS), their data has been permanently removed from the registry and therefore will not be disseminated under this Data Sharing Agreement (DSA). https://digital.nhs.uk/ndrs/patients/opting-out",
+   "organisation": "IMPERIAL COLLEGE HEALTHCARE NHS TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-656838-J7H7S-v1.4",
+   "releases": [],
+   "start_date": "2023-06-26",
+   "sublicensing": "No",
+   "title": "Braina CaVa: Care, variation, outcomes, and costs in patients with brain tumours in England. (ODR1819_236)",
+   "version": "1.4",
+   "yielded_benefits": "The study team have explored:\n- costs of treatments and non treatments of patients diagnosed with a glioblastoma (WHO Grade IV brain tumours) or with a meningioma (WHO Grade I);\n- 30-day complication following a major resection;\n- the incidence, treatments and admissions of patients diagnosed with a glioblastoma;\n- end-of-life care for patients diagnosed with a primary brain tumour;\n- effect of dyads on outcomes and survival."
+  },
+  {
+   "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from the NDRS datasets to Imperial College London.  The Data will:\n•\tContain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at Imperial College London.\n\nThe Data will not leave England at any time.\n\nAccess is restricted to employees or agents of Imperial College London who have authorisation from the Chief Investigator.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThere will be no requirement and no attempt to reidentify individuals when using the Data.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked DIDs",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES AE",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2027-06-25",
+   "expected_benefits": "To provide a comprehensive view of patterns of care (surgery, chemotherapy & radiotherapy), patient events (hospital admissions, death), outcomes (overall survival and novel outcomes) and costs of care (in-patient, outpatient; direct and indirect care costs) in adult patients with primary, secondary brain tumours or with a suspicion of brain tumour in England.\nTo assess variations in care, systematic drivers of variation in care, and associations between variations in care and outcomes and costs.\nTo explore the correlation between biology and outcomes by comparing the relative impact of tumour biology vs. treatment effect on outcomes, admissions and costs.",
+   "expected_output": "To provide a comprehensive view of patterns of care (surgery, chemotherapy & radiotherapy), patient events (hospital admissions, death), outcomes (overall survival and novel outcomes) and costs of care (in-patient, outpatient; direct and indirect care costs) in adult patients with primary, secondary brain tumours or with a suspicion of brain tumour in England.\nTo assess variations in care, systematic drivers of variation in care, and associations between variations in care and outcomes and costs.\nTo explore the correlation between biology and outcomes by comparing the relative impact of tumour biology vs. treatment effect on outcomes, admissions and costs.\nSince the data extraction (August 2020), Imperial had two more updates, in May 2021 and October 2022 as Public Health England and NHS England realised the data sent was incomplete, hence this data extension.",
+   "files_released": 0,
+   "objective": "Imperial College London requires access to NHS England data for the purpose of the following research project: \nBraina CaVa: Care, variation, outcomes, and costs in patients with brain tumours in England. (ODR1819_236)\n\nThe following is a summary of the aims of the research project provided Imperial College London:\n• To provide a comprehensive view of patterns of care (surgery, chemotherapy & radiotherapy), patient events (hospital admissions, death), outcomes (overall survival and novel outcomes) and costs of care (in-patient, outpatient; direct and indirect care costs) in adult patients with primary Central Nervous System (CNS) tumours in England.\n• To assess variations in care, systematic drivers of variation in care, and associations between variations in care and outcomes and costs.\n• To explore the correlation between biology and outcomes by comparing the relative impact of tumour biology vs. treatment effect on outcomes, admissions and costs.\n\nPrimary brain tumours are the leading cause of cancer death in the under the 40s and have the highest average number of years of life lost. Although primary brain metastases are rare, they are the leading cause of cancer death in the under the 40s, and 10 – 15% of all patients with extra-cranial cancers develop brain metastases, with a poor prognosis.\n\nThe following NHS England Data will be accessed: \n- NDRS Cancer Registrations\n- NDRS Linked Cancer Waiting Times (Treatments only)\n- NDRS Linked DIDs\n- NDRS Linked HES A&E\n- NDRS Linked HES APC\n- NDRS Linked HES OP\n- NDRS National Cancer Patient Experience Survey\n- NDRS National Radiotherapy Dataset (RTDS)\n- NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n\nThe level of the Data will be:\n•\tPseudonymised\n\nThe Data will be minimised as follows:\n- Patients aged 18 years or over. \n- Patients with primary or secondary brain tumours (clinical and/or histological diagnosis). \n- Resident in England at time of diagnosis \n\nImperial College London is the research sponsor and] the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe funding is provided by the National Institute for Health Research (NIHR).  The funding is specifically for the project described.",
+   "organisation": "IMPERIAL COLLEGE HEALTHCARE NHS TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-656838-J7H7S-v2.4",
+   "releases": [],
+   "start_date": "2024-06-26",
+   "sublicensing": "No",
+   "title": "Braina CaVa: Care, variation, outcomes, and costs in patients with brain tumours in England. (ODR1819_236)",
+   "version": "2.4",
+   "yielded_benefits": "The study team have explored:\n- costs of treatments and non treatments of patients diagnosed with a glioblastoma (WHO Grade IV brain tumours) or with a meningioma (WHO Grade I);\n- 30-day complication following a major resection;\n- the incidence, treatments and admissions of patients diagnosed with a glioblastoma;\n- end-of-life care for patients diagnosed with a primary brain tumour;\n- effect of dyads on outcomes and survival.\n\nSince the data extraction (August 2020), Imperial had two more updates, in May 2021 and October 2022 as Public Health England and NHS England realised the data sent was incomplete, hence this data extension.\n\nThe work remains in progress, Imperial have published several abstracts and articles, and we have a set of papers almost ready for publication\n(https://www.computationaloncology.net/articles) \n(https://www.computationaloncology.net/posters) \n(https://www.computationaloncology.net/videos)"
+  }
+ ]
+}

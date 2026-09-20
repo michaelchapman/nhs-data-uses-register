@@ -1,0 +1,75 @@
+{
+ "base_reference": "DARS-NIC-796232-C6B3Q",
+ "versions": [
+  {
+   "activities": "UCL will transfer data to NHS England. The data will consist of identifying details (Study ID, NHS Number, Date of Birth) for the cohort to be linked with NHS England data. Once NHS England has confirmed that the data has been successfully linked, these identifiers would then be deleted from Data Safe Haven with no further access to re-identify the participants. \n \nNHS England will provide the relevant records from the HES APC, NHSBA, Civil Reg Death datasets to UCL. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.  \n \nThe Data will not be transferred to any other location. \n \nThe Data will be stored in the Data safe haven on servers at UCL. \n \nUCL uses offsite back-up services provided by Amazon Web Services. \n \nThe Data will be accessed onsite at the premises of UCL and accessed by authorised personnel via remote access.   \n \nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n \nFor remote access: \n•\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n•\tAccess controls granting users the minimum level of access required are in place; \n•\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n•\tMultifactor authentication (MFA) is required for remote access; \n•\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n•\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n \nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n \nThe Data will be linked at person record level with pseudonymised MRI imaging data held by the UCL. The data was obtained as part of the research study which the participants provided consent.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY COLLEGE LONDON (UCL)"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(2)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(2)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(2)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2029-03-30",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study. \n\nBy developing and validating advanced predictive models using CMR, the study will contribute to a more accurate assessment of risk and prognosis in patients with severe AS. This, in turn, could lead to more personalized care strategies, potentially improving long-term survival and quality of life for these patients.",
+   "expected_output": "The expected outputs of the processing will be: \n•\tA report of findings to NIHR, it is estimated that two reports will be produced.  \n•\tSubmissions to peer reviewed journals, such as European Heart Journal (and it’s Cardiovascular Imaging sub journal - EHJ CVI) \nJournal of American College of Cardiology (and it’s Cardiovascular Imaging sub journal - JACC CVI) The Journal of American Medical Association. Two submissions are expected to be produced; one will be produced two years after receiving the data and the last submission at the end of the project. \n•\tThe findings will be presented at relevant cardiology symposium and healthcare conferences, such as the European Society of Cardiology (ESC) Congress or the American College of Cardiology (ACC) Annual Meeting, to engage with the scientific community and update healthcare professionals on the novel application of CMR in AS prognosis. This should be achieved by the end of 2027. \n \nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n \nThe outputs will be communicated to relevant recipients through the following dissemination channels:  \n•\tJournals \n•\tSocial media \n•\tPosters displayed at conferences  \n•\tPublic promotion of the research findings will be cited in similar protocols or PIS.  \n•\tReports aimed at public and patients with similar conditions.",
+   "files_released": 19,
+   "objective": "The Data will be used for the purpose of a research project: The BSCMR Aortic Stenosis Outcome Study. \n \nThe Data will be used for the following aims: \n \n1.\tEnhance Prognostic Accuracy: Current risk models, such as Society of Thoracic Surgeons \n\n2.\t(STS) and EuroSCORE II, are not validated for long-term outcomes, especially post-Transcatheter Aortic Valve Implantation (TAVI). This study aims to show that Cardiac Magnetic Resonance (CMR) metrics (e.g., left ventricular mass, myocardial fibrosis) can improve outcome prediction beyond these traditional models. \n \n3.\tImprove Patient Selection: TAVI is currently limited to high-risk patients, but no validated scoring system exists for long-term mortality post-SAVR or TAVI. Linking CMR with long-term outcomes could help identify MRI features that better stratify patients, optimizing patient selection and treatment outcomes. \n \n4.\tUnderstand Treatment Response: By linking CMR data with prescribing information, the study will assess how medications influence post-surgical outcomes, potentially revealing ways to improve survival and reduce hospitalizations. \n \n5.\tFoster Long-Term Surveillance: Integrating CMR with HES data allows for better tracking of long-term health outcomes, including survival, hospital readmissions, and complications. This will help refine clinical guidelines for AS management.",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-796232-C6B3Q-v0.7",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 17,
+     "first_month": "2026-07",
+     "last_month": "2026-07",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2026-07",
+     "last_month": "2026-07",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Medicines dispensed in Primary Care (NHSBSA data)",
+     "files": 1,
+     "first_month": "2026-07",
+     "last_month": "2026-07",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2026-03-01",
+   "sublicensing": "No",
+   "title": "CMR predictors of mortality in patients undergoing Surgical AVR or TAVI for severe AS: The BSCMR Aortic Stenosis Outcome Study.",
+   "version": "0.7",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

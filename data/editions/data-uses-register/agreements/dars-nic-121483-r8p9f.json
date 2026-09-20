@@ -1,0 +1,236 @@
+{
+ "base_reference": "DARS-NIC-121483-R8P9F",
+ "versions": [
+  {
+   "activities": "Participants were recruited to the study from three participating recruitment centres; Barking, Havering and Redbridge University Hospitals NHS Trust, University Hospitals Leicester and University College Hospital London and asked to give consent for them and their babies to link the data collected directly from the patient with routinely collected data sources. \n\nData processing and analysis will be completed by University Hospitals Birmingham NHS FT (UHB), the University of Birmingham (UoB), and University College London (UCL), as named in this agreement. All personnel who process and handle the data are substantive employees of either UHB, UoB, or UCL respectively.   \n\nA central data warehouse will be housed within University Hospitals Birmingham NHS FT (UHB) servers. This warehouse will hold all the information from the recruiting centres for example prescribing, microbiology, radiology/ultrasound, infection control, maternity, and other study data from microbiota and questionnaires. \n\nUHB will securely transfer a file of identifiers (NHS number, Date of birth, Surname, and Gender) and study ID of the cohort to NHS Digital for linkage to hospital and mortality data. The linked hospital and mortality data including the study ID and no other identifiers is then returned to UHB. The linked data containing the study ID is stored within the central data warehouse separately from the identifiers and is not re-linked. UHB will then securely transfer the pseudonymised dataset to UoB for processing and analysis, through secure FTP transfer. UoB is then responsible to send the data (through secure FTP transfer) in a pseudonymised version to UCL for them to check the analysis and provide clinical oversight.\n\nThere will be no data linkage undertaken with NHS Digital data provided under this agreement that is not already noted in the agreement.  The pseudonymised data from NHS Digital is not re-linked to the direct identifiers at any point.\n\nAs this is a feasibility study, a comprehensive list of patient data for the cohort is required. From this analysis it may be possible to apply further filters in the future (i.e. perhaps a finding is discovered about a specific age group of patients and then at that point a filter could be placed based on this age group).  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "UNIVERSITY COLLEGE LONDON (UCL)",
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2021-11-30",
+   "expected_benefits": "The Baby Biome Study is urgently needed to investigate the long-term health impacts of common healthcare interventions at birth, including caesarean section and antibiotic administration, and understand how the gut microbiota and immune system interact to drive diseases including obesity, eczema, and asthma. The aspiration is to undertake a study that will report major scientific results within the first 5-10 years that inform the design of clinical trials and influence clinical and public health policy and practice to improve child and maternal health.\n\nThis is part of a long-term project. For this feasibility study, the initial measurable outcome for this study will be the successful application for funding for the expansion of this project. \n\nFor the overall programme, the aim is to see whether there are any causal links between early life colonisation with microbes, the baby immune system, clinical processes and subsequent child health outcomes such as infant weight gain, eczema, asthma, and febrile, respiratory or gastrointestinal illness. These studies will potentially inform the design of clinical trials or changes to clinical policy and practice to improve child health.",
+   "expected_output": "Data from this feasibility study will be used to provide evidence for an application for funding for an expansion of this study to undertake recruitment of 80,000 mothers and their babies. \n\nResults from the feasibility study will be presented at national and international scientific conferences. Examples of possible conferences planned include the World Antimicrobial Resistance Congress and the Conference of the Association of Maternal and Child Health focusing on child and maternal health, infectious disease, and the microbiota. Dates of the planned conferences have not yet been confirmed but it is expected to be late 2019 and throughout 2020. The primary aim here is a proof of concept and demonstration to potential funders and other stakeholders that it is possible to get access to the necessary data through NHS Digital - this has been a major source of concern. Given this, it is possible but unlikely that something of clinical significance will be found at this stage that would be worth reporting.\n\nThese outputs will include information about the process of linkage and the quality of data available for the purposes of this study. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 13,
+   "objective": "The Baby Biome Study (BBS) is a longitudinal study of mother-infant pairs, which aims to address fundamental population-level questions about infectious and immunological determinants of human health and disease. The study will collect biological samples and a range of demographic, social, and clinical exposure data from mothers and their babies around the time of birth, with follow-up through six and twelve month questionnaires and through subsequent routine health-record linkage to measure childhood health outcomes. The mothers have provided specific consent to health data record linkage for them and their babies. \n\nThis application/agreement is the initial feasibility stage of the study which involves a collaboration of researchers and clinicians from University College London (UCL), University of Birmingham (UOB), and University Hospitals Birmingham NHS Foundation Trust (UHB). UCL and UoB are acting as the joint Data Controllers in relation to this study, and have engaged University Hospitals Birmingham (UHB) for the data management element of the study (managing and administering the database), acting under instruction from the data controllers\n\nThe feasibility study requires data to demonstrate that it is possible to:\n(1) identify mothers and babies, who are consenting participants of the Baby Biome Study (BBS), in NHS Digital  held secondary healthcare datasets and mortality information; \n(2) extract and assess data quality for health and mortality outcomes and usage of secondary health care services; and \n(3) use the data provided by NHS Digital in combination with the Baby Biome Study dataset to investigate whether there is a correlation between exposures measured in Baby Biome Study (e.g. mode of delivery or baby gut microbiota patterns) and health outcomes measured using the data provided by NHS Digital (e.g. secondary care attendance for febrile, respiratory, or gastrointestinal illness).\n\nThe overall aims of the full study are to investigate the relationships between infant microbiota and the immune system, environment, clinical and feeding practices and subsequent health outcomes. To do this, the study will link routinely collected health record data with data collected at recruitment which includes biological samples from mother and child, as well as information relating to the maternity episode from the recruiting hospital (observations, prescriptions, blood test results, procedures and diagnoses). Additional data collected from the mother includes a number of health and lifestyle questionnaires.  \n\nThe initial feasibility stage will test whether it is possible to link the data obtained from the 3,400 mothers and their babies (approximately 6,800 participants), who have already consented to take part in the study. An evaluation of the ability to link the individual dataset's will be carried out, reporting on the quality and number of gaps of missing data, for each dataset. The evaluation will reveal each dataset's limitations and benefits, and the possibility of data linkage as the patient cohort expands. \n\nThe feasibility study requires data from NHS Digital relating to secondary health care services, as well as mortality information, providing the details of secondary health care usage for both mothers and their babies, who are consented participants of the Baby Biome Study. The long-term importance of this data linkage will allow the team to understand the longer term health outcomes and usage of secondary health care services. In addition, the importance of this data linkage will allow for exploration of causal relationships between microbiota data acquired at birth, the clinical processes throughout (such as antibiotic exposure and/or caesarean section) and long-term health outcomes. All work will be carried out within the UK. \n\nThe initial aims of the feasibility study that will be supplemented and improved by the inclusion of data from NHS Digital are:\n1) Quantify the proportion of study participants for whom data linkage is possible\n2) Assess data quality for routine data for study participants (missing data and cross-check against study database for known variables such as age).\n3) Use the data for this study only, to investigate whether there is a correlation between neonatal immune responses and health outcomes (with a particular focus on febrile, respiratory or gastrointestinal illnesses).",
+   "organisation": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-121483-R8P9F-v0.23",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 3,
+     "first_month": "2021-06",
+     "last_month": "2021-06",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 3,
+     "first_month": "2021-06",
+     "last_month": "2021-06",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "files": 3,
+     "first_month": "2021-06",
+     "last_month": "2021-06",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 3,
+     "first_month": "2021-06",
+     "last_month": "2021-06",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death - Secondary Care Cut",
+     "files": 1,
+     "first_month": "2021-06",
+     "last_month": "2021-06",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2018-12-01",
+   "sublicensing": "No",
+   "title": "Baby Biome Study",
+   "version": "0.23",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "Participants were recruited to the study from three participating recruitment centres; Barking, Havering and Redbridge University Hospitals NHS Trust, University Hospitals Leicester and University College Hospital London and asked to give consent for them and their babies to link the data collected directly from the patient with routinely collected data sources. \n\nData processing and analysis will be completed by University Hospitals Birmingham NHS FT (UHB), the University of Birmingham (UoB), and University College London (UCL), as named in this Agreement. All but one of the personnel who process and handle the data are substantive employees of either UHB, UoB, or UCL respectively. The one individual that is not substantively employed is a PhD student on a paid fellowship with UCL. This PhD student will be part of the research team and will be supervised by a substantive employee of UCL while carrying out the research, as stipulated in the fellowship award letter.\n\nA central data warehouse will be housed within University Hospitals Birmingham NHS FT (UHB) servers. This warehouse will hold all the information from the recruiting centres for example prescribing, microbiology, radiology/ultrasound, infection control, maternity, and other study data from microbiota and questionnaires. \n\nUHB will securely transfer a file of identifiers (NHS number, Date of birth, Surname, and Gender) and study ID of the cohort to NHS Digital for linkage to hospital and mortality data. The linked hospital and mortality data including the study ID and no other identifiers is then returned to UHB. The linked data containing the study ID is stored within the central data warehouse separately from the identifiers and is not re-linked. UHB will then securely transfer the pseudonymised dataset to UoB for processing and analysis, through secure FTP transfer. UoB is then responsible to send the data (through secure FTP transfer) in a pseudonymised version to UCL for them to check the analysis and provide clinical oversight.\n\nThere will be no data linkage undertaken with NHS Digital data provided under this Agreement that is not already noted in the Agreement.  The pseudonymised data from NHS Digital is not re-linked to the direct identifiers at any point.\n\nAs this is a feasibility study, a comprehensive list of patient data for the cohort is required. From this analysis, it may be possible to apply further filters in the future (i.e., perhaps a finding is discovered about a specific age group of patients, and then at that point, a filter could be placed based on this age group).  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "UNIVERSITY COLLEGE LONDON (UCL)",
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-11-30",
+   "expected_benefits": "The Baby Biome Study is urgently needed to investigate the long-term health impacts of common healthcare interventions at birth, including caesarean section and antibiotic administration, and understand how the gut microbiota and immune system interact to drive diseases including obesity, eczema, and asthma. The aspiration is to undertake a study that will report major scientific results within the first 5-10 years that inform the design of clinical trials and influence clinical and public health policy and practice to improve child and maternal health.\n\nThis is part of a long-term project. For this feasibility study, the initial measurable outcome for this study will be the successful application for funding for the expansion of this project. \n\nFor the overall programme, the aim is to see whether there are any causal links between early life colonisation with microbes, the baby immune system, clinical processes and subsequent child health outcomes such as infant weight gain, eczema, asthma, and febrile, respiratory or gastrointestinal illness. These studies will potentially inform the design of clinical trials or changes to clinical policy and practice to improve child health.",
+   "expected_output": "Data from this feasibility study will be used to provide evidence for funding applications linked to the original Baby Biome study.\n\nResults from the feasibility study will be presented at national and international scientific conferences and published in scientific journals. Initial study findings were published in an article in Nature magazine on 18th September 2019. The article  as well as its accompanying press release and FAQs document can be found in the Baby Biome Study webpage (https://www.ucl.ac.uk/global-health/research/a-z/baby-biome-study). Examples of possible conferences planned include the World Antimicrobial Resistance Congress and the Conference of the Association of Maternal and Child Health focusing on child and maternal health, infectious disease, and the microbiota. Dates of the planned conferences have not yet been confirmed but are expected to be 2022 and 2023. The primary aim of the planned work is a proof of concept and demonstration to potential funders and other stakeholders that it is possible to get access to the necessary data through NHS Digital - this has been a major source of concern. Given this, it is possible, but unlikely, that findings of clinical significance will be produced at this stage that would be worth reporting.\n\nThese outputs will include information about the process of linkage and the quality of data available for the purposes of this study. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "The Baby Biome Study (BBS) is a longitudinal study of mother-infant pairs, which aims to address fundamental population-level questions about infectious and immunological determinants of human health and disease. The study will collect biological samples and a range of demographic, social, and clinical exposure data from mothers and their babies around the time of birth, with follow-up through six and twelve month questionnaires and through subsequent routine health-record linkage to measure childhood health outcomes. The mothers have provided specific consent to health data record linkage for them and their babies. \n\nThis Agreement covers the initial feasibility stage of the study which involves a collaboration of researchers and clinicians from University College London (UCL), University of Birmingham (UOB), and University Hospitals Birmingham NHS Foundation Trust (UHB). UCL and UoB are acting as the joint Data Controllers in relation to this study, and have engaged University Hospitals Birmingham (UHB) for the data management element of the study (managing and administering the database), acting under instruction from the Data Controllers\n\nThe feasibility study requires data to demonstrate that it is possible to:\n(1) identify mothers and babies, who are consenting participants of the Baby Biome Study (BBS), in NHS Digital  held secondary healthcare datasets and mortality information; \n(2) extract and assess data quality for health and mortality outcomes and usage of secondary health care services; and \n(3) use the data provided by NHS Digital in combination with the Baby Biome Study dataset to investigate whether there is a correlation between exposures measured in Baby Biome Study (e.g., mode of delivery or baby gut microbiota patterns) and health outcomes measured using the data provided by NHS Digital (e.g., secondary care attendance for febrile, respiratory, or gastrointestinal illness).\n\nThe overall aims of the full study are to investigate the relationships between infant microbiota and the immune system, environment, clinical and feeding practices and subsequent health outcomes. To do this, the study will link routinely collected health record data with data collected at recruitment which includes biological samples from mother and child, as well as information relating to the maternity episode from the recruiting hospital (observations, prescriptions, blood test results, procedures and diagnoses). Additional data collected from the mother includes a number of health and lifestyle questionnaires.  \n\nThe initial feasibility stage will test whether it is possible to link the data obtained from the 3,400 mothers and their babies (approximately 6,800 participants), who have already consented to take part in the study. An evaluation of the ability to link the individual datasets will be carried out, reporting on the quality and number of gaps of missing data, for each dataset. The evaluation will reveal each dataset's limitations and benefits, and the possibility of data linkage as the patient cohort expands. \n\nThe feasibility study requires data from NHS Digital relating to secondary health care services, as well as mortality information, providing the details of secondary health care usage for both mothers and their babies, who are consented participants of the Baby Biome Study. The long-term importance of this data linkage will allow the team to understand the longer term health outcomes and usage of secondary health care services. In addition, the importance of this data linkage will allow for exploration of causal relationships between microbiota data acquired at birth, the clinical processes throughout (such as antibiotic exposure and/or caesarean section) and long-term health outcomes. The consenting participants will be followed up for 2-3 years since delivery. This timeframe allows for capture of most of the admissions for respiratory disease, severe generalized infections, and gastrointestinal illnesses for the child participants. The data required from NHS digital has been carefully selected to focus on the most relevant information needed for Baby Biome Study and to avoid unnecessary duplicating of information collected elsewhere. Where there is duplication between selected variables and variables collected elsewhere, for example, birth data (such as delivery mode), this enables data quality to be assessed. All work will be carried out within the UK. \n\nThe initial aims of the feasibility study that will be supplemented and improved by the inclusion of data from NHS Digital are:\n1) Quantify the proportion of study participants for whom data linkage is possible\n2) Assess data quality for routine data for study participants (missing data and cross-check against study database for known variables such as age).\n3) Use the data for this study only, to investigate whether there is a correlation between neonatal immune responses and health outcomes (with a particular focus on febrile, respiratory or gastrointestinal illnesses). \n\nArticle 6(1)e (processing is necessary for the performance of a task in the public interest or in the exercise of official authority vested in the controller) and Article 9(2)j (processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes) are being relied upon as the legal basis for processing under this Agreement. There is public and scientific interest in the research detailed in this Agreement, as described above, which aims to answer fundamental population-level questions about infectious and immunological determinants of human health and disease.",
+   "organisation": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-121483-R8P9F-v1.2",
+   "releases": [],
+   "start_date": "2021-12-01",
+   "sublicensing": "No",
+   "title": "Baby Biome Study",
+   "version": "1.2",
+   "yielded_benefits": "The planned work has not yet been completed as the linked HES and mortality data was received in June 2021. Data cleaning is currently underway, after which, analysis will begin. As such, no benefits have been yielded to date."
+  },
+  {
+   "activities": "Participants were recruited to the study from three participating recruitment centres; Barking, Havering and Redbridge University Hospitals NHS Trust, University Hospitals Leicester and University College Hospital London and asked to give consent for them and their babies to link the data collected directly from the patient with routinely collected data sources. \n\nData processing and analysis will be completed by University Hospitals Birmingham NHS FT (UHB), the University of Birmingham (UoB), and University College London (UCL), as named in this Agreement. All but one of the personnel who process and handle the data are substantive employees of either UHB, UoB, or UCL respectively. The one individual that is not substantively employed is a PhD student on a paid fellowship with UCL. This PhD student will be part of the research team and will be supervised by a substantive employee of UCL while carrying out the research, as stipulated in the fellowship award letter.\n\nA central data warehouse will be housed within University Hospitals Birmingham NHS FT (UHB) servers. This warehouse will hold all the information from the recruiting centres for example prescribing, microbiology, radiology/ultrasound, infection control, maternity, and other study data from microbiota and questionnaires. \n\nUHB will securely transfer a file of identifiers (NHS number, Date of birth, Surname, and Gender) and study ID of the cohort to NHS Digital for linkage to hospital and mortality data. The linked hospital and mortality data including the study ID and no other identifiers is then returned to UHB. The linked data containing the study ID is stored within the central data warehouse separately from the identifiers and is not re-linked. UHB will then securely transfer the pseudonymised dataset to UoB for processing and analysis, through secure FTP transfer. UoB is then responsible to send the data (through secure FTP transfer) in a pseudonymised version to UCL for them to check the analysis and provide clinical oversight.\n\nThere will be no data linkage undertaken with NHS Digital data provided under this Agreement that is not already noted in the Agreement.  The pseudonymised data from NHS Digital is not re-linked to the direct identifiers at any point.\n\nAs this is a feasibility study, a comprehensive list of patient data for the cohort is required. From this analysis, it may be possible to apply further filters in the future (i.e., perhaps a finding is discovered about a specific age group of patients, and then at that point, a filter could be placed based on this age group).  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "UNIVERSITY COLLEGE LONDON (UCL)",
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2024-11-30",
+   "expected_benefits": "The Baby Biome Study is urgently needed to investigate the long-term health impacts of common healthcare interventions at birth, including caesarean section and antibiotic administration, and understand how the gut microbiota and immune system interact to drive diseases including obesity, eczema, and asthma. The aspiration is to undertake a study that will report major scientific results within the first 5-10 years that inform the design of clinical trials and influence clinical and public health policy and practice to improve child and maternal health.\n\nThis is part of a long-term project. For this feasibility study, the initial measurable outcome for this study will be the successful application for funding for the expansion of this project. \n\nFor the overall programme, the aim is to see whether there are any causal links between early life colonisation with microbes, the baby immune system, clinical processes and subsequent child health outcomes such as infant weight gain, eczema, asthma, and febrile, respiratory or gastrointestinal illness. These studies will potentially inform the design of clinical trials or changes to clinical policy and practice to improve child health.",
+   "expected_output": "Data from this feasibility study will be used to provide evidence for funding applications linked to the original Baby Biome study. \n\nResults from the feasibility study will be presented at national and international scientific conferences and published in scientific journals. Initial study findings were published in an article in Nature magazine on 18th September 2019. The article as well as its accompanying press release and FAQs document can be found in the Baby Biome Study webpage (https://www.ucl.ac.uk/global-health/research/a-z/baby-biome-study). \n\nThe HES data were received in June 2021. The association between early life gut microbiota and respiratory health outcomes are currently being analysed. This works tests the hypothesis that differences in early life gut microbiota are associated with differences in respiratory health outcomes at the age of two years. It is expected that this work to be completed by the end of 2023. Results will be presented at national and international scientific conferences and published in scientific journals. Examples of possible conferences planned include the World Antimicrobial Resistance Congress and the Conference of the Association of Maternal and Child Health focusing child and maternal health, infectious disease, and the microbiota. Dates of the planned conferences have not yet been confirmed but are expected to be 2023 and 2024.\n\nThese outputs will include information about the process of linkage and the quality of data available for the purposes of this study. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "The Baby Biome Study (BBS) is a longitudinal study of mother-infant pairs, which aims to address fundamental population-level questions about infectious and immunological determinants of human health and disease. The study will collect biological samples and a range of demographic, social, and clinical exposure data from mothers and their babies around the time of birth, with follow-up through six and twelve month questionnaires and through subsequent routine health-record linkage to measure childhood health outcomes. The mothers have provided specific consent to health data record linkage for them and their babies. \n\nThis Agreement covers the initial feasibility stage of the study which involves a collaboration of researchers and clinicians from University College London (UCL), University of Birmingham (UOB), and University Hospitals Birmingham NHS Foundation Trust (UHB). UCL and UoB are acting as the joint Data Controllers in relation to this study, and have engaged University Hospitals Birmingham (UHB) for the data management element of the study (managing and administering the database), acting under instruction from the Data Controllers\n\nThe feasibility study requires data to demonstrate that it is possible to:\n(1) identify mothers and babies, who are consenting participants of the Baby Biome Study (BBS), in NHS Digital  held secondary healthcare datasets and mortality information; \n(2) extract and assess data quality for health and mortality outcomes and usage of secondary health care services; and \n(3) use the data provided by NHS Digital in combination with the Baby Biome Study dataset to investigate whether there is a correlation between exposures measured in Baby Biome Study (e.g., mode of delivery or baby gut microbiota patterns) and health outcomes measured using the data provided by NHS Digital (e.g., secondary care attendance for febrile, respiratory, or gastrointestinal illness).\n\nThe overall aims of the full study are to investigate the relationships between infant microbiota and the immune system, environment, clinical and feeding practices and subsequent health outcomes. To do this, the study will link routinely collected health record data with data collected at recruitment which includes biological samples from mother and child, as well as information relating to the maternity episode from the recruiting hospital (observations, prescriptions, blood test results, procedures and diagnoses). Additional data collected from the mother includes a number of health and lifestyle questionnaires.  \n\nThe initial feasibility stage will test whether it is possible to link the data obtained from the 3,400 mothers and their babies (approximately 6,800 participants), who have already consented to take part in the study. An evaluation of the ability to link the individual datasets will be carried out, reporting on the quality and number of gaps of missing data, for each dataset. The evaluation will reveal each dataset's limitations and benefits, and the possibility of data linkage as the patient cohort expands. \n\nThe feasibility study requires data from NHS Digital relating to secondary health care services, as well as mortality information, providing the details of secondary health care usage for both mothers and their babies, who are consented participants of the Baby Biome Study. The long-term importance of this data linkage will allow the team to understand the longer term health outcomes and usage of secondary health care services. In addition, the importance of this data linkage will allow for exploration of causal relationships between microbiota data acquired at birth, the clinical processes throughout (such as antibiotic exposure and/or caesarean section) and long-term health outcomes. The consenting participants will be followed up for 2-3 years since delivery. This timeframe allows for capture of most of the admissions for respiratory disease, severe generalized infections, and gastrointestinal illnesses for the child participants. The data required from NHS digital has been carefully selected to focus on the most relevant information needed for Baby Biome Study and to avoid unnecessary duplicating of information collected elsewhere. Where there is duplication between selected variables and variables collected elsewhere, for example, birth data (such as delivery mode), this enables data quality to be assessed. All work will be carried out within the UK. \n\nThe initial aims of the feasibility study that will be supplemented and improved by the inclusion of data from NHS Digital are:\n1) Quantify the proportion of study participants for whom data linkage is possible\n2) Assess data quality for routine data for study participants (missing data and cross-check against study database for known variables such as age).\n3) Use the data for this study only, to investigate whether there is a correlation between neonatal immune responses and health outcomes (with a particular focus on febrile, respiratory or gastrointestinal illnesses). \n\nArticle 6(1)e (processing is necessary for the performance of a task in the public interest or in the exercise of official authority vested in the controller) and Article 9(2)j (processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes) are being relied upon as the legal basis for processing under this Agreement. There is public and scientific interest in the research detailed in this Agreement, as described above, which aims to answer fundamental population-level questions about infectious and immunological determinants of human health and disease.",
+   "organisation": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-121483-R8P9F-v2.4",
+   "releases": [],
+   "start_date": "2022-12-01",
+   "sublicensing": "No",
+   "title": "Baby Biome Study",
+   "version": "2.4",
+   "yielded_benefits": "The HES data were received in June 2021, and the data are currently being analysed."
+  }
+ ]
+}

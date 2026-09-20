@@ -1,0 +1,75 @@
+{
+ "base_reference": "DARS-NIC-391119-T4J3R",
+ "versions": [
+  {
+   "activities": "The Discovery tool includes data from various sources including Scottish NHS Boards and Health & Social Care, and also inpatient, outpatient, A&E and maternity data from England and Wales. Data is transferred using various secure file transfer methods including the (English) SEFT service.\n\nThe pseudonymised HES data is provided in a flat-file format. The files are uploaded onto the secure server at NNS and only records from hospitals that are current peers for the relevant hospitals and fields that are required to calculate the current set of performance indicators are transferred to the Discovery data mart. The original files are retained and are re-processed whenever the peer selection for a hospital changes (which, it is anticipated could be once or twice a year at most, depending on evolving customer requirements). The data in the data mart is then aggregated to location and specialty levels, and rates are calculated, and the resulting data extracts drive the visualisations in Tableau. Small numbers are suppressed in line with the HES Analysis guide.\n\nReceiving data on all English NHS hospitals allows NNS to select the most appropriate peers for the hospitals based on the latest data, and to be flexible when service changes take place. The list of benchmarking indicators available in NSS Discovery is agreed nationally and is under continuous development (as guided by national governance groups), and, therefore, it is anticipated the number of fields needed to calculate the indicators to gradually increase as well.\n\nNSS Discovery is an NHS Scotland Management System built using Tableau software. It can only be accessed by approved users within NHS Scotland health boards and the Scottish Government via a secure log in. The Discovery service is funded by the NHS Scotland Territorial Health Boards directly to NSS-ISD with money top sliced from the Scottish Government.\n\nThe Discovery tool is complemented with a ‘wrap-around service’ (WAS) that provides support to Discovery subscribers including bespoke analysis and reports. The WAS outputs may include figures from English and Welsh peers as defined by the Boards themselves to enhance their benchmarking; for the same or similar indicators, and at the same granularity (small numbers suppressed in line with the HES Analysis Guide) as available in the Discovery tool.\n\nThe network data storage devices, including Tableau hardware, are located within a secure off-site location at ATOS in Livingston, which is managed under an existing NHS Scotland-wide service contract. Maintenance of the hardware is handled by NSS staff. ATOS will be responsible for the building, location and server room security. All access to the service from the Internet will be via Atos Origin Alliance (AOA) Internet security gateway, a service that provides reverse proxy and Intrusion Prevention System (IPS) functionality.\n\nThe HES data extracts are shown alongside the Scottish Morbidity Record (SMR) data and the Welsh data, trusts and locations and are shown within peer groups to be used by the NHS Scotland Boards in benchmarking comparisons. Trend analysis across all time points (April 2013 onwards) is available. \n\nNSS Discovery is an NHS Scotland Management System which can only be accessed by approved users within NHS Scotland health boards and the Scottish Government via a secure log in.\n\nThe Discovery service is funded by the NHS Scotland Territorial Health Boards directly to NSS-ISD with money top sliced from the Scottish Government.\n\nDiscovery benchmarking Indicators (outputs) are agreed nationally and are updated to agreed guidelines via appropriate national governance groups.\n\nNo data from Discovery will be publicly available and data contained within it will not be used for sales and marketing purposes.\n\nOnly substantive employees of National Services Scotland can access the record-level data.  Third parties will only have access to data that is aggregated (with small numbers suppressed in line with the HES Analysis Guide).",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "NHS NATIONAL SERVICES SCOTLAND"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-08-18",
+   "expected_benefits": "Discovery has a broad user base which extends across the following staff groups within NHS Scotland, Managers, Planners, Analysts, Clinicians, Accountants and Improvement Advisors. They will use the comparative and benchmarking information to underpin service planning and delivery.\n\nDiscovery provides an Atlas of variation for NHS Boards to quickly assess and understand where there are opportunities to identify and realise improvement prospects e.g.:\n\nNHS Boards can use NSS Discovery to identify and learn from better performing peers about how they run their service and to consider if adopting these approaches could improve patient outcomes, drive efficiencies and reduce harm.  The Discovery Service has worked with service users to identify these opportunities in 2016-17 and are assisting the boards to make transformational change within their organisations.\n\nFor some NHS Boards benchmarking information from Scottish peers is insufficient and they particularly value the ability to compare with English peers. This allows them to make more appropriate comparisons, which will support better decision making.",
+   "expected_output": "Continued inclusion (the HES data being requested as part of this application is already in use with NSS Discovery - Benchmarking Visualisation service) as peer comparators for indicators used for benchmarking and monitoring by NHS Scotland health boards. \n\nHES data is currently, and will continue to be, included in interactive tableau visualisations, tables and charts, that are updated on a monthly basis with the latest available data. The data is shown at aggregate level, with small numbers suppressed in line with the HES Analyses Guide, for a number of key indicators that are aligned to the Institute of Medicine’s six dimensions of quality.\n\nThese outputs are only accessible by approved users within NHS Scotland and the Scottish Government via a secure log in. \n\nThe Wrap Around Service that supports NSS Discovery provides NHS Boards, when requested, with additional more detailed ad hoc analysis for specific comparators, still at an aggregate level. These ad hoc requests would be produced as management information only in the form of excel tables/charts/presentations etc.\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 109,
+   "objective": "The National Services Scotland (NSS) Discovery service is an N3 / SWAN based information system providing statistical and comparative benchmarking data updated on a monthly cycle to help Scottish NHS Territorial health boards review, monitor and plan services to support and meet their quality improvement ambitions.\n\nThe system provides historical data up to four years back and up until the end of the previous calendar month to enable trend analysis. It shows variation between locations including potentially unwarranted variation for a range of indicators. Comparisons are shown for Scottish Health Boards and locations within those, with an agreed set of peers defined to allow effective peer comparisons and benchmarking.\n\nSome NHS Boards in Scotland have no natural NHS peer comparisons from within Scotland and so require peers from outwith Scotland. These include, for example, the two largest boards (NHS Greater Glasgow and Clyde and NHS Lothian) and a large national elective centre (the Golden Jubilee hospital). The pseudonymised English data provides the NHS Boards with appropriate peer comparisons. Similar arrangements are in place with NWIS in Wales to provide rural comparisons for the three small island Boards that have no natural peers in Scotland.\n\nProviding the NSS Information Services Division with this information allows the researchers to better identify potential areas for improvement, and to understand where best practice is happening. It improves the ability to work with Boards to identify service improvements, leading to better outcomes for patients as well as the chance to consider new sustainable models for productive opportunities and efficiency savings.",
+   "organisation": "NHS NATIONAL SERVICES SCOTLAND",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-391119-T4J3R-v3.4",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 37,
+     "first_month": "2017-09",
+     "last_month": "2020-07",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 37,
+     "first_month": "2017-09",
+     "last_month": "2020-07",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 35,
+     "first_month": "2017-09",
+     "last_month": "2020-05",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2017-08-19",
+   "sublicensing": "No",
+   "title": "Monthly HES data request - NHS National Services Scotland",
+   "version": "3.4",
+   "yielded_benefits": ""
+  }
+ ]
+}

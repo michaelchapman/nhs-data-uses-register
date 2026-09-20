@@ -1,0 +1,172 @@
+{
+ "base_reference": "DARS-NIC-147774-MZT95",
+ "versions": [
+  {
+   "activities": "This is an observational prospective cohort study to compare the risk of development initially over 5 years, of the endpoint in two cohorts: (i) a group of patients with Juvenile Idiopathic Arthritis newly exposed to a biologic therapy and (ii) A comparison cohort of patients with JIA newly exposed to DMARD therapies (e.g, Methotrexate).  We intend to flag both the biologic cohort and the comparison cohort for notification of mortality and cancer registration.  A copy of the death certificate will be required for those who die and a copy of the histology for those who develop a malignancy. This will enable us to monitor any adverse events in both cohorts",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE UNIVERSITY OF MANCHESTER"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "name": "MRIS - Personal Demographics Service",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "Ongoing",
+     "legal_basis": "",
+     "name": "MRIS - Scottish NHS / Registration",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2021-01-20",
+   "expected_benefits": "This study will document use of biologic drugs in children with Juvenile Idiopathic Arthritis (JIA) and other rheumatic diseases in order to assess their efficacy and safety during routine clinical use. A further aim of the study is to collect samples of DNA (via a blood or saliva sample) of children receiving biologic therapy in the UK to allow us to test whether there are variations in genes which can predict who will respond and who may get serious side effects.",
+   "expected_output": "",
+   "files_released": 8,
+   "objective": "Juvenile idiopathic arthritis (JIA) is a chronic disease characterised by the onset of inflammatory arthritis before the 16th birthday. Historically, the treatment of this condition has been limited to non-steroidal anti-inflammatory drugs (eg. ibuprofen), anti-rheumatic drugs, particularly methotrexate (MTX) and corticosteroids. The advent of biologic drugs has revolutionized the treatment of this and other rheumatic diseases. Unlike MTX and other traditional therapies for JIA, which offer general immune suppression in an attempt to control the disease, these new biologic therapies are directed specifically at one specific protein or cell that is felt to be important in driving the arthritis, with a hope of turning off the disease. It was decided to establish the Biologics for Children with Rheumatic Diseases study to monitor the long term safety and efficacy of these new biologic treatments in children with Juvenile Idiopathic Arthritis",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-147774-MZT95-v0.0",
+   "releases": [
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "files": 5,
+     "first_month": "2016-09",
+     "last_month": "2020-03",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "files": 3,
+     "first_month": "2017-09",
+     "last_month": "2020-03",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2011-01-21",
+   "sublicensing": "No",
+   "title": "MR1210 - The Long-term Safety and Efficacy of Biologic Therapies in Children with Rheumatic Diseases",
+   "version": "0.0",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored and processed. No new data will be provided by NHS Digital under this Agreement.\n\nThe study data, including data provided by NHS Digital under previous agreements, are currently held by The University of Manchester. \n\nThe study team provides the following identifying details for BCRD study participants to NHS Digital to allow the flagging for mortality and cancer notifications to take place:  -   BCRD Study Number -   Date of Birth -   NHS number. Participants' patient entries are traced and flagged by NHS Digital.  The data the study team will receive back from NHS Digital will be identifiable including participants' BCRD Study Number and cancer and death details.\n\nData obtained from NHS Digital data will be downloaded into the University of Manchester’s Data Safe Haven for two purposes: \n \nElement 1: A flag (BCRD Study Number, occurrence of cancer/death (Yes/No) will be transferred from the Data Safe Haven to the BCRD Database to show that the patient has had a cancer/death. No other patient level NHS Digital data will be transferred to the BCRD database, just the fact that either of these events has been reported by NHS Digital. This will allow the study team to contact the hospital to obtain further details surrounding the event. Once the study team have this information confirmed by the hospital team.  \n\nElement 2: The full NHS Digital dataset will be stored in the University Data Safe Haven. When the BCRD study reaches a sufficient size, usually at pre-determined points based on the number of patients recruited to the study and the length of exposures to their treatments, a pre-specified analysis will be undertaken against the primary objectives of the study.  Prior to starting this analysis, a more detailed analysis plan will be prepared by the statistician.  A copy of the BCRD dataset will be transferred into the Data Safe Haven and, when required according to the analysis plan, the full NHS Digital data on deaths and cancers will be linked in order to perform statistical analyses of the larger combined dataset to allow the University of Manchester to undertake the specified analysis.  Only aggregated data in the form of summary data tables will be exported out of the Data Safe Haven to allow the University of Manchester to publish the results of the study which will help inform clinicians, patients, regulators and policy makers on the long-term safety of these drugs.  \n\nOnly the University of Manchester will process the NHS Digital data under this Data Sharing Agreement.  The Data processing is only carried out by substantive employees of the University of Manchester who, as part of their employment, carry out regular mandatory training in data protection.  Processing will only occur within the University of Manchester͛'s Data Safe Haven.  The study data will not be linked with any other sources.  There will be no requirement/attempt to re-identify individuals.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE UNIVERSITY OF MANCHESTER"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2021-11-14",
+   "expected_benefits": "This study documents the use of biologic and biosimilar therapies in children and young people with Juvenile Idiopathic Arthritis (JIA) and other rheumatic diseases in order to assess their efficacy and safety during routine clinical use. A further aim of the study is to collect samples of DNA (via a blood or saliva sample) of children receiving biologic therapy in the UK to allow the testing of whether there are variations in genes which can predict who will respond and who may get serious side effects.\n\nPlanned future analysis/output will focus on two related and equally important research questions: \n\n(1) What is the long term risk of exposure to established biologic therapies? \nThe first patient was enrolled into BCRD in 2010. Therefore, over the next few years the study team will start to observe who has been receiving biologic therapy for over 10 years. This is an unexplored area due to the very nature of when this drug was introduced. Hence, the BCRD can give unique insight into the very long-term use of biologic therapy, including treatment persistence and long-term safety, such as late occurrence of malignancies. The presence of equally long follow-up in an untreated comparison cohort will add to these analyses. \n\n(2) What is the absolute and relative effectiveness and risk of new biologic/biosimilar therapies? \nThe most challenging analysis will be to study the risks of biosimilar therapies. There has been a noticeable switch in some patients from originator biologic therapies to biosimilar products in the UK, despite a lack of supporting evidence about the safety of switching. The study team’s analyses in this area will include a comparison of first-line biosimilar use with biologic originator, using recent historical originator data as a comparison, as well as the safety of a switch programme. An analysis of outcomes after switching needs careful consideration due to inherent selection bias (patients who switch between originator and biosimilar have usually experienced a response to the originator and by definition, have not experienced a treatment limiting adverse event). This selection bias will have to be considered when changes in disease activity and occurrence of adverse events following a switch are analysed and the rich historical data within the BCRD study should allow for this. Additional study data collection forms are in place to ensure as much data as possible is captured regarding disease activity data at the point of switching. \n\nCommon to most research studies, this linkage may not immediately benefit the participants in the study currently, but better understanding course of the illness will help in choosing the best treatment for people with JIA in the future.",
+   "expected_output": "The outputs for the BCRD study will include reports, submissions to peer reviewed journals and presentations and posters at relevant conferences.  BCRD Study data will be combined with NHS Digital data to maximise data available and used in the outputs.  Only aggregated data will be included in any study outputs and data will be safeguarded by ensuring that results which include small numbers which could identify study participants will be excluded. \n\nDissemination and communication of results to stakeholders includes regular review by bodies including the Paediatric Biologics Registers Steering Committee and Data Monitoring and Ethics Committees.  The study also has active social media channels on Twitter (@BCRD_Study) and a comprehensive study website (https://sites.manchester.ac.uk/bcrdbspar/). Newsletters are published for participants/families, as well as a separate newsletter for staff working on the study at NHS sites.   \n\nA number of papers have been published using BCRD data since 2010 https://sites.manchester.ac.uk/bcrdbspar/for-participants/our-discoveries/ \n\nEnsuring output achieves maximum benefit for both clinicians and patients:\n\nIn terms of exploitation of the results/outputs, people can apply to access study data for research purposes, any application is reviewed by the steering committee before approval. \nData does not include record level data or data derived from that provided by NHS Digital. This would include aggregated NHS Digital data with small numbers suppressed and study data provided from sites.\nThe full Steering Committee meet at least twice a year but can be convened on an ad hoc basis. The steering committee comprises of:\n1. Chair (Independent BSPAR member or paediatrician)\n2. Chief investigator \n3. Arthritis Research UK Paediatric Rheumatology CSG/MCRN Representative \n4. Scientific advisor \n5. Lay person (consider cross representation by CSG lay person)\n6. Paediatric rheumatology nurse\n\nPatients:\nPatient/charity groups are also approached for collaboration and brainstorming of future research and ideas for analyses.\n\nThe study team have developed a strong relationship with JIA-at-NRAS (a patient support group https://jia.org.uk/) which also provides insight into the questions patients have about these therapies, which may be looked at in future analyses. The study contributes articles to the JIA@NRAS magazine and has put a call out for ideas for future analyses. \n\nThe study has a public website www.sites.manchester.ac.uk/bcrdbspar with a dedicated section for study participants. This is regularly updated with information about the study, with links to publications and lay summaries of all work being of particular importance. \n\nClinicians:\nData from BCRD (along with the parallel BSPAR Etanercept Study) was referenced in the NHS England Clinical Commissioning Policy Statement: Biologic Therapy for the treatment of JIA https://www.england.nhs.uk/commissioning/wp-content/uploads/sites/12/2015/10/e03pd-bio-therapies-jia-oct15.pdf , and has had a number of publications in scientific journals so far (https://sites.manchester.ac.uk/bcrdbspar/for-participants/our-discoveries/) \n\nThe study will continue a programme of outputs to address questions related to key safety concerns of biologic therapies based on email queries, discussions at conferences (locally, nationally and internationally) and other communications as well as the clinical practice of the Chief Investigator. The fact that these safety queries can be discussed with the team will be advertised more widely through newsletters and websites. The pharmacoepidemiologic research programme within the BCRD Study will be further driven by knowledge gaps identified in systematic reviews, such as during guideline development. \n\nThe majority of the research is presented at national and international conferences. The study has also established an ongoing and mutually beneficial collaboration with JIA at NRAS (National Rheumatoid Arthritis Society; a patient-led organisation) as one route of dissemination. Lay summaries are created to make the research more accessible to the patients and their families.",
+   "files_released": 0,
+   "objective": "This Data Sharing Agreement permits the retention and processing of the data provided under previous iterations of this Agreement for an interim period. This is a pragmatic approach to provide an active Agreement whilst enabling The University of Manchester to complete the necessary actions to enable a subsequent application to extend/renew the Agreement meeting all applicable data sharing standards as published in NHS Digital’s website (see: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance).\n\nThe University of Manchester requires data from NHS Digital in order to enhance the safety data already captured in the Biologics for Children with Rheumatic Diseases Study (BCRD). The safety data details adverse events that are captured from the participant’s clinical rheumatology team directly (via completion of follow up forms, using the participant’s clinical case notes). \n\nThis is a long-term observational study to monitor the safety of new biologic and targeted therapies prescribed for juvenile idiopathic arthritis (JIA) in routine healthcare, specifically to understand if these new drugs increase the risks of developing cancer or premature death above the expected risks in a population with similar disease characteristics not receiving these therapies. Detailed and fully adjusted analyses of the full dataset will take place in the University of Manchester Data Safe Haven where BCRD data will be combined with the NHS Digital data on cancer and mortality to see if there is any increased risk of cancer and premature death due to these drugs. The study already captures extensive healthcare data on consented study participants via the NHS rheumatology hospital team. This includes the capture of special category data (namely health data and ethnicity). Data from NHS Digital on the occurrence of key outcomes of interest (specifically cancer and death) will ensure that the study have robust and complete data on these important outcomes.  \n\nThe University of Manchester's justification for processing is for the public interest in the area of medical research to further scientific understanding of inflammatory diseases and therapeutic pathways. For research the legal reason is “Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller” (Article 6 (1) (e) of GDPR):\nFor sensitive information the legal reason is: “the processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes… which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject”. (Article 9 (2) (j) of GDPR).\n\nData will be held securely and the level of personal data processed will be minimised to ensure safeguarding of the data. Efforts have been made to minimise the data requested; this is limited to a cohort and by only selecting fields necessary for the study. The University of Manchester only require details of the event linked using the unique patient study ID. Names, DOB, sex, and NHS number are not required from NHS Digital. \n\nThe first patient was enrolled in to BCRD in 2010. Therefore, over the next few years the study team will start to observe who has been receiving biologic therapies for over 10 years. This is an unexplored area due to the very nature of when this drug was introduced. Hence, the BCRD study can and will give unique insight into the very long-term use of biologic therapy, including treatment persistence and long-term safety, such as late occurrence of malignancies. The presence of equally long follow-up in an untreated comparison cohort will add to these analyses.\n\nThe most challenging analysis will be to study the risks of biosimilar therapies. There has been a noticeable switch in some patients from originator to biosimilar products in the UK, despite a lack of supporting evidence about the safety of switching. The study team’s analyses in this area will include a comparison of first-line biosimilar use with originator, using recent historical originator data as a comparison, as well as the safety of a switch programme. An analysis of outcomes after switching needs careful consideration due to inherent selection bias (patients who switch between originator and biosimilar have usually experienced a response to the originator and by definition, have not experienced a treatment limiting adverse event). This selection bias will have to be considered when changes in disease activity and occurrence of adverse events following a switch are analysed and the rich historical data within the BCRD Study should allow for this. Additional study data collection forms are in place to ensure as much data as possible is captured regarding disease activity data at the point of switching.\n\nPublished results from the full analysis will be in the form of aggregated datasets and individual personal data will not be shared outside of the study team. No NHS Digital data will be shared outside of the study team.\n\nThe primary objective of the study is to compare the risk of key safety outcomes (including cancer and death) between UK patients with juvenile idiopathic arthritis (JIA) starting any new biologic, biosimilar or other new targeted therapy with appropriate comparator cohorts already established in the BCRD Study. The data requested will allow the study team to link the hospital and treatment data already captured under the study consent with national cancer and death data on study participants to ensure the register has no missing data on these two major outcomes. This will then allow the study to understand whether there is any increased risk of cancer and death in patients receiving these drugs.\n\nThe BCRD study started in 2010; with over 10 years of follow-up in some patients, the study continues to monitor for long-term risks of the original biologic therapies, whilst at the same time, monitoring the safety of newer drugs that have been later brought in to use in clinical practice.  The study is a prospective cohort study comparing the risk of development of the endpoints between: \n1. an exposed group of children with JIA with their first exposure to a biologic drug (other than etanercept), And\n \t2. a comparison cohort of children with JIA with similar disease characteristics receiving methotrexate therapy.\n\nOne of the main objectives as listed in the study protocol is “To test the hypothesis that use of these biologic therapies in children with JIA increase the risk of serious infection, malignancy, other important co-morbidity and death compared to children receiving MTX.”. The additional data requested under this agreement from NHS Digital will allow the study to have full outcome data on cancer and death and will enhance the BCRD dataset.\n\nRecruitment commenced in 2010 and continues to date.  As of July 2020, 1445 study IDs had been assigned. Notifications for mortality and cancer data is required from when the study began with the first participant in 2010.  Under previous iterations of this Data Sharing Agreement, the study has received data from NHS Digital on these outcomes since the study started in 2010 (Ref: DSAS0142  MR1210).  The study currently has ethical approval to continue the long-term follow of study participants and the data over a long period will play an important part in order to understand the long-term safety of the drugs used.\n\nAlthough the study will capture most cancer and death outcome data for the study via the NHS hospitals, there are occasions where the study will not be told that one of these events has occurred (i.e. the rheumatology team were not aware and/or the patient may have been treated in a different hospital) and therefore flagging with NHS Digital will allow complete data on these important outcomes. \n\nThe University of Manchester is sole data controller who also process the data for the study. This study is funded by a charity (Versus Arthritis); their role in the study Is that of a funder only. They have no involvement in determining the purpose of the study or any data processing activities.",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-147774-MZT95-v1.12",
+   "releases": [],
+   "start_date": "2021-01-21",
+   "sublicensing": "No",
+   "title": "MR1210 - The Long-term Safety and Efficacy of Biologic Therapies in Children with Rheumatic Diseases",
+   "version": "1.12",
+   "yielded_benefits": "Information from the BCRD Study has had significant influence on the clinical practice in the UK and more widely, particularly regarding the NHS England Clinical Commissioning Policy Statement Biologic Therapies for the treatment of Juvenile Idiopathic Arthritis (JIA) published in 2015. These influences have resulted in more consistent prescribing across the country. In addition, the NHS England Statement has included a paragraph encouraging registration into the register: All children who commence treatment with a Biologic should be offered the option of enrolling in the appropriate long-term national Registries. These Registries are designed to provide long-term safety data for all these drugs and enrolment of data to the Registries is strongly recommended. A major challenge for all research studies is the dissemination and implementation of results. The study team work with paediatric rheumatologists to generate ideas for new analyses based on clinically relevant questions."
+  }
+ ]
+}

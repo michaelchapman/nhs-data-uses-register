@@ -1,0 +1,76 @@
+{
+ "base_reference": "DARS-NIC-147756-SMGHS",
+ "versions": [
+  {
+   "activities": "The data already disseminated will be accessed and processed by substantive employees of Nuvia and only for the purposes described in the application.\n\nMR183 is a flagging study, but the cohort is fixed and no new flagging has taken place for many years, so no data is provided to NHS Digital by Nuvia.\n \nThe data received by Nuvia from NHS Digital falls into three categories:\n1.\tMortality Data\nDate, causes and place of death, unique study identifier, together with sufficient identity data to confirm that the flag was correctly set, i.e. name, date of birth, NHS number, occupation, home address.\n2.\tEmigrations and Reregistration\nDate of event, unique study identifier, together with enough identity data to confirm that the flag was correctly set, i.e. name, date of birth, NHS number.\n3.\tCancer Registrations\nDate of diagnosis, disease code, unique study identifier, but no identity data.\n\nThe study has a favourable ethical opinion from the NHS Research Ethics Committee, Oxford C.  AWE make regular reports on the study to workforce representatives at Joint Health and Safety Meetings.\n\nNuvia will not provide access to for any third parties to access record level data, even where these third parties are study partners. The use of this data will be limited to Nuvia for the purpose outlined above only. Data published or provided to third parties will be limited to aggregated data, at area, organisational or cohort-level all subject to small number suppression in line with the HES Analysis Guide.\n\nNuvia is currently part of a European consortium and is seeking funding to conduct a new study, which would entail data sharing with PHE.  Any instances of data sharing or processing of data relating to a new study not outlined in this agreement will be subject to separate applications to NHS Digital.\n\nNew data subjects are recognised and added to the SHIELD database when their personnel data is sent to the Health Effects team by UKAEA’s contractors CSC, or by DSRL and Magnox. Annually, radiation dose data arrives from the dosimetry services (ADSs) of the same employers and is linked to the data in SHIELD by name, DOB and National Insurance Number (NIN). Periodically the required details for flagging are sent to NHS Digital and Dumfries. When data comes to the study from NHS Digital, either as event notifications or members and postings listings, it is initially linked to the data in the database using name, DOB and NHS Number. Subsequently, if the study is happy that the correct person has been flagged then the study will link on member number. The study has to retain the identity data in the database even after the routine linkage has taken place, because periodically the study add new categories of exposure data. A recent example is the addition of 70 years’ worth of internal radiation contamination assessments to the SHIELD database.\n\nSHIELD is an Oracle 12 database, hosted on a server which is only accessible to authorised SHIELD users.  Within SHIELD the followup data from NHS Digital is only available to those with the accredited researcher approvals.  Data security is an important part of the culture of SHIELD users.\n\nTypical analyses would be:\n•\tCalculation of Standardised Mortality Ratios (SMRs) and Registration Ratios (SRRs) to compare the cohort with the national population in terms of mortality and cancer morbidity.\n•\tCalculation of Rate Ratios to compare radiation workers with non-radiation workers in the nuclear industry.\n•\tTests for trends of mortality and morbidity rates with increasing radiation dose.\n•\tLogistic regression analyses to calculate the Excess Relative Risk per unit of radiation dose.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those  regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)”\n\nThere will be no data linkage undertaken with NHS Digital data provided under this agreement that is not already noted in the agreement.\n\nData will only be accessed and processed by substantive employees of Nuvia Ltd and will not be accessed or processed by any other third parties not mentioned in this agreement.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "PUBLIC HEALTH ENGLAND (PHE)"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2021-10-31",
+   "expected_benefits": "Many thousands of workers, patients and members of the public are subject to regulated doses of ionising radiation.  For example, the National Registry of Radiation Workers contains information on more than 200,000 people who have worked with radiation over the last 70 years and according to the Health & Safety Executive, in 2015 there were about 27,000 classified radiation workers in employment.  The number of patients exposed is much greater.  A recent study estimated that 175,000 cancer patients required radiotherapy in the UK in 2012.\n\nStudies of the MR183 cohort have influenced and are expected to influence the development of the Ionising Radiation Regulations (IRRs) which regulate the exposure of people at work and of the public.  The correct regulation of doses benefits the health not only of nuclear workers, but anyone else who works with radiation, such as medical radiographers and members of the public exposed because of medical x-rays or radioactive discharges to the environment.  \n\nIf there is evidence that limits to exposure are too lax these benefits will take the form of lowered exposures and reduced health effects. If, on the other hand, the evidence suggests limits are too rigorous the benefits could include time and cost savings.\n\nThe results are expected to influence the development of the UK Government’s Ionising Radiation Regulations (IRRs) which regulate the exposure of people at work and of the public.\nThe IRRs are directly based on the authoritative recommendations of organisations such as the International Commission on Radiation Protection (ICRP) and the United Nations Scientific Committee on the Effects of Atomic Radiation (UNSCEAR).  These organisations monitor the latest research literature and will be aware of past and future publications from MR183.  The UNSCEAR 2006 and 2012 reports cited various publications which use MR183 data.",
+   "expected_output": "Outputs were presented as aggregated tables and figures, with suppression of low-numbered cells in line with the HES analysis guide where appropriate.  As part of a previous EU funded project, the SHIELD database has been updated with all the internal dosimetry data required to undertake this work.  The outputs included peer-reviewed publications and a publicly available web site.  \n\nData from the MR183 cohort has been used in some 13 publications in high-impact peer-reviewed journals.  For example:\n\n•Beral V, Fraser P, Carpenter L, Booth M, Brown A and Rose G (1988)  Mortality of employees of the Atomic Weapons Establishment, 1951-1982. British Medical Journal, 297, 757-770.\n•Carpenter L, Higgins C, Douglas A, Fraser P, Beral V and Smith P (1994) Combined analysis of mortality in three United Kingdom nuclear industry workforces, 1946-1988. British Journal of Cancer. 78, 1224-1232\n•Cardis E, Gilbert E, Carpenter L, Howe G, Kato I, Armstrong B, Beral V, Cowper G, Douglas A, Fix J, Fry S, Kaldor J, Lave C, Salmon L, Smith P, Voelz G and Wiggs L (1995) Effects of low doses and low dose rates of external ionizing radiation: cancer mortality among nuclear industry workers in three countries. Radiation Research, 142, 117-132\n•Johnson, P., Atkinson, WD and Nicholls, JL (1999) Updated analysis of mortality at UK Atomic Weapons Establishments. Southport 1999 - Proceedings of the 6th International SRP Symposium. M.C. Thorne (ed). SRP, London\n•Roman E, Doyle P, Maconochie N, Davies G, Smith P and Beral V (1999) Cancer in children of nuclear industry employees: report on children aged under 25 years from nuclear industry family study, British Medical Journal; 318, 1443–1450\n•Burt A, Maconochie N, Doyle P, Roman E (2004) Learning difficulties in children born to male UK nuclear industry employees; analysis from the nuclear industry family study, Occupational & Environmental Medicine, 61, 786-789\n•Grellier J, Atkinson, W et al (2016) Risk of lung cancer mortality in nuclear workers from internal exposure to alpha particle-emitting radionuclides.  Epidemiology (in press)\n\nFuture outputs are expected to focus on the health effects of inhaled or ingested radionuclides which have been little studied anywhere hitherto.  Outputs will include peer-reviewed publications and a publicly available web site.  In all cases data will be presented as aggregated tables and figures, with suppression of low-numbered cells in line with the HES analysis guide where necessary.\n\nAWE will continue to make regular reports on the study to workforce representatives at Joint Health and Safety Meetings\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide",
+   "files_released": 3,
+   "objective": "Study MR183 is a long-standing study of the effects of occupational radiation exposure in the nuclear industry.  Much of the knowledge in this area has been gained from studies of the survivors of the two atomic bombs detonated over Japan at the end of the war.  However, it is not clear how relevant this study of high doses received instantaneously is, to those exposed in an occupational context, or as members of the public, to much lower doses received over many years.  This is why studies of nuclear workers have been, and continue to be, important in setting acceptable exposure levels at work and for the public in the wider environment.  \n\nMR183 is a study of mortality and cancer morbidity in the employees of the Atomic Weapons Establishment (AWE) at Aldermaston, the government organisation responsible for research and development of the UK atomic weapons programme.  It is among the small group of UK studies that lead the world in this area partly because of the quality of the national mortality and cancer registration systems.\n\nThe study commenced in 1979, designed by a team from the London School of Hygiene and Tropical Medicine. The MR183 cohort included everyone employed by AWE from its foundation in 1951 to the end of 1982.  The study includes around 22,000 individuals.  Of these, only just over half are dead, which is why continued long-term follow-up, with a corresponding increase in statistical power is so important.\n\nThe study was initially funded by the AWE and largely carried out by a team from UKAEA, but with reorganisation and privatisation in the nuclear sector, responsibilities have changed, and it is now funded by the AWE overseen by the Public Health England (PHE), Centre for Radiation, Chemical and Environmental Hazards, and carried out by Nuvia Limited.\n\nThe follow-up data provided by NHS Digital for the MR183 study has been used and will be used in wider collaborative studies taking in the nuclear workforces of several European countries.  Such data is, of course, shared in anonymised form with collaborators and only with explicit agreement from the data providers, including NHS Digital, and from workforce representatives. Where data to be shared is anything other than data aggregated with small numbers suppressed the study will seek explicit permission from NHS Digital on a case by case basis via an amendment to the application.",
+   "organisation": "NUVIA LTD",
+   "organisation_type": "Commercial",
+   "reference": "DARS-NIC-147756-SMGHS-v3.12",
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "files": 2,
+     "first_month": "2019-03",
+     "last_month": "2019-07",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "files": 1,
+     "first_month": "2019-03",
+     "last_month": "2019-03",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2018-11-01",
+   "sublicensing": "No",
+   "title": "MR183 - EX-EMPLOYEES ATOMIC WEAPONS RESEARCH ESTABLISHMENT",
+   "version": "3.12",
+   "yielded_benefits": "Studies of the MR183 cohort aim to improve the understanding of the health effects of the low doses of ionising  radiation received by nuclear workers.  This understanding will benefit the health, not only of nuclear workers, but anyone else who encounters radiation, such as medical radiographers and members of the public exposed because of medical x-rays or radioactive discharges to the environment.  If there is evidence that limits to exposure are too lax these benefits will take the form of lowered exposures and reduced health effects. If, on the other hand, the evidence suggests limits are too rigorous the benefits could include time and cost savings.\n\nThe benefit will be achieved by the authoritative international bodies, ICRP and UNSCEAR, and Public Health England in the UK, influencing Government regulation. thus the benefits of processing. The UNSCEAR 2006 and 2012 reports cited various publications which use MR183 data.  Since then, a new set of IRRs was issued in 2017 which were influenced by UNSCEAR reports. From the last renewal a paper* data from this study has been published which shows a significant effect of inhaled plutonium and uranium on lung cancer rates.  This is likely to influence future regulation on exposure to inhale radionuclides.\n\nSince the last renewal a paper* using data from this study has been published which shows a significant effect of inhaled plutonium and uranium on lung cancer rates. This is likely to influence future regulation on exposure to inhaled radionuclides.\n*Grellier, J, Atkinson WD, Bull R.K. et al (2017) Risk of Lung Cancer Mortality in Nuclear Workers From Internal Exposure to Alpha Particle-Emitting Radionuclides Epidemiology 28, 675-684"
+  }
+ ]
+}

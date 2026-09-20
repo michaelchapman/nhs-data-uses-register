@@ -1,0 +1,185 @@
+{
+ "base_reference": "DARS-NIC-411785-Z6X7M",
+ "versions": [
+  {
+   "activities": "Individually authorised analysts employed by Ipsos MORI, YHEC or the Midlands and Lancashire CSU will be granted remote secure access to the Cancer Trusted Research Environment (TRE) within NHS Digital’s data platform, the Data Processing Service (DPS).\n\nWithin the Cancer TRE, the analysts will be able to access pseudonymised linked data from the datasets outlined above.\n\nNo details which directly identify data subjects, such as names, NHS Numbers, etc., will be accessible within the TRE.\n\nAnalysts will be able to access only the data they are permitted to see and can utilise a variety of analytical tools available within the TRE platform.\n\nOnly summary, aggregate results data (data will be aggregated with small numbers suppressed in line with the HES analysis guide) will be exported from the TRE and this will be subject to review and approval by the NHS Digital team providing the TRE.  The objective of this will be to ensure that no output contains information which could be used either on its own or in conjunction with other data to breach an individual's privacy.",
+   "commercial": "Yes",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS ENGLAND - X26",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Cancer Waiting Times (CWT) Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "National Cancer Registration Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Rapid Diagnostic Centre Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-11-16",
+   "expected_benefits": "The primary benefit from using the Cancer TRE is that it will enable NHS England and NHS Improvement to reduce the burden of data collection on local service providers allowing NHS England and NHS Improvement to collect the minimum information on RDCs and to combine that with relevant information that is already collected via existing national datasets.  This is a benefit to health care providers.\n\nHaving access to the combined data supports the wider aim of evaluating the impact and effectiveness of Rapid Diagnostic Centres in achieving the intended goals.  If the evaluation demonstrates that RDCs are effective and are having a positive impact in terms of improving the patient experience and outcomes for patients with suspected cancer, the findings of this evaluation would enable NHS England and NHS Improvement to work with Cancer Alliances and local authorities to embed the RDC programme and improve the effectiveness of RDCs.  If the evaluation demonstrates the intended goals for RDCs are being achieved, the information derived from the data in the Cancer TRE will support conversations with commissioning groups about developing sustainable funding models and evidencing the wider benefits of the RDC programme beyond cancer.\n\nThis programme of work aims to contribute to the following objectives: \n\n• Supporting earlier and faster cancer diagnosis by assessing patients’ symptoms holistically and providing a tailored pathway of clinically relevant diagnostic tests as quickly as possible, targeting and reducing any health inequalities that may currently exist; \n\n• Creating increased capacity through more efficient diagnostic pathways by reducing unnecessary appointments and tests; \n\n• Delivering a better, personalised diagnostic experience for patients by providing a series of coordinated tests and a single point of contact. \n\n• Reducing unwarranted variation in referral for, access to and in the reliability of relevant diagnostic tests by setting standards for RDCs nationally, mandating consistent data collection to enable benchmarking and providing regional support to roll out RDCs; \n\n• Improving the offer to NHS staff with new roles which offer development opportunities, greater flexibility and a chance to work in innovative ways.",
+   "expected_output": "The Midlands and Lancashire CSU will develop and maintain a dashboard to feed back information on the impacts of RDCs over time.  This will be used by Cancer Alliances to monitor and manage the performance of their respective RDCs.  This dashboard will enable users to break down findings to study variation relating to factors such as ethnic groups, cancer types, etc. and will enable Cancer Alliances to interrogate their own data.\n\nIpsos MORI will produce quarterly and annual reports to NHS England and NHS Improvement summarising the progress and effectiveness of the RDCs based on analysis of the data in the Cancer TRE supplemented by external information gather through qualitative research undertaken by Ipsos MORI (e.g. interviews with patients, providers, etc.).  These reports will be reviewed by the Evaluation Oversight Group and Task and Finish Group as described above and will inform NHS England and NHS Improvement’s ongoing decisions in respect of the strategy of the programme.  These reports will also be shared with the Cancer Alliances and local Rapid Diagnostic Centres.\n\nA monthly management information report will be produced outlining the key metrics on progress of the programme.\n\nNHS England and NHS Improvement will determine if and what information will be made publicly available.  Any published reports will contain only information that is aggregated with small numbers suppressed in line with the HES Analysis Guide.  For example, it is possible that national data broken down by Cancer Alliance may be published.",
+   "files_released": 0,
+   "objective": "Rapid Diagnostic Centres (RDCs) are being rolled out nationally as an important part of a broader strategy to deliver faster and earlier diagnosis and improved patient experience.  In time, it is the vision for RDCs to offer:\n• A single point of access to a diagnostic pathway for all patients with symptoms that could indicate cancer; \n• A personalised, accurate and rapid diagnosis of patients’ symptoms by integrating existing diagnostic provision and utilising networked clinical expertise and information locally.\n\nThe objectives of implementing RDCs are:\n• To support earlier and faster cancer diagnosis by assessing patients’ symptoms holistically and providing a tailored pathway of clinically relevant diagnostic tests as quickly as possible, targeting and reducing any health inequalities that may currently exist; \n• To create increased capacity through more efficient diagnostic pathways by reducing unnecessary appointments and tests; \n• To deliver a better, personalised diagnostic experience for patients by providing a series of coordinated tests and a single point of contact. \n• To reduce unwarranted variation in referral for, access to and in the reliability of relevant diagnostic tests by setting standards for RDCs nationally, mandating consistent data collection to enable benchmarking and providing regional support to roll out RDCs; \n• To improve the offer to staff with new roles which offer development opportunities, greater flexibility and a chance to work in innovative ways.\n\nWhilst RDCs will be established for patients with symptoms that could indicate cancer, most patients seen by an RDC will not have cancer.  A key wider benefit of RDCs will therefore be diagnosing serious non-cancer conditions more efficiently.\n\nNHS England and NHS Improvement are working with Cancer Alliances and local providers to iterate and standardise the RDC service model as lessons are learned from implementing them in practice.  To support that work, NHS England and NHS Improvement are undertaking a programme of work evaluating RDCs and will utilise the data in NHS Digital’s Cancer Trusted Research Environment (TRE) for that purpose.\n\nThe Rapid Diagnostic Centre dataset comprises of information collected from RDCs.  To reduce the burden of data collection and reduce duplication and variation in data reporting, NHS England and NHS Improvement have sought to minimise the data items being collected in the RDC dataset.  Through the RDC dataset being linked with other national datasets in the Cancer TRE, NHS England and NHS Improvement will be able to utilise relevant information that is already collected in those pre-existing datasets.\n\nNHS England and NHS Improvement have commissioned Ipsos MORI to undertake the evaluation work.  Ipsos MORI has, in turn, sub-contracted the York Health Economics Consortium (YHEC) and the Strategy Unit hosted by Midlands and Lancashire Commissioning Support Unit (CSU) to undertake different elements of the programme.\n\nThe programme covers three elements under evaluation:\n• Process evaluation undertaken by Ipsos MORI\n• Economic evaluation undertaken by YHEC\n• Impact evaluation undertaken by the Strategy Unit\n\nA strategy document outlining the analytical questions to be answered for each element of the programme will be maintained by NHS England and NHS Improvement.  It is expected that this document will be updated over the course of the next 3 years  as required as new questions emerge within the themes of process, economics and impact.\n\nNHS England and NHS Improvement will have sole responsibility for agreeing the content of the strategy document thereby determining the scope of the work to be undertaken by the data processors.\n\nTherefore, NHS England and NHS Improvement (comprised of Monitor and the Trust Development Authority (TDA)) are joint data controllers for this programme and all work undertaken as part of the programme.  Ipsos MORI, YHEC and Midlands and Lancashire CSU are all data processors acting under the instruction of NHS England and NHS Improvement.  Ipsos MORI is unable to make decisions about how or why the data will be processed.  Any such decisions, including decisions about the questions to be answered for the purpose of the evaluation and decisions about which data processors will undertake which work packages require approval from NHS England and NHS Improvement.\n\nIn the process of reviewing and agreeing the content of the strategy document, NHS England will utilise an Evaluation Oversight Group and a Task and Finish Group.\n\nThose groups will provide advice to NHS England and NHS Improvement to support its decision-making although the final decisions will be taken by NHS England and NHS Improvement alone.\n\nThe Evaluation Oversight Group comprises of representatives from the Cancer Alliance Data, Evidence and Analysis Service (CADEAS), clinical and research experts, patient representatives   and information governance specialists.  \n\nBoth the Evaluation Oversight Group and the Task and Finish Group will review the strategy and the findings as they come out and may raise additional questions or themes for the programme to consider.  \n\nThe legal basis for NHS England and NHS Improvement to process personal data is GDPR Article 6(1)(e) ‘task in the public interest’ and for processing special categories of personal data NHS England and NHS Improvement rely on GDPR Article 9(2)(h) ‘processing is necessary for the purposes of preventative or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care…’.  \n\nThe following linked datasets will be required for the purposes of this programme of work: \n\ni) Rapid Diagnostic Centre (RDC) Minimum Dataset\nThis data source contains information about patients referred to RDCs.  It is of fundamental relevance to this programme of work.\n\nii) National Cancer Registration Dataset\nThis data source contains details of individuals’ diagnoses including details of cancer staging, first treatments, how advanced cancer was when diagnosed, etc.\n\niii) Civil Registration Mortality\nThis data source will be used to identify which patients on RDC pathways died and what caused those deaths in order to understand the impacts of RDCs on survival.\n\niv) Cancer Waiting Times (CWT)\nThis data source will be used to assess whether RDCs are impacting on time to diagnosis and are being effective in improving the speed of diagnoses by reducing the number of days to diagnosis and referral to first diagnostic tests.\n\nv) Hospital Episode Statistics (HES)\nThe information in the Admitted Patient Care, Outpatient, Critical Care and Accident & Emergency subsets of HES will provide crucial information about patient care pathways.  The analyses will need to consider what other health conditions patients are diagnosed with following referral to an RDC as RDCs aim to ensure appropriate onward referral links for people tested for but found not to have cancer and the programme is also concerned with the overall impact and economic impact of RDCs on the wider health system.  Understanding patients’ comorbidities will also inform assessment of the impact of RDCs on cancer outcomes.\n\nThe data subjects will be any patients with suspected cancer based on the Nice Guidelines referral criteria during the period from 2020 through to 2024.\n\nTo understand patients’ relevant medical histories including details of comorbidities and referral pathways, the work will require access to some historical information.  For this purpose, data is required from 2015 where available.    The amount and type of data utilised per analysis will be minimised on a ‘per analysis’ basis (by dataset, by year and by fields or groups/categories of fields).",
+   "organisation": "NHS ENGLAND - X26",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-411785-Z6X7M-v0.7",
+   "releases": [],
+   "start_date": "2021-11-17",
+   "sublicensing": "No",
+   "title": "Rapid Diagnostic Centre - Cancer TRE",
+   "version": "0.7",
+   "yielded_benefits": "The data described within this Agreement has not yet been made available to Ipsos MORI, YHEC and Midlands and Lancashire CSU, as such there are no yielded benefits."
+  },
+  {
+   "activities": "Individually authorised analysts employed by Ipsos MORI, YHEC or the Midlands and Lancashire CSU will be granted remote secure access to the Cancer Trusted Research Environment (TRE) within NHS Digital’s data platform, the Data Processing Service (DPS).\n\nWithin the Cancer TRE, the analysts will be able to access pseudonymised linked data from the datasets outlined above.\n\nNo details which directly identify data subjects, such as names, NHS Numbers, etc., will be accessible within the TRE.\n\nAnalysts will be able to access only the data they are permitted to see and can utilise a variety of analytical tools available within the TRE platform.\n\nOnly summary, aggregate results data (data will be aggregated with small numbers suppressed in line with the HES analysis guide) will be exported from the TRE and this will be subject to review and approval by the NHS Digital team providing the TRE.  The objective of this will be to ensure that no output contains information which could be used either on its own or in conjunction with other data to breach an individual's privacy.",
+   "commercial": "Yes",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS ENGLAND - X26",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Cancer Waiting Times (CWT) Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "National Cancer Registration Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "System Access",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Rapid Diagnostic Centre Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-11-16",
+   "expected_benefits": "The primary benefit from using the Cancer TRE is that it will enable NHS England and NHS Improvement to reduce the burden of data collection on local service providers allowing NHS England and NHS Improvement to collect the minimum information on RDCs and to combine that with relevant information that is already collected via existing national datasets.  This is a benefit to health care providers.\n\nHaving access to the combined data supports the wider aim of evaluating the impact and effectiveness of Rapid Diagnostic Centres in achieving the intended goals.  If the evaluation demonstrates that RDCs are effective and are having a positive impact in terms of improving the patient experience and outcomes for patients with suspected cancer, the findings of this evaluation would enable NHS England and NHS Improvement to work with Cancer Alliances and local authorities to embed the RDC programme and improve the effectiveness of RDCs.  If the evaluation demonstrates the intended goals for RDCs are being achieved, the information derived from the data in the Cancer TRE will support conversations with commissioning groups about developing sustainable funding models and evidencing the wider benefits of the RDC programme beyond cancer.\n\nThis programme of work aims to contribute to the following objectives: \n\n• Supporting earlier and faster cancer diagnosis by assessing patients’ symptoms holistically and providing a tailored pathway of clinically relevant diagnostic tests as quickly as possible, targeting and reducing any health inequalities that may currently exist; \n\n• Creating increased capacity through more efficient diagnostic pathways by reducing unnecessary appointments and tests; \n\n• Delivering a better, personalised diagnostic experience for patients by providing a series of coordinated tests and a single point of contact. \n\n• Reducing unwarranted variation in referral for, access to and in the reliability of relevant diagnostic tests by setting standards for RDCs nationally, mandating consistent data collection to enable benchmarking and providing regional support to roll out RDCs; \n\n• Improving the offer to NHS staff with new roles which offer development opportunities, greater flexibility and a chance to work in innovative ways.",
+   "expected_output": "The Midlands and Lancashire CSU will develop and maintain a dashboard to feed back information on the impacts of RDCs over time.  This will be used by Cancer Alliances to monitor and manage the performance of their respective RDCs.  This dashboard will enable users to break down findings to study variation relating to factors such as ethnic groups, cancer types, etc. and will enable Cancer Alliances to interrogate their own data.\n\nIpsos MORI will produce quarterly and annual reports to NHS England and NHS Improvement summarising the progress and effectiveness of the RDCs based on analysis of the data in the Cancer TRE supplemented by external information gather through qualitative research undertaken by Ipsos MORI (e.g. interviews with patients, providers, etc.).  These reports will be reviewed by the Evaluation Oversight Group and Task and Finish Group as described above and will inform NHS England and NHS Improvement’s ongoing decisions in respect of the strategy of the programme.  These reports will also be shared with the Cancer Alliances and local Rapid Diagnostic Centres.\n\nA monthly management information report will be produced outlining the key metrics on progress of the programme.\n\nNHS England and NHS Improvement will determine if and what information will be made publicly available.  Any published reports will contain only information that is aggregated with small numbers suppressed in line with the HES Analysis Guide.  For example, it is possible that national data broken down by Cancer Alliance may be published.",
+   "files_released": 0,
+   "objective": "Rapid Diagnostic Centres (RDCs) are being rolled out nationally as an important part of a broader strategy to deliver faster and earlier diagnosis and improved patient experience.  In time, it is the vision for RDCs to offer:\n• A single point of access to a diagnostic pathway for all patients with symptoms that could indicate cancer; \n• A personalised, accurate and rapid diagnosis of patients’ symptoms by integrating existing diagnostic provision and utilising networked clinical expertise and information locally.\n\nThe objectives of implementing RDCs are:\n• To support earlier and faster cancer diagnosis by assessing patients’ symptoms holistically and providing a tailored pathway of clinically relevant diagnostic tests as quickly as possible, targeting and reducing any health inequalities that may currently exist; \n• To create increased capacity through more efficient diagnostic pathways by reducing unnecessary appointments and tests; \n• To deliver a better, personalised diagnostic experience for patients by providing a series of coordinated tests and a single point of contact. \n• To reduce unwarranted variation in referral for, access to and in the reliability of relevant diagnostic tests by setting standards for RDCs nationally, mandating consistent data collection to enable benchmarking and providing regional support to roll out RDCs; \n• To improve the offer to staff with new roles which offer development opportunities, greater flexibility and a chance to work in innovative ways.\n\nWhilst RDCs will be established for patients with symptoms that could indicate cancer, most patients seen by an RDC will not have cancer.  A key wider benefit of RDCs will therefore be diagnosing serious non-cancer conditions more efficiently.\n\nNHS England and NHS Improvement are working with Cancer Alliances and local providers to iterate and standardise the RDC service model as lessons are learned from implementing them in practice.  To support that work, NHS England and NHS Improvement are undertaking a programme of work evaluating RDCs and will utilise the data in NHS Digital’s Cancer Trusted Research Environment (TRE) for that purpose.\n\nThe Rapid Diagnostic Centre dataset comprises of information collected from RDCs.  To reduce the burden of data collection and reduce duplication and variation in data reporting, NHS England and NHS Improvement have sought to minimise the data items being collected in the RDC dataset.  Through the RDC dataset being linked with other national datasets in the Cancer TRE, NHS England and NHS Improvement will be able to utilise relevant information that is already collected in those pre-existing datasets.\n\nNHS England and NHS Improvement have commissioned Ipsos MORI to undertake the evaluation work.  Ipsos MORI has, in turn, sub-contracted the York Health Economics Consortium (YHEC) and the Strategy Unit hosted by Midlands and Lancashire Commissioning Support Unit (CSU) to undertake different elements of the programme.\n\nThe programme covers three elements under evaluation:\n• Process evaluation undertaken by Ipsos MORI\n• Economic evaluation undertaken by YHEC\n• Impact evaluation undertaken by the Strategy Unit\n\nA strategy document outlining the analytical questions to be answered for each element of the programme will be maintained by NHS England and NHS Improvement.  It is expected that this document will be updated over the course of the next 3 years  as required as new questions emerge within the themes of process, economics and impact.\n\nNHS England and NHS Improvement will have sole responsibility for agreeing the content of the strategy document thereby determining the scope of the work to be undertaken by the data processors.\n\nTherefore, NHS England and NHS Improvement (comprised of Monitor and the Trust Development Authority (TDA)) are joint data controllers for this programme and all work undertaken as part of the programme.  Ipsos MORI, YHEC and Midlands and Lancashire CSU are all data processors acting under the instruction of NHS England and NHS Improvement.  Ipsos MORI is unable to make decisions about how or why the data will be processed.  Any such decisions, including decisions about the questions to be answered for the purpose of the evaluation and decisions about which data processors will undertake which work packages require approval from NHS England and NHS Improvement.\n\nIn the process of reviewing and agreeing the content of the strategy document, NHS England will utilise an Evaluation Oversight Group and a Task and Finish Group.\n\nThose groups will provide advice to NHS England and NHS Improvement to support its decision-making although the final decisions will be taken by NHS England and NHS Improvement alone.\n\nThe Evaluation Oversight Group comprises of representatives from the Cancer Alliance Data, Evidence and Analysis Service (CADEAS), clinical and research experts, patient representatives   and information governance specialists.  \n\nBoth the Evaluation Oversight Group and the Task and Finish Group will review the strategy and the findings as they come out and may raise additional questions or themes for the programme to consider.  \n\nThe legal basis for NHS England and NHS Improvement to process personal data is GDPR Article 6(1)(e) ‘task in the public interest’ and for processing special categories of personal data NHS England and NHS Improvement rely on GDPR Article 9(2)(h) ‘processing is necessary for the purposes of preventative or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care…’.  \n\nThe following linked datasets will be required for the purposes of this programme of work: \n\ni) Rapid Diagnostic Centre (RDC) Minimum Dataset\nThis data source contains information about patients referred to RDCs.  It is of fundamental relevance to this programme of work.\n\nii) National Cancer Registration Dataset\nThis data source contains details of individuals’ diagnoses including details of cancer staging, first treatments, how advanced cancer was when diagnosed, etc.\n\niii) Civil Registration Mortality\nThis data source will be used to identify which patients on RDC pathways died and what caused those deaths in order to understand the impacts of RDCs on survival.\n\niv) Cancer Waiting Times (CWT)\nThis data source will be used to assess whether RDCs are impacting on time to diagnosis and are being effective in improving the speed of diagnoses by reducing the number of days to diagnosis and referral to first diagnostic tests.\n\nv) Hospital Episode Statistics (HES)\nThe information in the Admitted Patient Care, Outpatient, Critical Care and Accident & Emergency subsets of HES will provide crucial information about patient care pathways.  The analyses will need to consider what other health conditions patients are diagnosed with following referral to an RDC as RDCs aim to ensure appropriate onward referral links for people tested for but found not to have cancer and the programme is also concerned with the overall impact and economic impact of RDCs on the wider health system.  Understanding patients’ comorbidities will also inform assessment of the impact of RDCs on cancer outcomes.\n\nThe data subjects will be any patients with suspected cancer based on the Nice Guidelines referral criteria during the period from 2020 through to 2024.\n\nTo understand patients’ relevant medical histories including details of comorbidities and referral pathways, the work will require access to some historical information.  For this purpose, data is required from 2015 where available.    The amount and type of data utilised per analysis will be minimised on a ‘per analysis’ basis (by dataset, by year and by fields or groups/categories of fields).",
+   "organisation": "NHS ENGLAND - X26",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-411785-Z6X7M-v1.2",
+   "releases": [],
+   "start_date": "2022-01-14",
+   "sublicensing": "No",
+   "title": "Rapid Diagnostic Centre - Cancer TRE",
+   "version": "1.2",
+   "yielded_benefits": "The data described within this Agreement has not yet been made available to Ipsos MORI, YHEC and Midlands and Lancashire CSU, as such there are no yielded benefits."
+  }
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "base_reference": "DARS-NIC-649110-Z5S0L",
+ "versions": [
+  {
+   "activities": "University of Birmingham will transfer Data to NHS England.  The Data will consist of identifying details, specifically: NHS Number, Date of Birth, recruitment date and a CReST2 Study ID  for the cohort to be linked with NHS England Data.\n\nNHS England will provide the relevant records from the HES datasets to the University of Leeds. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nThe Data will be stored on servers at the University of Leeds. Data will be stored on Leeds Analytic Secure Environment for Research (LASER), a custom Virtual Research Environment (VRE) based on Microsoft Azure technologies operated by the University of Leeds. LASER uses the Microsoft Azure UK South data centre. Backups are handled by Microsoft Azure Recovery Services (MARS) agent and uses a Backup Service Vault, connected to Azure storage services based in the UK.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be accessed onsite at the premises at the University of Leeds only.\n\nThe Data will not leave England/Wales at any time.\n\nAccess is restricted to employees of the University of Leeds who have authorisation from the Principal Investigator.\n\nAll personnel accessing the Data have been appropriately trained in Data protection and confidentiality.\n\nThe Data will be linked at person record level via study ID with CReST2 participant datasets sent from the University of Birmingham to the University of Leeds.\n\n All analyses will use the pseudonymised dataset and there will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\n\nResearchers from the University of Leeds will process the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "MANCHESTER UNIVERSITY NHS FOUNDATION TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2026-08-17",
+   "expected_benefits": "The findings from this study will support improvements in health and social care by evaluating the cost-efficiency of two stent types. This evidence will help determine which approach offers the best value for money for the NHS.\n\nThe findings of this research will directly benefit patients by identifying whether covered or uncovered stents offer greater efficacy. This knowledge will help enhance the quality of life for palliative patients suffering from bowel obstruction due to colorectal cancer.\n\nBy publishing the findings in relevant outlets, this research aims to contribute meaningfully to the existing evidence base used by policymakers, healthcare organisations, and individual practitioners. The insights gained may inform NHS policy decisions and guide treatment choices for individual patients.\n\nTo unlock the potential improvements identified by this research, organisations must act on the evidence provided. Trial results will be submitted to the NIHR Journals Library and targeted for publication in a high-impact, peer-reviewed journal. If the findings demonstrate that covered stents are both clinically effective and cost-efficient, they could directly inform NHS practice. Additionally, final results will be shared at key professional forums, including the annual European Society of Coloproctology conference.\n\nThis trial serves the public interest. Should covered stents prove superior in managing acute bowel obstruction due to colorectal cancer in palliative care, the evidence may influence NICE guidelines—ultimately benefiting patients nationwide. Conversely, if no advantage is found in using covered over uncovered stents, the NHS can avoid further investment in this line of inquiry, allowing resources to be redirected toward other research that better serves this patient population.",
+   "expected_output": "The expected outputs of the processing will be: \n•\tA report of findings and publications.  \n•\tSubmissions to peer reviewed journals. \n•\tPresentations at specific conferences such as the European Society of Coloproctology conference.  \n•\tPublication on the CReST2 website. \n•\tVarious media channels \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\nNewsletters, leaflets or pamphlets, and published on the trial website- https://www.birmingham.ac.uk/research/bctu/trials/coloproctology/crest2. \n\nThe CReST2 trial is registered with ISRCTN, thus adheres to the recent guidelines of World health Organisation (WHO) International Clinical registry Platform (ICTRP) and International Committee of Medical Journal Editors (ICMJE) on improving the publicly available information about clinical trials. The registration ensures free access to public domain and use all the trial metadata generated during the process of registration, updating and reporting. At the end of the study a full account of the research will be available on another public domain, NIHR Journals Library. This will contain comprehensive accounts on the trial.",
+   "files_released": 21,
+   "objective": "Manchester University NHS Foundation Trust (MFT) requires access to NHS England Data for the purpose of the following research programme: \n\nCReST2 - ColoRectal Stenting Trial 2 - Uncovered vs covered endoluminal stenting in the acute management of obstructing colorectal cancer in the palliative setting.\n\nColorectal cancer is the second most common cause of cancer death in the UK. Each year around 15% of people with colorectal cancer present with an obstruction. Surgery to resect the blockage is the usual treatment for the relief of a bowel obstruction. However, in many patients with colorectal cancer their age, general health and the advanced state of their cancer means that they are not able to withstand this type of surgery. Such patients may benefit from the minimally invasive technique called stenting. Patients are living longer with stents in situ, so choosing the right design of stent is important to maximise quality of life. The type of stent may also affect the rate of reintervention, and therefore costs.\n\nThe following is a summary of the aims of the research project provided by MFT:\n\nCReST2 is a double-blinded, randomised, stratified, two-arm trial of two types of stents currently in use in the NHS: covered and uncovered endolumal stents. The aim of the trial is to test the effectiveness of the two stents in the treatment of obstructing colorectal cancer in patients not fit for radical surgery.\n\nThe trial has a co-primary outcome measure of stent patency at six months post baseline stent insertion, and patient quality of life measured at three months. One of the secondary outcome measures is cost effectiveness. MFT will only use NHS England Data to explore this specific secondary outcome measure.\n\nThe following NHS England Data will be accessed: \nHospital Episode Statistics  \n• Admitted Patient Care (APC) will allow the research team to estimate the cost of hospital admissions, the total health care service costs for each trial arm, and their differences, as part of health economic analysis from the perspective of the NHS.  \n• Accident & Emergency (A&E)/Emergency Care Dataset (ECDS) will allow the research team to estimate costs of emergency attendances and total health care service costs for each trial arm, and their differences, as part of health economic analysis from the perspective of the NHS. \n• Critical Care (CC) will allow the research team to estimate costs of hospital admissions and total health care service costs for each trial arm, and their differences, as part of health economics analysis from the perspective of the NHS. Episodes of care recorded in this dataset tends to be associated with higher costs than other type of APC episodes.  \n• Outpatients (OP) will allow the research team to estimate the costs of outpatient attendances and total health care service costs for each trial arm, and their differences, as part of the health economics analysis from the perspective of the NHS.\n\nThe level of the Data will be pseudonymised.\n\nThe Data will be minimised as follows: \n•\tLimited to individuals who have consented to participate in the CReST2 trial\n•\tLimited to data between 2017/18-2022/23 and for each individual participant, data will only be provided from when they joined the trial until the trial end (October 2022).\n\nMFT is the research sponsor and the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal Data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.\n\nThe lawful basis for processing special category Data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to Data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the Data subject.\n\nThis processing is in the public interest as the outcome could influence best practise in the treatment of obstructing colorectal cancers for patients not fit for surgery. By the end of the project, the results are presented for an analysis of cost of healthcare service use for CReST2 trial participants from the perspective of the NHS. These categories of costs are all important sources in costs analyses aimed at informing resource allocation decisions.\n\nThe funding is provided by National Institute of Health Research Health Technology Assessment (NIHR HTA) (HTA reference 14.28.02). The funding is specifically for the trial described. \n\nUniversity of Leeds are the processor acting under the instructions of MFT.\n\nThere is a Trial Management Group, Data Monitoring Committee (DMC) and Trial Steering Committee (TSC). \n\nThe Trial Management Group includes the individuals responsible for the day-to-day management of CReST2 trial. The role of the group is to monitor all aspects of the conduct and progress of the trial, ensure that the protocol is adhered to and take appropriate action to safeguard participants and the quality of the trial itself.\n\nThe DMC may consider recommending the discontinuation of the trial if the recruitment rate or Data quality are unacceptable, or if any issues are identified which may compromise participant safety. \n\nThe role of the TSC is to provide the overall supervision of the CReST2 trial. This will comprise an independent chair, a patient representative, a further independent clinician and a person with significant experience of running clinical trials. The TSC will monitor trial progress and conduct and advise on scientific credibility. The TSC will consider and act, as appropriate, upon the recommendations of the Data Monitoring Committee (DMC) or equivalent and ultimately carries the responsibility for deciding whether a trial needs to be stopped on grounds of safety or efficacy. These organisations act solely in an advisory capacity.\n\nThe CReST2 trial protocol and Participant Information Sheets (PIS) was written with input from a Public and Patient Involvement and Engagement group (PPIE). An independent PPIE representative was included as member of the Trial Management Group, and another independent PPIE as a member of the Trial Steering Committee.",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-649110-Z5S0L-v0.9",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 6,
+     "first_month": "2026-03",
+     "last_month": "2026-03",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "files": 6,
+     "first_month": "2026-03",
+     "last_month": "2026-03",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 6,
+     "first_month": "2026-03",
+     "last_month": "2026-03",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 3,
+     "first_month": "2026-03",
+     "last_month": "2026-03",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2025-08-18",
+   "sublicensing": "No",
+   "title": "CReST2 - ColoRectal Stenting Trial 2 - Uncovered vs covered endoluminal stenting in the acute management of obstructing colorectal cancer in the palliative setting.",
+   "version": "0.9",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

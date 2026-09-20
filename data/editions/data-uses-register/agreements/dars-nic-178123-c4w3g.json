@@ -1,0 +1,197 @@
+{
+ "base_reference": "DARS-NIC-178123-C4W3G",
+ "versions": [
+  {
+   "activities": "Data must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data.\n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nOnward Sharing\n\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSegregation\n\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData Minimisation\nData Minimisation in relation to the data sets listed within the application are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n•\tPatients who are normally registered and/or resident within the Milton Keynes CCG (including historical activity where the patient was previously registered or resident in another commissioner).\nand/or\n•\tPatients treated by a provider where Milton Keynes CCG is the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this is only for commissioning and relates to both national and local flows.\nand/or\n•\tActivity identified by the provider and recorded as such within national systems (such as SUS+) as for the attention of Milton Keynes CCG - this is only for commissioning and relates to both national and local flows.\n\nCommissioning \nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tMaternity Services Data Set (MSDS)\n7.\tImproving Access to Psychological Therapy (IAPT)\n8.\tChild and Young People Health Service (CYPHS)\n9.\tDiagnostic Imaging Data Set (DIDS)\n10.\tNational Cancer Waiting Times Monitoring Data Set (CWT)\n\nData quality management and pseudonymisation is completed within the DSCRO. Pseudonymisation is undertaken using the Medeanalytics pseudonymisation at source tool. The DSCRO will generate a salt encryption key to be used for this project and will share it with Milton Keynes Council and Apollo Medical (who will be acting as a Data Processor for the GPs) Data is then disseminated as follows:\nData Processor – Optum Health Solutions Limited\n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Diagnostic Imaging data (DIDS) and National Cancer Waiting Times Monitoring Data Set (CWT) only is securely transferred from the DSCRO to Optum Health Solutions Limited.\n2.\tOptum Health Solutions Limited Solutions will receive pseudonymised primary care data from the Milton Keynes General Practices, via their data processor Apollo, using secure FTP.  The data is pseudonymised before leaving the GP system. \n3.\tMilton Keynes Council pseudonymise Social Care data using the MedeAnalytics pseudonymisation at source tool. Milton Keynes Council then send pseudonymised Social Care data to Optum Health Solutions Limited\n4.\tOptum Health Solutions Limited add derived fields, link data and provide analysis to:\na.\tSee patient journeys for pathways or service design, re-design and de-commissioning. \nb.\tUndertake population health management\nc.\tUndertake data quality and validation checks\nd.\tThoroughly investigate the needs of the population\ne.\tUnderstand cohorts of residents who are at risk\nf.\tConduct Health Needs Assessments\n5.\tAllowed linkage is between the data sets contained within points 1, 2 and 3.\n6.\tAggregation of required data for CCG management use will be completed by Optum Health Solutions Limited or the CCG as instructed by the CCG.\n7.\tAggregated reports with small number suppression will be sent to the CCG.\n8.\tPatient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set. \n\nNo data is sent to, processed or stored by MedeAnalytics.\nOptum Health Solutions Limited will not reidentify any data.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "NHS BEDFORDSHIRE, LUTON AND MILTON KEYNES ICB - M1J4Y"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Acute-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Ambulance-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Children and Young People Health",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Community-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Demand for Service-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Emergency Care-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Experience, Quality and Outcomes-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Improving Access to Psychological Therapies (IAPT) v1.5",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Maternity Services Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health and Learning Disabilities Data Set (MHLDDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Minimum Data Set (MHMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Services Data Set (MHSDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Population Data-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Primary Care Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Public Health and Screening Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "SUS for Commissioners",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-04-25",
+   "expected_benefits": "Commissioning\n1.\tInsight into the health needs of the population and how they are changing – the population health analytics will analyse how changes in the population are diving growth in service utilisation across the system.  \n2.\tInsight into how well services are aligned to the health needs of the population – the analytics will consider current service delivery and whether it Is optimised for effective population health management.\n3.\tInsight into unwarranted variation in clinical and economic outcomes between population segments (opportunity identification) – the analytics will highlight high levels of variation in cost and utilisation between population groups, these will be clinically validated and fed back into the planning system as potential savings opportunities. \n4.\tSupporting the development of population health management.\n5.\tSupporting the development of integrated care.",
+   "expected_output": "Commissioning\n1.\tLinked data quality report – this report will be used to work with data specialists within Milton Keynes to validate the data used against a local view, this will ensure the data is accurate and representative.\n2.\tInitial analytical review of the data for feedback from MK analytics specialists – this report will be used to test and validate insights from Optums analysis with local NHS analytical experts. \n3.\tInitial analytical review of the data for clinical engagement and feedback – this report will be used to validate whether variation in service utilisation between different groups of patients is considered normal by clinicians.  \n4.\tFinal analytical review for analytical and clinical stakeholders – this report will summarise the key findings from the initial analytical reviews. It also will include analysis on any additional lines of enquiry based on feedback from the initial analytical reviews.   \n5.\tFinal report for Milton Keynes CCG, Local Authority and GP practices – this report will present the findings of the project to stakeholders across the system. It will include all the key insights and in some cases may include recommendations for new clinical models or advice on population health management strategies, these will be aligned to priority population groups and designed to address unwarranted variation in health outcomes.\n\nNotes on Outputs\n•\tThe five reports will only contain aggregate data with small number suppression. \n•\tNo record level, patient level or event level data will be shared outside of Optums secure environment.\n•\tAll data handled by Optum will be pseudonymised at all times and Optum will not have access to the decryption key. \n•\tAny additional reporting requested by the CCG will be prepared in either an anonymised or aggregate format and will not be shared outside of the CCG unless it is aggregate with small number suppression.",
+   "files_released": 0,
+   "objective": "Commissioning \nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers. \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n-\tSecondary Uses Service (SUS+)\n-\tLocal Provider Flows\no\tAcute\no\tAmbulance\no\tCommunity\no\tDemand for Service\no\tDiagnostic Service\no\tEmergency Care\no\tExperience, Quality and Outcomes\no\tMental Health\no\tOther Not Elsewhere Classified\no\tPopulation Data\no\tPrimary Care Services\no\tPublic Health Screening\n-\tMental Health Minimum Data Set (MHMDS)\n-\tMental Health Learning Disability Data Set (MHLDDS)\n-\tMental Health Services Data Set (MHSDS)\n-\tMaternity Services Data Set (MSDS)\n-\tImproving Access to Psychological Therapy (IAPT)\n-\tChild and Young People Health Service (CYPHS)\n-\tDiagnostic Imaging Data Set (DIDS)\n-\tNational Cancer Waiting Times Monitoring Data Set (CWT)\nThe pseudonymised data is required to for the following purposes: \n\tPopulation health management:\n•\tUnderstanding the interdependency of care services \n•\tTargeting care more effectively \n•\tUsing value as the redesign principle \n\tThoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n\tUnderstanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n\tModelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n\tService redesign\n\tHealth Needs Assessment – identification of underlying disease prevalence within the local population\n\tPatient stratification and predictive modelling - to identify specific patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\nProcessing for commissioning will be conducted by Optum Health Solutions Limited\nNHS Milton Keynes CCG is working collaboratively with hospital, community, mental health, ambulance, social care and General Practice health and care providers. Optum Health Solutions Limited will undertake an analytics project which will provide a foundation for integration work across the health and care system.  It will introduce patient centric population health insight into the Milton Keynes health and care system. The Bedfordshire, Luton and Milton Keynes STP has signalled its intention to move towards an integrated care system and is an NHS England accelerator site. The population health analytics will provide a foundation for integration work across the system, however at this point is only within Milton Keynes.  \n\nAnalysis of the linked datasets will present a joined up and comprehensive view of how patient cohorts interact with services across the Milton Keynes health and care system. It will be used to identify and understand priority population segments which clinical and system leaders will design future new care models around. This analytical process will engage leaders, clinicians and managers with how patients accessing their part of the system interact with other providers and services and will provide new insight into care model design. Commissioners and providers will use this insight to identify both short and long-term savings opportunities by identifying unwarranted variation in outcomes and service utilisation between population segments.  The analysis outputs will be aggregate with small number suppression applied in line with NHS Digital standards.",
+   "organisation": "NHS BEDFORDSHIRE, LUTON AND MILTON KEYNES ICB - M1J4Y",
+   "organisation_type": "Sub ICB Location",
+   "reference": "DARS-NIC-178123-C4W3G-v1.3",
+   "releases": [],
+   "start_date": "2019-04-26",
+   "sublicensing": "No",
+   "title": "DSfC - NHS Milton Keynes CCG - Comm",
+   "version": "1.3",
+   "yielded_benefits": "Commissioning\n1. Insights delivered to MK CCG on population needs, including locality specific information and benchmarking versus regional rates. Specific growth drivers within the population identified and quantified, and insights into high-cost segments of the population delivered.\n2. Local providers engaged in conversations around high-cost segments, including how local services are shaped to deliver to these segments. Multiple on-site workshops held with local clinicians and provider management, and insights delivered on specific local needs.\n3. Significant clinical engagement in analytics outcomes and further avenues of enquiry explored, and change in clinical behaviour in response to insights has been noted. Further analytical work is required to embed these approaches systematically.\n4. Significant capability coaching of local leaders, analysts and clinicians has been undertaken off the back of the work done with this data, and local knowledge of pop health management has increased. Further analytical work is required to embed these approaches systematically.\n5. As part of local provider and local authority engagement, integrated care has been the cornerstone of the analytics done to date, and the insights delivered have enabled discussions from across health and social care."
+  }
+ ]
+}

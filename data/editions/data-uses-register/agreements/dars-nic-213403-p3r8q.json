@@ -1,0 +1,674 @@
+{
+ "base_reference": "DARS-NIC-213403-P3R8Q",
+ "versions": [
+  {
+   "activities": "The NCIP product will be securely provided over the web, where users will require username and password to access. All patient level pseudonymised HES data will be held within NHSI secure servers, whereas aggregate activity data (e.g. number of procedures, number of re admission within 30 days) at consultant level will be held in the Azure Cloud under contract with NHSI. Only Aggregated data with small number suppression will be held in the Azure Cloud. \n\nData presented via the NCIP product will include pseudonymised record level data as well as aggregate data (without small numbers suppression in line with the exception agreed for GIRFT). Access to data held in the NCIP product will be provided in accordance with sign up to terms of conditions of use for accessing NCIP (flow down NHSD requirements) and under a sub licence arrangement with trusts.\n\nAccess levels of data will be as follows in accordance with the sub licence each Trust signs up to;\n\nConsultants will have access to Trust level dashboards (where their Designated Body is the subject) in addition to their personal dashboards, where the Consultant is the subject. Consultants will not be able to access other Consultants’ dashboards. \n\nConsultants will be able to access pseudonymised patient data related to the numerator and denominator values displayed in their own Consultant dashboards. Consultants will be able to access pseudonymised patient data related to the numerator and denominator values displayed in the Unit level dashboards to which they have access. Consultants will not be able to identify other consultants in the dashboards. Consultants will be able to identify other consultants in the pseudonymised patient data only where there are other episodes in index spells attributed to the consultant in question.   \n\nFor the purpose of this agreement Consultants are defined as; A senior medical practitioner who is appointed to the role of Consultant by an NHS Trust.  A Medical Practitioner is;\n\n“Medical Practitioner” means a person who-\n\n- is included in the register of medical practitioners referred to in section 2 of the Medical Act 1983;\n- holds a licence to practise under that Act; and\n- is employed or otherwise engaged by the Trust to provide healthcare services under the NHS.\n\nGIRFT (including NCIP) and Model Hospital are keen to use the civil registration of death data to measure mortality following procedures.* The key data fields for this purpose are date of death and cause of death. The GIRFT and Model Hospital programmes aim to improve cost efficiency of NHS services through reducing variation in cost and clinical quality. One of the key clinical quality metrics is death following surgical procedures. The programmes currently use HES data to calculate a number of clinical quality indicators, including in-hospital mortality. NHSI plan to switch from monitoring in-hospital mortality to mortality (in any setting) over the next few months\n\nNHS Improvement will ensure that suitable controls are in place such that the data is used by the Trust solely in line with the purposes set out within the agreement. \n\nMonitor will not use data for any commercial purpose. Monitor will retain the Intellectual Property Rights to any works derived from or including the production of the National Tariff, PLICS, GIRFT data packs, NCIP product and Model Hospital Dashboard outputs.\n\nFor clarity, Monitor and NHS TDA will act as joint data controllers in common and joint data processors.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data). Flow down terms of the DSFC will be included in the sub licence for NCIP\n\nUnder the Sub licence arrangements which this agreement will permit NHS trusts will have access to the following data;\n\nConsultants will access to NCIP Product with role based access controls (RBAC) under a sub licencing arrangement.\n\n*HES pseudonymised patient level- including Consultant code \n*Patient Reported Outcome Measures (PROMS)\n*HES-Civil registration data\n*Sus PBR\n*DIDS\n*PLICS\n\nOnly data for care and treatment in English hospitals is provided under this agreement.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "",
+     "name": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-04-03",
+   "expected_benefits": "The benefits that the NCIP product will provide is to improve patient care through learning generated from the provision of individual and unit level activity and outcomes data to NHS consultants in England. The product will provide data to individual consultants for personal development, professional appraisal and improvements/learning. Support the Responsible Officer to discharge statutory duties for having oversight of a Consultant’s whole practice. Ensure trust Medical Director has a view of all activity within their trust and identity areas of required improvements.",
+   "expected_output": "Example outputs that will form part of the core functions set out in the purpose section are:\n\nDeveloping the Carter Model Hospital, GIRFT and NCIP product.\n\nDeveloping the Carter Programme and the Model Hospital dashboard and metrics – a nationally available online information system, with a series of themed compartments which present key performance metrics for different area across the hospital, community services, mental health services and ambulance services. Enabling providers to compare performance against their peers and national benchmarks, and identify areas where they need to improve and develop products to help support service improvements and operational productivity. \n\nProviding Consultant level activity data to individual Consultants. The rationale of sharing at this level is to support Consultant appraisals and clinical improvements/outcomes.",
+   "files_released": 0,
+   "objective": "NHS Improvement (NHSI) was launched on 1 April 2016 and is the operational name for the organisation that brings together Monitor and the NHS Trust Development Authority (“TDA” plus a number of other teams). \nNHS Improvement operates as a single organisation, with a joint board and single leadership and operating model although the TDA and Monitor continue to exist as distinct legal entities with their continuing statutory functions, legal powers and staff.\n\nThis application seeks to request data for both the TDA and Monitor as joint Data controllers.\nThe TDA is a Special Health Authority established by Article 2 of the TDA (Establishment and Constitution) Order 2012. The NHS TDA is also made up of the Patient Safety, the National Reporting and Learning System, the Advancing Change and the Intensive Support Teams. Under the NHS DA (Directions and Miscellaneous Amendments etc.) Regulations 2016 it has a general power to take such steps as it considers necessary and appropriate to assist and support persons providing NHS services to ensure continuous improvement in the quality of the provision and the financial sustainability of NHS services.\n\nMonitor is a statutory body. Under the Health and Social Care Act 2012. It has a duty when exercising its functions to protect and promote patient interests by promoting economic, efficient and effective health care services whilst maintaining or improving quality. Monitor must co-operate with Special Health Authorities including the NHS TDA.\nMonitor and the NHS Trust Development Authority (TDA) have come together under the operational name NHS Improvement, combining the functions and responsibilities of the two statutory bodies in a single integrated organisation. As such, NHS Improvement is responsible, among other things, for the oversight of NHS trusts, NHS foundation trusts and independent providers.\n\nMonitor require access to the following data sets as part of this request;\n\n*Hospital Episode Statistics (HES) including Consultant code\n\n*Patient Reported Outcome Measures (PROMS)\n\n*ONS-HES linked data\n\n*Civil registration of deaths data\n\nThe National Clinical Improvement Programme (NCIP) aims to support clinicians with learning and continuous self-development with respect to the services they deliver. The programme will provide both team and clinical-level activity and metrics about the whole of a clinician’s practice, and links to relevant service delivery research and other evidence, delivered through a secure online portal hosted by NHS Improvement.  NCIP will be a digital product that NHS consultants in England will use to source their personal and unit-level outcome data in the context of national benchmarks. This information will support quality improvement activities, with the ultimate aim of delivering improved patient care.\n\nNCIP is a DHSC Programme, operating under a Direction from the Secretary of State. It is part of the wider Getting It Right First Time (GIRFT) programme, which is a central plank of the NHS Long Term Plan. The NCIP product will feature a series of activity-specific dashboards and metrics. Those with access will be able to drill through the dashboards to the underlying pseudonymised record level data.  Consultants will have access to dashboards that describe their personal activity and the unit level activity of their designated organisation (where the designated organisation is an NHS Trust). A Consultant’s access to the product will be subject to the approval of the Medical Director at their NHS Designated Organisation.",
+   "organisation": "NHS IMPROVEMENT",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-213403-P3R8Q-v0.2",
+   "releases": [],
+   "start_date": "2019-04-04",
+   "sublicensing": "Yes",
+   "title": "NHS Improvement - National Clinical Improvement Programme (NCIP)",
+   "version": "0.2",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "The NCIP product will be securely provided over the web, where users will require username and password to access. All patient level pseudonymised HES data will be held within NHSI secure servers, whereas aggregate activity data (e.g. number of procedures, number of re admission within 30 days) at consultant and speciality grade doctor level will be held in the Azure Cloud under contract with NHSI. Only Aggregated data with small number suppression will be held in the Azure Cloud.\n\nData presented via the NCIP product will include pseudonymised record level data as well as aggregate data (without small numbers suppression in line with the exception agreed for GIRFT). Access to data held in the NCIP product will be provided in accordance with sign up to terms of conditions of use for accessing NCIP (flow down NHSD requirements) and under a sub licence arrangement with trusts.\n\nAccess levels of data will be in accordance with the sub licence each Trust signs up to;\nConsultants and speciality grade doctors will have access to Trust level dashboards (where their Designated Body is the subject) in addition to their personal dashboards, where the Consultant and speciality grade doctor is the subject. Consultants and speciality grade doctors will not be able to access other Consultants and speciality grade doctor dashboards.\n\nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in their own Consultant and speciality grade doctor dashboards. \n\nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in the Unit level dashboards to which they have access. Consultants and speciality grade doctors will not be able to identify other consultants and speciality grade doctors in the dashboards. Consultants and speciality grade doctors will be able to identify other consultants and speciality grade doctor in the pseudonymised patient data only where there are other episodes in index spells attributed to the consultant and speciality grade doctor in question.\n\nFor the purpose of this agreement Consultants and Specialty Doctors are defined as; A senior medical practitioner who is appointed to their role by an NHS Trust. A Medical Practitioner is;\n\n“Medical Practitioner” means a person who-\n- is included in the register of medical practitioners referred to in section 2 of the Medical Act 1983;\n- holds a licence to practise under that Act; and\n- is employed or otherwise engaged by the Trust to provide healthcare services under the NHS.\n\nGIRFT (including NCIP) and Model Hospital are keen to use the civil registration of death data to measure mortality following procedures.\n\nThe key data fields for this purpose are date of death and cause of death. The GIRFT and Model\nHospital programmes aim to improve cost efficiency of NHS services through reducing variation in cost and clinical quality.\n\nOne of the key clinical quality metrics is death following surgical procedures. The programmes currently use HES data to calculate a number of clinical quality indicators, including in-hospital mortality. NHSI plan to switch from monitoring in hospital mortality to mortality (in any setting) over the next few months NHS Improvement will ensure that suitable controls are in place such that the data is used by the trust solely in line with the purposes set out within the agreement.\n\nMonitor will not use data for any commercial purpose. Monitor will retain the Intellectual Property Rights to any works derived from or including the production of the National Tariff, PLICS, GIRFT data packs, NCIP product and Model Hospital Dashboard outputs.\n\nFor clarity, Monitor and NHS TDA will act as joint data controllers in common. \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by ‘Personnel’ (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data). Flow down terms of the DSFC will be included in the sub licence for NCIP.\n\nUnder the Sub licence arrangements which this agreement will permit NHS trusts will have access to the following data;\n\nConsultants and speciality grade doctors will access to NCIP Product with role based access controls (RBAC) under a sub licencing arrangement.\n\n*HES pseudonymised patient level- including Consultant code\n*Patient Reported Outcome Measures (PROMS)\n*HES-Civil registration data\n*Sus PBR\n*DIDS\n*PLICS\n*Theatres data\n\nOnly data for care and treatment in English hospitals is provided under this agreement.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "",
+     "name": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "NCIP Theatre Data Set Discovery Project",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "NCIP Theatre Data Set Discovery Project Bridging File",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-11-30",
+   "expected_benefits": "The benefits that the NCIP product will provide is to improve patient care through learning generated from the provision of individual and unit level activity and outcomes data to NHS consultants and speciality grade doctors in England. The product will provide data to individual consultants and speciality grade doctors for personal development, professional appraisal and improvements/learning. Support the Responsible Officer to discharge statutory duties for having oversight of a Consultant’s and speciality grade doctor whole practice. Ensure trust Medical Director has a view of all activity within their trust and identity areas of required improvements.",
+   "expected_output": "Example outputs that will form part of the core functions set out in the purpose section are:\n\nDeveloping the Carter Model Hospital, GIRFT and NCIP product.\n\nDeveloping the Carter Programme and the Model Hospital dashboard and metrics in a nationally available online information system, with a series of themed compartments which present key performance metrics for different area across the hospital, community services, mental health services and ambulance services. \n\nEnabling providers to compare performance against their peers and national benchmarks and identify areas where they need to improve and develop products to help support service improvements and operational productivity.\n\nProviding Consultant and speciality grade doctor level activity data to individual Consultants and speciality grade doctors. The rationale of sharing at this level is to support Consultant and speciality grade doctor appraisals and clinical improvements/outcomes.",
+   "files_released": 0,
+   "objective": "NHS Improvement (NHSI) was launched on 1 April 2016 and is the operational name for the organisation that brings together Monitor and the NHS Trust Development Authority (TDA) plus a number of other teams.\n\nNHS Improvement operates as a single organisation, with a joint board and single leadership and operating model although the TDA and Monitor continue to exist as distinct legal entities with their continuing statutory functions, legal powers and staff.\n\nThis application seeks to request data for both the TDA and Monitor as joint Data controllers.\n\nThe TDA is a Special Health Authority established by Article 2 of the TDA (Establishment and Constitution) Order 2012. The NHS TDA is also made up of the Patient Safety, the National Reporting and Learning System, the Advancing Change and the Intensive Support Teams. Under the NHS DA (Directions and Miscellaneous Amendments etc.) Regulations 2016 it has a general power to take such steps as it considers necessary and appropriate to assist and support persons providing NHS services to ensure continuous improvement in the quality of the provision and the financial sustainability of NHS services.\n\nMonitor is a statutory body. Under the Health and Social Care Act 2012. It has a duty when exercising its functions to protect and promote patient interests by promoting economic, efficient and effective health care services whilst maintaining or improving quality. Monitor must co-operate with Special Health Authorities including the NHS TDA.\n\nMonitor and the NHS Trust Development Authority (TDA) have come together under the operational name NHS Improvement, combining the functions and responsibilities of the two statutory bodies in a single integrated organisation.\n\nArticle 6(1)(e) is being used as the GDPR legal basis for processing.\nMonitor, The TDA and NHSE are public authorities.  The Data Protection Act 2018 s7(1)(a) defines ‘public bodies’ for the purpose of the GDPR as “a public authority as defined by the Freedom of Information Act 2000”.  The FOI Act 2000 Part 1, section 3 (1)(a)(i) specifies that a public authority means any body which is listed in Schedule 1.  Schedule 1 of the FOI Act 2000 lists special health authorities as public authorities (TDA) and Monitor is a statutory body. Under the Health and Social Care Act 2012.\n\nArticle 9(2)(j) is also being used as processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject).\n\nAs such, NHS Improvement is responsible, among other things, for the oversight of NHS trusts, NHS foundation trusts and independent providers.\n\nMonitor require access to the following data sets as part of this request;\n\n*Hospital Episode Statistics (HES) including Consultant code\n*Patient Reported Outcome Measures (PROMS)\n*ONS-HES linked data\n*Civil registration of deaths data\n*Theatre data set (discovery collection)\n\nThe National Clinical Improvement Programme (NCIP) aims to support clinicians with learning and continuous self-development with respect to the services they deliver. The programme will provide both team and clinical-level activity and metrics about the whole of a clinician's practice, and links to relevant service delivery research and other evidence, delivered through a secure online portal hosted by NHS Improvement. NCIP will be a digital product that NHS consultants and speciality grade doctors in England will use to source their personal and unit-level outcome data in the context of national benchmarks. This information will support quality improvement activities, with the ultimate aim of delivering improved patient care.\n\nNCIP is a Getting It Right First Time (GIRFT) Programme, operating under the statutory improvement functions of NHS Improvement, which is a central part of the NHS Long Term Plan. The NCIP product will feature a series of activity-specific dashboards and metrics. Those with access will be able to drill through the dashboards to the underlying pseudonymised record level data. Consultants and speciality grade doctors will have access to dashboards that describe their personal activity and the unit level activity of their designated organisation (where the designated organisation is an NHS Trust). A Consultant’s or speciality grade doctor’s access to the product will be subject to the approval of the Medical Director (or persons working on their behalf) at their NHS Designated Organisation.\n\nSpecific to the theatre data set discovery this data is being collected under a Mandatory Request to NHS Digital. The request is for NHS Digital to establish and operate an information system for the collection and analysis of theatre data from between five and seven NHS Foundation Trusts (discovery sites) in support of the NCIP.\n\nThe purpose of requesting NHS Digital to establish the NCIP Theatre Data Set Discovery Information System is to enable NHSI/E to assess the potential of theatre data to enhance the attribution of surgical activity to consultants, as recorded in Hospital Episode Statistics (HES) Admitted Patient Care (APC) data, and to explore potential other uses of the data (e.g. unit-level productivity measurement) with a view to developing a national theatre data set.\n\nInaccurate attribution of existing activity data to consultants is a risk to the success of NCIP.  \n\nThe data will be collected in a form which identifies individual patients and associated information about their health care. This will therefore be patient level data sourced from local theatre systems within NHS trusts. The data will be disseminated to NHSI once it has been collected by NHSD as part of the data set discovery project. The flow of data will be limited by the duration of the Discovery project; i.e. the Discovery project will not support an on-going flow of theatre data.\n\nThis information is necessary to enable data linkage to HES APC data at procedure level and for NHSI to share the relevant activity data with the consultants concerned. The collection also identifies the surgeons and anaesthetists involved. Clinicians will be identified in Theatre data using a combination of GMC number, local identifier and name.\n\nThere are no intended publications of the Theatre Data Set Discovery collection.\n\nThe data sourced from NHS Digital under this agreement will also be used by the NCIP development team for validation and development of NCIP algorithms. This will involve a trust consultant (involved in the development of NCIP) sharing with NHSI analysts a sub set of trust held data related to a specific procedure, this will be cross referenced to HES data and any inaccuracies shared back with the consultant who is directly involved in the delivery of the patient’s direct care. This will generally include aggregate level figures with small numbers suppressed but could include a set of procedure codes. This activity is critical to developing accurate content, be it aggregations of activity or metrics that are applied to those activities.",
+   "organisation": "NHS IMPROVEMENT",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-213403-P3R8Q-v1.2",
+   "releases": [],
+   "start_date": "2019-12-01",
+   "sublicensing": "Yes",
+   "title": "NHS Improvement - National Clinical Improvement Programme (NCIP) November 2019 amendment Theatres data",
+   "version": "1.2",
+   "yielded_benefits": "There are currently no yielded benefits due to the sub-license being in place for less than 12 months."
+  },
+  {
+   "activities": "The NCIP product will be securely provided over the web, where users will require username and password to access. All patient level pseudonymised HES data will be held within NHSI secure servers, whereas aggregate activity data (e.g. number of procedures, number of re admission within 30 days) at consultant and speciality grade doctor level will be held in the Azure Cloud under contract with NHSI. Only Aggregated data with small number suppression will be held in the Azure Cloud.\n\nData presented via the NCIP product will include pseudonymised record level data as well as aggregate data (without small numbers suppression in line with the exception agreed for GIRFT). Access to data held in the NCIP product will be provided in accordance with sign up to terms of conditions of use for accessing NCIP (flow down NHSD requirements) and under a sub licence arrangement with trusts.\n\nAccess levels of data will be in accordance with the sub licence each Trust signs up to;\nConsultants and speciality grade doctors will have access to Trust level dashboards (where their Designated Body is the subject) in addition to their personal dashboards, where the Consultant and speciality grade doctor is the subject. Consultants and speciality grade doctors will not be able to access other Consultants and speciality grade doctor dashboards.\n\nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in their own Consultant and speciality grade doctor dashboards. \n\nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in the Unit level dashboards to which they have access. Consultants and speciality grade doctors will not be able to identify other consultants and speciality grade doctors in the dashboards. Consultants and speciality grade doctors will be able to identify other consultants and speciality grade doctor in the pseudonymised patient data only where there are other episodes in index spells attributed to the consultant and speciality grade doctor in question.\n\nFor the purpose of this agreement Consultants and Specialty Doctors are defined as; A senior medical practitioner who is appointed to their role by an NHS Trust. A Medical Practitioner is;\n\n“Medical Practitioner” means a person who-\n- is included in the register of medical practitioners referred to in section 2 of the Medical Act 1983;\n- holds a licence to practise under that Act; and\n- is employed or otherwise engaged by the Trust to provide healthcare services under the NHS.\n\nGIRFT (including NCIP) and Model Hospital are keen to use the civil registration of death data to measure mortality following procedures.\n\nThe key data fields for this purpose are date of death and cause of death. The GIRFT and Model\nHospital programmes aim to improve cost efficiency of NHS services through reducing variation in cost and clinical quality.\n\nOne of the key clinical quality metrics is death following surgical procedures. The programmes currently use HES data to calculate a number of clinical quality indicators, including in-hospital mortality. NHSI plan to switch from monitoring in hospital mortality to mortality (in any setting) over the next few months NHS Improvement will ensure that suitable controls are in place such that the data is used by the trust solely in line with the purposes set out within the agreement.\n\nMonitor will not use data for any commercial purpose. Monitor will retain the Intellectual Property Rights to any works derived from or including the production of the National Tariff, PLICS, GIRFT data packs, NCIP product and Model Hospital Dashboard outputs.\n\nFor clarity, Monitor and NHS TDA will act as joint data controllers in common. \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by ‘Personnel’ (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data). Flow down terms of the DSFC will be included in the sub licence for NCIP.\n\nUnder the Sub licence arrangements which this agreement will permit NHS trusts will have access to the following data;\n\nConsultants and speciality grade doctors will access to NCIP Product with role based access controls (RBAC) under a sub licencing arrangement.\n\n*HES pseudonymised patient level- including Consultant code\n*Patient Reported Outcome Measures (PROMS)\n*HES-Civil registration data\n*Sus PBR\n*DIDS\n*PLICS\n*Theatres data\n\nOnly data for care and treatment in English hospitals is provided under this agreement.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "NCIP Theatre Data Set Discovery Project",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "NCIP Theatre Data Set Discovery Project Bridging File",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2021-03-31",
+   "expected_benefits": "The benefits that the NCIP product will provide is to improve patient care through learning generated from the provision of individual and unit level activity and outcomes data to NHS consultants and speciality grade doctors in England. The product will provide data to individual consultants and speciality grade doctors for personal development, professional appraisal and improvements/learning. Support the Responsible Officer to discharge statutory duties for having oversight of a Consultant’s and speciality grade doctor whole practice. Ensure trust Medical Director has a view of all activity within their trust and identity areas of required improvements.",
+   "expected_output": "Data is used to develop the GIRFT and NCIP product. Providing Consultant and speciality grade doctor level activity data to individual Consultants and speciality grade doctors. The rationale of sharing at this level is to support Consultant and speciality grade doctor appraisals and clinical improvements/outcomes. \n\nThe NCIP programme was initiated to support NHS consultants with learning and continuous self-development of their practice. The programme has worked closely with consultant surgeons, GIRFT clinical leads and Speciality Associations, to build on content already generated by GIRFT, to develop specialty specific procedure groups and metrics that are relevant at clinician level. \n\nThe metrics are surfaced through a secure online portal that enables consultants to analyse and compare their clinical activity and patient outcomes against local and national benchmarks, with the aim of delivering improved patient care. The NCIP portal provides access to individual’s outcomes data and unit-level data across a range of surgical specialities. \n\nNCIP also allows users to ‘drill-down’ to individual patient-level information via pseudonymised patient records  to allow for full interrogation of consultant-level outcomes-data, adding to the benefits of GIRFT. \n\nNCIP sits under the wider GIRFT ‘’umbrella’’ and its development and delivery are aligned to delivery of objectives of the GIRFT programme and addressing unwarranted variation in the NHS.",
+   "files_released": 0,
+   "objective": "NHS Improvement (NHSI) was launched on 1 April 2016 and is the operational name for the organisation that brings together Monitor and the NHS Trust Development Authority (TDA) plus a number of other teams.\n\nNHS Improvement operates as a single organisation, with a joint board and single leadership and operating model although the TDA and Monitor continue to exist as distinct legal entities with their continuing statutory functions, legal powers and staff.\n\nThis application seeks to request data for both the TDA and Monitor as joint Data controllers.\n\nThe TDA is a Special Health Authority established by Article 2 of the TDA (Establishment and Constitution) Order 2012. The NHS TDA is also made up of the Patient Safety, the National Reporting and Learning System, the Advancing Change and the Intensive Support Teams. Under the NHS DA (Directions and Miscellaneous Amendments etc.) Regulations 2016 it has a general power to take such steps as it considers necessary and appropriate to assist and support persons providing NHS services to ensure continuous improvement in the quality of the provision and the financial sustainability of NHS services.\n\nMonitor is a statutory body. Under the Health and Social Care Act 2012. It has a duty when exercising its functions to protect and promote patient interests by promoting economic, efficient and effective health care services whilst maintaining or improving quality. Monitor must co-operate with Special Health Authorities including the NHS TDA.\n\nMonitor and the NHS Trust Development Authority (TDA) have come together under the operational name NHS Improvement, combining the functions and responsibilities of the two statutory bodies in a single integrated organisation.\n\nArticle 6(1)(e) is being used as the GDPR legal basis for processing.\nMonitor, The TDA and NHSE are public authorities.  The Data Protection Act 2018 s7(1)(a) defines ‘public bodies’ for the purpose of the GDPR as “a public authority as defined by the Freedom of Information Act 2000”.  The FOI Act 2000 Part 1, section 3 (1)(a)(i) specifies that a public authority means any body which is listed in Schedule 1.  Schedule 1 of the FOI Act 2000 lists special health authorities as public authorities (TDA) and Monitor is a statutory body. Under the Health and Social Care Act 2012.\n\nArticle 9(2)(j) is also being used as processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject).\n\nAs such, NHS Improvement is responsible, among other things, for the oversight of NHS trusts, NHS foundation trusts and independent providers.\n\nMonitor require access to the following data sets as part of this request;\n\n*Hospital Episode Statistics (HES) including Consultant code\n*Patient Reported Outcome Measures (PROMS)\n*ONS-HES linked data\n*Civil registration of deaths data\n*Theatre data set (discovery collection)\n\nThe National Clinical Improvement Programme (NCIP) aims to support clinicians with learning and continuous self-development with respect to the services they deliver. The programme will provide both team and clinical-level activity and metrics about the whole of a clinician's practice, and links to relevant service delivery research and other evidence, delivered through a secure online portal hosted by NHS Improvement. NCIP will be a digital product that NHS consultants and speciality grade doctors in England will use to source their personal and unit-level outcome data in the context of national benchmarks. This information will support quality improvement activities, with the ultimate aim of delivering improved patient care.\n\nNCIP is a Getting It Right First Time (GIRFT) Programme, operating under the statutory improvement functions of NHS Improvement, which is a central part of the NHS Long Term Plan. The NCIP product will feature a series of activity-specific dashboards and metrics. Those with access will be able to drill through the dashboards to the underlying pseudonymised record level data. Consultants and speciality grade doctors will have access to dashboards that describe their personal activity and the unit level activity of their designated organisation (where the designated organisation is an NHS Trust). A Consultant’s or speciality grade doctor’s access to the product will be subject to the approval of the Medical Director (or persons working on their behalf) at their NHS Designated Organisation.\n\nSpecific to the theatre data set discovery this data is being collected under a Mandatory Request to NHS Digital. The request is for NHS Digital to establish and operate an information system for the collection and analysis of theatre data from between five and seven NHS Foundation Trusts (discovery sites) in support of the NCIP.\n\nThe purpose of requesting NHS Digital to establish the NCIP Theatre Data Set Discovery Information System is to enable NHSI/E to assess the potential of theatre data to enhance the attribution of surgical activity to consultants, as recorded in Hospital Episode Statistics (HES) Admitted Patient Care (APC) data, and to explore potential other uses of the data (e.g. unit-level productivity measurement) with a view to developing a national theatre data set.\n\nInaccurate attribution of existing activity data to consultants is a risk to the success of NCIP.  \n\nThe data will be collected in a form which identifies individual patients and associated information about their health care. This will therefore be patient level data sourced from local theatre systems within NHS trusts. The data will be disseminated to NHSI once it has been collected by NHSD as part of the data set discovery project. The flow of data will be limited by the duration of the Discovery project; i.e. the Discovery project will not support an on-going flow of theatre data.\n\nThis information is necessary to enable data linkage to HES APC data at procedure level and for NHSI to share the relevant activity data with the consultants concerned. The collection also identifies the surgeons and anaesthetists involved. Clinicians will be identified in Theatre data using a combination of GMC number, local identifier and name.\n\nThere are no intended publications of the Theatre Data Set Discovery collection.\n\nThe data sourced from NHS Digital under this agreement will also be used by the NCIP development team for validation and development of NCIP algorithms. This will involve a trust consultant (involved in the development of NCIP) sharing with NHSI analysts a sub set of trust held data related to a specific procedure, this will be cross referenced to HES data and any inaccuracies shared back with the consultant who is directly involved in the delivery of the patient’s direct care. This will generally include aggregate level figures with small numbers suppressed but could include a set of procedure codes. This activity is critical to developing accurate content, be it aggregations of activity or metrics that are applied to those activities.",
+   "organisation": "NHS IMPROVEMENT",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-213403-P3R8Q-v2.2",
+   "releases": [],
+   "start_date": "2020-12-01",
+   "sublicensing": "Yes",
+   "title": "NHS Improvement - National Clinical Improvement Programme (NCIP) - Renewal until 31st March 2021",
+   "version": "2.2",
+   "yielded_benefits": "The NCIP portal has been rolled out across five ‘early adopter’ NHS Trusts over the last 12 months.  \nA number of benefits have been reported such as:\n\n•Giving the consultants an opportunity to reflect and refine their practice by highlighting potentially unnecessary procedures.\n•Enabling consultants to generate reports from the unbiased, independently collected data with the data being generated rapidly saving consultant time.\n•The ability to compare local practice with national performance by reference to best practice, leading to improvements in patient pathways.\n\nThe success of these five 'early adopter' NHS trusts is being built upon and imminently NCIP is in the process of 'on boarding' another seven 'fast followers' in its ambition to roll out to all trusts nationally in time."
+  },
+  {
+   "activities": "The NCIP product will be securely provided over the web, where users will require username and password to access. All patient level pseudonymised HES data will be held within NHSI secure servers, whereas aggregate activity data (e.g. number of procedures, number of re admission within 30 days) at consultant and speciality grade doctor level will be held in the Azure Cloud under contract with NHSI. Only Aggregated data with small number suppression will be held in the Azure Cloud.\n\nData presented via the NCIP product will include pseudonymised record level data as well as aggregate data (without small numbers suppression in line with the exception agreed for GIRFT). Access to data held in the NCIP product will be provided in accordance with sign up to terms of conditions of use for accessing NCIP (flow down NHSD requirements) and under a sub licence arrangement with trusts.\n\nAccess levels of data will be in accordance with the sub licence each Trust signs up to;\nConsultants and speciality grade doctors will have access to Trust level dashboards (where their Designated Body is the subject) in addition to their personal dashboards, where the Consultant and speciality grade doctor is the subject. Consultants and speciality grade doctors will not be able to access other Consultants and speciality grade doctor dashboards.\n\nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in their own Consultant and speciality grade doctor dashboards. \n\nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in the Unit level dashboards to which they have access. Consultants and speciality grade doctors will not be able to identify other consultants and speciality grade doctors in the dashboards. Consultants and speciality grade doctors will be able to identify other consultants and speciality grade doctor in the pseudonymised patient data only where there are other episodes in index spells attributed to the consultant and speciality grade doctor in question.\n\nFor the purpose of this agreement Consultants and Specialty Doctors are defined as; A senior medical practitioner who is appointed to their role by an NHS Trust. A Medical Practitioner is;\n\n“Medical Practitioner” means a person who-\n- is included in the register of medical practitioners referred to in section 2 of the Medical Act 1983;\n- holds a licence to practise under that Act; and\n- is employed or otherwise engaged by the Trust to provide healthcare services under the NHS.\n\nGIRFT (including NCIP) and Model Hospital are keen to use the civil registration of death data to measure mortality following procedures.\n\nThe key data fields for this purpose are date of death and cause of death. The GIRFT and Model\nHospital programmes aim to improve cost efficiency of NHS services through reducing variation in cost and clinical quality.\n\nOne of the key clinical quality metrics is death following surgical procedures. The programmes currently use HES data to calculate a number of clinical quality indicators, including in-hospital mortality. NHSI plan to switch from monitoring in hospital mortality to mortality (in any setting) over the next few months NHS Improvement will ensure that suitable controls are in place such that the data is used by the trust solely in line with the purposes set out within the agreement.\n\nMonitor will not use data for any commercial purpose. Monitor will retain the Intellectual Property Rights to any works derived from or including the production of the National Tariff, PLICS, GIRFT data packs, NCIP product and Model Hospital Dashboard outputs.\n\nFor clarity, Monitor and NHS TDA will act as joint data controllers in common. \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by ‘Personnel’ (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data). Flow down terms of the DSFC will be included in the sub licence for NCIP.\n\nUnder the Sub licence arrangements which this agreement will permit NHS trusts will have access to the following data;\n\nConsultants and speciality grade doctors will access to NCIP Product with role based access controls (RBAC) under a sub licencing arrangement.\n\n*HES pseudonymised patient level- including Consultant code\n*Patient Reported Outcome Measures (PROMS)\n*HES-Civil registration data\n*Sus PBR\n*DIDS\n*PLICS\n*Theatres data\n\nOnly data for care and treatment in English hospitals is provided under this agreement.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "NCIP Theatre Data Set Discovery Project",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "NCIP Theatre Data Set Discovery Project Bridging File",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-06-30",
+   "expected_benefits": "The benefits that the NCIP product will provide is to improve patient care through learning generated from the provision of individual and unit level activity and outcomes data to NHS consultants and speciality grade doctors in England. The product will provide data to individual consultants and speciality grade doctors for personal development, professional appraisal and improvements/learning. Support the Responsible Officer to discharge statutory duties for having oversight of a Consultant’s and speciality grade doctor whole practice. Ensure trust Medical Director has a view of all activity within their trust and identity areas of required improvements.",
+   "expected_output": "Data is used to develop the GIRFT and NCIP product. Providing Consultant and speciality grade doctor level activity data to individual Consultants and speciality grade doctors. The rationale of sharing at this level is to support Consultant and speciality grade doctor appraisals and clinical improvements/outcomes. \n\nThe NCIP programme was initiated to support NHS consultants with learning and continuous self-development of their practice. The programme has worked closely with consultant surgeons, GIRFT clinical leads and Speciality Associations, to build on content already generated by GIRFT, to develop specialty specific procedure groups and metrics that are relevant at clinician level. \n\nThe metrics are surfaced through a secure online portal that enables consultants to analyse and compare their clinical activity and patient outcomes against local and national benchmarks, with the aim of delivering improved patient care. The NCIP portal provides access to individual’s outcomes data and unit-level data across a range of surgical specialities. \n\nNCIP also allows users to ‘drill-down’ to individual patient-level information via pseudonymised patient records  to allow for full interrogation of consultant-level outcomes-data, adding to the benefits of GIRFT. \n\nNCIP sits under the wider GIRFT ‘’umbrella’’ and its development and delivery are aligned to delivery of objectives of the GIRFT programme and addressing unwarranted variation in the NHS.",
+   "files_released": 0,
+   "objective": "NHS Improvement (NHSI) was launched on 1 April 2016 and is the operational name for the organisation that brings together Monitor and the NHS Trust Development Authority (TDA) plus a number of other teams.\n\nNHS Improvement operates as a single organisation, with a joint board and single leadership and operating model although the TDA and Monitor continue to exist as distinct legal entities with their continuing statutory functions, legal powers and staff.\n\nThis application seeks to request data for both the TDA and Monitor as joint Data controllers.\n\nThe TDA is a Special Health Authority established by Article 2 of the TDA (Establishment and Constitution) Order 2012. The NHS TDA is also made up of the Patient Safety, the National Reporting and Learning System, the Advancing Change and the Intensive Support Teams. Under the NHS DA (Directions and Miscellaneous Amendments etc.) Regulations 2016 it has a general power to take such steps as it considers necessary and appropriate to assist and support persons providing NHS services to ensure continuous improvement in the quality of the provision and the financial sustainability of NHS services.\n\nMonitor is a statutory body. Under the Health and Social Care Act 2012. It has a duty when exercising its functions to protect and promote patient interests by promoting economic, efficient and effective health care services whilst maintaining or improving quality. Monitor must co-operate with Special Health Authorities including the NHS TDA.\n\nMonitor and the NHS Trust Development Authority (TDA) have come together under the operational name NHS Improvement, combining the functions and responsibilities of the two statutory bodies in a single integrated organisation.\n\nArticle 6(1)(e) is being used as the GDPR legal basis for processing.\nMonitor, The TDA and NHSE are public authorities.  The Data Protection Act 2018 s7(1)(a) defines ‘public bodies’ for the purpose of the GDPR as “a public authority as defined by the Freedom of Information Act 2000”.  The FOI Act 2000 Part 1, section 3 (1)(a)(i) specifies that a public authority means any body which is listed in Schedule 1.  Schedule 1 of the FOI Act 2000 lists special health authorities as public authorities (TDA) and Monitor is a statutory body. Under the Health and Social Care Act 2012.\n\nArticle 9(2)(j) is also being used as processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject).\n\nAs such, NHS Improvement is responsible, among other things, for the oversight of NHS trusts, NHS foundation trusts and independent providers.\n\nMonitor require access to the following data sets as part of this request;\n\n*Hospital Episode Statistics (HES) including Consultant code\n*Patient Reported Outcome Measures (PROMS)\n*ONS-HES linked data\n*Civil registration of deaths data\n*Theatre data set (discovery collection)\n\nThe National Clinical Improvement Programme (NCIP) aims to support clinicians with learning and continuous self-development with respect to the services they deliver. The programme will provide both team and clinical-level activity and metrics about the whole of a clinician's practice, and links to relevant service delivery research and other evidence, delivered through a secure online portal hosted by NHS Improvement. NCIP will be a digital product that NHS consultants and speciality grade doctors in England will use to source their personal and unit-level outcome data in the context of national benchmarks. This information will support quality improvement activities, with the ultimate aim of delivering improved patient care.\n\nNCIP is a Getting It Right First Time (GIRFT) Programme, operating under the statutory improvement functions of NHS Improvement, which is a central part of the NHS Long Term Plan. The NCIP product will feature a series of activity-specific dashboards and metrics. Those with access will be able to drill through the dashboards to the underlying pseudonymised record level data. Consultants and speciality grade doctors will have access to dashboards that describe their personal activity and the unit level activity of their designated organisation (where the designated organisation is an NHS Trust). A Consultant’s or speciality grade doctor’s access to the product will be subject to the approval of the Medical Director (or persons working on their behalf) at their NHS Designated Organisation.\n\nSpecific to the theatre data set discovery this data is being collected under a Mandatory Request to NHS Digital. The request is for NHS Digital to establish and operate an information system for the collection and analysis of theatre data from between five and seven NHS Foundation Trusts (discovery sites) in support of the NCIP.\n\nThe purpose of requesting NHS Digital to establish the NCIP Theatre Data Set Discovery Information System is to enable NHSI/E to assess the potential of theatre data to enhance the attribution of surgical activity to consultants, as recorded in Hospital Episode Statistics (HES) Admitted Patient Care (APC) data, and to explore potential other uses of the data (e.g. unit-level productivity measurement) with a view to developing a national theatre data set.\n\nInaccurate attribution of existing activity data to consultants is a risk to the success of NCIP.  \n\nThe data will be collected in a form which identifies individual patients and associated information about their health care. This will therefore be patient level data sourced from local theatre systems within NHS trusts. The data will be disseminated to NHSI once it has been collected by NHSD as part of the data set discovery project. The flow of data will be limited by the duration of the Discovery project; i.e. the Discovery project will not support an on-going flow of theatre data.\n\nThis information is necessary to enable data linkage to HES APC data at procedure level and for NHSI to share the relevant activity data with the consultants concerned. The collection also identifies the surgeons and anaesthetists involved. Clinicians will be identified in Theatre data using a combination of GMC number, local identifier and name.\n\nThere are no intended publications of the Theatre Data Set Discovery collection.\n\nThe data sourced from NHS Digital under this agreement will also be used by the NCIP development team for validation and development of NCIP algorithms. This will involve a trust consultant (involved in the development of NCIP) sharing with NHSI analysts a sub set of trust held data related to a specific procedure, this will be cross referenced to HES data and any inaccuracies shared back with the consultant who is directly involved in the delivery of the patient’s direct care. This will generally include aggregate level figures with small numbers suppressed but could include a set of procedure codes. This activity is critical to developing accurate content, be it aggregations of activity or metrics that are applied to those activities.",
+   "organisation": "NHS IMPROVEMENT",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-213403-P3R8Q-v3.3",
+   "releases": [],
+   "start_date": "2021-04-01",
+   "sublicensing": "Yes",
+   "title": "NHS Improvement - National Clinical Improvement Programme (NCIP) - Renewal until 30th June 2022",
+   "version": "3.3",
+   "yielded_benefits": "The NCIP portal has been rolled out across five ‘early adopter’ NHS Trusts.\nA number of benefits have been reported such as:\n\n•Giving the consultants an opportunity to reflect and refine their practice by highlighting potentially unnecessary procedures.\n•Enabling consultants to generate reports from the unbiased, independently collected data with the data being generated rapidly saving consultant time.\n•The ability to compare local practice with national performance by reference to best practice, leading to improvements in patient pathways.\n\nThe success of these five 'early adopter' NHS trusts is being built upon and imminently NCIP is in the process of 'on boarding' another seven 'fast followers' in its ambition to roll out to all trusts nationally in time. \n\nTo date NCIP has now been rolled out to 15 trusts who have access to consultant level outcome data, feedback from has been provided that NCIP has been particularly beneficial in:\n\nMortality and morbidity meetings.\nDrives quality improvement.\nAppraisal and revalidation."
+  },
+  {
+   "activities": "No data flows into NHS Digital under this Agreement.\n\nUnder the sub licence arrangements which this Agreement will permit, NHS trusts will have access to the following data; \n\nConsultants and speciality grade doctors will access the NCIP Product with role-based access controls (RBAC) under a sub licencing arrangement. \n*HES - including Consultant code \n*Patient Reported Outcome Measures (PROMS) \n*HES-Civil registration data \n*SUS PbR\n*DIDS \n*Theatres data \n\nAll of the above datasets are disseminated under partner Data Sharing Agreement DARS-NIC-15814-C6W9R. The datasets above are not linked with any other datasets.\n\nThe NCIP product will be securely provided over the web, where users will require username and password to access. All patient level pseudonymised HES data will be held within NHSI secure servers, whereas aggregate activity data (e.g. number of procedures, number of re admissions within 30 days) at consultant and speciality grade doctor level will be held in the Azure Cloud under contract with NHSI. Only Aggregated data with small number suppression will be held in the Azure Cloud. \n\nData presented via the NCIP product will include pseudonymised record level data as well as aggregate data (without small numbers suppression in line with the exception agreed for the Getting It Right First Time (GIRFT) programme). Access to data held in the NCIP product will be provided in accordance with sign up to terms of conditions of use for accessing NCIP (flow down NHSD requirements) and under a sub licence arrangement with trusts. \n\nAccess levels of data will be in accordance with the sub licence each Trust signs up to; Consultants and speciality grade doctors will have access to Trust level dashboards (where their Designated Body is the subject) in addition to their personal dashboards, where the Consultant and speciality grade doctor is the subject. Consultants and speciality grade doctors will not be able to access other Consultants and speciality grade doctor dashboards. \nConsultants and speciality grade doctors will be able to access pseudonymised patient data related to the numerator and denominator values displayed in their own Consultant and speciality grade doctor dashboards; and in the Unit level dashboards to which they have access. Consultants and speciality grade doctors will not be able to identify other consultants and speciality grade doctors in the dashboards. \nConsultants and speciality grade doctors will be able to identify other consultants and speciality grade doctor in the pseudonymised patient data only where there are other episodes in index spells attributed to the consultant and speciality grade doctor in question. \n\nThe NCIP portal system itself is linked to a daily electronic staff record (ESR) feed from trusts, approved by the trust's Medical Director, Information Governance team and ESR leads to validate a consultant's access to the NCIP tool, via confirmation that they are employed at a designated trust. This enables removal of their access should they leave, and ensures they are only able to access procedure dashboards at their employing trust.\n\nFor the purpose of this agreement Consultants and specialty grade doctors are defined as; A senior medical practitioner who is appointed to their role by an NHS Trust. A Medical Practitioner is;\n“Medical Practitioner” means a person who- \n- is included in the register of medical practitioners referred to in section 2 of the Medical Act 1983; \n- holds a licence to practise under that Act; and\n- is employed or otherwise engaged by the Trust to provide healthcare services under the NHS. \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by Personnel͛ (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data). Flow down terms of the DSFC will be included in the sub licence for NCIP.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "MONITOR",
+    "NHS TRUST DEVELOPMENT AUTHORITY"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "NCIP Theatre Data Set Discovery Project",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "NCIP Theatre Data Set Discovery Project Bridging File",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2023-03-31",
+   "expected_benefits": "The benefits that the NCIP product will provide is to improve patient care through learning generated from the provision of individual and unit level activity and outcomes data to NHS consultants and speciality grade doctors in England. The product will provide data to individual consultants and speciality grade doctors for personal development, professional appraisal and improvements/learning. Supporting the Responsible Officer to discharge statutory duties for having oversight of a Consultant's and speciality grade doctor’s whole practice. The product will ensure the trust Medical Director has a view of all activity within their trust and identity areas of required improvements.",
+   "expected_output": "Data is used to develop the NCIP product. Providing Consultant and speciality grade doctor level activity data to individual Consultants and speciality grade doctors. The rationale of sharing at this level is to support Consultant and speciality grade doctor appraisals and clinical improvements/outcomes.\n\nThe NCIP programme was initiated to support NHS consultants with learning and continuous self-development of their practice. The programme has worked closely with consultant surgeons, GIRFT clinical leads and Speciality Associations, to build on content already generated by GIRFT, to develop specialty specific procedure groups and metrics that are relevant at clinician level. \n\nThe metrics are surfaced through a secure online portal that enables consultants to analyse and compare their clinical activity and patient outcomes against local and national benchmarks, with the aim of delivering improved patient care. \n\nThe NCIP portal provides access to individual’s outcomes data and unit-level data across a range of surgical specialities. NCIP also allows users to drill-down to individual patient-level information via pseudonymised patient records to allow for full interrogation of consultant-level outcomes-data, which is complementary to the benefits of GIRFT.\n\nMonitor will retain the Intellectual Property Rights to any works derived from or including the production of the National Tariff, PLICS, GIRFT data packs, NCIP product and Model Hospital Dashboard outputs.",
+   "files_released": 0,
+   "objective": "NHS Improvement (NHSI) was launched on 1 April 2016 and is the operational name for the organisation that brings together Monitor and the NHS Trust Development Authority (TDA) plus a number of other teams. \n\nThis agreement covers the provision of data from NHS Digital to Monitor and NHS TDA as joint controllers. NHS England are an operational partner in delivery of the Portal to the NHS.\n\nThe NHS TDA is a Special Health Authority established by Article 2 of the TDA (Establishment and Constitution) Order 2012. The NHS TDA is also made up of the Patient Safety, the National Reporting and Learning System, the Advancing Change, the Intensive Support Teams and the Health and Safety Investigation Branch (HSIB). Under the NHS TDA (Directions and Miscellaneous Amendments etc) Regulations 2016 it has a general power to take such steps as it considers necessary and appropriate to assist and support persons providing NHS services to ensure continuous improvement in the quality of the provision and the financial sustainability of NHS services.\n\nMonitor is a statutory body. Under the Health and Social Care Act 2012. It has a duty when exercising its functions to protect and promote patient interests by promoting economic, efficient and effective health care services whilst maintaining or improving quality. Monitor must co-operate with Special Health Authorities including the NHS TDA and NHSE.\n\nArticle 6(1)(e) is being used as the GDPR legal basis for processing. Monitor and the TDA are public authorities. The Data Protection Act 2018 s7(1)(a) defines public bodies for the purpose of the GDPR as a public authority as defined by the Freedom of Information Act 2000. The FOI Act 2000 Part 1, section 3 (1)(a)(i) specifies that a public authority means any body which is listed in Schedule 1. Schedule 1 of the FOI Act 2000 lists special health authorities as public authorities; (TDA and) Monitor is a statutory body under the Health and Social Care Act 2012. \n\nGDPR Article 9(2)(h) is also being relied upon: Processing is necessary for the purposes of preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards referred to in paragraph 3.\n-The data are required for the purpose of commissioning.\n-The data required by the data controllers is the least intrusive to the data subject possible to be able to conduct their functions.\n-The data required for commissioning purposes is pseudonymised by NHS Digital to minimise the risk of identification.\n\nAs such, NHS Improvement is responsible, among other things, for the oversight of NHS trusts, NHS foundation trusts and independent providers. \n\nMonitor requires access to the following data sets as part of this request; \n*Hospital Episode Statistics (HES) including Consultant code \n*Patient Reported Outcome Measures (PROMS) \n*HES- Civil registration of deaths linked data \n*SUS PbR\n*DIDS\n*Theatre data set (discovery collection) \n\nOnly data for care and treatment in English hospitals is required under this Agreement. \n\nNCIP is keen to use the civil registration of death data to measure mortality following procedures. The key data fields for this purpose are date of death and cause of death. The NCIP programme is a quality improvement tool allowing consultants to ‘drill down’ into mortality within 90 days of procedure as part of regular review of their own practice and outcomes. \n\nOne of the key clinical quality metrics is death following surgical procedures. The programme uses HES data to calculate a number of clinical quality indicators, including in-hospital mortality. PROMS data is necessary to support ongoing discovery for improving consultant performance. DIDS data is necessary to support ongoing discovery for improving consultant attribution. SUS PbR is necessary to provide additional patient outcomes detail for both inpatients and outpatients which supports the overall purpose of the quality improvement tool. \n\nThe data years requested are required to provide trend data, for example, five or ten year survival statistics, or consultant/ procedure improvements from a point in time when practice/ pathway is changed.\n\nNHS Improvement will ensure that suitable controls are in place such that the data is used by the trust solely in line with the purposes set out within the agreement. Monitor will not use data for any commercial purpose. \n\nThe National Consultant Information Programme (NCIP) delivers a secure online portal platform. Consultants will use the platform for the purposes of supporting improvements in the clinical quality of healthcare services provided by the NHS in England in order to bring about improvements in clinical outcomes for persons in receipt of such services.  In particular in support of personal development; in particular, professional appraisal.\n\nNCIP operates under the statutory improvement functions of NHS Improvement, which is a central part of the NHS Long Term Plan. The NCIP product will feature a series of activity-specific dashboards and metrics. Those with access will be able to drill through the dashboards to the underlying pseudonymised record level data. Consultants and speciality grade doctors will have access to dashboards that describe their personal activity and the unit level activity of their designated organisation (where the designated organisation is an NHS Trust). A Consultant’s or speciality grade doctor’s access to the product will be subject to the approval of the Medical Director (or persons working on their behalf) at their NHS Designated Organisation.\n\nSpecific to the theatre data set discovery this data is being collected under a Mandatory Request to NHS Digital. The request is for NHS Digital to establish and operate an information system for the collection and analysis of theatre data from between five and seven NHS Foundation Trusts (discovery sites) in support of the NCIP. \nThe purpose of requesting NHS Digital to establish the NCIP Theatre Data Set Discovery Information System is to enable NHSI/E to assess the potential of theatre data to enhance the attribution of surgical activity to consultants, as recorded in Hospital Episode Statistics (HES) Admitted Patient Care (APC) data, and to explore potential other uses of the data (e.g. unit-level productivity measurement) with a view to developing a national theatre data set. \nInaccurate attribution of existing activity data to consultants is a risk to the success of NCIP.\n\nThe data will be collected in a form which identifies individual patients and associated information about their health care. This will therefore be patient level data sourced from local theatre systems within NHS trusts. The data will be disseminated to NHSI once it has been collected by NHSD as part of the data set discovery project. The flow of data will be limited by the duration of the Discovery project; i.e. the Discovery project will not support an on-going flow of theatre data.\n\nThis information is necessary to enable data linkage to HES APC data at procedure level and for NHSI to share the relevant activity data with the consultants concerned. The collection also identifies the surgeons and anaesthetists involved. Clinicians will be identified in Theatre data using a combination of GMC number, local identifier and name. \n\nThere are no intended publications of the Theatre Data Set Discovery collection.\n\nThe data sourced from NHS Digital under this agreement will also be used by the NCIP development team for validation and development of NCIP algorithms. This will involve a trust consultant (involved in the development of NCIP) sharing with NHSI analysts a sub-set of trust held data related to a specific procedure, this will be cross referenced to HES data and any inaccuracies shared back with the consultant who is directly involved in the delivery of the patient’s direct care. This will generally include aggregate level figures with small numbers suppressed but could include a set of procedure codes. This activity is critical to developing accurate content, be it aggregations of activity or metrics that are applied to those activities.",
+   "organisation": "NHS IMPROVEMENT",
+   "organisation_type": "Agency/Public Body",
+   "reference": "DARS-NIC-213403-P3R8Q-v4.2",
+   "releases": [],
+   "start_date": "2022-07-01",
+   "sublicensing": "Yes",
+   "title": "NHS Improvement - National Consultant Information Programme (NCIP)",
+   "version": "4.2",
+   "yielded_benefits": "Based on the rollout of the NCIP Portal to NHS Trusts so far, a number of benefits have already been reported, such as: \n•\tGiving consultants an opportunity to reflect and refine their practice by highlighting potentially unnecessary procedures. \n•\tEnabling consultants to generate reports from the unbiased, independently collected data with the data being generated rapidly saving consultant time. \n•\tThe ability to compare local practice with national performance by reference to best practice, leading to improvements in patient pathways. \nThe success of 'early adopter' NHS trusts is being built upon through onboarding more trusts and more specialties. Assessment from consultants who have been given access to their outcome data has confirmed the tool has been particularly beneficial in: \nMortality and morbidity meetings. \nDriving quality improvement. \nAppraisal and revalidation."
+  }
+ ]
+}

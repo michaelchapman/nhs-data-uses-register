@@ -1,0 +1,149 @@
+{
+ "base_reference": "DARS-NIC-656834-N7Z3Q",
+ "versions": [
+  {
+   "activities": "",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "BARTS HEALTH NHS TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Linked HES AE",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2024-04-08",
+   "expected_benefits": "Survivors of retinoblastoma are known to be at increased risk of subsequently developing other primary tumours in other parts of the body later in life.  The aim of this study is to establish if specific mutations on the RB1 gene, associated with retinoblastoma, lead to an increased risk of specific subsequent primary tumours.  If this is established it will be be of great benefit to patients, their families and clinicians in that it will hopefully increase awareness and encourage closer surveillance of patients in monitoring for symptoms that might suggest a subsequent tumour is developing.  Such monitoring would hopefully result in earlier diagnosis and hence a better chance of successful treatment.  The results may also be of value to clinicians when treating patients with retinoblastoma and providing counselling as to the possible future implications for the patient and their families.",
+   "expected_output": "This is a retrospective analysis of historic data from a variety of sources.  The ultimate output will be an analysis report to the funding body CHECT (Childhood Eye Cancer Trust) with information also being disseminated to patient groups and clinicians many of whom are helping with the conduct of the study.  The results will also be published as a research paper in a peer-reviewed medical journal.  The target date for completion is December 2023.",
+   "files_released": 0,
+   "objective": "The Data Recipient will conduct an ethically approved research study to investigate how the type of RB1 gene mutation that predisposes to retinoblastoma might affect \nthe risk of developing a second primary tumour in another part of the body later in life. \n\nThe study will include RB1 mutation carriers who have not developed retinoblastoma due to incomplete penetrance but nevertheless may also be at increased risk of developing other cancers. It is also proposed to take into account \ndetails of the therapy used in the treatment of the initial retinoblastoma.\n\nThis is a follow-up study and, in calculating risks, the endpoint for each participant will be the development of a second primary tumour, death from another cause, or loss to follow-up. For some patients further primary tumours will develop, and information on these later tumours will be included in the analyses of the associations between type of mutation and type of subsequent tumour.",
+   "organisation": "BARTS HEALTH NHS TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-656834-N7Z3Q-v1.6",
+   "releases": [],
+   "start_date": "2022-12-23",
+   "sublicensing": "No",
+   "title": "Retinoblastoma gene mutations and risk of secondary  primary tumours (ODR1819_191)",
+   "version": "1.6",
+   "yielded_benefits": "No measurable benefits will be yielded until the analysis is complete"
+  },
+  {
+   "activities": "No further flows of data will occur under this agreement. Historically Barts Health NHS Trust was transferred identifiable data to The National Disease Registration Service (NDRS) at Public Health England (now NHS England). The data consisted of identifying details (specifically Unique study ID number, NHS Number, Date of Birth) for the cohort to be linked with NHS England data. The data was from Great Ormond Street Hospital, Barts Hospital and Royal London Hospital.\n\nNDRS provided the relevant records from the NDRS HESAPC, NDRS HESAE, NDRS HESOP, NDRS SACT, NDRS RTDS and NDRS Linked Cancer Registration datasets to Barts Health NHS Trust.  No directly identifying data was sent out from NDRS. The data sent from NDRS included only the Unique study ID number as originally supplied by Barts Health NHS Trust for the purposes of record linkage. The data from NDRS may contain dates of cancer diagnoses and dates of death but not any specific identifying details.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at Barts Health NHS Trust.\n\nBarts Health NHS Trust uses offsite back-up services provided by Oriium Consulting Ltd.\nBarts Health NHS Trust stores Data on the Cloud provided by Capgemini.\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within England/Wales. The data will not leave England/Wales at any time.\n\nAccess is restricted to employees of Barts Health NHS Trust who have authorisation from the Principal Investigator.\n\nNo organisations other than the Barts Health NHS Trust are permitted to access the Data.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data outside of this agreement.\n\nThere will be no requirement and no attempt to reidentify individuals when using the Data.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis. All analyses will use pseudonymised dataset. There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\nAll data is held on secure servers and accessed only by authorised substantive employees of Barts Health NHS Trust.\n\nAnalysts from Barts Health NHS Trust will process the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "BARTS HEALTH NHS TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Linked HES AE",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'. ; National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2025-04-03",
+   "expected_benefits": "Survivors of retinoblastoma are known to be at increased risk of subsequently developing other primary tumours in other parts of the body later in life.  The aim of this study is to establish if specific mutations on the RB1 gene, associated with retinoblastoma, lead to an increased risk of specific subsequent primary tumours.  If this is established it will be be of great benefit to patients, their families and clinicians in that it will hopefully increase awareness and encourage closer surveillance of patients in monitoring for symptoms that might suggest a subsequent tumour is developing.  Such monitoring would hopefully result in earlier diagnosis and hence a better chance of successful treatment.  The results may also be of value to clinicians when treating patients with retinoblastoma and providing counselling as to the possible future implications for the patient and their families.",
+   "expected_output": "The expected outputs of the processing will be:\n•\tSubmissions to peer reviewed journals at the end of the study.\n•\tA report of findings to Childhood Eye Cancer Trust (funding body).\n•\tDissemination of data to patient groups and clinicians many of whom are helping with the conduct of the study.  \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. No patient identifiable information will be contained in any outputs.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n•\tJournals\n•\tReports aimed at charities (Childhood Eye Cancer Trust)\n•\tThe Childhood Eye Cancer Trust will convey the outputs to their members, many of whom are retinoblastoma patients and their families.\n\nThe target dates for the production and dissemination of the outputs is December 2024.",
+   "files_released": 0,
+   "objective": "Barts Health NHS Trust requires continued access to NHS England data for the purpose of the following research project: Retinoblastoma gene mutations and risk of secondary primary tumours. \n\nThe following is a summary of the aims of the research project provided by Barts Health NHS Trust:\n\nThe purpose of this study is to investigate how the type of genetic mutation that led to the development of the initial retinoblastoma might affect the risk of developing a second primary tumour in another part of the body later in life.  It is also proposed to take into account details of the therapy used in the treatment of the initial retinoblastoma. \n\n This is a follow-up study and the endpoint for each participant will be the development of a second primary tumour, death from another cause, or loss to follow-up.\n\nThe following NHS England Data previously disseminated will be accessed: \n\n•\tNDRS Linked Hospital Episode Statistics (HES)\n      o\tAdmitted Patient Care (APC)\n      o\tAccident & Emergency (AE)\n      o\tOutpatients (OP)\n•\tNDRS Linked Cancer Registration \n•\tNDRS Systemic Anti-Cancer Therapy Dataset (SACT) \n•\tNDRS Radiotherapy Dataset (RTDS) \n\nThe level of the Data will be pseudonymised. Identifiable data from a cohort was identified by Barts Health NHS Trust and provided to The National Disease Registration Service (NDRS) at Public Health England (now NHS England) for linkage. Section 251 support for this study is in place currently until June 2024 and CAG has acknowledged the change of Data Processor from Public Health England (PHE) to NHS England.\n\nThe Data will be minimised as follows:\n•\tRetinoblastoma cases (patients and RB1 gene mutations carriers), \n•\tAged <15 years at the time of diagnosis with Retinoblastoma or any age with RB1 gene mutation, \n•\tDiagnosed between 01/01/1962 and 31/12/2018, \n•\tDiagnosed and/or treated by Barts, Great Ormond Street Hospital and the Royal London Hospital.\n\nBarts Health NHS Trust is the sponsor and the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above. No other organisation is involved as a Sponsor or Data Controller.\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - the processing is necessary for you to perform a task in the public interest or for your official functions, and the task or function has a clear basis in law.\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it will be of benefit to retinoblastoma patients, their families, and to the clinicians who treat them. Such benefits may include increased surveillance of patients with specific mutations if they are show by this study to be at an increased risk of developing a specific subsequent primary tumour. Such surveillance could potentially lead to earlier diagnosis and treatment of these subsequent malignancies. The results may also be of value to clinicians when treating patients with retinoblastoma and providing counselling as to the possible future health implications for the patient and their families.\n\nThe funding is provided by Childhood Eye Cancer Trust (CHECT). The funding is specifically for the study described. Funding is in place until 31 December 2024.\n\nThe funder(s) will have no ability to suppress or otherwise limit the publication of findings. \n\nCapgemini provides IT hosting services to Barts Health NHS Trust and will store the Data as contracted by Barts Health NHS Trust.\n\nOriium Consulting Ltd provides IT back up services to Barts Health NHS Trust and will store copies of the Data as contracted by Barts Health NHS Trust.\n\nNo other organisation will be accessing the data. \n\nThe data will not be accessed by any individuals other than substantive employees of Barts Health NHS Trust.\n\nAs part of the original ethical approvals obtained for this study Barts Health NHS Trust publicised their proposed investigation primarily towards interested parties, namely, retinoblastoma patients, their families and their clinicians. Via the Barts Health NHS Trust website, CHECT, and outpatient clinics Barts Health NHS Trust invited anyone interested to send their comments on the listed proposals. Barts Health NHS Trust received positive encouragement to conduct the study and no patients requested not to be included.\n\nThe study has support under section 251 of the NHS Act 2006 to enable the common law duty of confidentiality to be temporarily lifted so that confidential patient information can be processed without consent.\n\nWhere individuals have opted out of disease registration by the National Disease Registration Service (NDRS), their data has been permanently removed from the registry and therefore will not be disseminated under this Data Sharing Agreement (DSA). https://digital.nhs.uk/ndrs/patients/opting-out",
+   "organisation": "BARTS HEALTH NHS TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-656834-N7Z3Q-v2.7",
+   "releases": [],
+   "start_date": "2024-04-04",
+   "sublicensing": "No",
+   "title": "Retinoblastoma gene mutations and risk of secondary  primary tumours (ODR1819_191)",
+   "version": "2.7",
+   "yielded_benefits": "No measurable benefits will be yielded until the analysis is complete.\n\nUpdate as per latest confirmation report submitted 02/01/2024: \nAs this is still an ongoing research project no direct benefits to the health and social care system have yet been realised.  However, when the study is complete and results published it is anticipated that it will be of benefit to retinoblastoma patients, their families, and the clinicians who treat them.  Such benefits may include increased surveillance of patients with specific mutations if they are shown by this study to be at an increased risk of developing a specific subsequent primary tumour.  Such surveillance could potentially lead to earlier diagnosis and treatment of these subsequent malignancies.  The results may also be of value to clinicians when treating patients with retinoblastoma and providing counselling as to the possible future implications for the patient and their families."
+  }
+ ]
+}

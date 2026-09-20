@@ -1,0 +1,77 @@
+{
+ "base_reference": "DARS-NIC-656837-J7G8S",
+ "versions": [
+  {
+   "activities": "We have applied a nested case control design. This means that we have detailed information about all cases (patients with cutaneous squamous cell carcinoma [cSCC] with metastasis) and controls (patients with cSCC without metastasis).\nThese cases and controls were sampled from a cohort. The cohort consists of all cSCC between 2013-2015. We recently received data from the entire cohort. In the data analyses we need to assign a weight to each control. The weight corresponds to the probability of being samples as control from the entire cohort. This is what we already did with the data that we received. However, controls were sampled from 2013, not from the entire study period. This means, that the weights for each control may be different and we would like to know if this influences the outcome of the study. \nTherefore we need to know whether a cSCC was diagnosed in 2013 or not, so we can adjust the weights accordingly. \nAlso to make the cohort comparable to the Dutch cohort and we need to know whether or not a patient was diagnosed with a cSCC before 2013. \n\nGeneral Data Protection Regulation Article 6 (1) (e)\nGeneral Data Protection Regulation Article 9 (2) (c)\n\nTo summarize we need the following 2 variables to calculate weights:\n-Tumor variable: cSCC diagnosed in 2013 yes/no\n-Patient variable: patient had cSCC before 2013 yes/no",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "ERASMUS UNIVERSITY MEDICAL CENTRE"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2023-10-19",
+   "expected_benefits": "Currently, cSCC patients at high risk of metastasis receive insufficient number of follow-up visits (Wakkee et al, Eur J Cancer 2019). Current staging systems are insufficient for patient stratification (Venables et al, BJD, 2022). Therefore an improved risk prediction model will be of added value and will help clinicians to decide about adequate follow-up care for patients at high risk of cSCC. It also means that patients at low risk of cSCC can have no or reduced follow-up visits, which may lead to more cost-efficient health care for those patients. At the date of publication (~Q1 2023), we wil also refer to a web application, which can be used by other researchers. The web application has already been developed. The model needs to be further validated by other researchers after publication before use in clinical practice is possible.",
+   "expected_output": "An risk prediction model, which can be used to calculate the absolute risk of metastasis among patients with cSCC. \nTarget date: the calculation of the weights is the last analyses , which is needed to validate the model. The article has been written already, thus submission of the article can be expected within a month after receiving the data.",
+   "files_released": 3,
+   "objective": "Review of known cases of metastatic cSCC tumours with comparison to non-meta-static cSCC tumour characteristics such as thickness and diameter and comparison of current staging systems. Primary outcome will be risk of metastasis, secondary outcome will be risk of death in metastatic cases and potential improvements to cur-rent staging systems. Venables Z C will be collaborating with the team in Erasmus University, Rotterdam to analyse the data.",
+   "organisation": "ERASMUS UNIVERSITY MEDICAL CENTRE",
+   "organisation_type": "Private Healthcare",
+   "reference": "DARS-NIC-656837-J7G8S-v1.2",
+   "releases": [
+    {
+     "dataset": "NDRS Cancer Registrations",
+     "files": 3,
+     "first_month": "2023-01",
+     "last_month": "2023-02",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2022-10-20",
+   "sublicensing": "No",
+   "title": "Metastatic cutaneous Squamous Cell Carcinoma (cSCC) in England 2013-2015– assessment of staging systems and histological risk factors for metastasis. ( ODR1819_225 )",
+   "version": "1.2",
+   "yielded_benefits": "The risk prediction model has already been developed and validated using the data from ODR1819_225. It performs better than the current staging systems. \nWe noticed during the analyses, that we overestimate the risk of metastasis, but we think that this is due to different inclusion criteria of the Dutch and UK cohorts. Therefore we need the requested variables, in order to make the cohorts more comparable and improve the validation analyses."
+  },
+  {
+   "activities": "Erasmus University Medical Center have applied a nested case control design. This means that Erasmus University Medical Center have detailed information about all cases (patients with cutaneous squamous cell carcinoma [cSCC] with metastasis) and controls (patients with cSCC without metastasis).\nThese cases and controls were sampled from a cohort. The cohort consists of all cSCC between 2013-2015. Erasmus University Medical Center recently received data from the entire cohort. In the data analyses we need to assign a weight to each control. The weight corresponds to the probability of being samples as control from the entire cohort. This is what Erasmus University Medical Center already did with the data that we received. However, controls were sampled from 2013, not from the entire study period. This means, that the weights for each control may be different and Erasmus University Medical Center would like to know if this influences the outcome of the study. \nTherefore Erasmus University Medical Center need to know whether a cSCC was diagnosed in 2013 or not, so we can adjust the weights accordingly. \nAlso to make the cohort comparable to the Dutch cohort and Erasmus University Medical Center need to know whether or not a patient was diagnosed with a cSCC before 2013. \n\nGeneral Data Protection Regulation Article 6 (1) (e)\nGeneral Data Protection Regulation Article 9 (2) (c)\n\nTo summarize we need the following 2 variables to calculate weights:\n-Tumor variable: cSCC diagnosed in 2013 yes/no\n-Patient variable: patient had cSCC before 2013 yes/no",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "ERASMUS UNIVERSITY MEDICAL CENTRE"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2025-01-25",
+   "expected_benefits": "Currently, cSCC patients at high risk of metastasis receive insufficient number of follow-up visits (Wakkee et al, Eur J Cancer 2019). Current staging systems are insufficient for patient stratification (Venables et al, BJD, 2022). Therefore an improved risk prediction model will be of added value and will help clinicians to decide about adequate follow-up care for patients at high risk of cSCC. It also means that patients at low risk of cSCC can have no or reduced follow-up visits, which may lead to more cost-efficient health care for those patients. At the date of publication (~Q1 2023), we will also refer to a web application, which can be used by other researchers. The web application has already been developed. The model needs to be further validated by other researchers after publication before use in clinical practice is possible.\n\nUpdate: the risk prediction model app is available online (https://emc-dermatology.shinyapps.io/cscc-abs-met-risk/). This now provides the probability of developing metastasis, but provides no indication whether or not this is a high probability. The benefit of the new analyses will be to set a threshold for a high probability of metastasis and to determine how the model performs in combination with current staging.",
+   "expected_output": "First application of the data:\nAn risk prediction model, which can be used to calculate the absolute risk of metastasis among patients with cSCC. \nTarget date: the calculation of the weights is the last analyses , which is needed to validate the model. The article has been written already, thus submission of the article can be expected within a month after receiving the data.\n\nThis has been performed and published: \nhttps://pubmed.ncbi.nlm.nih.gov/37662519/ \nErasmus University Medical Center are currently working on further validation of the model. The output of these analyses will be a clinical validation of the performance of the model in combination with current staging systems and the validation of a probability threshold of the published model. In the published article, Erasmus University Medical Center don't set a threshold yet for defining a high risk of metastasis. These analyses are now ongoing in Dutch data.",
+   "files_released": 0,
+   "objective": "Erasmus University Medical Centre requires access to NHS England data for the purpose of the following research project:\n\nMetastatic cutaneous Squamous Cell Carcinoma (cSCC) in England 2013-2015– assessment of staging systems and histological risk factors for metastasis. ( ODR1819_225 )\n\nThe following is a summary of the aims of the research project provided by Erasmus University Medical Centre\n\nReview of known cases of metastatic cSCC tumours with comparison to non-meta-static cSCC tumour characteristics such as thickness and diameter and comparison of current staging systems. Primary outcome will be risk of metastasis, secondary outcome will be risk of death in metastatic cases and potential improvements to current staging systems. Venables Z C will be collaborating with the team in Erasmus University, Rotterdam to analyse the data.\n\nThe following NHS England data will be accessed: \n\n NDRS Cancer Registrations to allow for cSCC tumor development analysis.\n\nThe level of the data will be:\n\n· Identifiable – necessary to enable linkage of the data with data collected from other sources, including the participants themselves.\n\nThe data will be minimised as follows [choose all applicable options]:\n\n· Limited to a study cohort identified by Erasmus University Medical Centre – Erasmus University Medical Center have applied a nested case control design. This means that Erasmus University Medical Center have detailed information about all cases (patients with cutaneous squamous cell carcinoma [cSCC] with metastasis) and controls (patients with cSCC without metastasis).\nThese cases and controls were sampled from a cohort. The cohort consists of all cSCC between 2013-2015. \n\nThe Erasmus University Medical Center is the research sponsor and the controller as the organisation responsible for ensuring that the data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is: General Data Protection Regulation Article 6 (1) (e)- the processing is necessary for the legitimate interests of the data controller or the legitimate interests of a third party, unless there is a good reason to protect the individual’s personal data which overrides those legitimate interests.\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nGeneral Data Protection Regulation Article 9 (2) (c) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.",
+   "organisation": "ERASMUS UNIVERSITY MEDICAL CENTRE",
+   "organisation_type": "Private Healthcare",
+   "reference": "DARS-NIC-656837-J7G8S-v2.8",
+   "releases": [],
+   "start_date": "2024-07-26",
+   "sublicensing": "No",
+   "title": "Metastatic cutaneous Squamous Cell Carcinoma (cSCC) in England 2013-2015– assessment of staging systems and histological risk factors for metastasis. ( ODR1819_225 )",
+   "version": "2.8",
+   "yielded_benefits": "The risk prediction model has already been developed and validated using the data from ODR1819_225. It performs better than the current staging systems. \nErasmus University Medical Center noticed during the analyses, that we overestimate the risk of metastasis, but Erasmus University Medical Center think that this is due to different inclusion criteria of the Dutch and UK cohorts. Therefore Erasmus University Medical Center need the requested variables, in order to make the cohorts more comparable and improve the validation analyses.\n\nUpdate: the benefit up til now, is that we made a prediction model, that accurately predicts the probability of developing the metastasis. Erasmus University Medical Center now would like to take this one step further and use the data from ODR1819_225 to validate a threshold of this probability and combine the probabilities with current staging systems."
+  }
+ ]
+}

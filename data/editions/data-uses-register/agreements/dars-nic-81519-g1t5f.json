@@ -1,0 +1,221 @@
+{
+ "base_reference": "DARS-NIC-81519-G1T5F",
+ "versions": [
+  {
+   "activities": "The TargetCOPD trial started in 2012, with patient-level data being obtained from various sources (patient study assessments, patient self-completion questionnaires and general practice clinical systems) over the trial period. Study assessments were conducted by trained research assistants. Routine data (e.g. comorbidities and prior test results) was extracted from general practice clinical systems, covered by patient informed consent and signed Data Sharing Agreements with each participating general practice.\n\nThe TargetCOPD trial identified 74,818 patients as potentially eligible and NHS Digital and civil registration data was requested in relation to these points. The University of Birmingham sent the following data extracted from the participating GP Practices to NHS Digital for linking purposes: NHS Number, date of birth, postcode, sex and study ID number. The study team destroyed the identifying data previously obtained from the GP practice once it had been shared with NHS Digital.\n\nPatient identifying data was flown to NHS Digital with a study ID, and pseudonymised HES and mortality data was flown back to the University of Birmingham with the pseudonymised study ID as the only identifier. Under a previous version, patient identifiers linked to the study ID numbers were stored separately to the data stored in pseudonymised form. They were held only for administrative purposes and for use in facilitating linkages to other data. This data has since been destroyed.\n\nIt was deemed that the University of Birmingham no longer needed to hold identifiable information for patients consenting to the TargetCOPD trial; evidence of the secure deletion of 2 files in January 2020 was uploaded to this extension application. As a result of the secure deletion, HES and mortality data obtained from NHS Digital is now classed as pseudonymised as the University of Birmingham can no longer identify individuals through that method.\n\nThe data requested from NHS Digital was downloaded to a University of Birmingham computer, and saved in a restricted area of the University server that is only accessible to specified members of the research team who are substantive employees of University of Birmingham. Data within this area of the server is backed up internally so that data can be fully deleted within 2 weeks of a deletion request from NHS Digital or at the end of the data retention period. All data will be processed and stored at the University of Birmingham. No other flows of data will take place.\n\nThe NHS Digital data was merged into the existing pseudonymised study dataset, for analysis purposes only, using study ID. It cannot be re-identified. Only substantive employees of the University of Birmingham will access and analyse the data. In addition, it will not be linked to any other data.\n\nLinking the stated data sources will allow the research team to compare health care usage and mortality, according to early COPD diagnosis. The analyses will use the linked pseudonymised data only. There will be no attempt to identify individuals.\n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-10-31",
+   "expected_benefits": "The University of Birmingham’s analysis of case-finding for COPD did not demonstrate health benefits for patients, meaning that the approach used in the trial would not be recommended for use in primary care. The findings will be published in academic peer-reviewed journals and presented at relevant conferences. \n\nThe planned disseminations are expected to lead to evaluation of the findings by NIHR and other interested parties involved in setting national guidelines such as NICE and the National Screening Committee.",
+   "expected_output": "The University of Birmingham are currently finalising the report to the funders (NIHR), which is expected to be completed by June 2020.  This provides a narrative on the methodology, the results, the conclusions and recommendations. The University of Birmingham assessed effectiveness and cost-effectiveness of alternative screening methods for undiagnosed COPD in primary care, and although screening identified 7-times as many patients compared to usual care, there was no evidence of reduced risk of hospital admissions or death after 4 years.\n\nThe findings of the overall study and the results of interim analyses during the study period will also be and, in the case of some interim findings, have been be disseminated via academic peer-reviewed papers and conference presentations.  Publications and presentations will take place during 2020-21.\n\nOutputs present group-level data only (e.g. proportion of patients with specified characteristics/outcomes). All data included in outputs are aggregated with small numbers suppressed in line with the HES Analysis Guide. The funder’s report is solely for the purposes of the funding body. All academic publications will be ‘open-access’ (available to members of the public without cost) and will be available on the websites of the publishing journal as well as through the study website (www.birmingham.ac.uk/bliss).\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "The Birmingham Lung Improvement StudieS (BLISS) programme is a series of connected research studies about Chronic Obstructive Pulmonary Disease (COPD) funded by a five-year programme grant from the National Institute for Health Research. The overall aim of the programme is to evaluate new ways of better identifying and managing patients with COPD in the community.\n\nThe study for which data is being sought is an extension of TargetCOPD trial (2012-2014), which is a substantial work package within a NIHR-funded research programme grant (ref: RP-PG-0109-10061, 01/01/2011 – 31/12/2016). Chronic Obstructive Pulmonary Disease (COPD) is an important health problem, accounting for significant health service and societal costs. Although diagnosed COPD is estimated at 1.3% of the population, it is widely accepted that under diagnosis may be in the region of 50-80%, where patients with clinically significant disease are unable to access effective treatments as they have not yet presented to their GP.  \n\nThe TargetCOPD trial aimed to determine the most effective method of identifying new cases of COPD amongst primary care patients. This trial did not include any data sharing with NHS Digital/HSCIC. Results of the trial showed it was most effective to post screening questionnaires to at-risk patients and invite those reporting respiratory symptoms for an additional lung function assessment at their GP practice.\n\nWhilst the evidence from the TargetCOPD is useful, it does not provide information on whether diagnosing people earlier than usual leads to health benefits such as reduced hospital admissions and mortality.   The Target COPD2 study will address this question by following-up all eligible patients (not just those who consented) for up to 5 years.   Under a previous iteration of this agreement, data was requested from 2011 (to cover from the start of the recruitment period) to 2017/2018 (to allow five years follow-up). \n\nTo do this accurately, hospitalisation and mortality data was required for all patients deemed to be at-risk (~75,000) when the TargetCOPD trial started in 2012. It can then be determined if health outcomes differ for the patients receiving earlier COPD diagnoses as a result of the trial. The routine health data requested includes A&E attendance, inpatient and outpatient hospital admissions and civil registration mortality. These data are unavailable from other sources and will be more accurate and complete than self-reported information.\n\nThe research study team previously held data on patients that responded to the initial screening questionnaire (~8,000) thereby consenting to their information being held; hence data on all 75,000 patients was obtained by accessing certain patient identifiable data at the GP practices and subsequently sharing this with NHS Digital.\n\nSupport under section 251 of the NHS Act 2006 provided a legal basis to permit the flow of the confidential patient identifying data under the previous iteration of this Agreement. As these flows have now occurred, all identifying details that were provided by participating GP practices have been destroyed and the University of Birmingham now considers the study data to be pseudonymised.\n\nThe long-term follow-up of all eligible patients is in the interests of the health of the public. The University of Birmingham, acting as both data controller and data processor, can therefore lawfully process the data under GDPR Articles 6(1)(e) (processing is necessary for the performance of a task in the public interest) and 9(2)(j) (processing is necessary for… scientific or historical research purposes).  Considerable resources would be required for the primary care sector to adopt methods used in the TargetCOPD trial to diagnose COPD patients earlier. If long-term analysis demonstrates that hospital usage and mortality is not reduced through earlier COPD diagnosis, it would indicate that NHS resources could be better spent in other ways. Evidence from the current study will be produced as a final report for the National Institute for Health Research as well as peer-reviewed academic papers, hence disseminating evidence to policy makers and academic researchers.\n\nThe activity described about does not raise any ethical or moral issues.",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-81519-G1T5F-v2.7",
+   "releases": [],
+   "start_date": "2019-11-01",
+   "sublicensing": "No",
+   "title": "TargetCOPD: A randomised controlled trial of targeted case finding for COPD versus routine practice in primary care",
+   "version": "2.7",
+   "yielded_benefits": "In line with the above statement, the analyses and measurable benefits for this study are planned for 2020 and beyond (while the outputs were originally planned for 2019, due to additional information requested for the funder's report, the academic outputs are now expected in 2020). Although the main analyses are completed for the report to the NIHR (the funder), further analyses are ongoing for publication of academic papers and conference presentations at a later date."
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored but not otherwise processed. No new data will be provided by NHS Digital under this Agreement.\n\nThe study data, including data provided by NHS Digital under previous agreements, are currently held by the University of Birmingham. \n\nThe following provides background on the processing activities undertaken prior to this Agreement:\n\nThe TargetCOPD trial started in 2012, with patient-level data being obtained from various sources (patient study assessments, patient self-completion questionnaires and general practice clinical systems) over the trial period. Study assessments were conducted by trained research assistants. Routine data (e.g. comorbidities and prior test results) was extracted from general practice clinical systems, covered by patient informed consent and signed Data Sharing Agreements with each participating general practice.\n\nThe TargetCOPD trial identified 74,818 patients as potentially eligible and NHS Digital and civil registration data was requested in relation to these points. The University of Birmingham sent the following data extracted from the participating GP Practices to NHS Digital for linking purposes: NHS Number, date of birth, postcode, sex and study ID number. The study team destroyed the identifying data previously obtained from the GP practice once it had been shared with NHS Digital.\n\nPatient identifying data was flown to NHS Digital with a study ID, and pseudonymised HES and mortality data was flown back to the University of Birmingham with the pseudonymised study ID as the only identifier. Under a previous version, patient identifiers linked to the study ID numbers were stored separately to the data stored in pseudonymised form. They were held only for administrative purposes and for use in facilitating linkages to other data. This data has since been destroyed.\n\nIt was deemed that the University of Birmingham no longer needed to hold identifiable information for patients consenting to the TargetCOPD trial; evidence of the secure deletion of 2 files in January 2020 was uploaded to this extension application. As a result of the secure deletion, HES and mortality data obtained from NHS Digital is now classed as pseudonymised as the University of Birmingham can no longer identify individuals through that method.\n\nThe data requested from NHS Digital was downloaded to a University of Birmingham computer, and saved in a restricted area of the University server that is only accessible to specified members of the research team who are substantive employees of University of Birmingham. Data within this area of the server is backed up internally so that data can be fully deleted within 2 weeks of a deletion request from NHS Digital or at the end of the data retention period. All data will be processed and stored at the University of Birmingham. No other flows of data will take place.\n\nThe NHS Digital data was merged into the existing pseudonymised study dataset, for analysis purposes only, using study ID. It cannot be re-identified. Only substantive employees of the University of Birmingham will access and analyse the data. In addition, it will not be linked to any other data.\n\nLinking the stated data sources will allow the research team to compare health care usage and mortality, according to early COPD diagnosis. The analyses will use the linked pseudonymised data only. There will be no attempt to identify individuals.\n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2021-10-29",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.\n\nThe University of Birmingham’s analysis of case-finding for COPD did not demonstrate health benefits for patients, meaning that the approach used in the trial would not be recommended for use in primary care. The findings will be published in academic peer-reviewed journals and presented at relevant conferences. \n\nThe planned disseminations are expected to lead to evaluation of the findings by NIHR and other interested parties involved in setting national guidelines such as NICE and the National Screening Committee.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nThe University of Birmingham are currently finalising the report to the funders (NIHR), which is expected to be completed by June 2020.  This provides a narrative on the methodology, the results, the conclusions and recommendations. The University of Birmingham assessed effectiveness and cost-effectiveness of alternative screening methods for undiagnosed COPD in primary care, and although screening identified 7-times as many patients compared to usual care, there was no evidence of reduced risk of hospital admissions or death after 4 years.\n\nThe findings of the overall study and the results of interim analyses during the study period will also be and, in the case of some interim findings, have been be disseminated via academic peer-reviewed papers and conference presentations.  Publications and presentations will take place during 2020-21.\n\nOutputs present group-level data only (e.g. proportion of patients with specified characteristics/outcomes). All data included in outputs are aggregated with small numbers suppressed in line with the HES Analysis Guide. The funder’s report is solely for the purposes of the funding body. All academic publications will be ‘open-access’ (available to members of the public without cost) and will be available on the websites of the publishing journal as well as through the study website (www.birmingham.ac.uk/bliss).\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period. This is a pragmatic approach to provide an active Agreement whilst enabling the University of Birmingham to determine whether or not it will seek permission from NHS Digital to retain the data under this Agreement for a longer period. Should the University of Birmingham wish to retain the data for a longer period, the University of Birmingham must submit a subsequent application to extend this Agreement meeting all applicable data sharing standards as published in NHS Digital’s website (see: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance).\n\nThe following provides background information on the purpose of the original study:\n\nThe Birmingham Lung Improvement StudieS (BLISS) programme is a series of connected research studies about Chronic Obstructive Pulmonary Disease (COPD) funded by a five-year programme grant from the National Institute for Health Research. The overall aim of the programme is to evaluate new ways of better identifying and managing patients with COPD in the community.\n\nThe study for which data is being sought is an extension of TargetCOPD trial (2012-2014), which is a substantial work package within a NIHR-funded research programme grant (ref: RP-PG-0109-10061, 01/01/2011 – 31/12/2016). Chronic Obstructive Pulmonary Disease (COPD) is an important health problem, accounting for significant health service and societal costs. Although diagnosed COPD is estimated at 1.3% of the population, it is widely accepted that under diagnosis may be in the region of 50-80%, where patients with clinically significant disease are unable to access effective treatments as they have not yet presented to their GP.  \n\nThe TargetCOPD trial aimed to determine the most effective method of identifying new cases of COPD amongst primary care patients. This trial did not include any data sharing with NHS Digital/HSCIC. Results of the trial showed it was most effective to post screening questionnaires to at-risk patients and invite those reporting respiratory symptoms for an additional lung function assessment at their GP practice.\n\nWhilst the evidence from the TargetCOPD is useful, it does not provide information on whether diagnosing people earlier than usual leads to health benefits such as reduced hospital admissions and mortality.   The Target COPD2 study will address this question by following-up all eligible patients (not just those who consented) for up to 5 years.   Under a previous iteration of this agreement, data was requested from 2011 (to cover from the start of the recruitment period) to 2017/2018 (to allow five years follow-up). \n\nTo do this accurately, hospitalisation and mortality data was required for all patients deemed to be at-risk (~75,000) when the TargetCOPD trial started in 2012. It can then be determined if health outcomes differ for the patients receiving earlier COPD diagnoses as a result of the trial. The routine health data requested includes A&E attendance, inpatient and outpatient hospital admissions and civil registration mortality. These data are unavailable from other sources and will be more accurate and complete than self-reported information.\n\nThe research study team previously held data on patients that responded to the initial screening questionnaire (~8,000) thereby consenting to their information being held; hence data on all 75,000 patients was obtained by accessing certain patient identifiable data at the GP practices and subsequently sharing this with NHS Digital.\n\nSupport under section 251 of the NHS Act 2006 provided a legal basis to permit the flow of the confidential patient identifying data under the previous iteration of this Agreement. As these flows have now occurred, all identifying details that were provided by participating GP practices have been destroyed and the University of Birmingham now considers the study data to be pseudonymised.\n\nThe long-term follow-up of all eligible patients is in the interests of the health of the public. The University of Birmingham, acting as both data controller and data processor, can therefore lawfully process the data under GDPR Articles 6(1)(e) (processing is necessary for the performance of a task in the public interest) and 9(2)(j) (processing is necessary for… scientific or historical research purposes).  Considerable resources would be required for the primary care sector to adopt methods used in the TargetCOPD trial to diagnose COPD patients earlier. If long-term analysis demonstrates that hospital usage and mortality is not reduced through earlier COPD diagnosis, it would indicate that NHS resources could be better spent in other ways. Evidence from the current study will be produced as a final report for the National Institute for Health Research as well as peer-reviewed academic papers, hence disseminating evidence to policy makers and academic researchers.\n\nThe activity described about does not raise any ethical or moral issues.",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-81519-G1T5F-v3.2",
+   "releases": [],
+   "start_date": "2020-11-01",
+   "sublicensing": "No",
+   "title": "TargetCOPD: A randomised controlled trial of targeted case finding for COPD versus routine practice in primary care",
+   "version": "3.2",
+   "yielded_benefits": "In line with the above statement, the analyses and measurable benefits for this study are planned for 2020 and beyond (while the outputs were originally planned for 2019, due to additional information requested for the funder's report, the academic outputs are now expected in 2020). Although the main analyses are completed for the report to the NIHR (the funder), further analyses are ongoing for publication of academic papers and conference presentations at a later date."
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored but not otherwise processed.  No new data will be provided by NHS Digital under this Agreement.\n\nThe study data, including data provided by NHS Digital under previous versions of this Agreement, are currently held by the University of Birmingham. \n\nThe following provides background on the processing activities undertaken prior to this Agreement:\n\nThe TargetCOPD trial started in 2012, with patient-level data being obtained from various sources (patient study assessments, patient self-completion questionnaires and general practice clinical systems) over the trial period. Study assessments were conducted by trained research assistants. Routine data (e.g. comorbidities and prior test results) was extracted from general practice clinical systems, covered by patient informed consent and signed Data Sharing Agreements with each participating general practice.\n\nThe TargetCOPD trial identified 74,818 patients as potentially eligible and NHS Digital and civil registration data was requested in relation to these points. The University of Birmingham sent the following data extracted from the participating GP Practices to NHS Digital for linking purposes: NHS Number, date of birth, postcode, sex and study ID number. The study team destroyed the identifying data previously obtained from the GP practice once it had been shared with NHS Digital.\n\nPatient identifying data was flown to NHS Digital with a study ID, and pseudonymised HES and mortality data was flown back to the University of Birmingham with the pseudonymised study ID as the only identifier. Under a previous version, patient identifiers linked to the study ID numbers were stored separately to the data stored in pseudonymised form. They were held only for administrative purposes and for use in facilitating linkages to other data. This data has since been destroyed.\n\nIt was deemed that the University of Birmingham no longer needed to hold identifiable information for patients consenting to the TargetCOPD trial; evidence of the secure deletion of 2 files in January 2020 was uploaded to this extension application. As a result of the secure deletion, HES and mortality data obtained from NHS Digital is now classed as pseudonymised as the University of Birmingham can no longer identify individuals through that method.\n\nThe data requested from NHS Digital was downloaded to a University of Birmingham computer, and saved in a restricted area of the University server that is only accessible to specified members of the research team who are substantive employees of University of Birmingham. Data within this area of the server is backed up internally so that data can be fully deleted within 2 weeks of a deletion request from NHS Digital or at the end of the data retention period. All data will be processed and stored at the University of Birmingham. No other flows of data will take place.\n\nThe NHS Digital data was merged into the existing pseudonymised study dataset, for analysis purposes only, using study ID. It cannot be re-identified. Only substantive employees of the University of Birmingham will access and analyse the data. In addition, it will not be linked to any other data.\n\nLinking the stated data sources will allow the research team to compare health care usage and mortality, according to early COPD diagnosis. The analyses will use the linked pseudonymised data only. There will be no attempt to identify individuals.\n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-10-29",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.\n\nThe University of Birmingham’s analysis of case-finding for COPD did not demonstrate health benefits for patients, meaning that the approach used in the trial would not be recommended for use in primary care. The findings will be published in academic peer-reviewed journals and presented at relevant conferences. \n\nThe planned disseminations are expected to lead to evaluation of the findings by NIHR and other interested parties involved in setting national guidelines such as NICE and the National Screening Committee.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nThe University of Birmingham's final report to the funders (NIHR) was expected to be completed by June 2020.  This provides a narrative on the methodology, the results, the conclusions and recommendations. The University of Birmingham assessed effectiveness and cost-effectiveness of alternative screening methods for undiagnosed COPD in primary care, and although screening identified 7-times as many patients compared to usual care, there was no evidence of reduced risk of hospital admissions or death after 4 years.\n\nThe findings of the overall study and the results of interim analyses during the study period will also be and, in the case of some interim findings, have been be disseminated via academic peer-reviewed papers and conference presentations.  Publications and presentations were to take place during 2020-21.\n\nOutputs present group-level data only (e.g. proportion of patients with specified characteristics/outcomes). All data included in outputs are aggregated with small numbers suppressed in line with the HES Analysis Guide. The funder’s report is solely for the purposes of the funding body. All academic publications will be ‘open-access’ (available to members of the public without cost) and will be available on the websites of the publishing journal as well as through the study website (www.birmingham.ac.uk/bliss).\n\nAll outputs contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period.  \n\nData held by the University of Birmingham must be securely stored and not otherwise processed.  \n\nThe following provides background information on the purpose of the original study:\n\nThe Birmingham Lung Improvement StudieS (BLISS) programme is a series of connected research studies about Chronic Obstructive Pulmonary Disease (COPD) funded by a five-year programme grant from the National Institute for Health Research. The overall aim of the programme is to evaluate new ways of better identifying and managing patients with COPD in the community.\n\nThe study for which data is being sought is an extension of TargetCOPD trial (2012-2014), which is a substantial work package within a NIHR-funded research programme grant (ref: RP-PG-0109-10061, 01/01/2011 – 31/12/2016). Chronic Obstructive Pulmonary Disease (COPD) is an important health problem, accounting for significant health service and societal costs. Although diagnosed COPD is estimated at 1.3% of the population, it is widely accepted that under diagnosis may be in the region of 50-80%, where patients with clinically significant disease are unable to access effective treatments as they have not yet presented to their GP.  \n\nThe TargetCOPD trial aimed to determine the most effective method of identifying new cases of COPD amongst primary care patients. This trial did not include any data sharing with NHS Digital/HSCIC. Results of the trial showed it was most effective to post screening questionnaires to at-risk patients and invite those reporting respiratory symptoms for an additional lung function assessment at their GP practice.\n\nWhilst the evidence from the TargetCOPD is useful, it does not provide information on whether diagnosing people earlier than usual leads to health benefits such as reduced hospital admissions and mortality.   The Target COPD2 study will address this question by following-up all eligible patients (not just those who consented) for up to 5 years.   Under a previous iteration of this agreement, data was requested from 2011 (to cover from the start of the recruitment period) to 2017/2018 (to allow five years follow-up). \n\nTo do this accurately, hospitalisation and mortality data was required for all patients deemed to be at-risk (~75,000) when the TargetCOPD trial started in 2012. It can then be determined if health outcomes differ for the patients receiving earlier COPD diagnoses as a result of the trial. The routine health data requested includes A&E attendance, inpatient and outpatient hospital admissions and civil registration mortality. These data are unavailable from other sources and will be more accurate and complete than self-reported information.\n\nThe research study team previously held data on patients that responded to the initial screening questionnaire (~8,000) thereby consenting to their information being held; hence data on all 75,000 patients was obtained by accessing certain patient identifiable data at the GP practices and subsequently sharing this with NHS Digital.\n\nSupport under section 251 of the NHS Act 2006 provided a legal basis to permit the flow of the confidential patient identifying data under the previous iteration of this Agreement. As these flows have now occurred, all identifying details that were provided by participating GP practices have been destroyed and the University of Birmingham now considers the study data to be pseudonymised.\n\nThe long-term follow-up of all eligible patients is in the interests of the health of the public. The University of Birmingham, acting as both data controller and data processor, can therefore lawfully process the data under GDPR Articles 6(1)(e) (processing is necessary for the performance of a task in the public interest) and 9(2)(j) (processing is necessary for… scientific or historical research purposes).  Considerable resources would be required for the primary care sector to adopt methods used in the TargetCOPD trial to diagnose COPD patients earlier. If long-term analysis demonstrates that hospital usage and mortality is not reduced through earlier COPD diagnosis, it would indicate that NHS resources could be better spent in other ways. Evidence from the current study will be produced as a final report for the National Institute for Health Research as well as peer-reviewed academic papers, hence disseminating evidence to policy makers and academic researchers.",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-81519-G1T5F-v4.2",
+   "releases": [],
+   "start_date": "2021-10-30",
+   "sublicensing": "No",
+   "title": "TargetCOPD: A randomised controlled trial of targeted case finding for COPD versus routine practice in primary care",
+   "version": "4.2",
+   "yielded_benefits": "In line with the above statement, the analyses and measurable benefits for this study are planned for 2020 and beyond (while the outputs were originally planned for 2019, due to additional information requested for the funder's report, the academic outputs are now expected in 2020). Although the main analyses are completed for the report to the NIHR (the funder), further analyses are ongoing for publication of academic papers and conference presentations at a later date."
+  }
+ ]
+}

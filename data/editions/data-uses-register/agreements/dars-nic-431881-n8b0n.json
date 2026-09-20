@@ -1,0 +1,344 @@
+{
+ "base_reference": "DARS-NIC-431881-N8B0N",
+ "versions": [
+  {
+   "activities": "Flows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Apollo to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort each quarter.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1. An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS Digital) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe RCGP RSC data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, RCGP RSC practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\n\nData will only be accessed by individuals within the RSC who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nOnly three SQL developers and one senior project manager can access the main database. Surveillance databases are\ncreated for approved analyses once they have been agreed by the RCGP RSC approval committee. This agreed protocol\nincludes the list of variables required for the database. The SQL developers create separate databases for individual projects only including the required variables, for the required time interval.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON",
+    "UNIVERSITY OF OXFORD"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 Hospitalization in England Surveillance System",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Mental Health Services Data Set (MHSDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2021-08-31",
+   "expected_benefits": "The RECAP (Remote COVID-19 Assessment in Primary Care) project aims to assist primary care providers to improve patient care and health outcomes. Most COVID-19 patients are diagnosed and managed remotely by GP’s. This helps reduce the burden on hospitals. However, due to the wide number of possible symptoms, it is hard to predict and diagnose COVID-19. \n\nThrough this project, an early warning score for GPs based on data collected to a remote GP consultation will be developed and validated which will then be linked to outcomes such as hospital admissions as a measure of clinical deterioration.",
+   "expected_output": "Specific Outputs for this study are:\n•\tTo track the impact of COVID-19, visual descriptions (dashboards) of the number and rates of patients presenting specific symptoms (primary care data), being tested for specific tests, hospitalisation outcomes confirming deterioration \n•\tSubgroups of data will be identified to enable display by GP practice, region, age group, gender, and ethnicity.\n•\tEstablishing a risk score for the predictability of COVID-19 diagnosis. \n\nFurthermore, articles will be published in international scientific journals. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "Since the outbreak of COVID-19 in Wuhan, China, and the subsequent pandemic, Public Health England (PHE) has commissioned the Oxford- RCGP RSC, based at the University of Oxford, to incorporate the monitoring of COVID-19 into its virology surveillance scheme. A vital part of this work has been to monitor the number of suspected COVID-19 cases in the community and ultimately establish the effect of COVID-19 infection on hospitalisation as the outcome measure.\n\nOVERALL AIM\nPrimary aim of the RECAP (Remote COVID-19 Assessment in Primary Care) project is to assist primary care providers to improve patient care and health outcomes. Most COVID-19 patients are diagnosed and managed remotely by GP’s. This helps reduce the burden on hospitals. However, due to the wide number of possible symptoms, it is hard to predict and diagnose COVID-19. \n\nThrough this project, we aim to develop and validate an early warning score for GPs based on data collected to a remote GP consultation and then link this to the outcomes such as hospital admissions as a measure of clinical deterioration. \n\nThe purpose of this application is to link data held by NHS digital to support the RCGP RSC to conduct observational epidemiological studies that inform the national public health response to COVID-19. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. \n\nFor the purpose of this study, datasets coming into ORCHID as part of the MAINROUTE study (DARS-NIC-381683-R6R6K) will also be utilised.\n\nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- COVID-19 SARI Watch (Formerly CHESS)\n- Mortality data (if applicable)\n\nAdditional datasets under DARS-NIC-431355-B1L8W will also be utilised: \n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nImperial College London:\nSince Imperial College are the sponsors of this study, they are joint data controllers. \n\nAll the data will flow into the secure environment at University of Oxford, thus are data controllers. Furthermore, only University of Oxford will be processing the data. \n\nThe data controllers for the processing being undertaken within this agreement are University for Oxford and Imperial Collage London who have together the joint responsibilities. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP) and for DARS-NIC-431355-B1L8W where University of Oxford are a data controller for  different purpose.\n\nThe lawful basis for processing the data are as follows:\n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-431881-N8B0N-v0.12",
+   "releases": [],
+   "start_date": "2021-03-23",
+   "sublicensing": "No",
+   "title": "University of Oxford- National Core Studies Can phenotypes developed from enhanced remote primary care assessment of COVID-19 be used to identify a cohort of community cases, and enable comparison of recovered and long COVID?",
+   "version": "0.12",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "This Agreement permits the continued processing and storage of the data from the MAINROUTE study (DARS-NIC-381683-R6R6K) and under DARS-NIC-431355-B1L8W for the purposes described in this Agreement.\n\nFlows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Apollo to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort each quarter.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1. An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS Digital) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe RCGP RSC data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, RCGP RSC practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\n\nData will only be accessed by individuals within the RSC who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nOnly three SQL developers and one senior project manager can access the main database. Surveillance databases are\ncreated for approved analyses once they have been agreed by the RCGP RSC approval committee. This agreed protocol\nincludes the list of variables required for the database. The SQL developers create separate databases for individual projects only including the required variables, for the required time interval.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON",
+    "UNIVERSITY OF OXFORD"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 Hospitalization in England Surveillance System",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Mental Health Services Data Set (MHSDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-03-31",
+   "expected_benefits": "The RECAP (Remote COVID-19 Assessment in Primary Care) project aims to assist primary care providers to improve patient care and health outcomes. Most COVID-19 patients are diagnosed and managed remotely by GP’s. This helps reduce the burden on hospitals. However, due to the wide number of possible symptoms, it is hard to predict and diagnose COVID-19. \n\nThrough this project, an early warning score for GPs based on data collected to a remote GP consultation will be developed and validated which will then be linked to outcomes such as hospital admissions as a measure of clinical deterioration.",
+   "expected_output": "Specific Outputs for this study are:\n•\tTo track the impact of COVID-19, visual descriptions (dashboards) of the number and rates of patients presenting specific symptoms (primary care data), being tested for specific tests, hospitalisation outcomes confirming deterioration \n•\tSubgroups of data will be identified to enable display by GP practice, region, age group, gender, and ethnicity.\n•\tEstablishing a risk score for the predictability of COVID-19 diagnosis. \n\nFurthermore, articles will be published in international scientific journals. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "Since the outbreak of COVID-19 in Wuhan, China, and the subsequent pandemic, Public Health England (PHE) has commissioned the Oxford- RCGP RSC, based at the University of Oxford, to incorporate the monitoring of COVID-19 into its virology surveillance scheme. A vital part of this work has been to monitor the number of suspected COVID-19 cases in the community and ultimately establish the effect of COVID-19 infection on hospitalisation as the outcome measure.\n\nOVERALL AIM\nPrimary aim of the RECAP (Remote COVID-19 Assessment in Primary Care) project is to assist primary care providers to improve patient care and health outcomes. Most COVID-19 patients are diagnosed and managed remotely by GP’s. This helps reduce the burden on hospitals. However, due to the wide number of possible symptoms, it is hard to predict and diagnose COVID-19. \n\nThrough this project, we aim to develop and validate an early warning score for GPs based on data collected to a remote GP consultation and then link this to the outcomes such as hospital admissions as a measure of clinical deterioration. \n\nThe purpose of this application is to link data held by NHS digital to support the RCGP RSC to conduct observational epidemiological studies that inform the national public health response to COVID-19. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. \n\nFor the purpose of this study, datasets coming into ORCHID as part of the MAINROUTE study (DARS-NIC-381683-R6R6K) will also be utilised.\n\nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- COVID-19 SARI Watch (Formerly CHESS)\n- Mortality data (if applicable)\n\nAdditional datasets under DARS-NIC-431355-B1L8W will also be utilised: \n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nImperial College London:\nSince Imperial College are the sponsors of this study, they are joint data controllers. \n\nAll the data will flow into the secure environment at University of Oxford, thus are data controllers. Furthermore, only University of Oxford will be processing the data. \n\nThe data controllers for the processing being undertaken within this agreement are University for Oxford and Imperial College London who have together the joint responsibilities. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683-R6R6K for which University of Oxford operates as a Data processor for on behalf of Pubic Health England (PHE) and the Royal College of GPs (RCGP) and for DARS-NIC-431355-B1L8W where University of Oxford are a data controller for different purpose.\n\nThe lawful basis for processing the data are as follows:\n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-431881-N8B0N-v1.6",
+   "releases": [],
+   "start_date": "2021-10-01",
+   "sublicensing": "No",
+   "title": "University of Oxford- National Core Studies Can phenotypes developed from enhanced remote primary care assessment of COVID-19 be used to identify a cohort of community cases, and enable comparison of recovered and long COVID?",
+   "version": "1.6",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "This Agreement permits the continued processing and storage of the data from the MAINROUTE study (DARS-NIC-381683-R6R6K) and under DARS-NIC-431355-B1L8W for the purposes described in this Agreement.\n\nFlows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Apollo to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort each quarter.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1. An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS Digital) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe RCGP RSC data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, RCGP RSC practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\n\nData will only be accessed by individuals within the RSC who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nOnly three SQL developers and one senior project manager can access the main database. Surveillance databases are\ncreated for approved analyses once they have been agreed by the RCGP RSC approval committee. This agreed protocol\nincludes the list of variables required for the database. The SQL developers create separate databases for individual projects only including the required variables, for the required time interval.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON",
+    "UNIVERSITY OF OXFORD"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 Hospitalization in England Surveillance System",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Mental Health Services Data Set (MHSDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Episodes",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Outpatients",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Secondary Uses Service Payment By Results Spells",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-11-30",
+   "expected_benefits": "The RECAP (Remote COVID-19 Assessment in Primary Care) project aims to assist primary care providers to improve patient care and health outcomes. Most COVID-19 patients are diagnosed and managed remotely by GP’s. This helps reduce the burden on hospitals. However, due to the wide number of possible symptoms, it is hard to predict and diagnose COVID-19. \n\nThrough this project, an early warning score for GPs based on data collected to a remote GP consultation will be developed and validated which will then be linked to outcomes such as hospital admissions as a measure of clinical deterioration.",
+   "expected_output": "Specific Outputs for this study are:\n•\tTo track the impact of COVID-19, visual descriptions (dashboards) of the number and rates of patients presenting specific symptoms (primary care data), being tested for specific tests, hospitalisation outcomes confirming deterioration \n•\tSubgroups of data will be identified to enable display by GP practice, region, age group, gender, and ethnicity.\n•\tEstablishing a risk score for the predictability of COVID-19 diagnosis. \n\nFurthermore, articles will be published in international scientific journals. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 0,
+   "objective": "Since the outbreak of COVID-19 in Wuhan, China, and the subsequent pandemic, Public Health England (PHE) has commissioned the Oxford Royal College of General Practitioners (RCGP) Research and Surveillance Centre (RSC) network based at the University of Oxford, to incorporate the monitoring of COVID-19 into its virology surveillance scheme. A vital part of this work has been to monitor the number of suspected COVID-19 cases in the community and ultimately establish the effect of COVID-19 infection on hospitalisation as the outcome measure.\n\nOVERALL AIM\nPrimary aim of the RECAP (Remote COVID-19 Assessment in Primary Care) project is to assist primary care providers to improve patient care and health outcomes. Most COVID-19 patients are diagnosed and managed remotely by GP’s. This helps reduce the burden on hospitals. However, due to the wide number of possible symptoms, it is hard to predict and diagnose COVID-19. \n\nThrough this project, we aim to develop and validate an early warning score for GPs based on data collected to a remote GP consultation and then link this to the outcomes such as hospital admissions as a measure of clinical deterioration. \n\nThe purpose of this application is to link data held by NHS digital to support the RCGP RSC to conduct observational epidemiological studies that inform the national public health response to COVID-19. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. \n\nFor the purpose of this study, datasets coming into ORCHID as part of the MAINROUTE study (DARS-NIC-381683-R6R6K) will also be utilised.\n\nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- COVID-19 SARI Watch (Formerly CHESS)\n- Mortality data (if applicable)\n\nAdditional datasets under DARS-NIC-431355-B1L8W will also be utilised: \n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n\nImperial College London:\nSince Imperial College are the sponsors of this study, they are joint data controllers. \n\nAll the data will flow into the secure environment at University of Oxford, thus are data controllers. Furthermore, only University of Oxford will be processing the data. \n\nThe data controllers for the processing being undertaken within this agreement are University for Oxford and Imperial College London who have together the joint responsibilities. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683-R6R6K for which University of Oxford operates as a Data processor for on behalf of Pubic Health England (PHE) and the Royal College of GPs (RCGP) and for DARS-NIC-431355-B1L8W where University of Oxford are a data controller for different purpose.\n\nThe lawful basis for processing the data are as follows:\n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-431881-N8B0N-v2.2",
+   "releases": [],
+   "start_date": "2022-04-28",
+   "sublicensing": "No",
+   "title": "University of Oxford- National Core Studies Can phenotypes developed from enhanced remote primary care assessment of COVID-19 be used to identify a cohort of community cases, and enable comparison of recovered and long COVID?",
+   "version": "2.2",
+   "yielded_benefits": "a) As part of this project, two predictive risk scores have been developed. The manuscript for this work has been developed. \nb) A post-acute COVID-19 (Long COVID) phenotype has been developed to inform the epidemiology of this condition and compare clinical symptoms in people with Long COVID before and after their infections. Two manuscripts have been developed and submitted to JMIR Public Health and Surveillance for review"
+  }
+ ]
+}

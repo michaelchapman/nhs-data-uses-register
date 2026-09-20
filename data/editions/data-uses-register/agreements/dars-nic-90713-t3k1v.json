@@ -1,0 +1,517 @@
+{
+ "base_reference": "DARS-NIC-90713-T3K1V",
+ "versions": [
+  {
+   "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nThe DSCRO (part of NHS Digital) will apply National Opt-outs before any identifiable data leaves the DSCRO only for the purpose of Risk Stratification.\n\nCCGs should work with general practices within their CCG to help them fulfil data controller responsibilities regarding flow of identifiable data into risk stratification tools.\n\n(RS) The only identifier available in the data set is the NHS numbers. Any further identification of the patients will only be completed by the patient’s clinician on their own systems for the purpose of direct care with a legitimate relationship. \n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData for the purpose of Invoice Validation is kept within the CEfF, and only used by staff properly trained and authorised for the activity.  Only CEfF staff are able to access data in the CEfF and only CEfF staff operate the invoice validation process within the CEfF.  Data flows directly in to the CEfF from the DSCRO and from the providers – it does not flow through any other processors.\n\nData Minimisation\nData Minimisation in relation to the data sets listed within section 3 are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n•\tPatients who are normally registered and/or resident within the commissioner (including historical activity where the patient was previously registered or resident in another commissioner).\nand/or\n•\tPatients treated by a provider where the commissioner is the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this is only for commissioning and relates to both national and local flows.\nand/or\n•\tActivity identified by the provider and recorded as such within national systems (such as SUS+) as for the attention of the commissioner - this is only for commissioning and relates to both national and local flows.\n\nFor the purpose of Risk Stratification:\n•\tPatients who are normally registered and/or resident within the commissioner (including historical activity where the patient was previously registered or resident in another commissioner\n\nFor the purpose of Invoice Validation:\n•\tCCG of residence and/or registration.\n\nCalderdale and Huddersfield NHS Foundation Trust supply IT infrastructure and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nPulsant, Telecity and Telstra do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nInvoice Validation \n\n1.\tIdentifiable SUS+ Data is obtained from the SUS+ Repository to the Data Services for Commissioners Regional Office (DSCRO). \n2.\tThe DSCRO pushes a one-way data flow of SUS+ data into the Controlled Environment for Finance (CEfF) in the North of England CSU.\n3.\tThe CEfF also receive backing data from the provider.\n4.\tNorth of England CSU carry out the following processing activities within the CEfF for invoice validation purposes: \n     a.\tValidating that the Clinical Commissioning Group is responsible for payment for the care of the individual by using SUS+ and/or backing flow data. \n     b.\tOnce the backing information is received, this will be checked against national NHS and local commissioning policies as well as being checked against system access and reports provided by NHS Digital to confirm the payments are:\n              i.\tIn line with Payment by Results tariffs\n             ii.\tare in relation to a patient registered with a CCG GP or resident within the CCG area.\n             iii.\tThe health care provided should be paid by the CCG in line with CCG guidance. \n5.\tThe CCG are notified that the invoice has been validated and can be paid. Any discrepancies or non-validated invoices are investigated and resolved between North of England CSU CEfF team and the provider meaning that no identifiable data needs to be sent to the CCG. The CCG only receives notification to pay and management reporting detailing the total quantum of invoices received pending, processed etc. \n\nRisk Stratification \n\n1.\tIdentifiable SUS+ data is obtained from the SUS Repository to the Data Services for Commissioners Regional Office (DSCRO). \n2.\tData quality management and standardisation of data is completed by the DSCRO and the data identifiable at the level of NHS number is transferred securely to eMBED Health Consortium, who hold the SUS+ data within the secure Data Centre on N3.  \n3.\tIdentifiable GP Data is securely sent from the GP system to eMBED Health Consortium.\n4.\tSUS+ data is linked to GP data in the risk stratification tool by the data processor.\n5.\tAs part of the risk stratification processing activity, GPs have access to the risk stratification tool within the data processor, which highlights patients with whom the GP has a legitimate relationship and have been classed as at risk. The only identifier available to GPs is the NHS numbers of their own patients. Any further identification of the patients will be completed by the GP on their own systems.\n6.\tOnce eMBED Health Consortium has completed the processing, the CCG can access the online system via a secure connection to access the data pseudonymised at patient level. \n\nCommissioning \n\nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\n     a.\tAcute\n     b.\tAmbulance\n      c.\tCommunity\n     d.\tDemand for Service\n     e.\tDiagnostic Service\n      f.\tEmergency Care\n     g.\tExperience, Quality and Outcomes\n     h.\tMental Health\n      i.\tOther Not Elsewhere Classified\n      j.\tPopulation Data\n     k.\tPrimary Care Services\n      l.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tMaternity Services Data Set (MSDS)\n7.\tImproving Access to Psychological Therapy (IAPT)\n8.\tChild and Young People Health Service (CYPHS)\n9.\tCommunity Services Data Set (CSDS)\n10.\tDiagnostic Imaging Data Set (DIDS)\n11.\tNational Cancer Waiting Times Monitoring Data Set (CWT)\n12.\tCivil Registries Data (CRD) (Births)\n13.\tCivil Registries Data (CRD) (Deaths)\n14.\tNational Diabetes Audit (NDA)\n15.\tPatient Reported Outcome Measures (PROMs)\n\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\n\nData Processor – eMBED Health Consortium via North of England Commissioning Support Unit  \n\n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS). Diagnostic Imaging data (DIDS), National Cancer Waiting Times Monitoring Data Set (CWT), Civil Registries Data (CRD) (Births and Deaths), National Diabetes Audit (NDA) and Patient Reported Outcome Measures (PROMs) only is securely transferred from the DSCRO to North of England Commissioning Support Unit.\n2.\tNorth of England CSU add derived fields, link data and provide analysis to:\n     a.\tSee patient journeys for pathways or service design, re-design and de-commissioning. \n     b.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\n      c.\tUndertake population health management\n     d.\tUndertake data quality and validation checks\n     e.\tThoroughly investigate the needs of the population\n      f.\tUnderstand cohorts of residents who are at risk\n     g.\tConduct Health Needs Assessments\n3.\tAllowed linkage is between the data sets contained within point 1\n4.\tNorth of England Commissioning Support Unit then pass the processed, pseudonymised and linked data to both eMBED Health Consortium and the CCG. eMBED Health Consortium analyse the data to:\n     a.\tSee patient journeys for pathways or service design, re-design and de-commissioning \n     b.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers \n      c.\tUndertake population health management \n     d.\tUndertake data quality and validation checks\n     e.\tThoroughly investigate the needs of the population\n      f.\tUnderstand cohorts of residents who are at risk\n     g.\tConduct Health Needs Assessments\n5.\tAggregation of required data for CCG management use will be completed by North of England Commissioning Support Unit,  eMBED Health Consortium or the CCG as instructed by the CCG.\n6.\tPatient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "NHS WEST YORKSHIRE ICB - 03R"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Acute-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Ambulance-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Children and Young People Health",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registration - Births",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Community Services Data Set (CSDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Community-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Demand for Service-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Emergency Care-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Experience, Quality and Outcomes-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Improving Access to Psychological Therapies (IAPT) v1.5",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Maternity Services Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health and Learning Disabilities Data Set (MHLDDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Minimum Data Set (MHMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Services Data Set (MHSDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "National Diabetes Audit",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Patient Reported Outcome Measures (PROMs)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Population Data-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Primary Care Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Public Health and Screening Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "SUS for Commissioners",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "SUS for Commissioners",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2022-09-19",
+   "expected_benefits": "INVOICE VALIDATION\nThe invoice validation process supports the ongoing delivery of patient care across the NHS and the CCG region by:\n1.\tEnsuring that activity is fully financially validated.\n2.\tEnsuring that service providers are accurately paid for the patients treatment.\n3.\tEnabling services to be planned, commissioned, managed, and subjected to financial control.\n4.\tEnabling commissioners to confirm that they are paying appropriately for treatment of patients for whom they are responsible.\n5.\tFulfilling commissioners duties to fiscal probity and scrutiny.\n6.\tEnsuring full financial accountability for relevant organisations.\n7.\tEnsuring robust commissioning and performance management.\n8.\tEnsuring commissioning objectives do not compromise patient confidentiality.\n9.\tEnsuring the avoidance of misappropriation of public funds.\n\nRISK STRATIFICATION\nRisk stratification promotes improved case management in primary care and will lead to the following benefits being realised: \n1.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n2.\tImproved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services thus allowing early intervention.\n3.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n4.\tSupports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework by allowing for more targeted intervention in primary care.\n5.\tBetter understanding of local population characteristics through analysis of their health and \n6.\thealthcare outcomes\nAll of the above lead to improved patient experience through more effective commissioning of services.\n\nCOMMISSIONING\n1.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n2.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3.\tHealth economic modelling using:\na.\tAnalysis on provider performance against 18 weeks wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd.\tAnalysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4.\tCommissioning cycle support for grouping and re-costing previous activity.\n5.\tEnables monitoring of:\na.\tCCG outcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tSuccessful delivery of integrated care within the CCG.\nd.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\ne.\tCase management.\nf.\tCare service planning.\ng.\tCommissioning and performance management.\nh.\tList size verification by GP practices.\ni.\tUnderstanding the care of patients in nursing homes.\n6.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n7.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n8.\tImproved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services and early intervention of appropriate care.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tPotentially reduced premature mortality by more targeted intervention in primary care, which supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n11.\tBetter understanding of the health of and the variations in health outcomes within the population to help understand local population characteristics.  \n12.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n13.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n14.\tProviding greater understanding of the underlying courses and look to commission improved supportive networks, this would be ongoing work which would be continually assessed.\n15.\tInsight to understand the numerous factors that play a role in the outcome for both datasets. The linkage will allow the reporting both prior to, during and after the activity, to provide greater assurance on predictive outcomes and delivery of best practice.\n16.\tProvision of indicators of health problems, and patterns of risk within the commissioning region. \n17.\tSupport of benchmarking for evaluating progress in future years.",
+   "expected_output": "INVOICE VALIDATION\n1.\tThe Controlled Environment for Finance (CEfF) will enable the CCG to challenge invoices and raise discrepancies and disputes.\n2.\tOutputs from the CEfF will enable accurate production of budget reports, which will:\na.\tAssist in addressing poor quality data issues\nb.\tAssist in business intelligence\n3.\tValidation of invoices for non-contracted events where a service delivered to a patient by a provider that does not have a written contract with the patient’s responsible commissioner, but does have a written contract with another NHS commissioner/s.\n4.\tBudget control of the CCG.\n\nRISK STRATIFICATION\n1.\tAs part of the risk stratification processing activity detailed above, GPs have access to the risk stratification tool which highlights patients for whom the GP is responsible and have been classed as at risk. The only identifier available to GPs is the NHS numbers of their own patients. Any further identification of the patients will be completed by the GP on their own systems.\n2.\tGP Practices will be able to view the risk scores for individual patients with the ability to display the underlying SUS+ data for the individual patients when it is required for direct care purposes by someone who has a legitimate relationship with the patient. \n\nCCGs will be able to:\n3.\tTarget specific vulnerable patient groups and enable clinicians with the duty of care for the patient to offer appropriate interventions. \n4.\tReduce hospital readmissions and targeting clinical interventions to high risk patients.\n5.\tIdentify patients at risk of deterioration and providing effective care.\n6.\tReduce in the difference in the quality of care between those with the best and worst outcomes.\n7.\tRe-design care to reduce admissions.\n8.\tSet up capitated budgets – budgets based on care provided to the specific population.\n9.\tIdentify health determinants of risk of admission to hospital, or other adverse care outcomes.\n10.\tMonitor vulnerable groups of patients including but not limited to frailty, COPD, Diabetes, elderly.\n11.\tHealth needs assessments – identifying numbers of patients with specific health conditions or combination of conditions.\n12.\tClassify vulnerable groups based on: disease profiles; conditions currently being treated; current service use; pharmacy use and risk of future overall cost.\n13.\tProduction of Theographs – a visual timeline of a patients encounters with hospital providers. \n14.\tAnalyse based on specific diseases\nIn addition:\n-\tThe risk stratification tool will provide aggregate reporting of number and percentage of population found to be at risk.\n-\tRecord level output (pseudonymised) will be available for commissioners (of the CCG), pseudonymised at patient level. Onward sharing of this data is not permitted.\n\nCOMMISSIONING\n1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns.\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis.\n3.\tProduction of aggregate reports for CCG Business Intelligence.\n4.\tProduction of project / programme level dashboards.\n5.\tMonitoring of acute / community / mental health quality matrix.\n6.\tClinical coding reviews / audits.\n7.\tBudget reporting down to individual GP Practice level.\n8.\tGP Practice level dashboard reports include high flyers.  \n9.\tComparators of CCG performance with similar CCGs as set out by a specific range of care quality and performance measures detailed activity and cost reports\n10.\tData Quality and Validation measures allowing data quality checks on the submitted data\n11.\tContract Management and Modelling\n12.\tPatient Stratification, such as:\no\tPatients at highest risk of admission \no\tMost expensive patients (top 15%)\no\tFrail and elderly \no\tPatients that are currently in hospital\no\tPatients with most referrals to secondary care\no\tPatients with most emergency activity \no\tPatients with most expensive prescriptions \no\tPatients recently moving from one care setting to another \ni.\tDischarged from hospital\nii.\tDischarged from community\n13.\tValidation for payment approval, ability to validate that claims are not being made after an individual has died, like Oxygen services.\n14.\tValidation of programs implemented to improve patient pathway e.g. High users unable to validate if the process to help patients find the best support are working or did the patient die.\n15.\tClinical - understand reasons why patients are dying, what additional support services can be put in to support.\n16.\tUnderstanding where patient are dying e.g. are patients dying at hospitals due to hospices closing due to Local authorities withdrawing support, or is there a problem at a particular trust.\n17.\tRemoval of patients from Risk Stratification reports.\n18.\tRe births provide a one stop shop of information, Births are recorded in multiple sources covering hospital and home births, a chance to overlook activity.",
+   "files_released": 0,
+   "objective": "Invoice Validation \n\nInvoice validation is part of a process by which providers of care or services get paid for the work they do.\n\nInvoices are submitted to the Clinical Commissioning Group (CCG) so the CCG is are able to ensure that the activity claimed for each patient is their responsibility. This is done by processing and analysing Secondary User Services (SUS+) data, which is received into a secure Controlled Environment for Finance (CEfF). The SUS+ data is identifiable at the level of NHS number. The NHS number is only used to confirm the accuracy of backing-data sets (data from providers) and will not be used further.\n\nInvoice Validation with be conducted by North of England CSU\n\nThe CCG are advised by North of England CSU whether payment for invoices can be made or not.\n\nRisk Stratification\n\nRisk stratification is a tool for identifying and predicting which patients are at high risk (of health deterioration and using multiple services) or are likely to be at high risk and prioritising the management of their care in order to prevent worse outcomes.\n\nTo conduct risk stratification Secondary User Services (SUS+) data, identifiable at the level of NHS number is linked with Primary Care data (from GPs) and an algorithm is applied to produce risk scores. Risk Stratification provides focus for future demands by enabling commissioners to prepare plans for both individual and groups of vulnerable patients.  Commissioners can then prepare plans for patients who may require high levels of care. Risk Stratification also enables General Practitioners (GPs) to better target intervention in Primary Care.\n\nRisk Stratification will be conducted by eMBED Health Consortium.\n\nCommissioning \n\nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers. \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n-\tSecondary Uses Service (SUS+)\n-\tLocal Provider Flows\n      o\tAcute\n      o\tAmbulance\n      o\tCommunity\n      o\tDemand for Service\n      o\tDiagnostic Service \n      o\tEmergency Care\n      o\tExperience, Quality and Outcomes\n      o\tMental Health\n      o\tOther Not Elsewhere Classified\n      o\tPopulation Data\n      o\tPrimary Care Services\n      o\tPublic Health Screening\n-\tMental Health Minimum Data Set (MHMDS)\n-\tMental Health Learning Disability Data Set (MHLDDS)\n-\tMental Health Services Data Set (MHSDS)\n-\tMaternity Services Data Set (MSDS)\n-\tImproving Access to Psychological Therapy (IAPT)\n-\tChild and Young People Health Service (CYPHS)\n-\tCommunity Services Data Set (CSDS)\n-\tDiagnostic Imaging Data Set (DIDS)\n-\tNational Cancer Waiting Times Monitoring Data Set (CWT)\n-\tCivil Registries Data (CRD) (Births)\n-\tCivil Registries Data (CRD) (Deaths)\n-\tNational Diabetes Audit (NDA)\n-\tPatient Reported Outcome Measures (PROMs)\n\nThe pseudonymised data is required to for the following purposes: \n\tPopulation health management:\n       •\tUnderstanding the interdependency of care services \n       •\tTargeting care more effectively \n       •\tUsing value as the redesign principle \n\tData Quality and Validation – allowing data quality checks on the submitted data\n\tThoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n\tUnderstanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n\tMonitoring population health and care interactions to understand where people may slip through the net, or where the provision of care may be being duplicated\n\tModelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n\tService redesign\n\tHealth Needs Assessment – identification of underlying disease prevalence within the local population\n\tPatient stratification and predictive modelling - to identify specific patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\n\nProcessing for commissioning will be conducted by eMBED Health Consortium",
+   "organisation": "NHS WEST YORKSHIRE ICB - 03R",
+   "organisation_type": "Sub ICB Location",
+   "reference": "DARS-NIC-90713-T3K1V-v4.3",
+   "releases": [],
+   "start_date": "2019-09-20",
+   "sublicensing": "No",
+   "title": "DSfC - NHS Wakefield CCG; RS, IV & Comm.",
+   "version": "4.3",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nThe DSCRO (part of NHS Digital) will apply National Opt-outs before any identifiable data leaves the DSCRO only for the purpose of Risk Stratification.\n\nCCGs should work with general practices within their CCG to help them fulfil data controller responsibilities regarding flow of identifiable data into risk stratification tools.\n\nThe only identifier available in the data set is the NHS numbers. Any further identification of the patients will only be completed by the patient’s clinician on their own systems for the purpose of direct care with a legitimate relationship. \n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData for the purpose of Invoice Validation is kept within the CEfF, and only used by staff properly trained and authorised for the activity.  Only CEfF staff are able to access data in the CEfF and only CEfF staff operate the invoice validation process within the CEfF.  Data flows directly in to the CEfF from the DSCRO and from the providers – it does not flow through any other processors.\n\nDATA MINIMISATION\nData Minimisation in relation to the data sets listed within section 3 are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n• Patients who are normally registered and/or resident within the Wakefield CCG (including historical activity where the patient was previously registered or resident in another commissioner).\n\nand/or\n\n• Patients treated by a provider where Wakefield CCG is the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this is only for commissioning and relates to both national and local flows.\n\nand/or\n\n• Activity identified by the provider and recorded as such within national systems (such as SUS+) as for the attention of Wakefield CCG - this is only for commissioning and relates to both national and local flows.\n\nFor the purpose of Risk Stratification:\n• Patients who are normally registered and/or resident within Wakefield CCG (including historical activity where the patient was previously registered or resident in another commissioner\n\nFor the purpose of Invoice Validation:\n• CCG of residence and/or registration.\n\nMicrosoft UK supply provide Cloud Services for Liaison Financial Services Ltd and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nCalderdale and Huddersfield NHS Foundation Trust supply IT infrastructure and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nPulsant, Telecity and Telstra do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nINVOICE VALIDATION: North of England CSU\n1. Identifiable SUS+ Data is obtained from the SUS+ Repository to the Data Services for \nCommissioners Regional Office (DSCRO). \n2. The DSCRO pushes a one-way data flow of SUS+ data into the Controlled Environment for Finance (CEfF) in the North of England CSU.\n3. The CEfF also receive backing data from the provider.\n4. North of England CSU carry out the following processing activities within the CEfF for invoice validation purposes: \n     a. Validating that the Clinical Commissioning Group is responsible for payment for the \n         care of the individual by using SUS+ and/or backing flow data. \n     b. Once the backing information is received, this will be checked against national NHS \n         and local commissioning policies as well as being checked against system access and \n         reports provided by NHS Digital to confirm the payments are:\n              i. In line with Payment by Results tariffs\n             ii. Are in relation to a patient registered with a CCG GP or resident within the CCG area.\n             iii. The health care provided should be paid by the CCG in line with CCG guidance. \n5. The CCG are notified that the invoice has been validated and can be paid. Any discrepancies or non-validated invoices are investigated and resolved between North of England CSU CEfF team and the provider meaning that no identifiable data needs to be sent to the CCG. The CCG only receives notification to pay and management reporting detailing the total quantum of invoices received pending, processed etc. \n\nINVOICE VALIDATION - Liaison Financial Services Ltd\n1.\tIdentifiable SUS+ Data is obtained from the SUS+ Repository to the Data Services for \n        Commissioners Regional Office (DSCRO). \n2.\tThe DSCRO pushes a one-way data flow of SUS+ data into the Controlled Environment for \n        Finance (CEfF) in the Liaison Financial Services Ltd.\n3.\tThe CEfF also receive backing data from the provider.\n4.\tLiaison Financial Services Ltd carry out the following processing activities within the CEfF \n        for invoice validation purposes: \na.\tValidating that the Clinical Commissioning Group are responsible for payment for the care \n        of the individual by using SUS+ and/or provider backing flow data. \nb.\tOnce the provider backing information is received, this will be checked against national \n        NHS and local commissioning policies as well as being checked against system access and \n        reports provided by NHS Digital to confirm the payments are:\ni.\tIn line with Payment by Results tariffs\nii.\tare in relation to a patient registered with a CCG GP or resident within the CCG area.\niii.\tThe health care provided should be paid by the CCG in line with CCG guidance. \n5.\tThe CCG are notified that the invoice has been validated and can be paid. Any \n        discrepancies or non-validated invoices are investigated and resolved between Liaison \n        Financial Services Ltd CEfF team and the provider, meaning that no identifiable data needs \n        to be sent to the CCG. The CCG only receives notification to pay and management \n        reporting detailing the total quantum of invoices received pending, processed etc.\n\nRISK STRATIFICATION\n1.\tIdentifiable SUS+ data is obtained from the SUS Repository to the Data Services for \n        Commissioners Regional Office (DSCRO). \n2.\tData quality management and standardisation of data is completed by the DSCRO and the \n        data identifiable at the level of NHS number is transferred securely to eMBED Health \n        Consortium, who hold the SUS+ data within the secure Data Centre.  \n3.\tIdentifiable GP Data is securely sent from the GP system to eMBED Health Consortium.\n4.\tSUS+ data is linked to GP data in the risk stratification tool by the data processor.\n5.\tAs part of the risk stratification processing activity, GPs have access to the risk stratification \n        tool within the data processor, which highlights patients with whom the GP has a \n        legitimate relationship and have been classed as at risk. The only identifier available to GPs \n        is the NHS numbers of their own patients. Any further identification of the patients will be \n        completed by the GP on their own systems.\n6.\tOnce eMBED Health Consortium has completed the processing, the CCG can access the \n        online system via a secure connection to access the data pseudonymised at patient level. \n\nCOMMISSIONING\nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\n     a.\tAcute\n     b.\tAmbulance\n      c.\tCommunity\n     d.\tDemand for Service\n     e.\tDiagnostic Service\n      f.\tEmergency Care\n     g.\tExperience, Quality and Outcomes\n     h.\tMental Health\n      i.\tOther Not Elsewhere Classified\n      j.\tPopulation Data\n     k.\tPrimary Care Services\n      l.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tMaternity Services Data Set (MSDS)\n7.\tImproving Access to Psychological Therapy (IAPT)\n8.\tChild and Young People Health Service (CYPHS)\n9.\tCommunity Services Data Set (CSDS)\n10.\tDiagnostic Imaging Data Set (DIDS)\n11.\tNational Cancer Waiting Times Monitoring Data Set (CWT)\n12.\tCivil Registries Data (CRD) (Births)\n13.\tCivil Registries Data (CRD) (Deaths)\n14.\tNational Diabetes Audit (NDA)\n15.\tPatient Reported Outcome Measures (PROMs)\n\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\n\nData Processor – eMBED Health Consortium via North of England Commissioning Support Unit  \n1. Pseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS). Diagnostic Imaging data (DIDS), National Cancer Waiting Times Monitoring Data Set (CWT), Civil Registries Data (CRD) (Births and Deaths), National Diabetes Audit (NDA) and Patient Reported Outcome Measures (PROMs) only is securely transferred from the DSCRO to North of England Commissioning Support Unit.\n\n2. North of England CSU add derived fields, link data and provide analysis to:\n     a. See patient journeys for pathways or service design, re-design and de-commissioning. \n     b. Check recorded activity against contracts or invoices and facilitate discussions with \n         providers.\n     c.\t Undertake population health management\n     d. Undertake data quality and validation checks\n     e. Thoroughly investigate the needs of the population\n      f. Understand cohorts of residents who are at risk\n     g. Conduct Health Needs Assessments\n3. Allowed linkage is between the data sets contained within point 1\n4. North of England Commissioning Support Unit then pass the processed, pseudonymised and linked data to both eMBED Health Consortium and the CCG. eMBED Health Consortium analyse the data to:\n     a. See patient journeys for pathways or service design, re-design and de-commissioning \n     b. Check recorded activity against contracts or invoices and facilitate discussions with \n         providers \n      c. Undertake population health management \n     d. Undertake data quality and validation checks\n     e. Thoroughly investigate the needs of the population\n      f. Understand cohorts of residents who are at risk\n     g. Conduct Health Needs Assessments\n5. Aggregation of required data for CCG management use will be completed by North of England Commissioning Support Unit,  eMBED Health Consortium or the CCG as instructed by the CCG.\n6. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "NHS WEST YORKSHIRE ICB - 03R"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Acute-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Ambulance-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Children and Young People Health",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registration - Births",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Community Services Data Set (CSDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Community-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Demand for Service-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Imaging Data Set (DID)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Diagnostic Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Emergency Care-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Experience, Quality and Outcomes-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Improving Access to Psychological Therapies (IAPT) v1.5",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Maternity Services Data Set",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health and Learning Disabilities Data Set (MHLDDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Minimum Data Set (MHMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Services Data Set (MHSDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "National Diabetes Audit",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Patient Reported Outcome Measures (PROMs)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Population Data-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Primary Care Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Public Health and Screening Services-Local Provider Flows",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "SUS for Commissioners",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Mixture of confidential data flow(s) with support under section 251 NHS Act 2006 and non-confidential data flow(s)",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "SUS for Commissioners",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2022-11-17",
+   "expected_benefits": "INVOICE VALIDATION\nThe invoice validation process supports the ongoing delivery of patient care across the NHS and the CCG region by:\n1. Ensuring that activity is fully financially validated.\n2. Ensuring that service providers are accurately paid for the patients treatment.\n3. Enabling services to be planned, commissioned, managed, and subjected to financial control.\n4. Enabling commissioners to confirm that they are paying appropriately for treatment of patients for whom they are responsible.\n5. Fulfilling commissioners duties to fiscal probity and scrutiny.\n6. Ensuring full financial accountability for relevant organisations.\n7. Ensuring robust commissioning and performance management.\n8. Ensuring commissioning objectives do not compromise patient confidentiality.\n9. Ensuring the avoidance of misappropriation of public funds.\n\nINVOICE VALIDATION - Liaison Financial Service\nExpected measurable benefits to health and/or social care including target date:\n1. Financial validation of activity \n2. CCG Budget control\n3. Assurances over the robustness of internal control mechanisms relating to the payment of  invoices and/or suggested improvements\n4. Identification and recovery of monies which would otherwise be lost\n5. Meeting commissioning objectives without compromising patient confidentiality \n6. The avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care\n7. Benefit delivered 3-9 months from receiving data, depending on number of claims to  investigate and resolve\n\nRISK STRATIFICATION\nRisk stratification promotes improved case management in primary care and will lead to the following benefits being realised: \n1. Improved planning by better understanding patient flows through the healthcare system,  thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n2. Improved quality of services through reduced emergency re-admissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services thus allowing early intervention.\n3. Improved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n4. Supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework by allowing for more targeted intervention in primary care.\n5. Better understanding of local population characteristics through analysis of their health and healthcare outcomes\n\nAll of the above lead to improved patient experience through more effective commissioning of services.\n\nCOMMISSIONING\n1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\n    a.\tAnalysis to support full business cases. \n    b.\tDevelop business models.\n    c.\tMonitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\n    a.\tAnalysis on provider performance against 18 weeks wait targets.\n    b.\tLearning from and predicting likely patient pathways for certain conditions, in order to \n        influence early interventions and other treatments for patients.\n    c.\tAnalysis of outcome measures for differential treatments, accounting for the full patient \n        pathway.\n    d.\tAnalysis to understand emergency care and linking A&E and Emergency Urgent Care \n        Flows (EUCC).\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\n    a.\tCCG outcome indicators.\n    b.\tFinancial and Non-financial validation of activity.\n    c.\tSuccessful delivery of integrated care within the CCG.\n    d.\tChecking frequent or multiple attendances to improve early intervention and avoid \n        admissions.\n    e.\tCase management.\n    f.\tCare service planning.\n    g.\tCommissioning and performance management.\n    h.\tList size verification by GP practices.\n     i.\tUnderstanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n7. Improved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n8. Improved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services and early intervention of appropriate care.\n9. Improved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10. Potentially reduced premature mortality by more targeted intervention in primary care, which supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n11. Better understanding of the health of and the variations in health outcomes within the population to help understand local population characteristics.  \n12. Better understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n13. Insights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n14. Providing greater understanding of the underlying courses and look to commission  improved supportive networks, this would be ongoing work which would be continually assessed.\n15. Insight to understand the numerous factors that play a role in the outcome for both datasets. The linkage will allow the reporting both prior to, during and after the activity, to provide greater assurance on predictive outcomes and delivery of best practice.\n16. Provision of indicators of health problems, and patterns of risk within the commissioning region. \n17. Support of benchmarking for evaluating progress in future years.",
+   "expected_output": "INVOICE VALIDATION\n1. The Controlled Environment for Finance (CEfF) will enable the CCG to challenge invoices and raise discrepancies and disputes.\n2. Outputs from the CEfF will enable accurate production of budget reports, which will:\n    a. Assist in addressing poor quality data issues\n    b. Assist in business intelligence\n3. Validation of invoices for non-contracted events where a service delivered to a patient by a provider that does not have a written contract with the patient’s responsible commissioner, but does have a written contract with another NHS commissioner/s.\n4. Budget control of the CCG.\n\nINVOICE VALIDATION - Liaison Financial Services \n1. Validation of Continuing Healthcare related invoices and payments\n2. Independent Identification of potential overpayments made by the CCG through invoice validation\n3. Liaising with providers with a view to recouping these monies\n4. Review is completed for the retrospective period from date of contract with Liaison Financial Services back to 01/04/2013. \n5. Reviews take 3-9 months depending on number of claims to investigate and resolve\n6. Liaison Financial Services would repeat the exercise 2-3 years later \n7. CCGs could request reviews to be done more frequently \n8. SUS+ would only be requested each time a review was completed, and could be requested \n        at different times as independent reviews\n\nRISK STRATIFICATION\n1. As part of the risk stratification processing activity detailed above, GPs have access to the risk stratification tool which highlights patients for whom the GP is responsible and have been classed as at risk. The only identifier available to GPs is the NHS numbers of their own patients. Any further identification of the patients will be completed by the GP on their own systems.\n2. GP Practices will be able to view the risk scores for individual patients with the ability to display the underlying SUS+ data for the individual patients when it is required for direct care purposes by someone who has a legitimate relationship with the patient. \n\nCCGs will be able to:\n3. Target specific vulnerable patient groups and enable clinicians with the duty of care for the patient to offer appropriate interventions. \n4. Reduce hospital readmissions and targeting clinical interventions to high risk patients.\n5. Identify patients at risk of deterioration and providing effective care.\n6. Reduce in the difference in the quality of care between those with the best and worst outcomes.\n7. Re-design care to reduce admissions.\n8. Set up capitated budgets – budgets based on care provided to the specific population.\n9. Identify health determinants of risk of admission to hospital, or other adverse care outcomes.\n10. Monitor vulnerable groups of patients including but not limited to frailty, COPD, Diabetes, elderly.\n11. Health needs assessments – identifying numbers of patients with specific health conditions or combination of conditions.\n12. Classify vulnerable groups based on: disease profiles; conditions currently being treated; current service use; pharmacy use and risk of future overall cost.\n13. Production of Theographs – a visual timeline of a patients encounters with hospital providers. \n14. Analyse based on specific diseases\n\nIn addition:\n- The risk stratification tool will provide aggregate reporting of number and percentage of population found to be at risk.\n- Record level output (pseudonymised) will be available for commissioners (of the CCG), pseudonymised at patient level. Onward sharing of this data is not permitted.\n\nCOMMISSIONING\n1.Commissioner reporting:\n    a. Summary by provider view - plan & actuals year to date (YTD). \n    b. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \n    c. Summary by provider view - activity & finance variance by POD. \n    d. Planned care by provider view - activity & finance plan & actuals YTD.\n    e. Planned care by POD view - activity plan & actuals YTD.\n    f. Provider reporting.\n    g. Statutory returns.\n    h. Statutory returns - monthly activity return. \n    i. Statutory returns - quarterly activity return. \n    j. Delayed discharges. \n    k. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of acute / community / mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports.  \n9. Comparators of CCG performance with similar CCGs as set out by a specific range of care quality and performance measures detailed activity and cost reports\n10. Data Quality and Validation measures allowing data quality checks on the submitted data\n11. Contract Management and Modelling\n12. Patient Stratification, such as:\n     o\tPatients at highest risk of admission \n     o\tHigh Cost Activity Uses (top 15%)\n     o\tFrail and elderly \n     o\tPatients that are currently in hospital\n     o\tPatients with most referrals to secondary care\n     o\tPatients with most emergency activity \n     o\tPatients with most expensive prescriptions \n     o\tPatients recently moving from one care setting to another \n       i. Discharged from hospital\n       ii. Discharged from community\n13. Validation for payment approval, ability to validate that claims are not being made after an individual has died, like Oxygen services.\n14. Validation of programs implemented to improve patient pathway e.g. High users unable to validate if the process to help patients find the best support are working or did the patient die.\n15. Clinical - understand reasons why patients are dying, what additional support services can be put in to support.\n16. Understanding where patient are dying e.g. are patients dying at hospitals due to hospices closing due to Local authorities withdrawing support, or is there a problem at a particular trust.\n17. Removal of patients from Risk Stratification reports.\n18. Re births provide a one stop shop of information, Births are recorded in multiple sources covering hospital and home births, a chance to overlook activity.",
+   "files_released": 0,
+   "objective": "INVOICE VALIDATION \nInvoice validation is part of a process by which providers of care or services get paid for the work they do.\n\nInvoices are submitted to the Clinical Commissioning Group (CCG) so the CCG is are able to ensure that the activity claimed for each patient is their responsibility. This is done by processing and analysing Secondary User Services (SUS+) data, which is received into a secure Controlled Environment for Finance (CEfF). The SUS+ data is identifiable at the level of NHS number. The NHS number is only used to confirm the accuracy of backing-data sets (data from providers) and will not be used further.\n\nThe CCG are advised by the appointed CEfF whether payment for invoices can be made or not.\n\nInvoice Validation with be conducted by North of England CSU and Liaison Financial Services.\n\nLiaison Financial Services conduct an independent ad-hoc review on retrospective payments made. Investing resource, skills and experience into deeper reconciliation, this identifies overcharges already paid and recovers savings for the CCG that would otherwise be lost. \n\nRISK STRATIFICATION\nRisk stratification is a tool for identifying and predicting which patients are at high risk (of health deterioration and using multiple services) or are likely to be at high risk and prioritising the management of their care in order to prevent worse outcomes.\n\nTo conduct risk stratification Secondary User Services (SUS+) data, identifiable at the level of NHS number is linked with Primary Care data (from GPs) and an algorithm is applied to produce risk scores. Risk Stratification provides focus for future demands by enabling commissioners to prepare plans for both individual and groups of vulnerable patients.  Commissioners can then prepare plans for patients who may require high levels of care. Risk Stratification also enables General Practitioners (GPs) to better target intervention in Primary Care.\n\nRisk Stratification will be conducted by eMBED Health Consortium.\n\nCOMMISSIONING \nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \n\nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers. \n\nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n-\tSecondary Uses Service (SUS+)\n-\tLocal Provider Flows\n      o\tAcute\n      o\tAmbulance\n      o\tCommunity\n      o\tDemand for Service\n      o\tDiagnostic Service \n      o\tEmergency Care\n      o\tExperience, Quality and Outcomes\n      o\tMental Health\n      o\tOther Not Elsewhere Classified\n      o\tPopulation Data\n      o\tPrimary Care Services\n      o\tPublic Health Screening\n-\tMental Health Minimum Data Set (MHMDS)\n-\tMental Health Learning Disability Data Set (MHLDDS)\n-\tMental Health Services Data Set (MHSDS)\n-\tMaternity Services Data Set (MSDS)\n-\tImproving Access to Psychological Therapy (IAPT)\n-\tChild and Young People Health Service (CYPHS)\n-\tCommunity Services Data Set (CSDS)\n-\tDiagnostic Imaging Data Set (DIDS)\n-\tNational Cancer Waiting Times Monitoring Data Set (CWT)\n-\tCivil Registries Data (CRD) (Births)\n-\tCivil Registries Data (CRD) (Deaths)\n-\tNational Diabetes Audit (NDA)\n-\tPatient Reported Outcome Measures (PROMs)\n\nThe pseudonymised data is required to for the following purposes: \n\tPopulation health management:\n       •\tUnderstanding the interdependency of care services \n       •\tTargeting care more effectively \n       •\tUsing value as the redesign principle \n\tData Quality and Validation – allowing data quality checks on the submitted data\n\tThoroughly investigating the needs of the population, to ensure the right services are \n        available for individuals when and where they need them\n\tUnderstanding cohorts of residents who are at risk of becoming users of some of the more \n        expensive services, to better understand and manage those needs\n\tMonitoring population health and care interactions to understand where people may slip \n        through the net, or where the provision of care may be being duplicated\n\tModelling activity across all data sets to understand how services interact with each other, \n        and to understand how changes in one service may affect flows through another\n\tService redesign\n\tHealth Needs Assessment – identification of underlying disease prevalence within the local \n        population\n\tPatient stratification and predictive modelling - to identify specific patients at risk of \n        requiring hospital admission and other avoidable factors such as risk of falls, computed \n        using algorithms executed against linked de-identified data, and identification of future \n        service delivery models\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\n\nProcessing for commissioning will be conducted by eMBED Health Consortium",
+   "organisation": "NHS WEST YORKSHIRE ICB - 03R",
+   "organisation_type": "Sub ICB Location",
+   "reference": "DARS-NIC-90713-T3K1V-v5.2",
+   "releases": [],
+   "start_date": "2019-11-18",
+   "sublicensing": "No",
+   "title": "DSfC - NHS Wakefield CCG; RS, IV & Comm.",
+   "version": "5.2",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nThe DSCRO (part of NHS Digital) will apply National Opt-outs before any identifiable data leaves the DSCRO only for the purpose of Risk Stratification.\n\nCCGs should work with general practices within their CCG to help them fulfil data controller responsibilities regarding flow of identifiable data into risk stratification tools.\n\nThe only identifier available in the data set is the NHS numbers. Any further identification of the patients will only be completed by the patient’s clinician on their own systems for the purpose of direct care with a legitimate relationship. \n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData for the purpose of Invoice Validation is kept within the CEfF, and only used by staff properly trained and authorised for the activity.  Only CEfF staff are able to access data in the CEfF and only CEfF staff operate the invoice validation process within the CEfF.  Data flows directly in to the CEfF from the DSCRO and from the providers – it does not flow through any other processors.\n\nDATA MINIMISATION\nData Minimisation in relation to the data sets listed within section 3 are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Risk Stratification:\n• Patients who are normally registered and/or resident within NHS Wakefield CCG (including historical activity where the patient was previously registered or resident in another commissioner\n\nFor the purpose of Invoice Validation:\n• CCG of residence and/or registration.\n\nMicrosoft UK supply provide Cloud Services for Liaison Financial Services Ltd and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nCalderdale and Huddersfield NHS Foundation Trust supply IT infrastructure and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nPulsant and IT Professional Services Ltd do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nINVOICE VALIDATION: North of England CSU\n1. Identifiable SUS+ Data is obtained from the SUS+ Repository to the Data Services for \nCommissioners Regional Office (DSCRO). \n2. The DSCRO pushes a one-way data flow of SUS+ data into the Controlled Environment for Finance (CEfF) in the North of England CSU.\n3. The CEfF also receive backing data from the provider.\n4. North of England CSU carry out the following processing activities within the CEfF for invoice validation purposes: \n     a. Validating that the Clinical Commissioning Group is responsible for payment for the \n         care of the individual by using SUS+ and/or backing flow data. \n     b. Once the backing information is received, this will be checked against national NHS \n         and local commissioning policies as well as being checked against system access and \n         reports provided by NHS Digital to confirm the payments are:\n              i. In line with Payment by Results tariffs\n             ii. Are in relation to a patient registered with a CCG GP or resident within the CCG area.\n             iii. The health care provided should be paid by the CCG in line with CCG guidance. \n5. The CCG are notified that the invoice has been validated and can be paid. Any discrepancies or non-validated invoices are investigated and resolved between North of England CSU CEfF team and the provider meaning that no identifiable data needs to be sent to the CCG. The CCG only receives notification to pay and management reporting detailing the total quantum of invoices received pending, processed etc. \n\nINVOICE VALIDATION - Liaison Financial Services Ltd\n1.\tIdentifiable SUS+ Data is obtained from the SUS+ Repository to the Data Services for \n        Commissioners Regional Office (DSCRO). \n2.\tThe DSCRO pushes a one-way data flow of SUS+ data into the Controlled Environment for \n        Finance (CEfF) in the Liaison Financial Services Ltd.\n3.\tThe CEfF also receive backing data from the provider.\n4.\tLiaison Financial Services Ltd carry out the following processing activities within the CEfF \n        for invoice validation purposes: \na.\tValidating that the Clinical Commissioning Group are responsible for payment for the care \n        of the individual by using SUS+ and/or provider backing flow data. \nb.\tOnce the provider backing information is received, this will be checked against national \n        NHS and local commissioning policies as well as being checked against system access and \n        reports provided by NHS Digital to confirm the payments are:\ni.\tIn line with Payment by Results tariffs\nii.\tare in relation to a patient registered with a CCG GP or resident within the CCG area.\niii.\tThe health care provided should be paid by the CCG in line with CCG guidance. \n5.\tThe CCG are notified that the invoice has been validated and can be paid. Any \n        discrepancies or non-validated invoices are investigated and resolved between Liaison \n        Financial Services Ltd CEfF team and the provider, meaning that no identifiable data needs \n        to be sent to the CCG. The CCG only receives notification to pay and management \n        reporting detailing the total quantum of invoices received pending, processed etc.\n\nRISK STRATIFICATION\n1.\tIdentifiable SUS+ data is obtained from the SUS Repository to the Data Services for \n        Commissioners Regional Office (DSCRO). \n2.\tData quality management and standardisation of data is completed by the DSCRO and the \n        data identifiable at the level of NHS number is transferred securely to NHS Wakefield CCG, who hold the SUS+ data within the secure Data Centre.  \n3.\tIdentifiable GP Data is securely sent from the GP system to NHS Wakefield CCG.\n4.\tSUS+ data is linked to GP data in the risk stratification tool by the data processor.\n5.\tAs part of the risk stratification processing activity, GPs have access to the risk stratification \n        tool within the data processor, which highlights patients with whom the GP has a \n        legitimate relationship and have been classed as at risk. The only identifier available to GPs \n        is the NHS numbers of their own patients. Any further identification of the patients will be \n        completed by the GP on their own systems.\t\n6.\tOnce the CCG has completed the processing, access is available within the CCG through the online system via a secure connection to access the data pseudonymised at patient level",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "NHS WEST YORKSHIRE ICB - 03R"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "Frequent Adhoc Flow",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "SUS for Commissioners",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2023-05-12",
+   "expected_benefits": "INVOICE VALIDATION\nThe invoice validation process supports the ongoing delivery of patient care across the NHS and the CCG region by:\n1. Ensuring that activity is fully financially validated.\n2. Ensuring that service providers are accurately paid for the patients treatment.\n3. Enabling services to be planned, commissioned, managed, and subjected to financial control.\n4. Enabling commissioners to confirm that they are paying appropriately for treatment of patients for whom they are responsible.\n5. Fulfilling commissioners duties to fiscal probity and scrutiny.\n6. Ensuring full financial accountability for relevant organisations.\n7. Ensuring robust commissioning and performance management.\n8. Ensuring commissioning objectives do not compromise patient confidentiality.\n9. Ensuring the avoidance of misappropriation of public funds.\n\nINVOICE VALIDATION - Liaison Financial Services Ltd\nExpected measurable benefits to health and/or social care including target date:\n1. Financial validation of activity \n2. CCG Budget control\n3. Assurances over the robustness of internal control mechanisms relating to the payment of  invoices and/or suggested improvements\n4. Identification and recovery of monies which would otherwise be lost\n5. Meeting commissioning objectives without compromising patient confidentiality \n6. The avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care\n7. Benefit delivered 3-9 months from receiving data, depending on number of claims to  investigate and resolve\n\nRISK STRATIFICATION\nRisk stratification promotes improved case management in primary care and will lead to the following benefits being realised: \n1. Improved planning by better understanding patient flows through the healthcare system,  thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n2. Improved quality of services through reduced emergency re-admissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services thus allowing early intervention.\n3. Improved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n4. Supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework by allowing for more targeted intervention in primary care.\n5. Better understanding of local population characteristics through analysis of their health and healthcare outcomes\n\nAll of the above lead to improved patient experience through more effective commissioning of services.",
+   "expected_output": "INVOICE VALIDATION\n1. The Controlled Environment for Finance (CEfF) will enable the CCG to challenge invoices and raise discrepancies and disputes.\n2. Outputs from the CEfF will enable accurate production of budget reports, which will:\n    a. Assist in addressing poor quality data issues\n    b. Assist in business intelligence\n3. Validation of invoices for non-contracted events where a service delivered to a patient by a provider that does not have a written contract with the patient’s responsible commissioner, but does have a written contract with another NHS commissioner/s.\n4. Budget control of the CCG.\n\nINVOICE VALIDATION - Liaison Financial Services Ltd\n1. Validation of Continuing Healthcare related invoices and payments\n2. Independent Identification of potential overpayments made by the CCG through invoice validation\n3. Liaising with providers with a view to recouping these monies\n4. Review is completed for the retrospective period from date of contract with Liaison Financial Services back to 01/04/2013. \n5. Reviews take 3-9 months depending on number of claims to investigate and resolve\n6. Liaison Financial Services would repeat the exercise 2-3 years later \n7. CCGs could request reviews to be done more frequently \n8. SUS+ would only be requested each time a review was completed, and could be requested \n        at different times as independent reviews\n\nRISK STRATIFICATION\n1. As part of the risk stratification processing activity detailed above, GPs have access to the risk stratification tool which highlights patients for whom the GP is responsible and have been classed as at risk. The only identifier available to GPs is the NHS numbers of their own patients. Any further identification of the patients will be completed by the GP on their own systems.\n2. GP Practices will be able to view the risk scores for individual patients with the ability to display the underlying SUS+ data for the individual patients when it is required for direct care purposes by someone who has a legitimate relationship with the patient. \n\nCCGs will be able to:\n3. Target specific vulnerable patient groups and enable clinicians with the duty of care for the patient to offer appropriate interventions. \n4. Reduce hospital readmissions and targeting clinical interventions to high risk patients.\n5. Identify patients at risk of deterioration and providing effective care.\n6. Reduce in the difference in the quality of care between those with the best and worst outcomes.\n7. Re-design care to reduce admissions.\n8. Set up capitated budgets – budgets based on care provided to the specific population.\n9. Identify health determinants of risk of admission to hospital, or other adverse care outcomes.\n10. Monitor vulnerable groups of patients including but not limited to frailty, COPD, Diabetes, elderly.\n11. Health needs assessments – identifying numbers of patients with specific health conditions or combination of conditions.\n12. Classify vulnerable groups based on: disease profiles; conditions currently being treated; current service use; pharmacy use and risk of future overall cost.\n13. Production of Theographs – a visual timeline of a patients encounters with hospital providers. \n14. Analyse based on specific diseases\n\nIn addition:\n- The risk stratification tool will provide aggregate reporting of number and percentage of population found to be at risk.\n- Record level output (pseudonymised) will be available for commissioners (of the CCG), pseudonymised at patient level. Onward sharing of this data is not permitted.",
+   "files_released": 0,
+   "objective": "INVOICE VALIDATION \nInvoice validation is part of a process by which providers of care or services get paid for the work they do.\n\nInvoices are submitted to the Clinical Commissioning Group (CCG) so the CCG is are able to ensure that the activity claimed for each patient is their responsibility. This is done by processing and analysing Secondary User Services (SUS+) data, which is received into a secure Controlled Environment for Finance (CEfF). The SUS+ data is identifiable at the level of NHS number. The NHS number is only used to confirm the accuracy of backing-data sets (data from providers) and will not be used further.\n\nThe CCG are advised by the appointed CEfF whether payment for invoices can be made or not.\n\nInvoice Validation with be conducted by North of England CSU and Liaison Financial Services Ltd.\n\nLiaison Financial Services conduct an independent ad-hoc review on retrospective payments made. Investing resource, skills and experience into deeper reconciliation, this identifies overcharges already paid and recovers savings for the CCG that would otherwise be lost. \n\nRISK STRATIFICATION\nRisk stratification is a tool for identifying and predicting which patients are at high risk (of health deterioration and using multiple services) or are likely to be at high risk and prioritising the management of their care in order to prevent worse outcomes.\n\nTo conduct risk stratification Secondary User Services (SUS+) data, identifiable at the level of NHS number is linked with Primary Care data (from GPs) and an algorithm is applied to produce risk scores. Risk Stratification provides focus for future demands by enabling commissioners to prepare plans for both individual and groups of vulnerable patients.  Commissioners can then prepare plans for patients who may require high levels of care. Risk Stratification also enables General Practitioners (GPs) to better target intervention in Primary Care.\n\nRisk Stratification will be conducted by NHS Wakefield CCG",
+   "organisation": "NHS WEST YORKSHIRE ICB - 03R",
+   "organisation_type": "Sub ICB Location",
+   "reference": "DARS-NIC-90713-T3K1V-v6.2",
+   "releases": [],
+   "start_date": "2020-05-13",
+   "sublicensing": "No",
+   "title": "DSfC - NHS Wakefield CCG; RS & IV",
+   "version": "6.2",
+   "yielded_benefits": ""
+  }
+ ]
+}

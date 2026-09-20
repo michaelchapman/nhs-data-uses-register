@@ -1,0 +1,433 @@
+{
+ "base_reference": "DARS-NIC-719923-Q5H1S",
+ "versions": [
+  {
+   "activities": "Imperial College London will transfer data to NHS England.  The data will consist of identifying details, Date of Birth, Postcode, Gender, Name and a unique person ID for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the HES Admitted Patient Care, Accident & Emergency, Emergency Care Data, Outpatient, Critical Care, Demographics, Deaths and Cancer Registration Datasets to Imperial College London.  \n\nThe Data will:\n\n·   contain directly identifying data items including  Names, NHS Number, Date of Birth, Postcode, which are required to link the Data at record level with data already held by the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at The Imperial College London Certified Secure Research Environment. The CSRE is an isolated environment within the Imperial College network, physically located at a Slough data centre operated by Virtus SDC Ltd.\n\nVirtus SDC Ltd do not have access to the data stored within the CSRE. Their role is strictly limited to providing the physical location and infrastructure for the servers. \n\nThe Data will be accessed by authorised personnel via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within the UK.\n\nAccess to confidential patient identifiable data is restricted to employees of LOLIPOP Study Research team at Imperial College London.\n\nData will be accessed by individuals with an honorary contract with Imperial College London.  The individual(s) will act as an agent of Imperial College London at all times under supervision from employees of Imperial College London.  Aside from this/these individuals, access is restricted to employees or agents of Imperial College London who have authorisation from the Principal Investigator.\n\nThe aggregated data with small numbers suppressed are transferred out of the CSRE by authorised users on Imperial ICT managed devices. NHS England data is only accessed by approved users of the data controller or data processors, and only for the purposes described in this document. All individuals accessing record level data are substantive ICL employees, registered students (including PhD and Masters students) or individuals from other institutions under an honorary contract with ICL. \n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data.\n\nThere will be no requirement and no attempt to reidentify individuals when using the Data.\n\nResearchers from the LOLIPOP Study at Imperial College London will process the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2028-03-13",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study.\n\nThe use of the data could: \n•\thelp the system to better understand the health and care needs of populations. \n•\tadvance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations or conditions such as cardiovascular disease and diabetes.\n•\tinform planning health services and programmes, for example to improve equity of access, experience and outcomes.\n•\tinform decisions on how to effectively allocate and evaluate funding according to health needs.\n•\tprovide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nBenefits to Patients.\n\nIn Understanding Health Risks in South Asians: \n\n1. Given the currently unknown exact incidence of Coronary Heart Disease (CHD) and diabetes in this group, this study’s ability to link participant data to national health datasets will provide a robust, objective measure of disease incidence and risk profiles. \n\nThe study team is currently analysing preliminary data on cardiometabolic risk and has detected early indicators of susceptibility linked to genetic predisposition, lifestyle factors, and environmental exposures. Although certain physiological and genetic markers associated with increased risk been identified, these findings underscore the need for longer-term monitoring to fully understand future health risks. \n\n2.\tHelping Future Generations: The LOLIPOP Study is generating critical knowledge that will benefit not only the current South Asian population but also future generations, contributing to health improvements for this community and society as a whole. By analysing data and biological samples, the study aims to better understand the risks and causes of CHD, diabetes, and other chronic diseases, providing valuable insights that can inform preventive and treatment strategies.\n\n3. The findings from this study are expected to influence future health policies and practices for reducing disease risk within this high-risk group, with benefits assessed through epidemiological analyses. The study's results are expected to contribute to public health policies, such as targeted dietary recommendations, lifestyle interventions, and culturally tailored health strategies,\n\n3.\tUnderstanding Potential Impacts of Dietary and Lifestyle Patterns on Health: One area of focus for the LOLIPOP Study is the potential impact of specific dietary patterns and lifestyle factors prevalent among South Asians—such as high carbohydrate intake and lower physical activity levels—on the development of chronic diseases. \n\nBy linking baseline data on these factors with hospital admissions, mortality data, and cancer registry information, the study aims to assess how lifestyle patterns may contribute to cardiometabolic risk and whether these factors exceed recommended health limits. This analysis will clarify the influence of diet and lifestyle on disease risk and inform recommendations tailored specifically for the South Asian community.\n\n4.\tClarity on Long-Term Health Effects of Genetic and Environmental Interactions: LOLIPOP continues to analyse extensive baseline data on genetic predispositions, environmental exposures, and biological samples collected from participants, aiming to better understand how these factors interact to influence long-term health outcomes. \n\nLinking this baseline information with hospital admissions, mortality, and cancer registry data enables the study to place potential health risks in context, offering an evidence-based perspective on chronic disease causation and risk among South Asians. Findings from LOLIPOP will support strategic health decisions, inform future public health investments, and contribute to global health reviews, such as those conducted by the World Health Organisation, on chronic disease prevention and intervention.\n\n5.\tResponsibility to the Health and Welfare of the South Asian Population: South Asians face unique health risks due to a combination of genetic predispositions, environmental factors, and cultural lifestyle patterns that are not fully understood. By linking hospital admissions, mortality data, and cancer registry information with baseline health and biological data, LOLIPOP establishes a comprehensive understanding of the factors influencing health outcomes over time. \n\nTarget Dates: Medium-term findings are targeted for 2030, with comprehensive long-term analyses expected by 2035.\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to specific patients.",
+   "expected_output": "The expected outputs of the processing will be:\n\n•\tSubmissions to peer reviewed journals: LOLIPOP resource has supported over 400 projects resulting on over 225 publications to date. Details can be accessed here: https://www.sabiobank.org/approved-research/ and https://www.sabiobank.org/publications/ \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n\n•\tJournals: the target dates for submission of updated scientific papers on mid- and long-term health implications of these risk factors for South Asians are 2028 for mid-term outcomes and 2034 for longer-term effects.\n\n•\tPresentations: Findings on the relationship between genetic, lifestyle, and environmental factors with health outcomes will be presented at high-profile international conferences in cardiometabolic health and public health, including the British Cardiovascular Society Conference, American Heart Association Scientific Sessions, and the European Society of Cardiology Congress. \n\n•\tPublications and Presentations on Additional Risk Factors: Papers and presentations will cover the influence of additional lifestyle and environmental risk factors on health outcomes, disseminating findings relevant to health disparities within the South Asian population.\n\n• Progress Reports: Annual progress reports will be provided to funding bodies, with additional updates shared through the ResearchFish platform.\n\n• Stakeholder Dissemination: Findings will be shared with a wider group of stakeholders, including public health agencies, South Asian health organisations, and academic institutions, to inform interventions targeting health inequalities.\n\n• Lay Summaries and Website Updates: Executive summaries of published reports will be prepared in lay language for participants, the South Asian community, and the general public. These summaries will be available on the LOLIPOP study website, with release dates matching the publication of respective health outcomes.\n\n• Periodic Newsletters: Newsletters summarising study progress and findings will be sent to participants and published on the study website.\n\n• Community and Policy Engagement: Findings relevant to public health policies addressing health disparities among South Asians will be shared with healthcare policymakers and community health organisations to guide intervention strategies. All outputs will include aggregated data with small numbers suppressed to maintain participant confidentiality, and no individually identifiable data will be released.\n\nThese dissemination efforts aim to maximise the impact of LOLIPOP findings on public health strategies, foster engagement with the South Asian community, and contribute to research in cardiometabolic health disparities.\n\n•\tReports aimed at participants/patients describing the prevalence of cardiometabolic risk factors and health outcomes in the South Asian population from the LOLIPOP 2003 has been published, and further analyses are underway to examine associations between genetic, lifestyle, and environmental factors and chronic disease risk.",
+   "files_released": 85,
+   "objective": "Imperial College London requires access to NHS England data for the purpose of the following research project: \nLondon Life Sciences Population (LOLIPOP)\n\nThe following is a summary of the aims of the research project provided by Imperial College London:\n\nLOLIPOP was established to understand the significant health disparities faced by South Asians, including approximately double the risk of coronary heart disease (CHD) and triple the risk of type-2 diabetes, compared to the European population. LOLIPOP is a national study, and the data requested reflects the geographical diversity of the cohort, which includes participants recruited from across the UK. This breadth of data is essential for assessing health outcomes across different regional and environmental contexts\n\nLOLIPOP 2003, is a cohort of ~32,000 participants (including 17,606 UK South Asians) aged 35-75 years, recruited from the lists of 58 GPs in NW London (2003-8), and followed up for ~20 years. \n\nLOLIPOP 2020, is currently a cohort of, ~53,000 UK South Asians, aged 18-85 years, recruited from the lists of GP across UK (2020-2024).\n\nThe recruitment phase for the LOLIPOP study's initial cohort, LOLIPOP 2003, was completed in 2008, and baseline data collection for the LOLIPOP 2020 cohort was completed in 2024.\n\nLOLIPOP aims to investigate genetic, environmental, and lifestyle factors underlying high rates of CHD, type-2 diabetes, and other chronic diseases (including cancer, cognitive impairment, neuropsychiatric conditions, and neurodegenerative effects), within the context of complex interactions among genetic predispositions and lifestyle or environmental exposures, providing a comprehensive understanding of the unique health challenges faced by the South Asian population.\n\nLOLIPOP is a unique scientific resource and one of the largest prospective studies globally, focusing on health outcomes in South Asians and addressing critical public health needs in this population. The data requested will be used to provide a comprehensive set of outcomes to understand the health risks specific to South Asians, a group at increased risk of CHD, diabetes, and related conditions\n\nThe following NHS England Data will be accessed: \n\nHospital Episode Statistics\no\tAdmitted Patient Care, Accident & Emergency. Critical Care, Outpatients, Emergency Care Data Set (ECDS) – necessary to evaluate records of hospital attendances and admissions for all conditions, allowing for a broad analysis of cardiometabolic and other health outcomes.\n\nHES data provides a more comprehensive medical history, giving information on underlying conditions and treatments. LOLIPOP requires HES data linked to cohort participants for all requested years to perform statistical analyses to investigate whether associations exist between genetic, lifestyle, and environmental factors and adverse health outcomes, such as cardiovascular disease, stroke, and diabetes to explore the implications of these exposures on wider health outcomes within the South Asian population.\n\n•\tCivil Registration Mortality – necessary to evaluate cause-specific mortality in cancers and other chronic diseases in relation to genetic, lifestyle, and environmental exposures. Additionally, if a participant passes away during the study, it is essential that the study is notified of this to ensure that the participant’s family is not contacted regarding study developments\n\n•\tCancer Registration – necessary for any cancers participants have been diagnosed with, enabling analysis of cancer incidence and risk factors.\n\n•\tDemographics – necessary to obtain updates to participant demographics, postal addresses, and registered GP practices to support accurate follow-up and minimise loss-to-follow-up bias. LOLIPOP periodically re-contacts participants for follow-up questionnaires and health screenings, and it is important to have correct and up-to-date contact details, particularly for participants without valid postal or email addresses. Although LOLIPOP encourages participants to inform the study team when they move, this is not a failsafe method for ensuring accuracy.\n\nLOLIPOP requires long-term prospective follow-up of the health of the cohorts. Previous studies investigating potential causal factors in South Asians have been hampered by small sample sizes, a lack of longitudinal data, limited phenotyping, and a reduced ability to draw directional or causal inferences\n\nThe level of the Data will be Identifiable – necessary because LOLIPOP periodically re-contacts participants for follow-up questionnaires and health screenings, and it is important to have correct and up-to-date contact details, particularly for participants without valid postal or email addresses. Although LOLIPOP encourages participants to inform the study team when they move, this is not a failsafe method for ensuring accuracy\n\nThe Data will be minimised as follows: \n•\tLimited to a study cohort identified by Imperial College London – those participants who have consented to the linkage of their health data \n•\tLimited to a cohort of 100,00 aged ranges from 18-85 years\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by Wellcome Trust. The funding is specifically for the Longitudinal Population Studies, ‘South Asia Biobank’ described. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings. \n\nImperial College London Certified Secure Research Environment (CSRE) is an isolated environment within the Imperial College network, physically located at a Slough data centre operated by Virtus SDC Ltd.\n\nLOLIPOP Scientific Advisory Group: The Scientific Advisory Group (SAG) for the LOLIPOP study is established and provides expert guidance on the study’s overall strategy, scientific direction, and ongoing oversight. The SAG advises the Principal Investigators, research team, and senior academic partners, ensuring that the research aligns with current scientific standards and public health priorities. The group is composed of senior-level experts across key disciplines, including cardiovascular and metabolic health, epidemiology, genetic research, and biostatistics, whose expertise is critical to achieving the study’s objectives.\n\nLOLIPOP Participant Advisory Group: The Participant Advisory Group (PAG) plays a critical role in ensuring that participant perspectives are actively incorporated into the LOLIPOP study’s research process. The PAG works to prioritise research questions that matter most to South Asian communities. PAG facilitates culturally sensitive discussions around topics like consent, genetic testing and health needs.\n\nData will be accessed by:\n· A PhD student enrolled with Imperial College London. The individual has completed mandatory data protection and confidentiality training and is subject to Imperial College London policies on data protection and confidentiality. The individual accessing the data will do so under the supervision of a substantive employee of Imperial College London. Imperial College London would be responsible and liable for any work carried out by the individual. The PhD student would only work on the data for the purposes described in this Data Sharing Agreement (DSA).\n\nThe data will be used as part of the PhD research project, of which is fundamentally made on behalf of the wider LOLIPOP study. The PhD project represents one specific use case embedded within a broader, long-term research programme focused on understanding the genetic, environmental, and lifestyle determinants of cardiometabolic disease in South Asian populations.\n\nData will be accessed by:\n•\tIndividuals holding an honorary contract under the supervision of a substantive employee of Imperial College London for the purposes described in this DSA only. Imperial College London must maintain records in a single location that cover the following details of each individual given access under an honorary contract:\no\tTheir substantive employer;\no\tTheir role in respect of the purpose for the processing specified in the DSA;\no\tThe start date and end date of the duration in which the Data will be accessed by the individual under an honorary contract;\no\tThe necessity for the Data to be accessed by the person(s) holding an honorary contract, instead of a substantive employee of an organisation named as controller or a processor in this DSA;\no\tConfirmation that an appropriate contract is in place which follows the relevant guidance and is countersigned by the substantive employer of the honorary contract holder.\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research.  The group strongly supported the collection of the data for the purposes described above.\n\nThe LOLIPOP study builds on ~20 years of trusted partnerships within UK South Asian communities.\n\nParticipants and advocacy groups engage in community workshops, seminars, conferences.\n\nBoth the SAG and PAG play pivotal roles in connecting community voices to the scientific framework, ensuring that the study remains participant-focused while adhering to the highest standards of scientific rigor. This dual approach integrates the perspectives of both experts and community stakeholders, fostering a research environment that is ethical, impactful, and culturally sensitive",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-719923-Q5H1S-v0.6",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 25,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 21,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "files": 16,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 13,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 7,
+     "first_month": "2025-06",
+     "last_month": "2025-06",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Demographics",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2025-04-04",
+   "sublicensing": "No",
+   "title": "London Life Sciences Population Study",
+   "version": "0.6",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "Imperial College London will transfer data to NHS England.  The data will consist of identifying details, Date of Birth, Postcode, Gender, Name, NHS Number and a unique person ID for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the HES Admitted Patient Care, Accident & Emergency, Emergency Care Data, Outpatient, Critical Care, Demographics, Deaths and Cancer Registration Datasets to Imperial College London.  \n\nThe Data will:\n\n·   contain directly identifying data items including  Names, NHS Number, Date of Birth, Postcode, which are required to link the Data at record level with data already held by the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at The Imperial College London Certified Secure Research Environment. The CSRE is an isolated environment within the Imperial College network, physically located at a Slough data centre operated by Virtus SDC Ltd.\n\nVirtus SDC Ltd do not have access to the data stored within the CSRE. Their role is strictly limited to providing the physical location and infrastructure for the servers. \n\nThe Data will be accessed by authorised personnel via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within the UK.\n\nAccess to confidential patient identifiable data is restricted to employees of LOLIPOP Study Research team at Imperial College London.\n\nData will be accessed by individuals with an honorary contract with Imperial College London.  The individual(s) will act as an agent of Imperial College London at all times under supervision from employees of Imperial College London.  Aside from this/these individuals, access is restricted to employees or agents of Imperial College London who have authorisation from the Principal Investigator.\n\nThe aggregated data with small numbers suppressed are transferred out of the CSRE by authorised users on Imperial ICT managed devices. NHS England data is only accessed by approved users of the data controller or data processors, and only for the purposes described in this document. All individuals accessing record level data are substantive ICL employees, registered students (including PhD and Masters students) or individuals from other institutions under an honorary contract with ICL. \n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data.\n\nThere will be no requirement and no attempt to reidentify individuals when using the Data.\n\nResearchers from the LOLIPOP Study at Imperial College London will process the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2028-07-13",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study.\n\nThe use of the data could: \n•\thelp the system to better understand the health and care needs of populations. \n•\tadvance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations or conditions such as cardiovascular disease and diabetes.\n•\tinform planning health services and programmes, for example to improve equity of access, experience and outcomes.\n•\tinform decisions on how to effectively allocate and evaluate funding according to health needs.\n•\tprovide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nBenefits to Patients.\n\nIn Understanding Health Risks in South Asians: \n\n1. Given the currently unknown exact incidence of Coronary Heart Disease (CHD) and diabetes in this group, this study’s ability to link participant data to national health datasets will provide a robust, objective measure of disease incidence and risk profiles. \n\nThe study team is currently analysing preliminary data on cardiometabolic risk and has detected early indicators of susceptibility linked to genetic predisposition, lifestyle factors, and environmental exposures. Although certain physiological and genetic markers associated with increased risk been identified, these findings underscore the need for longer-term monitoring to fully understand future health risks. \n\n2.\tHelping Future Generations: The LOLIPOP Study is generating critical knowledge that will benefit not only the current South Asian population but also future generations, contributing to health improvements for this community and society as a whole. By analysing data and biological samples, the study aims to better understand the risks and causes of CHD, diabetes, and other chronic diseases, providing valuable insights that can inform preventive and treatment strategies.\n\n3. The findings from this study are expected to influence future health policies and practices for reducing disease risk within this high-risk group, with benefits assessed through epidemiological analyses. The study's results are expected to contribute to public health policies, such as targeted dietary recommendations, lifestyle interventions, and culturally tailored health strategies,\n\n3.\tUnderstanding Potential Impacts of Dietary and Lifestyle Patterns on Health: One area of focus for the LOLIPOP Study is the potential impact of specific dietary patterns and lifestyle factors prevalent among South Asians—such as high carbohydrate intake and lower physical activity levels—on the development of chronic diseases. \n\nBy linking baseline data on these factors with hospital admissions, mortality data, and cancer registry information, the study aims to assess how lifestyle patterns may contribute to cardiometabolic risk and whether these factors exceed recommended health limits. This analysis will clarify the influence of diet and lifestyle on disease risk and inform recommendations tailored specifically for the South Asian community.\n\n4.\tClarity on Long-Term Health Effects of Genetic and Environmental Interactions: LOLIPOP continues to analyse extensive baseline data on genetic predispositions, environmental exposures, and biological samples collected from participants, aiming to better understand how these factors interact to influence long-term health outcomes. \n\nLinking this baseline information with hospital admissions, mortality, and cancer registry data enables the study to place potential health risks in context, offering an evidence-based perspective on chronic disease causation and risk among South Asians. Findings from LOLIPOP will support strategic health decisions, inform future public health investments, and contribute to global health reviews, such as those conducted by the World Health Organisation, on chronic disease prevention and intervention.\n\n5.\tResponsibility to the Health and Welfare of the South Asian Population: South Asians face unique health risks due to a combination of genetic predispositions, environmental factors, and cultural lifestyle patterns that are not fully understood. By linking hospital admissions, mortality data, and cancer registry information with baseline health and biological data, LOLIPOP establishes a comprehensive understanding of the factors influencing health outcomes over time. \n\nTarget Dates: Medium-term findings are targeted for 2030, with comprehensive long-term analyses expected by 2035.\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to specific patients.",
+   "expected_output": "The expected outputs of the processing will be:\n\n•\tSubmissions to peer reviewed journals: LOLIPOP resource has supported over 400 projects resulting on over 225 publications to date. Details can be accessed here: https://www.sabiobank.org/approved-research/ and https://www.sabiobank.org/publications/ \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n\n•\tJournals: the target dates for submission of updated scientific papers on mid- and long-term health implications of these risk factors for South Asians are 2028 for mid-term outcomes and 2034 for longer-term effects.\n\n•\tPresentations: Findings on the relationship between genetic, lifestyle, and environmental factors with health outcomes will be presented at high-profile international conferences in cardiometabolic health and public health, including the British Cardiovascular Society Conference, American Heart Association Scientific Sessions, and the European Society of Cardiology Congress. \n\n•\tPublications and Presentations on Additional Risk Factors: Papers and presentations will cover the influence of additional lifestyle and environmental risk factors on health outcomes, disseminating findings relevant to health disparities within the South Asian population.\n\n• Progress Reports: Annual progress reports will be provided to funding bodies, with additional updates shared through the ResearchFish platform.\n\n• Stakeholder Dissemination: Findings will be shared with a wider group of stakeholders, including public health agencies, South Asian health organisations, and academic institutions, to inform interventions targeting health inequalities.\n\n• Lay Summaries and Website Updates: Executive summaries of published reports will be prepared in lay language for participants, the South Asian community, and the general public. These summaries will be available on the LOLIPOP study website, with release dates matching the publication of respective health outcomes.\n\n• Periodic Newsletters: Newsletters summarising study progress and findings will be sent to participants and published on the study website.\n\n• Community and Policy Engagement: Findings relevant to public health policies addressing health disparities among South Asians will be shared with healthcare policymakers and community health organisations to guide intervention strategies. All outputs will include aggregated data with small numbers suppressed to maintain participant confidentiality, and no individually identifiable data will be released.\n\nThese dissemination efforts aim to maximise the impact of LOLIPOP findings on public health strategies, foster engagement with the South Asian community, and contribute to research in cardiometabolic health disparities.\n\n•\tReports aimed at participants/patients describing the prevalence of cardiometabolic risk factors and health outcomes in the South Asian population from the LOLIPOP 2003 has been published, and further analyses are underway to examine associations between genetic, lifestyle, and environmental factors and chronic disease risk.",
+   "files_released": 7,
+   "objective": "Imperial College London requires access to NHS England data for the purpose of the following research project: \nLondon Life Sciences Population (LOLIPOP)\n\nThe following is a summary of the aims of the research project provided by Imperial College London:\n\nLOLIPOP was established to understand the significant health disparities faced by South Asians, including approximately double the risk of coronary heart disease (CHD) and triple the risk of type-2 diabetes, compared to the European population. LOLIPOP is a national study, and the data requested reflects the geographical diversity of the cohort, which includes participants recruited from across the UK. This breadth of data is essential for assessing health outcomes across different regional and environmental contexts\n\nLOLIPOP 2003, is a cohort of ~32,000 participants (including 17,606 UK South Asians) aged 35-75 years, recruited from the lists of 58 GPs in NW London (2003-8), and followed up for ~20 years. \n\nLOLIPOP 2020, is currently a cohort of, ~53,000 UK South Asians, aged 18-85 years, recruited from the lists of GP across UK (2020-2024).\n\nThe recruitment phase for the LOLIPOP study's initial cohort, LOLIPOP 2003, was completed in 2008, and baseline data collection for the LOLIPOP 2020 cohort was completed in 2024.\n\nLOLIPOP aims to investigate genetic, environmental, and lifestyle factors underlying high rates of CHD, type-2 diabetes, and other chronic diseases (including cancer, cognitive impairment, neuropsychiatric conditions, and neurodegenerative effects), within the context of complex interactions among genetic predispositions and lifestyle or environmental exposures, providing a comprehensive understanding of the unique health challenges faced by the South Asian population.\n\nLOLIPOP is a unique scientific resource and one of the largest prospective studies globally, focusing on health outcomes in South Asians and addressing critical public health needs in this population. The data requested will be used to provide a comprehensive set of outcomes to understand the health risks specific to South Asians, a group at increased risk of CHD, diabetes, and related conditions\n\nThe following NHS England Data will be accessed: \n\nHospital Episode Statistics\no\tAdmitted Patient Care, Accident & Emergency. Critical Care, Outpatients, Emergency Care Data Set (ECDS) – necessary to evaluate records of hospital attendances and admissions for all conditions, allowing for a broad analysis of cardiometabolic and other health outcomes.\n\nHES data provides a more comprehensive medical history, giving information on underlying conditions and treatments. LOLIPOP requires HES data linked to cohort participants for all requested years to perform statistical analyses to investigate whether associations exist between genetic, lifestyle, and environmental factors and adverse health outcomes, such as cardiovascular disease, stroke, and diabetes to explore the implications of these exposures on wider health outcomes within the South Asian population.\n\n•\tCivil Registration Mortality – necessary to evaluate cause-specific mortality in cancers and other chronic diseases in relation to genetic, lifestyle, and environmental exposures. Additionally, if a participant passes away during the study, it is essential that the study is notified of this to ensure that the participant’s family is not contacted regarding study developments\n\n•\tCancer Registration – necessary for any cancers participants have been diagnosed with, enabling analysis of cancer incidence and risk factors.\n\n•\tDemographics – necessary to obtain updates to participant demographics, postal addresses, and registered GP practices to support accurate follow-up and minimise loss-to-follow-up bias. LOLIPOP periodically re-contacts participants for follow-up questionnaires and health screenings, and it is important to have correct and up-to-date contact details, particularly for participants without valid postal or email addresses. Although LOLIPOP encourages participants to inform the study team when they move, this is not a failsafe method for ensuring accuracy.\n\nLOLIPOP requires long-term prospective follow-up of the health of the cohorts. Previous studies investigating potential causal factors in South Asians have been hampered by small sample sizes, a lack of longitudinal data, limited phenotyping, and a reduced ability to draw directional or causal inferences\n\nThe level of the Data will be Identifiable – necessary because LOLIPOP periodically re-contacts participants for follow-up questionnaires and health screenings, and it is important to have correct and up-to-date contact details, particularly for participants without valid postal or email addresses. Although LOLIPOP encourages participants to inform the study team when they move, this is not a failsafe method for ensuring accuracy\n\nThe Data will be minimised as follows: \n•\tLimited to a study cohort identified by Imperial College London – those participants who have consented to the linkage of their health data \n•\tLimited to a cohort of 100,00 aged ranges from 18-85 years\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by Wellcome Trust. The funding is specifically for the Longitudinal Population Studies, ‘South Asia Biobank’ described. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings. \n\nImperial College London Certified Secure Research Environment (CSRE) is an isolated environment within the Imperial College network, physically located at a Slough data centre operated by Virtus SDC Ltd.\n\nLOLIPOP Scientific Advisory Group: The Scientific Advisory Group (SAG) for the LOLIPOP study is established and provides expert guidance on the study’s overall strategy, scientific direction, and ongoing oversight. The SAG advises the Principal Investigators, research team, and senior academic partners, ensuring that the research aligns with current scientific standards and public health priorities. The group is composed of senior-level experts across key disciplines, including cardiovascular and metabolic health, epidemiology, genetic research, and biostatistics, whose expertise is critical to achieving the study’s objectives.\n\nLOLIPOP Participant Advisory Group: The Participant Advisory Group (PAG) plays a critical role in ensuring that participant perspectives are actively incorporated into the LOLIPOP study’s research process. The PAG works to prioritise research questions that matter most to South Asian communities. PAG facilitates culturally sensitive discussions around topics like consent, genetic testing and health needs.\n\nData will be accessed by:\n· A PhD student enrolled with Imperial College London. The individual has completed mandatory data protection and confidentiality training and is subject to Imperial College London policies on data protection and confidentiality. The individual accessing the data will do so under the supervision of a substantive employee of Imperial College London. Imperial College London would be responsible and liable for any work carried out by the individual. The PhD student would only work on the data for the purposes described in this Data Sharing Agreement (DSA).\n\nThe data will be used as part of the PhD research project, of which is fundamentally made on behalf of the wider LOLIPOP study. The PhD project represents one specific use case embedded within a broader, long-term research programme focused on understanding the genetic, environmental, and lifestyle determinants of cardiometabolic disease in South Asian populations.\n\nData will be accessed by:\n•\tIndividuals holding an honorary contract under the supervision of a substantive employee of Imperial College London for the purposes described in this DSA only. Imperial College London must maintain records in a single location that cover the following details of each individual given access under an honorary contract:\no\tTheir substantive employer;\no\tTheir role in respect of the purpose for the processing specified in the DSA;\no\tThe start date and end date of the duration in which the Data will be accessed by the individual under an honorary contract;\no\tThe necessity for the Data to be accessed by the person(s) holding an honorary contract, instead of a substantive employee of an organisation named as controller or a processor in this DSA;\no\tConfirmation that an appropriate contract is in place which follows the relevant guidance and is countersigned by the substantive employer of the honorary contract holder.\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research.  The group strongly supported the collection of the data for the purposes described above.\n\nThe LOLIPOP study builds on ~20 years of trusted partnerships within UK South Asian communities.\n\nParticipants and advocacy groups engage in community workshops, seminars, conferences.\n\nBoth the SAG and PAG play pivotal roles in connecting community voices to the scientific framework, ensuring that the study remains participant-focused while adhering to the highest standards of scientific rigor. This dual approach integrates the perspectives of both experts and community stakeholders, fostering a research environment that is ethical, impactful, and culturally sensitive",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-719923-Q5H1S-v1.4",
+   "releases": [
+    {
+     "dataset": "Cancer Registration Data",
+     "files": 1,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Demographics",
+     "files": 1,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 1,
+     "first_month": "2025-10",
+     "last_month": "2025-10",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 1,
+     "first_month": "2025-09",
+     "last_month": "2025-09",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "files": 1,
+     "first_month": "2025-09",
+     "last_month": "2025-09",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 1,
+     "first_month": "2025-09",
+     "last_month": "2025-09",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2025-07-14",
+   "sublicensing": "No",
+   "title": "London Life Sciences Population Study",
+   "version": "1.4",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "Imperial College London will transfer data to NHS England.  The data will consist of identifying details, Date of Birth, Postcode, Gender, Name, NHS Number and a unique person ID for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the HES Admitted Patient Care, Accident & Emergency, Emergency Care Data, Outpatient, Critical Care, Demographics, Deaths and Cancer Registration Datasets to Imperial College London.  \n\nThe Data will:\n\n·   contain directly identifying data items including  Names, NHS Number, Date of Birth, Postcode, which are required to link the Data at record level with data already held by the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at The Imperial College London Certified Secure Research Environment. The CSRE is an isolated environment within the Imperial College network, physically located at a Slough data centre operated by Virtus SDC Ltd.\n\nVirtus SDC Ltd do not have access to the data stored within the CSRE. Their role is strictly limited to providing the physical location and infrastructure for the servers. \n\nThe Data will be accessed by authorised personnel via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within the UK.\n\nAccess to confidential patient identifiable data is restricted to employees of LOLIPOP Study Research team at Imperial College London.\n\nData will be accessed by individuals with an honorary contract with Imperial College London.  The individual(s) will act as an agent of Imperial College London at all times under supervision from employees of Imperial College London.  Aside from this/these individuals, access is restricted to employees or agents of Imperial College London who have authorisation from the Principal Investigator.\n\nThe aggregated data with small numbers suppressed are transferred out of the CSRE by authorised users on Imperial ICT managed devices. NHS England data is only accessed by approved users of the data controller or data processors, and only for the purposes described in this document. All individuals accessing record level data are substantive ICL employees, registered students (including PhD and Masters students) or individuals from other institutions under an honorary contract with ICL. \n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data.\n\nThere will be no requirement and no attempt to reidentify individuals when using the Data.\n\nResearchers from the LOLIPOP Study at Imperial College London will process the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "IMPERIAL COLLEGE LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2028-07-13",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study.\n\nThe use of the data could: \n•\thelp the system to better understand the health and care needs of populations. \n•\tadvance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations or conditions such as cardiovascular disease and diabetes.\n•\tinform planning health services and programmes, for example to improve equity of access, experience and outcomes.\n•\tinform decisions on how to effectively allocate and evaluate funding according to health needs.\n•\tprovide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nBenefits to Patients.\n\nIn Understanding Health Risks in South Asians: \n\n1. Given the currently unknown exact incidence of Coronary Heart Disease (CHD) and diabetes in this group, this study’s ability to link participant data to national health datasets will provide a robust, objective measure of disease incidence and risk profiles. \n\nThe study team is currently analysing preliminary data on cardiometabolic risk and has detected early indicators of susceptibility linked to genetic predisposition, lifestyle factors, and environmental exposures. Although certain physiological and genetic markers associated with increased risk been identified, these findings underscore the need for longer-term monitoring to fully understand future health risks. \n\n2.\tHelping Future Generations: The LOLIPOP Study is generating critical knowledge that will benefit not only the current South Asian population but also future generations, contributing to health improvements for this community and society as a whole. By analysing data and biological samples, the study aims to better understand the risks and causes of CHD, diabetes, and other chronic diseases, providing valuable insights that can inform preventive and treatment strategies.\n\n3. The findings from this study are expected to influence future health policies and practices for reducing disease risk within this high-risk group, with benefits assessed through epidemiological analyses. The study's results are expected to contribute to public health policies, such as targeted dietary recommendations, lifestyle interventions, and culturally tailored health strategies,\n\n3.\tUnderstanding Potential Impacts of Dietary and Lifestyle Patterns on Health: One area of focus for the LOLIPOP Study is the potential impact of specific dietary patterns and lifestyle factors prevalent among South Asians—such as high carbohydrate intake and lower physical activity levels—on the development of chronic diseases. \n\nBy linking baseline data on these factors with hospital admissions, mortality data, and cancer registry information, the study aims to assess how lifestyle patterns may contribute to cardiometabolic risk and whether these factors exceed recommended health limits. This analysis will clarify the influence of diet and lifestyle on disease risk and inform recommendations tailored specifically for the South Asian community.\n\n4.\tClarity on Long-Term Health Effects of Genetic and Environmental Interactions: LOLIPOP continues to analyse extensive baseline data on genetic predispositions, environmental exposures, and biological samples collected from participants, aiming to better understand how these factors interact to influence long-term health outcomes. \n\nLinking this baseline information with hospital admissions, mortality, and cancer registry data enables the study to place potential health risks in context, offering an evidence-based perspective on chronic disease causation and risk among South Asians. Findings from LOLIPOP will support strategic health decisions, inform future public health investments, and contribute to global health reviews, such as those conducted by the World Health Organisation, on chronic disease prevention and intervention.\n\n5.\tResponsibility to the Health and Welfare of the South Asian Population: South Asians face unique health risks due to a combination of genetic predispositions, environmental factors, and cultural lifestyle patterns that are not fully understood. By linking hospital admissions, mortality data, and cancer registry information with baseline health and biological data, LOLIPOP establishes a comprehensive understanding of the factors influencing health outcomes over time. \n\nTarget Dates: Medium-term findings are targeted for 2030, with comprehensive long-term analyses expected by 2035.\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to specific patients.",
+   "expected_output": "The expected outputs of the processing will be:\n\n•\tSubmissions to peer reviewed journals: LOLIPOP resource has supported over 400 projects resulting on over 225 publications to date. Details can be accessed here: https://www.sabiobank.org/approved-research/ and https://www.sabiobank.org/publications/ \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n\n•\tJournals: the target dates for submission of updated scientific papers on mid- and long-term health implications of these risk factors for South Asians are 2028 for mid-term outcomes and 2034 for longer-term effects.\n\n•\tPresentations: Findings on the relationship between genetic, lifestyle, and environmental factors with health outcomes will be presented at high-profile international conferences in cardiometabolic health and public health, including the British Cardiovascular Society Conference, American Heart Association Scientific Sessions, and the European Society of Cardiology Congress. \n\n•\tPublications and Presentations on Additional Risk Factors: Papers and presentations will cover the influence of additional lifestyle and environmental risk factors on health outcomes, disseminating findings relevant to health disparities within the South Asian population.\n\n• Progress Reports: Annual progress reports will be provided to funding bodies, with additional updates shared through the ResearchFish platform.\n\n• Stakeholder Dissemination: Findings will be shared with a wider group of stakeholders, including public health agencies, South Asian health organisations, and academic institutions, to inform interventions targeting health inequalities.\n\n• Lay Summaries and Website Updates: Executive summaries of published reports will be prepared in lay language for participants, the South Asian community, and the general public. These summaries will be available on the LOLIPOP study website, with release dates matching the publication of respective health outcomes.\n\n• Periodic Newsletters: Newsletters summarising study progress and findings will be sent to participants and published on the study website.\n\n• Community and Policy Engagement: Findings relevant to public health policies addressing health disparities among South Asians will be shared with healthcare policymakers and community health organisations to guide intervention strategies. All outputs will include aggregated data with small numbers suppressed to maintain participant confidentiality, and no individually identifiable data will be released.\n\nThese dissemination efforts aim to maximise the impact of LOLIPOP findings on public health strategies, foster engagement with the South Asian community, and contribute to research in cardiometabolic health disparities.\n\n•\tReports aimed at participants/patients describing the prevalence of cardiometabolic risk factors and health outcomes in the South Asian population from the LOLIPOP 2003 has been published, and further analyses are underway to examine associations between genetic, lifestyle, and environmental factors and chronic disease risk.",
+   "files_released": 91,
+   "objective": "Imperial College London requires access to NHS England data for the purpose of the following research project: \nLondon Life Sciences Population (LOLIPOP)\n\nThe following is a summary of the aims of the research project provided by Imperial College London:\n\nLOLIPOP was established to understand the significant health disparities faced by South Asians, including approximately double the risk of coronary heart disease (CHD) and triple the risk of type-2 diabetes, compared to the European population. LOLIPOP is a national study, and the data requested reflects the geographical diversity of the cohort, which includes participants recruited from across the UK. This breadth of data is essential for assessing health outcomes across different regional and environmental contexts\n\nLOLIPOP 2003, is a cohort of ~32,000 participants (including 17,606 UK South Asians) aged 35-75 years, recruited from the lists of 58 GPs in NW London (2003-8), and followed up for ~20 years. \n\nLOLIPOP 2020, is currently a cohort of, ~53,000 UK South Asians, aged 18-85 years, recruited from the lists of GP across UK (2020-2024).\n\nThe recruitment phase for the LOLIPOP study's initial cohort, LOLIPOP 2003, was completed in 2008, and baseline data collection for the LOLIPOP 2020 cohort was completed in 2024.\n\nLOLIPOP aims to investigate genetic, environmental, and lifestyle factors underlying high rates of CHD, type-2 diabetes, and other chronic diseases (including cancer, cognitive impairment, neuropsychiatric conditions, and neurodegenerative effects), within the context of complex interactions among genetic predispositions and lifestyle or environmental exposures, providing a comprehensive understanding of the unique health challenges faced by the South Asian population.\n\nLOLIPOP is a unique scientific resource and one of the largest prospective studies globally, focusing on health outcomes in South Asians and addressing critical public health needs in this population. The data requested will be used to provide a comprehensive set of outcomes to understand the health risks specific to South Asians, a group at increased risk of CHD, diabetes, and related conditions\n\nThe following NHS England Data will be accessed: \n\nHospital Episode Statistics\no\tAdmitted Patient Care, Accident & Emergency. Critical Care, Outpatients, Emergency Care Data Set (ECDS) – necessary to evaluate records of hospital attendances and admissions for all conditions, allowing for a broad analysis of cardiometabolic and other health outcomes.\n\nHES data provides a more comprehensive medical history, giving information on underlying conditions and treatments. LOLIPOP requires HES data linked to cohort participants for all requested years to perform statistical analyses to investigate whether associations exist between genetic, lifestyle, and environmental factors and adverse health outcomes, such as cardiovascular disease, stroke, and diabetes to explore the implications of these exposures on wider health outcomes within the South Asian population.\n\n•\tCivil Registration Mortality – necessary to evaluate cause-specific mortality in cancers and other chronic diseases in relation to genetic, lifestyle, and environmental exposures. Additionally, if a participant passes away during the study, it is essential that the study is notified of this to ensure that the participant’s family is not contacted regarding study developments\n\n•\tCancer Registration – necessary for any cancers participants have been diagnosed with, enabling analysis of cancer incidence and risk factors.\n\n•\tDemographics – necessary to obtain updates to participant demographics, postal addresses, and registered GP practices to support accurate follow-up and minimise loss-to-follow-up bias. LOLIPOP periodically re-contacts participants for follow-up questionnaires and health screenings, and it is important to have correct and up-to-date contact details, particularly for participants without valid postal or email addresses. Although LOLIPOP encourages participants to inform the study team when they move, this is not a failsafe method for ensuring accuracy.\n\nLOLIPOP requires long-term prospective follow-up of the health of the cohorts. Previous studies investigating potential causal factors in South Asians have been hampered by small sample sizes, a lack of longitudinal data, limited phenotyping, and a reduced ability to draw directional or causal inferences\n\nThe level of the Data will be Identifiable – necessary because LOLIPOP periodically re-contacts participants for follow-up questionnaires and health screenings, and it is important to have correct and up-to-date contact details, particularly for participants without valid postal or email addresses. Although LOLIPOP encourages participants to inform the study team when they move, this is not a failsafe method for ensuring accuracy\n\nThe Data will be minimised as follows: \n•\tLimited to a study cohort identified by Imperial College London – those participants who have consented to the linkage of their health data \n•\tLimited to a cohort of 100,00 aged ranges from 18-85 years\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by Wellcome Trust. The funding is specifically for the Longitudinal Population Studies, ‘South Asia Biobank’ described. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings. \n\nImperial College London Certified Secure Research Environment (CSRE) is an isolated environment within the Imperial College network, physically located at a Slough data centre operated by Virtus SDC Ltd.\n\nLOLIPOP Scientific Advisory Group: The Scientific Advisory Group (SAG) for the LOLIPOP study is established and provides expert guidance on the study’s overall strategy, scientific direction, and ongoing oversight. The SAG advises the Principal Investigators, research team, and senior academic partners, ensuring that the research aligns with current scientific standards and public health priorities. The group is composed of senior-level experts across key disciplines, including cardiovascular and metabolic health, epidemiology, genetic research, and biostatistics, whose expertise is critical to achieving the study’s objectives.\n\nLOLIPOP Participant Advisory Group: The Participant Advisory Group (PAG) plays a critical role in ensuring that participant perspectives are actively incorporated into the LOLIPOP study’s research process. The PAG works to prioritise research questions that matter most to South Asian communities. PAG facilitates culturally sensitive discussions around topics like consent, genetic testing and health needs.\n\nData will be accessed by:\n· A PhD student enrolled with Imperial College London. The individual has completed mandatory data protection and confidentiality training and is subject to Imperial College London policies on data protection and confidentiality. The individual accessing the data will do so under the supervision of a substantive employee of Imperial College London. Imperial College London would be responsible and liable for any work carried out by the individual. The PhD student would only work on the data for the purposes described in this Data Sharing Agreement (DSA).\n\nThe data will be used as part of the PhD research project, of which is fundamentally made on behalf of the wider LOLIPOP study. The PhD project represents one specific use case embedded within a broader, long-term research programme focused on understanding the genetic, environmental, and lifestyle determinants of cardiometabolic disease in South Asian populations.\n\nData will be accessed by:\n•\tIndividuals holding an honorary contract under the supervision of a substantive employee of Imperial College London for the purposes described in this DSA only. Imperial College London must maintain records in a single location that cover the following details of each individual given access under an honorary contract:\no\tTheir substantive employer;\no\tTheir role in respect of the purpose for the processing specified in the DSA;\no\tThe start date and end date of the duration in which the Data will be accessed by the individual under an honorary contract;\no\tThe necessity for the Data to be accessed by the person(s) holding an honorary contract, instead of a substantive employee of an organisation named as controller or a processor in this DSA;\no\tConfirmation that an appropriate contract is in place which follows the relevant guidance and is countersigned by the substantive employer of the honorary contract holder.\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research.  The group strongly supported the collection of the data for the purposes described above.\n\nThe LOLIPOP study builds on ~20 years of trusted partnerships within UK South Asian communities.\n\nParticipants and advocacy groups engage in community workshops, seminars, conferences.\n\nBoth the SAG and PAG play pivotal roles in connecting community voices to the scientific framework, ensuring that the study remains participant-focused while adhering to the highest standards of scientific rigor. This dual approach integrates the perspectives of both experts and community stakeholders, fostering a research environment that is ethical, impactful, and culturally sensitive",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-719923-Q5H1S-v2.2",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 28,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 22,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "files": 17,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 13,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 8,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "files": 1,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Demographics",
+     "files": 1,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2026-01-30",
+   "sublicensing": "No",
+   "title": "London Life Sciences Population Study",
+   "version": "2.2",
+   "yielded_benefits": "Validated linkage achieved: Participant data for the LOLIPOP cohort were successfully validated and matched by NHS England (SEFT Participant Data Submission ID 18470980, file NIC-719923-Q5H1S-20250728.csv, validated 28 July 2025), enabling accurate ascertainment of hospitalisations, outpatient care, critical care episodes, cancer registrations and deaths for consenting participants.\n\nHigh-impact research outputs: NHS-linked analyses from the LOLIPOP resource have supported 400+ projects and yielded 225+ peer-reviewed publications, including work on cardiometabolic risk and health inequalities in UK South Asians (example outputs listed in the application).\n\nImproved cohort follow-up: Regular PDS demographic updates (as set out in this DSA) support tracing and timely recording of deaths, reducing loss-to-follow-up and preventing inappropriate contact with families—directly improving research quality and safeguarding.\n\nThese benefits have already strengthened the evidence base for prevention and service planning in high-risk communities. Completing the missing HES APC years (1999 and 2019) will remove residual coverage gaps and further improve the precision of incidence estimates and trend analyses."
+  }
+ ]
+}

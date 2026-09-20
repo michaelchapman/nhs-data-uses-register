@@ -1,0 +1,133 @@
+{
+ "base_reference": "DARS-NIC-411813-H0T2W",
+ "versions": [
+  {
+   "activities": "As part of an agreement with Public Health England, Genome Research Limited receive the viral samples for sequencing and, under this agreement, will receive the relevant anonymised Pillar 2 testing data hourly.\n\nSanger will receive a data set from NHS Digital that contains a list of the positive COVID samples IDs and a subset of associated metadata.  This will be de-identified by NHS Digital to an agreed level prior to it being received by Sanger.  Sanger will download the dataset multiple times a day and apply algorithms to identify samples that are of interest and should be sequenced based upon a ranking system.  A list of sample IDs will then be distributed to the required Sanger systems in order to enable the proposed use-cases.\n\nThe data will then be used to select a geographically representative set of samples (identified by the specimen ID) with sufficient viral material for sequencing each week. The sequences, dates and outer postcodes are linked and deposited in the MRC-CLIMB database and returned in reports to the Public Health Agencies.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "GENOME RESEARCH LIMITED"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Statutory exemption to flow confidential data without consent",
+     "frequency": "One-Off",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2023-11-01",
+   "expected_benefits": "The viral genome sequencing and analysis will help in the post-winter peak phase of the pandemic to maintain as much control as possible for as long as possible by: \n1.\tDetecting superspreading events via their very different genomic footprint than diffuse community transmission. Genome Research Limited are already working with the four Public Health Agencies and intend to provide the data feed to Test & Trace so they can find these events fast, and respond, for example, via enhanced contract tracing. \n2.\tMonitoring for instances where vaccines are not effective.  Vaccines will create selective pressure on the virus to mutate and evade them. Detecting these changes as early as possible will empower decision making on which vaccines to deploy and when.\n3.\tProviding support to rapid outbreak response to specific queries from Public Health Agencies where sequences are deemed essential and informative to the epidemic response.",
+   "expected_output": "The viral sequences, sample dates and outer postcode are uploaded to the MRC-CLIMB database, which has separate agreements with the Public Health Agencies. \n\nWellcome Sanger Institute produces reports and a database which is available directly to the Public Health Agencies, and Test and Trace",
+   "files_released": 0,
+   "objective": "Genome Research Limited (also known as the Wellcome Sanger Institute) is a wholly owned subsidiary of the Wellcome Trust, funded by them to carry out genome sequencing to advance understanding of the biology of humans and pathogens in order to improve human health.\n\nGenome Research Limited is a charity focused on doing research for societal benefit, and the Covid surveillance project falls within that mission.  They will therefore not be seeking to commercially benefit from the project.  While Genome Research Limited's reputation may be enhanced by its participation, as a charity that does not translate into commercial benefits.\n\nGenome Research Limited is working to fully understand the transmission and evolution of the virus which requires sequencing and analysing viral genomes at scale and speed. The number of samples calls for a rapid and robust increase in the UK’s pathogen genome sequencing capacity.\n\nTo provide this increased capacity to collect, sequence and analyse the whole genomes of virus samples in the UK, (COG-UK) is pooling the knowledge and expertise in genomics of the four UK Public Health Agencies, multiple regional University hubs, and large sequencing centres such as the Wellcome Sanger Institute.\n\nBy sequencing thousands of viral genomes from around the UK each week, Genome Research Limited will help public health authorities detect and respond faster to super-spreading events, and monitor for new mutations associated with resistance to vaccines once they are deployed. Because the utility of these sequences is directly tied to how fast they can be produced, it is important to have immediate access to the basic data fields needed to pick them for sequencing from the hundreds of thousands of tests conducted each week.\n\nBy linking the viral DNA sequences to a subset of the Pillar 2 data Genome Research Limited will enable Public Health agencies to be able highlight geographic hotspots of various strains of the coronavirus.",
+   "organisation": "WELLCOME SANGER INSTITUTE",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-411813-H0T2W-v0.7",
+   "releases": [],
+   "start_date": "2020-11-02",
+   "sublicensing": "No",
+   "title": "A request for Pillar 2 testing data",
+   "version": "0.7",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "As part of an agreement with Public Health England, Genome Research Limited receive the viral samples for sequencing and, under this agreement, will receive the relevant anonymised Pillar 2 testing data hourly.\n\nSanger will receive a data set from NHS Digital that contains a list of the positive COVID samples IDs and a subset of associated metadata.  This will be de-identified by NHS Digital to an agreed level prior to it being received by Sanger.  Sanger will download the dataset multiple times a day and apply algorithms to identify samples that are of interest and should be sequenced based upon a ranking system.  A list of sample IDs will then be distributed to the required Sanger systems in order to enable the proposed use-cases.\n\nThe data will then be used to select a geographically representative set of samples (identified by the specimen ID) with sufficient viral material for sequencing each week. The sequences, dates and outer postcodes are linked and deposited in the MRC-CLIMB database and returned in reports to the Public Health Agencies.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "GENOME RESEARCH LIMITED"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Statutory exemption to flow confidential data without consent",
+     "frequency": "One-Off",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2023-11-01",
+   "expected_benefits": "The viral genome sequencing and analysis will help in the post-winter peak phase of the pandemic to maintain as much control as possible for as long as possible by: \n1.\tDetecting superspreading events via their very different genomic footprint than diffuse community transmission. Genome Research Limited are already working with the four Public Health Agencies and intend to provide the data feed to Test & Trace so they can find these events fast, and respond, for example, via enhanced contract tracing. \n2.\tMonitoring for instances where vaccines are not effective.  Vaccines will create selective pressure on the virus to mutate and evade them. Detecting these changes as early as possible will empower decision making on which vaccines to deploy and when.\n3.\tProviding support to rapid outbreak response to specific queries from Public Health Agencies where sequences are deemed essential and informative to the epidemic response.",
+   "expected_output": "The viral sequences, sample dates and outer postcode are uploaded to the MRC-CLIMB database, which has separate agreements with the Public Health Agencies. \n\nWellcome Sanger Institute produces reports and a database which is available directly to the Public Health Agencies, and Test and Trace",
+   "files_released": 0,
+   "objective": "Genome Research Limited (also known as the Wellcome Sanger Institute) is a wholly owned subsidiary of the Wellcome Trust, funded by them to carry out genome sequencing to advance understanding of the biology of humans and pathogens in order to improve human health.\n\nGenome Research Limited is a charity focused on doing research for societal benefit, and the Covid surveillance project falls within that mission.  They will therefore not be seeking to commercially benefit from the project.  While Genome Research Limited's reputation may be enhanced by its participation, as a charity that does not translate into commercial benefits.\n\nGenome Research Limited is working to fully understand the transmission and evolution of the virus which requires sequencing and analysing viral genomes at scale and speed. The number of samples calls for a rapid and robust increase in the UK’s pathogen genome sequencing capacity.\n\nTo provide this increased capacity to collect, sequence and analyse the whole genomes of virus samples in the UK, (COG-UK) is pooling the knowledge and expertise in genomics of the four UK Public Health Agencies, multiple regional University hubs, and large sequencing centres such as the Wellcome Sanger Institute.\n\nBy sequencing thousands of viral genomes from around the UK each week, Genome Research Limited will help public health authorities detect and respond faster to super-spreading events, and monitor for new mutations associated with resistance to vaccines once they are deployed. Because the utility of these sequences is directly tied to how fast they can be produced, it is important to have immediate access to the basic data fields needed to pick them for sequencing from the hundreds of thousands of tests conducted each week.\n\nBy linking the viral DNA sequences to a subset of the Pillar 2 data Genome Research Limited will enable Public Health agencies to be able highlight geographic hotspots of various strains of the coronavirus.",
+   "organisation": "WELLCOME SANGER INSTITUTE",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-411813-H0T2W-v1.2",
+   "releases": [],
+   "start_date": "2020-11-02",
+   "sublicensing": "No",
+   "title": "A request for Pillar 2 testing data",
+   "version": "1.2",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "As part of an agreement with Public Health England, Genome Research Limited receive the viral samples for sequencing and, under this agreement, will receive the relevant anonymised Pillar 2 testing data hourly.\n\nSanger will receive a data set from NHS Digital that contains a list of the positive COVID samples IDs and a subset of associated metadata.  This will be de-identified by NHS Digital to an agreed level prior to it being received by Sanger.  Sanger will download the dataset multiple times a day and apply algorithms to identify samples that are of interest and should be sequenced based upon a ranking system.  A list of sample IDs will then be distributed to the required Sanger systems in order to enable the proposed use-cases.\n\nThe data will then be used to select a geographically representative set of samples (identified by the specimen ID) with sufficient viral material for sequencing each week. The sequences, dates and outer postcodes are linked and deposited in the MRC-CLIMB database and returned in reports to the Public Health Agencies.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "GENOME RESEARCH LIMITED"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Statutory exemption to flow confidential data without consent",
+     "frequency": "One-Off",
+     "legal_basis": "Other-(Regulation 3 of the associated Health Service (Control of Patient Information) Regulations 2002) and Paragraph 8.3.2 of the CV19 directions.",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2023-11-01",
+   "expected_benefits": "The viral genome sequencing and analysis will help in the post-winter peak phase of the pandemic to maintain as much control as possible for as long as possible by: \n1.\tDetecting superspreading events via their very different genomic footprint than diffuse community transmission. Genome Research Limited are already working with the four Public Health Agencies and intend to provide the data feed to Test & Trace so they can find these events fast, and respond, for example, via enhanced contract tracing. \n2.\tMonitoring for instances where vaccines are not effective.  Vaccines will create selective pressure on the virus to mutate and evade them. Detecting these changes as early as possible will empower decision making on which vaccines to deploy and when.\n3.\tProviding support to rapid outbreak response to specific queries from Public Health Agencies where sequences are deemed essential and informative to the epidemic response.",
+   "expected_output": "The viral sequences, sample dates and outer postcode are uploaded to the MRC-CLIMB database, which has separate agreements with the Public Health Agencies. \n\nWellcome Sanger Institute produces reports and a database which is available directly to the Public Health Agencies, and Test and Trace",
+   "files_released": 0,
+   "objective": "Genome Research Limited (also known as the Wellcome Sanger Institute) is a wholly owned subsidiary of the Wellcome Trust, funded by them to carry out genome sequencing to advance understanding of the biology of humans and pathogens in order to improve human health.\n\nGenome Research Limited is a charity focused on doing research for societal benefit, and the Covid surveillance project falls within that mission.  They will therefore not be seeking to commercially benefit from the project.  While Genome Research Limited's reputation may be enhanced by its participation, as a charity that does not translate into commercial benefits.\n\nGenome Research Limited is working to fully understand the transmission and evolution of the virus which requires sequencing and analysing viral genomes at scale and speed. The number of samples calls for a rapid and robust increase in the UK’s pathogen genome sequencing capacity.\n\nTo provide this increased capacity to collect, sequence and analyse the whole genomes of virus samples in the UK, (COG-UK) is pooling the knowledge and expertise in genomics of the four UK Public Health Agencies, multiple regional University hubs, and large sequencing centres such as the Wellcome Sanger Institute.\n\nBy sequencing thousands of viral genomes from around the UK each week, Genome Research Limited will help public health authorities detect and respond faster to super-spreading events, and monitor for new mutations associated with resistance to vaccines once they are deployed. Because the utility of these sequences is directly tied to how fast they can be produced, it is important to have immediate access to the basic data fields needed to pick them for sequencing from the hundreds of thousands of tests conducted each week.\n\nBy linking the viral DNA sequences to a subset of the Pillar 2 data Genome Research Limited will enable Public Health agencies to be able highlight geographic hotspots of various strains of the coronavirus.",
+   "organisation": "WELLCOME SANGER INSTITUTE",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-411813-H0T2W-v2.2",
+   "releases": [],
+   "start_date": "2023-01-13",
+   "sublicensing": "No",
+   "title": "A request for Pillar 2 testing data",
+   "version": "2.2",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "This DSA permits processing of the Data for the purpose of secure storage and back up.\n\nThis DSA does not permit any further processing.\n\nSanger will receive a data set from NHS England that contains a list of the positive COVID samples IDs and a subset of associated metadata.  This will be de-identified by NHS England to an agreed level prior to it being received by Sanger.  Sanger will download the dataset multiple times a day and apply algorithms to identify samples that are of interest and should be sequenced based upon a ranking system.  A list of sample IDs will then be distributed to the required Sanger systems in order to enable the proposed use-cases.\n\nThe data will then be used to select a geographically representative set of samples (identified by the specimen ID) with sufficient viral material for sequencing each week. The sequences, dates and outer postcodes are linked and deposited in the MRC-CLIMB database and returned in reports to the Public Health Agencies.\n\nGenome Research Ltd stores Data on the Cloud provided by Google UK Ltd.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "GENOME RESEARCH LIMITED"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Statutory exemption to flow confidential data without consent",
+     "frequency": "Ongoing",
+     "legal_basis": "Other-(Regulation 3 of the associated Health Service (Control of Patient Information) Regulations 2002) and Paragraph 8.3.2 of the CV19 directions.",
+     "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2027-02-19",
+   "expected_benefits": "The viral genome sequencing and analysis will help in the post-winter peak phase of the pandemic to maintain as much control as possible for as long as possible by: \n1.\tDetecting superspreading events via their very different genomic footprint than diffuse community transmission. Genome Research Limited are already working with the four Public Health Agencies and intend to provide the data feed to Test & Trace so they can find these events fast, and respond, for example, via enhanced contract tracing. \n2.\tMonitoring for instances where vaccines are not effective.  Vaccines will create selective pressure on the virus to mutate and evade them. Detecting these changes as early as possible will empower decision making on which vaccines to deploy and when.\n3.\tProviding support to rapid outbreak response to specific queries from Public Health Agencies where sequences are deemed essential and informative to the epidemic response.",
+   "expected_output": "The viral sequences, sample dates and outer postcode are uploaded to the MRC-CLIMB database, which has separate agreements with the Public Health Agencies. \n\nWellcome Sanger Institute produces reports and a database which is available directly to the Public Health Agencies, and Test and Trace",
+   "files_released": 0,
+   "objective": "Genome Research Limited (also known as the Wellcome Sanger Institute) is a wholly owned subsidiary of the Wellcome Trust, funded by them to carry out genome sequencing to advance understanding of the biology of humans and pathogens in order to improve human health.\n\nGenome Research Limited is a charity focused on doing research for societal benefit, and the Covid surveillance project falls within that mission.  They will therefore not be seeking to commercially benefit from the project.  While Genome Research Limited's reputation may be enhanced by its participation, as a charity that does not translate into commercial benefits.\n\nGenome Research Limited is working to fully understand the transmission and evolution of the virus which requires sequencing and analysing viral genomes at scale and speed. The number of samples calls for a rapid and robust increase in the UK’s pathogen genome sequencing capacity.\n\nTo provide this increased capacity to collect, sequence and analyse the whole genomes of virus samples in the UK, (COG-UK) is pooling the knowledge and expertise in genomics of the four UK Public Health Agencies, multiple regional University hubs, and large sequencing centres such as the Wellcome Sanger Institute.\n\nBy sequencing thousands of viral genomes from around the UK each week, Genome Research Limited will help public health authorities detect and respond faster to super-spreading events, and monitor for new mutations associated with resistance to vaccines once they are deployed. Because the utility of these sequences is directly tied to how fast they can be produced, it is important to have immediate access to the basic data fields needed to pick them for sequencing from the hundreds of thousands of tests conducted each week.\n\nBy linking the viral DNA sequences to a subset of the Pillar 2 data Genome Research Limited will enable Public Health agencies to be able highlight geographic hotspots of various strains of the coronavirus.",
+   "organisation": "GENOME RESEARCH LIMITED",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-411813-H0T2W-v3.6",
+   "releases": [],
+   "start_date": "2026-02-20",
+   "sublicensing": "No",
+   "title": "A request to HOLD and NOT process the previously approved Pillar 2 testing data",
+   "version": "3.6",
+   "yielded_benefits": ""
+  }
+ ]
+}

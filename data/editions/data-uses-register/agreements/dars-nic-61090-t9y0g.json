@@ -1,0 +1,53 @@
+{
+ "base_reference": "DARS-NIC-61090-T9Y0G",
+ "versions": [
+  {
+   "activities": "In this study, the University will use linked NHS datasets, the National Hip Fracture Database from the Healthcare Quality Improvement Programme and Hospital Episode Statistics from NHS Digital.\n\nIndividual NHS trusts send patient-identifiable information to the Falls and Fragility Fracture Audit Programme (FFFAP, which is run by the Royal College of Physicians [RCP] on behalf of the Healthcare Quality Improvement Programme [HQIP]) to populate the National Hip Fracture Database (NHFD). The NHFD data is processed by Crown Informatics Ltd on behalf of the FFFAP. \n\nCrown Informatics provided NHS Digital with a list of NHS numbers along with date of birth, postcode, gender (injury date) and a unique ID number from patients that are included within the National Hip Fracture Database (NHFD). \n\nThese patients will all have been aged >60 and treated for a hip fracture at a hospital in England from 2011 onwards. Although the NHFD has existed since 2007, data quality improved with the introduction of the Hip Fracture Best Practice Tariff in 2012. The University have therefore opted to restrict their data request to the period from 2011 onwards.\n\nNHS Digital linked these records stored within the Hospital Episode Statistics (HES) admissions file and returned pseudonymised HES data, the date of death and the study ID to Crown Informatics. This included admissions before the hip fracture (as patient co-morbidities will be used for risk adjustment) and afterwards (as re-admission, re-operation, and health service utilisation) will be used as outcome measures. All data analyses will be undertaken using the linked NHFD-HES-ONS dataset.\n\nCrown Informatics added relevant non identifiable data from the National Hip Fracture Database to the linked database and removed the unique ID. This data (linked pseudo HES+Date of death+NHFD) was then supplied to the University of Oxford for analysis.\n\nData from the NHFD and NHS Digital will only be stored and accessed  by the researchers in the Kadoorie Critical Care Research Centre, located at the John Radcliffe Hospital, who are part of the Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences at the University of Oxford. It will not be linked to any other datasets. It will not be shared with any 3rd parties. The data will only be used for the purposes stated in this agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF OXFORD"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-10-31",
+   "expected_benefits": "The University anticipate the findings of the study informing the next iterations of NICE Clinical Guideline [CG124] \"Hip fracture: management\", the British Orthopaedic Association (BOA) Standards for Trauma 1, and the BOA/British Geriatric Society Blue Book: \"Care of patients with a fragility fractures”. These are all due for revision in, or shortly after, 2018. The findings of the study should therefore begin having an impact on the health status of patients (by ensuring they are offered the most appropriate operation) within two years. This is clearly important to ensure that patients are being offered the most effective choice of operation after a broken hip.\n\nImportantly, once the NHFD-HES data linkage has been established, this resource could be used to address other important clinical questions aimed at improving outcomes for older adults with hip fractures. Any further use of the resource would result in amendment requests to NHS Digital",
+   "expected_output": "The University anticipate presenting the results at the British Orthopaedic Association Annual Congress 2019 and publishing in a journal that is most likely to reach the broadest possible audience of UK orthopaedic surgeons, e.g. the Bone & Joint Journal. The findings will also be communicated directly to the guideline teams at the National Institute for Health and Clinical Excellence (NICE), British Geriatric Society (BGS), and British Orthopaedic Association.\n\nIf it is found that compliance with this NICE guideline benefits patients, the study will advocate for greater compliance among orthopaedic surgeons and wider access to THA among hip fracture patients. If the findings suggest that THA makes little difference to patient outcomes, the study will suggest that this guideline be reconsidered by NICE.\n\nThe study ultimately hopes to influence the advice provided to clinicians as part of NICE Clinical Guideline [CG124] \"Hip fracture: management\", the British Orthopaedic Association (BOA) Standards for Trauma 1, and the BOA/British Geriatric Society Blue Book: \"Care of patients with a fragility fractures”.\n\nAll outputs will be aggregated with small numbers suppressed in line with the HES Analysis guide.",
+   "files_released": 0,
+   "objective": "This study aims to examine a guideline published by the National Institute for Health and Clinical Excellence (NICE) with regards treatment of patients with hip fractures. \n\nThere are 70,000 hip fractures every year in the United Kingdom at a total cost exceeding £2 billion. Mortality is high, with 8.5% of patients dying within 30 days of admission and 30% within a year. Many surviving patients are unable to continue living independently and 4.5 million patients are disabled worldwide as a consequence of hip fracture every year.\n\nTwo thirds of hip fractures are displaced, i.e. there is separation of the bony fragments, and these are usually treated with arthroplasty (joint replacement). There are broadly two arthroplasty options: total hip arthroplasty (THA) in which both the femoral head and acetabulum are replaced and hemiarthroplasty (HA) in which only the femoral head is replaced.\n\nThere have been a number of small, randomised controlled trials that compared THA to HA. When taken together, they suggest that THA is associated with better functional outcomes, fewer wound infections, and reduced need for secondary procedures. However, THA is a longer operation, more complex, and has a significantly higher risk of subsequent dislocation (9% versus 3%). THA is also a more specialised operation that might not be within the skillset of every orthopaedic surgeon treating patients with hip fractures. Despite the existing evidence base, one recent survey found that 73% of orthopaedic surgeons prefer HA to THA.\n\nThe National Institute for Health and Clinical Excellence (NICE) has elected to reserve THA for the fittest patients as they are more likely to survive a prolonged operation and gain the most from its enhanced functional properties. NICE recommend that patients with displaced hip fractures should be treated with arthroplasty and THA offered to patients who:\n\n•\tCould walk independently before the fracture;\n•\tAre not cognitively impaired and;\n•\tAre medically fit for anaesthesia and the procedure.\n\nDespite this guidance, the NICE criteria are not universally applied throughout the NHS. In particular, there is evidence that surgeons incorporate other considerations (including patient age and admission at the weekend) into their decision-making. The University of Oxford have previously shown that this leads to considerable variation across the country in terms of which treatment is offered to patients with hip fracture.\n\nIn this study, the University will use linked NHS datasets (the National Hip Fracture Database and Hospital Episode Statistics) to test two related hypotheses:\n\n1.\tTHA is associated with better outcomes than HA for independently mobile older adults with hip fractures, i.e. patients satisfying the criteria proposed by NICE.\n2.\tPatients that receive an operation that is non-compliant with NICE guidance (i.e. HA despite being eligible for THA or THA despite being ineligible) will have worse outcomes than those receiving NICE-compliant treatment.\n\nThe data requested from NHS Digital are necessary to (a) aid risk adjustment by enriching the NHFD with details of patients' co-morbidities and (b) provide data about re-admission to hospital and re-operation for patients in the NHFD cohort.",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-61090-T9Y0G-v2.2",
+   "releases": [],
+   "start_date": "2018-11-01",
+   "sublicensing": "No",
+   "title": "Total hip arthroplasty versus hemiarthroplasty for independently mobile older adults with an intracapsular hip fracture.",
+   "version": "2.2",
+   "yielded_benefits": "The data for this study were only received in February 2018 and, although it has been analysed, it has not yet been published."
+  }
+ ]
+}

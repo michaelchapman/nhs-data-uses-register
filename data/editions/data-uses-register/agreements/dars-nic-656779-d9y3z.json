@@ -1,0 +1,69 @@
+{
+ "base_reference": "DARS-NIC-656779-D9Y3Z",
+ "versions": [
+  {
+   "activities": "The institute of Cancer Research will transfer data to NHS England.  The data will consist of identifying details (specifically NHS Number, Date of Birth and a unique person ID) for the cohort to be linked with NHS England data. \n \nNHS England will provide the relevant records from the datasets listed in the DSA to Institute of Cancer Research. \n\nThe Data will \n•\tcontain directly identifying data items including NHS Number, Date of Birth, which are required to link the Data at record level with data already held by the recipient\n \nThe Data will not be transferred to any other location. \n \nThe Data will be stored on servers at Institute of Cancer Research.\n \nThe Data will be accessed by authorised personnel via remote access.   \n \nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n \nFor remote access: \n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n-\tAccess controls granting users the minimum level of access required are in place; \n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n-\tMultifactor authentication (MFA) is required for remote access; \n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n \nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n \nThe Data will not leave the UK at any time.\n\nAccess is restricted to individuals within the Institute of Cancer Research, Clinical Trials and Statistics Unit (ICR-CTSUICR-CTSU) who have authorisation from the chief investigator. All such individuals are substantive employees of ICR.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will be linked at person record level with clinical trial datasets obtained from ICR-CTSU – ie the clinical trial datasets for the trial in question, e.g. Poetic, which are held within ICR-CTSU on ICR servers.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis.  All analyses will use the pseudonymised dataset.  There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset. \n \nAnalysts from the Institute of Cancer Research will analyse the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Linked HES AE",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2026-05-15",
+   "expected_benefits": "The public benefits relating to health and/or social care are to confirm that it is possible, with reasonable accuracy, to identify cancer recurrences using routinely collected healthcare data in the place of hospital-based data collection after the point of primary analysis. This will enable the possibility of reducing burden at hospitals in terms of long term follow-up in patients participating in breast cancer trials in future.\nIt is expected that future cancer trials may use these results to switch to routinely collected data for long term follow-up data collection.\n\nShould trials switch to using routine data collection instead of hospital based follow-up it may reduce the burden of future trial participants with breast cancer requiring to provide long term follow-up information to their treating hospital. \n\nIt is envisioned that researchers designing future trials and trials that may be ongoing choose routine data collection for long term follow-up as an alternative to hospital based follow-up. \n\t\nThe Data Controller will present work at the Cancer Research UK (CRUK) data science conference and submit work to a peer reviewed journal.  The Data Controller will also promote the publication when available via social media and on the ICR website (as a lay summary).  CRUK are aware of this project and the work completed via ICR-CTSU’s core programme grant renewal process.",
+   "expected_output": "The expected outputs of the processing will be: \n•\tSubmissions to peer reviewed journals- A journal has been submitted to Trials journal in July 2024 and awaiting outcome. This is the only planned submission.\n•\tPresentations at the Cancer Research UK Data Science Conference.\n\nThe outputs only contain aggregated data from both trial and NHS England databases.  No patient identifiable information has been shared. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels upon publication:\n•\tJournals \n•\tPoster\n•\tICR website (lay summary) \n•\tSocial media \n\nThe Poster was presented Cancer Research UK Conference in October 2023.  Publication was submitted July 2024 and aim to complete publication process by Q4 2025.",
+   "files_released": 0,
+   "objective": "The Institute of Cancer Research requires access to NHS England data for the purpose of the following research project:  \n\nAccessing and using routine datasets for future cancer clinical trials - Prospective validation project using data from Trial of Perioperative Endocrine Therapy – Individualising Care (POETIC)\n\nThe following is a summary of the aims of the research project provided on behalf of The Institute of Cancer Research:\n\nWith continued improvements in breast cancer outcomes and risk of recurrence occurring until at least 20 years post-diagnosis, it is important to continue to follow-up clinical trial participants to characterise long-term treatment impact. Traditionally follow-up has been via hospitals; entailing burden on patients and site-staff.  Using routinely collected health datasets (RCHD) as an alternative method is attractive, but historically cancer recurrence is poorly recorded unlike initial cancer diagnosis.  Building on previous work, the aim of this project is to evaluate the reliability and validity of routine data to be able to replace trial-specific CRF data collection via centres in order to provide robust assessments of common cancer trial endpoints.  To do this we will use data collected prospectively from four large, multi-centre breast cancer clinical trials, including POETIC, to develop and test a procedure to identify recurrence within RCHD.\n\nThe following NHS England Data will be accessed:\n•\tNDRS Cancer Registrations\n•\tNDRS Linked HES AE\n•\tNDRS Linked HES APC\n•\tNDRS Linked HES Outpatient\n•\tNDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n\nThe level of the Data will be \n•\tIdentifiable – necessary to establish deterministic linkage between the Poetic cohort and cancer registry\n\nThe Data will be minimised as follows:\n•\tLimited to the Poetic trial participants\n\nThe lawful basis for processing personal data under the UK GDPR is: \nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller; \n\nThe lawful basis for processing special category data under the UK GDPR is: \nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject. \n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care. \n\nThe funding is provided by Institute of Cancer Research. The funding is specifically for the study described above. \n\nPPIE Members that were engaged with the trial, ten years ago at the trials inception, were informed and asked for input on potential benefits of the trial taking place and design.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-656779-D9Y3Z-v1.3",
+   "releases": [],
+   "start_date": "2025-05-16",
+   "sublicensing": "No",
+   "title": "Accessing and using routine datasets for future cancer clinical trials – Prospective validation project using data from POETIC",
+   "version": "1.3",
+   "yielded_benefits": "The Data Controller is awaiting publication of this work; therefore yielded benefits are currently unmeasurable.  However, it is expected that future cancer trials may use these results to switch to routinely collected data for long term follow-up data collection."
+  }
+ ]
+}

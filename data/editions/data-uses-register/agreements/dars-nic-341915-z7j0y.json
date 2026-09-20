@@ -1,0 +1,160 @@
+{
+ "base_reference": "DARS-NIC-341915-Z7J0Y",
+ "versions": [
+  {
+   "activities": "UoE will transfer data to NHS England.  The data will consist of identifying details NHS Number, Date of Birth, gender, forename, surname and Unique study ID for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the HES datasets, ECDS, CRD and NHSBSA datasets to UoE. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nNHS England will provide tabulated data to UoE. The Data will contain no direct identifying data items. The data will be small numbers not supressed.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored within the UoE TRE. This is TRE hosted by Arrow Business Communications Limited.\n\nThe Data will be accessed by authorised personnel from UoE within the TRE. The TRE will be accessed both on-site at the premises of UoE and remotely. \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThe Data will not leave the UK at any time.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will be linked at the person record level with the baseline and randomisation data collected in the DUAL-ACS database during the course of the trial.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis.  All analyses will use the pseudonymised dataset. \n\nStatisticians from the Edinburgh Clinical Trials Unit will process/analyse the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF EDINBURGH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2027-07-04",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study. \n\nDetermining the default strategy for the duration of dual anti-platelet therapy is important because there is considerable heterogeneity in clinical practice and there are both harms and benefits from the intervention.\n\nFor the public and patients, it is unclear what is the best duration of treatment to maximize the benefit (prevention of myocardial infarction) and minimise the harm (major bleeding) as well as to establish the effect on overall mortality. Patients prefer not to take medication unless it is necessary and are particularly concerned about the risks and harms of treatments. Dual anti-platelet therapy causes excessive minor and major bleeding (up to 1 in 6 patients) that can be very problematic for patients and occasionally fatal.\n\nHowever, patients also want the reassurance that they will not suffer another heart attack, require further invasive procedures or develop additional potentially life-threatening disease.\n\nFor clinicians and health care providers, there remains much uncertainty regarding the length of therapy after acute coronary syndrome. Duration of therapy is seen as a major priority for future research by numerous national and international guideline committees as well as having financial implications in terms of drug costs and therapy management in primary care. Currently, there is equipoise with significant variations in local and regional practice that are confusing for patients, primary care physicians and cardiologists. Indeed, the Scottish Intercollegiate Guideline Network has varied between 3 and 6 months in its recommendations, and the European and North American guidelines recommend up to 12 months but acknowledge that shorter durations may be appropriate. All would welcome having clear evidence and guidance.\n\nThere are considerable cost implications for the duration of therapy, especially for the latest generation of P2Y12 receptor antagonists with prasugrel and ticagrelor costing £50-£60 per month. Major pharmaceutical companies have to date not funded trials comparing shorter (<12 months) durations of dual anti-platelet therapy, and arguably it is not in their commercial interest to do so. In addition, many patients were excluded from the major trials because of potential bleeding concerns. There is therefore a major concern that the evidence to date has been extrapolated to a broader population with a higher risk of adverse outcomes from bleeding. This has the potential for unnecessary harm that could attenuate or nullify any benefit from reducing cardiovascular events.\nThe evidence generated here has the potential to influence clinical practice guidelines in the UK and internationally, introduce cost savings to the NHS, and improve health outcomes for patients.\n\nThe use of the data could: \n•\thelp the system to better understand the health and care needs of populations. \n•\tlead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience.\n•\tadvance understanding of regional and national trends in health and social care needs.\n•\tadvance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations or conditions such as obesity and diabetes.\n•\tinform planning health services and programmes, for example to improve equity of access, experience and outcomes.\n\nIt is hoped the results generated by this trial will directly contribute to the evidence base about the effects of dual anti-platelet therapy after myocardial infraction, and will inform the optimum balance of benefit and risk for patients in the future.\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to specific patients. \n\nThe findings will be published in national and international peer-reviewed journals. The findings will be shared with the international scientific and cardiology community through presentations at national and international conferences and proceedings. The findings will be shared with the funder (the British Heart Foundation), British Cardiovascular Society, European Society of Cardiology and other international societies. The University of Edinburgh hope and anticipates the findings will influence The National Insititute of Health and Care excellence (NICE) and international societal guidelines.",
+   "expected_output": "The expected outputs of the processing will be:\n\n•\tA report of findings to the Sponsor, funder and European Union Drug Regulating Authorities Clinical Trials Database (EudraCT) within 1 year of the end of the study\n•\tSubmissions to peer-reviewed journals. The University of Edinburgh anticipate submission of the primary manuscript within 3 months of the primary data analysis. Subsequent secondary manuscripts will be submitted over several years thereafter. \n•\tPresentations at appropriate conferences\n•\tPublication of a summary of the findings on the Edinburgh Clinical Trials Unit website that participants can view.\n•\tEdinburgh Clinical Trials Unit website\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe findings will be disseminated at “appropriate conferences” as soon as possible after UoE receive the datasets and the statistician has analysed the data.",
+   "files_released": 57,
+   "objective": "The University of Edinburgh (UoE) requires access to NHS England data for the purpose of the following Clinical trial; ‘Duration of Dual Anti-Platelet Therapy in Acute Coronary Syndrome: The DUAL-ACS Trial’\n\nThe following is a summary of the aims of the research project provided by the controller:\n\n“The principal question is: should the default strategy for the duration of dual antiplatelet therapy be 3 or 12 months after type 1 myocardial infarction?\n\nDespite substantial evidence supporting the use of dual antiplatelet therapy in patients with acute coronary syndrome, there remains major uncertainty regarding the optimal duration of therapy. Recent evidence suggests that shorter durations of dual antiplatelet therapy are superior to longer durations because the avoidance of atherothrombotic events is counterbalanced by the greater risks of excess major bleeding with apparent increases in all-cause mortality. DUAL-ACS will provide definitive evidence of the safest duration (short or long) of dual antiplatelet therapy for patients with type 1 myocardial infarction.”\n\nThe following NHS England Data will be accessed:\n•\tHospital Episode Statistics Admitted Patient Care, Accident & Emergency, Critical Care and Outpatients - necessary to ascertain the relationship between cause/reason of hospital attendance and taking the dual-anti platelet therapy.\n•\tEmergency Care Data Set (ECDS) – necessary to ascertain the relationship between cause/reason of hospital attendance and taking the dual-anti platelet therapy.\n•\tCivil Registration Mortality (CRD) – necessary to determine the primary outcome of all-cause mortality and to ascertain the relationship between cause of death and taking the dual anti-platelet therapy.\n•\tMedicines Dispensed in Primary Care Data (NHSBSA)– necessary to check  compliance with medication prescribed to participants in the trial (randomised allocation) \n\nThere are two parts to this request. \n•\tIdentifiable Extract- HES, ECDS, NHSBSA, CRD- necessary to enable linkage of the data with data collected from other sources, including the participant’s baseline and randomisation trial data.\n\n•\tTabulation small numbers not suppressed-  all adult patients (aged ≥ 18 years) with myocardial infarction three months prior to the date of the first consented patient up to the date of the last randomised patient – necessary to prepare summary statistics of the eligible non-recruited patients to evaluate the generalisability of results from the randomised cohort.\n\nThe Data will be minimised as follows: (There are two parts to the request)\n\nPart one of the request- Identifiable extract\n•\tLimited to a study cohort identified by the controller – 733 consented participants \n•\tLimited to data between April 2008 and 04 February 2023.  \n\nData will be provided from 10 years before the first patient joined the trial and until 15 months after the last patient joined the trial. Data is being requested for a period of 10 years prior to the date of the myocardial infarction of the first patient recruited because it is important to the trial to know what happened to patients previously to determine the severity of the disease by identifying previous events and operations through prior hospital admissions. UoE are relying on the historical data to provide information about past medical history, prior coronary heart disease and cardiovascular risk factors. \n\n10 years is necessary to provide the trial with the necessary patient characteristics for the baseline summary characteristics of the trial participants. The DUAL-ACS trial was designed as the simplest and most pragmatic trial to deliver, and no baseline subject characteristics were recorded in the randomisation process. As such, UoE relies on the look-back data to define the characteristics of the participants leading up to their qualifying hospitalisation admission with an acute myocardial infarction. They therefore need to capture any past admission or treatment prescription for cardiovascular risk factors (such as hypertension, diabetes mellitus and hypercholesterolaemia) and prior cardiovascular diseases. Sometimes these diagnoses are made some considerable time before hospitalisation and UoE is therefore keen to capture this over the preceding 10 years. These data are essential to be able to publish and to interpret the trial and to compare the overall profile of the DUAL ACS trial participants with other prior trials.\n\nPart two of the request- Tabulation request\n\nSmall numbers not suppressed summary data for all adult patients (aged ≥ 18 years) with myocardial infarction three months before the date of the first consented patient up to the date of the last randomised patient. Set to Yes if there is a record in the HES APC table with AdmissionDate within the specified timeframe and \"DIAG_01\" starts with \"I21\", or “DIAG_02” \"I21\", or \"DIAG_01” or \"DIAG_02\" starts with \"I22\".\n\n•\tLimited to data between three months prior to the date of the first consented patient . The first consented patient was in (April 2018) up to the date of the last randomised patient (November 2021), therefore data in the tabulation will be from January 2018\n•\tThe tabulation will exclude the consented participants.\n\nUoE is the research sponsor and the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above. NHS Lothian is a co-sponsor of the trial but NHS Lothian will not carry out any controllership activities.\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by The British Heart Foundation.  The funding is specifically for the trial described.\n\nThe funder will have no ability to suppress or otherwise limit the publication of findings. \n\nArrow Business Communications Limited is a processor acting under the instructions of UoE. Arrow Business Communications Limited role is limited to managing a Trusted Research Environment which will host the data provided by NHS England.\n\nEdinburgh Clinical Trials Unit (ECTU) which is a department within UoE is managing the analysis of the data.\n\nA trial steering committee and Data Monitoring Committee are overseeing the conduct and progress of the trial but will not have access to the data.\n\nData will only be accessed by substantive employees of UoE \n\nA Public and Patient Involvement (PPI) representative was a member of the funding grant committee and helped review and refine the purpose of the research. A PPI group and a lay advisor helped review the study documentation, including the patient information sheet to ensure the content and wording was appropriate for the patient population. A patient representative is an independent member of the Trial Steering Committee.",
+   "organisation": "UNIVERSITY OF EDINBURGH",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-341915-Z7J0Y-v0.7",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 16,
+     "first_month": "2024-10",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 15,
+     "first_month": "2024-10",
+     "last_month": "2024-10",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 12,
+     "first_month": "2024-10",
+     "last_month": "2025-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 12,
+     "first_month": "2024-10",
+     "last_month": "2024-10",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2024-09",
+     "last_month": "2024-09",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Medicines dispensed in Primary Care (NHSBSA data)",
+     "files": 1,
+     "first_month": "2024-10",
+     "last_month": "2024-10",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2024-07-05",
+   "sublicensing": "No",
+   "title": "Duration of Dual Anti-Platelet Therapy in Acute Coronary Syndrome: The DUAL-ACS Trial",
+   "version": "0.7",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

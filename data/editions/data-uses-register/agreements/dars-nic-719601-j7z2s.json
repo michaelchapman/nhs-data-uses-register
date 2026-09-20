@@ -1,0 +1,90 @@
+{
+ "base_reference": "DARS-NIC-719601-J7Z2S",
+ "versions": [
+  {
+   "activities": "The NICOR team (within NHS England) will transfer the cohort identifiers to NHS England data production team. The data will consist of identifying details: NHS Number, Date of Birth, Postcode, Gender, Forename, Surname and a unique person ID to be linked with NHS England data. \n\nThe cohort will consist of patients who would have been recorded in the NICOR datasets as having had an initial episode of an MI, heart failure or coronary stenting. \n\nNHS England will provide the relevant records from the HES, ECDS and mortality datasets to NICOR.\n\nThe Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient (NICOR).\n\nNICOR will link the HES, ECDS and mortality data with clinical data from the NHFA, MINAP and NAPCI audits specifically for the individuals in the cohort.\n\nNICOR will fully pseudonymise and clean the data and send the complete pseudonymised record level data extract to HUTH NHS Trust.\n\nThe Data (that NICOR will disseminate to HUTH) will contain no direct identifying data items. The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient.\n\nThe Data will be stored on servers at HUTH NHS Trust.\n\nThe Data will be accessed onsite at the premises of HUTH NHS Trust only.\n\nThe Data will not leave England.\n\nAccess is restricted to employees of HUTH NHS Trust.\n\nEmployees of HUTH NHS Trust are permitted to access pseudonymised data only.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data.\n\nThere will be no requirement and no attempt to reidentify individuals when using the Data.\nAll analyses will use the pseudonymised dataset. \n\nResearchers from the HUTH NHS Trust will analyse the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a); Other-GDPR does not apply to data solely relating to deceased individuals",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2028-01-28",
+   "expected_benefits": "The aim of the study is to find novel associations between diabetes and different forms of heart disease using machine learning models. Traditionally statistical models which have been used for this purpose. Traditional statistical analysis is user dependent and depending on the choice of test used subject to errors which are largely alleviated when using machine learning. In addition, traditional statistical tests are better suited to linear models while diabetes and heart disease usually present with multiple other co-morbidites with a complex relationship which is dependent on multiple inter-related variables. Machine learning can capture these non-linear relationships better.\n\nHUTH NHS Trust aim to identify the relative influence of different diabetes treatment options and other procedural and patient factors in affecting cardiovascular outcomes. The study will be looking at 3 groups of patients, based on their diagnosis they will be split into 3 groups of heart failure, myocardial infarction and/or angina who have undergone percutaneous coronary intervention. If successful in identifying new links between diabetes, its treatment and these conditions, our research should help generate hypothesis for future clinical trials and research to confirm these findings. \n\nIdentifying the significance of individual risk factors or new risk factors would help us better understand the health and care needs of individuals with these conditions. It would advance our comprehension of underlying disease processes allowing targeting higher risk groups with relevant preventative therapies. Lastly, downstream from such hypothesis generating studies, successful trials would ideally lead to identifying new targets for therapy to improve patient prognosis\n\nIt is hoped that through publication of findings in appropriate media, the outcomes of this research will add to the body of evidence that is considered by the organisations and individual care practitioners charged with making policy decisions for, those within the NHS, or treatment decisions in relation to specific patients.",
+   "expected_output": "The expected outputs of the processing will be:\n\n•\tSubmissions to peer reviewed journals European Heart Journal, British Journal of Diabetes, Diabetologia, European Heart Journal, British Journal of Cardiology, and European Medical Journal. approximately 4 months after receiving the data. \n\n•\tPresentation at national and international conferences of the aforementioned research outputs by 30/12/2025.",
+   "files_released": 28,
+   "objective": "Hull University Teaching Hospitals (HUTH) NHS Trust requires access to NHS England data for the purpose of the following research project:\nAssessing Diabetes’ Influence on Cardiovascular Health: A Machine Learning Analysis of NICOR* Database Patients.\n\n*NICOR: National Institute for Cardiovascular Outcomes Research\n\nThe following is a summary of the aims of the research project provided by the Controller:\n\nPeople with diabetes have poor cardiovascular outcomes (survival, stent-restenosis, and recurrent myocardial infarction (MI)) as compared to those who do not have diabetes.\n\nThe Study's objective is to use various machine learning algorithms to understand the Relative Influence (RI)* of diabetes on survival, stent-stenosis, and recurrent myocardial infarction  in people with cardiovascular disease (CVD).\n\n* Relative Influence (RI) refers to a metric or analysis that quantifies the importance or contribution of each feature (input variable) in the model's predictions. RI helps data scientists and analysts understand which features have the most impact on the model's decision-making process. \n\nCurrently, there is a huge amount of data which show that the co-existence of diabetes is associated with poor cardiovascular outcomes in heart-failure, coronary revascularization and ischemic heart disease as compared to those who do not have diabetes.\n\nHowever, many of these co-morbidities such as poor glycaemic control, hyperlipidaemia, hypertension, are often correlated and traditional regression models are unable to identify top predictors of outcomes in people with Cardio Vascular Disease (CVD). \n\nHence, HUTH NHS Trust aim to use various machine learning algorithms to identify the RI of diabetes on outcomes in heart-failure, revascularization, and ischemic heart disease.\n\nHUTH NHS Trust will conduct an observational study using pseudonymised patient data from the NICOR database. The study population will include patients diagnosed with either an acute coronary syndrome (as registered with the Myocardial Ischaemia National Audit Project, MINAP), or heart failure (from the National Heart Failure Audit, NHFA) or those who undergo Percutaneous Coronary Intervention (PCI) (identified in the National Audit of Percutaneous Coronary Intervention, NAPCI) including elective, urgent and emergency procedures, stratified by the presence or absence of diabetes. \n\nThis study aims to find new associations between diabetes and cardiovascular disease to identify higher risk groups and to target therapies towards them to prevent adverse outcomes.\n\nHUTH NHS Trust will use 9 machine learning algorithms for classification, assessing and obtaining the best model for ascertaining the RI of diabetes on various cardiovascular outcomes. HUTH NHS Trust, will utilise other machine learning tools to understand if any of the baseline medication or procedural data can be used to predict outcome measures in people living with diabetes.\n\nThe following NHS England Data will be accessed: \n\nHospital Episode Statistics:\n• Admitted Patient Care (APC) – necessary to provide information on hospital admissions for certain cardiovascular conditions in the prescribed cohort (from NICOR) to compare inter-group variation stratified by the presence of diabetes. \nHUTH NHS Trust will only be focussing on hospital presentations and admissions that have the diagnoses of Angina, Myocardial infarction (MI), Acute coronary syndrome (ACS), Decompensated Heart Failure, Ventricular Tachycardia (VT), complications of MI and cardiac arrest. \n\n• Accident and Emergency (A&E) and Emergency Care Data Set (ECDS) – necessary to provide information on admissions that have the diagnoses of Angina, Myocardial infarction (MI), Acute coronary syndrome (ACS), Decompensated Heart Failure, Ventricular Tachycardia (VT), complications of MI and cardiac arrest.\n\n• Civil Registration Mortality – necessary to identify patients as having had an initial episode of an MI, heart failure or coronary stenting who have subsequently died in the community. \n\nHUTH NHS Trust would require the date of death to compare this with the time of their initial presentation and entry into NICOR. This would allow HUTH NHS Trust to assess how long on average it takes from an index clinical event to a mortality outcome and how it relates to patients with diabetes. Having the age at the time of death would serve to further stratify patients based on age.\n\nHUTH NHS Trust aim is to evaluate the differences in modifiable and non-modifiable risk factors noted in the NICOR data and how they relate to mortality in patients stratified by the presence of diabetes. \n\nThe level of the Data will be:\n Pseudonymised  \n\nThe Data will be minimised as follows :\n• Limited to a study cohort identified by NICOR*, for patients in the National Heart Failure Audit (NHFA) Myocardial Ischaemia National Audit Project (MINAP) and National Audit for Percutaneous Coronary Intervention (NAPCI). With ~100,000 annual records in both the MINAP and NAPCI registries and >80,000 participants in the NHFA. It is estimated that 1,000,000 individuals will be identified.\n\n*NICOR is part of NHS England and the flow of identifiers is carried out internally within NHS England. As such, the requirement to address the common law duty of confidentiality is not needed as the flow of data is within NHS England.\n\n• Limited to data between 2011/12 to latest available data to capture cardiovascular conditions and deaths. The data will be minimised further by being limited to begin at each individual’s inclusion date (for example, if a patient’s inclusion date is March 2018, data will be filtered to ensure only records on or after March 2018 is produced and disseminated). The data required will be all cause hospital admissions rather than selected cardiac events alone. This is so HUTH can identify if non-cardiac events influenced further cardiac recurrences. \n\nThe data disseminated by NHS England will be as described above.\n\nThe lawful basis for processing personal data under the United Kingdom (UK) GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by the University of Hull. The funding is specifically for the study described.  \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings. \n\nNo Public and Patient Engagement activities have been undertaken by HUTH NHS Trust.",
+   "organisation": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-719601-J7Z2S-v0.12",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 14,
+     "first_month": "2025-03",
+     "last_month": "2025-03",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 8,
+     "first_month": "2025-03",
+     "last_month": "2025-03",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 5,
+     "first_month": "2025-04",
+     "last_month": "2025-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2025-03",
+     "last_month": "2025-03",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2025-01-29",
+   "sublicensing": "No",
+   "title": "Assessing Diabetes’ Influence on Cardiovascular Health: A Machine Learning Analysis of NICOR Database Patients",
+   "version": "0.12",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

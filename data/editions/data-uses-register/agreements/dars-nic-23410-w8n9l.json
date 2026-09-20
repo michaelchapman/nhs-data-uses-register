@@ -1,0 +1,272 @@
+{
+ "base_reference": "DARS-NIC-23410-W8N9L",
+ "versions": [
+  {
+   "activities": "- Data will only flow from the NHS Digital to the University of Manchester.\n- No data will be shared with third parties.\n- The data will be analysed in order to measure hospital performance. This will not involve linking data to other datasets (apart from the linkage to PROMs and ONS provided by NHS Digital). Trends in hospital performance over the period of time requested will be analysed. \n-  Requested are the years prior to the introduction of the CQC inspection in order to accurately account for historic trends in performance. This is a standard approach and required in order to measure changes in these trends, which may be due to the CQC inspection. \n\nThe data will be analysed using the statistical packages Stata and R. Regression methods will be used which will output regression results tables. No record level data will be produced as an output at any stage, only aggregated date (with small numbers suppressed in line with the HES Analysis Guide). Descriptive statistics tables of the data will be produced which will aggregate the data by year. Graphs will be produced to describe the data and these graphs will also aggregate the data by year. The outputs produced cannot be used to identify patients or sensitive information.\n\nBoth Data Centres are owned by third parties. The hardware in the data centres belong to University of Manchester, the network infrastructure is also University of Manchester, nothing is shared. Dedicated space and caged off. The study have dedicated UoM staff who manage the UoM infrastructure in both the data centres.\n\nProcessing of the data will take place on the iCSF infrastructure of the University of Manchester. \n\nA valid Active Directory account is required to login to the iCSF.  Account credentials are unique to each member of staff and only the account owner knows the password.  \n\nThe iCSF, aka Incline, is a service designed specifically for interactive computationally-intensive work, such as development and testing of parallel or data-intensive code, or interactive (GUI-based) use of applications such as Abaqus, Matlab, R, and Stata.\n\nAccess to the iCSF is limited. An isilon storage share is mounted on in the researcher’s user area. Access to the storage share is via an active directory group, set up with only those users described within the data sharing plan having access to data on the iCSF.\n\nPROMS terms and Conditions will be adhered to.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE UNIVERSITY OF MANCHESTER"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-11-27",
+   "expected_benefits": "The Care Quality Commission developed its system of provider ratings as part of its new regulatory model and inspection regime in 2013, piloted it in the NHS acute care sector in 2013-14 and is now developing it for use in other sectors. The new approach is radically different from the model it replaced. It uses larger and more expert inspection teams, a wider range of data and fieldwork, and produces provider ratings in five domains (safe, effective, caring, responsive and well-led) using a four-point rating scale (inadequate, requires improvement, good or outstanding) as part of a detailed narrative inspection report.\n\nThe key purpose of these provider ratings is to drive improvements in the quality of care and in provider performance, but the ways in which this might happen are complex, and there is potential for unintended consequences. This research will help CQC, the Department of Health and other stakeholders to understand how the system of provider ratings works, and to find ways to increase its impact on the quality of care, minimise costs and prevent or reduce any adverse or unintended effects. This will allow the Department of Health to impact on the future direction of policy, and also contribute to a wider body of knowledge on regulation/inspection and performance ratings.\n\nThe final report to the Department of Health will be submitted in March 2018. The dissemination of the research findings will include journal articles published after the final report. The University will continue to work on the data following the final report due to the lengthy peer review/revisions stage for journal articles. \n\nThe CQC and the Department of Health will both receive regular updates on the research methods and outputs. Several meetings have already been held with the CQC to establish links by which the research can be disseminated within the CQC. These updates are in addition to the final report and journal articles.",
+   "expected_output": "The purpose of the data processing activities performed on these data is to produce statistical outputs to be used in peer-reviewed journal articles, presentations and reports for the Department of Health Policy Research Programme. These statistical outputs will be of three types: 1) descriptive tables summarising the data, 2) graphs and figures summarising the data, and 3) regression results tables. Outputs will contain only data which is aggregated, with any small numbers suppressed in line with the HES Analysis Guide. \n\nThe overall research project includes a number of work packages: systematic review package, qualitative package and quantitative package (using the requested data).  Seminars will be held for invited participants from the research case studies and interested organisations, for feedback on early and emerging findings and member checking as well as to promote knowledge mobilisation.  For case studies, a short report will be produced and the findings may be presented locally to stakeholders in the “system of care”.\n\nThe number of outputs, in terms of articles/presentations/reports, will be determined by the findings of the analysis and by the academic peer-review process. There is a PPI (Patient and Public Involvement) forum who will be engaged in producing these reports and their dissemination.\n\nThe aim is to produce a series of journal articles investigating hospital performance and how it is affected by regulation and inspection. Journals that will be targeted for these publications will be: 'Health Economics', 'The Journal of Health Economics', 'Health Services Journal', 'Journal of Health Services Research & Policy'. \n\nTarget journal publication dates are as follows:\na.      Journal Article 1 submission target: December 2017 (submitted June 2018 to Emergency Medical Journal)\nb.      Journal Article 2 submission target: September 2018 (targeting maternity journals)\nc.      Journal Article 3 submission target: February 2019 (targeting Social science and medicine)\n\nPresentations will be given at national and international conferences to audiences of academics and health professionals. Typical conferences are the UK Health Economists' Study Group. \n\nReports will be provided for the Department of Health Policy Research Programme on the progress and outcome of the research. \n\nTarget report publication dates are as follows:\na.      Department of Health final report: March 2018 (Submitted March 2018)\n\nReports and journal articles will be published online and made available to all. Submitted versions of all journal articles will be freely available on the University of Manchester library website.",
+   "files_released": 36,
+   "objective": "The University of Manchester has been awarded research funding from the Department of Health Policy Research Programme to analyse the impact of the Care Quality Commission's new inspection and rating system on provider performance. \n\nThe data will be used to uncover the relative impact of healthcare regulation, compared to other influences, on hospital performance.  It would not be possible to measure hospital performance, and therefore evaluate the CQC, without the datasets requested. \n\nThe research sets out to examine how providers, the public and other stakeholders respond to provider ratings, and what impacts inspection and ratings have on the quality of care and on improving performance.  Understanding how ratings work, as part of the wider inspection process, is essential if the Department of Health are to increase the potential benefits for the quality of healthcare, and reduce the costs and any adverse or unintended consequences.\n\nThere are four main questions in the research:\n-\tHow is the system of ratings meant to work, and bring about improvements in the quality of care?\n-\tHow does it work in practice, and what do providers, the public and others do in response to ratings?\n-\tWhat impact does the system of ratings have on measures of the quality of care and provider performance?\n-\tHow could the system of ratings be improved?\n\nHospital performance will be measured in the following way:\n- Mortality [within hospital/out of hospital/within 30 days]\n- Readmissions within 30 days\n- Length of stay\n- Waiting times\n- Occurrence of adverse events\n- Cancellations of surgery \n- PROMs\n\nThe data provided by NHS Digital will only be used by the members of the research team detailed in this application. The analysis conducted on these data will feed into the evaluation of the CQC which also includes qualitative researchers based at the University of Manchester and The Kings Fund. Only employees of the University of Manchester will process the data. Only aggregated outputs will be shared with researchers outside of the University and small numbers will be suppressed in line with the HES Analysis Guide\n\nThe amendment to the original application is related to the same objective. The final report has been submitted but The University of Manchester have agreed with the department of health to update the analysis using the most recent data. This is due to a shorter period of data being available for some hospitals inspected later in the CQC cycle.",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-23410-W8N9L-v2.30",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 11,
+     "first_month": "2019-04",
+     "last_month": "2019-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 11,
+     "first_month": "2019-04",
+     "last_month": "2019-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 11,
+     "first_month": "2019-04",
+     "last_month": "2019-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death - Secondary Care Cut",
+     "files": 1,
+     "first_month": "2019-04",
+     "last_month": "2019-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "files": 1,
+     "first_month": "2019-04",
+     "last_month": "2019-04",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures (Linkable to HES)",
+     "files": 1,
+     "first_month": "2019-04",
+     "last_month": "2019-04",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2017-11-28",
+   "sublicensing": "No",
+   "title": "The impact of hospital regulation on performance",
+   "version": "2.30",
+   "yielded_benefits": "The final report has been submitted to the Department of Health and shared with the CQC. In addition the findings have been presented to and discussed with the CQC board. The research is being discussed by the DH and CQC and will be used to inform future policy and practice for health care regulation. Additional benefits will be understood once feedback is received from the DH."
+  },
+  {
+   "activities": "This Agreement permits the secure storage of the data and no other processing for any purpose.\n\nThe following text describes the processing activities which were permitted under previous versions of this Data Sharing Agreement.  All processing activities described are now complete.\n\n- Data will only flow from the NHS Digital to the University of Manchester.\n- No data will be shared with third parties.\n- The data will be analysed in order to measure hospital performance. This will not involve linking data to other datasets (apart from the linkage to PROMs and ONS provided by NHS Digital). Trends in hospital performance over the period of time requested will be analysed. \n-  Requested are the years prior to the introduction of the CQC inspection in order to accurately account for historic trends in performance. This is a standard approach and required in order to measure changes in these trends, which may be due to the CQC inspection. \n\nThe data will be analysed using the statistical packages Stata and R. Regression methods will be used which will output regression results tables. No record level data will be produced as an output at any stage, only aggregated date (with small numbers suppressed in line with the HES Analysis Guide). Descriptive statistics tables of the data will be produced which will aggregate the data by year. Graphs will be produced to describe the data and these graphs will also aggregate the data by year. The outputs produced cannot be used to identify patients or sensitive information.\n\nBoth Data Centres are owned by third parties. The hardware in the data centres belong to University of Manchester, the network infrastructure is also University of Manchester, nothing is shared. Dedicated space and caged off. The study have dedicated UoM staff who manage the UoM infrastructure in both the data centres.\n\nProcessing of the data will take place on the iCSF infrastructure of the University of Manchester. \n\nA valid Active Directory account is required to login to the iCSF.  Account credentials are unique to each member of staff and only the account owner knows the password.  \n\nThe iCSF, aka Incline, is a service designed specifically for interactive computationally-intensive work, such as development and testing of parallel or data-intensive code, or interactive (GUI-based) use of applications such as Abaqus, Matlab, R, and Stata.\n\nAccess to the iCSF is limited. An isilon storage share is mounted on in the researcher’s user area. Access to the storage share is via an active directory group, set up with only those users described within the data sharing plan having access to data on the iCSF.\n\nPROMS terms and Conditions will be adhered to.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE UNIVERSITY OF MANCHESTER"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2022-10-03",
+   "expected_benefits": "The Care Quality Commission developed its system of provider ratings as part of its new regulatory model and inspection regime in 2013, piloted it in the NHS acute care sector in 2013-14 and is now developing it for use in other sectors. The new approach is radically different from the model it replaced. It uses larger and more expert inspection teams, a wider range of data and fieldwork, and produces provider ratings in five domains (safe, effective, caring, responsive and well-led) using a four-point rating scale (inadequate, requires improvement, good or outstanding) as part of a detailed narrative inspection report.\n\nThe key purpose of these provider ratings is to drive improvements in the quality of care and in provider performance, but the ways in which this might happen are complex, and there is potential for unintended consequences. This research will help CQC, the DHSC and other stakeholders to understand how the system of provider ratings works, and to find ways to increase its impact on the quality of care, minimise costs and prevent or reduce any adverse or unintended effects. This will allow the DHSC to impact on the future direction of policy, and also contribute to a wider body of knowledge on regulation/inspection and performance ratings.\n\nThe final report to the DHSC was submitted in March 2018. Since then, an additional final report was published by The Kings Fund and 5 journal articles have been published. Several meetings have been held with the CQC to establish links by which the research can be disseminated within the CQC. These updates are in addition to the final report and journal articles.\n\nOverall, this research project has helped inform the CQC about its inspection and rating system, helping to shape the development of future health regulation policy. \n\nNIHR Policy Research Units (PRUs), such as PRUComm, undertake research to inform government and arms-length bodies making policy decisions about health and social care. PRUComm provides evidence to inform the DHSC policy on the health and social care systems and commissioning to maximise outcomes for patients. \n\nGlobally, increasing demand has highlighted the importance of rapid identification, prioritisation, and evaluation of innovations in service design and delivery to meet that demand. Equally, there is recognition of the changing population demographics and the importance of ensuring that research reflects those changes. Enhancing timeliness of research and its generalisability while maintaining rigour are critical to ensuring impact of applied health research and care. Specifically, the projects funded through PRUComm or the aligned externally funded projects, provide detailed policy evaluations, and increase the evidence base around health policy. \n\nGM evaluations: It is a key aim of the GM NIHR ARC to ensure that service innovations deliver improvements in the health and wellbeing of the GM population. It is therefore required that appropriate evaluation methodology be defined and then subsequently applied - including the impacts on the entire health economy – including the impacts on secondary care. \n\nIn addition to defining and applying appropriate evaluation methodology to local innovations in GM health and social care settings, understanding the impact of Devo Manc is critical to informing future government policies relating to the devolution of decision-making power. Public services in England are highly-centralised compared with much of Western Europe, and the University of Manchester’s evaluation of the success of this devolution deal will guide the future direction of policy, in particular whether health and social care powers will be included in any future devolution deals to other English regions. It will also contribute to wider literature on the consequences of enhanced community care for secondary care use, expenditure, and efficiency. Through real-time learning, this research may also contribute to the success of devolution in Greater Manchester.\n\nOutputs from the research proposed will include innovative methods to support rapid evaluation for wider adoption, and a portfolio of tested methods to allow research to be conducted with and in the populations most affected.",
+   "expected_output": "This Agreement permits the secure storage of the data only.  No new outputs will be produced during the term of this Data Sharing Agreement.\n\nCQC evaluation:\n\nThis research has been completed and resulted in the following outputs: \n\n-\tUniversity of Manchester Final Report: Impact of the Care Quality Commission on provider performance. https://www.research.manchester.ac.uk/portal/files/77461382/cqc_provider_performance_report_september2018.pdf\n-\tThe Kings Fund Final Report: Impact of the Care Quality Commission on provider performance Room for improvement? https://www.kingsfund.org.uk/sites/default/files/2018-09/CQC-summary-september2018.pdf\n-\tJournal article #1 published in Health Policy 2020: The measurement and improvement of maternity service performance through inspection and rating: An observational study of maternity services in acute hospitals in England. https://www.sciencedirect.com/science/article/pii/S0168851020302177\n-\tJournal article #2 published in BJGP in 2020: Using quality indicators to predict inspection ratings: cross-sectional study of general practices in England. https://bjgp.org/content/bjgp/70/690/e55.full.pdf?versioned=true\n-\tJournal article #3 published in the Emergency Medicine Journal 2019: Measurement and improvement of emergency department performance through inspection and rating: an observational study of emergency departments in acute hospitals in England. https://emj.bmj.com/content/36/6/326\n-\tJournal article #4 published in International Journal for Quality in Health Care 2019: Do performance indicators predict regulator ratings of healthcare providers? Cross-sectional study of acute hospitals in England. https://academic.oup.com/intqhc/article/32/2/113/5625739\n-\tJournal article #5 published in Health Expectations in 2018: User involvement in regulation: A qualitative study of service user involvement in Care Quality Commission inspections of health and social care providers in England. https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/hex.12849\n\nPresentations were given at national and international conferences to audiences of academics and health professionals. Typical conferences are the UK Health Economists' Study Group. \n\nThe objective of the data processing activities performed on these data is to produce statistical outputs for rapid-response research as part of the PRU or other policy research as part of projects funded by the PRU or externally. The outputs will be to be used in peer-reviewed journal articles, presentations, and project reports.\n\n These outputs will predominantly consist of three types: \n•\tdescriptive tables summarising the data.\n•\tgraphs and figures summarising the data; and\n•\ttables of regression estimates.\n\nOutputs will contain only data, which is aggregated, with any small numbers suppressed in line with the HES Analysis Guide. The number of outputs - specifically articles, presentations and reports, will be determined by the findings of the analysis and by academic peer-review. \nPresentations will be given at national and international conferences to audiences of academics and health professionals. Reports and journal articles will be published online and made available to all. Submitted versions of all journal articles will be freely available on the University of Manchester library website. \nFindings are intended to be submitted to academic journals for scientific peer-review. The journals targeted for published works include:\n•\tBritish Medical Journal.\n•\tBritish Journal of General Practice.\n•\tHealth Economics.\n•\tThe Journal of Health Economics.\n•\tHealth Services Journal; and\n•\tJournal of Health Services Research & Policy.\nOutputs related to GM evaluations: The objective of the data processing activities performed on these data is to produce statistical outputs to be used in peer-reviewed journal articles, presentations and reports for the NIHR, Tameside Council and the Greater Manchester Combined Authority (GMCA).\n These outputs will consist of three types: \n•\tdescriptive tables summarising the data.\n•\tgraphs and figures summarising the data; and\n•\ttables of regression estimates.\nOutputs will contain only data, which is aggregated, with any small numbers suppressed in line with the HES Analysis Guide.\nThe number of outputs - specifically articles, presentations, and reports, will be determined by the findings of the analysis and by academic peer-review. \n\nPresentations will be given at national and international conferences to audiences of academics and health professionals. Reports and journal articles will be published online and made available to all. Submitted versions of all journal articles will be freely available on the University of Manchester library website. Findings may also provide real-time learning for:\n\n•\tHealth Innovation Manchester (HInM) and the NIHR, the body responsible for the NIHR-Applied Research Collaboration (ARC).\n•\tThe Health Foundation.\n•\tGreater Manchester Combined Authority; and\n•\tTameside Metropolitan Borough Council.\n\nThis will be facilitated through presentations and seminars to the staff of the listed organisations. \n\nFindings are intended to be submitted to academic journals for scientific peer-review. The journals targeted for published works include:\n\n•\tBritish Medical Journal.\n•\tHealth Economics.\n•\tThe Journal of Health Economics.\n•\tHealth Services Journal; and\n•\tJournal of Health Services Research & Policy.\n\nReports and journal articles will be published online and made available to all. Submitted versions of all journal articles will be freely available on the University of Manchester library website.",
+   "files_released": 0,
+   "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period in which the University of Manchester intends to apply to amend this Agreement.  \n\nData held by the University of Manchester must be securely stored and not otherwise processed.  \n\nThe following provides background information on the purpose for which the data was provided.  This purpose is now complete and no further processing of the data for this purpose is permitted.\n\nThe University of Manchester was awarded research funding from the Department of Health Policy Research Programme to analyse the impact of the Care Quality Commission's new inspection and rating system on provider performance. \n\nThe data was used to uncover the relative impact of healthcare regulation, compared to other influences, on hospital performance.  It would not be possible to measure hospital performance, and therefore evaluate the CQC, without the datasets requested. \n\nThe research set out to examine how providers, the public and other stakeholders respond to provider ratings, and what impacts inspection and ratings have on the quality of care and on improving performance.  Understanding how ratings work, as part of the wider inspection process, is essential if the Department of Health are to increase the potential benefits for the quality of healthcare, and reduce the costs and any adverse or unintended consequences.\n\nThere were four main questions in the research:\n-\tHow is the system of ratings meant to work, and bring about improvements in the quality of care?\n-\tHow does it work in practice, and what do providers, the public and others do in response to ratings?\n-\tWhat impact does the system of ratings have on measures of the quality of care and provider performance?\n-\tHow could the system of ratings be improved?\n\nHospital performance would be measured in the following way:\n- Mortality [within hospital/out of hospital/within 30 days]\n- Readmissions within 30 days\n- Length of stay\n- Waiting times\n- Occurrence of adverse events\n- Cancellations of surgery \n- PROMs\n\nThe data provided by NHS Digital would only be used by the members of the research team detailed in this application. The analysis conducted on these data would feed into the evaluation of the CQC which also includes qualitative researchers based at the University of Manchester and The Kings Fund. Only employees of the University of Manchester would process the data. Only aggregated outputs would be shared with researchers outside of the University and small numbers will be suppressed in line with the HES Analysis Guide\n\nThe final report has been submitted.",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-23410-W8N9L-v3.10",
+   "releases": [],
+   "start_date": "2021-10-04",
+   "sublicensing": "No",
+   "title": "Evaluating innovations in health and social care settings in Greater Manchester and England",
+   "version": "3.10",
+   "yielded_benefits": "The final report for the CQC work has been submitted to the DHSC and shared with the CQC. In addition the findings have been presented to and discussed with the CQC board. The research is being discussed by the DHSC and CQC and will be used to inform future policy and practice for health care regulation. Additional benefits will be understood once feedback is received from the DHSC."
+  },
+  {
+   "activities": "Pseudonymised HES, PROMs, and mortality data was supplied by NHS England to the University of Manchester.\n\nThis Agreement permits the secure storage of the data. The University of Manchester will be retaining this data for the purposes of archiving research data. Under this Agreement, data can only be processed in the circumstance that any queries arise as a result of publications. In such a case, data processing is restricted to repeated analysis.\n\nThe following text describes the processing activities which were permitted under previous versions of this Data Sharing Agreement.  All processing activities described are now complete.\n\n- The data was analysed in order to measure hospital performance. \n\nThe data was analysed using the statistical package Stata. Regression methods were used to output regression results tables. No record level data was produced as an output at any stage, only aggregated outputs by year and/or area level (e.g., Lower Layer Super Output Area (LSOA)/Hospital provider/ Clinical Commissioning Group (CCG) /GP practice), such as predicted cost of service use at varying levels of aggregation for each financial year. Examples of levels of aggregation include: \n• LSOA-age-gender (and higher level organisational structures linked to GP practice such as Middle Layer Super Output Area (MSOA), Lower Tier local authority to upper (LTLA) and Upper Tier Local Authority boundaries (UTLA))\n• GP practice-age – gender (and higher level organisational structures linked to GP practice such as CCG)\n• Hospital provider-age-gender\nSmall numbers will be suppressed in line with the HES Analysis Guide. Descriptive statistics tables of the data will be produced which will aggregate the data by year. Graphs will be produced to describe the data and these graphs will also aggregate the data by year or area level. The outputs produced cannot be used to identify patients or sensitive information.\n\nEquinix and Digital Reality provides IT hosting services to the University of Manchester and will store the data as contracted by the University of Manchester. The hardware in the data centres belong to University of Manchester, the network infrastructure is also University of Manchester, nothing is shared. The data is stored in a dedicated space and is caged off.  The study has dedicated UoM staff who manage the UoM infrastructure in both the data centres.\n\nProcessing of the data will take place on the interactive Computational Shared Facility (iCSF) infrastructure of the University of Manchester. \n\nA valid Active Directory account is required to login to the iCSF.  Account credentials are unique to each member of staff and only the account owner knows the password.  \n\nThe data will be securely stored at the University of Manchester. \n\nThe data may be accessed for a purpose specified above only. In all such circumstances, the data must remain on the University of Manchester servers, with access restricted to substantive employees of the University of Manchester or substantive employees of the organisation auditing the study.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE UNIVERSITY OF MANCHESTER"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Civil Registrations of Death - Secondary Care Cut",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "HES:Civil Registration (Deaths) bridge",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Patient Reported Outcome Measures (Linkable to HES)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2025-11-01",
+   "expected_benefits": "This data sharing agreement permits the secure retention of the existing data for the purposes of archiving research data and therefore no new benefits are expected. However, from recent completed analysis, the expected benefits are as follows:\n\nThe Care Quality Commission developed its system of provider ratings as part of its new regulatory model and inspection regime in 2013, piloted it in the NHS acute care sector in 2013-14 and is now developing it for use in other sectors. The new approach is radically different from the model it replaced. It uses larger and more expert inspection teams, a wider range of data and fieldwork, and produces provider ratings in five domains (safe, effective, caring, responsive and well-led) using a four-point rating scale (inadequate, requires improvement, good or outstanding) as part of a detailed narrative inspection report.\n\nThe key purpose of these provider ratings is to drive improvements in the quality of care and in provider performance, but the ways in which this might happen are complex, and there is potential for unintended consequences. This research will help CQC, the DHSC and other stakeholders to understand how the system of provider ratings works, and to find ways to increase its impact on the quality of care, minimise costs and prevent or reduce any adverse or unintended effects. This will allow the DHSC to impact on the future direction of policy, and also contribute to a wider body of knowledge on regulation/inspection and performance ratings.\n\nThe final report to the DHSC was submitted in March 2018. Since then, an additional final report was published by The Kings Fund and 5 journal articles have been published. Several meetings have been held with the CQC to establish links by which the research can be disseminated within the CQC. These updates are in addition to the final report and journal articles.\n\nOverall, this research project has helped inform the CQC about its inspection and rating system, helping to shape the development of future health regulation policy.",
+   "expected_output": "This Agreement permits the secure storage of the data only.  No new outputs will be produced during the term of this Data Sharing Agreement.\n\nThe CQC evaluation which has now been completed has resulted in the following outputs:\n\n- University of Manchester Final Report: Impact of the Care Quality Commission on provider performance. https://www.research.manchester.ac.uk/portal/files/77461382/cqc_provider_performance_report_september2018.pdf \n\n- The Kings Fund Final Report: Impact of the Care Quality Commission on provider performance Room for improvement? https://www.kingsfund.org.uk/sites/default/files/2018-09/CQC-summary-september2018.pdf\n\n- Journal article #1 published in Health Policy 2020: The measurement and improvement of maternity service performance through inspection and rating: An observational study of maternity services in acute hospitals in England. https://www.sciencedirect.com/science/article/pii/S0168851020302177\n\n- Journal article #2 published in BJGP in 2020: Using quality indicators to predict inspection ratings: cross-sectional study of general practices in England. https://bjgp.org/content/bjgp/70/690/e55.full.pdf?versioned=true\n\n- Journal article #3 published in the Emergency Medicine Journal 2019: Measurement and improvement of emergency department performance through inspection and rating: an observational study of emergency departments in acute hospitals in England. https://emj.bmj.com/content/36/6/326\n\n- Journal article #4 published in International Journal for Quality in Health Care 2019: Do performance indicators predict regulator ratings of healthcare providers? Cross-sectional study of acute hospitals in England. https://academic.oup.com/intqhc/article/32/2/113/5625739\n\n- Journal article #5 published in Health Expectations in 2018: User involvement in regulation: A qualitative study of service user involvement in Care Quality Commission inspections of health and social care providers in England. https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/hex.12849\n\nPresentations were given at national and international conferences to audiences of academics and health professionals.",
+   "files_released": 0,
+   "objective": "The research set out to examine how providers, the public and other stakeholders respond to provider ratings, and what impacts inspection and ratings have on the quality of care and on improving performance.  Understanding how ratings work, as part of the wider inspection process, is essential if the Department of Health are to increase the potential benefits for the quality of healthcare and reduce the costs and any adverse or unintended consequences. The University of Manchester was awarded research funding from the Department of Health Policy Research Programme to analyse the impact of the Care Quality Commission's (CQC) new inspection and rating system on provider performance. \n\nThere were four main questions in the research:\n- How is the system of ratings meant to work, and bring about improvements in the quality of care?\n- How does it work in practice, and what do providers, the public and others do in response to ratings?\n- What impact does the system of ratings have on measures of the quality of care and provider performance?\n- How could the system of ratings be improved?\n\nHospital performance would be measured in the following way:\n- Mortality [within hospital/out of hospital/within 30 days]\n- Readmissions within 30 days\n- Length of stay\n- Waiting times\n- Occurrence of adverse events\n- Cancellations of surgery \n- Patient Reported Outcome Measures (PROMs)\n\nThe University of Manchester is the sole data Controller who also processes the data. \n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe processing of data under this agreement is in the interest of public because it adheres to the UK Policy Framework for Health and Social Care Research and aims to understand how ratings work as part of the wider inspection process, what impacts inspection and ratings have on the quality of care and on improving performance by reducing the costs and any adverse or unintended consequences.\n\nThe data provided by NHS England would only be used by the members of the research team detailed in this Agreement. The analysis conducted on these data would feed into the evaluation of the CQC which also includes qualitative researchers based at the University of Manchester and The Kings Fund. Only employees of the University of Manchester would process the data. Only aggregated outputs would be shared with researchers outside of the University and small numbers will be suppressed in line with the HES Analysis Guide.\n\nThe data was used to uncover the relative impact of healthcare regulation, compared to other influences, on hospital performance.  It would not be possible to measure hospital performance and therefore evaluate the CQC, without the datasets requested. \n\nThis project has now ended (v4) and the research and the associated processing are now complete. The final report for this CQC work has been submitted to the Department of Health and Social Care (DHSC) and shared with the CQC. In addition, the findings have been presented to and discussed with the CQC board. \n\nThe University of Manchester are now applying to retain the existing data for the purposes of archiving research data. This is in accordance with the University of Manchester's Research Data Management policies and the Records Retention Schedule which state that research data and records should be archived for a minimum of 5 years after publication. \n\nThe last output from this project was the journal article published in Health Policy in November 2020, therefore the University of Manchester will archive the data until November 2025.\n\nNo additional data will be requested from NHS England.\n\nThis Agreement does not permit any further processing that involves analysis or linkage other than for the purpose of verifying findings in line with the original objectives of the study. Following publication of study findings, it is possible that the findings will be questioned or challenged by third parties through direct contact with the University of Manchester, contact via the publishing journal or an open letter. In such circumstances, the University of Manchester may re-run previous analyses to verify that the published results were accurate and may publish or write a response directly to the challenger.\n\nThe University of Manchester are not permitted to undertake different analyses to those undertaken during the original analysis. \n\nThis Agreement does not permit any onward sharing of the data with the exception that the data may be viewed for the purpose of an audit by a regulator such as the Medicines and Healthcare products Regulatory Agency (MHRA). \n\nThe data controller themselves may exercise the right to audit. \n\nIf any further data processing is required in addition to the above purposes, or if the data needs to be moved to a different location/organisation, the applicants must submit a request to amend this Agreement to NHS England before data is accessed or migrated.\n\nThe following NHS England data will be retained: \n• Hospital Episode Statistics\n• Admitted Patient Care\n• Accident & Emergency\n• Outpatients\n• Civil Registration Mortality\n• Patient Reported Outcome Measures (PROMS)\n\nThe data was minimised as follows:\n• Limited to data between 2007 and 2018\n\nThe level of all the above data will be pseudonymised data only.\n\nAll decisions concerning the retention and any potential reuse of the data are taken by the University of Manchester. The University of Manchester are therefore deemed to be sole data controller for the purpose of this Agreement.\n\nThe data will be archived and will not be accessed by any individuals other than substantive employees of the University of Manchester or employees of the auditing organisation and strictly for purposes described above.",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-23410-W8N9L-v4.10",
+   "releases": [],
+   "start_date": "2023-05-19",
+   "sublicensing": "No",
+   "title": "The impact of hospital regulation on performance",
+   "version": "4.10",
+   "yielded_benefits": "The final report for the CQC work has been submitted to the DHSC and shared with the CQC. The University of Manchester have also produced an additional final report which was published by The Kings Fund and 5 journal articles have been published. The final report was cited 35 times. Published journal articles have been cited 44 times. \n\nIn addition, the findings have been presented to and discussed with the CQC board. Feedback was received but this did not explain any additional benefits.  The research is being discussed by the DHSC and CQC and has potential to be used to inform the future DHSC strategy on healthcare inspections but specific benefits beyond this are not known."
+  }
+ ]
+}

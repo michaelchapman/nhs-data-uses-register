@@ -1,0 +1,618 @@
+{
+ "base_reference": "DARS-NIC-148118-VCXW9",
+ "versions": [
+  {
+   "activities": "Standard time-to-event analysis will be used to test for association between genotype and prognosis. Time at risk will begin on the date of diagnosis, with time under observation beginning on date of blood sample receipt. Follow-up will be censored on the date of death from any cause, or, if death did not occur, on the date of the end of the study.\nWe already have genotype data, date of diagnosis and date of blood receipt for all our cases. We therefore request death certificate data to enable us to obtain date of death and cause of death for those men in UKGPCS who have died.\n(see point 12)",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "",
+     "name": "MRIS - Personal Demographics Service",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "",
+     "name": "MRIS - Scottish NHS / Registration",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2020-05-31",
+   "expected_benefits": "The UKGPCS has been running since 1992, and gained MREC approval in 2003.  The study is UK wide and  currently 162 hospitals recruit prostate cancer patients with young onset or familial prostate cancer into the study.  The Royal Marsden Hospital has ethical approval to recruit prostate cancer patients of any age to the study.  Currently there are 10,491 patients consented to the study, and the target is 21,000 by the end of  2012.  \nEach consented patient gives a blood sample, and a family history questionnaire, and we obtain clinical data from their consultant.  Not all patients have given consent to re contact them and we do not have current addresses for many of the participants, some of whom were recruited more than 10 years ago.",
+   "expected_output": "The study aims to find genes which predispose to prostate cancer, and to determine whether variation in risk genes influence the prognosis of individuals with prostate cancer",
+   "files_released": 77,
+   "objective": "The study aims to find genes which predispose to prostate cancer, and to determine whether variation in risk genes influence the prognosis of individuals with prostate cancer.  31 regions of the genome have now been associated with prostate cancer (the majority found by our research group), and we can now begin to analyse what effects these “risk regions” have on prostate cancer aggressiveness and outcome. Our aims are to find new genetic markers to identify who might be at risk of developing prostate cancer in the future; to be able to more accurately target appropriate treatments to those patients who are most likely to have aggressive disease and to develop new drug treatments for prostate cancer. This has the potential to be able to target screening to those who would benefit from this manoeuvre and the potential to improve survival. \n (see point 10)",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v0.0",
+   "releases": [
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "files": 39,
+     "first_month": "2016-05",
+     "last_month": "2020-01",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "files": 22,
+     "first_month": "2016-06",
+     "last_month": "2020-01",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "files": 15,
+     "first_month": "2016-06",
+     "last_month": "2020-01",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "files": 1,
+     "first_month": "2018-03",
+     "last_month": "2018-03",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2011-03-24",
+   "sublicensing": "No",
+   "title": "MR1211 - UK Genetic Prostate Cancer Study",
+   "version": "0.0",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored but not otherwise processed. No new data will be provided by NHS Digital under this Agreement.\n\nThe study data, including data provided by NHS Digital under previous agreements, are currently held by The Institute of Cancer Research. \n\nThe following provides background on the processing activities undertaken prior to this Agreement:\n\nStandard time-to-event analysis will be used to test for association between genotype and prognosis. Time at risk will begin on the date of diagnosis, with time under observation beginning on date of blood sample receipt. Follow-up will be censored on the date of death from any cause, or, if death did not occur, on the date of the end of the study.\nWe already have genotype data, date of diagnosis and date of blood receipt for all our cases. We therefore request death certificate data to enable us to obtain date of death and cause of death for those men in UKGPCS who have died.\n(see point 12)",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2020-12-25",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.\n\nThe UKGPCS has been running since 1992, and gained MREC approval in 2003.  The study is UK wide and  currently 180 hospitals recruit prostate cancer patients with young onset or familial prostate cancer into the study.  The Royal Marsden Hospital has ethical approval to recruit prostate cancer patients of any age to the study.  Currently there are 22,000 patients consented to the study, and the target is 26,000 by the end of  2022.  \nEach consented patient gives a blood/saliva sample, and a family history questionnaire, and we obtain clinical data from their consultant.  Not all patients have given consent to re contact them and we do not have current addresses for many of the participants, some of whom were recruited more than 10 years ago.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nThe study aims to find genes which predispose to prostate cancer, and to determine whether variation in risk genes influence the prognosis of individuals with prostate cancer",
+   "files_released": 0,
+   "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period. This is a pragmatic approach to provide an active Agreement whilst enabling The Institute of Cancer Research to complete the necessary actions to enable a subsequent application to extend the Agreement meeting all applicable data sharing standards as published in NHS Digital’s website (see: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance).\n\nThe following provides background information on the purpose of the original study:\n\nThe study aims to find genes which predispose to prostate cancer, and to determine whether variation in risk genes influence the prognosis of individuals with prostate cancer.  130 regions of the genome have now been associated with prostate cancer (the majority found by our research group), and we can now begin to analyse what effects these “risk regions” have on prostate cancer aggressiveness and outcome. Our aims are to find new genetic markers to identify who might be at risk of developing prostate cancer in the future; to be able to more accurately target appropriate treatments to those patients who are most likely to have aggressive disease and to develop new drug treatments for prostate cancer. This has the potential to be able to target screening to those who would benefit from this manoeuvre and the potential to improve survival. \n (see point 10)",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v1.6",
+   "releases": [],
+   "start_date": "2020-06-01",
+   "sublicensing": "No",
+   "title": "MR1211 - UK Genetic Prostate Cancer Study",
+   "version": "1.6",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored but not otherwise processed.  No new data will be provided by NHS Digital under this Agreement.\n\nPermission for the ICR to retain and reuse the data previously supplied beyond the term of this Data Sharing Agreement will be contingent on the ICR's ability to evidence a legal basis for continuing access to patient confidential data and will be subject to approval of a future application meeting all NHS Digital data sharing standards that apply.  See: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance\n\nThe study data, including data provided by NHS Digital under previous Agreements, are currently held by The Institute of Cancer Research. \n\nIn order for the cohort to be linked the following identifiers were supplied to NHS Digital (*or predecessor organisations):\n\no\tNHS Number\no\tForenames\no\tSurname \no\tDate of Birth\no\tSex \no\tPostcode\no\tStudy ID\n\nNHS Digital* returned the following data to the Institute of Cancer Research:\n\no\tCivil Registration Deaths\no\tDemographic Data: NHS number, Forenames/Surname, latest patient registration \no\tCancer Data: Cancer registration number, type, and behaviour code of cancer. Cancer registry centre code, ICD10 site code as well as cancer anniversary year/month and day.\n\nThe ICR has not been authorised to onwardly share the data above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2022-09-12",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nAll previous publications are listed on the UKGPCS website: www.icr.ac.uk/ukgpcs",
+   "files_released": 0,
+   "objective": "Under this Data Sharing Agreement, the Institute of Cancer Research (ICR) is permitted to securely retain data supplied between 2011 and 2019 for an interim period in which the actions described below must be completed.\n\nDuring the term of this Agreement, the data must be stored in a secure location and may not be processed for any other purpose.\n\nIn the event that the ICR has previously shared data covered by this Agreement, in any form which does not meet the definition of Derived Data as stipulated in the ICR's Data Sharing Framework Contract, the ICR is must make reasonable efforts to secure that data including data destruction where possible or ensuring data is securely stored and not otherwise processed where data destruction is not possible.\n\nThe data was originally supplied to the ICR under a Data Sharing Agreement with the ICR and the Royal Mardsen NHS Foundation Trust for the purpose of the UK Genetic Prostate Cancer Study (UKGPCS).  The UKGPCS was first established in 1992 and is the largest prostate cancer study of its kind in the UK, involving nearly 200 hospitals. \n \nThe study recruited patients who gave consent to participate in the study.  Identifying details of consented participants were provided to NHS Digital (or predecessor organisations) for linkage.  Notifications of participant deaths (date and cause of death), cancer registrations and Demographics data (NHS number, Forenames/Surname, latest patient registration) were provided back to the ICR for the purpose of the study.  NHS Digital currently holds the details of 19,324 study participants.\n\nBy 2021, the study had recruited over 22,500 participants and aimed to recruit 26,000 by the end of 2022.  Each consented patient gives a blood/saliva sample, and a family history questionnaire, and The Institute of Cancer Research (ICR) obtain clinical data from their referring hospital or consultant.  \n\nThe study aims to find genetic changes which are associated with prostate cancer risk.  If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\no\tTo screen other family members to see if they are also at a higher risk of developing prostate cancer,\no\tTo develop new prostate cancer treatments for the future.\n\nThe ICR’s legal basis for processing this information is for the performance of a task carried out in the public interest Article 6 (1) (e). The ICR processes sensitive health and genetic information for the purposes of scientific research with appropriate safeguards in place to protect personal information, (Article 9 (2) (j), as required by the EU General Data Protection Regulation.\n\nThe data subjects are men who fit into at least one of the following groups:\no\tThey have been diagnosed with prostate cancer and a first, second or third degree relative where at least one of these men were diagnosed with prostate cancer at 65 years of age or under.\no\tThey are affected and have 3 or more cases of prostate cancer on one side of their family.\no\tThey are a prostate cancer patient at the Royal Marsden NHS Foundation Trust.\no\tThey are taking part in the CyberKnife prostate SBRT studies.   \n\nNHS Digital has reviewed the patient information and consent forms used in recruitment and requires the ICR to provide further reassurance of a legal basis for processing confidential patient data for all study participants involved.\n\nNHS Digital requires the ICR to review the roles of the organisations involved in the study and to provide a clear explanation of which organisations are and are not data controllers as supported by the facts.\n\nNHS Digital notes that the ICR has supplied \"anonymised data from this to other studies under an MTA\" (Material Transfer Agreement).  NHS Digital requires clarification of whether any data covered by this Agreement has been shared with third parties and/or whether there is an intention to onwardly share data under this Agreement in the future subject to the necessary approvals.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v2.7",
+   "releases": [],
+   "start_date": "2021-09-13",
+   "sublicensing": "No",
+   "title": "MR1211 - UK Genetic Prostate Cancer Study",
+   "version": "2.7",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored but not otherwise processed.  No new data will be provided by NHS Digital under this Agreement.\n\nPermission for the ICR to retain and reuse the data previously supplied beyond the term of this Data Sharing Agreement will be contingent on the ICR's ability to evidence a legal basis for continuing access to patient confidential data and will be subject to approval of a future application meeting all NHS Digital data sharing standards that apply.  See: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance\n\nThe study data, including data provided by NHS Digital under previous Agreements, are currently held by The Institute of Cancer Research. \n\nIn order for the cohort to be linked the following identifiers were supplied to NHS Digital (*or predecessor organisations):\n\no\tNHS Number\no\tForenames\no\tSurname \no\tDate of Birth\no\tSex \no\tPostcode\no\tStudy ID\n\nNHS Digital* returned the following data to the Institute of Cancer Research:\n\no\tCivil Registration Deaths\no\tDemographic Data: NHS number, Forenames/Surname, latest patient registration \no\tCancer Data: Cancer registration number, type, and behaviour code of cancer. Cancer registry centre code, ICD10 site code as well as cancer anniversary year/month and day.\n\nThe ICR has not been authorised to onwardly share the data above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2022-11-15",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nAll previous publications are listed on the UKGPCS website: www.icr.ac.uk/ukgpcs",
+   "files_released": 0,
+   "objective": "Under this Data Sharing Agreement, the Institute of Cancer Research (ICR) is permitted to securely retain data supplied between 2011 and 2019 for an interim period in which the actions described below must be completed.\n\nDuring the term of this Agreement, the data must be stored in a secure location and may not be processed for any other purpose.\n\nIn the event that the ICR has previously shared data covered by this Agreement, in any form which does not meet the definition of Derived Data as stipulated in the ICR's Data Sharing Framework Contract, the ICR is must make reasonable efforts to secure that data including data destruction where possible or ensuring data is securely stored and not otherwise processed where data destruction is not possible.\n\nThe data was originally supplied to the ICR under a Data Sharing Agreement with the ICR and the Royal Mardsen NHS Foundation Trust for the purpose of the UK Genetic Prostate Cancer Study (UKGPCS).  The UKGPCS was first established in 1992 and is the largest prostate cancer study of its kind in the UK, involving nearly 200 hospitals. \n \nThe study recruited patients who gave consent to participate in the study.  Identifying details of consented participants were provided to NHS Digital (or predecessor organisations) for linkage.  Notifications of participant deaths (date and cause of death), cancer registrations and Demographics data (NHS number, Forenames/Surname, latest patient registration) were provided back to the ICR for the purpose of the study.  NHS Digital currently holds the details of 19,324 study participants.\n\nBy 2021, the study had recruited over 22,500 participants and aimed to recruit 26,000 by the end of 2022.  Each consented patient gives a blood/saliva sample, and a family history questionnaire, and The Institute of Cancer Research (ICR) obtain clinical data from their referring hospital or consultant.  \n\nThe study aims to find genetic changes which are associated with prostate cancer risk.  If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\no\tTo screen other family members to see if they are also at a higher risk of developing prostate cancer,\no\tTo develop new prostate cancer treatments for the future.\n\nThe ICR’s legal basis for processing this information is for the performance of a task carried out in the public interest Article 6 (1) (e). The ICR processes sensitive health and genetic information for the purposes of scientific research with appropriate safeguards in place to protect personal information, (Article 9 (2) (j), as required by the EU General Data Protection Regulation.\n\nThe data subjects are men who fit into at least one of the following groups:\no\tThey have been diagnosed with prostate cancer and a first, second or third degree relative where at least one of these men were diagnosed with prostate cancer at 65 years of age or under.\no\tThey are affected and have 3 or more cases of prostate cancer on one side of their family.\no\tThey are a prostate cancer patient at the Royal Marsden NHS Foundation Trust.\no\tThey are taking part in the CyberKnife prostate SBRT studies.   \n\nNHS Digital has reviewed the patient information and consent forms used in recruitment and requires the ICR to provide further reassurance of a legal basis for processing confidential patient data for all study participants involved.\n\nNHS Digital requires the ICR to review the roles of the organisations involved in the study and to provide a clear explanation of which organisations are and are not data controllers as supported by the facts.\n\nNHS Digital notes that the ICR has supplied \"anonymised data from this to other studies under an MTA\" (Material Transfer Agreement).  NHS Digital requires clarification of whether any data covered by this Agreement has been shared with third parties and/or whether there is an intention to onwardly share data under this Agreement in the future subject to the necessary approvals.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v3.2",
+   "releases": [],
+   "start_date": "2022-09-27",
+   "sublicensing": "No",
+   "title": "MR1211 - UK Genetic Prostate Cancer Study",
+   "version": "3.2",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "Under this Agreement, the data may be securely stored but not otherwise processed.  No new data will be provided by NHS Digital under this Agreement.\n\nPermission for the ICR to retain and reuse the data previously supplied beyond the term of this Data Sharing Agreement will be contingent on the ICR's ability to evidence a legal basis for continuing access to patient confidential data and will be subject to approval of a future application meeting all NHS Digital data sharing standards that apply.  See: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance\n\nThe study data, including data provided by NHS Digital under previous Agreements, are currently held by The Institute of Cancer Research. \n\nIn order for the cohort to be linked the following identifiers were supplied to NHS Digital (*or predecessor organisations):\n\no\tNHS Number\no\tForenames\no\tSurname \no\tDate of Birth\no\tSex \no\tPostcode\no\tStudy ID\n\nNHS Digital* returned the following data to the Institute of Cancer Research:\n\no\tCivil Registration Deaths\no\tDemographic Data: NHS number, Forenames/Surname, latest patient registration \no\tCancer Data: Cancer registration number, type, and behaviour code of cancer. Cancer registry centre code, ICD10 site code as well as cancer anniversary year/month and day.\n\nThe ICR has not been authorised to onwardly share the data above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2023-03-31",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nAll previous publications are listed on the UKGPCS website: www.icr.ac.uk/ukgpcs",
+   "files_released": 0,
+   "objective": "Under this Data Sharing Agreement, the Institute of Cancer Research (ICR) is permitted to securely retain data supplied between 2011 and 2019 for an interim period in which the actions described below must be completed.\n\nDuring the term of this Agreement, the data must be stored in a secure location and may not be processed for any other purpose.\n\nIn the event that the ICR has previously shared data covered by this Agreement, in any form which does not meet the definition of Derived Data as stipulated in the ICR's Data Sharing Framework Contract, the ICR is must make reasonable efforts to secure that data including data destruction where possible or ensuring data is securely stored and not otherwise processed where data destruction is not possible.\n\nThe data was originally supplied to the ICR under a Data Sharing Agreement with the ICR and the Royal Marsden NHS Foundation Trust for the purpose of the UK Genetic Prostate Cancer Study (UKGPCS).  The UKGPCS was first established in 1992 and is the largest prostate cancer study of its kind in the UK, involving nearly 200 hospitals. \n \nThe study recruited patients who gave consent to participate in the study.  Identifying details of consented participants were provided to NHS Digital (or predecessor organisations) for linkage.  Notifications of participant deaths (date and cause of death), cancer registrations and Demographics data (NHS number, Forenames/Surname, latest patient registration) were provided back to the ICR for the purpose of the study.  NHS Digital currently holds the details of 19,324 study participants.\n\nBy 2021, the study had recruited over 22,500 participants and aimed to recruit 26,000 by the end of 2022.  Each consented patient gives a blood/saliva sample, and a family history questionnaire, and The Institute of Cancer Research (ICR) obtain clinical data from their referring hospital or consultant.  \n\nThe study aims to find genetic changes which are associated with prostate cancer risk.  If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\no\tTo screen other family members to see if they are also at a higher risk of developing prostate cancer,\no\tTo develop new prostate cancer treatments for the future.\n\nThe ICR’s legal basis for processing this information is for the performance of a task carried out in the public interest Article 6 (1) (e). The ICR processes sensitive health and genetic information for the purposes of scientific research with appropriate safeguards in place to protect personal information, (Article 9 (2) (j), as required by the EU General Data Protection Regulation.\n\nThe data subjects are men who fit into at least one of the following groups:\no\tThey have been diagnosed with prostate cancer and a first, second or third degree relative where at least one of these men were diagnosed with prostate cancer at 65 years of age or under.\no\tThey are affected and have 3 or more cases of prostate cancer on one side of their family.\no\tThey are a prostate cancer patient at the Royal Marsden NHS Foundation Trust.\no\tThey are taking part in the CyberKnife prostate SBRT studies.   \n\nNHS Digital has reviewed the patient information and consent forms used in recruitment and requires the ICR to provide further reassurance of a legal basis for processing confidential patient data for all study participants involved.\n\nNHS Digital requires the ICR to review the roles of the organisations involved in the study and to provide a clear explanation of which organisations are and are not data controllers as supported by the facts.\n\nNHS Digital notes that the ICR has supplied \"anonymised data from this to other studies under an MTA\" (Material Transfer Agreement).  NHS Digital requires clarification of whether any data covered by this Agreement has been shared with third parties and/or whether there is an intention to onwardly share data under this Agreement in the future subject to the necessary approvals.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v4.2",
+   "releases": [],
+   "start_date": "2022-12-02",
+   "sublicensing": "No",
+   "title": "MR1211 - UK Genetic Prostate Cancer Study",
+   "version": "4.2",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "Under this Data Sharing Agreement, the Institute of Cancer Research (ICR) is permitted to retain data that was supplied under previous iterations of this DSA. The DSA does not permit any other processing of the data.  \n\nIn order for the cohort to be linked the following identifiers were supplied to NHS England (*or predecessor organisations):\n\no NHS Number\no Forenames\no Surname \no Date of Birth\no Sex \no Postcode\no Study ID\n\nNHS England* returned the following data to the Institute of Cancer Research:\n\no Civil Registration Deaths\no Demographic Data: NHS number, Forenames/Surname, latest patient registration \no Cancer Data: Cancer registration number, type, and behaviour code of cancer. Cancer registry centre code, ICD10 site code as well as cancer anniversary year/month and day.\n\nThe ICR has not been authorised to onwardly share the data above.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Cancer Registration Data",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Demographics",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2024-01-18",
+   "expected_benefits": "This Agreement permits the secure retention of the data only and no other processing.",
+   "expected_output": "This Agreement permits the secure retention of the data only and no other processing.\n\nNo new outputs will be produced under this Data Sharing Agreement.\n\nAll previous publications are listed on the UKGPCS website: www.icr.ac.uk/ukgpcs",
+   "files_released": 0,
+   "objective": "Under this Data Sharing Agreement, the Institute of Cancer Research (ICR) is permitted to retain data that was supplied under previous iterations of this DSA. The DSA does not permit any other processing of the data.  \n\nThe data was originally supplied to the ICR under a Data Sharing Agreement with the ICR and the Royal Marsden NHS Foundation Trust for the purpose of the UK Genetic Prostate Cancer Study (UKGPCS).  The UKGPCS was first established in 1992 and is the largest prostate cancer study of its kind in the UK, involving nearly 200 hospitals. \n \nThe study recruited patients who gave consent to participate in the study.  Identifying details of consented participants were provided to NHS Digital (or predecessor organisations) for linkage.  Notifications of participant deaths (date and cause of death), cancer registrations and Demographics data (NHS number, Forenames/Surname, latest patient registration) were provided back to the ICR for the purpose of the study.  NHS England currently holds the details of 19,324 study participants.\n\nBy 2021, the study had recruited over 22,500 participants and aimed to recruit 26,000 by the end of 2022.  Each consented patient gives a blood/saliva sample, and a family history questionnaire, and The Institute of Cancer Research (ICR) obtain clinical data from their referring hospital or consultant.  \n\nThe study aims to find genetic changes which are associated with prostate cancer risk.  If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\no To screen other family members to see if they are also at a higher risk of developing prostate cancer,\no To develop new prostate cancer treatments for the future.\n\nThe ICR’s legal basis for processing this information is for the performance of a task carried out in the public interest Article 6 (1) (e). The ICR processes sensitive health and genetic information for the purposes of scientific research with appropriate safeguards in place to protect personal information, (Article 9 (2) (j), as required by the EU General Data Protection Regulation.\n\nThe data subjects are men who fit into at least one of the following groups:\no They have been diagnosed with prostate cancer and a first, second or third degree relative where at least one of these men were diagnosed with prostate cancer at 65 years of age or under.\no They are affected and have 3 or more cases of prostate cancer on one side of their family.\no They are a prostate cancer patient at the Royal Marsden NHS Foundation Trust.\no They are taking part in the CyberKnife prostate SBRT studies.   \n\nNHS England has reviewed the patient information and consent forms used in recruitment and requires the ICR to provide further reassurance of a legal basis for processing confidential patient data for all study participants involved.\n\nNHS England requires the ICR to review the roles of the organisations involved in the study and to provide a clear explanation of which organisations are and are not data controllers as supported by the facts.\n\nNHS England notes that the ICR has supplied \"anonymised data from this to other studies under an MTA\" (Material Transfer Agreement).  NHS England requires clarification of whether any data covered by this Agreement has been shared with third parties and/or whether there is an intention to onwardly share data under this Agreement in the future subject to the necessary approvals.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v5.5",
+   "releases": [],
+   "start_date": "2023-07-24",
+   "sublicensing": "No",
+   "title": "MR1211 - UK Genetic Prostate Cancer Study",
+   "version": "5.5",
+   "yielded_benefits": ""
+  },
+  {
+   "activities": "ICR will transfer data to NHS England. The data will consist of identifying details (specifically NHS Number, forenames, surname, Date of Birth, Postcode, Sex, Study ID) for the cohort to be linked with NHS England data \n\nNHS England data will provide the relevant records from the Civil Registrations Deaths datasets to ICR.  The data will contain directly identifying data items including -Study ID, Cause of Death and Date of Death which are required to link the Data at record level with data already held by the recipient.\n\nThe data will not be transferred to any other location.\n\nThe data will be stored on servers at ICR. \n\nThe Data will be accessed by authorised personnel via remote access.   \n \nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n \nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n \nThe above applies in addition to any condition set out elsewhere within the DSA.\n\nThe data will be processed in England. \n\nData will be accessed by individuals with an honorary contract with ICR.  The individual(s) will act as an agent of ICR at all times under supervision from employees of ICR.  Aside from these individuals, access is restricted to employees or agents of ICR who have authorisation from the Principal Investigator.\n\nAll personnel accessing the data have been appropriately trained in data protection and confidentiality.\n\nThe data will be linked to clinical data obtained from the consented participant’s referring hospital or consultant.\n\nThere will be no requirement and no attempt to reidentify individuals when using the data.\n\nThe Data Controller intends to create a dataset under this Data Sharing Agreement. The metadata associated with the dataset and other information as required will be submitted to NHS England. NHS England will then decide whether it may be categorised as Derived Data under the definition set out in the DSFC.  \n\nThe Data Controller is accountable for the Derived Data and must ensure it is only used for purposes as identified in this DSA.   \n\nThe definition of the Derived Data asset (e.g. fields contained within it) must not be amended without prior approval by NHS England.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Health and Social Care Act 2012 – s261(2)(c); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2027-02-15",
+   "expected_benefits": "The use of the data could :\n\n• help the system to better understand the health and care needs of populations. \n• lead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience.\n\nThe study aims to find genetic changes which are associated with prostate cancer risk. If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\n\no To screen other family members to see if they are also at a higher risk of developing prostate cancer,\no To develop new prostate cancer treatments for the future.\n\nThe study aims to find genes which predispose to prostate cancer, and to determine whether variation in risk genes influence the prognosis of individuals with prostate cancer. Greater than 400 regions of the genome have now been associated with prostate cancer (the majority found by our research group), and we can now begin to analyse what effects these “risk regions” have on prostate cancer aggressiveness and outcome. Our aims are to find new genetic markers to identify who might be at risk of developing prostate cancer in the future; to be able to more accurately target appropriate treatments to those patients who are most likely to have aggressive disease and to develop new treatments for prostate cancer. This has the potential to be able to target screening to those who would benefit from this manoeuvre and the potential to improve survival.",
+   "expected_output": "The expected outputs of the processing will be:\n\n• Submissions to peer-reviewed journals - All previous publications are listed on the UKGPCS website: www.icr.ac.uk/ukgpcs \n• Presentations at appropriate conferences\n\nThe outputs will not contain NHS England data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n• Journals\n• Participant newsletters (used historically)\n•  UKGPCS website\n\nThe target dates are from the end of 2024 up to 2027.\n\nThe Data Controller intends to create a dataset under this Data Sharing Agreement. NHS England will then decide whether it may be categorised as Derived Data under the definition set out in the DSFC.",
+   "files_released": 0,
+   "objective": "The Institute of Cancer Research (ICR) requires access to NHS England data for the purpose of the following research project: The UK Genetic Prostate Cancer Study (UKGPC)\n\nThe following is a summary of the aims of the research project provided ICR:\n“The study aims to find genetic changes which are associated with prostate cancer risk.  If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\n• To screen other family members to see if they are also at a higher risk of developing prostate cancer,\n• To develop new prostate cancer treatments for the future.”\n\nThe following NHS England data will be accessed: \n• Civil Registration Mortality– necessary when assessing the survival analysis.\n\nThe level of the data will be: Identifiable. \n• Identifiable – necessary because although the applicant will pseudonymise the data before analysis, reidentifying is required to enable linkage of the data with data collected from other sources such as clinical data of consented participants from the referring hospital or consultant that has been shared with ICR.\n\nThe data will be minimised as follows. \n• Limited to a study cohort identified by ICR –10,604 consented participants and 8,720 covered by Section 251.\n• Limited to data between the participant’s inclusion into the study until 2026. \n\nThe data subjects are men who fit into at least one of the following groups:\no They have been diagnosed with prostate cancer and a first, second or third degree relative where at least one of these men were diagnosed with prostate cancer at 65 years of age or under. \no They are affected and have 3 or more cases of prostate cancer on one side of their family. \no They are a prostate cancer patient at the Royal Marsden NHS Foundation Trust (RMH)\n\nICR is the research sponsor and the controller as the organisation responsible for ensuring that the data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding comes from multiple sources.  Current funders include: \n• Cancer Research UK\n• NIH\n• NIHR\n• Prostate Cancer UK (formerly PCCT)\n• Prof. Eeles Research Fund\n• The ICR Everyman Campaign\n• Movember\n\nFunding to continue the work described will be sought on an ongoing basis. The funder(s) will have no ability to suppress or otherwise limit the publication of findings\n\nAn optional questionnaire looking at Gene-Environment Interactions in Prostate Cancer as part of this study is conducted in collaboration with the University of Manchester (UoM). The leading professor at UoM holds an Honorary Contract with ICR. The professor’s team at UoM will be responsible for analysing and storing the data collected on this questionnaire – this does not include any data that is disseminated from NHS England. UoM does not obtain any data from NHS England (via ICR) but the epidemiological questionnaires via the participants (at RMH). So while UoM might have some authority over these questionnaires, the UoM does not for the data from NHS England under this Data Sharing Agreement.\n\nThe data will therefore be accessed by:\n•\tSubstantive employees of ICR\n•\tIndividuals with honorary contracts with ICR\n\nThe Institute of Cancer Research (ICR) work closely with a group of experienced public contributors in their research to review grants, protocols, and amendments and assist in the writing of /public-facing documents. Their support is invaluable in decision-making about The Institute of Cancer Research (ICR) research projects and they contribute to the following:\n\na)           Oversee all patient and public-facing information\nb)           Identify & provide input to projects in respect of patient priorities and impact throughout the duration of the projects\nc)           Help to frame research results and participate in dissemination and engagement across multiple channels and formats over and above academic output\n\nRMH works with  >200 public contributors involved in various projects and their Cancer Patients’ Voice digital platform extends this reach to diverse and underserved groups nationally. RMH contributors benefit from a wide infrastructure for patient and public involvement, including an ‘onboarding’ process with dedicated training.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v6.4",
+   "releases": [],
+   "start_date": "2024-02-16",
+   "sublicensing": "No",
+   "title": "UK Genetic Prostate Cancer Study",
+   "version": "6.4",
+   "yielded_benefits": "The academic papers produced have contributed to the body of evidence which informs the public and/or key decision-makers involved in the health/social care system including medical professionals and policy-makers.\n\nThe NHS England data received for the UKGPCS study have been used to develop a genetic risk model that can provide personalised predicted prostate cancer risks on the basis of known moderate-to high-risk pathogenic variants, low-risk common genetic variants, and explicit cancer family history. The model will assist in counselling men concerned about their risk and can facilitate future risk-stratified population screening approaches."
+  },
+  {
+   "activities": "ICR will transfer data to NHS England. The data will consist of identifying details (specifically NHS Number, forenames, surname, Date of Birth, Postcode, Sex, Study ID) for the cohort to be linked with NHS England data \n\nNHS England data will provide the relevant records from the Civil Registrations Deaths datasets to ICR.  The data will contain directly identifying data items including -Study ID, Cause of Death and Date of Death which are required to link the Data at record level with data already held by the recipient.\n\nThe data will not be transferred to any other location.\n\nThe data will be stored on servers at ICR. \n\nThe Data will be accessed by authorised personnel via remote access.   \n \nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n \nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n \nThe above applies in addition to any condition set out elsewhere within the DSA.\n\nThe data will be processed in England. \n\nData will be accessed by individuals with an honorary contract with ICR.  The individual(s) will act as an agent of ICR at all times under supervision from employees of ICR.  Aside from these individuals, access is restricted to employees or agents of ICR who have authorisation from the Principal Investigator.\n\nAll personnel accessing the data have been appropriately trained in data protection and confidentiality.\n\nThe data will be linked to clinical data obtained from the consented participant’s referring hospital or consultant.\n\nThere will be no requirement and no attempt to reidentify individuals when using the data.\n\nThe Data Controller intends to create a dataset under this Data Sharing Agreement. The metadata associated with the dataset and other information as required will be submitted to NHS England. NHS England will then decide whether it may be categorised as Derived Data under the definition set out in the DSFC.  \n\nThe Data Controller is accountable for the Derived Data and must ensure it is only used for purposes as identified in this DSA.   \n\nThe definition of the Derived Data asset (e.g. fields contained within it) must not be amended without prior approval by NHS England.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2027-02-15",
+   "expected_benefits": "The use of the data could :\n\n• help the system to better understand the health and care needs of populations. \n• lead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience.\n\nThe study aims to find genetic changes which are associated with prostate cancer risk. If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\n\no To screen other family members to see if they are also at a higher risk of developing prostate cancer,\no To develop new prostate cancer treatments for the future.\n\nThe study aims to find genes which predispose to prostate cancer, and to determine whether variation in risk genes influence the prognosis of individuals with prostate cancer. Greater than 400 regions of the genome have now been associated with prostate cancer (the majority found by our research group), and we can now begin to analyse what effects these “risk regions” have on prostate cancer aggressiveness and outcome. Our aims are to find new genetic markers to identify who might be at risk of developing prostate cancer in the future; to be able to more accurately target appropriate treatments to those patients who are most likely to have aggressive disease and to develop new treatments for prostate cancer. This has the potential to be able to target screening to those who would benefit from this manoeuvre and the potential to improve survival.",
+   "expected_output": "The expected outputs of the processing will be:\n\n• Submissions to peer-reviewed journals - All previous publications are listed on the UKGPCS website: www.icr.ac.uk/ukgpcs \n• Presentations at appropriate conferences\n\nThe outputs will not contain NHS England data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n• Journals\n• Participant newsletters (used historically)\n•  UKGPCS website\n\nThe target dates are from the end of 2024 up to 2027.\n\nThe Data Controller intends to create a dataset under this Data Sharing Agreement. NHS England will then decide whether it may be categorised as Derived Data under the definition set out in the DSFC.",
+   "files_released": 1,
+   "objective": "The Institute of Cancer Research (ICR) requires access to NHS England data for the purpose of the following research project: The UK Genetic Prostate Cancer Study (UKGPC)\n\nThe following is a summary of the aims of the research project provided ICR:\n“The study aims to find genetic changes which are associated with prostate cancer risk.  If the study can find alterations in genes that increase the chances of getting prostate cancer, it may be possible in the future to use this knowledge:\n• To screen other family members to see if they are also at a higher risk of developing prostate cancer,\n• To develop new prostate cancer treatments for the future.”\n\nThe following NHS England data will be accessed: \n• Civil Registration Mortality– necessary when assessing the survival analysis.\n\nThe level of the data will be: Identifiable. \n• Identifiable – necessary because although the applicant will pseudonymise the data before analysis, reidentifying is required to enable linkage of the data with data collected from other sources such as clinical data of consented participants from the referring hospital or consultant that has been shared with ICR.\n\nThe data will be minimised as follows. \n• Limited to a study cohort identified by ICR –10,604 (aprx) consented participants (covered under DSA (DARS-NIC-148118) and 8,720 (aprx) covered by Section 251 and Consultee Advice (covered under DSA DARS-NIC-790414)\n• Limited to data between the participant’s inclusion into the study until 2026\n\nThe data subjects are men who fit into at least one of the following groups:\no They have been diagnosed with prostate cancer and a first, second or third degree relative where at least one of these men were diagnosed with prostate cancer at 65 years of age or under. \no They are affected and have 3 or more cases of prostate cancer on one side of their family. \no They are a prostate cancer patient at the Royal Marsden NHS Foundation Trust (RMH)\n\nICR is the research sponsor and the controller as the organisation responsible for ensuring that the data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding comes from multiple sources.  Current funders include: \n• Cancer Research UK\n• NIH\n• NIHR\n• Prostate Cancer UK (formerly PCCT)\n• Prof. Eeles Research Fund\n• The ICR Everyman Campaign\n• Movember\n\nFunding to continue the work described will be sought on an ongoing basis. The funder(s) will have no ability to suppress or otherwise limit the publication of findings\n\nAn optional questionnaire looking at Gene-Environment Interactions in Prostate Cancer as part of this study is conducted in collaboration with the University of Manchester (UoM). The leading professor at UoM holds an Honorary Contract with ICR. The professor’s team at UoM will be responsible for analysing and storing the data collected on this questionnaire – this does not include any data that is disseminated from NHS England. UoM does not obtain any data from NHS England (via ICR) but the epidemiological questionnaires via the participants (at RMH). So while UoM might have some authority over these questionnaires, the UoM does not for the data from NHS England under this Data Sharing Agreement.\n\nThe data will therefore be accessed by:\n•\tSubstantive employees of ICR\n•\tIndividuals with honorary contracts with ICR\n\nThe Institute of Cancer Research (ICR) work closely with a group of experienced public contributors in their research to review grants, protocols, and amendments and assist in the writing of /public-facing documents. Their support is invaluable in decision-making about The Institute of Cancer Research (ICR) research projects and they contribute to the following:\n\na)           Oversee all patient and public-facing information\nb)           Identify & provide input to projects in respect of patient priorities and impact throughout the duration of the projects\nc)           Help to frame research results and participate in dissemination and engagement across multiple channels and formats over and above academic output\n\nRMH works with  >200 public contributors involved in various projects and their Cancer Patients’ Voice digital platform extends this reach to diverse and underserved groups nationally. RMH contributors benefit from a wide infrastructure for patient and public involvement, including an ‘onboarding’ process with dedicated training.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-148118-VCXW9-v7.2",
+   "releases": [
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2025-10",
+     "last_month": "2025-10",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2025-08-22",
+   "sublicensing": "No",
+   "title": "UK Genetic Prostate Cancer Study (consent)",
+   "version": "7.2",
+   "yielded_benefits": "The academic papers produced have contributed to the body of evidence which informs the public and/or key decision-makers involved in the health/social care system including medical professionals and policy-makers.\n\nThe NHS England data received for the UKGPCS study have been used to develop a genetic risk model that can provide personalised predicted prostate cancer risks on the basis of known moderate-to high-risk pathogenic variants, low-risk common genetic variants, and explicit cancer family history. The model will assist in counselling men concerned about their risk and can facilitate future risk-stratified population screening approaches."
+  }
+ ]
+}

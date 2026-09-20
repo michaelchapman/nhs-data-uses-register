@@ -1,0 +1,91 @@
+{
+ "base_reference": "DARS-NIC-701727-S2X0Q",
+ "versions": [
+  {
+   "activities": "Change Grow Live (CGL) will transfer data to NHS England.  The data will consist of identifying details (specifically NHS Number, Date of Birth, Postcode, Gender and a unique person ID) for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the datasets Hospital Episode Statistics (Admitted Patient Care and Accident & Emergency), Civil Registrations of Death and Emergency Care (ECDS) datasets to University of Bristol. The data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nSeparately, CGL will send the University of Bristol clinical data such as OAT prescription details, assessment information and health and safety information alongside the person-ID. Once the University of Bristol has linked the data, the person-ID will be removed. \n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at University of Bristol. The data will not be backed-up at another location.\n\nThe Data will be accessed by authorised personnel onsite at the premises of UoB or via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThe Data will not leave England at any time.\n\nData will be accessed by individuals from CGL with an honorary contract with The University of Bristol. Aside from these individuals, access is restricted to employees of the University of Bristol who have authorisation from the Principal Investigator.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nAnalysts/researchers from the UoB or CGL will process/analyse the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "CHANGE GROW LIVE",
+    "UNIVERSITY OF BRISTOL"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2028-03-24",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study.\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to specific patients. \n\nClients will need to take action based on the information provided to them in order to realise the potential improvement opportunities.",
+   "expected_output": "The expected outputs of the processing will be:\n\n•\tA report of findings will be published in a peer- review scientific journal.  The target journal for the main results paper will be Addiction (https://addictionjournal.org/). Failing acceptance here back-up journals will be Substance Use & Addiction Journal (https://journals.sagepub.com/home/saj) and Journal of Addiction Medicine (https://journals.lww.com/journaladdictionmedicine/). It is hoped that the submission of the main results paper will be towards the end of 2025\n\n•\tAbstracts will be submitted to the following conferences in 2025 (dates depending on abstract submission openings and deadlines): Society for the study of addiction annual conference, Social Science and Medicine and Health Services Research UK. These conferences all generally take place in the autumn.\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived",
+   "files_released": 20,
+   "objective": "The University of Bristol (UoB) and the Change Grow Live (CGL) require access to the NHS England data for the purpose of the following research project:\n\nNatural Experiment of the impact of supervised Opiate Agonist Therapy (OAT) consumption on drug related harm and treatment outcomes.\n\nThe following is a summary of the aims of the research project provided by the University of Bristol (UoB) and the Change Grow Live (CGL):\n\n\"The primary aim of this research project is to conduct a natural experiment to evaluate the association between changes in supervised Opioid Agonist Treatment (OAT) provision—suspended during the COVID-19 pandemic—and outcomes such as fatal and non-fatal overdoses, drug-related deaths, and treatment retention.\n\nThe Secondary objectives are:\n\n•\tCreate a Linked Cohort Dataset: Establish a cohort by linking health records of patients receiving OAT at Change Grow Live (CGL) with Hospital Episode Statistics (HES) and mortality records.\n•\tCompare Rates of Drug-Related Harms: Assess and compare the rates of hospital admissions, overdoses, drug-related deaths, suicides, and all-cause mortality across periods of supervised, unsupervised, and no OAT, before, during, and after the pandemic.\n•\tEvaluate Treatment Retention: Investigate the duration and retention of patients on supervised versus unsupervised OAT over the same periods\n\nThe study will generate insights into the safety and effectiveness of supervised OAT consumption and its implications on patient outcomes, informing future practice and policies related to OAT supervision.\"\n\nThe following NHS England Data will be accessed:\n•\tHospital Episode Statistics\no\tAdmitted Patient Care \no\tAccident & Emergency \n•\tEmergency Care Data Set (ECDS)\nNecessary because these data contain all episodes of patient contact in NHS hospitals in England, providing information on admissions, including admission and discharge dates, diagnoses and procedures related to the admission which are essential to measure all the study outcomes, which are all drug-related harms. These include all-cause hospitalisations, overdose hospitalisation, self-harm hospitalisation, fatal overdose, drug-related death, suicide death and all-cause mortality. Without the requested datasets it will not be possible to measure these outcomes.\n•\tCivil Registrations of Death – necessary to identify drug related deaths (DRD) and all-cause mortality (ACM). The dataset contains information related to a person’s death from death certificates in England, including date and cause of death.\n\nThe level data will be:\nPseudonymised\n\nThe Data will be minimised as follows:\n•\tLimited to a study cohort identified by CGL of adults (age over 18) prescribed OAT (either methadone or buprenorphine) at any point between 2015 and March 2023.\n\nThe University of Bristol (UoB) and the Change Grow Live are the research sponsors and the controllers as the organisations responsible for ensuring that the data will only be processed for the purpose described above.\n\nFor University of Bristol: \nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nFor Change Grow Live (CGL):\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(f) - the processing is necessary for the legitimate interests of the data controller or the legitimate interests of a third party, unless there is a good reason to protect the individual’s personal data which overrides those legitimate interests. (This cannot apply if you are a public authority processing data to perform your official tasks.)\n\nAs part of their legitimate interest CGL will use these data to assess the impact of changes in supervised OAT provision on patient outcomes, such as fatal and non-fatal overdoses, drug-related deaths, and treatment retention. This research aims to determine whether unsupervised OAT is safe for patients and reduces harm, providing evidence for potential policy changes. The processing of pseudonymised data enables meaningful analysis while safeguarding individual privacy. The outcomes of this research could benefit the drug treatment sector, service users, and the wider public through improved services and reduced health inequalities\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe project is funded under the National Institute for Health and Care Research Applied Research Collaboration West (NIHR ARC)'s Mental Health Research Initiative grant.\nThe funder(s) will have no ability to suppress or otherwise limit the publication of findings.\n\nAn individual, based at Imperial College, is involved in the project in advisory capacity and will not have access to the data.\n\nData will be accessed by individuals from CGL with an honorary contract with the University of Bristol, this will allow these individuals to remote access to the UoB Safe Haven where the linked data will be stored\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research.  The group (made up of a service user and staff members/people with lived experience from local community drug agencies) [strongly] supported the collection of the data for the purposes described above. Prior to the submission of the ethics application, a group of public contributors were met to discuss the project. There were discussions on the linkage and use of anonymised patient data and the potential application and utility of the study results, and it was agreed that the potential benefits of the study results outweighed the use of patient data without consent, providing that access to the data was limited and fully anonymised. This involvement is hoped to continue throughout the course of the project, hopefully they will be involved when it comes to interpreting the results, and in dissemination of the results.",
+   "organisation": "BRISTOL NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-701727-S2X0Q-v0.4",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 8,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 6,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 5,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2025-07",
+     "last_month": "2025-07",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2025-03-25",
+   "sublicensing": "No",
+   "title": "Natural Experiment of the impact of supervised Opiate Agonist Therapy (OAT) consumption on drug related harm and treatment outcomes",
+   "version": "0.4",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "base_reference": "DARS-NIC-656866-V3H6X",
+ "versions": [
+  {
+   "activities": "No further data will be requested under this version of the Agreement.\n\nThe Data will never be linked to any external dataset, nor will it ever be re-identified.\n\nAny and all outputs of any kind visible to 3rd parties will always be in an aggregate, non-identifiable form and with small numbers double-suppressed.\n\nThe Data protection policy is enforced as follows:\n1. The record level data (pseudonymised, non-identifying) will only be stored in the Amazon Web Service (AWS) Data Warehouse and the Ironkey encrypted hard-drive, stored at the registered office location.\n2. All Health iQ Ltd staff are instructed not to download any record level Data to local PCs, laptops or any non-encrypted device, and this is enforced by Health iQ Ltd’s Data Security policy (note only approved staff will have physical access anyway, this instruction is an additional measure for approved data-handlers to ensure data is never taken off the server, which is the only location on which it can be analysed).\n3. Health iQ Ltd developer and analyst teams use PC/ laptops with encrypted drives only.\n4. All data transmission must be encrypted to minimise the risk.\n5. Pre-defined reports are exportable, in CSV and PDF formats. All reports are of aggregate data with small numbers suppressed in line with the HES analysis guide. \n6. All staff who have access to the raw record level data are Health iQ Ltd staff, and this function is never outsourced to anyone else.\n\nProcessing the data:\n1.     Data was downloaded to an encrypted AWS Workspace, by a named individual (the ‘Data Receiver’).\n2.     Standard QC checks are run against the data, and some additional calculated fields added.\n3.     Both raw and the processed data are uploaded to an Ironkey encrypted hard-drive for backup, which is stored in secure environment in Health iQ Ltd registered office.\n5.     Health iQ Ltd analysts will access record level data via the AWS Data Warehouse using a secure VPN (with 2FA) connection only.\n\nProcessing for analysis:\nAll outputs will be in an aggregate, non-identifying data with small numbers double-suppressed form.\nHealth iQ has strict access controls based on a 'need to know' basis. Access to data is restricted to a small subset of Health iQ employed users who perform analysis on the data. All users complete mandatory training on information governance and data protection that are required annually for all employees of Health iQ. \nHealth iQ actively logs and monitors user access and behaviour and uses industry-leading security tools. \nHealth iQ is closely aligned to the DSPT, GDPR, ISO 27001, ISO 27017 and ISO 27018 frameworks. \n\nAWS AS A DATA PROCESSOR\nAmazon Web Services is, strictly, a data processor in the sense that the data are hosted and manipulated on their infrastructure. By design, AWS themselves cannot access or read any of the data in Health iQ that are hosted on their infrastructure, nor can anyone else who is not specifically granted individual access to the data (including Health iQ employees). \nAmazon Web Services UK are compliant with many standard security frameworks, including DSPT toolkit, ISO 9001, 27001, 27017, 27018; the Cloud Security Alliance certification and UK Cyber Essentials Plus.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "HEALTH IQ LTD"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked DIDs",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES AE",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Does not include the flow of confidential data",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2024-09-07",
+   "expected_benefits": "This project aimed to describe the real-world demographic and clinical profile of men with metastatic castration-resistant prostate cancer in England, as well as the treatment provided to these patients and the clinical outcomes experienced by the patient group. In addition, the study captures a description of the NHS secondary care resource use associated with metastatic castration-resistant prostate cancer.\nReferring back to the stated Outputs, the benefits derived from these outputs are listed below. \n1. NICE submission: The inclusion of these data in a NICE submission aids informed policymaking decisions, with real-word data now seen as key for inclusion in health technology assessment decision-making. The inclusion of data in the NICE submission is ongoing as responses to NICE queries are made. \n2. Presentation to clinical experts: facilitates clinical engagement with real-world evidence generation and ensures clinically relevant results are generated. Updates to analysis methodologies can be made from clinical review of results i.e., defining lines of therapy. This was completed in summer 2022. \n3. Manuscript: disseminates up-to-date real-world data results to a wide clinical and public health audience, the aim is to submit to a peer reviewed journal by the end of 2023.",
+   "expected_output": "1. Summary aggregate outputs (no small number suppression required as no small numbers resulted from the aggregate outputs generated) were included in AAA's (funder of the research) NICE submission for Pluvicto in 2022 to provide real-world data on castration-resistant metastatic prostate cancer epidemiology and treatment in England. Further aggregate outputs (with small number suppression if needed) are to be included in the AAA resubmission in June 2023 following NICE's feedback. \n2. Aggregate data (with no small numbers included) will be included in a peer review publication for which drafting will commence in July/August 2023. Several leading consultant oncologists will be involved in this publication to ensure clinically relevant information is produced and suitable dissemination of findings through the relevant medical community is achieved. \n3. To date, these clinicians have inputted into validating the results generated through a presentation of aggregate summary findings (given via Teams using a powerpoint presentation) presented to them by Health iQ and AAA in the summer of 2022, with feedback on how the results fit with clinical practice. The study team aim to have the peer review publication submitted by the end of 2023. The focus of this publication will be to describe treatment patterns among the study population as well as survival.",
+   "files_released": 0,
+   "objective": "The objectives of this study were to:\n•\tTo describe the demographic and clinical characteristics of men with metastatic castration-resistant prostate cancer\n•\tTo quantify the treatments used and to describe the treatment among men with metastatic castration-resistant prostate cancer\n•\tTo describe clinical outcomes, in terms of progression-free survival and overall survival, among men with metastatic castration-resistant prostate cancer\n•\tTo describe healthcare resource use in men with metastatic castration-resistant prostate cancer\n\nHealth iQ Ltd wishes to retain the previously disseminated data, which at the time of receipt was supplied by Public Health England, for the purposes of the above objectives and processes data under this agreement under Articles 6(1)(f) and 9(2)(i) of GDPR.\n\nWhile planned analysis for the above objectives has been completed, the results are being used in the funder of the research Advanced Accelerator Applications (AAA) responses to NICE following their submission for Pluvicto. Therefore, retaining access to the data to respond to data queries from NICE is essential. Health iQ Ltd is continuing to process the data in support of this NICE review, to allow policymakers to make informed decisions for the optimal delivery of the healthcare of prostate cancer patients, and hence of benefit to the patients. \n\nIn addition, peer review publication of key results is planned. In order to produce a complete manuscript, including the incorporation of reviewer feedback, retaining access to the data is beneficial. \n\nAll outputs are aggregated with small numbers suppressed in line with NHS England requirements.",
+   "organisation": "HEALTH IQ LTD",
+   "organisation_type": "Commercial",
+   "reference": "DARS-NIC-656866-V3H6X-v1.4",
+   "releases": [],
+   "start_date": "2023-09-08",
+   "sublicensing": "No",
+   "title": "THE CREPE STUDY: Outcomes and treatment pathways for Castration Resistant Prostate Cancer in England: A Real-World Data Study (ODR1920_232)",
+   "version": "1.4",
+   "yielded_benefits": "Data inclusion in a NICE submission to add the assessment group’s decision-making with regards to the clinical and cost effectiveness appraisal of Pluvicto. \nEngagement of a wide group of clinical experts in the results generated."
+  }
+ ]
+}

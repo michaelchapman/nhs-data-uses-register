@@ -1,0 +1,77 @@
+{
+ "base_reference": "DARS-NIC-756432-F0B1L",
+ "versions": [
+  {
+   "activities": "ICR will transfer data to NHS England.  The data will consist of identifying details (specifically NHS Number, Date of Birth,  randomisation date and a unique person ID) for the cohort to be linked with NHS England data.\n\nThe unique person ID will be comprised of the enrolment status (either enrolled or randomised), the trial name followed by a dash and a unique number. The enrolment status will be assigned a figure to separate it from the trial name e.g. 1 is for enrolled and 2 is for randomised. \n\nThe NDRS team extracts only the information needed for the project, as specified in the data dictionary.\n \nOnce the data has been extracted, the NDRS analyst uses the list of clinical trial participants provided by the applicant to identify patients who took part in ICR clinical trials.\n \nPatients who took part in the clinical trial are assigned a unique study identifier so they can be recognised within the dataset. \n\nThe unique person ID will be edited by the NDRS Analyst to remove the unique number. The datasets will only contain the enrolment status and the trial name. A unique number will not be provided to the study team. \n \nAfter the trial participants have been identified, direct identifiers, including NHS numbers and dates of birth, are removed from the datasets.\n \nPatients not assigned an trial name are in the control group.\n \nThe resulting dataset allows researchers to compare the trial and control groups without access to information that directly identifies individual patients.\n\nNHS England will provide the relevant records to ICR. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at ICR.\n\nData is backed-up at ICR. No data will go offsite.\n\nThe Data will be accessed by authorised personnel via remote access.  \n\nICR must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n•\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n•\tAccess controls granting users the minimum level of access required are in place;\n•\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n•\tMultifactor authentication (MFA) is required for remote access;\n•\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n•\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nNo other organisations are permitted to access the Data.\n\nThe Data will not be linked with any other data outside of this agreement.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "THE INSTITUTE OF CANCER RESEARCH"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2029-09-03",
+   "expected_benefits": "The INTERACT-R study is expected to generate public benefits by improving the inclusivity of oncology clinical trials. By comparing the characteristics of patients who have participated in cancer trials with those who have not, the study aims to identify groups that have been under-represented in research. This will provide a clearer understanding of whether access to cancer trials has been equitable across different demographic and clinical groups. The findings will be used as a basis to develop future interventions that aim to improve inclusion from underserved populations in cancer research. This has the potential to improve the generalisability of trial results and ensure that all patient groups benefit from advances in cancer treatment.\n\nThe study will not involve any direct patient participation, but it is anticipated that the results will benefit future patients by informing the design and delivery of more inclusive clinical trials. The research will also contribute to the evidence base on equity in research participation, which may be of interest to policy makers, research funders, and healthcare providers.",
+   "expected_output": "The expected outputs of the processing will be:\n•\tSubmissions to peer reviewed journals which is planned within 12 months of data receipt \n•\tPresentations at international conferences such as International Clinical Trials Methodology Conference; CRUK Data-Driven Research; European Society For Medical Oncology Conference (ESMO); European Society for Radiotherapy and Oncology Conference (ESTRO) and International Society for clinical biostatistics\n•\tA quarterly report to the project oversight committee \n•\tAn annual report to the funders\n•\tPresentations to lay audiences \n\n \nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n \nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n•\tJournals\n•\tSocial media\n•\tProject website\n•\tConferences",
+   "files_released": 0,
+   "objective": "The Data will be used for the purpose of a research project: INTERACT Retrospective (INTERACT-R) - Understanding inclusivity in oncology clinical trials: a data-driven approach.\n\nThe principal aim of INTERACT-R is to characterise the degree of inclusivity within cancer trials conducted by the Institute of Cancer Research Clinical Trials and Statistics Unit (ICR-CTSU), using routinely-collected healthcare data to identify inadvertent systematic exclusion of underserved groups.\n\nRoutinely-collected healthcare data available via NHS England will be used to:\n1.\tCompare characteristics of trial participants to those who did not join a trial:\n     a.\tOverall\n     b.\tWithin each trial’s key eligibility criteria\n2.\tCompare overall survival of participants with those broadly eligible who did not join a trial for each trial separately, where sufficient sample sizes are available\n\nIn addition:\n3.\tExplore the possibility of identifying a non-trial cohort broadly eligible for a trial in the advanced setting and comparing it to trial participants from a trial in an advanced setting to determine whether this approach can be expanded beyond patients diagnosed with early stage disease. \n4.\tDevelop, refine and publish the methodology used to allow similar assessment by other academic groups.",
+   "organisation": "THE INSTITUTE OF CANCER RESEARCH",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-756432-F0B1L-v0.2",
+   "releases": [],
+   "start_date": "2026-09-04",
+   "sublicensing": "No",
+   "title": "INTERACT Retrospective- Understanding inclusivity in oncology clinical trials: a data-driven approach",
+   "version": "0.2",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

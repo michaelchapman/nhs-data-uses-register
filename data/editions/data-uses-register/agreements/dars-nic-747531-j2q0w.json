@@ -1,0 +1,106 @@
+{
+ "base_reference": "DARS-NIC-747531-J2Q0W",
+ "versions": [
+  {
+   "activities": "London School of Hygiene & Tropical Medicine (LSHTM) will transfer data to NHS England. The data will consist of identifying details (specifically NHS Number, Date of Birth, Date of Randomisation and a unique person ID) for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the HES, ECDS and Civil Registrations of Death datasets to LSHTM. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient. \n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at LSHTM.\n\nLSHTM will back-up Data on their own servers on-site.\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controllers must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations England/Wales. The data will not leave England/Wales at any time.\n\nAccess is restricted to employees or agents of LSHTM who have authorisation from the Chief Investigator.\n\nOther organisations are not permitted to access the Data.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data outside of this agreement.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis. All analyses will use the pseudonymised dataset. There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\n\nAnalysts from the CHIP-BCIS3 study team at the LSHTM Clinical Trial unit (CTU), will process the Data for the purposes described above.",
+   "commercial": "No",
+   "controller_basis": "Joint Data Controller",
+   "controllers": [
+    "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+    "KING'S COLLEGE LONDON"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2028-08-07",
+   "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study.\n\nThe impact of the trial results is likely to be significant, regardless of whether the data indicate that LV unloading is beneficial or not. If LV unloading shows significant benefit and cost-effectiveness, a large number of patients may benefit from safer procedures, for which both clinicians and patients are better informed of the comparative risks and benefits.\n\nConversely, if LV unloading is no better, or worse than standard care, patients will be spared an unnecessary and potentially risky additional intervention, with significant cost-savings for healthcare systems an additional bonus.\n\nThe health economic analysis would be used by commissioning bodies in determining the cost-effectiveness of LV unloading, informing their decisions as to whether the technology should be available via the NHS or other funding organisations internationally.\n\nThe findings will not only be in journals for the scientific community but also in lay terms for the general public to understand. It will also be published via social media to reach a wider audience.",
+   "expected_output": "The expected outputs of the processing will be:\n       •\tSubmissions to peer reviewed journals. Previously submissions were made to The Journal of the American Medical Association (JAMA) and The New England Journal of Medicine (NEJM). Publications. Sub-studies and longer term follow up papers have been published in specialty journals, such as Circulation and The Journal of the American College of Cardiology (JACC). \n       •\tPresentations at conferences for major cardiology conferences, which are uncertain at this time. Previous conferences include European Society of Cardiology (ESC) Congress and American College of Cardiology (ACC); however it’s not currently confirmed that presentations at these conferences will occur for this study at the moment. \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels : \n•\tJournals\n•\tPress/media engagement\n•\tSocial media\n•\tUpdates to trial website\n•\tLay results documents for the general public and the participants.\n\nAnalysis and write-up of results is planned for January to June 2026, with dissemination of outputs anticipated between June to December 2026.",
+   "files_released": 34,
+   "objective": "Guy's and St Thomas' NHS Foundation Trust (GSTT) and King's College London (KCL) require access to NHS England data for the purpose of the following research project: \nControlled trial of High-risk coronary Intervention with Percutaneous left ventricular unloading (CHIP-BCIS3).\n\nThe following is a summary of the aims and objectives of the study:\n\nPercutaneous coronary intervention (PCI) is the most common method used to treat coronary heart disease. The benefits need to be balanced against the risk of major complications (including death, stroke, periprocedural myocardial infarction and acute heart failure), which are particularly likely to occur in those patients with pre-existing heart failure, need complex interventions and have extensive coronary disease which jeopardises a large proportion of the myocardium.\n\nPercutaneous left ventricular (LV) unloading devices offer the potential to reduce complications for patients who undergo high-risk PCI. NICE recently approved the technology, despite an acknowledged lack of evidence for efficacy and some safety concerns, and use has been increasing both in the UK and internationally. The only randomised evidence for LV unloading to date comes from an industry-sponsored trial which used a comparator arm which does not represent the current standard of care and was stopped prematurely due to the predicted inability to demonstrate efficacy. The investigators did not report key safety data or medium-to-long term outcomes and yet, current approvals and usage patterns are largely based on secondary analyses of this trial and observational reports.\n\nThe aims of the study are to establish whether, in patients undergoing high-risk percutaneous coronary intervention, a strategy of percutaneous LV unloading is superior to standard care in terms of patient outcomes, quality of life and cost-effectiveness. The CHIP-BCIS3 trial aims to recruit 300 participants, who are randomised 1:1 to either standard of care (no LV unloading) or to LV unloading treatment groups. The trial recruited its first participant on the 6th August 2021 and completed recruitment of the 300 participant target in December 2024.\n\nThe objective of the study is to deliver a trial which overcomes several key limitations of prior studies by:\na) selecting a carefully characterised population in whom there will be a high rate of adverse events with the current standard of care,\nb) using novel statistical methods to achieve higher degrees of precision with a smaller sample size,\nc) utilising an established network of centres with proven track records in delivering high-risk PCI trials.\n\nThe outcome parameters of the trial are as below:\n\nPrimary endpoint;\nThe primary outcome will be a combined hierarchical endpoint incorporating death, stroke, myocardial infarction and cardiovascular hospitalisation (including heart failure, further revascularisation and prolonged hospitalisation for complications of the initial index PCI procedure, such as bleeding and unplanned vascular surgery). The analysis will be undertaken by use of the Win Ratio, an increasingly recognised approach to allow for the hierarchy of events as well incorporating repeat events such as myocardial infarctions or hospitalisations.\n\nKey secondary endpoints;\nIndividual components of the hierarchical combined primary endpoint as well as repeated occurrences of these events, health-related quality of life, New York Heart Association (NYHA) functional class, completeness of revascularisation and 6-minute walk test at 30 days and 1 year, and resource utilisation. The combined outcome and individual components will also be analysed using Cox proportional hazard models for the time-to-first event over the follow-up period.\n\nThe following NHS England Data will be accessed: \n•\tHospital Episode Statistics (HES)\n      o\tAdmitted Patient Care (HES APC)\n      o\tCritical Care (HES CC)\n      o\tOutpatients (HES OP)\nThese datasets are necessary because: to provide information on admissions to hospital, outpatient appointments, and critical care at NHS hospitals in England, so that the incidences of trial specific outcomes listed above can be ascertained. HES-ONS linked dataset will provide further information on the dates and causes of death for participants treated in hospitals within England, irrespective of whether they died in hospital or not. These datasets will also enable the estimation of costs of secondary care provided for participants in the trial.\n\n•\tEmergency Care Data Set (ECDS) – necessary because to provide information on A&E attendances at NHS hospitals in England, in order to establish the incidence of trial specific outcomes listed above. These data will also be used to assess health service utilisation for the cost-effectiveness analysis.\n\n•\tCivil Registrations of Death – necessary because to provide information on the primary endpoint, including which patients have died and the underlying and contributing causes of death for the specified study cohort.\n\nThe level of the Data will be identifiable. \n\nThe Data will be minimised as follows:\n•\tLimited to a selected study cohort of approximately 300 participants provided by the Data Processor, London School of Hygiene & Tropical Medicine (LSHTM). All participants are consented directly by a member of the NHS direct care research team. \n•\tLimited to patient data collected in England between August 2021 and the final end of patient follow-up, i.e. to October 2025. For each individual patient, data will only be provided from the date randomisation until the time data is extracted.\n\nGSTT and KCL are the research sponsors and controllers as the organisations responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe processing is in the public interest since the study aims to produce reliable evidence to guide best practice and inform future treatments of people living with heart disease and who are at high risk of developing complications from pLVAD-supported PCI procedures. The subsequent analysis on the linked data hopes to inform interventional clinical guidelines on the use of pLVADs in high-risk PCI in the NHS. The study also hopes to demonstrate value for money in order to ensure that public money is spent as effectively as possible in providing NHS services from the cost effective analysis of the extracted data.\n\nThe funding is provided by National Institute for Health and Care Research (NIHR) within the Health Technology Assessment (HTA) programme. The funding is specifically for the study described. Funding is in place until July 2026.\n\nThe funder will have no ability to suppress or otherwise limit the publication of findings. \n\nLondon School of Hygiene & Tropical Medicine (LSHTM) is a processor acting under the instructions of GSTT and KCL. LSHTM’s role is limited to coordinating the study and undertaking data processing for this study to obtain the primary and secondary outcomes of the trial.\n\nOther organisations involved but not accessing the data are:\n•\tThe Trial Steering Committee (TSC) provide trial oversight and supervision on behalf of the Sponsor and Funder and monitor and supervise the progress of the CHIP-BCIS3 towards the study’s objectives. The TSC membership contains patient representatives and members from independent organisations such as University of Southampton, Imperial College London, University of Oxford, University of Amsterdam, and Brighton and Sussex University Hospitals NHS Trust.\n\n•\tThe Data Monitoring Committee (DMC) examine the data accumulated during progress of the CHIP-BCIS3 trial and ensure that the benefit/risk balance remains acceptable for participants. It is the only committee which will have access to data broken down by treatment during the trial and on this basis, the primary responsibility of the DMC is to review interim analyses of outcome data and to recommend to the TSC whether the trial is to continue, modified or terminated based on these analyses. The DMC membership contains members from independent organisations including University of Liverpool, University College London and Edinburgh Heart Centre. DMC members will have not have access to NHS England record-level data as listed in this agreement.\n\nPPIE teams were involved in the design of the research, but they are not involved in determining how the data will be processed. The PPIE team have supported the research that is to be undertaken.",
+   "organisation": "LONDON SCHOOL OF HYGIENE AND TROPICAL MEDICINE",
+   "organisation_type": "Research",
+   "reference": "DARS-NIC-747531-J2Q0W-v0.2",
+   "releases": [
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 8,
+     "first_month": "2025-09",
+     "last_month": "2025-11",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 8,
+     "first_month": "2025-09",
+     "last_month": "2025-11",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+     "files": 8,
+     "first_month": "2025-09",
+     "last_month": "2025-11",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 8,
+     "first_month": "2025-09",
+     "last_month": "2025-11",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 2,
+     "first_month": "2025-09",
+     "last_month": "2025-11",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2025-08-08",
+   "sublicensing": "No",
+   "title": "Controlled trial of High-risk coronary Intervention with Percutaneous left ventricular unloading (CHIP-BCIS3)",
+   "version": "0.2",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

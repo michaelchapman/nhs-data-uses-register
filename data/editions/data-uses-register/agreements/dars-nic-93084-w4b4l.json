@@ -1,0 +1,83 @@
+{
+ "base_reference": "DARS-NIC-93084-W4B4L",
+ "versions": [
+  {
+   "activities": "No data will be provided to NHS Digital by UCL. NHS Digital will provide pseudonymised HES and Mental Health data to UCL. This will then be stored at the UCL SLMS Safe Haven, a technical environment for storing, handling and analysing identifiable data which has been certified to the ISO27001 information security standard and conforms to NHS Digital's Information Governance Toolkit. The data will only be accessible through the Data Safe Haven.\n\nNHS Digital will create a cohort of mental health patients (MHMDS) for the years 2013/14, 2014/15 and 2015/16.  Data will then be extracted from the MHMDS for this cohort for the years 2011/12, 2012/13, 2013/14, 2014/15 and 2015/16.  The cohort created in the first step of this process will then be linked to the requested HES datasets for the years 2011/12, 2012/13, 2013/14, 2014/15 and 2015/16.  \n\nThe core datasets will only be accessed by one statistician within UCL, who will be a substantive UCL employee. The full data set will be used to consider whether engagement with community services is a predictor or consequence of ADU treatment. Cases in the data set will then be identified that have used acute mental health care service.  ‘Acute mental health care service’ will be defined by use of in-patient, Acute Day Service (ADU), Crisis Resolution Home Treatment (CRT), Crisis House, or other locally-defined acute services.  Discussion and exploratory work with NHS Digital has resulted in the decision that UCL are best placed to identify these cases due to the lack of clarity over the definition of ‘Acute mental health care service’ users.  UCL will identify the ‘Acute mental health care service’ users and the non-acute service users' records will be deleted from the dataset.  UCL will also provide NHS Digital with the methodology on how to identify the non-acute service users’ records and remove them from the dataset.\n\nNHS trusts use a variety of nomenclature for the services they provide, and identifying all and only the acute services is anticipated to be a complex task.  It is unlikely that NHS Digital would be able to filter the full data set to provide all cases with acute service use.  The data set will then be restricted to service users with records in MHMDS for the study years who have used any acute (urgent) mental health care service during this time.  Non-acute service users’ records will be deleted from the data set at this point.  Access to and use of these services will be used to identify the start and end of episodes of acute care. Multiple episodes per service user will be included. No data about or from service users will be obtained from any other sources.\n\nGiven that this study requires data from two separate databases (MHMDS and HES) across multiple years, a unique service user identifier (the MHMDS study ID) will be attached to each record by NHS Digital.  This will make it possible to link care spells across reporting periods (years) and different providers of publically available data, as well as to HES data.  MHMDS also includes geographic identifiers (Provider Trust or hospital, Commissioner, GP practice and Census Lower Super Output Area (LSOA) based on the postcode for the service user’s residence).  \nMHMDS records will be linked to local Census and deprivation data at the area level: \n\n2011 Census (A), which is publically available from ONS  (www.ons.gov.uk/ons/datasets-and-tables/index.html), which  will be linked by geocoding the postcode of residence for each service user to its corresponding lower super output area (LSOA), a suitable spatial scale at which Census data is made available.\nIndex of Multiple Deprivation (A), created by the Department for Communities and Local Government, is publically available data and was last issued in 2015.   Service users’ postcode at residence will be geocoded to their LSOA, as above, to obtain estimates of deprivation.\n\nThere will be no requirement nor attempt to re-identify individuals from the data.\n\nThe data will not be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nA secondary analysis will be undertaken of the MHMDS data using multilevel modelling (sometimes known as hierarchical modelling). Multilevel modelling is a statistical method designed to take account of clustered data, e.g. to take account of the fact that people using an NHS Trust in one area of the country may be more similar to each other than to people using an NHS Trust in a different area.  \n\nData will be analysed as a cohort.  Two sets of analyses will be undertaken at the individual level : 1) Within those areas that have an ADU, outcomes for service users who use the ADU will be compared to outcomes for service users who do not;  2) Using  all areas (whether or not they have an ADU), service users who access an ADU during an episode of acute care will be compared with those who do not.\n\nThe overall association will be explored between services with and without ADUs in terms of overall admission rates to inpatient and crisis services, exploring how much variance is explained at the organisational/geographical level, accounting for social variables such as demographics (gender, age, ethnicity) and deprivation score.\n\nTime of cohort entry (the start of the first episode of acute care) will be defined by the first occurrence of any of (a) Crisis Resolution Home Treatment service contact; (b) admission to a mental illness bed; or (c) contact with an ADU. \nAssociations will be investigated between ADU attendance and study outcomes. The hypothesis of the study will be tested: that service users who attend an ADU during an acute care episode spend less time as in-patients than matched controls, have fewer A&E attendances and a longer time to relapse (i.e. further use of acute care services).  \n\nTwo additional analyses will be undertaken, a survival analysis (which looks at how long it takes before someone uses acute services again), and a cohort analysis (which looks at the group of people who use a certain service for a period of time).  The details of each analysis are as follows: (1) survival analyses (in which the outcome is time to subsequent acute care episode) using multilevel modelling to test for the main effects of ADU use versus no ADU use on study outcomes and to model variance in these associations between provider Trusts; and (2) cohort analysis in which the primary outcome will be the total time spent in acute care over the 6 months since entering the cohort.  \n\nIn the economic evaluation, source unit costs will also be identified for all service use within each person-level episode file. This will also use multilevel modelling, with cost as the dependent variable, identify predictors of costs incurred by service users, and estimate the impact of ADU attendance on subsequent costs associated with service use.  As a summary:-\n•\tIndividuals, working under appropriate supervision on behalf of data controller(s)/processor(s) within this agreement, are subject to the same policies, procedures and sanctions as substantive employees.\n•\tAll outputs will be restricted to aggregated data with small numbers suppressed in line with the HES Analysis Guide\n•\tAll outputs will follow the Mental Health (MHSDS, MHLDDS, MHMDS) disclosure control rules\n•\tThe data from NHS Digital will not be used for any other purpose other than that outlined in this Agreement.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY COLLEGE LONDON (UCL)"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "",
+     "name": "Bridge file: Hospital Episode Statistics to Mental Health Minimum Data Set",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+     "name": "Mental Health Minimum Data Set (MHMDS)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2020-09-30",
+   "expected_benefits": "This study aims to determine the effectiveness of Acute Day Units in reducing admission rates to acute psychiatric units, as well as rates of compulsory admissions in a one year period. This will make up a part of the delivery of a comprehensive report on the current value of ADUs, and recommendations about service models. \n\nThe study is in a sense exploratory, as it aims to make up for a dearth of information regarding modern ADUs; measurable benefits are therefore highly dependent on its results. If, for example, the study finds that areas with ADUs have a 5% reduction in admissions, and can therefore recommend more widespread use of these units, then an expected measurable benefit would be a 5% reduction in admissions in areas which go on to introduce ADUs.  The emphasis by NHS England on evidence-based practice suggests that if evidence was found of reduction of inpatient admissions in areas with ADUs, such units would be recommended by policy makers.  The AD-CARE team have good working relationships with NHS England.  Reduced admissions to inpatient units are of benefit in terms of reduced costs, waiting times, and future admissions, and improved outcomes for service users in terms of recovery and service experience.  Given the low number of NHS trusts that currently have ADUs, a national roll-out of such services to every Trust would potentially impact a very large number of service users.",
+   "expected_output": "This is an NIHR funded study and all outputs of the trial will therefore be reported to the NIHR as part of the final report at the end of the study. \n \nAD-CARE is a 36-month study which began in 07/16. Write up of Work Package 3, for which this data will be used, is anticipated for months 30-36. \n\nThe study final report submission is anticipated for month 36 (06/19). This will cover all findings of the study including: factors influencing planning and implementation; the key findings of the study; and the response to the research questions. The NIHR will then publish the report of the AD-CARE trial on its website.\n\nDissemination will be carefully planned with The McPin Foundation and NHS England to ensure high quality peer review of outputs and stakeholder engagement and information sharing.  The McPin Foundation is a UK charity which exists to transform mental health research, by placing the lived experience of people with mental health problems at the centre of research methods and the research agenda.  NHS England mental health leads are keen to work with the study so that findings feed directly into developments regarding crisis care across the NHS.\n\nThe usual full scientific reports, peer reviewed papers, powerpoint presentations, conference talks, and web output will be provided, as expected of all NIHR studies. PPI and NHS management colleagues will also be consulted to disseminate our findings across a range of NHS and health provider platforms. Summary documents will be provided in a range of formats suitable for different audiences.\n\nThe AD-CARE study website is hosted at UCL and is updated with new information as appropriate (https://www.ucl.ac.uk/psychiatry/research/epidemiology/ad-care). All ADUs and crisis services have been sent links to the website. Twitter has been a useful vehicle for distributing publications to a variety of audiences and findings more widely once published in open access journals. In addition, an expert consensus meeting/conference will be held in the final two months of the project.\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 27,
+   "objective": "University College London requires the requested data for use in the Acute Day Care (AD-CARE) study. UCL applied for and was awarded funding in response to the NIHR’s commissioned call ‘15/24 Assessing service models of community mental health response to urgent care needs’.\n\nAD-CARE aims broadly to assess the real life effectiveness and user experience of Acute Day Units (ADUs) as a community response to mental health crises. \n\nThe requested data will be used for the objective of answering the following research questions:\na) Are acute readmission rates reduced in areas/Trusts with a more enhanced crisis care pathway, defined as having an Acute Day Unit (ADU) in the pathway?\nb) In Trusts with ADUs, do individuals who access NHS-funded ADUs have different outcomes compared to similar people who have had an acute episode but do not access ADUs?\n\nUCL is the only organisation that will have access to the record level data requested of NHS Digital, and the only people accessing the data will be substantive employees of UCL.\n\nAD-CARE is a new study for which data has not been supplied before.\n\nThe data required from NHS digital are: 1) Mental Health data: 2013/14, 2014/15, 2015/16 (observation period), and data for 2011/12 and 2012/13 to provide information about cohort members prior to the start of the observation period. 2) HES data for the same period (2011-2016), to provide information about A&E attendance and admissions to acute care 3) Bridge file linking these two data sets.",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-93084-W4B4L-v0.8",
+   "releases": [
+    {
+     "dataset": "Mental Health Minimum Data Set (MHMDS)",
+     "files": 17,
+     "first_month": "2017-11",
+     "last_month": "2018-02",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 5,
+     "first_month": "2017-11",
+     "last_month": "2017-11",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 5,
+     "first_month": "2017-11",
+     "last_month": "2017-11",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2017-10-01",
+   "sublicensing": "No",
+   "title": "Acute Day Units as Crisis Alternatives to Residential Care",
+   "version": "0.8",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "base_reference": "DARS-NIC-664431-F3G8W",
+ "versions": [
+  {
+   "activities": "The Cancer Research UK Clinical Trials Unit (CRCTU) at the University of Birmingham will transfer data to NHS England. The data will consist of identifying details (specifically NHS number, date of birth, full name and gender plus unique Trial Number) for the cohort to be linked with NHS England Data.\n\nNHS England will provide the relevant records from the Hospital Episode Statistics (HES) Admitted patient care (APC), HES Outpatient, Diagnostic Imaging Dataset (DID), Systemic Anti-Cancer Therapy dataset (SACT), National Radiotherapy Dataset (RTDS) and Civil Registration Mortality datasets to CRCTU. The Data will contain no direct identifying data items but will contain a unique Trial Number which can be used to link the Data with other record level data already held by the Recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at The University of Birmingham.\n\nThe Data will be accessed by authorised personnel via remote, or on site, access. \n\nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n- Access controls granting users the minimum level of access required are in place;\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n- Multifactor authentication (MFA) is required for remote access;\n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within England. The Data will not leave England at any time.\n\nData will only be accessed and processed by employees of the University of Birmingham who have authorisation from the study team to access the Data for the purposes described. No other organisation is permitted to access the Data. All personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nOn receipt of the Data, the CRCTU intends to extract variables from the raw NHS England Data files and manipulate these as required for entry into the trial database for the purposes of facilitating analysis.\n\nIdentifying details will be stored in a separate database to the linked dataset used for analysis.\n\nThe earlier trial data already collected directly from the sites (site reference data) will be compared to the routine data for validation and the later routine data where no site obtained data is available will be used for follow-up analyses. There shall be no subsequent flows of data.\n\nNHS England agree to Derived Data being created by the Controller for the purposes set out in this Data Sharing Agreement.  \n\nThe metadata associated with the dataset and other information as required will be submitted to NHS England. NHS England will then decide whether it may be categorised as Derived Data under the definition set out in the Data Sharing Framework Contract.  \n\nThe Controller is accountable for the Derived Data and must ensure it is only used for purposes as identified in this DSA. Any use of Derived Data outside of the purposes outlined in this DSA might contravene access to additional NHS England data in the future.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF BIRMINGHAM"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Linked DIDs",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Linked HES APC",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Linked HES Outpatient",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2027-09-30",
+   "expected_benefits": "Bladder cancer is the fifth most common cancer in western society, with a rising global incidence and 430,000 new cases in 2012. In the UK there are approximately 10,000 new cases and 5,000 deaths attributed annually. The provision of routine NHS Data for the BladderPath research study is hoped to have a huge potential impact on patient care and outcomes going forward, by contributing to evidence-based practise in the understanding of whether substitution of Transurethral Resection of the Bladder Tumour (TURBT) with magnetic resonance imaging (MRI) will avoid unnecessary surgery and reduce the time to definitive radical treatment for muscle invasive bladder cancer (MIBC) patients. It is important to identify if the BladderPath trial improves long-term outcomes, for example, on mortality.\n\nThere are additional benefits to this data acquisition. The team have described the benefits of routine data use in randomised controlled trials in previous publications including, reduced burden on site staff and patients and the aim for reduced resources and costs, compared to traditional follow-up. Validating the earlier routine data against reference trial collected data will enable quality measures to be calculated which the team believe is a huge research benefit. \n\nThe use of the Data could:\n\n- lead to the identification or improvement of treatments or interventions to improve health and care outcomes for bladder cancer patients\n- inform planning health services and programmes\n- support knowledge creation or exploratory research (and the innovations and developments that might result from that exploratory work)\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to bladder cancer patients.",
+   "expected_output": "The outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the datasets from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n \n• Medical journals\n• Social Media – Twitter/ X\n• Patient forums / workshops\n• Dissemination of the study results to the research community, trial participants and the public.\n• Target international meetings for presentation of results would be American Society of Clinical Oncology (ASCO), American Urological Association (AUA), European Association of Urology (EAU) and European Cancer Conference (ECC) as well as relevant national meetings.\n\nMembers of the University of Birmingham’s BLADDERPATH Trial Management Group are lay representatives and will be involved in developing lay summaries of the outcomes and helping to publicise these via charities such as Action on Bladder Cancer.\n\nDefinitive research findings are expected to be:\n\n• Published in peer-reviewed medical journals and presented at appropriate medical and patient meetings. This will ensure results are disseminated to the widest possible international audiences of both oncologists, urologists and patients. \n• Disseminated via patient forums such as Fight Bladder Cancer and Action on Bladder Cancer, as well as via websites such as Cancer Research UK (https://www.cancerresearchuk.org/) and the BladderPath website.\n\nThe target date for production and dissemination of the outputs is within one year after receiving the Data (~late 2025).",
+   "files_released": 6,
+   "objective": "The University of Birmingham requires access to NHS England Data for the purpose of the following research project: \n\nBladderPath: Image Directed Redesign of Bladder Cancer Treatment Pathways \n\nThe following is a summary of the aims of the research project provided by the study team on behalf of the University of Birmingham:\n\nThe BladderPath study is an open label, multi-stage, multi-centre, randomised controlled bladder cancer study. Bladder cancer is the fifth most common cancer in western society, with a rising global incidence and 430,000 new cases in 2012. In the UK, there are approximately 10,000 new cases and 5,000 deaths attributed to bladder cancer annually. Standard management follows a pattern established during the 1950s. Prognosis has not improved in the last 30 years. \n\nStandard management involves a procedure called a flexible cystoscopy to examine the inside of the bladder under local anaesthetic with a cystoscope, followed by a transurethral resection of the bladder tumour (TURBT) procedure under general anaesthetic. TURBT has the multiple purposes of diagnosis, staging and treatment of non-muscle invasive bladder cancer (NMIBC), i.e. removal of the tumour. If the patient has muscle invasive bladder cancer (MIBC) further treatment such as radical cystectomy (surgical operation to remove the urinary bladder) or chemo-radiotherapy is necessary. For MIBC, this initial TURBT can delay the definitive treatment, under-stage the tumour as not invading the muscle (leading to under-treatment) and when TURBT is carried out on patients with muscle invasive disease there is a small risk that the procedure may spread cancer cells elsewhere in the bladder and body. \n\nThe aim of the study is to improve staging, accelerate treatment and reduce tumour spread in patients with MIBC by avoiding TURBT, ultimately improving clinical outcomes. The hypothesis being tested is that substituting TURBT with magnetic resonance imaging (MRI) will avoid unnecessary surgery and reduce the time to definitive radical treatment for MIBC. \n\nThe BladderPath team now need to undertake the long-term follow-up of patients, up to 24 months (2-years) after randomisation. To undertake this, BladderPath propose to access routinely collected data. There will be no other form of follow-up to enable identification of the long-term outcomes. The aim of the follow-up is to identify if the patients have had progression of their disease or any disease events of interest and the date that this occurred.\n\nThe following NHS England record-level Data will be accessed:\n\n• NDRS Linked Hospital Episode Statistics (HES) Admitted patient care (APC)\n• NDRS Linked HES Outpatients (OP)\n• NDRS Diagnostic Imaging Dataset (DID)\n• NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n• NDRS National Radiotherapy Dataset (RTDS)\n• Civil Registration Mortality – necessary to identify date   of death of a patient, and whether a patient has died of bladder cancer or another cause.\n\nThe Data required includes: surgery to bladder to remove tumour (cystectomy, cystoprostatectomy, exenteration), radiotherapy (radical, palliative), cystoscopy (all cystoscopies, including but not limited to flexible (cystoscopy or urethroscopy) or rigid TURBT), BCG therapy (a type of immunotherapy), chemotherapy (any cancer), last known interaction with urology or oncology services (inpatient or outpatient event censor), and date and cause of death. \n\nEthnicity Data is required from NHS England to assess the impact of ethnicity on healthcare outcomes and to investigate inclusivity in the trial. Due to small numbers, outcomes will not be reported based on ethnicity.\n\nThe level of Data will be identifiable because the University of Birmingham holds the identifying details. However, the data disseminated under this Agreement will contain no identifying details. \n\nThe Data will be minimised as follows:\n• Limited to a study cohort of 143 patients who consented to participate.\n• Limited to Data between May 2018 to December 2023. The study completed recruitment on the 14th December 2021and 24 months of follow-up Data are required for each patient. Therefore, the Data needs to include Data up to 31st December 2023.\n \nThe University of Birmingham is the research sponsor and the Controller, as the organisation responsible for ensuring the Data will only be processed for the purpose set out above. The study has been conducted by the Cancer Research UK Clinical Trials Unit (CRCTU) at the University of Birmingham.\n\nThe trial already have 2-years of follow-up data collected by the participating site for 95 patients. For these 95 patients, the aim is to complete routine data validation against the site collected reference. For the remaining 18 patients recruited from English sites, new follow-up Data up to 2-years will be extracted from the routine Data. Mortality data is requested for all 143 patients as Civil Registrations of Death is the only dataset which covers England and Wales. The first patient was randomised on 27th June 2018 and the last on 14th December 2021. To identify diagnosis events for the initial patients, Data will be requested from 1st May 2018. This is in line with the participant consent which specifies that relevant data prior to the date of consent might be required by the trial.\n\nThe lawful basis for processing personal data under the UK GDPR is Article 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller:\n\nThe lawful basis for processing special category data under the UK GDPR is Article 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nAll patients gave informed consent for the routine data acquisition but in addition to this, the results from this study are in the public interest and processing of this Data is necessary to enable long-term outcomes to be investigated and to improve bladder cancer outcomes.\n\nThe funding is provided by the National Institute for Health and Care Research Health Technology Assessment Programme. The funding is specifically for the BladderPath trial described. Funding is in place until 30th April 2024.\n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nThe University of Birmingham is the sole controller who also processes the Data.\n\nThe Trial Management Group comprises individuals from the University of Sheffield, University of Warwick, University Hospitals Coventry and Warwickshire NHS Trust and University Hospitals Birmingham NHS Foundation Trust Queen Elizabeth Hospital. These organisations have no involvement in the Cancer Research UK Clinical Trials Unit Data processing.\n\nThe concept of the study is supported by the NCRI Bladder Clinical Studies Group (CSG). The CSG has two patient advocates who have participated in the study discussions at the Bladder CSG meetings; the BladderPath study has three patient advocates as members of either the Trial Management Group or Trial Steering Committee. The patient advocates have been involved in the review of the study design from a patient perspective and have helped with the design of the recruitment process and patient information sheet.",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-664431-F3G8W-v0.7",
+   "releases": [
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2024-11",
+     "last_month": "2024-11",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Linked DIDs",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Linked HES APC",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Linked HES Outpatient",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS National Radiotherapy Dataset (RTDS)",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "files": 1,
+     "first_month": "2025-05",
+     "last_month": "2025-05",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2024-10-01",
+   "sublicensing": "No",
+   "title": "BladderPath: Image Directed Redesign of Bladder Cancer Treatment Pathways",
+   "version": "0.7",
+   "yielded_benefits": "N/A"
+  }
+ ]
+}

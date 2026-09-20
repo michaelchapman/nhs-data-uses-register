@@ -1,0 +1,143 @@
+{
+ "base_reference": "DARS-NIC-781290-Q2Q6F",
+ "versions": [
+  {
+   "activities": "The University of Leeds will transfer data to NHS England.  The data will consist of identifying details (specifically NHS Number, Date of Birth, Sex, date of recruitment and a unique BLISS person ID) for the cohort to be linked with NHS England data. \n\nNHS England will provide the relevant records from the Hospital Episode Statistics (HES) Accident and Emergency (A&E), Admitted Patient Care (APC) and Outpatients (OP) datasets, the National Disease Registration Service (NDRS) Systemic Anti-Cancer Therapy (SACT) dataset, NDRS National Radiotherapy Dataset (RTDS), NDRS Cancer Registration dataset, the Emergency Care Dataset (ECDS) and the Civil Registration of Deaths datasets to the University of Leeds. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.  \n\nThe Data will not be transferred to any other location. \n\nThe Data will be stored on servers at the University of Leeds Clinical Trials Research Unit (CTRU). The data is backed up on the Microsoft Azure platform. The Data will be accessed onsite at the premises of the University of Leeds from the Leeds CTRU secure storage area. \n\nThe Data will be linked at person record level with existing trial data including the following trials: Myeloma X, Myeloma XI, MUK One, MUK Three, MUK Four, MUK Five, MUK Six, MUK Seven, MUK Eight, MUK Twelve.  \n\nThese trials are closed to further follow-up and new data collection will only be via linked NHSE data.",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "UNIVERSITY OF LEEDS"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Civil Registrations of Death",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Emergency Care Data Set (ECDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(2)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(2)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "Hospital Episode Statistics Outpatients (HES OP)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Cancer Registrations",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS National Radiotherapy Dataset (RTDS)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    },
+    {
+     "confidentiality": "Section 251 NHS Act 2006",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "sensitivity": "Non-Sensitive",
+     "type_of_data": "Anonymised - ICO Code Compliant"
+    }
+   ],
+   "end_date": "2029-02-08",
+   "expected_benefits": "Clinical Benefits: \n\nThe project will provide evidence that supports patients and clinical teams by focusing on: \n\n•\tLong-term effects of current treatments - mortality data from completed trials will be analysed to assess overall survival and treatment effectiveness. These findings will help determine whether progress toward curing myeloma is being made. \n•\tOutcomes for patients with frailty and bone disease - frailty and bone disease have a major impact on quality of life. Research will evaluate different frailty measures to identify the most suitable scoring system for use in future trials, ensuring treatment strategies can be tailored more effectively. Work on bone disease will examine bisphosphonate schedules and palliative radiotherapy use alongside modern therapies, generating evidence to guide future interventions that reflect both clinical and patient priorities. \n•\tDiversity and disparities in trial populations - analysis of trial participant characteristics will show whether populations are representative of the wider myeloma community. Any gaps will highlight barriers to inclusive research and inform strategies to improve recruitment. Outcomes will also be assessed across different patient groups to support more personalised care. \n\nBy addressing these areas, the project will inform future trials, expand knowledge, and contribute to better patient care. \n\nMethodological Benefits: \n\nThe project will strengthen the case for using healthcare systems data (HSD) in clinical trial follow-up, demonstrating its reliability as real-world evidence. This supports national priorities to deliver faster and more efficient trials. \n\nBy showing that HSD can reduce or replace traditional trial data collection, blood cancer trials can become more efficient, cost-effective, and patient-centred. The University of Leeds Clinical Trials Unit will integrate HSD into future trial designs and share best practices across the UKCRC Registered Clinical Trials Unit network. \n\nCollaboration with industry partners will highlight the UK’s strengths in data-enabled research, encouraging companies to bring innovative blood cancer treatments to UK trials",
+   "expected_output": "The outputs expected to be produced as a result of the data processing include: \n\nClinical outputs: \n\n•\tPeer‑reviewed journal articles reporting clinical findings (approx. 1–2 per year) \n•\tClinical trial findings contributing to evidence base (implicit in publications) \n\nMethodological outputs: \n\n•\tA curated database for future health research (restricted to University of Leeds study team during project) \n•\tMethodological publications in peer‑reviewed journals \n•\tPublic release of code and code lists on GitHub (open access) \n•\tReports to the funder (Blood Cancer UK) \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\n•\tThe outputs will be communicated to the relevant recipients via: \n•\tPresentations at haematological and clinical trial conferences (e.g., EHA, ASH) \n•\tDissemination of results to clinicians, patients, and stakeholders via webinars, lay summaries, and the BLISS website \n•\tEnd‑of‑project dissemination event and stakeholder meetings \n•\tPresentations to the wider BLISS team (quarterly PMG, annual Steering Group) \n•\tPresentations to the PPI Advisory Group (biannual meetings) \n•\tConference presentations at methodological meetings (e.g., ICTMC, CRUK Data‑driven Cancer Research Conference) \n•\tPresentations at local, regional, and national wider stakeholder meetings.",
+   "files_released": 54,
+   "objective": "The BLISS project aims to establish a research database by linking routinely collected healthcare systems data (HSD) such as NHS England (NHSE) data with clinical trial data from approximately 5,500 participants enrolled in completed multiple myeloma trials conducted by the University of Leeds CTRU. The primary objective is to evaluate the feasibility and validity of using NHSE data to support long-term follow-up and endpoint assessment in clinical trials.  \n\nSpecific questions the data processing aims to answer include: \n\n•\tHow accurate and complete is HSD in capturing key clinical trial endpoints such as mortality, cancer registration, treatment, and hospital admissions? \n•\tCan HSD be used to reliably extend follow-up for trial participants, and how does it compare to data collected within the trials? \n•\tTo what extent do trial participants reflect the diversity and characteristics of the broader patient population, and how do these factors influence outcomes? \n•\tIs time to next line of treatment a valid surrogate for progression-free survival when measured using HSD? \n•\tHow is fatality assessed and how predictive are frailty indices derived from HSD for clinical outcomes, and can they inform future trial design? \n•\tHow is bone disease treated and what are the treatment patterns and outcomes for myeloma bone disease as recorded in HSD? \n\nThe project will also generate evidence to support the use of HSD in future prospective trials, offering a cost-effective and scalable approach to trial follow-up that enhances research capacity and accelerates evidence generation in blood cancer research.",
+   "organisation": "UNIVERSITY OF LEEDS",
+   "organisation_type": "Academic",
+   "reference": "DARS-NIC-781290-Q2Q6F-v0.3",
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+     "files": 17,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients (HES OP)",
+     "files": 17,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+     "files": 12,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "files": 5,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "Civil Registrations of Death",
+     "files": 1,
+     "first_month": "2026-02",
+     "last_month": "2026-02",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "NDRS Cancer Registrations",
+     "files": 1,
+     "first_month": "2026-08",
+     "last_month": "2026-08",
+     "opt_outs_applied": "Yes"
+    },
+    {
+     "dataset": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+     "files": 1,
+     "first_month": "2026-08",
+     "last_month": "2026-08",
+     "opt_outs_applied": "Yes"
+    }
+   ],
+   "start_date": "2026-02-09",
+   "sublicensing": "No",
+   "title": "BLISS - Blood cancer clinical trials Long-term follow-up using Integrated healthcare SystemS data",
+   "version": "0.3",
+   "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+  }
+ ]
+}

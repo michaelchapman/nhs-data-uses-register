@@ -1,0 +1,76 @@
+{
+ "base_reference": "DARS-NIC-148034-SCKLL",
+ "versions": [
+  {
+   "activities": "Patient identifiers (NHS number, study ID, name, gender, date of birth and address) were sent to the predecessor bodies (NHS Information Centre and the General Register Office) for linkage. Death details for any patient who had died was sent on a yearly basis in March and was recorded in the appropriate fields on the UKBOR database held at the Royal Free Hospital. In the future this information will be analysed, either as a cohort or case control studies, in line with the objectives above. Identifiers are removed during the course of the analysis and no one can be identified from the outputs published. For this agreement, the cohort is already flagged by NHS Digital, so no identifiers will flow into NHS DIgital.\n\nThe data will not be linked with any record level data other than the UKBOR data referred to above.\n\nThe data will not be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.   \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).",
+   "commercial": "No",
+   "controller_basis": "Sole Data Controller",
+   "controllers": [
+    "ROYAL FREE LONDON NHS FOUNDATION TRUST"
+   ],
+   "datasets": [
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cause of Death Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "Ongoing",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Cohort Event Notification Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Flagging Current Status Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    },
+    {
+     "confidentiality": "Consent (Reasonable Expectation)",
+     "frequency": "One-Off",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "name": "MRIS - Members and Postings Report",
+     "sensitivity": "Sensitive",
+     "type_of_data": "Identifiable"
+    }
+   ],
+   "end_date": "2020-09-30",
+   "expected_benefits": "It is important to reanalyse the data with much larger numbers and at least one other centre, in order to confirm the findings and establish that this is not a phenomenon confined to Rotherham. \nThe results would impact the management of Barrett's oesophagus patients. They have already influenced British Society Guidelines and some clinicians have made individual changes to their practice. Long term the risk of BO patients progressing to oesophageal adenocarcinoma will be reduced resulting in both lives being saved and the cost to the NHS being reduced.\nThere is no final target date but 2 years in the first instance.",
+   "expected_output": "A study using causes of mortality in Barrett's patients compared to the general population was accepted for oral presentation at a conference in the USA and the abstract published in Gastroenterology in 2010. A full paper was published in Endoscopy in 2012  . The UKBOR hope to repeat this with information from additional death certificates. These results  will be invaluable for strategies on the management of patients with Barrett's oesophagus and for strategies to prevent progression to cancer. If confirmed by a larger and geographically more extensive study clinicians could be confident that the increased mortality in BO patients was only from oesophageal adenocarcinoma.  The results have been used in the British Society of Gastroenterology Guidelines for the diagnosis and management of BO, and by gastroenterology clinicians, surgeons and nurses. These are research results for use by medical personnel and not patient friendly. However the publications list is freely available on the BOUK website, the charity that funds UKBOR.  \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+   "files_released": 4,
+   "objective": "The data supplied by NHS Digital to the Royal Free Hospital will be used only for the approved medical research project - MR901 - Mortality in Barrett's Oesophagus Patients. This analysis is one of many (see publications list) initiated by the UK Barrett’s Oesophagus Registry (UKBOR). UKBOR was started in April 1996 at Wexham Park Hospital, Slough. It moved to the surgery department at the Royal Free Hospital in 2000. Initially it was funded by a grant and then by the Barrett’s Oesophagus Campaign, now Barrett’s Oesophagus UK. \n\nBarrett’s Oesophagus is a change in the cells lining the lower part of the oesophagus from squamous cells, similar to lung, to cells similar to those in the stomach or intestine. This happens over many years as a result of acid and bile reflux.   Patients with Barrett’s Oesophagus have an increased risk of progressing to oesophageal adenocarcinoma through a well established sequence of increasingly severe dysplasia and therefore have a 2-5 yearly follow-up endoscopy to monitor any progression to adenocarcinoma. The purpose of MR-901 is to establish all causes of death amongst these patients in order to be able to establish need for prevention of other morbidities or premature mortalities. Barrett's Oesophagus patients were consented from late 2004 by the consultants or endoscopy nurses at the individual hospitals registering their Barrett's Oesophagus patients and the collection of data from the General Register Office was started in late 2005. There has never been any contact between the UKBOR and any patient. Patients are from hospitals all over the UK.\n\nThe mortality data analysis was done using data held by UKBOR from Rotherham General Hospital linked with mortality data provided by NHS Digital and its predecessor organisations. UKBOR data is identifiable and is held on a stand-alone computer, not linked in any way to any other device. It is in a locked room and only those connected to UKBOR have keys. Necessary identifiers from a number of hospitals were sent to the General Register Office for flagging and subsequent annual receipt of death certificates. Only data from Rotherham was used in the analysis for the Endoscopy publication 'Mortality in Barrett's Oesophagus: Three decades of experience in a single centre.'",
+   "organisation": "ROYAL FREE LONDON NHS FOUNDATION TRUST",
+   "organisation_type": "NHS Trust",
+   "reference": "DARS-NIC-148034-SCKLL-v1.8",
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "files": 2,
+     "first_month": "2019-05",
+     "last_month": "2020-03",
+     "opt_outs_applied": "No"
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "files": 2,
+     "first_month": "2019-05",
+     "last_month": "2020-03",
+     "opt_outs_applied": "No"
+    }
+   ],
+   "start_date": "2018-10-01",
+   "sublicensing": "No",
+   "title": "MR901 - MORTALITY IN BARRETT'S OESOPHAGUS PATIENTS",
+   "version": "1.8",
+   "yielded_benefits": "An initial analysis of mortality in patients with Barrett's oesophagus was done and published in 2012. This showed that patients with Barrett's had a greater mortality from oesophageal adenocarcinoma than the general population but not from any other cause of death. It is important to repeat the analysis with greater numbers, over a longer time period and a greater geographical area.\n\t \t\nThe information that patients suffering from Barrett's oesophagus have a greater mortality from oesophageal adenocarcinoma but no other cause of death. This work has been cited many times since publication, providing a strong evidence base for other research and management of Barrett's patients. If either confirmed or refuted the information will have a big impact on the type of care given to Barrett's oesophagus sufferer as they will not need to have screening or surveillance for any other cause of either mortality or morbidity."
+  }
+ ]
+}
