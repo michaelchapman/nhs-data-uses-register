@@ -23,6 +23,8 @@ import re
 import unicodedata
 from collections import Counter
 
+from . import aliases
+
 # Long free-text fields, where a word-level redline is worth reading.
 PROSE_FIELDS = (
     ("objective", "Objective for processing"),
@@ -332,11 +334,17 @@ def membership_renames(
     return renames
 
 
-def _dataset_names(version: dict) -> set[str]:
-    return {d["name"] for d in version["datasets"] if d["name"]}
+def _dataset_names(version: dict, alias_map: dict[str, str]) -> set[str]:
+    """The datasets a version names, under the reviewed dataset aliases.
+
+    A dataset the register relabelled between two versions is the same dataset,
+    so it is not reported as one removed and another added — the same rule
+    `snapshot.diff` applies between editions.
+    """
+    return {aliases.resolve(d["name"], alias_map) for d in version["datasets"] if d["name"]}
 
 
-def compare_versions(before: dict, after: dict) -> dict | None:
+def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None = None) -> dict | None:
     """What changed between two versions of one agreement. `None` if nothing did.
 
     Two fields are reported that `snapshot.FINGERPRINTED` leaves out — the data
@@ -358,7 +366,9 @@ def compare_versions(before: dict, after: dict) -> dict | None:
         old, new = set(before.get(key) or []), set(after.get(key) or [])
         if old != new:
             lists.append({"label": label, "added": sorted(new - old), "removed": sorted(old - new)})
-    old_datasets, new_datasets = _dataset_names(before), _dataset_names(after)
+    if alias_map is None:
+        alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    old_datasets, new_datasets = _dataset_names(before, alias_map), _dataset_names(after, alias_map)
     if old_datasets != new_datasets:
         lists.append(
             {

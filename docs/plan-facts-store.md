@@ -274,11 +274,17 @@ once.
    and two real editions. No callers.
 2. **`ingest` writes facts.** Keep the gzip snapshot reader so the site still
    builds from the old store.
-3. **Move the rules into the build.** `compare` and the changes pages derive
-   amendments from the facts. v6's alias handling survives here; its storage
-   half falls away.
-4. **One full parse** of all 63 workbooks. Check `git gc` size against the §4
-   estimate before committing anything.
+3. **Move the rules into the build.** `changes` derives amendments and the
+   per-agreement timeline from the facts, at build time, under the alias files
+   as they are now. v6's alias handling survives in `compare`; its storage half
+   falls away. *Done.*
+
+   `run` still reads the fingerprints, because the facts store is empty until
+   step 4 and a half-populated store would build a half-wrong site. The
+   switch-over belongs with the parse that makes it possible, so it moved into
+   step 4.
+4. **One full parse** of all 63 workbooks, then point `run` at `changes`.
+   Check `git gc` size against the §4 estimate before committing anything.
 5. **Verify against the current site**: page counts, amendment counts, and the
    cases already known — March 2026 should fall from 122 to about 17, and
    October 2022 (881) and January 2023 (2,455) should fall sharply.
