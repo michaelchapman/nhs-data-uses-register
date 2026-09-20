@@ -1,7 +1,12 @@
 # Plan: what a "file released" covers, and what it leaves out
 
-Status: **accepted, store support implemented.** The record described in §4 is
-in `pipeline/facts.py`; the site wording in §5 is not built yet.
+Status: **accepted, store support implemented; site features parked.** The
+record described in §4 is in `pipeline/facts.py`. The site wording in §5 and the
+release views (a `release-months.csv`, a "no files recorded" line and filter, a
+per-agreement timeline, a register-wide monthly chart, a release check) are
+deliberately left for a separate piece of work, agreed 2026-09-20, so the
+facts-store push carries no release-related site change. Nothing in the store
+needs revisiting to build them: they are all build-time work.
 
 This is a companion to [plan-facts-store.md](plan-facts-store.md), which decided
 *how* releases are stored. This one decides what they can honestly be said to
