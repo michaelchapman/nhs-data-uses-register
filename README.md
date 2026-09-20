@@ -41,8 +41,8 @@ Useful flags:
 | Flag | Effect |
 | --- | --- |
 | `--edition june2026` | Build an older edition instead of the newest |
-| `--workbook path.xlsx` | One-off build from a local file, without ingesting |
-| `--no-snapshot` | Don't record an edition fingerprint |
+| `--workbook path.xlsx` | One-off build from a local file; nothing is ingested or written to `data/` |
+| `--no-snapshot` | Don't record a fingerprint for an edition that lacks one |
 | `--base-path /repo-name` | Serve under a subpath (GitHub project pages) |
 | `--output dir` | Write somewhere other than `_site/` |
 

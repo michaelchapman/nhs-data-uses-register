@@ -37,9 +37,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--register", default="data-uses-register", help="register slug to build")
     parser.add_argument("--edition", help="edition to build (default: the newest in the store)")
-    parser.add_argument("--workbook", type=Path, help="build straight from a local .xlsx, without ingesting")
+    parser.add_argument("--workbook", type=Path, help="build straight from a local .xlsx; writes nothing to data/")
     parser.add_argument("--output", type=Path, default=ROOT / "_site", help="output directory")
-    parser.add_argument("--no-snapshot", action="store_true", help="do not write an edition fingerprint")
+    parser.add_argument("--no-snapshot", action="store_true", help="do not write a missing edition fingerprint")
     parser.add_argument("--site-url", default=os.environ.get("SITE_URL", DEFAULT_SITE_URL))
     parser.add_argument("--base-path", default=os.environ.get("SITE_BASE_PATH", DEFAULT_BASE_PATH))
     return parser.parse_args()
@@ -88,10 +88,13 @@ def main() -> None:
     source_url = entry.get("source_url", "")
     ingested = entry.get("ingested") or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
-    current = snapshot_module.load_snapshot(register.slug, edition)
+    # A `--workbook` build never reads or writes the store: the stored
+    # fingerprint, if there is one, describes a different file, and a one-off
+    # build must not leave anything behind in a directory that is committed.
+    current = None if args.workbook else snapshot_module.load_snapshot(register.slug, edition)
     if current is None:
         current = snapshot_module.build_snapshot(data, register.slug, edition, source_url, ingested)
-        if not args.no_snapshot:
+        if not args.workbook and not args.no_snapshot:
             print(f"  snapshot -> {snapshot_module.write_snapshot(current)}")
     stored_version = snapshot_module.fingerprint_version(current)
     if stored_version < snapshot_module.FINGERPRINT_VERSION:
