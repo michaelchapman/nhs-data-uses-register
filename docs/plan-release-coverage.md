@@ -94,8 +94,8 @@ things: a later source can be added alongside rather than merged into the file
 releases, and the code cannot accidentally call a file release "access"
 because the field it reads is named for what it holds.
 
-**Provenance in time is already there.** Each record names the first edition
-that reported it, so an edition shows the history it had.
+**Provenance in time is already there.** Each observation names the edition it
+starts from, so an edition shows the history it had.
 
 ## 4. The record, at file grain
 
@@ -126,8 +126,15 @@ disagree with the `Datasets` sheet, and rows whose dataset name the version
 lists twice with different attributes, where "the same as its dataset" does not
 name one answer. Everything else is rebuilt from its dataset on the way back.
 
-This is genuinely append-only: a file reference, once issued, is a fact. A file
-reported differently by a later edition is counted, not overwritten.
+This is append-only, but a file is not described once and left alone. The
+register relabels datasets and every release row under them follows — 33,742
+files in the January 2023 edition alone — so a file carries observations, each
+recording the edition it starts from, and a read takes the newest at or before
+the edition being read. A file an edition stops reporting is recorded as
+withdrawn from that edition on (201 were, between December 2022 and March
+2023), and reported again if it returns. The earlier draft of this section kept
+the first report and counted disagreements; the archive parse showed that would
+have read the 2026 edition back with 2021 dataset names.
 
 An opt-out flag that disagrees within a dataset is now representable, so
 `summarise_releases` reports `"Mixed"` rather than silently taking whichever
