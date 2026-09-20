@@ -2,9 +2,16 @@
 
     python -m pipeline.clichecheck              # check the repo's prose files
     python -m pipeline.clichecheck a.md b.py     # check specific files
+    python -m pipeline.clichecheck --advisory    # report, but always exit 0
 
-Exits non-zero if anything is flagged, so CI can gate on it (see
-.github/workflows/build.yml). The pattern list here is an independent
+Exits non-zero if anything is flagged, unless `--advisory` is given. CI runs it
+advisory (see .github/workflows/build.yml): a wording match in a comment is a
+reason to reword, not a reason to hold back a data update, and a check that can
+block a deploy over style will get switched off the first time it does. Under
+GitHub Actions each finding is also written as a warning annotation, so it
+shows against the file and line without failing the run.
+
+The pattern list here is an independent
 implementation covering the same categories as Simon Willison's
 llm-cliche-highlighter (tools.simonwillison.net/llm-cliche-highlighter) —
 credit to that tool for identifying which patterns are worth checking for;
@@ -19,6 +26,7 @@ writing too, just more rarely than they do in unedited LLM output.
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
@@ -381,9 +389,23 @@ def check_file(path: Path) -> list[str]:
     return findings
 
 
+ANNOTATION = re.compile(r"^(?P<file>.+?):(?P<line>\d+): (?P<message>.*)$")
+
+
+def annotate(finding: str) -> str | None:
+    """A finding as a GitHub Actions warning annotation, or `None` if it isn't one."""
+    match = ANNOTATION.match(finding)
+    if not match:
+        return None
+    message = match["message"].replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+    return f"::warning file={match['file']},line={match['line']},title=clichecheck::{message}"
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
-    files = [Path(a) for a in argv] if argv else default_files()
+    advisory = "--advisory" in argv
+    paths = [a for a in argv if a != "--advisory"]
+    files = [Path(a) for a in paths] if paths else default_files()
 
     all_findings = []
     for path in files:
@@ -397,7 +419,9 @@ def main(argv: list[str] | None = None) -> int:
     print(f"clichecheck: {len(all_findings)} finding(s) in {len(files)} files checked\n")
     for line in all_findings:
         print(line)
-    return 1
+        if os.environ.get("GITHUB_ACTIONS") == "true" and (annotation := annotate(line)):
+            print(annotation)
+    return 0 if advisory else 1
 
 
 if __name__ == "__main__":

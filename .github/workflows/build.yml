@@ -35,8 +35,9 @@ jobs:
       - name: Run tests
         run: python -m unittest
 
+      # Advisory: findings show as warnings on the run but never stop a deploy.
       - name: Check for LLM-cliché phrasing
-        run: python -m pipeline.clichecheck
+        run: python -m pipeline.clichecheck --advisory
 
       - name: Build site
         env:
