@@ -56,6 +56,11 @@ def skipped_editions(previous: str, current: str) -> list[str]:
     return skipped
 
 
+def missing_editions(editions: list[str]) -> list[str]:
+    """Every month between the first and last of `editions` (oldest first) that is absent."""
+    return [gap for a, b in zip(editions, editions[1:]) for gap in skipped_editions(a, b)]
+
+
 def _material(difference: dict | None) -> bool:
     """Whether a difference is a change to the register or only to its typing.
 
@@ -89,8 +94,31 @@ def _states(record: dict) -> dict[str, list[dict]]:
     return {version["reference"]: version["states"] for version in record["versions"]}
 
 
-def _describe(state: dict) -> dict:
-    return {"org": state.get("organisation", ""), "title": state.get("title", "")}
+def _describe(state: dict, organisation: str) -> dict:
+    """What a row on the changes page shows: the version's title, under its agreement's organisation.
+
+    The organisation is the agreement's — that of its latest version in the
+    edition — because the row links to the agreement page, which shows that
+    one, and because the fingerprints this replaces recorded it that way. A
+    version's own applicant can differ: DARS-NIC-204580-F5B0C-v0.6 was applied
+    for by a hospital trust while the agreement is now a cancer alliance's.
+    """
+    return {"org": organisation, "title": state.get("title", "")}
+
+
+def _agreement_organisation(record: dict | None, index: dict[str, int]) -> str:
+    """The organisation of the latest version of an agreement that `index` lists."""
+    if not record:
+        return ""
+    from .extract import _version_key
+
+    held = [
+        (_version_key(version["version"]), version["states"][index[version["reference"]]].get("start_date", ""),
+         version["states"][index[version["reference"]]].get("organisation", ""))
+        for version in record["versions"]
+        if version["reference"] in index and index[version["reference"]] < len(version["states"])
+    ]
+    return max(held)[2] if held else ""
 
 
 def diff(
@@ -132,13 +160,16 @@ def diff(
             return None
         return versions[reference][index[reference]]
 
+    def organisation(reference: str, index: dict) -> str:
+        return _agreement_organisation(records.get(_base_and_version(reference)[0]), index)
+
     old_bases = {_base_and_version(r)[0] for r in before}
     added, amended, removed = [], [], []
     for reference in new_refs:
         state = state_of(reference, now)
         base = _base_and_version(reference)[0]
         added.append({
-            "reference": reference, "base": base, **_describe(state or {}),
+            "reference": reference, "base": base, **_describe(state or {}, organisation(reference, now)),
             # A new version of an agreement we already knew about is a renewal,
             # not a brand new data release.
             "kind": "renewal" if base in old_bases else "new",
@@ -151,13 +182,13 @@ def diff(
         if _material(difference):
             amended.append({
                 "reference": reference, "base": _base_and_version(reference)[0],
-                **_describe(is_now), "fields": _labels(difference),
+                **_describe(is_now, organisation(reference, now)), "fields": _labels(difference),
             })
     for reference in gone_refs:
         state = state_of(reference, before)
         removed.append({
             "reference": reference, "base": _base_and_version(reference)[0],
-            **_describe(state or {}),
+            **_describe(state or {}, organisation(reference, before)),
         })
 
     order = lambda item: (item["org"].lower(), item["reference"])

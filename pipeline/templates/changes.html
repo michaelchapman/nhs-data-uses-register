@@ -26,9 +26,9 @@
 {% block content %}
 <h1>What changed</h1>
 
-{% if not changes.comparable and changes.reason == "fingerprint-rules-changed" %}
-<p class="lede">This edition cannot be compared with {{ changes.previous_edition|edition }}.</p>
-<p>The two were fingerprinted under different rules for what counts as a change, and every fingerprint differs between those rules — so a comparison would report the entire register as amended, which would be worse than reporting nothing. The comparison returns once both editions have been processed under the same rules.</p>
+{% if not changes.comparable and changes.reason == "not-ingested" %}
+<p class="lede">This edition has not been ingested, so it cannot be compared with the one before it.</p>
+<p>It was built straight from a workbook. Ingest it to add it to the archive and see what changed.</p>
 {% elif not changes.comparable %}
 <p class="lede">This is the first edition this site has processed, so there is nothing to compare it with yet.</p>
 <p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them.</p>

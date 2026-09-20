@@ -133,6 +133,16 @@ class Store(unittest.TestCase):
         changed[SECOND][0]["datasets"][0]["sensitivity"] = "Non-Sensitive"
         self.assertEqual(facts.append_edition(REGISTER, "september2026", changed)["new_states"], 1)
 
+    def test_datasets_are_presented_alphabetically_ignoring_case(self):
+        mixed = copy.deepcopy(self.versions)
+        first = mixed[SECOND][0]["datasets"][0]
+        mixed[SECOND][0]["datasets"] = [
+            {**first, "name": name} for name in ("Medicines dispensed", "MRIS report", "adult survey")
+        ]
+        facts.append_edition(REGISTER, "september2026", mixed)
+        names = [d["name"] for d in facts.read_edition(REGISTER, "september2026")[SECOND][0]["datasets"]]
+        self.assertEqual(names, ["adult survey", "Medicines dispensed", "MRIS report"])
+
     # Editions
 
     def test_editions_are_listed_oldest_first_however_they_were_added(self):

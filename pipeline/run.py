@@ -1,4 +1,4 @@
-"""Render the site from the committed edition store.
+"""Render the site from the committed facts store.
 
     python -m pipeline.run                        # build the newest ingested edition
     python -m pipeline.run --edition june2026     # build an older one
@@ -20,8 +20,9 @@ import sys
 from pathlib import Path
 
 from . import build as build_module
+from . import changes as changes_module
 from . import editions as editions_module
-from . import snapshot as snapshot_module
+from . import facts
 from . import sources
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,7 +40,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--edition", help="edition to build (default: the newest in the store)")
     parser.add_argument("--workbook", type=Path, help="build straight from a local .xlsx; writes nothing to data/")
     parser.add_argument("--output", type=Path, default=ROOT / "_site", help="output directory")
-    parser.add_argument("--no-snapshot", action="store_true", help="do not write a missing edition fingerprint")
     parser.add_argument("--site-url", default=os.environ.get("SITE_URL", DEFAULT_SITE_URL))
     parser.add_argument("--base-path", default=os.environ.get("SITE_BASE_PATH", DEFAULT_BASE_PATH))
     return parser.parse_args()
@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
 
 def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
     """`(data, edition, manifest_entry)` for the edition we are building."""
-    edition = edition or editions_module.latest_edition(register.slug)
+    edition = edition or facts.latest_edition(register.slug)
     if not edition:
         raise SystemExit(
             f"nothing ingested for {register.slug}.\n"
@@ -55,7 +55,14 @@ def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
             "    python -m pipeline.ingest data/raw/<workbook>.xlsx\n"
             "See docs/manual-updates.md."
         )
-    data = editions_module.read_extract(register.slug, edition)
+    versions_by_base = facts.read_edition(register.slug, edition)
+    # The row-by-row release detail is for the release views, which read it
+    # from the facts store themselves. Nothing on the site reads it here, and
+    # holding it would put 100,000 dicts in memory for the length of the build.
+    for versions in versions_by_base.values():
+        for version in versions:
+            version.pop("released_files", None)
+    data = editions_module.rehydrate(versions_by_base)
     entry = editions_module.manifest_entry(register.slug, edition) or {}
     return data, edition, entry
 
@@ -88,25 +95,18 @@ def main() -> None:
     source_url = entry.get("source_url", "")
     ingested = entry.get("ingested") or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
-    # A `--workbook` build never reads or writes the store: the stored
-    # fingerprint, if there is one, describes a different file, and a one-off
-    # build must not leave anything behind in a directory that is committed.
-    current = None if args.workbook else snapshot_module.load_snapshot(register.slug, edition)
-    if current is None:
-        current = snapshot_module.build_snapshot(data, register.slug, edition, source_url, ingested)
-        if not args.workbook and not args.no_snapshot:
-            print(f"  snapshot -> {snapshot_module.write_snapshot(current)}")
-    stored_version = snapshot_module.fingerprint_version(current)
-    if stored_version < snapshot_module.FINGERPRINT_VERSION:
-        print(
-            f"  warning: the {edition} fingerprint was written under rules v{stored_version}; "
-            f"this code writes v{snapshot_module.FINGERPRINT_VERSION}. Its amendment counts are "
-            "whatever those older rules produced. Re-ingest the archive to refresh them "
-            "(docs/manual-updates.md lists what each version changed).",
-            file=sys.stderr,
-        )
-
-    changes = snapshot_module.diff(current, snapshot_module.previous_snapshot(register.slug, edition))
+    # A `--workbook` build writes nothing: it is a one-off, and must not leave
+    # anything behind in a directory that is committed. What changed between
+    # editions comes from the facts store, so a workbook that has not been
+    # ingested has nothing to be compared with.
+    held = facts.stored_editions(register.slug)
+    if edition in held:
+        changes = changes_module.diff(register.slug, edition)
+    else:
+        changes = {
+            "comparable": False, "reason": "not-ingested", "previous_edition": None,
+            "skipped": [], "added": [], "amended": [], "removed": [],
+        }
     if changes["comparable"]:
         print(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
@@ -114,36 +114,27 @@ def main() -> None:
             + (f" (spans {len(changes['skipped']) + 1} months: {', '.join(changes['skipped'])} not held)"
                if changes["skipped"] else "")
         )
-    elif changes.get("reason") == "fingerprint-rules-changed":
-        print(
-            f"  vs {changes['previous_edition']}: not compared — that edition was fingerprinted "
-            f"under rules v{changes['previous_fingerprint_version']} and this one under "
-            f"v{changes['fingerprint_version']}. Every digest differs between rule versions, so a "
-            "comparison would report the whole register as amended. Re-ingest both editions.",
-            file=sys.stderr,
-        )
 
-    # The timeline is every edition we hold a fingerprint for, which reaches
-    # further back than the manifest: fingerprints predate the edition store,
-    # and a fingerprints-only backfill writes no manifest extract.
+    # The timeline is every edition the facts store holds, which is every
+    # edition ingested. Counts come from the manifest, which records them at
+    # ingest, so nothing has to be read to describe an edition.
     by_edition = {e["edition"]: e for e in editions_module.read_manifest(register.slug)}
-    fingerprints = [snapshot_module.read_snapshot(p) for p in snapshot_module.existing_editions(register.slug)]
     known = [
         {
-            "edition": fp["edition"],
-            "retrieved": by_edition.get(fp["edition"], {}).get("ingested") or fp.get("retrieved", ""),
-            "counts": fp["counts"],
+            "edition": held_edition,
+            "retrieved": by_edition.get(held_edition, {}).get("ingested", ""),
+            "counts": by_edition.get(held_edition, {}).get("counts")
+            or {"agreement_versions": len(facts.edition_index(register.slug, held_edition))},
         }
-        for fp in fingerprints
+        for held_edition in held
     ]
     # A same-shaped changes page for every edition that has one before it, not
-    # only the newest — the fingerprints (unlike the full extract) go back over
-    # the whole backfilled archive, so this doesn't need to wait for anything.
+    # only the newest.
     changes_history = []
-    for i in range(1, len(fingerprints)):
-        entry = snapshot_module.diff(fingerprints[i], fingerprints[i - 1])
-        entry["edition"] = fingerprints[i]["edition"]
-        changes_history.append(entry)
+    for held_edition in held[1:]:
+        history_entry = changes_module.diff(register.slug, held_edition)
+        history_entry["edition"] = held_edition
+        changes_history.append(history_entry)
     meta = {
         "site_name": "NHS Data Access Explorer",
         "site_url": args.site_url.rstrip("/"),
@@ -163,15 +154,11 @@ def main() -> None:
         # build's, so it doesn't drift as the deployed page ages.
         "as_of": sources.edition_date(edition),
         "editions": known,
-        "missing_editions": snapshot_module.missing_editions([e["edition"] for e in known]),
+        "missing_editions": changes_module.missing_editions(held),
     }
 
-    # Every edition's fingerprints are committed, so an agreement's history
-    # reaches back over the whole archive even though only the newest edition
-    # keeps a full extract. `fingerprints` is already the whole archive, read
-    # above for the per-edition changes pages, so hand it over rather than
-    # parsing 25 MB of snapshots a second time.
-    history = snapshot_module.history_index(register.slug, snapshots=fingerprints)
+    # An agreement's history reaches back over every edition the store holds.
+    history = changes_module.history(register.slug)
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history
     )

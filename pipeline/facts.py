@@ -445,7 +445,16 @@ def read_edition(register_slug: str, edition: str) -> dict[str, list[dict]]:
                     f"{record['reference']}, but the {edition} edition wants "
                     f"state {position}. The store is inconsistent; re-ingest it."
                 ) from None
-            versions.append({**state, "reference": record["reference"], "version": record["version"]})
+            version = {**state, "reference": record["reference"], "version": record["version"]}
+            # Stored in plain character order, which is deterministic but puts
+            # "MRIS - Cause of Death Report" ahead of "Medicines dispensed…".
+            # A reader means alphabetical, so present it that way. Sorting again
+            # on the way out costs nothing and needs no re-parse to change.
+            if isinstance(version.get("datasets"), list):
+                version["datasets"] = sorted(
+                    version["datasets"], key=lambda d: (d.get("name", "").casefold(), _key(d))
+                )
+            versions.append(version)
         if not versions:
             continue
         base_reference = stored["base_reference"]

@@ -129,6 +129,21 @@ class Changes(unittest.TestCase):
             [a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]], [["Datasets"]]
         )
 
+    def test_a_row_shows_its_agreements_organisation_not_the_versions_own(self):
+        # DARS-NIC-204580-F5B0C-v0.6 was applied for by a trust; the agreement is
+        # now a cancer alliance's, and its page says so.
+        older = copy.deepcopy(self.versions)
+        older[FIRST][0]["organisation"] = "AN EARLIER APPLICANT"
+        self.record(("july2026", older), ("august2026", self.edited(end_date="2031-06-01")))
+        # The older version is untouched, so amend it too and look at its row.
+        moved = copy.deepcopy(older)
+        moved[FIRST][0]["end_date"] = "2031-06-01"
+        facts.append_edition(REGISTER, "september2026", moved)
+        row = next(a for a in changes.diff(REGISTER, "september2026")["amended"]
+                   if a["reference"] == "DARS-NIC-1-AAAAA-v1")
+        self.assertEqual(row["org"], older[FIRST][-1]["organisation"])
+        self.assertNotEqual(row["org"], "AN EARLIER APPLICANT")
+
     def test_a_new_agreement_is_new_and_a_new_version_is_a_renewal(self):
         without = {FIRST: copy.deepcopy(self.versions[FIRST][:1])}
         self.record(("july2026", without), ("august2026", self.versions))
