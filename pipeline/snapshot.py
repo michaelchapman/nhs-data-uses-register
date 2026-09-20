@@ -293,7 +293,7 @@ def diff(current: dict, previous: dict | None) -> dict:
     }
 
 
-def history_index(register_slug: str) -> dict[str, dict]:
+def history_index(register_slug: str, snapshots: list[dict] | None = None) -> dict[str, dict]:
     """When each agreement and each of its versions appeared or changed.
 
     Every edition's fingerprints are committed, so this reaches back over the
@@ -309,8 +309,15 @@ def history_index(register_slug: str) -> dict[str, dict]:
 
     An agreement present in the earliest edition we hold may well be older than
     that, so `first_is_earliest` marks the ones whose start we cannot see.
+
+    Pass `snapshots` (oldest first) if the caller has already read them.
+    Parsing the archive is most of the cost here — 2.5 of 4 seconds across five
+    years of editions — and `run` needs the same list for the per-edition
+    changes pages, so reading it twice doubles the slowest part of the build
+    for nothing.
     """
-    snapshots = [read_snapshot(path) for path in existing_editions(register_slug)]
+    if snapshots is None:
+        snapshots = [read_snapshot(path) for path in existing_editions(register_slug)]
     if not snapshots:
         return {}
     earliest = snapshots[0]["edition"]
