@@ -130,3 +130,25 @@ class InTerm(unittest.TestCase):
         self.assertEqual(page.count('data-active="yes"'), 1)
         self.assertEqual(page.count('data-active="no"'), 1)
         self.assertIn("In term in September 2026", page)
+
+
+class DatasetPage(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.out = Path(cls.directory.name)
+        build_site(cls.out)
+        cls.page = (cls.out / "datasets" / "msds-maternity-services-data-set-v1-5" / "index.html").read_text()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def test_shows_what_the_register_records_about_the_dataset(self):
+        self.assertIn("How the register describes it", self.page)
+        for value in ("Identifiable", "Sensitive", "One-off", "Consent"):
+            self.assertIn(f"<li>{value}</li>", self.page)
+
+    def test_lists_the_receiving_organisations_with_agreement_counts(self):
+        self.assertIn("Organisations receiving it (2)", self.page)
+        self.assertRegex(self.page, r'organisations/university-of-example/">UNIVERSITY OF EXAMPLE</a> \(1\)')

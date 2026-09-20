@@ -18,6 +18,49 @@
   <div><dt>Files released</dt><dd>{{ dataset.files_released|commas }}</dd></div>
 </dl>
 
+{% set labels = [
+  ("type_of_data", "Type of data"),
+  ("sensitivity", "Sensitivity"),
+  ("frequency", "Frequency of release"),
+  ("legal_basis", "Legal basis for provision"),
+] %}
+{% if dataset.attributes %}
+<h2>How the register describes it</h2>
+<p class="hint">Recorded against the dataset on each agreement, and not always the same from one agreement to the next, so every value found is listed.</p>
+<dl class="key-facts wide">
+  {% for key, label in labels if dataset.attributes.get(key) %}
+  <div>
+    <dt>{{ label }}</dt>
+    <dd>
+      {# The register's free text gives some datasets dozens of legal bases. #}
+      {% set values = dataset.attributes[key] %}
+      <ul class="value-list">
+        {% for value in values[:8] %}<li>{{ value }}</li>{% endfor %}
+      </ul>
+      {% if values|length > 8 %}
+      <details>
+        <summary>{{ values|length - 8 }} more</summary>
+        <ul class="value-list">
+          {% for value in values[8:] %}<li>{{ value }}</li>{% endfor %}
+        </ul>
+      </details>
+      {% endif %}
+    </dd>
+  </div>
+  {% endfor %}
+</dl>
+{% endif %}
+
+<h2 id="organisations">Organisations receiving it ({{ dataset.organisation_rows|length|commas }})</h2>
+<details class="prose-block" {% if dataset.organisation_rows|length <= 30 %}open{% endif %}>
+  <summary>Show the list, with the number of agreements for each</summary>
+  <ul class="pill-list">
+    {% for row in dataset.organisation_rows %}
+    <li><a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name }}</a> ({{ row.agreements|commas }})</li>
+    {% endfor %}
+  </ul>
+</details>
+
 <h2>Agreements covering this dataset</h2>
 <form class="filters" data-filter-form data-target="dataset-agreements" role="search" aria-label="Filter agreements">
   <div class="field">

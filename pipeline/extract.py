@@ -436,6 +436,24 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
     return sorted(grouped.values(), key=lambda o: o["name"].lower())
 
 
+def _dataset_organisations(agreements: list[dict]) -> list[dict]:
+    """Who receives a dataset: `{slug, name, agreements}`, busiest first."""
+    canonical_by_slug = {slugify(g["canonical"]): g["canonical"] for g in aliases.load_groups()}
+    rows: dict[str, dict] = {}
+    for agreement in agreements:
+        slug = agreement["organisation_slug"]
+        row = rows.setdefault(
+            slug,
+            {
+                "slug": slug,
+                "name": canonical_by_slug.get(slug) or agreement["organisation"] or "Unnamed organisation",
+                "agreements": 0,
+            },
+        )
+        row["agreements"] += 1
+    return sorted(rows.values(), key=lambda r: (-r["agreements"], r["name"].lower()))
+
+
 def _group_datasets(agreements: list[dict]) -> list[dict]:
     # Datasets get relabelled at least as often as organisations — NHS England
     # appended acronyms across the whole register in January 2023 — and a
@@ -465,7 +483,11 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
                             # Values differ across agreements only by stray whitespace
                             # more often than they differ in substance.
                             value = re.sub(r"\s+", " ", dataset[key]).strip()
-                            entry["attributes"].setdefault(key, set()).add(value)
+                            # A dataset with several legal bases lists them in one
+                            # cell joined by ";", giving dozens of combinations
+                            # that differ by one clause. Keep each basis once.
+                            values = [v.strip() for v in value.split(";")] if key == "legal_basis" else [value]
+                            entry["attributes"].setdefault(key, set()).update(v for v in values if v)
     for name, entry in grouped.items():
         entry["agreement_count"] = len(entry["agreements"])
         # Counted by canonical slug, not raw name, so two aliased spellings of
@@ -481,4 +503,5 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
             if aliases.resolve(r["dataset"], alias_map) == name
         )
         entry["attributes"] = {k: sorted(v) for k, v in entry["attributes"].items()}
+        entry["organisation_rows"] = _dataset_organisations(entry["agreements"])
     return sorted(grouped.values(), key=lambda d: (-d["agreement_count"], d["name"].lower()))
