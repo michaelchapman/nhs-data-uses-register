@@ -393,6 +393,15 @@ def build_agreement(base: str, versions: list[dict], alias_map: dict, dataset_al
     }
 
 
+def _canonical_names() -> dict[str, str]:
+    """`{slug: the name a reviewer chose}` for every reviewed organisation merge.
+
+    Cleaned like any other name: the alias file is typed by hand, and a canonical
+    copied out of the register keeps the register's double spaces.
+    """
+    return {slugify(g["canonical"]): clean_line(g["canonical"]) for g in aliases.load_groups()}
+
+
 def _group_organisations(agreements: list[dict]) -> list[dict]:
     alias_map = aliases.load_map()
     dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
@@ -401,7 +410,7 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
     # enough on its own: whichever raw name happens to be processed first
     # becomes the display name, which is only the reviewer's chosen spelling
     # by coincidence if the register's own text already matches it.
-    canonical_by_slug = {slugify(g["canonical"]): g["canonical"] for g in aliases.load_groups()}
+    canonical_by_slug = _canonical_names()
 
     # Group by the already-canonical `organisation_slug`, not by the raw
     # `organisation` text: a human-reviewed alias means two different strings
@@ -486,7 +495,7 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
 
 def _dataset_organisations(agreements: list[dict]) -> list[dict]:
     """Who receives a dataset: `{slug, name, agreements}`, busiest first."""
-    canonical_by_slug = {slugify(g["canonical"]): g["canonical"] for g in aliases.load_groups()}
+    canonical_by_slug = _canonical_names()
     rows: dict[str, dict] = {}
     for agreement in agreements:
         slug = agreement["organisation_slug"]

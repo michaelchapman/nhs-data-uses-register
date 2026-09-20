@@ -57,7 +57,7 @@
         data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.organisation ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation }}</a></td>
+      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
       <td>{{ a.organisation_type or "—" }}</td>
       <td class="num">{{ a.dataset_names|length }}</td>
       <td class="num">{{ a.files_released|commas }}</td>

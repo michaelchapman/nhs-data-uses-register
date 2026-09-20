@@ -13,7 +13,7 @@
         <a href="{{ meta.base_path }}/agreements/{{ by_slug[item.base].slug }}/">{{ item.title or item.base }}</a>
         {% else %}{{ item.title or item.base }}{% endif %}
       </th>
-      <td>{{ item.org }}</td>
+      <td>{{ item.org|org }}</td>
       <td class="ref-cell">{{ item.reference }}</td>
       {% if show_kind %}<td>{{ "New agreement" if item.kind == "new" else "New version of an existing agreement" }}</td>{% endif %}
       {% if show_fields %}<td>{% if item.fields %}{{ item.fields|join(", ") }}{% else %}<span class="hint">Not recorded for this edition</span>{% endif %}</td>{% endif %}

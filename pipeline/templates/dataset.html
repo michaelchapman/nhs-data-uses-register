@@ -56,7 +56,7 @@
   <summary>Show the list, with the number of agreements for each</summary>
   <ul class="pill-list">
     {% for row in dataset.organisation_rows %}
-    <li><a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name }}</a> ({{ row.agreements|commas }})</li>
+    <li><a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a> ({{ row.agreements|commas }})</li>
     {% endfor %}
   </ul>
 </details>
@@ -80,7 +80,7 @@
     <tr data-search="{{ (a.title ~ ' ' ~ a.organisation ~ ' ' ~ a.base_reference)|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation }}</a></td>
+      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
       <td>{{ a.organisation_type or "—" }}</td>
       <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       <td>{{ a.commercial or "—" }}</td>

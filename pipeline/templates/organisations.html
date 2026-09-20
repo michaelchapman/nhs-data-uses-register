@@ -38,7 +38,7 @@
   {% for o in organisations %}
     <tr data-type="{{ o.type }}" data-commercial="{{ 'yes' if o.commercial else 'no' }}"
         data-search="{{ (o.name ~ ' ' ~ o.type)|lower }}">
-      <th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name }}</a></th>
+      <th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name|org }}</a></th>
       <td>{{ o.type or "—" }}</td>
       <td class="num">{{ o.agreement_count|commas }}</td>
       <td class="num">{{ o.dataset_names|length }}</td>

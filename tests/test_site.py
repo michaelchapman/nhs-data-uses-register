@@ -151,7 +151,7 @@ class DatasetPage(unittest.TestCase):
 
     def test_lists_the_receiving_organisations_with_agreement_counts(self):
         self.assertIn("Organisations receiving it (2)", self.page)
-        self.assertRegex(self.page, r'organisations/university-of-example/">UNIVERSITY OF EXAMPLE</a> \(1\)')
+        self.assertRegex(self.page, r'organisations/university-of-example/">University of Example</a> \(1\)')
 
 
 class ChangesPages(unittest.TestCase):
@@ -218,3 +218,29 @@ class EditionGap(unittest.TestCase):
             page = (out / "changes" / "index.html").read_text()
         self.assertNotIn("not one", page)
         self.assertNotIn("Not held", page)
+
+
+class OrganisationNames(unittest.TestCase):
+    def test_a_name_the_register_wrote_in_capitals_is_shown_in_ordinary_case(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "organisations" / "university-of-example" / "index.html").read_text()
+            listing = (out / "organisations" / "index.html").read_text()
+            agreement = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+            csv_text = (out / "downloads" / "agreements.csv").read_text()
+        self.assertIn("<h1>University of Example</h1>", page)
+        self.assertIn("The register writes this name in capitals: UNIVERSITY OF EXAMPLE.", page)
+        self.assertIn(">University of Example</a>", listing)
+        self.assertIn(">Other Trust</a>", agreement)  # a joint controller, listed on the agreement
+        # What is stored, searched and exported stays as the register wrote it.
+        self.assertIn("UNIVERSITY OF EXAMPLE", csv_text)
+        self.assertIn('data-search="', listing)
+
+    def test_a_name_already_in_mixed_case_gets_no_note(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            slug = "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c"
+            page = (out / "organisations" / slug / "index.html").read_text()
+        self.assertNotIn("writes this name in capitals", page)

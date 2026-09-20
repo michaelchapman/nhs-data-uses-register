@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% set v = agreement.latest %}
-{% block title %}{{ agreement.title }} — {{ agreement.organisation }} — {{ meta.site_name }}{% endblock %}
-{% block description %}{{ agreement.organisation }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
+{% block title %}{{ agreement.title }} — {{ agreement.organisation|org }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ agreement.organisation|org }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
 {% macro prose_diff(blocks) %}
 <p class="diff-text">
   {% for block in blocks %}
@@ -72,7 +72,7 @@
 </nav>
 
 <h1>{{ agreement.title or agreement.base_reference }}</h1>
-<p class="lede"><a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation }}</a>{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+<p class="lede"><a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
 
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
@@ -89,7 +89,7 @@
 <h2>Data controllers</h2>
 <ul class="plain">
   {% for controller in v.controllers %}
-  <li>{% if agreement.controller_slugs[loop.index0] in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.controller_slugs[loop.index0] }}/">{{ controller }}</a>{% else %}{{ controller }}{% endif %}</li>
+  <li>{% if agreement.controller_slugs[loop.index0] in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.controller_slugs[loop.index0] }}/">{{ controller|org }}</a>{% else %}{{ controller|org }}{% endif %}</li>
   {% endfor %}
 </ul>
 {% endif %}

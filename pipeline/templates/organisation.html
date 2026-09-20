@@ -1,17 +1,20 @@
 {% extends "base.html" %}
-{% block title %}{{ organisation.name }} — {{ meta.site_name }}{% endblock %}
-{% block description %}{{ organisation.name }} holds {{ organisation.agreement_count }} data sharing agreements with NHS England covering {{ organisation.dataset_names|length }} datasets.{% endblock %}
+{% block title %}{{ organisation.name|org }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ organisation.name|org }} holds {{ organisation.agreement_count }} data sharing agreements with NHS England covering {{ organisation.dataset_names|length }} datasets.{% endblock %}
 {% block content %}
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
     <li><a href="{{ meta.base_path }}/">Home</a></li>
     <li><a href="{{ meta.base_path }}/organisations/">Organisations</a></li>
-    <li aria-current="page">{{ organisation.name }}</li>
+    <li aria-current="page">{{ organisation.name|org }}</li>
   </ol>
 </nav>
 
-<h1>{{ organisation.name }}</h1>
+<h1>{{ organisation.name|org }}</h1>
 <p class="lede">{{ organisation.type or "Organisation type not stated" }}</p>
+{% if organisation.name|org != organisation.name %}
+<p class="hint">The register writes this name in capitals: {{ organisation.name }}.</p>
+{% endif %}
 {% if organisation.known_as %}
 <p class="hint">Also recorded in the register as: {{ organisation.known_as|join("; ") }}.
 {%- if organisation.reviewed_merge %} These spellings have been reviewed and merged onto this page — see <a href="{{ meta.repo_url }}/blob/main/data/organisation-aliases.json">data/organisation-aliases.json</a> in the repository.{% endif %}</p>
@@ -37,7 +40,7 @@
 {% endif %}
 <div class="table-scroll">
 <table class="data-table sortable" id="organisation-agreements">
-  <caption class="visually-hidden">Agreements held by {{ organisation.name }}</caption>
+  <caption class="visually-hidden">Agreements held by {{ organisation.name|org }}</caption>
   <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
   {% for a in organisation.agreements|sort(attribute='coverage_end', reverse=true) %}
@@ -56,17 +59,17 @@
 
 {% if organisation.controller_agreements %}
 <h2>Also listed as a data controller</h2>
-<p class="hint">Agreements where {{ organisation.name }} is named as a data controller rather than the applicant. This is matched from the free-text controller field on each agreement, so a controller recorded under a different spelling of the name won't appear here.</p>
+<p class="hint">Agreements where {{ organisation.name|org }} is named as a data controller rather than the applicant. This is matched from the free-text controller field on each agreement, so a controller recorded under a different spelling of the name won't appear here.</p>
 <div class="table-scroll">
 <table class="data-table">
-  <caption class="visually-hidden">Agreements where {{ organisation.name }} is a data controller</caption>
+  <caption class="visually-hidden">Agreements where {{ organisation.name|org }} is a data controller</caption>
   <thead><tr><th scope="col">Agreement</th><th scope="col">Applicant</th><th scope="col">Latest term</th></tr></thead>
   <tbody>
   {% for a in organisation.controller_agreements|sort(attribute='coverage_end', reverse=true) %}
     <tr>
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation }}</a></td>
+      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
       <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
     </tr>
   {% endfor %}

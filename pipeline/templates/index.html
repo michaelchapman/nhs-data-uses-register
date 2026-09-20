@@ -45,7 +45,7 @@
   <thead><tr><th scope="col">Organisation</th><th scope="col" class="num">Agreements</th></tr></thead>
   <tbody>
   {% for o in top_organisations %}
-    <tr><th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name }}</a></th><td class="num">{{ o.agreement_count|commas }}</td></tr>
+    <tr><th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name|org }}</a></th><td class="num">{{ o.agreement_count|commas }}</td></tr>
   {% endfor %}
   </tbody>
 </table>
