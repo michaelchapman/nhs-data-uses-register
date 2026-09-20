@@ -187,8 +187,13 @@ produced it.
 This has one visible consequence. 315 of the 1,950 agreements in the September
 2026 edition list their datasets in some order other than by name, so their
 agreement pages will show them alphabetically instead of in sheet order. That
-looks like the better order anyway, but it is a change to the site and not only
-to the store.
+is a change to the site and not only to the store.
+
+**Decided, 2026-09-20: alphabetical order is accepted.** The sheet's own order
+carries no meaning for a set of datasets, and a reader scanning for one is
+better served by A to Z. The order is part of the stored form, so reversing
+it would mean another parse of the archive; the decision is final unless
+there is a reason to pay for that.
 
 ### File releases are kept apart, because they move every month
 
