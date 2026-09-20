@@ -12,6 +12,20 @@ from .fixtures import dataset_aliases, workbook_bytes
 REGISTER = "test-register"
 
 
+def without_released_files(value):
+    """`value` with every version's row-by-row release detail removed.
+
+    The versions are reachable several ways over — an agreement's own, and the
+    copies embedded in the organisation and dataset views — so this walks the
+    structure rather than naming the paths.
+    """
+    if isinstance(value, list):
+        return [without_released_files(item) for item in value]
+    if isinstance(value, dict):
+        return {k: without_released_files(v) for k, v in value.items() if k != "released_files"}
+    return value
+
+
 class Store(unittest.TestCase):
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
@@ -27,9 +41,11 @@ class Store(unittest.TestCase):
     def test_reading_back_gives_exactly_what_was_extracted(self):
         editions.write_extract(REGISTER, "september2026", self.data)
         again = editions.read_extract(REGISTER, "september2026")
-        self.assertEqual(again["agreements"], self.data["agreements"])
-        self.assertEqual(again["organisations"], self.data["organisations"])
-        self.assertEqual(again["datasets"], self.data["datasets"])
+        # This store holds each version's release *summaries* and never the
+        # row-by-row detail behind them, which lives in `facts`. Everything the
+        # site reads survives the round trip; `released_files` does not.
+        for key in ("agreements", "organisations", "datasets"):
+            self.assertEqual(again[key], without_released_files(self.data[key]), key)
 
     def test_only_the_versions_are_stored(self):
         editions.write_extract(REGISTER, "september2026", self.data)

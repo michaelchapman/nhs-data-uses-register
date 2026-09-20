@@ -99,7 +99,15 @@ def _agreement_json(agreement: dict) -> str:
     Indented so a change to one field is one changed line, and sorted so an
     unchanged agreement is byte-identical from one ingest to the next.
     """
-    stored = {"base_reference": agreement["base_reference"], "versions": agreement["versions"]}
+    # `released_files` is the row-by-row release detail that `facts` stores one
+    # file at a time. This store has never held it and holding it here would
+    # add tens of megabytes an edition to say what its `releases` summaries
+    # already say.
+    versions = [
+        {key: value for key, value in version.items() if key != "released_files"}
+        for version in agreement["versions"]
+    ]
+    stored = {"base_reference": agreement["base_reference"], "versions": versions}
     return json.dumps(stored, indent=1, sort_keys=True, ensure_ascii=False, default=_no_aliases) + "\n"
 
 

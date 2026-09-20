@@ -5,9 +5,10 @@
 
 NHS England's WAF blocks automated downloads (see ``sources``), so workbooks are
 fetched by hand from the register page and its release archive, dropped in
-``data/raw/`` — which is gitignored — and ingested here. This writes the small
-files that *are* committed: a fingerprint for every edition, and a full extract
-for the newest one — one file per agreement — which is what the site is built from.
+``data/raw/`` — which is gitignored — and ingested here. This writes the files
+that *are* committed: the facts of every edition (see ``facts``), a fingerprint
+for every edition, and a full extract for the newest one — one file per
+agreement — which is what the site is still built from.
 
 Re-running on a file already ingested is safe; it overwrites in place.
 """
@@ -21,6 +22,7 @@ import sys
 from pathlib import Path
 
 from . import editions as editions_module
+from . import facts
 from . import snapshot as snapshot_module
 from . import sources
 
@@ -110,6 +112,23 @@ def ingest_one(
             file=sys.stderr,
         )
     print(f"  fingerprint -> {relative(snapshot_module.write_snapshot(current))}")
+
+    # The facts store keeps every edition, not just the newest, so this runs
+    # for each workbook including a `--fingerprints-only` backfill. It writes
+    # nothing for an edition already recorded, so re-ingesting is free.
+    versions_by_base = {a["base_reference"]: a["versions"] for a in data["agreements"]}
+    counts = facts.append_edition(register.slug, edition, versions_by_base)
+    print(
+        f"  facts -> {counts['new_states']:,} new version states in "
+        f"{counts['files_written']:,} agreement file(s), "
+        f"{counts['new_released_files']:,} newly released file(s)"
+    )
+    if counts["release_conflicts"]:
+        print(
+            f"  note: {counts['release_conflicts']:,} released file(s) reported differently "
+            "than when first seen; the first report is kept. See docs/plan-release-coverage.md.",
+            file=sys.stderr,
+        )
 
     return {
         "edition": edition,
