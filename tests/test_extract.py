@@ -107,9 +107,9 @@ class Extract(unittest.TestCase):
         self.assertNotIn(OLD_NAME, names)
 
     def test_renamed_dataset_counts_files_released_under_either_name(self):
-        # 3 files under the old name, 2 + 1 under the new one.
+        # 3 files under the old name, 2 + 2 under the new one.
         dataset = next(d for d in self.data["datasets"] if d["name"] == NEW_NAME)
-        self.assertEqual(dataset["files_released"], 6)
+        self.assertEqual(dataset["files_released"], 7)
 
     def test_dataset_files_add_up_to_the_agreements(self):
         self.assertEqual(

@@ -33,7 +33,11 @@ DATASET_HEADER = [
     "Reference Number", "Dataset", "Type of Data", "Sensitive or Non-Sensitive", "Frequency",
     "Legal Basis for Provision of Data", "Common Law Duty of Confidentiality",
 ]
-RELEASE_HEADER = ["Reference Number", "Dataset", "Month File Released", "Patient Opt-Outs Applied"]
+RELEASE_HEADER = [
+    "File Reference", "Reference Number", "Dataset", "Type of Data",
+    "Sensitive or Non-Sensitive", "Patient Opt-Outs Applied",
+    "Legal Basis for Provision of Data", "Frequency", "Month File Released",
+]
 
 
 def _agreement(reference, title, organisation, controllers, start, end):
@@ -74,11 +78,24 @@ def workbook_bytes() -> bytes:
 
     releases = book.create_sheet("DataReleases")
     releases.append(RELEASE_HEADER)
+    counter = iter(range(1, 100))
+
+    def _release(reference, dataset, month, opt_outs="Yes", sensitivity="Sensitive"):
+        releases.append([
+            f"FILE{next(counter):07d}", reference, dataset, "Identifiable",
+            sensitivity, opt_outs, "Consent", "One-off", month,
+        ])
+
     for month in ("Jan-20", "Feb-20", "Mar-20"):
-        releases.append(["DARS-NIC-1-AAAAA-v1", OLD_NAME, month, "Yes"])
+        _release("DARS-NIC-1-AAAAA-v1", OLD_NAME, month)
     for month in ("Jan-22", "Feb-22"):
-        releases.append(["DARS-NIC-1-AAAAA-v2", NEW_NAME, month, "Yes"])
-    releases.append(["DARS-NIC-2-BBBBB-v1", NEW_NAME, "Jun-22", "No"])
+        _release("DARS-NIC-1-AAAAA-v2", NEW_NAME, month)
+    # Two files in one month, disagreeing about opt-outs, and one whose
+    # sensitivity differs from what the Datasets sheet records: both happen in
+    # the real register and both used to be silently collapsed.
+    _release("DARS-NIC-2-BBBBB-v1", NEW_NAME, "Jun-22", opt_outs="No")
+    _release("DARS-NIC-2-BBBBB-v1", NEW_NAME, "Jun-22", opt_outs="Yes",
+             sensitivity="Non-Sensitive")
 
     buffer = io.BytesIO()
     book.save(buffer)

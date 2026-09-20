@@ -25,6 +25,17 @@ import openpyxl
 from . import aliases
 
 VERSION_SUFFIX = re.compile(r"-v([0-9]+(?:\.[0-9]+)?)$", re.IGNORECASE)
+
+# How the data reached the applicant. The register records one kind of event —
+# a physical file leaving NHS England through DARS — and says nothing about
+# access inside a secure environment or onward sharing by the recipient, so
+# this is named for what it holds rather than for "releases" in general. See
+# docs/plan-release-coverage.md.
+FILE_RELEASE = "file"
+
+# Attributes a release row repeats from the dataset it names, and which differ
+# from it on 737 of 104,451 rows.
+RELEASE_ATTRIBUTES = ("type_of_data", "sensitivity", "legal_basis", "frequency")
 MONTH_ABBR = {
     m: i
     for i, m in enumerate(
@@ -92,24 +103,80 @@ def tidy_version(version: dict) -> dict:
     return version
 
 
-def summarise_release(dataset: str, months: dict, opt_outs: str) -> dict:
-    """One dataset's releases, from the count of files released each month.
+def _attribute_key(attributes) -> tuple:
+    """The four attributes a release row repeats from the dataset it names.
 
-    One definition for both ways in, like `tidy_version`: `extract` tallies a
-    workbook's release rows and `facts` replays a stored history, and both
-    arrive here, so the site reads the same shape either way. A row whose month
-    could not be parsed is counted under `""` — it is a file released, and
-    dropping it would make the totals disagree with the register.
+    Normalised here rather than by the caller, because the two callers reach
+    this from different directions: `extract` compares a release row with a
+    dataset straight off the sheet, and `facts` compares one with a dataset
+    that `tidy_version` has already cleaned. Without this they would disagree
+    about whitespace alone, and the same edition would summarise differently
+    depending on whether it came from a workbook or the store.
     """
-    dated = sorted(month for month in months if month)
-    return {
-        "dataset": dataset,
-        "files": sum(months.values()),
-        "first_month": dated[0] if dated else "",
-        "last_month": dated[-1] if dated else "",
-        "months": {month: months[month] for month in sorted(months)},
-        "opt_outs_applied": opt_outs,
-    }
+    attributes = attributes or {}
+    return tuple(clean_line(attributes.get(key, "")) for key in RELEASE_ATTRIBUTES)
+
+
+def _expected_attributes(datasets: list[dict]) -> dict:
+    """`{dataset name: every set of attributes the version records for it}`.
+
+    A version can list one dataset name twice with different attributes — an
+    anonymised and an identifiable cut of "Civil Registrations of Death -
+    Secondary Care Cut", say. Keeping all of them means a released file is
+    judged against any record of its dataset rather than whichever happened to
+    be read last, which otherwise depends on the order the datasets arrive in.
+    """
+    expected: dict[str, set] = {}
+    for dataset in datasets:
+        expected.setdefault(dataset["name"], set()).add(_attribute_key(dataset))
+    return expected
+
+
+def summarise_releases(released: list[dict], datasets: list[dict]) -> list[dict]:
+    """One version's released files, summarised per dataset as the site reads them.
+
+    One definition for both ways in, like `tidy_version`: `extract` reads a
+    workbook's release rows and `facts` replays a stored history, and both
+    arrive here, so the site sees the same shape either way.
+
+    A file whose month could not be parsed is still counted — it is a file
+    released, and dropping it would make the totals disagree with the register
+    — but it is left out of the first and last months, which it would otherwise
+    blank out.
+
+    `opt_outs_applied` is `"Mixed"` where the register gave both answers for one
+    dataset, which it does for 130 of 8,449 pairs. Reporting whichever row came
+    first, as this used to, hid that.
+    """
+    expected = _expected_attributes(datasets)
+    grouped: dict[tuple, dict] = {}
+    for entry in released:
+        key = (entry.get("channel", FILE_RELEASE), entry["dataset"])
+        summary = grouped.setdefault(
+            key, {"files": 0, "months": {}, "opt_outs": set(), "attributes_differ": False}
+        )
+        summary["files"] += 1
+        summary["months"][entry["month"]] = summary["months"].get(entry["month"], 0) + 1
+        summary["opt_outs"].add(entry["opt_outs_applied"])
+        if _attribute_key(entry.get("attributes")) not in expected.get(entry["dataset"], set()):
+            summary["attributes_differ"] = True
+
+    summaries = []
+    for (channel, dataset), summary in grouped.items():
+        dated = sorted(month for month in summary["months"] if month)
+        opt_outs = sorted(value for value in summary["opt_outs"] if value)
+        summaries.append({
+            "dataset": dataset,
+            "channel": channel,
+            "files": summary["files"],
+            "first_month": dated[0] if dated else "",
+            "last_month": dated[-1] if dated else "",
+            "months": {month: summary["months"][month] for month in sorted(summary["months"])},
+            "opt_outs_applied": opt_outs[0] if len(opt_outs) == 1 else ("Mixed" if opt_outs else ""),
+            "attributes_differ": summary["attributes_differ"],
+        })
+    summaries.sort(key=lambda r: (-r["files"], r["dataset"]))
+    return summaries
 
 
 def parse_date(value) -> str:
@@ -276,21 +343,27 @@ def extract(workbook_bytes: bytes) -> dict:
     # still says *when*, about 41k entries against 104k rows. The register only
     # ever appends to it, which is what lets `facts` keep one copy of a
     # release history for every edition that reports it.
-    counted: dict[str, dict[str, dict]] = defaultdict(dict)
+    files_by_ref: dict[str, list[dict]] = defaultdict(list)
     for row in _read_sheet(workbook, "DataReleases"):
         reference = clean(row.get("Reference Number"))
         dataset = clean_line(row.get("Dataset"))
-        month = parse_release_month(row.get("Month File Released"))
-        tally = counted[reference].setdefault(
-            dataset, {"months": {}, "opt_outs_applied": clean(row.get("Patient Opt-Outs Applied"))}
-        )
-        tally["months"][month] = tally["months"].get(month, 0) + 1
-    releases_by_ref = {
-        reference: {
-            dataset: summarise_release(dataset, tally["months"], tally["opt_outs_applied"])
-            for dataset, tally in tallies.items()
+        attributes = {
+            "type_of_data": clean_line(row.get("Type of Data")),
+            "sensitivity": clean_line(row.get("Sensitive or Non-Sensitive")),
+            "legal_basis": clean_line(row.get("Legal Basis for Provision of Data")),
+            "frequency": clean_line(row.get("Frequency")),
         }
-        for reference, tallies in counted.items()
+        files_by_ref[reference].append({
+            "file": clean(row.get("File Reference")),
+            "dataset": dataset,
+            "month": parse_release_month(row.get("Month File Released")),
+            "channel": FILE_RELEASE,
+            "opt_outs_applied": clean(row.get("Patient Opt-Outs Applied")),
+            "attributes": attributes,
+        })
+    releases_by_ref = {
+        reference: summarise_releases(released, datasets_by_ref.get(reference, []))
+        for reference, released in files_by_ref.items()
     }
 
     agreement_rows = _read_sheet(workbook, "Agreements")
@@ -307,10 +380,7 @@ def extract(workbook_bytes: bytes) -> dict:
             continue
         base, version = _base_and_version(reference)
         datasets = datasets_by_ref.get(reference, [])
-        releases = sorted(
-            releases_by_ref.get(reference, {}).values(),
-            key=lambda r: (-r["files"], r["dataset"]),
-        )
+        releases = releases_by_ref.get(reference, [])
         versions_by_base[base].append(
             tidy_version({
                 "reference": reference,
@@ -331,6 +401,11 @@ def extract(workbook_bytes: bytes) -> dict:
                 "yielded_benefits": clean(row.get("Yielded Benefits")),
                 "datasets": datasets,
                 "releases": releases,
+                # The rows behind the summaries, which `facts` stores one by
+                # one and the site never reads directly. Ordered by the
+                # reference the register issues rather than by sheet row, so a
+                # stored edition and a parsed workbook agree.
+                "released_files": sorted(files_by_ref.get(reference, []), key=lambda f: f["file"]),
                 "files_released": sum(r["files"] for r in releases),
             })
         )

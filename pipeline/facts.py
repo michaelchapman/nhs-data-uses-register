@@ -20,14 +20,21 @@ Three kinds of file:
     appended to the list.
 
 ``data/facts/<register>/releases/<slug>.json``
-    When files were released under each of that agreement's datasets, as
-    ``[month, files, first edition that reported it]``. Releases are kept apart
-    from the states above because they move every month by design: 211 of the
-    2,330 references with releases changed between the August and September
-    2026 editions alone, and folding them into a version's text would append a
-    fresh copy of that agreement's prose every month, for a counter. Held once
-    and replayed per edition, they cost about 41,000 entries for the whole
-    archive instead.
+    One record per file released under that agreement, keyed by the file
+    reference the register issues — unique across all 104,451 rows of the
+    September 2026 edition — and naming the first edition that reported it.
+
+    Releases are kept apart from the states above because they move every month
+    by design: 211 of the 2,330 references with releases changed between the
+    August and September 2026 editions alone, and folding them into a version's
+    text would append a fresh copy of that agreement's prose every month, for a
+    counter. The fingerprints left them out for the same reason.
+
+    Each record carries the `channel` it came through, today always a physical
+    file released through DARS. The register says nothing about data accessed
+    inside a secure environment or shared onward by a recipient, so a second
+    source can be added beside these rather than merged into them. See
+    ``docs/plan-release-coverage.md``.
 
 ``data/facts/<register>/editions/<edition>.json``
     Which state each version was in that month: ``{reference: state index}``.
@@ -67,7 +74,7 @@ import json
 from pathlib import Path
 
 from . import sources
-from .extract import slugify
+from .extract import FILE_RELEASE, slugify, summarise_releases
 
 FACTS_ROOT = Path(__file__).resolve().parent.parent / "data" / "facts"
 AGREEMENTS_DIR = "agreements"
@@ -80,7 +87,12 @@ VERSION_KEYS = ("reference", "version")
 
 # Kept in the release store instead of in a state, and reattached on the way
 # out. See the note on `data/facts/<register>/releases/` above.
-RELEASE_KEYS = ("releases", "files_released")
+RELEASE_KEYS = ("releases", "released_files", "files_released")
+
+# A released file is stored as a row rather than an object: 104,451 of them,
+# where an object would spend more bytes on repeating four key names than on
+# the facts. The group above it names the reference, dataset and channel.
+FILE, MONTH, OPT_OUTS, FIRST_EDITION = range(4)
 
 
 def register_dir(register_slug: str) -> Path:
@@ -165,7 +177,7 @@ def append_edition(register_slug: str, edition: str, versions_by_base: dict[str,
     index: dict[str, int] = {}
     counts = {
         "agreements": 0, "versions": 0, "new_agreements": 0, "new_states": 0, "files_written": 0,
-        "new_release_months": 0, "release_files_written": 0, "opt_out_conflicts": 0,
+        "new_released_files": 0, "release_files_written": 0, "release_conflicts": 0,
     }
     seen_slugs: dict[str, str] = {}
 
@@ -219,19 +231,18 @@ def append_edition(register_slug: str, edition: str, versions_by_base: dict[str,
 
 
 def _append_releases(register_slug: str, edition: str, versions_by_base: dict, counts: dict) -> None:
-    """Fold `edition`'s release counts into the stored per-agreement history.
+    """Add `edition`'s released files to the stored per-agreement history.
 
-    A month already recorded with the same count is left alone, so a month that
-    writes nothing is the normal case. A month reported with a *different*
-    count later is appended as a second observation rather than overwriting the
-    first: the store stays append-only, and `releases_as_at` reads whichever
-    observation the edition being built had. That has not been seen — no cell
-    shrank or changed between the August and September 2026 editions — but
-    silently overwriting a fact is not something to leave to luck.
+    One record per file reference, which the register issues once and never
+    reuses — 104,451 rows in the September 2026 edition, 104,451 distinct
+    references — so this is append-only by construction and a file already
+    stored is left exactly as it was. A file whose details are later reported
+    differently is counted rather than overwritten; a fact should not be
+    rewritten on the strength of a disagreement nobody has looked at.
     """
     directory = releases_dir(register_slug)
     for base_reference, versions in sorted(versions_by_base.items()):
-        reported = [(v["reference"], r) for v in versions for r in v.get("releases") or []]
+        reported = [(v, f) for v in versions for f in v.get("released_files") or []]
         path = directory / f"{slugify(base_reference)}.json"
         if not reported and not path.exists():
             continue
@@ -240,35 +251,53 @@ def _append_releases(register_slug: str, edition: str, versions_by_base: dict, c
             if path.exists()
             else {"base_reference": base_reference, "releases": []}
         )
-        records = {(r["reference"], r["dataset"]): r for r in stored["releases"]}
+        groups = {(r["reference"], r["dataset"], r["channel"]): r for r in stored["releases"]}
+        seen = {row[FILE]: (key, row) for key, group in groups.items() for row in group["files"]}
 
-        for reference, release in reported:
-            key = (reference, release["dataset"])
-            record = records.get(key)
-            if record is None:
-                record = {
-                    "reference": reference,
-                    "dataset": release["dataset"],
-                    "opt_outs_applied": release["opt_outs_applied"],
-                    "months": [],
-                }
-                records[key] = record
-                stored["releases"].append(record)
-            elif record["opt_outs_applied"] != release["opt_outs_applied"]:
-                counts["opt_out_conflicts"] += 1
-            latest: dict = {}
-            for month, files, _seen in record["months"]:
-                latest[month] = files
-            for month, files in release["months"].items():
-                if latest.get(month) != files:
-                    record["months"].append([month, files, edition])
-                    counts["new_release_months"] += 1
+        for version, released in reported:
+            key = (version["reference"], released["dataset"], released.get("channel", FILE_RELEASE))
+            group = groups.get(key)
+            if group is None:
+                group = {"reference": key[0], "dataset": key[1], "channel": key[2], "files": []}
+                groups[key] = group
+                stored["releases"].append(group)
+            row = [released["file"], released["month"], released["opt_outs_applied"], edition]
+            was = seen.get(released["file"])
+            if was is None:
+                group["files"].append(row)
+                seen[released["file"]] = (key, row)
+                counts["new_released_files"] += 1
+                attributes = _differing_attributes(released, version)
+                if attributes:
+                    group.setdefault("attributes", {})[released["file"]] = attributes
+            elif was[0] != key or was[1][:FIRST_EDITION] != row[:FIRST_EDITION]:
+                counts["release_conflicts"] += 1
 
-        for record in stored["releases"]:
-            record["months"].sort(key=lambda m: (m[0], sources.edition_sort_key(m[2])))
-        stored["releases"].sort(key=lambda r: (r["reference"], r["dataset"]))
+        for group in stored["releases"]:
+            group["files"].sort()
+        stored["releases"].sort(key=lambda r: (r["reference"], r["dataset"], r["channel"]))
         if _write_if_changed(path, _dumps(stored)):
             counts["release_files_written"] += 1
+
+
+def _differing_attributes(released: dict, version: dict) -> dict:
+    """A released file's own attributes, kept only when they cannot be inferred.
+
+    737 of 104,451 rows disagree with the `Datasets` sheet, and storing the
+    attributes of every row to record that would quadruple the release store.
+    A row that agrees is left out and rebuilt from its dataset on the way back.
+
+    Two cases have to be kept all the same: a row that disagrees, and a row
+    whose dataset name the version lists more than once with different
+    attributes, where "the same as its dataset" does not name one answer.
+    """
+    from .extract import _attribute_key, _expected_attributes
+
+    expected = _expected_attributes(version.get("datasets", [])).get(released["dataset"], set())
+    attributes = released.get("attributes") or {}
+    if len(expected) == 1 and _attribute_key(attributes) in expected:
+        return {}
+    return attributes
 
 
 def read_releases(register_slug: str, base_reference: str) -> list[dict]:
@@ -278,29 +307,37 @@ def read_releases(register_slug: str, base_reference: str) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))["releases"]
 
 
-def releases_as_at(records: list[dict], edition: str) -> dict[str, list[dict]]:
-    """`{version reference: release summaries}` as `edition` reported them.
+def released_files_as_at(groups: list[dict], edition: str, datasets_by_reference: dict) -> dict:
+    """`{version reference: released files}`, in the shape `extract` produces.
 
-    Months first reported by a later edition are left out, so an edition built
+    Files first reported by a later edition are left out, so an edition built
     from the store shows the release history that edition actually had rather
     than everything known since.
     """
-    from .extract import summarise_release
+    from .extract import RELEASE_ATTRIBUTES
 
     cutoff = sources.edition_sort_key(edition)
     by_reference: dict[str, list[dict]] = {}
-    for record in records:
-        months: dict[str, int] = {}
-        for month, files, seen in record["months"]:
-            if sources.edition_sort_key(seen) <= cutoff:
-                months[month] = files
-        if not months:
-            continue
-        summary = summarise_release(record["dataset"], months, record["opt_outs_applied"])
-        by_reference.setdefault(record["reference"], []).append(summary)
-    # The order `extract` produces: most files first, then by dataset name.
-    for summaries in by_reference.values():
-        summaries.sort(key=lambda r: (-r["files"], r["dataset"]))
+    for group in groups:
+        attributes = group.get("attributes", {})
+        datasets = {d["name"]: d for d in datasets_by_reference.get(group["reference"], [])}
+        shared = datasets.get(group["dataset"], {})
+        for file_reference, month, opt_outs, first_edition in group["files"]:
+            if sources.edition_sort_key(first_edition) > cutoff:
+                continue
+            own = attributes.get(file_reference)
+            by_reference.setdefault(group["reference"], []).append({
+                "file": file_reference,
+                "dataset": group["dataset"],
+                "month": month,
+                "channel": group["channel"],
+                "opt_outs_applied": opt_outs,
+                # Where the file did not disagree with its dataset, its
+                # attributes *are* the dataset's; only the exceptions are kept.
+                "attributes": own or {key: shared.get(key, "") for key in RELEASE_ATTRIBUTES},
+            })
+    for released in by_reference.values():
+        released.sort(key=lambda f: f["file"])
     return by_reference
 
 
@@ -345,9 +382,17 @@ def read_edition(register_slug: str, edition: str) -> dict[str, list[dict]]:
         if not versions:
             continue
         base_reference = stored["base_reference"]
-        releases = releases_as_at(read_releases(register_slug, base_reference), edition)
+        datasets_by_reference = {v["reference"]: v.get("datasets", []) for v in versions}
+        released = released_files_as_at(
+            read_releases(register_slug, base_reference), edition, datasets_by_reference
+        )
         for version in versions:
-            version["releases"] = releases.get(version["reference"], [])
+            files = released.get(version["reference"], [])
+            version["released_files"] = files
+            # Summarised against the datasets as *this* edition described them,
+            # so a file whose own attributes differ is judged against the
+            # dataset record it was released under.
+            version["releases"] = summarise_releases(files, version.get("datasets", []))
             version["files_released"] = sum(r["files"] for r in version["releases"])
         versions_by_base[base_reference] = versions
     return versions_by_base
