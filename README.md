@@ -34,16 +34,15 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m http.server 8000 --directory _site
 ```
 
-`pipeline.run` builds from the edition committed in `data/editions/` and writes
-the site to `_site/`. It makes no network requests.
+`pipeline.run` builds the newest edition in `data/facts/` and writes the site to
+`_site/`. It makes no network requests.
 
 Useful flags:
 
 | Flag | Effect |
 | --- | --- |
-| `--edition september2026` | Name the edition to build; only the edition held in the store can be (older ones: use `--workbook`) |
+| `--edition september2026` | Build any edition in the store, not only the newest |
 | `--workbook path.xlsx` | One-off build from a local file; nothing is ingested or written to `data/` |
-| `--no-snapshot` | Don't record a fingerprint for an edition that lacks one |
 | `--base-path /repo-name` | Serve under a subpath (GitHub project pages) |
 | `--output dir` | Write somewhere other than `_site/` |
 
@@ -62,30 +61,38 @@ browser, so a person downloads the workbook and runs one command:
 
 ```bash
 .venv/bin/python -m pipeline.ingest data/raw/datausesregister_august2026.xlsx
-git add data/snapshots data/editions && git commit -m "Add the August 2026 edition"
+git add data/facts && git commit -m "Add the August 2026 edition"
 ```
 
 `.github/workflows/build.yml` then rebuilds and deploys on push to `main`, from
 committed data only. Because it never reaches outside the repository, it cannot
 fail the way the scheduled job did.
 
-Two things are committed:
+One thing is committed: **`data/facts/<register>/`**, the text of every
+edition. Nothing derived is stored — what changed between editions, and the
+organisation and dataset views, are worked out at build time — so a new alias or
+a change to what counts as an amendment costs a rebuild, and never a re-parse of
+the workbooks.
 
-- **`data/editions/<register>/agreements/<slug>.json`** — the newest edition's
-  full extract, which the site is rendered from: one uncompressed file per
-  agreement, holding its versions. They are deliberately not gzipped or bundled
-  into one file. Consecutive editions restate almost all of the same prose, and
-  git stores that as a small delta between two copies of the same file — a
-  monthly ingest adds well under 1 MB to the repository, where a gzipped extract
-  added about 30 MB. `git log` on one of these files is that agreement's history.
-  `extract.json` beside them says which edition they are.
-- **`data/snapshots/<register>/<edition>.json.gz`** — a hash of every agreement
-  version, ~210 KB. One per edition, kept forever; this is what the "what
-  changed" page compares.
+- **`agreements/<slug>.json`** — every version of one agreement, and each
+  distinct state a version has been published in. One uncompressed file per
+  agreement, deliberately not gzipped or bundled: consecutive editions restate
+  almost all of the same prose, and git stores that as a small delta between two
+  copies of the same file. `git log` on one of these is that agreement's history.
+- **`releases/<slug>.json`** — every file released under an agreement, one row
+  per file, and which edition first reported it.
+- **`editions/<edition>.json`** — which state each version was in that month.
+  About 190 KB, one per edition, kept forever.
+- **`manifest.json`** — each workbook's SHA-256, size and source URL, so the file
+  that was ingested can be identified.
 
-The workbooks themselves (29 MB each) are never committed — `data/raw/` is
-gitignored. `data/editions/<register>/manifest.json` records each one's SHA-256,
-size and source URL so the file that was ingested can be identified.
+The whole archive, July 2021 to September 2026, is about 420 MB on disk and
+42 MB packed in git; a monthly ingest adds under 1 MB. See
+[docs/plan-facts-store.md](docs/plan-facts-store.md) for why it is shaped this
+way.
+
+The workbooks themselves (29 MB each) are never committed: `data/raw/` is
+gitignored.
 
 ### Backfilling the archive
 
@@ -99,7 +106,8 @@ month in their filename:
 .venv/bin/python -m pipeline.ingest data/raw/*.xlsx
 ```
 
-At ~210 KB a fingerprint, three years of history costs about 8 MB in git.
+Ingesting an edition that is already recorded writes nothing, so a backfill can
+be stopped and restarted.
 
 ### First-time setup
 
@@ -115,10 +123,10 @@ Using a custom domain or a user page instead of a project page? Set
 
 ```
 pipeline/sources.py             register definitions, filename and edition rules
-pipeline/ingest.py              workbook -> committed edition store
-pipeline/editions.py            the edition store and its manifest
+pipeline/ingest.py              workbook -> the committed facts store
+pipeline/facts.py               the facts store: every edition, its releases and its manifest
 pipeline/extract.py             workbook -> agreements / organisations / datasets
-pipeline/snapshot.py            per-edition fingerprints and the month-on-month diff
+pipeline/changes.py             what changed between editions, worked out from the facts
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site and the CSV extracts
 pipeline/orgcheck.py            finds organisation names that might be duplicates
@@ -126,13 +134,11 @@ pipeline/aliases.py             applies reviewed organisation and dataset merges
 pipeline/datasetcheck.py        finds datasets the register has renamed
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
-pipeline/probe.py               field-level diff between two editions (diagnostic)
 pipeline/templates/             Jinja2 templates
 tests/                          unit tests and a synthetic register (python -m unittest)
 assets/                         CSS and the table-filter script
 data/raw/                       downloaded workbooks (gitignored)
-data/editions/                  committed extracts, and the manifest
-data/snapshots/                 committed edition fingerprints
+data/facts/                     committed facts: every edition, and the manifest
 data/organisation-aliases.json  reviewed organisation-name merges
 data/dataset-aliases.json       reviewed dataset-name merges
 docs/manual-updates.md          the monthly routine
@@ -154,8 +160,11 @@ register with the same shape needs no template changes.
 - This is a mirror, and only as current as the last edition somebody added.
   The edition and the date it was added are in the footer of every page. For
   anything consequential, check the source workbook.
-- File releases are summarised per dataset, not listed file by file; the
-  full rows are in the source workbook.
+- File releases are summarised per dataset on the site. The facts store holds
+  every file, but a release row records a physical file leaving NHS England
+  through DARS; it says nothing about data analysed inside a secure environment
+  or shared onward by a recipient. See
+  [docs/plan-release-coverage.md](docs/plan-release-coverage.md).
 - The register describes what applicants said they intended, not audited
   outcomes.
 

@@ -1,6 +1,6 @@
 import unittest
 
-from pipeline import editions
+from pipeline import facts
 from pipeline.names import display_name
 
 
@@ -59,8 +59,8 @@ class OverTheRealRegister(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        register = editions.latest_edition("data-uses-register")
-        data = editions.read_extract("data-uses-register", register)
+        register = facts.latest_edition("data-uses-register")
+        data = facts.read_extract("data-uses-register", register)
         cls.names = {o["name"] for o in data["organisations"]} | {
             a["organisation"] for a in data["agreements"]
         } | {c for a in data["agreements"] for c in a["controllers"]}

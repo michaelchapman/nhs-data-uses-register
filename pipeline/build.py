@@ -280,8 +280,8 @@ def build(
     changes_by_slug = {a["base_reference"]: a for a in data["agreements"]}
     render("changes.html", "changes/index.html", by_slug=changes_by_slug)
     # A same-shaped page for every earlier edition pair, so "what changed" isn't
-    # limited to the current edition — the fingerprints exist for the whole
-    # backfilled history even when only the newest edition has a full extract.
+    # limited to the current edition — the facts store holds every edition
+    # ingested, so each can have its own page.
     for entry in changes_history or []:
         if entry["edition"] == meta["edition"]:
             # Identical to /changes/, which already shows it.

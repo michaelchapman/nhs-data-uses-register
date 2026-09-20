@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from pipeline import editions, facts
+from pipeline import facts
 from pipeline.extract import extract, summarise_releases
 
 from .fixtures import NEW_NAME, dataset_aliases, workbook_bytes
@@ -245,6 +245,17 @@ class Store(unittest.TestCase):
         self.assertIn("FILE0000900", files_in("august2026"))
         self.assertNotIn("FILE0000900", files_in("september2026"))
 
+    def test_an_older_edition_ingested_late_does_not_withdraw_newer_files(self):
+        with_file = self.released(month="2026-09")
+        facts.append_edition(REGISTER, "september2026", with_file)
+        counts = facts.append_edition(REGISTER, "august2026", self.versions)
+        self.assertEqual(counts["withdrawn_files"], 0)
+
+        def files_in(edition):
+            return {f["file"] for f in facts.read_edition(REGISTER, edition)[FIRST][1]["released_files"]}
+        self.assertIn("FILE0000900", files_in("september2026"))
+        self.assertNotIn("FILE0000900", files_in("august2026"))
+
     def test_a_withdrawn_file_that_comes_back_is_reported_again(self):
         facts.append_edition(REGISTER, "july2026", self.released(month="2026-07"))
         facts.append_edition(REGISTER, "august2026", self.versions)
@@ -316,7 +327,7 @@ class Store(unittest.TestCase):
     def test_an_edition_read_back_assembles_into_the_same_site_data(self):
         """A stored edition and its workbook are interchangeable inputs."""
         facts.append_edition(REGISTER, "september2026", self.versions)
-        rebuilt = editions.rehydrate(facts.read_edition(REGISTER, "september2026"))
+        rebuilt = facts.rehydrate(facts.read_edition(REGISTER, "september2026"))
         again = extract(workbook_bytes())
         self.assertEqual(rebuilt["agreements"], again["agreements"])
         self.assertEqual(rebuilt["organisations"], again["organisations"])
@@ -325,3 +336,64 @@ class Store(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Manifest(unittest.TestCase):
+    """Provenance for each edition, kept beside the facts it describes."""
+
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        patch = mock.patch.object(facts, "FACTS_ROOT", Path(self.directory.name))
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def test_entries_are_kept_oldest_first_and_replaced_by_edition(self):
+        for edition in ("september2026", "july2021", "august2026"):
+            facts.upsert(REGISTER, {"edition": edition, "sha256": "a"})
+        facts.upsert(REGISTER, {"edition": "august2026", "sha256": "b"})
+        entries = facts.read_manifest(REGISTER)
+        self.assertEqual([e["edition"] for e in entries], ["july2021", "august2026", "september2026"])
+        self.assertEqual(facts.manifest_entry(REGISTER, "august2026")["sha256"], "b")
+
+    def test_a_missing_manifest_is_empty_and_an_unknown_edition_is_none(self):
+        self.assertEqual(facts.read_manifest(REGISTER), [])
+        self.assertIsNone(facts.manifest_entry(REGISTER, "june2026"))
+
+    def test_the_manifest_lives_with_the_facts(self):
+        facts.upsert(REGISTER, {"edition": "july2026"})
+        self.assertEqual(facts.manifest_path(REGISTER), Path(self.directory.name) / REGISTER / "manifest.json")
+        self.assertTrue(facts.manifest_path(REGISTER).exists())
+
+
+class ReadExtract(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        patch = mock.patch.object(facts, "FACTS_ROOT", Path(self.directory.name))
+        patch.start()
+        self.addCleanup(patch.stop)
+        alias_patch = dataset_aliases()
+        alias_patch.__enter__()
+        self.addCleanup(lambda: alias_patch.__exit__(None, None, None))
+        self.parsed = extract(workbook_bytes())
+        facts.append_edition(REGISTER, "september2026", versions_by_base(self.parsed))
+
+    def test_it_returns_what_the_site_is_built_from(self):
+        data = facts.read_extract(REGISTER, "september2026")
+        self.assertEqual(sorted(data), ["agreements", "datasets", "organisations"])
+        self.assertEqual({a["base_reference"] for a in data["agreements"]}, {FIRST, SECOND})
+
+    def test_it_leaves_out_the_row_by_row_release_detail(self):
+        data = facts.read_extract(REGISTER, "september2026")
+        for agreement in data["agreements"]:
+            for version in agreement["versions"]:
+                self.assertNotIn("released_files", version)
+                self.assertIn("releases", version)
+
+    def test_it_agrees_with_parsing_the_workbook_directly(self):
+        data = facts.read_extract(REGISTER, "september2026")
+        self.assertEqual(
+            [(a["base_reference"], a["files_released"]) for a in data["agreements"]],
+            [(a["base_reference"], a["files_released"]) for a in self.parsed["agreements"]],
+        )

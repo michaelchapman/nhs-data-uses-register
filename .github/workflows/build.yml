@@ -2,7 +2,7 @@ name: Build and deploy
 
 # No schedule. The register is not fetched here: digital.nhs.uk refuses requests
 # from datacentre address space, so every scheduled run failed with HTTP 403.
-# Editions are downloaded by hand and committed to data/editions (see
+# Editions are downloaded by hand and recorded in data/facts (see
 # docs/manual-updates.md); this workflow only renders what is already in the
 # repository, and so makes no external requests at all.
 on:

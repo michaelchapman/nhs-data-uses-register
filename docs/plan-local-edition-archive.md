@@ -1,7 +1,11 @@
 # Plan: back out of live fetching, build from a local edition archive
 
-Status: **accepted (Option B), implemented.** The monthly routine is in
-[manual-updates.md](manual-updates.md); this document records why.
+Status: **accepted (Option B), implemented, then extended.** The decision to stop
+fetching and commit the input stands. What is committed has since changed from
+the newest edition's extract plus a digest per edition to the text of every
+edition; see [plan-facts-store.md](plan-facts-store.md). The monthly routine is
+in [manual-updates.md](manual-updates.md); this document records why the site
+stopped fetching.
 
 ## 1. What is actually broken
 

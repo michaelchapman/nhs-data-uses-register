@@ -87,7 +87,7 @@ def tidy_version(version: dict) -> dict:
     """Apply `clean_line` to every name-like field of a version, in place.
 
     One definition for both ways in: `extract` runs it on a fresh workbook, and
-    `editions.rehydrate` runs it on a stored extract, so an extract written
+    `facts.rehydrate` runs it on stored facts, so a version written
     before a field was tidied gets the same treatment on the next build without
     a re-ingest. Idempotent. Free text (objective, activities, benefits) is
     left alone: its line breaks are paragraphs.

@@ -26,7 +26,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from . import aliases
-from . import editions as editions_module
+from . import facts
 from . import sources
 
 DROP_TOKENS = {"THE", "LIMITED", "LTD", "LLC", "LLP", "PLC", "AND", "&", "CO", "OF"}
@@ -373,10 +373,10 @@ def main() -> None:
     args = parser.parse_args()
 
     register = sources.registers()[0]
-    edition = editions_module.latest_edition(register.slug)
+    edition = facts.latest_edition(register.slug)
     if not edition:
         raise SystemExit("nothing ingested — run pipeline.ingest first")
-    data = editions_module.read_extract(register.slug, edition)
+    data = facts.read_extract(register.slug, edition)
     names = sorted({o["name"] for o in data["organisations"]})
     counts = {o["name"]: o["agreement_count"] + o.get("controller_agreement_count", 0) for o in data["organisations"]}
     print(f"{edition}: {len(names)} organisation names\n")

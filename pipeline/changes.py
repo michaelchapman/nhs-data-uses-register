@@ -1,13 +1,13 @@
 """What changed between editions, worked out from the facts store.
 
-``snapshot`` answered this from digests written at ingest, which made every
-answer a function of the rules in force that day: changing what counted as an
-amendment meant re-parsing 63 workbooks, and editions fingerprinted under
-different rules could not be compared at all. ``facts`` stores what each
+This used to be answered from a digest of each edition written at ingest, which
+made every answer a function of the rules in force that day: changing what
+counted as an amendment meant re-parsing 63 workbooks, and editions digested
+under different rules could not be compared at all. ``facts`` stores what each
 edition said, so the same questions are answered here at build time, from the
 text, under the alias files as they are now.
 
-Two things follow that the fingerprints could not do. A dataset alias reviewed
+Two things follow that digests could not do. A dataset alias reviewed
 today corrects the whole archive at the next build. And there is no rule
 version, so no comparison is ever refused — the "cannot be compared" gap goes
 away with the digests that caused it.
@@ -99,7 +99,7 @@ def _describe(state: dict, organisation: str) -> dict:
 
     The organisation is the agreement's — that of its latest version in the
     edition — because the row links to the agreement page, which shows that
-    one, and because the fingerprints this replaces recorded it that way. A
+    one, and because the digests this replaced recorded it that way. A
     version's own applicant can differ: DARS-NIC-204580-F5B0C-v0.6 was applied
     for by a hospital trust while the agreement is now a cancer alliance's.
     """

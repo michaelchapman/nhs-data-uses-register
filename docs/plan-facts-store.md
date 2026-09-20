@@ -1,14 +1,14 @@
 # Plan: store the facts, derive the rest
 
-Status: **accepted, in progress.** Step 1 of §6 is implemented
-(`pipeline/facts.py`); nothing is wired to the site yet.
+Status: **accepted; steps 1 to 6 implemented.** The site is built from the
+facts store, `snapshot.py` and the old extract are deleted, and the archive was
+parsed once (63 editions, 71 minutes). Step 7, the push, is pending.
 
 This supersedes the storage half of
 [plan-version-diffs.md](plan-version-diffs.md) — the fingerprint snapshots and
 their rule versions — and extends the store designed in
 [plan-local-edition-archive.md](plan-local-edition-archive.md) from one edition
-to all of them. The monthly routine in [manual-updates.md](manual-updates.md)
-is unaffected until step 6.
+to all of them. The monthly routine is in [manual-updates.md](manual-updates.md).
 
 ## 1. The problem, stated once
 
@@ -308,3 +308,52 @@ unless a second `filter-branch` removes them. Not worth it.
 Editions before July 2021 are not in NHS England's archive, so the facts store
 starts where the workbooks do. Nothing about the design assumes otherwise: an
 older edition found later is appended like any other.
+
+## 8. Outcome
+
+The plan's numbers were estimates. Measured on the archive parse:
+
+| | Estimated | Measured |
+| --- | --- | --- |
+| Distinct version states | 12,439 | **14,023** |
+| Working tree | about 340 MB | **421 MB** |
+| Packed in git | 30 to 40 MB | **42 MB** |
+| Full parse | about an hour | **71 minutes** |
+
+The state count is higher because the estimate came from fingerprints, which
+normalise typography, while a state is a byte-exact record. The difference is
+reformatting the store keeps and the build declines to call an amendment.
+
+### What the parse and the checks found
+
+The first parse was thrown away and redone, because two faults showed only at
+archive scale. A file released under a dataset can be described more than once
+(the register relabelled datasets, and 33,742 files followed in January 2023
+alone), and files are withdrawn (201 between December 2022 and March 2023), so
+neither a fixed description nor an append-only list of files is right. Both are
+recorded as observations from an edition.
+
+Cross-checking against the digests it replaced, at all 63 editions:
+
+- every version's content digest, rebuilt from the stored text, matched the one
+  written at ingest, and every addition and removal matched at all 62 boundaries;
+- 3,903 amendments the digests reported are not reported now. Each is a dataset
+  the register relabelled, or typography;
+- the derived path reports none that the digests did not, once two gaps in
+  `compare_versions` were closed. It compared controller lists case-sensitively
+  (1,302 false amendments in October 2021), and it compared datasets by name
+  and never by their recorded details, which dropped 1,226 real amendments,
+  1,191 of them in December 2022 when the register removed "s261(1) and" from
+  the legal basis cited on 10,066 dataset rows.
+
+I reported the second as "no real change lost" before checking it. It was found
+only because a single record labelled "cosmetic" was looked at.
+
+### Decisions
+
+- Datasets are presented alphabetically, ignoring case (decided 2026-09-20).
+- The release views are parked for separate work
+  ([plan-release-coverage.md](plan-release-coverage.md)).
+- Dataset details now appear in each agreement's version-to-version changes:
+  1,505 of 3,663 consecutive version pairs show one, a large visible addition
+  that was accepted.

@@ -227,5 +227,83 @@ class Changes(unittest.TestCase):
         self.assertEqual(changes.history(REGISTER), {})
 
 
+class Gaps(unittest.TestCase):
+    """Months with no edition of their own are named, never silently folded in."""
+
+    def test_neighbouring_months_skip_nothing(self):
+        self.assertEqual(changes.skipped_editions("december2024", "january2025"), [])
+
+    def test_a_missing_month_is_named(self):
+        self.assertEqual(changes.skipped_editions("december2024", "february2025"), ["january2025"])
+
+    def test_several_months_across_a_year_end(self):
+        self.assertEqual(
+            changes.skipped_editions("october2024", "february2025"),
+            ["november2024", "december2024", "january2025"],
+        )
+
+    def test_missing_editions_across_a_list(self):
+        self.assertEqual(
+            changes.missing_editions(["november2024", "december2024", "february2025", "april2025"]),
+            ["january2025", "march2025"],
+        )
+        self.assertEqual(changes.missing_editions(["may2025"]), [])
+
+
+class GapsInTheStore(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        patch = mock.patch.object(facts, "FACTS_ROOT", Path(self.directory.name))
+        patch.start()
+        self.addCleanup(patch.stop)
+        alias_patch = dataset_aliases()
+        alias_patch.__enter__()
+        self.addCleanup(lambda: alias_patch.__exit__(None, None, None))
+        base = {a["base_reference"]: a["versions"] for a in extract(workbook_bytes())["agreements"]}
+        edited = copy.deepcopy(base)
+        edited[FIRST][-1]["end_date"] = "2031-06-01"
+        only_first = {FIRST: copy.deepcopy(base[FIRST])}
+        # November and December, then January is missing, then February and March.
+        for edition, versions in (
+            ("november2024", only_first), ("december2024", only_first),
+            ("february2025", edited), ("march2025", edited),
+        ):
+            facts.append_edition(REGISTER, edition, versions)
+
+    def test_a_comparison_across_a_gap_says_what_it_skipped(self):
+        result = changes.diff(REGISTER, "february2025")
+        self.assertTrue(result["comparable"])
+        self.assertEqual(result["skipped"], ["january2025"])
+
+    def test_consecutive_editions_skip_nothing(self):
+        self.assertEqual(changes.diff(REGISTER, "march2025")["skipped"], [])
+        self.assertEqual(changes.diff(REGISTER, "december2024")["skipped"], [])
+
+    def test_the_first_edition_has_nothing_skipped(self):
+        self.assertEqual(changes.diff(REGISTER, "november2024")["skipped"], [])
+
+    def test_an_edit_after_a_gap_notes_the_gap(self):
+        (event,) = changes.history(REGISTER)[FIRST]["events"]
+        self.assertEqual((event["edition"], event["skipped"]), ("february2025", ["january2025"]))
+
+    def test_an_agreement_first_seen_after_a_gap_notes_the_gap(self):
+        # The second agreement first appears in February, straight after the
+        # missing January edition, so it may have appeared in either month.
+        entry = changes.history(REGISTER)[SECOND]
+        self.assertEqual(entry["first_edition"], "february2025")
+        self.assertEqual(entry["first_skipped"], ["january2025"])
+
+    def test_an_agreement_first_seen_after_no_gap_notes_nothing(self):
+        base = {a["base_reference"]: a["versions"] for a in extract(workbook_bytes())["agreements"]}
+        third = copy.deepcopy(base[SECOND])
+        for version in third:
+            version["reference"] = "DARS-NIC-3-CCCCC-v1"
+        facts.append_edition(REGISTER, "april2025", {**base, "DARS-NIC-3-CCCCC": third})
+        entry = changes.history(REGISTER)["DARS-NIC-3-CCCCC"]
+        self.assertEqual(entry["first_edition"], "april2025")
+        self.assertEqual(entry["first_skipped"], [])
+
+
 if __name__ == "__main__":
     unittest.main()

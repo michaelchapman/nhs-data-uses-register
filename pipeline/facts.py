@@ -1,41 +1,45 @@
 """The facts store: what every edition said, kept once.
 
-``editions`` stores the newest edition's text and ``snapshot`` stores a digest
-of every other edition, which means history is only ever held as a derivative
-of whatever the fingerprint rules were on the day it was written. Changing
-those rules costs a re-parse of every workbook. This module stores the text of
-every edition instead, so a rules change costs a rebuild.
+This is the only committed store. It holds the text of every edition, so a
+change to what counts as an amendment, a new alias, or a fix in `extract` costs
+a rebuild and never a re-parse of the workbooks. (It replaced a newest-edition
+extract plus a digest per edition, which made every answer a function of the
+rules in force the day it was written; see ``docs/plan-facts-store.md``.)
 
 That is affordable because the register barely changes. Across the 63 editions
 held, 263,342 version-entries are only 5,702 distinct (agreement, version)
-references and 12,439 distinct records — most of the archive is the present
-restated. See ``docs/plan-facts-store.md`` for the measurements.
+references and 14,023 distinct records — most of the archive is the present
+restated.
 
-Three kinds of file:
+Four kinds of file, all under ``data/facts/<register>/``:
 
-``data/facts/<register>/agreements/<slug>.json``
+``agreements/<slug>.json``
     Every version of one agreement, and for each version the distinct states it
     has been published in, oldest first. A version's text is usually fixed once
     published; when the register edits one in place, that is a new state
     appended to the list.
 
-``data/facts/<register>/releases/<slug>.json``
+``releases/<slug>.json``
     Every file released under that agreement, keyed by the file reference the
     register issues — unique across all 104,451 rows of the September 2026
     edition — grouped by the version, dataset and channel a row belongs to.
 
     A file can appear more than once. The register relabels a dataset and every
-    release row under it follows: between the July 2021 and September 2026
-    editions that happened to 33,841 of 104,451 files. Each description records
-    the edition it starts from, and a read takes the newest at or before the
-    edition being read, so an edition shows the names it used rather than the
-    names in force when the file was first seen.
+    release row under it follows: 33,742 files in the January 2023 edition
+    alone. Each description records the edition it starts from, and a read takes
+    the newest at or before the edition being read, so an edition shows the
+    names it used rather than the names in force when the file was first seen.
+
+    Files are also withdrawn: three vanished from one agreement between the
+    December 2022 and January 2023 editions, and 198 more in the two after. A
+    file an edition stops reporting is recorded as withdrawn from that edition
+    on, and reported again if it returns.
 
     Releases are kept apart from the states above because they move every month
     by design: 211 of the 2,330 references with releases changed between the
     August and September 2026 editions alone, and folding them into a version's
     text would append a fresh copy of that agreement's prose every month, for a
-    counter. The fingerprints left them out for the same reason.
+    counter.
 
     Each record carries the `channel` it came through, today always a physical
     file released through DARS. The register says nothing about data accessed
@@ -43,15 +47,15 @@ Three kinds of file:
     source can be added beside these rather than merged into them. See
     ``docs/plan-release-coverage.md``.
 
-``data/facts/<register>/editions/<edition>.json``
+``editions/<edition>.json``
     Which state each version was in that month: ``{reference: state index}``.
     One line per version, so consecutive editions differ in about a hundred of
     5,613 lines and git stores each as a small delta.
 
-The checksum of the workbook each edition came from is not here: it is still
-``editions.manifest_path``, written by ``ingest``, and it moves beside these
-files when the edition store is retired. It records provenance rather than
-register content, so moving it is a file move and never a re-parse.
+``manifest.json``
+    Provenance for each edition: the SHA-256 of the workbook it came from, its
+    size, its source URL and when it was ingested. It records where the facts
+    came from rather than what they say.
 
 Four properties this file is responsible for keeping:
 
@@ -60,8 +64,7 @@ written, always means the same record and older edition files stay valid. An
 ingest rewrites only the agreements whose text actually changed.
 
 *Nothing is deleted.* An agreement that leaves the register keeps its file and
-stops appearing in edition indexes. This is the difference from
-``editions.write_extract``, which deletes, and it is how history survives.
+stops appearing in edition indexes, and this is how history survives.
 
 *A state is a distinct record, not a verdict.* States are told apart by exact
 equality of their canonical JSON — no normalising, no hashing, no rule version
@@ -71,9 +74,9 @@ to gate comparisons on. Whether two states differ in a way worth calling an
 *Deterministic.* Ingesting the same editions in the same order twice produces
 byte-identical files, so a re-ingest that changed nothing shows an empty diff.
 
-Nothing derived is stored. As with ``editions``, the organisation and dataset
-views are rebuilt from the versions on every read (`extract.assemble`), so they
-are never stale against the alias files.
+Nothing derived is stored. The organisation and dataset views are rebuilt from
+the versions on every read (`extract.assemble`), so they are never stale against
+the alias files.
 """
 
 from __future__ import annotations
@@ -85,6 +88,7 @@ from . import sources
 from .extract import FILE_RELEASE, slugify, summarise_releases
 
 FACTS_ROOT = Path(__file__).resolve().parent.parent / "data" / "facts"
+MANIFEST_NAME = "manifest.json"
 AGREEMENTS_DIR = "agreements"
 EDITIONS_DIR = "editions"
 RELEASES_DIR = "releases"
@@ -117,6 +121,10 @@ def editions_dir(register_slug: str) -> Path:
 
 def releases_dir(register_slug: str) -> Path:
     return register_dir(register_slug) / RELEASES_DIR
+
+
+def manifest_path(register_slug: str) -> Path:
+    return register_dir(register_slug) / MANIFEST_NAME
 
 
 def edition_path(register_slug: str, edition: str) -> Path:
@@ -291,8 +299,15 @@ def _append_releases(register_slug: str, edition: str, versions_by_base: dict, c
         # them — three vanished from DARS-NIC-343380-H5Q9K between the December
         # 2022 and January 2023 editions — and without a note of it every later
         # edition would inherit a release its workbook does not list.
+        #
+        # Only files last described at or before this edition count. Ingesting
+        # an older edition after a newer one — recovering a missing month later
+        # — must not record every file the newer edition added as withdrawn
+        # from the older one.
         reported_files = {released["file"] for _, released in reported}
         for file_reference, (seen, description) in sorted(latest.items()):
+            if seen > this_edition:
+                continue
             if description is not None and file_reference not in reported_files:
                 stored.setdefault("withdrawn", []).append([file_reference, edition])
                 counts["withdrawn_files"] += 1
@@ -486,3 +501,71 @@ def stored_editions(register_slug: str) -> list[str]:
 def latest_edition(register_slug: str) -> str | None:
     editions = stored_editions(register_slug)
     return editions[-1] if editions else None
+
+
+def read_manifest(register_slug: str) -> list[dict]:
+    """Manifest entries, oldest edition first."""
+    path = manifest_path(register_slug)
+    if not path.exists():
+        return []
+    entries = json.loads(path.read_text()).get("editions", [])
+    return sorted(entries, key=lambda e: sources.edition_sort_key(e["edition"]))
+
+
+def write_manifest(register_slug: str, entries: list[dict]) -> Path:
+    entries = sorted(entries, key=lambda e: sources.edition_sort_key(e["edition"]))
+    path = manifest_path(register_slug)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps({"register": register_slug, "editions": entries}, indent=2, sort_keys=True) + "\n"
+    )
+    return path
+
+
+def upsert(register_slug: str, entry: dict) -> list[dict]:
+    """Add or replace the manifest entry for `entry["edition"]`."""
+    entries = [e for e in read_manifest(register_slug) if e["edition"] != entry["edition"]]
+    entries.append(entry)
+    write_manifest(register_slug, entries)
+    return entries
+
+
+def manifest_entry(register_slug: str, edition: str) -> dict | None:
+    for entry in read_manifest(register_slug):
+        if entry["edition"] == edition:
+            return entry
+    return None
+
+
+def rehydrate(versions_by_base: dict[str, list[dict]]) -> dict:
+    """Rebuild everything the store leaves out, from each agreement's versions."""
+    from .extract import assemble, known_organisation_names, resplit_list, tidy_version
+
+    # The same authoritative list `extract` builds from the workbook, so a
+    # rebuild splits controllers the way an ingest does. Re-splitting is
+    # idempotent, so a version stored under an older, narrower rule gets the
+    # current one applied every time it is read.
+    for versions in versions_by_base.values():
+        for version in versions:
+            tidy_version(version)
+    known = known_organisation_names(
+        version["organisation"] for versions in versions_by_base.values() for version in versions
+    )
+    for versions in versions_by_base.values():
+        for version in versions:
+            version["controllers"] = resplit_list(version["controllers"], known)
+    return assemble(versions_by_base)
+
+
+def read_extract(register_slug: str, edition: str) -> dict:
+    """`edition` as the site is built from it: `{agreements, organisations, datasets}`.
+
+    The row-by-row release detail is left out. The site reads the per-dataset
+    summaries, and holding 100,000 file records in memory for the length of a
+    build is cost with no reader.
+    """
+    versions_by_base = read_edition(register_slug, edition)
+    for versions in versions_by_base.values():
+        for version in versions:
+            version.pop("released_files", None)
+    return rehydrate(versions_by_base)

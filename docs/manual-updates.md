@@ -4,9 +4,10 @@ NHS England publishes a new Data Uses Register each month. Automated retrieval
 does not work — `digital.nhs.uk` sits behind a WAF that refuses requests from
 datacentre address space, so both GitHub Actions and any scripted download get
 `HTTP 403`, whatever headers they send. The page serves fine in an ordinary
-browser, so the workbook is downloaded by hand and committed in a compact form.
+browser, so the workbook is downloaded by hand and its contents recorded in the
+repository.
 
-Budget about two minutes a month.
+Budget about two minutes a month, plus about a minute for the parse.
 
 ## The monthly routine
 
@@ -24,32 +25,37 @@ Budget about two minutes a month.
    .venv/bin/python -m pipeline.ingest data/raw/datausesregister_august2026.xlsx
    ```
 
-   This prints the counts and the diff against the previous edition, then writes
-   the two files that *are* committed:
+   This prints the counts and what the edition changed against the one before
+   it, then writes to `data/facts/data-uses-register/`:
 
-   - `data/snapshots/data-uses-register/<edition>.json.gz` — the fingerprint of
-     every agreement version, ~210 KB. One per edition, kept forever.
-   - `data/editions/data-uses-register/agreements/<slug>.json` — the full
-     extract the site is rendered from, one uncompressed file per agreement, with
-     `extract.json` naming the edition. Only the newest edition is held; ingesting
-     it replaces the last one's files, leaving unchanged agreements untouched and
-     removing any that have left the register. Git stores the difference, usually
-     well under 1 MB. Check `git diff --stat` before committing: a change of tens
-     of megabytes means something other than a monthly update happened.
+   - `agreements/<slug>.json` — every version of an agreement and every state
+     each has been published in. Only agreements whose text changed are
+     rewritten.
+   - `releases/<slug>.json` — the files released under an agreement.
+   - `editions/<edition>.json` — which state each version was in that month,
+     about 190 KB.
+   - `manifest.json` — the workbook's SHA-256, size and source URL, so the file
+     we ingested can always be identified.
 
-   It also updates `data/editions/data-uses-register/manifest.json` with the
-   workbook's SHA-256, size and source URL, so the file we ingested can always
-   be identified.
+   Nothing is ever deleted: an agreement that has left the register keeps its
+   file and stops appearing in later editions. Git stores the difference, usually
+   well under 1 MB. Check `git diff --stat` before committing: a change of tens
+   of megabytes means something other than a monthly update happened.
 
 3. **Check the numbers look sane,** then commit and push:
 
    ```bash
-   git add data/snapshots data/editions
+   git add data/facts
    git commit -m "Add the August 2026 edition"
    git push
    ```
 
-4. GitHub Actions builds and deploys from the committed extract. It makes no
+   A typical month adds about 40 agreement versions, amends a handful and removes
+   almost none. An edition that amends hundreds is either a real event or a
+   change in how the register writes something down; its "what changed" page says
+   which fields moved.
+
+4. GitHub Actions builds and deploys from the committed facts. It makes no
    external requests, so it cannot fail the way the old scheduled job did.
 
 To preview before pushing:
@@ -71,66 +77,44 @@ one go:
 ```
 
 Order on the command line does not matter — editions are sorted by the month in
-their filename and processed oldest first, so each diff compares against the
-edition actually published before it. Only the newest gets a full extract; the
-rest contribute a ~210 KB fingerprint each, so a three-year backfill costs about
-8 MB in git.
+their filename and processed oldest first, so each is compared with the edition
+actually published before it. An edition already recorded writes nothing, so a
+run can be stopped and restarted. An edition ingested after a later one is fine:
+it is slotted in by its date.
 
-Add `--fingerprints-only` to extend the history without touching the extract the
-site is currently built from.
+The archive from July 2021 to September 2026 took 71 minutes to parse from
+scratch and is about 42 MB packed in git.
 
-## Re-fingerprinting the archive
+## Changing what the site says without re-parsing
 
-Fingerprints carry a rule version — `fingerprint_version` in each snapshot —
-saying what counted as a change when they were written. **The rules are now
-v5.** Five things changed:
+The facts store holds what each workbook said, and nothing derived from it. That
+is the point of it: most changes to the site's answers are a rebuild.
 
-- Text is normalised before hashing, so reformatting is no longer reported as
-  an amendment. Between the February and March 2026 editions, 105 of the 122
-  "amendments" were punctuation, spacing and capitalisation alone.
-- Data controllers and each dataset's recorded attributes are fingerprinted.
-  A change of data controller, or a dataset re-classified as sensitive, used
-  to register as no change at all.
-- A digest is kept per field rather than one per version, so the "what
-  changed" page can say *which* fields moved rather than only that something
-  did. This roughly doubles a snapshot, from about 208 KB to about 390 KB —
-  call it 4 MB more across the whole archive.
-- `extract.split_list` no longer breaks an organisation name on a comma
-  inside it, so "MCKINSEY & COMPANY, INC. UNITED KINGDOM" stays one
-  controller instead of becoming two, one of them called "INC.". This one is
-  a parsing fix: rehydrating a stored extract cannot undo the damage, because
-  re-splitting a list can only divide it further, so it takes effect on
-  re-ingest and not before.
-- The same fix, one case wider: an organisation whose own name contains a
-  comma — "NHS Bristol, North Somerset and South Gloucestershire ICB - 15C",
-  "Cumbria, Northumberland, Tyne and Wear NHS Foundation Trust" — was being
-  cut in half, inventing eight organisations. The names to keep whole are
-  taken from the register itself: Applicant Organisation holds one
-  organisation per row and is never split, so whatever appears there is
-  authoritative. Also needs a re-ingest.
+| You want to | Do this | Re-parse? |
+| --- | --- | --- |
+| Merge two organisation or dataset names | Edit `data/organisation-aliases.json` or `data/dataset-aliases.json` (see [organisation-names.md](organisation-names.md)) | No |
+| Change what counts as an amendment | Edit `changes._material` or `compare.compare_versions` | No |
+| Change how names are displayed | Edit `pipeline/names.py` | No |
+| Change how controllers are split, or how names are tidied | Edit `extract.py`; `facts.rehydrate` re-applies it on every read | Usually no |
+| Capture a column the parser never read | Edit `extract.py` and re-ingest | **Yes** |
+| Fix a bug in how a workbook is parsed | Edit `extract.py` and re-ingest | **Yes** |
 
-Every digest moves when the rules change, so editions fingerprinted under
-different versions cannot be compared — a comparison would mark the whole
-register as amended. `ingest` and `run` detect the mismatch, refuse the
-comparison, and say so; nothing is silently wrong, but the "what changed" page
-will have a gap until both sides agree.
+A dataset alias applies to the whole archive at the next build: an amendment that
+was only the register relabelling a dataset disappears from every edition at
+once, with nothing to regenerate.
 
-The fix is a one-off re-ingest of every edition, in one command:
+### When a re-parse is needed
+
+Re-ingest every workbook. Delete `data/facts/` first, because the store is
+append-only and cannot correct what it has already recorded:
 
 ```bash
+rm -rf data/facts
 .venv/bin/python -m pipeline.ingest data/raw/*.xlsx
 ```
 
-Editions are sorted by publication month regardless of the order they are
-listed, so each one is compared against the edition before it. Expect this to
-take a while — it parses every workbook — and to rewrite every file under
-`data/snapshots/`. Verify your local copies against the manifest first
-(see below), commit the whole `data/snapshots/` directory afterwards, and
-check that the amendment counts printed along the way are markedly lower than
-they were — March 2026 should fall from 122 to roughly 17.
-
-Until that happens the site keeps working and keeps showing the old counts,
-with a warning on every build.
+Then check what moved with `git diff --stat data/facts` before committing. This
+is the expensive operation the design exists to avoid, so it should be rare.
 
 ### Checking the local workbooks
 
@@ -141,30 +125,45 @@ be verified before a long run:
 .venv/bin/python - <<'EOF'
 import hashlib, json
 from pathlib import Path
-for e in json.load(open("data/editions/data-uses-register/manifest.json"))["editions"]:
+for e in json.load(open("data/facts/data-uses-register/manifest.json"))["editions"]:
     f = Path("data/raw") / e["source_file"]
     got = hashlib.sha256(f.read_bytes()).hexdigest() if f.is_file() else "MISSING"
     print(("ok  " if got == e["sha256"] else "BAD "), e["edition"], f.name)
 EOF
 ```
 
+`rm -rf data/facts` deletes the manifest along with everything else, and
+re-ingesting rewrites it, but any `--source-url` you passed for an edition (the
+January 2025 one) is lost with it. Note those before a re-parse and pass them
+again.
+
 ## Useful flags
 
 | Command | Effect |
 | --- | --- |
-| `ingest --fingerprints-only` | History only; leaves the current extract alone |
 | `ingest --source-url URL` | Record a different source URL for one workbook |
-| `run --workbook datausesregister_june2026.xlsx` | Build an older edition (the store holds only the newest) |
+| `run --edition june2026` | Build any edition in the store, not only the newest |
 | `run --workbook a.xlsx` | One-off build from a file, without ingesting |
 | `run --base-path /repo-name` | Serve under a subpath (GitHub project pages) |
 
+## What a gap looks like
+
+If a month's workbook was never ingested, the comparison across it says so: the
+"what changed" page states that it covers more than one month and names the
+months not held, and an agreement first seen after a gap says it may have
+appeared in either month. Ingest the missing workbook whenever you find it; it is
+slotted in by date and the comparison narrows.
+
+January 2025 was missing from NHS England's own archive and was recovered from
+the UK Government Web Archive; its manifest entry records that source URL.
+
 ## If an edition will not ingest
 
-`extract.py` was written against the July 2026 layout. An older archived edition
-may name its sheets or columns differently, in which case ingest stops with a
-message rather than writing an empty extract. Skip that edition — the rest still
-ingest — and if it matters, compare its sheet and column names with the ones in
-`pipeline/extract.py`.
+`extract.py` reads the layout every edition from July 2021 to September 2026
+shares: three sheets, `Agreements`, `Datasets` and `DataReleases`. If NHS England
+changes it, ingest stops with a message rather than writing an empty edition. The
+rest of the archive is unaffected. Compare the workbook's sheet and column names
+with the ones in `pipeline/extract.py`.
 
 ## If the 403 ever goes away
 

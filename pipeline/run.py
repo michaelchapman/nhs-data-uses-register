@@ -21,7 +21,6 @@ from pathlib import Path
 
 from . import build as build_module
 from . import changes as changes_module
-from . import editions as editions_module
 from . import facts
 from . import sources
 
@@ -55,15 +54,8 @@ def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
             "    python -m pipeline.ingest data/raw/<workbook>.xlsx\n"
             "See docs/manual-updates.md."
         )
-    versions_by_base = facts.read_edition(register.slug, edition)
-    # The row-by-row release detail is for the release views, which read it
-    # from the facts store themselves. Nothing on the site reads it here, and
-    # holding it would put 100,000 dicts in memory for the length of the build.
-    for versions in versions_by_base.values():
-        for version in versions:
-            version.pop("released_files", None)
-    data = editions_module.rehydrate(versions_by_base)
-    entry = editions_module.manifest_entry(register.slug, edition) or {}
+    data = facts.read_extract(register.slug, edition)
+    entry = facts.manifest_entry(register.slug, edition) or {}
     return data, edition, entry
 
 
@@ -118,7 +110,7 @@ def main() -> None:
     # The timeline is every edition the facts store holds, which is every
     # edition ingested. Counts come from the manifest, which records them at
     # ingest, so nothing has to be read to describe an edition.
-    by_edition = {e["edition"]: e for e in editions_module.read_manifest(register.slug)}
+    by_edition = {e["edition"]: e for e in facts.read_manifest(register.slug)}
     known = [
         {
             "edition": held_edition,

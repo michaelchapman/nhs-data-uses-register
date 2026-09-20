@@ -1,11 +1,15 @@
 # Plan: show what actually changed between versions of an agreement
 
-Status: **partly implemented.**
+Status: **partly implemented; the storage half is superseded** by
+[plan-facts-store.md](plan-facts-store.md). Everything below about fingerprints,
+`FINGERPRINT_VERSION` and `data/snapshots/` describes a design that was replaced
+by storing the text of every edition. It is kept as written because the
+reasoning that led there is in it.
 
 | Recommendation | State |
 | --- | --- |
 | R1 per-agreement edition timeline | shipped |
-| R2 per-field digests, so amendments name the fields that moved | shipped (fingerprint rules v3, now v5) |
+| R2 per-field digests, so amendments name the fields that moved | shipped, then superseded: amendments are now derived from stored text at build time (`pipeline/changes.py`), so there are no digests or rule versions |
 | R4 redlines between versions of an agreement | shipped (`pipeline/compare.py`) |
 | R3 amendment log, R7 stored values for short fields | not started: the site can say *which* fields an edition changed in place, not their old and new text |
 | R5 vocabulary for in-place amendments, R6 machine-readable change outputs | not started |

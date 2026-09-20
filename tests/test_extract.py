@@ -1,6 +1,6 @@
 import unittest
 
-from pipeline import editions
+from pipeline import facts
 from pipeline.extract import clean_line, extract, slugify, split_list, tidy_version
 
 from .fixtures import NEW_NAME, OLD_NAME, dataset_aliases, workbook_bytes
@@ -71,7 +71,7 @@ class Whitespace(unittest.TestCase):
         stored = {"X": [{**self.version(), "start_date": "2020-01-01", "end_date": "2021-01-01",
                          "sublicensing": "No", "commercial": "No", "files_released": 0}]}
         with dataset_aliases():
-            data = editions.rehydrate(stored)
+            data = facts.rehydrate(stored)
         agreement = data["agreements"][0]
         self.assertEqual(agreement["organisation"], "ORG ONE")
         self.assertEqual(agreement["title"], "A title split")

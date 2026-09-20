@@ -8,10 +8,8 @@ node_modules/
 
 # The gitignored paths above aren't enough on a machine with a personal
 # global gitignore (core.excludesfile) that ignores *.gz or similar - that
-# silently drops the compact edition fingerprints and extract that
-# pipeline.ingest writes, which are the whole point of this repository's
-# data store and must be committed. A negation in this tracked .gitignore
-# takes precedence over a global rule, so spell it out explicitly rather
-# than rely on everyone's machine not having one.
-!data/snapshots/**/*
-!data/editions/**/*
+# silently drops the facts that pipeline.ingest writes, which are the whole
+# point of this repository's data store and must be committed. A negation in
+# this tracked .gitignore takes precedence over a global rule, so spell it out
+# explicitly rather than rely on everyone's machine not having one.
+!data/facts/**/*

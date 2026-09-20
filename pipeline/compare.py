@@ -9,10 +9,8 @@ extract, so this module answers it: which fields differ between two versions,
 and — for the long free-text fields — where.
 
 Used two ways. `build` renders a version-to-version diff on each agreement
-page. `probe` uses the same tokenising and normalisation to compare the *same*
-version across two editions, which is the other half of the problem and needs
-the stored history proposed in docs/plan-version-diffs.md before the site can
-show it.
+page, and `changes` compares the *same* version across two editions, using the
+same tokenising and normalisation, to say which agreements each month amended.
 """
 
 from __future__ import annotations
@@ -74,7 +72,7 @@ def normalise(text: str) -> str:
     includes those is not measuring anything a reader cares about.
 
     One definition, used everywhere: `build` decides from it whether a field
-    really changed between two versions, and `probe` decides from it whether
+    really changed between two versions, and `changes` decides from it whether
     an edition's amendments are substantive. Two definitions that disagreed
     would make those two answers incomparable.
     """
@@ -348,8 +346,8 @@ def _dataset_names(version: dict, alias_map: dict[str, str]) -> set[str]:
     """The datasets a version names, under the reviewed dataset aliases.
 
     A dataset the register relabelled between two versions is the same dataset,
-    so it is not reported as one removed and another added — the same rule
-    `snapshot.diff` applies between editions.
+    so it is not reported as one removed and another added, between versions
+    here and between editions in `changes`.
     """
     return {aliases.resolve(d["name"], alias_map) for d in version["datasets"] if d["name"]}
 
@@ -440,9 +438,10 @@ def _list_change(old: set[str], new: set[str]) -> dict | None:
 def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None = None) -> dict | None:
     """What changed between two versions of one agreement. `None` if nothing did.
 
-    Two fields are reported that `snapshot.FINGERPRINTED` leaves out — the data
-    controllers, and which datasets are named — because both are changes a
-    reader would want flagged and neither is visible anywhere else on the page.
+    The data controllers and the datasets are reported as lists, and each
+    dataset's recorded details as before-and-after pairs, because all three are
+    changes a reader would want flagged and none is visible anywhere else on the
+    page.
     """
     scalars, lists, prose, unchanged, cosmetic = [], [], [], [], []
 
