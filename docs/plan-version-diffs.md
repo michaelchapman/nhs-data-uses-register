@@ -1,6 +1,17 @@
 # Plan: show what actually changed between versions of an agreement
 
-Status: **proposed.** Nothing here is implemented yet.
+Status: **partly implemented.**
+
+| Recommendation | State |
+| --- | --- |
+| R1 per-agreement edition timeline | shipped |
+| R2 per-field digests, so amendments name the fields that moved | shipped (fingerprint rules v3, now v5) |
+| R4 redlines between versions of an agreement | shipped (`pipeline/compare.py`) |
+| R3 amendment log, R7 stored values for short fields | not started: the site can say *which* fields an edition changed in place, not their old and new text |
+| R5 vocabulary for in-place amendments, R6 machine-readable change outputs | not started |
+
+The sections below are kept as written, so §1 describes the site as it was
+before R1, R2 and R4 shipped; the table above is the current state.
 
 Revised four times: after confirming the published workbooks were held
 locally, after running the probe (§7), after the re-ingest that applied
@@ -13,10 +24,10 @@ backfilled across the whole archive rather than starting from whichever
 edition the work lands in, so this is no longer a race against the next
 publication. See [§6](#6-backfilling-the-archive).
 
-The site already answers *which* agreements changed this month
-(`/changes/`, and one page per edition pair). It cannot answer *what*
-changed in any of them. This document proposes closing that gap, in four
-increments that can ship independently.
+When it was written the site answered *which* agreements changed this month
+(`/changes/`, and one page per edition pair) but not *what* changed in any of
+them. This document proposes closing that gap, in increments that can ship
+independently.
 
 ## 1. What we can say today, and what we can't
 
