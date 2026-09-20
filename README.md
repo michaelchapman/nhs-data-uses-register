@@ -118,8 +118,10 @@ pipeline/orgcheck.py            finds organisation names that might be duplicate
 pipeline/aliases.py             applies reviewed organisation and dataset merges
 pipeline/datasetcheck.py        finds datasets the register has renamed
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
+pipeline/linkcheck.py           finds internal links in a built site that point nowhere
 pipeline/probe.py               field-level diff between two editions (diagnostic)
 pipeline/templates/             Jinja2 templates
+tests/                          unit tests and a synthetic register (python -m unittest)
 assets/                         CSS and the table-filter script
 data/raw/                       downloaded workbooks (gitignored)
 data/editions/                  committed extracts, and the manifest

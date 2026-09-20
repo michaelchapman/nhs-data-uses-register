@@ -347,6 +347,7 @@ def extract(workbook_bytes: bytes) -> dict:
 
 def _group_organisations(agreements: list[dict]) -> list[dict]:
     alias_map = aliases.load_map()
+    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     # The exact text a reviewer wrote as `canonical` in the alias file, keyed
     # by its own slug. Falling back to `aliases.resolve()` per agreement isn't
     # enough on its own: whichever raw name happens to be processed first
@@ -424,8 +425,10 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
         entry["controller_agreement_count"] = len(entry["controller_agreements"])
         all_agreements = entry["agreements"] + entry["controller_agreements"]
         entry["files_released"] = sum(a["files_released"] for a in entry["agreements"])
+        # Canonical dataset names, so a renamed dataset counts once and links to
+        # the one page it has, rather than to a page for each old spelling.
         entry["dataset_names"] = sorted(
-            {n for a in all_agreements for n in a["dataset_names"]}
+            {aliases.resolve(n, dataset_alias_map) for a in all_agreements for n in a["dataset_names"]}
         )
         entry["latest_end"] = max((a["coverage_end"] for a in entry["agreements"]), default="")
         entry["commercial"] = any(a["commercial"] == "Yes" for a in entry["agreements"])
@@ -440,6 +443,7 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
     # Reviewed merges live in data/dataset-aliases.json; see datasetcheck.
     alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     grouped: dict[str, dict] = {}
+    listed: set[tuple[str, str]] = set()
     for agreement in agreements:
         for raw_name in agreement["dataset_names"]:
             name = aliases.resolve(raw_name, alias_map)
@@ -447,7 +451,11 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
                 name,
                 {"name": name, "slug": slugify(name), "agreements": [], "attributes": {}},
             )
-            entry["agreements"].append(agreement)
+            # An agreement that spans a rename names both spellings, and both
+            # resolve to this entry: list it once, or its files count twice.
+            if (name, agreement["base_reference"]) not in listed:
+                listed.add((name, agreement["base_reference"]))
+                entry["agreements"].append(agreement)
             for version in agreement["versions"]:
                 for dataset in version["datasets"]:
                     if aliases.resolve(dataset["name"], alias_map) != name:
@@ -458,7 +466,7 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
                             # more often than they differ in substance.
                             value = re.sub(r"\s+", " ", dataset[key]).strip()
                             entry["attributes"].setdefault(key, set()).add(value)
-    for entry in grouped.values():
+    for name, entry in grouped.items():
         entry["agreement_count"] = len(entry["agreements"])
         # Counted by canonical slug, not raw name, so two aliased spellings of
         # the same organisation count once rather than twice.
@@ -468,7 +476,9 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
             for a in entry["agreements"]
             for v in a["versions"]
             for r in v["releases"]
-            if r["dataset"] == entry["name"]
+            # Release rows carry the name as the register wrote it, which for a
+            # renamed dataset is not the canonical name the entry is keyed on.
+            if aliases.resolve(r["dataset"], alias_map) == name
         )
         entry["attributes"] = {k: sorted(v) for k, v in entry["attributes"].items()}
     return sorted(grouped.values(), key=lambda d: (-d["agreement_count"], d["name"].lower()))

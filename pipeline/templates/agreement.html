@@ -126,7 +126,7 @@
   <tbody>
   {% for d in v.datasets %}
     <tr>
-      <th scope="row"><a href="{{ meta.base_path }}/datasets/{{ d.name|slug }}/">{{ d.name }}</a></th>
+      <th scope="row"><a href="{{ meta.base_path }}/datasets/{{ d.name|dataset_slug }}/">{{ d.name }}</a></th>
       <td>{{ d.type_of_data or "—" }}</td>
       <td>{{ d.sensitivity or "—" }}</td>
       <td>{{ d.frequency or "—" }}</td>

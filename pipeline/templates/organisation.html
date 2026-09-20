@@ -78,7 +78,7 @@
 <h2>Datasets received</h2>
 <ul class="pill-list">
   {% for name in organisation.dataset_names %}
-  <li><a href="{{ meta.base_path }}/datasets/{{ name|slug }}/">{{ name }}</a></li>
+  <li><a href="{{ meta.base_path }}/datasets/{{ name|dataset_slug }}/">{{ name }}</a></li>
   {% endfor %}
 </ul>
 {% endblock %}

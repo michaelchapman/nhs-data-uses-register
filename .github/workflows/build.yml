@@ -32,6 +32,9 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Run tests
+        run: python -m unittest
+
       - name: Check for LLM-cliché phrasing
         run: python -m pipeline.clichecheck
 
@@ -42,6 +45,13 @@ jobs:
           # string if you move the site to a custom domain or a user page.
           SITE_BASE_PATH: /${{ github.event.repository.name }}
         run: python -m pipeline.run
+
+      # After the build, before anything is uploaded: a page that links to a
+      # page that does not exist should stop the deploy, not reach readers.
+      - name: Check internal links
+        env:
+          SITE_BASE_PATH: /${{ github.event.repository.name }}
+        run: python -m pipeline.linkcheck _site --base-path "$SITE_BASE_PATH"
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

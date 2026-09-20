@@ -10,6 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from . import aliases
 from . import compare
 from . import sources
 from .extract import slugify
@@ -65,6 +66,9 @@ def environment() -> Environment:
     env.filters["paragraphs"] = paragraphs
     env.filters["commas"] = lambda n: f"{n:,}"
     env.filters["slug"] = slugify
+    dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    # The page a dataset name links to, whichever spelling the register used.
+    env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
     return env
 
 
