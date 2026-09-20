@@ -135,6 +135,7 @@ R3 and R7 "not started", becomes available without new storage.
 ```
 data/facts/<register>/
   agreements/<slug>.json   1,979 files: every version, and every state it held
+  releases/<slug>.json     when files were released, and which edition said so
   editions/<edition>.json  63 files: which state of which version that edition had
   manifest.json            per-edition workbook checksum, as now
 ```
@@ -189,14 +190,79 @@ agreement pages will show them alphabetically instead of in sheet order. That
 looks like the better order anyway, but it is a change to the site and not only
 to the store.
 
-### Checked against the real edition
+### File releases are kept apart, because they move every month
 
-The September 2026 extract — 1,950 agreements, 5,613 versions — was recorded
-and read back through `facts`, and comes back identical field for field, apart
-from the dataset ordering above. Recording it takes 4.5 s and reading it 0.8 s.
-It occupies 151 MB, against 153 MB for the same edition in `data/editions`, and
-its edition index is 192 KB, so the 63 indexes will cost about 12 MB of working
-tree.
+A version's text is fixed once published, but its file releases are not: the
+register appends to them monthly by design. The fingerprints already excluded
+them for that reason —
+
+> `releases` and `files_released` stay out on purpose. They move every month by
+> design, and folding them in would mark most of the register amended every
+> edition, which is the same failure as counting typography.
+
+— and a facts store that held them inside a version's state would be worse than
+a fingerprint that counted them: it would append a fresh copy of that
+agreement's *whole prose* every month, for a counter. Measured between the
+August and September 2026 editions:
+
+| Measure | Value |
+| --- | --- |
+| Release rows in the workbook | 104,451 |
+| References with any releases | 2,330 |
+| References whose releases changed in one month | **211** |
+| Distinct (reference, dataset, month) cells | 41,370 |
+| Cells that shrank or vanished between the two editions | **0** |
+
+211 a month across 62 edition boundaries is roughly 13,000 extra states, about
+doubling the store. It would also have invalidated §2: the 12,439 figure is
+measured from fingerprints that exclude releases, and is only the right number
+for storage if the states exclude them too.
+
+So releases are stored once, per agreement, as the count of files released each
+month and the first edition that reported it:
+
+```json
+{"reference": "DARS-NIC-1-AAAAA-v2", "dataset": "MSDS …",
+ "opt_outs_applied": "Yes",
+ "months": [["2022-01", 3, "april2022"], ["2022-02", 1, "may2022"]]}
+```
+
+`read_edition` replays this up to the edition being read, so an edition shows
+the release history it actually had rather than everything known since, and
+`files_released` becomes derived like every other total. A month whose count is
+later reported differently appends a second observation rather than overwriting
+the first; that has not been seen, but silently overwriting a fact is not
+something to leave to luck.
+
+This also stops throwing information away. `extract` reduced 104,451 rows to
+8,449 summaries holding only a count and a first and last month; keeping the
+per-month counts costs 41,370 entries and 5.9 MB for the whole archive, because
+release history is cumulative and the newest edition already contains nearly
+all of it. A release timeline on the site becomes possible without another
+parse — and **step 4 is the only cheap chance to capture it**, since adding it
+afterwards means parsing 63 workbooks again.
+
+### Checked against the real editions
+
+The September 2026 extract — 1,950 agreements, 5,613 versions — records and
+reads back identical field for field, apart from the dataset ordering above, in
+4.5 s and 0.8 s.
+
+Then both the August and September 2026 workbooks were parsed and recorded in
+order. Both round-trip identically, and the second edition shows the shape the
+whole design turns on:
+
+| September 2026, on top of August | Value |
+| --- | --- |
+| Versions | 5,613 |
+| New states | **37** — 36 of them new versions, so one genuine in-place edit |
+| Agreement files rewritten | 36 of 1,950 |
+| New release months | 369, across 211 release files |
+
+Two editions occupy 149 MB of agreements, 5.9 MB of releases and 384 KB of
+indexes. At 26.7 KB a state, the 12,439 states of the full archive come to
+about 332 MB, plus 12 MB of indexes and the 5.9 MB of releases — close to the
+§4 estimate, and still to be confirmed packed at step 4.
 
 ## 6. Steps
 
@@ -204,7 +270,8 @@ The expensive step is parsing 63 workbooks, and it is needed under every
 option, so the store shape is settled before it runs and the parse happens
 once.
 
-1. **The record, reader and edition index,** against fixtures. No callers.
+1. **The record, reader, release store and edition index,** against fixtures
+   and two real editions. No callers.
 2. **`ingest` writes facts.** Keep the gzip snapshot reader so the site still
    builds from the old store.
 3. **Move the rules into the build.** `compare` and the changes pages derive

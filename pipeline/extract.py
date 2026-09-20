@@ -92,6 +92,26 @@ def tidy_version(version: dict) -> dict:
     return version
 
 
+def summarise_release(dataset: str, months: dict, opt_outs: str) -> dict:
+    """One dataset's releases, from the count of files released each month.
+
+    One definition for both ways in, like `tidy_version`: `extract` tallies a
+    workbook's release rows and `facts` replays a stored history, and both
+    arrive here, so the site reads the same shape either way. A row whose month
+    could not be parsed is counted under `""` — it is a file released, and
+    dropping it would make the totals disagree with the register.
+    """
+    dated = sorted(month for month in months if month)
+    return {
+        "dataset": dataset,
+        "files": sum(months.values()),
+        "first_month": dated[0] if dated else "",
+        "last_month": dated[-1] if dated else "",
+        "months": {month: months[month] for month in sorted(months)},
+        "opt_outs_applied": opt_outs,
+    }
+
+
 def parse_date(value) -> str:
     if isinstance(value, (dt.datetime, dt.date)):
         return (value.date() if isinstance(value, dt.datetime) else value).isoformat()
@@ -251,28 +271,27 @@ def extract(workbook_bytes: bytes) -> dict:
             }
         )
 
-    # 100k+ release rows: keep a per-dataset summary rather than every file row.
-    releases_by_ref: dict[str, dict[str, dict]] = defaultdict(dict)
+    # 100k+ release rows, so they are summarised per dataset rather than kept
+    # one by one. `months` holds the count per month — the smallest form that
+    # still says *when*, about 41k entries against 104k rows. The register only
+    # ever appends to it, which is what lets `facts` keep one copy of a
+    # release history for every edition that reports it.
+    counted: dict[str, dict[str, dict]] = defaultdict(dict)
     for row in _read_sheet(workbook, "DataReleases"):
         reference = clean(row.get("Reference Number"))
         dataset = clean_line(row.get("Dataset"))
         month = parse_release_month(row.get("Month File Released"))
-        summary = releases_by_ref[reference].setdefault(
-            dataset,
-            {
-                "dataset": dataset,
-                "files": 0,
-                "first_month": "",
-                "last_month": "",
-                "opt_outs_applied": clean(row.get("Patient Opt-Outs Applied")),
-            },
+        tally = counted[reference].setdefault(
+            dataset, {"months": {}, "opt_outs_applied": clean(row.get("Patient Opt-Outs Applied"))}
         )
-        summary["files"] += 1
-        if month:
-            if not summary["first_month"] or month < summary["first_month"]:
-                summary["first_month"] = month
-            if month > summary["last_month"]:
-                summary["last_month"] = month
+        tally["months"][month] = tally["months"].get(month, 0) + 1
+    releases_by_ref = {
+        reference: {
+            dataset: summarise_release(dataset, tally["months"], tally["opt_outs_applied"])
+            for dataset, tally in tallies.items()
+        }
+        for reference, tallies in counted.items()
+    }
 
     agreement_rows = _read_sheet(workbook, "Agreements")
     # Applicant Organisation holds one organisation per row and is never

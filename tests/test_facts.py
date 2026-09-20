@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest import mock
 
 from pipeline import editions, facts
-from pipeline.extract import extract
+from pipeline.extract import extract, summarise_release
 
 from .fixtures import dataset_aliases, workbook_bytes
 
@@ -50,6 +50,8 @@ class Store(unittest.TestCase):
         record = stored["versions"][0]
         self.assertEqual(sorted(record), ["reference", "states", "version"])
         self.assertEqual(record["reference"], "DARS-NIC-1-AAAAA-v1")
+        self.assertNotIn("releases", record["states"][0])
+        self.assertNotIn("files_released", record["states"][0])
         # The two identifying fields live on the record, never in a state, so
         # the two cannot disagree.
         self.assertNotIn("reference", record["states"][0])
@@ -162,6 +164,73 @@ class Store(unittest.TestCase):
         with self.assertRaises(SystemExit) as caught:
             facts.read_edition(REGISTER, "september2026")
         self.assertIn("re-ingest", str(caught.exception))
+
+    # File releases, which move every month by design
+
+    def released(self, base=FIRST, index=-1, month="2026-09", files=1):
+        """A copy of the register with more files released under one version."""
+        changed = copy.deepcopy(self.versions)
+        release = changed[base][index]["releases"][0]
+        months = dict(release["months"])
+        months[month] = months.get(month, 0) + files
+        changed[base][index]["releases"][0] = summarise_release(
+            release["dataset"], months, release["opt_outs_applied"]
+        )
+        changed[base][index]["files_released"] = sum(
+            r["files"] for r in changed[base][index]["releases"]
+        )
+        return changed
+
+    def test_a_month_of_new_releases_is_not_a_new_state(self):
+        facts.append_edition(REGISTER, "august2026", self.versions)
+        counts = facts.append_edition(REGISTER, "september2026", self.released())
+        self.assertEqual(counts["new_states"], 0)
+        self.assertEqual(counts["new_release_months"], 1)
+        self.assertEqual(counts["files_written"], 0)
+
+    def test_an_edition_reports_the_releases_it_had_and_not_later_ones(self):
+        facts.append_edition(REGISTER, "august2026", self.versions)
+        facts.append_edition(REGISTER, "september2026", self.released(month="2026-09", files=4))
+        was = facts.read_edition(REGISTER, "august2026")[FIRST][1]
+        now = facts.read_edition(REGISTER, "september2026")[FIRST][1]
+        self.assertEqual(was["files_released"], 2)
+        self.assertEqual(now["files_released"], 6)
+        self.assertNotIn("2026-09", was["releases"][0]["months"])
+        self.assertEqual(now["releases"][0]["months"]["2026-09"], 4)
+        self.assertEqual(now["releases"][0]["last_month"], "2026-09")
+
+    def test_a_month_whose_count_changes_keeps_both_observations(self):
+        facts.append_edition(REGISTER, "august2026", self.released(month="2026-08", files=1))
+        facts.append_edition(REGISTER, "september2026", self.released(month="2026-08", files=3))
+        record = facts.read_releases(REGISTER, FIRST)[-1]
+        self.assertEqual(
+            [m for m in record["months"] if m[0] == "2026-08"],
+            [["2026-08", 1, "august2026"], ["2026-08", 3, "september2026"]],
+        )
+        was = facts.read_edition(REGISTER, "august2026")[FIRST][1]["releases"][0]
+        now = facts.read_edition(REGISTER, "september2026")[FIRST][1]["releases"][0]
+        self.assertEqual((was["months"]["2026-08"], now["months"]["2026-08"]), (1, 3))
+
+    def test_recording_the_same_releases_again_writes_nothing(self):
+        facts.append_edition(REGISTER, "september2026", self.versions)
+        counts = facts.append_edition(REGISTER, "september2026", copy.deepcopy(self.versions))
+        self.assertEqual(counts["new_release_months"], 0)
+        self.assertEqual(counts["release_files_written"], 0)
+
+    def test_an_agreement_with_no_releases_has_none_stored(self):
+        bare = copy.deepcopy(self.versions)
+        for version in bare[SECOND]:
+            version["releases"], version["files_released"] = [], 0
+        facts.append_edition(REGISTER, "september2026", bare)
+        self.assertFalse((facts.releases_dir(REGISTER) / "dars-nic-2-bbbbb.json").exists())
+        read = facts.read_edition(REGISTER, "september2026")[SECOND][0]
+        self.assertEqual((read["releases"], read["files_released"]), ([], 0))
+
+    def test_an_opt_out_that_changes_is_counted_rather_than_lost(self):
+        facts.append_edition(REGISTER, "august2026", self.versions)
+        changed = copy.deepcopy(self.versions)
+        changed[FIRST][-1]["releases"][0]["opt_outs_applied"] = "No"
+        self.assertEqual(facts.append_edition(REGISTER, "september2026", changed)["opt_out_conflicts"], 1)
 
     # The point of it all
 
