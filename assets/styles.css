@@ -145,6 +145,11 @@ p, li { max-width: 68ch; }
 .data-table thead th { position: sticky; top: 0; background: var(--bg-muted); border-bottom: 2px solid var(--line); font-size: 0.875rem; }
 .data-table tbody tr:last-child th, .data-table tbody tr:last-child td { border-bottom: 0; }
 .data-table tbody tr:hover { background: var(--bg-muted); }
+.data-table thead th button { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-align: inherit; cursor: pointer; }
+.data-table thead th button:hover { text-decoration: underline; }
+.data-table thead th button::after { content: "\00a0\2195"; color: var(--ink-muted); }
+.data-table thead th[aria-sort="ascending"] button::after { content: "\00a0\25b2"; color: var(--ink); }
+.data-table thead th[aria-sort="descending"] button::after { content: "\00a0\25bc"; color: var(--ink); }
 .data-table th[scope="row"] { font-weight: 600; min-width: 16rem; }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .nowrap { white-space: nowrap; }

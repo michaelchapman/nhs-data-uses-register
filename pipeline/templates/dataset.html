@@ -72,7 +72,7 @@
 <p class="result-count" role="status" data-filter-count>Showing all {{ dataset.agreement_count|commas }} agreements.</p>
 
 <div class="table-scroll">
-<table class="data-table" id="dataset-agreements">
+<table class="data-table sortable" id="dataset-agreements">
   <caption class="visually-hidden">Agreements covering {{ dataset.name }}</caption>
   <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Type</th><th scope="col">Latest term</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
@@ -82,7 +82,7 @@
         <span class="ref">{{ a.base_reference }}</span></th>
       <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation }}</a></td>
       <td>{{ a.organisation_type or "—" }}</td>
-      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       <td>{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}

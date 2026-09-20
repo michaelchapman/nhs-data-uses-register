@@ -36,7 +36,7 @@
 <p class="result-count" role="status" data-filter-count>Showing all {{ organisation.agreement_count|commas }} agreements.</p>
 {% endif %}
 <div class="table-scroll">
-<table class="data-table" id="organisation-agreements">
+<table class="data-table sortable" id="organisation-agreements">
   <caption class="visually-hidden">Agreements held by {{ organisation.name }}</caption>
   <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
@@ -46,7 +46,7 @@
         <span class="ref">{{ a.base_reference }}</span></th>
       <td class="num">{{ a.dataset_names|length }}</td>
       <td class="num">{{ a.files_released|commas }}</td>
-      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       <td>{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}

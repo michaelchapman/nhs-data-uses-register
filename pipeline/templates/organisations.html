@@ -27,7 +27,7 @@
 <p class="result-count" role="status" data-filter-count>Showing all {{ stats.organisations|commas }} organisations.</p>
 
 <div class="table-scroll">
-<table class="data-table" id="organisations-table">
+<table class="data-table sortable" id="organisations-table">
   <caption class="visually-hidden">Organisations holding data sharing agreements</caption>
   <thead><tr>
     <th scope="col">Organisation</th><th scope="col">Type</th>
@@ -43,7 +43,7 @@
       <td class="num">{{ o.agreement_count|commas }}</td>
       <td class="num">{{ o.dataset_names|length }}</td>
       <td class="num">{{ o.files_released|commas }}</td>
-      <td class="nowrap">{{ o.latest_end|date }}</td>
+      <td class="nowrap" data-sort="{{ o.latest_end }}">{{ o.latest_end|date }}</td>
     </tr>
   {% endfor %}
   </tbody>

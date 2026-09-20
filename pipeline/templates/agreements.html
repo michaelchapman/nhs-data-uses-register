@@ -61,7 +61,7 @@
       <td>{{ a.organisation_type or "—" }}</td>
       <td class="num">{{ a.dataset_names|length }}</td>
       <td class="num">{{ a.files_released|commas }}</td>
-      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       <td>{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}

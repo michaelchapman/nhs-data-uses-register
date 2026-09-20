@@ -22,8 +22,9 @@ From one edition of the register (~5,500 agreement versions):
 - **Flat CSV extracts** of agreements, datasets and releases.
 
 Pages are plain semantic HTML with no cookies, analytics or third-party
-requests. Table filtering is a progressive enhancement: every row is in the
-HTML, so the site works with JavaScript disabled.
+requests. Table filtering and sorting are progressive enhancements: every row is in the
+HTML, so the site works with JavaScript disabled. The filters and the sort are
+kept in the URL, so a filtered view can be linked to.
 
 ## Running it locally
 
