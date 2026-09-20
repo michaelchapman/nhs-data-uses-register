@@ -18,6 +18,7 @@ show it.
 from __future__ import annotations
 
 import difflib
+import functools
 import re
 import unicodedata
 from collections import Counter
@@ -245,6 +246,90 @@ def redline(before: str, after: str, limit: int = 60, max_blocks: int = 10) -> s
                 else:
                     parts.append("[-" + cap(run["text"]) + "-]")
     return " ".join(parts)
+
+
+# How much of the two names' agreement lists must coincide before a
+# disappearance and an appearance are called one rename.
+RENAME_OVERLAP = 0.5
+
+
+@functools.lru_cache(maxsize=100_000)
+def _name_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", name.lower()).strip()
+
+
+def _name_ratio(before: str, after: str) -> float:
+    return difflib.SequenceMatcher(None, _name_key(before), _name_key(after)).ratio()
+
+
+def _owners(versions: dict[str, set[str]]) -> dict[str, set[str]]:
+    """`{name: the versions carrying it}`."""
+    owners: dict[str, set[str]] = {}
+    for reference, names in versions.items():
+        for name in names:
+            owners.setdefault(name, set()).add(reference)
+    return owners
+
+
+def membership_renames(
+    before: dict[str, set[str]], after: dict[str, set[str]], overlap: float = RENAME_OVERLAP
+) -> list[dict]:
+    """Names that were relabelled between two editions, with the evidence.
+
+    Comparing names by how alike they look does not work here. "Mental Health
+    Minimum Data Set" and "Mental Health Services Data Set" are 79% alike and
+    are two different datasets, while "GPES Data for Pandemic Planning and
+    Research (COVID-19)" and "COVID-19 General Practice Extraction Service
+    (GPES) Data for Pandemic Planning and Research (GDPPR)" are 62% alike and
+    are one. No threshold separates those.
+
+    What does separate them is behaviour. A renamed dataset disappears from
+    the register completely and something else appears on exactly the
+    agreements it used to be on; two datasets that merely read alike both
+    carry on existing. So a rename is a name that left the edition entirely,
+    an arrival that was absent from it entirely, and an agreement list the two
+    share. Similarity is reported alongside for a reviewer to sanity-check,
+    never used to decide.
+    """
+    before_owners, after_owners = _owners(before), _owners(after)
+    shared = before.keys() & after.keys()
+    vanished = {
+        name: refs & shared for name, refs in before_owners.items() if name not in after_owners
+    }
+    appeared = {
+        name: refs & shared for name, refs in after_owners.items() if name not in before_owners
+    }
+
+    scored = []
+    for was, was_refs in vanished.items():
+        if not was_refs:
+            continue
+        for now, now_refs in appeared.items():
+            union = was_refs | now_refs
+            if not union:
+                continue
+            jaccard = len(was_refs & now_refs) / len(union)
+            if jaccard >= overlap:
+                scored.append((jaccard, was, now))
+    scored.sort(reverse=True)
+
+    renames, used_was, used_now = [], set(), set()
+    for jaccard, was, now in scored:
+        if was in used_was or now in used_now:
+            continue
+        used_was.add(was)
+        used_now.add(now)
+        renames.append(
+            {
+                "was": was,
+                "now": now,
+                "versions": len(vanished[was] & appeared[now]),
+                "overlap": jaccard,
+                "similarity": _name_ratio(was, now),
+            }
+        )
+    renames.sort(key=lambda r: -r["versions"])
+    return renames
 
 
 def _dataset_names(version: dict) -> set[str]:

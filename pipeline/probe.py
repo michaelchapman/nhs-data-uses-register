@@ -183,6 +183,9 @@ def main(argv: list[str] | None = None) -> None:
 
     raw_tally, normalised_tally = Counter(), Counter()
     transitions: dict[str, Counter] = {field: Counter() for field in MEMBERSHIP}
+    # The whole edition's membership, per field, so renames can be found from
+    # what left and arrived across it rather than guessed at name by name.
+    memberships: dict[str, tuple[dict, dict]] = {f: ({}, {}) for f in MEMBERSHIP}
     visible_now, cosmetic_only, invisible_now = [], [], []
     samples: list[tuple[int, str, str, str, str]] = []
 
@@ -207,9 +210,12 @@ def main(argv: list[str] | None = None) -> None:
         # Who went, who arrived. A digest can say the controllers changed; only
         # the values say whether one organisation was renamed across a hundred
         # agreements or a hundred agreements changed hands.
-        for field in normalised & set(MEMBERSHIP):
+        for field in MEMBERSHIP:
             was, now = set(before[field]), set(after[field])
-            transitions[field][(tuple(sorted(was - now)), tuple(sorted(now - was)))] += 1
+            memberships[field][0][reference] = was
+            memberships[field][1][reference] = now
+            if field in normalised:
+                transitions[field][(tuple(sorted(was - now)), tuple(sorted(now - was)))] += 1
 
         for field in normalised & set(PROSE):
             if args.field and field not in args.field:
@@ -240,19 +246,41 @@ def main(argv: list[str] | None = None) -> None:
             continue
         label = FIELD_TITLES[field]
         total = sum(tally.values())
-        shown = tally.most_common(args.transitions)
-        print(f"\n{label} — {total:,} version{'s' if total != 1 else ''} changed, "
-              f"{len(tally):,} distinct change{'s' if len(tally) != 1 else ''}")
-        for (went, arrived), count in shown:
-            print(f"  {count:>5,} ×")
-            for name in went:
-                print(f"           − {name}")
-            for name in arrived:
-                print(f"           + {name}")
-        if len(tally) > len(shown):
-            rest = total - sum(c for _, c in shown)
-            print(f"  {rest:>5,} ×  across {len(tally) - len(shown):,} further distinct changes "
-                  f"(--transitions {len(tally)} to list them)")
+        print(f"\n{label} — {total:,} version{'s' if total != 1 else ''} changed")
+
+        renames = compare.membership_renames(*memberships[field])
+        renamed = {r["was"]: r["now"] for r in renames}
+        if renames:
+            print(f"\n  Renamed — {len(renames)} distinct:")
+            for r in renames[: args.transitions]:
+                print(f"    {r['versions']:>5,} ×  {r['was']}")
+                print(f"           →  {r['now']}")
+            if len(renames) > args.transitions:
+                print(f"    … {len(renames) - args.transitions:,} further renames "
+                      f"(--transitions {len(renames)} to list them)")
+
+        # What is left once the renames are accounted for: names that really
+        # joined or left, rather than the same thing under another spelling.
+        residue = Counter()
+        for (went, arrived), count in tally.items():
+            went = tuple(sorted(n for n in went if n not in renamed))
+            arrived = tuple(sorted(n for n in arrived if n not in set(renamed.values())))
+            if went or arrived:
+                residue[(went, arrived)] += count
+        if residue:
+            shown = residue.most_common(args.transitions)
+            print(f"\n  Added or removed outright — {sum(residue.values()):,} version(s), "
+                  f"{len(residue):,} distinct:")
+            for (went, arrived), count in shown:
+                print(f"    {count:>5,} ×")
+                for name in went:
+                    print(f"             − {name}")
+                for name in arrived:
+                    print(f"             + {name}")
+            if len(residue) > len(shown):
+                print(f"    … {len(residue) - len(shown):,} further distinct changes")
+        elif renames:
+            print("\n  Nothing joined or left beyond those renames.")
 
     if args.show and not samples:
         # Samples are drawn from substantive prose changes only, so "nothing to
