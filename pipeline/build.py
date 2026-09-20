@@ -72,6 +72,38 @@ def environment() -> Environment:
     return env
 
 
+# Written into every build. `prepare_output` deletes the directory it is given,
+# and this is how it tells a previous build from somebody's working directory.
+BUILD_MARKER = ".built-by-pipeline"
+
+
+def prepare_output(out: Path) -> None:
+    """Empty `out` ready for a build, refusing to delete anything that isn't one.
+
+    A build starts by removing its output directory, so `--output .` or a
+    mistyped path would otherwise delete whatever is there. Only a directory
+    that is empty, or that an earlier build left behind, is cleared.
+    """
+    out = out.resolve()
+    if out.exists():
+        if not out.is_dir():
+            raise SystemExit(f"--output {out} exists and is not a directory")
+        if out == ROOT or out in ROOT.parents or (out / ".git").exists():
+            raise SystemExit(f"refusing to build into {out}: it contains this repository")
+        # Builds made before the marker existed carry these two files instead.
+        previous_build = (out / BUILD_MARKER).exists() or (
+            (out / ".nojekyll").exists() and (out / "meta.json").exists()
+        )
+        if any(out.iterdir()) and not previous_build:
+            raise SystemExit(
+                f"refusing to build into {out}: it is not empty and does not look like a "
+                "previous build. Choose an empty or new directory, or delete it yourself."
+            )
+        shutil.rmtree(out)
+    out.mkdir(parents=True)
+    (out / BUILD_MARKER).write_text("Created by pipeline.build; safe to delete and rebuild.\n")
+
+
 def _write(out: Path, path: str, html: str) -> None:
     target = out / path
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -196,9 +228,7 @@ def build(
     history: dict[str, dict] | None = None,
 ) -> None:
     env = environment()
-    if out.exists():
-        shutil.rmtree(out)
-    out.mkdir(parents=True)
+    prepare_output(out)
 
     stats = compute_stats(data)
     downloads = write_csvs(data, out)

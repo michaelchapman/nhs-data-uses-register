@@ -71,3 +71,39 @@ class LinkCheck(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PrepareOutput(unittest.TestCase):
+    def test_an_empty_or_missing_directory_is_fine(self):
+        with tempfile.TemporaryDirectory() as directory:
+            build.prepare_output(Path(directory) / "new")
+            build.prepare_output(Path(directory) / "new")  # now a previous build
+
+    def test_a_previous_build_is_cleared(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            (out / "stale.html").write_text("old")
+            build.prepare_output(out)
+            self.assertEqual([p.name for p in out.iterdir()], [build.BUILD_MARKER])
+
+    def test_a_build_made_before_the_marker_existed_is_cleared(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            (out / ".nojekyll").write_text("")
+            (out / "meta.json").write_text("{}")
+            build.prepare_output(out)
+
+    def test_a_directory_with_other_files_is_refused(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            (out / "thesis.docx").write_text("precious")
+            with self.assertRaises(SystemExit):
+                build.prepare_output(out)
+            self.assertTrue((out / "thesis.docx").exists())
+
+    def test_the_repository_is_refused(self):
+        with self.assertRaises(SystemExit):
+            build.prepare_output(build.ROOT)
+        with self.assertRaises(SystemExit):
+            build.prepare_output(build.ROOT / "pipeline")  # not a build either
