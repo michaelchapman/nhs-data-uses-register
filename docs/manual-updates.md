@@ -79,7 +79,7 @@ site is currently built from.
 
 Fingerprints carry a rule version — `fingerprint_version` in each snapshot —
 saying what counted as a change when they were written. **The rules are now
-v4.** Four things changed:
+v5.** Five things changed:
 
 - Text is normalised before hashing, so reformatting is no longer reported as
   an amendment. Between the February and March 2026 editions, 105 of the 122
@@ -97,6 +97,13 @@ v4.** Four things changed:
   a parsing fix: rehydrating a stored extract cannot undo the damage, because
   re-splitting a list can only divide it further, so it takes effect on
   re-ingest and not before.
+- The same fix, one case wider: an organisation whose own name contains a
+  comma — "NHS Bristol, North Somerset and South Gloucestershire ICB - 15C",
+  "Cumbria, Northumberland, Tyne and Wear NHS Foundation Trust" — was being
+  cut in half, inventing eight organisations. The names to keep whole are
+  taken from the register itself: Applicant Organisation holds one
+  organisation per row and is never split, so whatever appears there is
+  authoritative. Also needs a re-ingest.
 
 Every digest moves when the rules change, so editions fingerprinted under
 different versions cannot be compared — a comparison would mark the whole

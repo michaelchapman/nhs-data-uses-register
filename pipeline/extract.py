@@ -114,14 +114,62 @@ LIST_SEPARATOR = re.compile(
 )
 
 
-def split_list(value) -> list[str]:
+def protected_spans(text: str, known: tuple[str, ...]) -> list[tuple[int, int]]:
+    """Where in `text` a known organisation name sits, longest match first.
+
+    Longest first so that "NHS Bedfordshire, Luton and Milton Keynes ICB -
+    M1J4Y" wins over a shorter name that happens to be a prefix of it.
+    """
+    spans: list[tuple[int, int]] = []
+    lowered = text.lower()
+    for name in known:
+        start = lowered.find(name.lower())
+        while start != -1:
+            end = start + len(name)
+            if not any(s <= start < e or s < end <= e for s, e in spans):
+                spans.append((start, end))
+            start = lowered.find(name.lower(), start + 1)
+    return spans
+
+
+def split_list(value, known: tuple[str, ...] = ()) -> list[str]:
+    """Split a list-shaped register field, keeping known names whole.
+
+    Some organisations have a comma in their name — "NHS Bristol, North
+    Somerset and South Gloucestershire ICB - 15C", "Cumbria, Northumberland,
+    Tyne and Wear NHS Foundation Trust" — and no rule about the text around
+    the comma tells those apart from two organisations listed together. What
+    does tell them apart is that the register names them in full elsewhere:
+    Applicant Organisation holds one organisation per row and is never split,
+    so the names appearing there are authoritative. Pass them as `known` and
+    the commas inside them stop being separators.
+    """
     text = clean(value)
     if not text:
         return []
-    return [p.strip() for p in LIST_SEPARATOR.split(text) if p.strip()]
+    spans = protected_spans(text, known) if known else []
+    if not spans:
+        return [p.strip() for p in LIST_SEPARATOR.split(text) if p.strip()]
+    parts, start = [], 0
+    for match in LIST_SEPARATOR.finditer(text):
+        if any(s <= match.start() < e for s, e in spans):
+            continue
+        parts.append(text[start : match.start()])
+        start = match.end()
+    parts.append(text[start:])
+    return [p.strip() for p in parts if p.strip()]
 
 
-def resplit_list(items: list[str]) -> list[str]:
+def known_organisation_names(names) -> tuple[str, ...]:
+    """The comma-bearing names to protect, longest first.
+
+    Only names with a comma matter: everything else splits the same either
+    way, and checking them all for every controller string would be waste.
+    """
+    return tuple(sorted({n for n in names if n and "," in n}, key=len, reverse=True))
+
+
+def resplit_list(items: list[str], known: tuple[str, ...] = ()) -> list[str]:
     """Re-apply `split_list`'s rules to an already-split list.
 
     For a committed extract written before this file's splitting rules
@@ -129,7 +177,7 @@ def resplit_list(items: list[str]) -> list[str]:
     re-joining and re-splitting the whole string isn't needed — splitting
     each existing item again is equivalent and cheaper.
     """
-    return [part for item in items for part in split_list(item)]
+    return [part for item in items for part in split_list(item, known)]
 
 
 def _read_sheet(workbook, name: str) -> list[dict]:
@@ -192,8 +240,15 @@ def extract(workbook_bytes: bytes) -> dict:
             if month > summary["last_month"]:
                 summary["last_month"] = month
 
+    agreement_rows = _read_sheet(workbook, "Agreements")
+    # Applicant Organisation holds one organisation per row and is never
+    # split, so it is the register telling us which names contain a comma.
+    # Read them first, then use them to keep those names whole in the
+    # controller lists, where the same organisations appear comma-joined.
+    known = known_organisation_names(clean(r.get("Applicant Organisation")) for r in agreement_rows)
+
     versions_by_base: dict[str, list[dict]] = defaultdict(list)
-    for row in _read_sheet(workbook, "Agreements"):
+    for row in agreement_rows:
         reference = clean(row.get("Reference Number"))
         if not reference:
             continue
@@ -210,7 +265,7 @@ def extract(workbook_bytes: bytes) -> dict:
                 "title": clean(row.get("Application Title")),
                 "organisation": clean(row.get("Applicant Organisation")),
                 "organisation_type": clean(row.get("Applicant Organisation Type")),
-                "controllers": split_list(row.get("Data Controller(s)")),
+                "controllers": split_list(row.get("Data Controller(s)"), known),
                 "controller_basis": clean(row.get("Sole/Joint Data Controller")),
                 "start_date": parse_date(row.get("DSA Start Date")),
                 "end_date": parse_date(row.get("DSA End Date")),

@@ -110,9 +110,21 @@ def read_extract(register_slug: str, edition: str) -> dict:
 def rehydrate(agreements: list[dict]) -> dict:
     """Rebuild the derived views that `write_extract` deliberately dropped."""
     from . import aliases as aliases_module
-    from .extract import _group_datasets, _group_organisations, resplit_list, slugify
+    from .extract import (
+        _group_datasets,
+        _group_organisations,
+        known_organisation_names,
+        resplit_list,
+        slugify,
+    )
 
     alias_map = aliases_module.load_map()
+    # The same authoritative list `extract` builds from the workbook, rebuilt
+    # from the stored extract so a rebuild splits controllers the same way an
+    # ingest does.
+    known = known_organisation_names(
+        v["organisation"] for a in agreements for v in a["versions"]
+    )
     for agreement in agreements:
         # Re-splitting is idempotent (a string with none of the separators just
         # comes back as itself), so this is safe to apply unconditionally rather
@@ -120,7 +132,7 @@ def rehydrate(agreements: list[dict]) -> dict:
         # rule — a committed extract whose controllers were split by an older,
         # narrower rule gets the current rule applied every time it's read.
         for version in agreement["versions"]:
-            version["controllers"] = resplit_list(version["controllers"])
+            version["controllers"] = resplit_list(version["controllers"], known)
         agreement["controllers"] = agreement["versions"][-1]["controllers"]
         agreement["latest"] = agreement["versions"][-1]
         # Always recomputed, never backfilled-if-missing: unlike the fields
