@@ -160,8 +160,10 @@ def main() -> None:
 
     # Every edition's fingerprints are committed, so an agreement's history
     # reaches back over the whole archive even though only the newest edition
-    # keeps a full extract.
-    history = snapshot_module.history_index(register.slug)
+    # keeps a full extract. `fingerprints` is already the whole archive, read
+    # above for the per-edition changes pages, so hand it over rather than
+    # parsing 25 MB of snapshots a second time.
+    history = snapshot_module.history_index(register.slug, snapshots=fingerprints)
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history
     )

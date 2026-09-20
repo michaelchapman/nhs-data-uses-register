@@ -2,11 +2,13 @@
 
 Status: **proposed.** Nothing here is implemented yet.
 
-Revised three times: after confirming that all 19 published workbooks
-are held locally, after running the probe (§7), and after the re-ingest
-that applied the new fingerprint rules to the whole archive (§8). Each
-pass overturned part of the one before; §8 corrects a conclusion drawn
-in §7. That changes the plan materially: field-level history can be
+Revised four times: after confirming the published workbooks were held
+locally, after running the probe (§7), after the re-ingest that applied
+the new fingerprint rules (§8), and after the archive was extended back
+to July 2021 (§10). Each pass overturned part of the one before — §8
+corrects a conclusion in §7, and §10 corrects one in §2. The sections
+are kept in the order they were written rather than tidied, so the
+corrections stay visible. That changes the plan materially: field-level history can be
 backfilled across the whole archive rather than starting from whichever
 edition the work lands in, so this is no longer a race against the next
 publication. See [§6](#6-backfilling-the-archive).
@@ -66,11 +68,12 @@ Fingerprint comparison across the 19 committed editions:
 
 Three things stand out.
 
-**Nothing is ever removed.** In 18 edition pairs, not one agreement
-version has left the register. The "No longer listed" section of
-`/changes/` has been empty every month of the archive. It should stay
-(a withdrawal would be the single most newsworthy event on the site) but
-it should not be given equal visual weight to a bucket with 122 entries.
+**Nothing is ever removed** — *wrong, see [§10](#10-what-five-years-changed).*
+In the 18 edition pairs available when this was written, not one
+agreement version had left the register, and the "No longer listed"
+section of `/changes/` had been empty every month. Extending the
+archive back to July 2021 found 106 removals, 83 of them in a single
+edition. The conclusion held only for the window it was drawn from.
 
 **Amendment volume is spiky, and the spikes are mostly not real.** March
 2026 amended 122 versions — five times that month's new agreements.
@@ -834,3 +837,99 @@ relabelling, and dropped version suffixes. That is worth saying plainly
 rather than implying a governance event every time a field moves. It
 also makes the rare substantive amendment much easier to spot, which
 was the point.
+
+## 10. What five years changed
+
+The archive was extended back to July 2021 — 63 editions, 61 comparable
+pairs, re-ingested under rules v4. Every conclusion in §2 and §8 was
+drawn from the 19 editions available at the time, and two of them do
+not survive the longer window.
+
+| | Five years (61 pairs) | Of which 2025–26 (19 pairs) |
+| --- | ---: | ---: |
+| Added | 3,037 | 1,006 |
+| Amended | 6,742 | 302 |
+| Removed | **106** | 0 |
+
+### Removal happens, and it is concentrated
+
+§2 said nothing is ever removed. Across five years, 106 agreement
+versions left the register:
+
+| Edition | Removed |
+| --- | ---: |
+| February 2023 | **83** |
+| August 2022, May 2023 | 4 each |
+| January 2023, July 2023, October 2023, August 2024, October 2024 | 2 each |
+| April 2022, May 2022, October 2022, December 2022, March 2024 | 1 each |
+
+February 2023 dropped 83 versions in one month while adding 56. That is
+the event the "No longer listed" section was built for and never had
+occasion to show, and it happened two years before the window §2 looked
+at. The recommendation in §2 — keep the section, do not give it equal
+visual weight to a bucket with a hundred entries — was right for the
+wrong reason. Removal is rare and clustered rather than absent, which
+is a better argument for keeping the section than the one originally
+given.
+
+### The amendment history is not where we were looking
+
+302 of the 6,742 amendments are in 2025–26. Four consecutive editions
+hold three quarters of everything:
+
+| Edition | Amended |
+| --- | ---: |
+| January 2023 | 2,455 |
+| December 2022 | 1,192 |
+| October 2022 | 881 |
+| November 2022 | 540 |
+| September 2021 | 448 |
+| August 2021 | 388 |
+
+October 2022 to January 2023 is 5,068 amendments — 75% of five years,
+on a register of roughly 1,450 agreements. Most agreements in the
+register were restated more than once in those four months.
+
+These counts are already normalised, so unlike March 2026 they are not
+typography. That leaves two possibilities, and the archive cannot yet
+distinguish them: a relabelling of the October 2025 kind, which
+normalisation does not catch and only the alias map can, or a genuine
+mass revision. The probe answers it for any pair in minutes:
+
+```bash
+.venv/bin/python -m pipeline.probe \
+    data/raw/datausesregister_december2022.xlsx \
+    data/raw/datausesregister_january2023.xlsx --transitions 20
+```
+
+If January 2023 is one organisation renaming itself, `--renames` will
+offer it as a single alias and 2,455 amendments will resolve to one
+decision. That is the most valuable thing left to run.
+
+### A gap in the archive
+
+There is no January 2025 edition: the sequence goes December 2024 to
+February 2025, and the February comparison therefore covers two months.
+Either NHS England did not publish that month or the workbook was not
+downloaded. The site attributes every change to the edition it first
+appears in, so February 2025's 93 additions and 3 amendments silently
+include January's. Worth either finding the workbook or noting the gap
+on the changes page, since a reader has no way to see it.
+
+### What the comma fix did
+
+The v4 re-ingest dropped the September 2026 organisation count from 640
+to 637 — exactly the three phantoms that `split_list` had been
+inventing from "MCKINSEY & COMPANY, INC. UNITED KINGDOM". No amendment
+count in 2025–26 moved, so those controller strings had been stable
+across editions: the bug was creating false organisations rather than
+false changes.
+
+### Scale
+
+63 editions cost about 25 MB of snapshots and a 29-second build, which
+is what the 19-edition build cost before `history_index` stopped
+re-reading the archive. The January 2023 changes page carries 2,455
+rows at 778 KB, or 70 KB gzipped as served. Both are fine; neither has
+much headroom left, and a register that keeps growing will need the
+per-edition pages paginated or trimmed eventually.
