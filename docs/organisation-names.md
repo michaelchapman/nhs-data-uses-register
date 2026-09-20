@@ -126,6 +126,68 @@ is a real merger of two institutions, not a relabelling, and whether those
 should share a page is a judgement. And the register sometimes reuses a name
 for a genuinely different body, so a swap is evidence, not proof.
 
+## Merging the obvious ones without reviewing them
+
+Most candidates are not judgement calls. A name that differs only in
+punctuation, in a bracketed acronym, or in whether it ends "Limited" or "Ltd"
+is the same organisation written two ways, and reading through those to press
+[m] is wasted effort.
+
+```bash
+.venv/bin/python -m pipeline.orgcheck --auto
+```
+
+applies exactly three kinds of merge and nothing else:
+
+| Rule | Example |
+| --- | --- |
+| Punctuation, spacing or case only | `CITY ST GEORGE’S…` / `CITY ST GEORGE'S…` |
+| A bracketed acronym appended | `Adult Psychiatric Morbidity Survey` / `… (APMS)` |
+| Legal form only | `NEC Software Solutions` / `NEC Software Solutions Limited` |
+
+With `--renames`, a fourth applies: a name that left the register while
+another appeared on *exactly* the same agreements. That is evidence of one
+organisation under two labels, and a better reason than anything the spelling
+shows. Below total overlap it goes to review.
+
+Each of these writes `"source": "auto"` and the reason that fired, so the
+automatic entries can be found, audited or removed as a group later.
+
+Nothing that adds or removes a word of substance is automated. "NHS Sussex"
+and "NHS Surrey and Sussex" are different bodies, as are "NHS Essex" and "NHS
+Mid and South Essex", and merging those would attribute one organisation's
+data sharing to another. Those still come to you.
+
+One case to spot-check: a merger reads exactly like a rename. "City,
+University of London" becoming "City St George's, University of London" is
+two institutions combining, and whether they should share a page is a
+judgement `--auto` cannot make. Scanning the `source: auto` entries after a
+run is worth the minute it takes.
+
+## Datasets
+
+Datasets get relabelled more often than organisations — in January 2023 the
+register appended an acronym to most of them at once — and they have their
+own file and tool:
+
+```bash
+.venv/bin/python -m pipeline.datasetcheck            # list
+.venv/bin/python -m pipeline.datasetcheck --auto     # apply the clear ones
+.venv/bin/python -m pipeline.datasetcheck --review   # decide the rest
+```
+
+It works only across editions, since a renamed dataset's old name is absent
+from the current one. Candidates come from what left and arrived on the same
+agreements, never from how alike two names look: "Mental Health Minimum Data
+Set" and "Mental Health Services Data Set" are 79% alike and are different
+datasets, while "GPES Data for Pandemic Planning and Research (COVID-19)" and
+"COVID-19 General Practice Extraction Service (GPES) Data for Pandemic
+Planning and Research (GDPPR)" are 62% alike and are one.
+
+Decisions land in `data/dataset-aliases.json`, which `extract` applies when
+grouping datasets, so a renamed dataset keeps one page and one history
+instead of splitting at the rename.
+
 ## Deciding
 
 For each candidate ask: is this the same legal entity recorded

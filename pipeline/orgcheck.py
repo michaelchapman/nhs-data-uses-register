@@ -51,6 +51,9 @@ class Candidate:
     kind: str  # "code", "similarity" or "rename"
     label: str  # why it was flagged, for display
     names: list[str]
+    # Set when the evidence is strong enough to merge without asking — a name
+    # that left the register while another arrived on exactly its agreements.
+    evidence: str | None = None
     # For a rename we know which spelling is current, so the review loop can
     # offer it as the canonical name rather than defaulting to the first.
     canonical: str | None = None
@@ -113,9 +116,9 @@ def already_resolved(names: list[str], alias_map: dict[str, str]) -> bool:
     return len(resolved) == 1
 
 
-def outstanding(candidates: list[Candidate]) -> list[Candidate]:
-    alias_map = aliases.load_map()
-    ignored = aliases.load_ignored()
+def outstanding(candidates: list[Candidate], path=None) -> list[Candidate]:
+    alias_map = aliases.load_map(path)
+    ignored = aliases.load_ignored(path)
     return [
         c
         for c in candidates
@@ -261,7 +264,7 @@ def prompt(text: str) -> str:
         return "q"
 
 
-def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> str:
+def review_one(c: Candidate, counts: dict[str, int], index: int, total: int, path=None) -> str:
     """Returns 'quit' to stop the loop, anything else to continue."""
     print(f"\n[{index}/{total}] {c.label}")
     for i, n in enumerate(c.names, start=1):
@@ -280,7 +283,7 @@ def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> 
         return "quit"
 
     if choice in ("i", "ignore"):
-        aliases.add_ignored(c.names)
+        aliases.add_ignored(c.names, path=path)
         print("  ignored — won't be suggested again.")
         return "continue"
 
@@ -320,7 +323,7 @@ def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> 
             canonical = default_canonical
 
         reason = prompt("  reason (optional, Enter to skip): ").strip()
-        aliases.add_alias(canonical, selected, reason)
+        aliases.add_alias(canonical, selected, reason, path=path)
         print(f"  merged onto {canonical!r}.")
         return "continue"
 
@@ -328,7 +331,7 @@ def review_one(c: Candidate, counts: dict[str, int], index: int, total: int) -> 
     return "continue"
 
 
-def review_mode(candidates: list[Candidate], counts: dict[str, int]) -> None:
+def review_mode(candidates: list[Candidate], counts: dict[str, int], path=None) -> None:
     if not candidates:
         print("Nothing outstanding — every candidate has been merged or ignored.")
         return
@@ -336,9 +339,9 @@ def review_mode(candidates: list[Candidate], counts: dict[str, int]) -> None:
     for index, c in enumerate(list(candidates), start=1):
         # Re-check as we go: an earlier merge in this same run can resolve a
         # later candidate that shares a name with it.
-        if already_resolved(c.names, aliases.load_map()):
+        if already_resolved(c.names, aliases.load_map(path)):
             continue
-        if review_one(c, counts, index, len(candidates)) == "quit":
+        if review_one(c, counts, index, len(candidates), path=path) == "quit":
             print("\nStopped. Anything already decided is saved; the rest will show up next run.")
             return
     print("\nDone — nothing left outstanding.")
@@ -347,6 +350,15 @@ def review_mode(candidates: list[Candidate], counts: dict[str, int]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--review", action="store_true", help="go through candidates one at a time")
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help=(
+            "apply the unambiguous candidates without asking — a bracketed "
+            "acronym, a legal form, or punctuation and case. Anything that adds "
+            "or removes a word of substance is still left for review."
+        ),
+    )
     parser.add_argument(
         "--renames",
         nargs="*",
@@ -381,9 +393,20 @@ def main() -> None:
         candidates = gather_renames(workbooks) + candidates
         print()
     candidates = outstanding(candidates)
+
+    if args.auto:
+        applied = aliases.auto_merge(
+            [(*c.names, c.evidence) for c in candidates if len(c.names) == 2]
+        )
+        for entry in applied:
+            print(f"  merged  {entry['variant']!r}")
+            print(f"       ->  {entry['canonical']!r}  ({entry['reason']})")
+        candidates = outstanding(candidates)
+        print(f"\n{len(applied)} merged automatically; {len(candidates)} left for a person.\n")
+
     if args.review:
         review_mode(candidates, counts)
-    else:
+    elif not args.auto:
         list_mode(candidates, counts)
 
 

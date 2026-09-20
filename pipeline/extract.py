@@ -283,6 +283,7 @@ def extract(workbook_bytes: bytes) -> dict:
         )
 
     alias_map = aliases.load_map()
+    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
 
     agreements = []
     for base, versions in versions_by_base.items():
@@ -324,7 +325,11 @@ def extract(workbook_bytes: bytes) -> dict:
                 "latest_end": latest["end_date"],
                 "coverage_end": max(ends) if ends else "",
                 "dataset_names": dataset_names,
-                "dataset_slugs": [slugify(n) for n in dataset_names],
+                # Resolved through the dataset alias map, so a renamed
+                # dataset links to one page rather than two.
+                "dataset_slugs": [
+                    slugify(aliases.resolve(n, dataset_alias_map)) for n in dataset_names
+                ],
                 "legal_bases": legal_bases,
                 "files_released": sum(v["files_released"] for v in versions),
                 "versions": versions,
@@ -429,9 +434,15 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
 
 
 def _group_datasets(agreements: list[dict]) -> list[dict]:
+    # Datasets get relabelled at least as often as organisations — NHS England
+    # appended acronyms across the whole register in January 2023 — and a
+    # rename would otherwise split one dataset's history across two pages.
+    # Reviewed merges live in data/dataset-aliases.json; see datasetcheck.
+    alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     grouped: dict[str, dict] = {}
     for agreement in agreements:
-        for name in agreement["dataset_names"]:
+        for raw_name in agreement["dataset_names"]:
+            name = aliases.resolve(raw_name, alias_map)
             entry = grouped.setdefault(
                 name,
                 {"name": name, "slug": slugify(name), "agreements": [], "attributes": {}},
@@ -439,7 +450,7 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
             entry["agreements"].append(agreement)
             for version in agreement["versions"]:
                 for dataset in version["datasets"]:
-                    if dataset["name"] != name:
+                    if aliases.resolve(dataset["name"], alias_map) != name:
                         continue
                     for key in ("type_of_data", "sensitivity", "legal_basis", "frequency"):
                         if dataset[key]:
