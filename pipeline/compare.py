@@ -344,6 +344,20 @@ def _dataset_names(version: dict, alias_map: dict[str, str]) -> set[str]:
     return {aliases.resolve(d["name"], alias_map) for d in version["datasets"] if d["name"]}
 
 
+def _list_change(old: set[str], new: set[str]) -> dict | None:
+    """What was added to and removed from a list of names, ignoring typography.
+
+    `2020 Delivery Ltd` and `2020 DELIVERY LTD` are one organisation written
+    two ways, and the register restated 1,302 controller lists that way in
+    October 2021 alone. Names are matched on their normalised form, as every
+    other field is, and the names reported are the ones as written.
+    """
+    old_keys, new_keys = {normalise(name) for name in old}, {normalise(name) for name in new}
+    added = sorted(name for name in new if normalise(name) not in old_keys)
+    removed = sorted(name for name in old if normalise(name) not in new_keys)
+    return {"added": added, "removed": removed} if added or removed else None
+
+
 def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None = None) -> dict | None:
     """What changed between two versions of one agreement. `None` if nothing did.
 
@@ -362,21 +376,17 @@ def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None
             continue
         scalars.append({"label": label, "before": old, "after": new})
 
-    for key, label in (("controllers", "Data controllers"),):
-        old, new = set(before.get(key) or []), set(after.get(key) or [])
-        if old != new:
-            lists.append({"label": label, "added": sorted(new - old), "removed": sorted(old - new)})
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    old_datasets, new_datasets = _dataset_names(before, alias_map), _dataset_names(after, alias_map)
-    if old_datasets != new_datasets:
-        lists.append(
-            {
-                "label": "Datasets",
-                "added": sorted(new_datasets - old_datasets),
-                "removed": sorted(old_datasets - new_datasets),
-            }
-        )
+    for label, old, new in (
+        ("Data controllers", set(before.get("controllers") or []), set(after.get("controllers") or [])),
+        ("Datasets", _dataset_names(before, alias_map), _dataset_names(after, alias_map)),
+    ):
+        moved = _list_change(old, new)
+        if moved:
+            lists.append({"label": label, **moved})
+        elif old != new:
+            cosmetic.append(label)
 
     for key, label in PROSE_FIELDS:
         old, new = before.get(key, "") or "", after.get(key, "") or ""

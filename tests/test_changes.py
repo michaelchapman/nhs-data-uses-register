@@ -65,6 +65,20 @@ class Changes(unittest.TestCase):
         result = changes.diff(REGISTER, "august2026")
         self.assertEqual(result["amended"], [])
 
+    def test_a_controller_restated_in_capitals_is_not_an_amendment(self):
+        # The register restated 1,302 controller lists this way in October 2021.
+        shouted = [c.upper() for c in self.versions[FIRST][-1]["controllers"]]
+        self.record(("july2026", self.versions), ("august2026", self.edited(controllers=shouted)))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+        self.assertEqual(changes.history(REGISTER)[FIRST]["events"], [])
+
+    def test_a_changed_controller_is_still_an_amendment(self):
+        other = self.versions[FIRST][-1]["controllers"] + ["A NEW CONTROLLER LTD"]
+        self.record(("july2026", self.versions), ("august2026", self.edited(controllers=other)))
+        self.assertEqual(
+            [a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]], [["Data controllers"]]
+        )
+
     def test_a_new_agreement_is_new_and_a_new_version_is_a_renewal(self):
         without = {FIRST: copy.deepcopy(self.versions[FIRST][:1])}
         self.record(("july2026", without), ("august2026", self.versions))
