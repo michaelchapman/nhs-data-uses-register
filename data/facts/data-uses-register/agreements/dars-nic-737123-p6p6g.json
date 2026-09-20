@@ -1,0 +1,127 @@
+{
+ "base_reference": "DARS-NIC-737123-P6P6G",
+ "versions": [
+  {
+   "reference": "DARS-NIC-737123-P6P6G-v0.16",
+   "states": [
+    {
+     "activities": "The University of Oxford will transfer data to NHS England. The data will consist of identifying details (specifically names, date of birth, NHS number, gender,, and postcode and a unique person ID) for the cohort to be linked with NHS England data. \n\nNHS England will provide the relevant records from the HES, ECDS, deaths, demographics, NDRS cancer, DIDs, NHSBSA, Cancer Waiting Times and COVID-19 Vaccination Status datasets to the MyMelanoma Secure Data Environment, which is run on ARO servers. The Data will contain directly identifying data items including Name, NHS Number, Date of Birth, Postcode and which are required to verify data linkage. \n\nThe Data will not be transferred to any other location.  \n\nThe Data will be stored on servers at University of Oxford, run by ARO.  \n\nThe University of Oxford stores Data on the Cloud provided by ARO. \n\nThe Data will be accessed by authorised personnel via remote access, and on-site at the University of Oxford.    \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.  \n\nFor remote access:  \n\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;  \n-\tAccess controls granting users the minimum level of access required are in place;  \n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;  \n-\tMultifactor authentication (MFA) is required for remote access;  \n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;  \n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nThe Data will be combined with other health datasets from the devolved nations to build the MyMelanoma resource.  \n\nThe Data will be linked at person record level with questionnaire data on individuals’ lifestyle and experience living with melanoma obtained from MyMelanoma participants. \n\nThe Data will not be linked with any other data.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "NDRS Cancer Consolidated Data Set",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Consent (Reasonable Expectation); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-03-26",
+     "expected_benefits": "Expected benefits from constructing the MyMelanoma database include improved data accessibility, enhanced patient care, support for research and quality improvement, and compliance with regulatory standards. By harnessing the power of data, healthcare organisations can drive innovation, improve outcomes, and ultimately, enhance the delivery of patient-centred care. \n\nThe use of the data could:  \n-help the system to better understand the health and care needs of populations.  \n- lead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience. \n- advance understanding of regional and national trends in health and social care needs. \n- advance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations \n- inform planning health services and programmes, for example to improve equity of access, experience and outcomes. \n- inform decisions on how to effectively allocate and evaluate funding according to health needs. \n- provide a mechanism for checking the quality of care.  This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed. \n- support knowledge creation or exploratory research (and the innovations and developments that might result from that exploratory work). \n\nThe MyMelanoma study aims to deliver substantial benefits to melanoma patients by creating a large-scale resource designed to enhance the prediction of disease progression and treatment responses through the identification of prognostic and predictive biomarkers, facilitating personalised and effective care. Patients will gain from improved understanding of lifestyle and genetic factors that influence melanoma risks and recurrence, leading to better preventive strategies and informed health decisions. Additionally, insights into managing treatment side effects and reducing long-term toxicities are anticipated, ultimately supporting improved long-term health outcomes. By actively collecting patient-reported data regarding quality of life and treatment experiences, the project will contribute to the development of patient-centred healthcare practices, tailored to address the real-world needs and concerns of melanoma patients.\n\nTo maximise public benefit, MyMelanoma will combine secure, public-interest–focused data access with multi-channel dissemination and strong collaboration with patient groups and charities. Findings and resource availability will be promoted via peer-reviewed publications, the study website, press releases, and social media, alongside presentations at scientific meetings. The team has embedded outreach from the start, -building a public website, using flyers in clinical services, and leveraging charity websites-and has engaged relevant charities and patient organisations (e.g., Melanoma Focus; UK Melanoma Patient Conference) to broaden reach. MyMelanoma also utilises national platforms such as NIHR’s “Be Part of Research” to expand awareness and participation, and it will actively study how best to deliver information patients want, feeding those insights into communication materials. Together, these actions are designed to speed translation into practice and make results widely accessible to clinicians, patients, and the public.",
+     "expected_output": "The expected outputs of the processing will be: \n- Submissions to peer reviewed journals\n- Presentations at appropriate conferences \n- A database to be utilised as a resource for health research\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n- Journals \n- Posters displayed at appropriate conferences \n- Social media \n- Public reports\n\nThe first outputs are expected to be achieved 2 years following data receipt.",
+     "objective": "The University of Oxford requires access to NHS England data for the purpose of the following research project:  \nMyMelanoma database  \n \nThe following is a summary of the aims of the research project provided by the University of Oxford:  \n \nThe MyMelanoma Study is a nationwide research project aimed at gathering high-quality data from a prospective cohort of at least 20,000 melanoma patients. This data will be used to build a valuable research resource with the primary goals of improving the prevention, diagnosis, and treatment of melanoma.  \n \nMyMelanoma is actively recruiting melanoma patients aged over 16 years from across the United Kingdom to participate in this important project. This includes both patient with melanoma themselves, and family member participants where a melanoma participant with reported evidence of a familial tendency to melanoma has invited that person to consider participation. The research resource will be built by securely linking information contributed online by explicitly consented participants who have received treatment for melanoma within the NHS England, with medical data stored in the NHS England record system. Additionally, a subset of participants will provide bio-samples such as blood, saliva, and formalin-fixed tumour tissue. This comprehensive resource will enable researchers to delve into the underlying causes of melanoma and how patients respond to their treatment, paving the way for a better patient care, contributing to advancements in melanoma prevention, diagnosis, and treatment. The MyMelanoma resource is not only valuable for the research team’s own research endeavours but will also be accessible to the wider global research community via sublicensing, fostering collaboration and further advancements in melanoma research.  \n \nMyMelanoma is a unique initiative in the UK, run by Cancer Research UK Oxford Centre and supported by key researchers, clinicians, charities and, importantly, the participants themselves. The initial research questions that forms the current focus of the Mymelanoma resource were identified during discussions with patient public involvement (PPI) groups and includes:  \n \n1.\tA better understanding of the factors influencing susceptibility to melanoma development, or melanoma progression to a later disease stage, such as environmental exposures, personal pigmentation information, safe sun habits, dietary influences and lifestyle factors, to develop risk estimates for clinical use.  \n \n2.\tTo establish the features of families that might carry highly penetrant melanoma susceptibility genes, including the prospective risk of other forms of cancer, to influence clinical strategies for screening and intervention in these rare cases. This will be achieved through the long term follow up of patients and the identification of known and novel high-risk variants.  \n \n3.\tTo identify, through epidemiological and molecular studies, the determinants of melanoma morbidity and survival among diagnosed cases. This includes investigating lifestyle choices, blood markers, comorbidities, and tumour characteristics. Ultimately, the aim is to identify prognostic biomarkers for individuals presenting with melanoma for the first time. enabling the identification of individuals who might benefit from early adjuvant therapies.  \n \n4.\tTo identify predictive biomarkers for patient response to current targeted- and immuno-therapies.  \n \n5.\tTo identify the short- and long- term side effects of current targeted- and immuno-therapies. For the short-term side effects, the focus is identification of risk factors associated with these side effects, and how severely this impact on their quality of life. The long-term impacts of the toxicities experienced by patients due to current available treatments and the impact on their quality of life will be investigated, including identifying predictive biomarkers for toxicity.\n\nThe MyMelanoma data resource ultimately aims to assist in all aspects of melanoma research, from laboratory studies to the delivery of clinical care, to improve patient survival. The primary aim of MyMelanoma is to recruit and maintain contact with a sufficient number of melanoma patients to build a comprehensive data resource. This resource will enable researchers to answer key questions surrounding melanoma. It will contain data contributed by participants, as well as linked medical records provided by their healthcare providers. This linkage will allow for the creation of a rich dataset comprising medical and test data related to the participant's health, lifestyle, family history, treatment, and quality of life.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2026-03-27",
+     "sublicensing": "No",
+     "title": "MyMelanoma database",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.16"
+  }
+ ]
+}

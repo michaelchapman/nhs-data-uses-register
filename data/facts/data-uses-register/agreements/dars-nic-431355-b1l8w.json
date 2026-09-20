@@ -1,0 +1,941 @@
+{
+ "base_reference": "DARS-NIC-431355-B1L8W",
+ "versions": [
+  {
+   "reference": "DARS-NIC-431355-B1L8W-v0.9",
+   "states": [
+    {
+     "activities": "Flows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Second Generation Surveillance System",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Civil Registration (Deaths) - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "MSDS (Maternity Services Data Set)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-07-12",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "OVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2021-07-13",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    },
+    {
+     "activities": "Flows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Second Generation Surveillance System",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Civil Registration (Deaths) - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "MSDS (Maternity Services Data Set) v1.5",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-07-12",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "OVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2021-07-13",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    },
+    {
+     "activities": "Flows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Second Generation Surveillance System (SGSS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Civil Registrations of Death - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Maternity Services Data Set (MSDS) v1.5",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-07-12",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "OVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2021-07-13",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    },
+    {
+     "activities": "Flows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Civil Registrations of Death - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Maternity Services Data Set (MSDS) v1.5",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-07-12",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "OVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2021-07-13",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.9"
+  },
+  {
+   "reference": "DARS-NIC-431355-B1L8W-v1.3",
+   "states": [
+    {
+     "activities": "No new data will be provided by NHS Digital under this Agreement. \n\nThe following provides background on the processing activities undertaken prior to this Agreement: \n\nFlows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Second Generation Surveillance System",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Civil Registration (Deaths) - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "MSDS (Maternity Services Data Set) v1.5",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2023-07-11",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period. This is a pragmatic approach to provide an active Agreement whilst enabling [the University of Oxford to complete the necessary actions to enable a subsequent application to extend the Agreement meeting all applicable data sharing standards as published in NHS Digital’s website (see: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance). \n \nThe following provides background information on the purpose of the original study: \n\nOVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2022-10-06",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "The University of Oxford will update the Yielded Benefits section in the subsequent version."
+    },
+    {
+     "activities": "No new data will be provided by NHS Digital under this Agreement. \n\nThe following provides background on the processing activities undertaken prior to this Agreement: \n\nFlows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Second Generation Surveillance System (SGSS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Civil Registrations of Death - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Maternity Services Data Set (MSDS) v1.5",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2023-07-11",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period. This is a pragmatic approach to provide an active Agreement whilst enabling [the University of Oxford to complete the necessary actions to enable a subsequent application to extend the Agreement meeting all applicable data sharing standards as published in NHS Digital’s website (see: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance). \n \nThe following provides background information on the purpose of the original study: \n\nOVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2022-10-06",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "The University of Oxford will update the Yielded Benefits section in the subsequent version."
+    },
+    {
+     "activities": "No new data will be provided by NHS Digital under this Agreement. \n\nThe following provides background on the processing activities undertaken prior to this Agreement: \n\nFlows of data:\n- Data are extracted from practices that are members of the Royal College of General Practitioners (RCGP RSC) Research and Surveillance Network by Wellbeing.  The University of Oxford subcontracts with Wellbeing to do this as part its contractual responsibilities.\n- The University of Oxford will provide NHS digital with a list of pseudonymised NHS numbers and pseudonymised date of birth for the cohort monthly.\n- NHS Digital will link the cohort to the requested datasets and send pseudonymised linked datasets securely back to University of Oxford. \n- University of Oxford will store the data on the secure network.\n- University of Oxford will process and aggregate pseudonymised data to produce approved reports for surveillance (as part of the National surveillance process); and for the purpose of COVID-19 vaccine pharmacovigilance and quality improvement.\n\nNo identifiable data items will be passed into or out of NHS Digital\n\nSALTING METHODLOGY:\nThe University of Oxford will follow a salting method in a manner that all the data will be non-identifiable. The process is as follows: \n1.  An encryption salt is held by a designated staff member of the University of Oxford Medical Science Division who is not a member of the ORCHID staff. \n2. When a data linkage is required, the encryption salt holder sends the encryption salt to the data provider (NHS D) \n3. The data provider will hash personal identifiers (in the data requested by ORCHID) using a hashing algorithm\n4. The hashing algorithm is SHA2-512. \n5. To make this key unique, an encryption salt is added at the end of the NHS number (e.g. NHS number= 12345678 ;  SALT (held by someone other than ORCHID staff) = bob.  So, hashing would take place using the SHA2-512 alogrithm by 12345678bob = return pseudonymised data)  \n\nThe  data is controlled and processed by a group of staff who are all based at the University of Oxford; all are mandated to complete information governance training. The group is made up of analysts, academic fellows, Structure Language Query (SQL) developers, practice liaison officers, a project manager and a head of department. The team work from secure workstations or secure laptops with encrypted drives within the group’s secure network.\nData will only be accessed by individuals within the University of Oxford  who have authorisation that are substantive employees of University of Oxford. The authorisation process includes: (1) Contractual requirement to follow IG principles; (2) Using the email registered with Human Resources to complete IG training and to return the certificate; (3) Staff email is authorised by the IT department for one year to access the secure network and staff computers are configured to allow this; (4) At any point the project managers or Head can have access to the secure network turned off. There is special authorisation to have access to the main database.\n\nThe additional linkages will be added to the data that the University of Oxford already receives from the RCGP RSC network practices and PHE reference laboratories.\n\nThis process for previous projects linking different sets of data, and the linkage has been successful, provided both parties use the same pseudonymisation algorithm (SHA-512).\n\nThere will be no requirement nor attempt to re-identify individuals from the data. The data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nThe use of national data is needed as the University of Oxford are a national surveillance centre and the cohort are from across England and Wales.  \n\nThe use of pseudonymised NHS numbers are essential as the request to link to the data that the University of Oxford already received from the RCGP RSC network general practices and PHE reference laboratories.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Hospitalization in England Surveillance System",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Vaccination Adverse Reactions",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Civil Registrations of Death - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Maternity Services Data Set (MSDS) v1.5",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Accident & Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Episodes",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2023-07-11",
+     "expected_benefits": "Analyses conducted under HDRUK-funded DaC-VaP will lead to a better understanding of the characteristics of patients being tested for COVID-19 and the associations between demographics, comorbidity and medications on the likelihood of developing COVID-19 post COVID-19 vaccinations and subsequent complications, if any. The major benefit of this study is to see differences between various demographic characteristics, especially ethnicity. \n\nMoreover, the study will establish the safety of COVID-19 vaccination and its effectiveness to reduce COVID-19 infections. Analyses will also establish if COVID-19 vaccine will have an impact on other flu-like illness.  All these will benefit public health and will inform them about the benefits of the COVID-19 vaccine.\n\nFurthermore, the study will support COVID-19 vaccine surveillance.",
+     "expected_output": "Specific Outputs for this study are:\n•\tTo measure the outcome of the COVID-19 vaccine\n•\tTo look at risk of COVID-19 infections, hospitalisations and deaths post vaccination\n•\tTo track the impact of COVID-19 vaccination in terms of visual descriptions (dashboards) of the number and rates of patients vaccinated.\n•\tSubgroups of data will be identified to enable display of vaccination by GP practice, region, age group, gender, and ethnicity\n•\tFurthermore, ability to track number of patients receiving one or both of the COVID-19 vaccine dose, vaccine brand and categorise by age group, gender, ethnicity. \n•\tTo establish differences in the vaccine effectiveness between the different brands of vaccine and different doses\n\nA protocol of the study design will be published (already submitted to The Lancet) as well as publish papers in international journals. A number of publications are expected across each of the 4 nations as well as one for the harmonised analyses\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPatient and Public Involvement and Engagement (PPIE) members  have been involved since the beginning of this project. Research proposal for the Wales analysis has also been reviewed by members of the public. Their contribution includes defining research questions, interpretation, and dissemination of study findings. The PPI and study team did a survey around vaccine emotions due to the high media discussion around the Oxford –AZ COVID-19 safety. The PPI group showed high confidence in vaccine safety and felt strongly that the media attention could be a political issue (EU and UK). They do have concerns about the long term impact of COVID-19 (Long COVID). The PPI have further raised the potential need of COVID-19 booster doses and also making the vaccine mandatory for work and/or travel.",
+     "objective": "This Data Sharing Agreement permits the retention of the data provided under previous iterations of this Agreement for an interim period. This is a pragmatic approach to provide an active Agreement whilst enabling [the University of Oxford to complete the necessary actions to enable a subsequent application to extend the Agreement meeting all applicable data sharing standards as published in NHS Digital’s website (see: https://digital.nhs.uk/services/data-access-request-service-dars/dars-guidance). \n \nThe following provides background information on the purpose of the original study: \n\nOVERALL AIM\nThis application is part of the urgent public health study that is funded by HDRUK to investigate the pharmacovigilance of the COVID-19 vaccine. \n\nThe purpose of this application is to link data held by NHS digital to support the University of Oxford to conduct observational epidemiological studies that inform the national public health response to COVID-19 and importantly the COVID-19 vaccine. The RCGP RSC dataset includes individual patient level up-to-date primary care data which can be easily queried. Primary care/general practice data is rich in terms of diagnosis and information about the process of care. For example, the database contains the following variables for each patient (where present)\n\nSpecifically, the objectives are to: measure variation in vaccine uptake in relation to a)population characteristics; b) assess vaccine effectiveness (VE) against infection, transmission, severe outcomes, and deaths; and c) identify the risk of adverse events following immunisation (AEIs).\n\nThe “outcome” measures of vaccine effectiveness are:\n-\tIncidences of vaccine preventable disease (VPD) – e.g. COVID-19, influenza etc.\n-\tHospital admission – usually within 28 days of suffering from the index VPD\n-\tIntensive care admission\n-\tDeath, again usually within 28 days of the index date of the VPD\n\nReal time information will be provided to Public Health England (PHE), and through them to the Joint Committee for Immunisation and Vaccination (JCVI) and SAGE.   The requirement varies with the stage and impact of any VPD. \n\nThe study involves COVID-19 vaccine pharmacovigilance across England, Wales, Scotland and Northern Ireland, where each of the nations do their own analyses within their secure environment. The University of Edinburgh will liaise with each of the analyses leads in the four nations. \n\nThe study team are requesting to utilise all the datasets coming into the University of Oxford secure environment as part of the MAINROUTE (DARS-NIC-381683-R6R6K)   agreement. \nThe datasets included are: \n- Detailed demographic and risk factor data.\n- COVID-19 appointments:  information on whether or not a virology swab was taken and the outcome of the swab\n- Non-COVID-19 appointments\n- Detailed data for the 32 conditions monitored by RCGP RSC on behalf of PHE \n- Vaccination status: date of vaccination, type of vaccination \n- Co-morbid conditions \n- Medication which may be associated with better or adverse outcomes. \n- Test results\n- Referrals made \n- A&E visits \n- Inpatient appointments, including critical care\n- Secondary Uses Services Payment by Results (SUS)\n\nDatasets that are requested to flow under this agreement are:\n\n- COVID-19 Second Generation Surveillance System (SGSS) – (Pillar 1)\n- COVID-19 UK Non-hospital Antigen Testing Results (Pillar2)\n- Civil Registrations (Deaths)– Secondary Care Cut\n- Mortality data\n- Maternity Services Data Set (MSDS)\n- Covid-19 vaccination status and adverse effects following vaccination\n\nThe impact of infection on pregnancy (including the need for intervention), and the impact of infection on infants in the months of life (if their mother is not immune) are really important.   For example, if mothers are not immune to RSV or influenza – then there are no antibodies crossing the placenta to protect the young infant.  Hence vaccine uptake in pregnancy and linkage to infant outcomes are a very important part of our academic work. Capturing vaccine exposure in pregnancy is important. As no trial to date has included pregnant women this type of study is the only opportunity to explore safety and effectiveness  in pregnant women and their babies.\n\nThe same pseudonymisation algorithm will be applied to all data involved in this study (and any other studies) so the researchers can draw scientific conclusions for a study population.\n\nThe University of Oxford is the sole data controller for processing the data that is mentioned within this agreement. Some of the data which will be accessed under this agreement will be data which is already in the hands of University of Oxford under a different agreement DARS-NIC-381683 for which University of Oxford operate as a Data processor for on behalf of Pubic Health England (PHE) and the Royal Collage of GPs (RCGP).  This agreement will also flow new data sets (such as the COVID-19 vaccine data) which are not currently held by the Data Controller  and these datasets are only for use by the Data Controller (University of Oxford) for the purposes set out in this data sharing agreement.\n\nUniversity of Oxford – The University are a data processor for the surveillance activities it undertakes for PHE In addition to surveillance, there is an agreement between PHE and Oxford to use the data collected for surveillance activities for further research studies, for which University of Oxford will be the data controller.  the work being undertaking under this agreement falls in the further research area which is under University of Oxford control.\n\nUniversity of Edinburgh - This study is part of urgent public health studies and funded by the HDRUK Data and National Connectivity Studies, Rapid Funding Call.  Edinburgh applied for the funding on behalf of University of Oxford as they are managing the home nations response. Each of the home nations are taking control of the work within their regions and so for England the University of Oxford are the sole Data controller with their own ethical approval in place for this work.  The University of Edinburgh do not make any decisions about the means by which the personal data are being processed under this agreement.\n\nThe data will only be processed by University of Oxford. Analysts at University of Edinburgh may gain access to outputs which will be aggerated with small numbers suppressed in line with the HES analysis guide.\n\nThe GDPR Lawful basis for processing the requested data under this agreement are; \n\nArticle 6(1)(e) (Public Task processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller).\n\nArticle 9(2)(j) (processing is necessary for reasons of public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interest of the data subject.  \n\nOnly the named Data Controller and Processor have permission to access the record level data provided under this agreement.  The size of the cohort is 25,428,392 individuals.\n\nThe DaCVAP and AstraZeneca (AZ) programme of work are different analyses over different time periods, using different datasets and range of data sources.  The results will hopefully be compatible and comparable but quite different.  Achieving similar results from different lines of enquiry is an important part of science – particularly in epidemiologal studies like this where we identify associations, rather than measure direct causation.  \n\nThe main difference between the DaCVAP study and the AZ programme is the nature of the analysis.  The DaCVAP study looks to report the relative risk (how much more likely the event is), whereas the AZ analysis will provide the rate of these events.  The former may say that an event is two or three times more common, the latter is that the rate in the unvaccinated group is 1 per million and that in the vaccinated group 2 pear million (these rates are just illustrative and not based on analysis). \n\nIn greater detail: The AZ approach is that of a cohort study and therefore utilises the entire RCGP ORCHID cohort and eventually, in phase 2, the wider English cohort available in NHS Digital. The DaCVAp study is a nested case control study and, for each case utilises up to 10 controls (people in RCGP ORCHID who have not, by index date - event date of the case - have not experienced an event of interest). Post-hoc confirmatory analysis will be carried out via a self-controlled case series model. The cohort, AZ approach, allows for the calculation of incidence rates (absolute risk) as well as relative risk, furthermore it allows for a wider set of modelling techniques, namely AI ensemble and compartmental, mathematical modelling to be implemented.  There are additionally differences in the variables, time periods and matching approaches between the studies.  DaCVAP also coordinates a distributed analysis across the four UK devolved nations, whereas our AZ study is just with English data.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2022-10-06",
+     "sublicensing": "No",
+     "title": "National Core Studies - Data and Connectivity: COVID-19 Vaccines Pharmacovigilance (DaC-VaP)",
+     "yielded_benefits": "The University of Oxford will update the Yielded Benefits section in the subsequent version."
+    }
+   ],
+   "version": "1.3"
+  }
+ ]
+}

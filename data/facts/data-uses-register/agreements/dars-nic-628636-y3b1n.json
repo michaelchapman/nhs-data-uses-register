@@ -1,0 +1,80 @@
+{
+ "base_reference": "DARS-NIC-628636-Y3B1N",
+ "versions": [
+  {
+   "reference": "DARS-NIC-628636-Y3B1N-v0.3",
+   "states": [
+    {
+     "activities": "CUH will transfer data to NHS England. The data will consist of identifying details (specifically NHS Number, Date of Birth and name) for the cohort to be linked with NHS England data. CUH will also transfer a unique person ID for a comparative cohort who have participated in previous research studies.\n\nNHS England will provide the relevant records to University of Cambridge from the Cancer Registry, SACT (Systemic Anti-Cancer Therapy), Linked RTDS (Radiotherapy Dataset), Linked-CWT (Cancer Waiting Times), CPES (Cancer Patient Experience Survey) and Linked DIDs (Diagnostic Imaging Dataset). The Data will contain no direct identifying data items but will contain Date of birth (truncated to month and year), Date of death (truncated to month and year), Ethnicity and a unique person ID which can be used to link the Data for those participants in the comparative cohort with other record level data already held by the recipient in their Open Clinica database. Open Clinica is a subset of EPIC (electronic patient records system) which stores the clinical research data for the Comparative study. Open Clinica does not hold any medical records obtained from direct care.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored and accessed on the University of Cambridge Secure Research Computing Platform (SRCP).\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access: · Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n · Access controls granting users the minimum level of access required are in place;\n · Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; · Multifactor authentication (MFA) is required for remote access;\n · Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n · All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n The above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nThe Data will not leave England/Wales at any time.\n\nAccess is restricted to employees or agents of University of Cambridge who have authorisation from the Principal Investigator.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality. \n\nThe data for those participants who were part of previous research will be linked to clinical research data in Open Clinica database. The Data will not be linked to any other clinical data. The Data will not be added to the EPIC patient electronic health record system, (EPIC is an electronic patient record system).\n\nThe identifying details will be stored in a separate database at CUH. All analyses will be carried out at the University of Cambridge using the pseudonymised dataset.  There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset. \n\nResearchers from the University of Cambridge will process the Data for the purposes described above.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-05-25",
+     "expected_benefits": "Use of data provided by NHS England aims to deepen an understanding of CUH’s performance as a breast cancer service, leading to strategic recommendations that could improve breast cancer care both locally and nationally. The use of NHS England data is expected to provide the following benefits/outcomes:\n\n1. Comprehensive Evaluation of CUH's Performance: Analysis is expected to demonstrate how CUH perform as a breast cancer service provider compared to national statistics. The study intends to highlight areas of excellence or best practice and identify opportunities to improve treatment efficacy, survival rates, and quality of care. \n2. Identification of Effective Treatment Protocols: Analysis is expected to demonstrate which treatment protocols yield the best survival outcomes for patients with different stages and subtypes of breast cancer, and how can these findings inform clinical guidelines and personalised treatment approaches. \n3. Insight into Disparities: Analysis is expected to demonstrate how demographic, and social deprivation factors impact survival rates, and what disparities exist related to weight/BMI, geographic region, age, ethnicity, socioeconomic status, housing, and social networks that could guide targeted interventions and equitable care. \n4. Guidance for Future Research Priorities: Analysis is expected to demonstrate critical gaps in current knowledge and what practice should be prioritised for future research, especially in high-risk cancer subtypes where treatment responses vary significantly. \n5. Research Participation and Outcomes: Analysis is expected to demonstrate what patterns can be observed in the participation of breast cancer patients in clinical trials and research studies at CUH, and how their involvement correlates with improved survival rates or treatment outcomes. \n6. Influence on Policy and Practice: Analysis is expected to demonstrate how data-driven insights from this study may influence local and national policies to ensure best practices, optimise resource allocation, and improve breast cancer care outcomes.",
+     "expected_output": "The expected outputs of the processing will be:\n\n· A poster/presentation at the Cambridge Precision Breast Cancer Symposium 2027 and the UK Interdisciplinary Breast Cancer Symposium 2027 (target)\n\n· Submissions to peer reviewed journals, including Lancet Oncology Journal – target 2027.\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n· Peer reviewed journals\n· Posters displayed at local, regional or national conferences\n· Presentation to the patient advocate group\n\nThe results will also help to guide further research within the CUH and inform where to focus research efforts next.",
+     "objective": "Cambridge University Hospitals NHS Foundation Trust and University of Cambridge require access to NHS England data for the purpose of the following research project: BROCADE: BReast cancer OutComes from Addenbrooke’s data Evaluation.\n\nThe following is a summary of the aims of the research project provided by the applicant on behalf of Cambridge University Hospitals NHS Foundation Trust:\nThe aim of this study is to assess survival data and supporting clinical data for any patient diagnosed with or treated for any subtype of breast cancer at Addenbrooke's Hospital over a 10 year period. The purpose of accessing this data is to answer the following research questions:\n\n1. How has Addenbrookes Hospital performed as a breast cancer service provider for patients with stage 1, 2, 3, or 4 cancer/different subtypes, in relation to the national statistics?\n2. How do survival rates in CUH population differ for particular subtypes of breast cancer?\n3. Are there differences in survival rates based on treatments received? Do the patients recruited to translational or clinical studies fare better than those receiving standard of care treatments?\n4. How do survival rates, and other indicators of either patient experience vary depending on demographic (weight/BMI/ethnicity) and deprivation factors?\n\nUniversity of Cambridge and Cambridge University Hospitals NHS Foundation Trust require the latest available data as follows:\n- NDRS Systemic Anti-Cancer Therapy Dataset (SACT) - Allows analysis of sub-groups of patients within this cohort, based on which breast cancer treatments they have received. and how mortality rates differ for patients who have received different treatments for breast cancer at CUH\n- NDRS Linked Cancer Waiting Times (Treatments only) - As the study is looking at how CUH has performed as a service provider for breast cancer treatment over a ten year period, it was suggested by the patient advocate group that could the study also look at data around waiting times for diagnosis/treatment alongside mortality data, to see if these have improved over the ten year period, or if there is any link between treatment wait times and mortality rates.\n- NDRS Linked DIDs - Imaging data from around the time the patient is diagnosed with breast cancer will be important in categorising the patients in the cohort into sub-groups, based on tumour size and how the tumour was initially detected.\n- NDRS National Cancer Patient Experience Survey (CPES) - As with the CWT data, it was suggested by the patient advocate group that the study look at patient satisfaction with their diagnosis, treatment and follow up over the same 10 year period as mortality data. This will give a valuable insight into how CUH has performed as a breast cancer service and whether patient opinions have improved over the 10 year period.\n- NDRS National Radiotherapy Dataset (RTDS) - Radiotherapy data will allow another way to filter to sub-groups within this patient cohort more granularity will enable more complex analysis. The RTDS data will enable the study to look at links between doses of radiotherapy received for certain types of breast cancer and subsequent survival rates.\n- Cancer Registration Data - This is the primary dataset to be used for this project. Researchers are unable to obtain accurate dates of death/causes of death from their patient notes system, so are hoping to obtain these from the Cancer Registration data. The other fields requested will provide meaning to the mortality data such as time from diagnosis to death. Additional fields will allow researchers to access mortality rates for different sub-groups within this patient cohort, for example looking at mortality rates for different tumour types, hormone receptor statuses etc.\n\nThe level of data will be identifiable – although no directly identifying fields will be provided by NHS England, CUH hold the identifiers for the cohort and though no attempt will be made, CUH have the technical means to reidentify participants. \nCUH require a pseudonymised extract containing a Study ID to enable the study team at University of Cambridge to link the NHS England data to research records they hold for patients in their existing studies (held in the Open Clinica database). CUH will not be able to update medical records for those patients who have not been through their research studies, because they will have no identifier to use for linkage.\n\nThe data subjects are defined as: All patients who have been diagnosed with or treated for any subtype of breast cancer from 2013 - 2023, at CUH. The cohort is estimated around 13,000.\n\nThe Data will be minimised as follows: \n· Limited to data between 2013-2023 \n· Limited to conditions relevant to the study identified by specific ICD or OPCS codes related to breast cancer\n· Limited to patients treated or diagnosed at CUH\n\nThe lawful basis for processing personal data under the UK GDPR is: \nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is: \nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject. \n\nThe funding is provided by Addenbrooke’s Charitable Trust. The funding is specifically for the study described.   \nThe funder will have no ability to suppress or otherwise limit the publication of findings.  \n\nThe Study has consulted with, and received written support from their Patient Advisory Group (PAG), including Patient representatives involved in the individual clinical trials (PARTNER) and studies Personalised Breast Cancer Programme (PBCP) facilitated by the PBCI (Precision Breast Cancer Institute) at University of Cambridge, and the CCTU-CT. CUH had discussions with the PAG regarding BROCADE, about accessing patient data from NHS England, and some additional research questions emerged from these consultations, which the study aims to answer.",
+     "organisation": "ADDENBROOKES",
+     "organisation_type": "Independent Sector Healthcare Provider",
+     "start_date": "2026-05-26",
+     "sublicensing": "No",
+     "title": "BROCADE: BReast cancer OutComes from Addenbrooke's data Evaluation",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.3"
+  }
+ ]
+}

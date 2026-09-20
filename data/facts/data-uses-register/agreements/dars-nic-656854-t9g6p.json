@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-656854-T9G6P",
+ "versions": [
+  {
+   "reference": "DARS-NIC-656854-T9G6P-v1.3",
+   "states": [
+    {
+     "activities": "The data will be transferred from PHE to the UoM research data storage systems via the PHE secure file exchange. If a password is required for the data file then this will be provide via a separate communication line, such as telephone call.  \n\nThe data will be loaded into a SQL database, held on a University of Manchester research data storage system which meets all requirements specified by any data-sharing agreement between Public Health England and the University of Manchester. The SQL database allows the data to be extracted, filtered and sorted without modifying the data offload from NCRAS, keeping the original data the same as originally received. \n\nTypically for this type of research, we will assume that 'cure' means 5 years of survival following treatment, without tumour recurrence or progression. \n\nThe stages of processing the data to achieve the principle research question are as follows: \n\n1) Remove any patients with a death record within 5 years of treatment and hold them separate \n\n2) Remove any patients where the treatment intent is not radical \n\n3) Remove any patients with another treatment record within 5 years (indicating the first round of radical treatment did not cure the cancer) \n\n4) Count the number of patients remaining, this is our patients cured cohort \n\n5) Separate the cohort of patients remaining by treatment modality or modalities \n\nOnce the final cohort of patients has been selected and separated by treatment modalities, the contribution that each modality has to the number of cured patients will be calculated. \n\nFor the secondary research questions, the main results from step 5 will be separately stratified by: \n\na) Cancer site \n\nb) Deprivation (IMD quintile) \n\nc) Ethnic group \n\nd) Age group \n\nAdditionally, the patients that have a death record will be further analysed to identify any potential cohorts that died within 6 months of radical intent treatment.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "THE UNIVERSITY OF MANCHESTER"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2024-06-28",
+     "expected_benefits": "Scientific publications and conference abstracts.  Updating the available data and making it more rigorous and measurable",
+     "expected_output": "Journal Publications and conference presentations",
+     "objective": "Historical Data Processing \n\nPHE  sent the FORTY study team the requested dataset to process as follows:\n1) Separate any patients with a death record within 5 years of treatment and \nhold as cohort 2\n2) Exclude any patients where the treatment intent is not radical using treatment intent codes, event codes and treatment details where intent is incomplete\n3) Separate any patients with another treatment record within 5 years (indicating the first round of radical treatment did not cure the cancer) and hold as \ncohort 3 using the same data codes as step 2 as well as event dates\n4) Count the number of patients remaining, this is our patients cured cohort, \ncohort 1\n5) Stratify the main cohort (cohort 1) of patients remaining by treatment modality or modalities\nCohort 3 will be sent back to step 1 so patients who were cured with a second (or \nmore) round of radical treatment are still included in the analysis. \nOnce cohort 1 has been selected and separated by treatment modalities, the contribution that each modality has to the number of cured patients will be calculated.\nFor the secondary research questions, cohort 1 will also be separately stratified by:\na) Cancer site\nb) Deprivation (IMD quintile)\nc) Ethnic group\nd) Age group",
+     "organisation": "THE UNIVERSITY OF MANCHESTER",
+     "organisation_type": "Academic",
+     "start_date": "2023-03-24",
+     "sublicensing": "No",
+     "title": "Favourable Outcome of canceR Therapy (ODR1920_062)",
+     "yielded_benefits": "Abstracts at Scientific conferences"
+    }
+   ],
+   "version": "1.3"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "base_reference": "DARS-NIC-365804-B3N1K",
+ "versions": [
+  {
+   "reference": "DARS-NIC-365804-B3N1K-v0.3",
+   "states": [
+    {
+     "activities": "Perspectum will transfer data to NHS England.  The data will consist of identifying details NHS Number, Date of Birth, Postcode, unique person ID) for the cohort to be linked with NHS England data. For each individual in the study cohort; Perspectum will provide NHS England with the 5-year period of consent (PERSON_MIN and PERSON_MAX).\n\nNHS England will provide the relevant records from the HES APC, HES CC, HES OP, ECDS, Mortality, Cancer Registrations, Medicines Dispensed in Primary Care, and National Diabetes Audit datasets to Perspectum.  The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient. \n\n​The Data will be minimised as follows: \n- Limited to a study cohort identified by Perspectum. The cohort consists of ~1,000 individuals who consented to participate in the UKIDS study.\n- Limited to data between 01/05/2023 and 31/05/2031 \n- For each individual patient, HES & ECDS data will only be provided for a 5-year period from the individuals date of consent.\n\nThe Data will not be transferred to any other location. \n\nThe Data will be stored on servers at Perspectum Ltd. \n\nPerspectum uses offsite back-up services provided by Keepit Technologies UK Ltd. \n\nPerspectum stores Data on the Cloud provided by Microsoft Limited. \n \nThe Data will be accessed by authorised personnel onsite and via remote access.   \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nThe Data will be linked with MRI questionnaires and biomarker data collected by study.",
+     "commercial": "Yes",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "PERSPECTUM LTD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Cancer Registration Data",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "National Diabetes Audit",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-06-13",
+     "expected_benefits": "The findings of this research study are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study. \n\nThe use of the data could:  \n- help the system to better understand the health and care needs of populations.  \n- lead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience. \n- advance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations or conditions such as obesity and diabetes. \n- inform planning health services and programmes, for example to improve equity of access, experience and outcomes. \n- inform decisions on how to effectively allocate and evaluate funding according to health needs. \n- provide a mechanism for checking the quality of care.  This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed. \n- support knowledge creation or exploratory research (and the innovations and developments that might result from that exploratory work). \n\nPerspectum as a commercial sponsor could benefit from its conduct of the research - which requires use of NHSE data - e.g. through improved/new/improved products/services, alongside reputational benefits.  The participating recruitment centres could also benefit financially for their involvement because Perspectum pay the centres at commercial rates for their services.",
+     "expected_output": "The expected outputs of the processing will be: \n·  Submissions to peer reviewed journals focusing on diabetes and cardiology. \n·  Presentations at Connect/Meet/Educate events \n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels: \n· Journals \n· Webinars  \n· Social media \n· Industry newsletters \n· Co-hosted events for example Connect/Meet/Educate (CME) events. \n· Posters displayed at (CME) events\n· Press/media engagement \n· Public promotion of the research \n· Participant newsletters",
+     "objective": "Perspectum Ltd ('Perspectum') requires access to NHS England data for the purpose of the following research project: UK Imaging Diabetes Study Seeing Diabetes Clearly (UKIDS) Outcome Data. \n\nThe primary objective is to determine the impact of liver fibroinflammation on cardiovascular clinical outcomes in a patient population with type 2 diabetes without history of cardiovascular disease. \n  \nSecondary objectives of the study are: \n1. To determine the impact of liver fibroinflammation on other diabetes related outcomes in a patient population with co-prevalent type 2 diabetes and diabetic retinopathy. \n2. Using multi-parametric MRI to determine the impact that: \n     a) liver volume  \n     b) whole body composition and \n     c) abnormalities in the aorta have on diabetes-related clinical outcomes. \n3. To determine the impact of the severity of diabetic retinopathy on cardiovascular and other diabetes-related outcomes. \n4. To determine the impact of age of onset of T2DM on cardiovascular and other diabetes-related outcomes. \n5. To determine the co-prevalence of diabetic retinopathy (DR) and metabolic dysfunction-associated steatotic liver disease (MASLD), using multiparametric abdominal MRI. \n6. To determine the association between severity of eye disease and MRI metrics of liver disease, using multi-parametric abdominal MRI.",
+     "organisation": "PERSPECTUM LTD",
+     "organisation_type": "Non NHS Provider",
+     "start_date": "2026-06-14",
+     "sublicensing": "No",
+     "title": "UK Imaging Diabetes Study Seeing Diabetes Clearly (UKIDS) Outcome Data",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.3"
+  }
+ ]
+}

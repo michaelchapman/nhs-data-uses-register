@@ -1,0 +1,73 @@
+{
+ "base_reference": "DARS-NIC-777919-R7D2B",
+ "versions": [
+  {
+   "reference": "DARS-NIC-777919-R7D2B-v0.5",
+   "states": [
+    {
+     "activities": "UoL will transfer data to NHS England. The data will consist of identifying details (specifically: NHS Number, Name, date of birth and a unique person ID) for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from the HES APC, HES OP, HES CC, ECDS and Civil Registration of Death datasets to UoL. The Data will:\n• contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at UoL.\n\nUoL will extract a subset of the Data containing the variables relevant to the health economics analysis and securely transfer this to Leeds Institute of Data Analytics (LIDA) within the same organisation via the Leeds Analytics Secure Environment for Research (LASER) platform. LASER is a Trusted Research Platform built in the cloud using Microsoft Azure.\n\nUoL will store the Data on the Cloud provided by Microsoft Azure.\n\nThe Data will be accessed by authorised personnel via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n- Access controls granting users the minimum level of access required are in place;\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n- Multifactor authentication (MFA) is required for remote access;\n-Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within England/Wales. The data will not leave England/Wales at any time.\n\nAccess is restricted to employees or agents of UoL who have authorisation from the Chief Investigator.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis.  All analyses will use the pseudonymised dataset.  There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\n\nMembers from the Academic Unit of Health Economics from UoL will process and analyse the Data for the purposes described above. The members will carry out costing of secondary health care resource use and run time to event analyses.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF LEEDS",
+      "UNIVERSITY OF SHEFFIELD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2027-05-15",
+     "expected_benefits": "The findings of the study will help us indentify the best strategy for the use of Anti-PD1 agent in patients with metastatic melanoma. This will allow for better decision making from clinical practitioners regarding the regimen selection of Anti-Pd1 agents in patients with melanoma, leading to more effective resource allocation for this patient group.",
+     "expected_output": "The expected outputs of the processing will be:\n• A final report of findings to NIHR is expected to be published in the NIHR Journal Library before the end of 2026.\n• Submission of manuscript to a peer reviewed journal for publication, presenting the methods and results of the cost-effectiveness analysis of the intervention studied in DANTE. The manuscript is expected to be published by the end of 2026. \n• Presentations at the National Health Economics Study Group meeting and International European \nconferences in Health Economics, over the years 2025 and 2026. \nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\nThe outputs will be communicated to relevant recipients through the following dissemination channels within 12 months after the study end, and beyond this timepoint with professional and guideline setting organisations (e.g. the National Institute for Health and Care Excellence [NICE]):\n1. Peer reviewed journal(s).\n2. Dissemination event for patients/ the public, key stakeholders, Trial Steering Committee and Data Monitoring \nCommittee and participating sites to include wider NHS implementation/adoption guidance.\n3. NICE collaborators working as NICE Guidelines Advisors in the clinical topic investigated by DANTE.\n4. Final dissemination event to report research finding to key stakeholders (e.g.-patients/national patient advocates, clinicians, NHS England-commissioners, platform providers participating practices/participants). \n5. Plain English summaries for dissemination to wider lay audiences working in collaboration with our PPIE Co-investigator.",
+     "objective": "The University of Leeds (UoL), University of Sheffield (UoS) and Sheffield Teaching Hospitals NHS Foundation Trust (STHNHSFT) require access to NHS England data for the purpose of the following research project:\nDANTE: (A randomised phase III trial to evaluate the Duration of ANti-PD1 monoclonal antibody Treatment in patients with metastatic mElanoma) study.\n\nThe following is a summary of the aims of the research programme provided by or on behalf of UoL, UoS and STHNHSFT:\n\nThe aim of the DANTE is to evaluate whether patients with advanced melanoma receiving first line anti-PD-1 therapy can achieve and maintain as good an outcome if the participants receive 12 months total treatment duration compared with standard treatment duration, i.e. until disease progression or unacceptable toxicity, or a minimum of 2 years (from the start of treatment) in the absence of disease progression or unacceptable toxicity. \n\nThe primary objective is to determine whether reduced duration therapy is non-inferior to standard treatment in terms of progression-free survival (PFS).\nThe secondary objectives are:\n\n• to evaluate the different strategies’ effect on patients’ quality of life (QoL) and determine whether reduced duration therapy achieves superior QoL outcomes.\n• to determine whether overall survival (OS) is non-inferior when using reduced duration therapy\n• to determine whether the proportion of patients who experience a response after randomisation, and the duration of response, are non-inferior when anti-PD-1 therapy is stopped at 12 months compared to current standard practice (continued until progression or unacceptable toxicity, or for a minimum of 2 years (from the start of treatment) in the absence of disease progression or unacceptable toxicity) \n• to compare safety and toxicity of the two treatment strategies\n• to evaluate the cost-effectiveness of the two strategies \nPatient outcomes will include progression-free survival, Quality of life, Overall survival, objective response rate, best tumour response rate and duration of response, drug-induced toxicity, cost-effectiveness, and healthcare costs.\nNHS England Data will be used in the study to address the secondary objectives relating to overall survival, progression free-survival and cost effectiveness.\n\nThe following NHS England Data will be accessed:\n• Hospital Episode Statistics (HES)\n   o Admitted Patient Care (APC)\n   o Critical Care (CC)\n   o Outpatients (OP)\n• Emergency Care Data Set (ECDS) \n• Civil Registration of Deaths\nThe datasets will be used for the estimation of secondary care resource use costs and for time to event purposes (Events are going to be either conditions that might require hospitalisation and are related to melanoma, or death).\n\nThe Data requested will be on the episode level. \n• Identifiable –  necessary for the purpose of data linkage and quality assurance of that linkage.\n\nThe Data will be minimised as follows:\n• Limited to a study cohort of approximately 200 participants, which will be identified by UoL\nDate of enrolment will be supplied therefore data will be provided for each participant from the point at which they enrolled to latest available at the time of data delivery\n\nUoL, UoS and STHNHSFT are the controllers as the organisations responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.\n\nThe lawful basis for processing special category data under the UK GDPR is:\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThe funding is provided by NIHR Health Technology Assessment (HTA) Programme.  The funding is specifically for the study described.  \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nMicrosoft Limited is a processor acting under the instructions of the University of Leeds. Microsoft Limited’s role is limited to providing secure off-site backup services.  \n \nAQL limited host the University of Leeds colocation facility in a commercial datacentre on the other side of Leeds City centre. In all locations data is stored encrypted on disk. All equipment is University of Leeds owned and connects only to the University of Leeds network.\n\nThe DANTE trial was developed by the NCRI Skin Cancer Clinical Studies Group which had two active PPI members, who helped to develop the research question.  In addition, a questionnaire was sent to patients via the charities ‘Melanoma Focus’ and ‘Independent Cancer Patients’ Voice’, asking for views on the trial design and patient acceptance of randomisation to stopping treatment early. There was widespread patient support for the trial. We have had regular interaction with the CEO of Melanoma Focus who was involved in the design of the trial and the writing of the patient information sheets and has been a key member of the Trial Management Group which has met regularly throughout the trial. The group inputted greatly into the content of the transcript for a video for potential participants to support the written patient information sheets.",
+     "organisation": "UNIVERSITY OF LEEDS",
+     "organisation_type": "Academic",
+     "start_date": "2025-05-16",
+     "sublicensing": "No",
+     "title": "DANTE: A randomised phase III trial to evaluate the Duration of ANti-PD1 monoclonal antibody Treatment in patients with metastatic mElanoma",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.5"
+  }
+ ]
+}

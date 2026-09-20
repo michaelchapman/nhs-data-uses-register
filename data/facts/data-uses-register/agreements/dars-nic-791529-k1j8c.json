@@ -1,0 +1,47 @@
+{
+ "base_reference": "DARS-NIC-791529-K1J8C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-791529-K1J8C-v0.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA). \n \nNHS England will identify a cohort meeting the following criteria:  \n\nINCLUSION CRITERIA: \n• Aged 18 or over at time of invite \n• Clinician-diagnosed DUL-MSD in last 2 years \n• Resides in England \n \nEXCLUSION CRITERIA: \n• Systemic inflammatory conditions or inflammatory arthritis, including (but not limited to) gout, rheumatoid arthritis, psoriatic arthritis, systemic lupus erythematosus, or polymyalgia rheumatica. \n• Diagnosis of Diabetic polyneuropathy \n• Neurological conditions (e.g., stroke, multiple sclerosis) \n• Ulnar nerve entrapment or trigger finger \n• Any upper limb fracture in the last 12 months \n• Diagnosis of complex regional pain syndrome \n• Surgical intervention for any condition in either arm/shoulder in the previous six months \n• Prescription for oral steroids in the last 12 months \n• Cancer diagnosis within the last 3 years \n• Currently Pregnant, or given birth in the last 3 months\n\nNHS England will carry out the following processing:\n1. Individuals meeting the eligibility criteria will be extracted from the HES APC dataset. \n2. The HES APC dataset, in addition to the Medicines in Primary Care and Civil Registration Mortality datasets will be used to identify ineligible people who will be excluded from the cohort. \n3. The Demographics dataset will be used to obtain latest contact details for the cohort and also to identify further exclusions.\n\nNHS England will provide Data to DATAGRAPHIC LTD or the NHS Notify service. The Data will contain directly identifying data items including Name, Address and Postcode which are required for the purpose of contacting potential participants. \n\nWhere the NHE Notify Service is used the Data will be transferred to an NHS Notify Service contracted mailing provider. \n\nThe Data will be stored on servers at DATAGRAPHIC LTD or NHS Notify service contracted mailing provider. \n\nThe Data will be accessed onsite at the premises of DATAGRAPHIC LTD or NHS Notify service contracted mailing provider. \n\nThe Data will not be linked with any other data. \n\nNHS England will provide an aggregate data quality report containing information about gender, age and geographic demographics of the mailing to University of Leeds for the purposes of confirming that inclusion and exclusion criteria have been met for each mailing. This report will contain the total number of people who received the letter, and the number of people removed from the cohort prior to mailing based on trial-specific opt out, national data opt out, and special categories of people for whom the data should not be disseminated. \n \nUniversity of Leeds will not be given access to any individual’s data unless they are contacted directly by the individual following the mailout. \n \nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality. \n \nThe approved third-party supplier will destroy all data files received from NHS England 2 weeks post mail-out, as instructed by NHS England. \n \nEach time NHS England create and disseminate an extract, the records will be added to a mailing list cohort dataset. Should a fresh extract be produced, it will be checked to ensure that any records appearing in this mailing list dataset are removed in order to prevent potential participants receiving multiple invitations. This mailing list dataset will be maintained for six months after the invitation process is complete in case this is required for analysis purposes by University of Leeds. Only aggregated data would be used for such analysis.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF LEEDS"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Customer - Data Quality Report - Aggregate (Recruitment)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Mailing - Cohort - Non-aggregate (Comms & Recruitment)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2027-11-27",
+     "expected_benefits": "Any benefits to health and/or social care would be achieved by the clinical trial which is enabled by the use of the NHS DigiTrials Recruitment Service. \n\nThe NHS DigiTrials Recruitment Service aims to optimise recruitment utilising large message quantities to recruit in a timely, effective and efficient manner. It is hoped that this will enable the trial to be accessible to a much wider pool of participants than could be achieved via conventional recruitment methods and efficiently target potential participants for recruitment leading to higher conversation rates and faster trial enrolment.",
+     "expected_output": "The expected output of this Recruitment Service will be the achievement of the recruitment target. \n  \nIndividuals who wish to participate following receipt of the invitation letter will directly contact the University of Leeds to register their interest. \n\nNHS England will provide University of Leeds with a Data Quality Report to confirm that  eligibility are met for each mailing.  \n\nThe aims of the NHS DigiTrials Recruitment Service are to efficiently target potential participants for recruitment leading to higher conversation rates and faster trial enrolment.",
+     "objective": "The Data will be used for the purpose of aiding recruitment for a clinical trial: Digital- My Arm Pain Programme (D-MAPP).  \n\nThis D-MAPP clinical trial aims to determine whether it is possible to develop a robust evidence-based digitally delivered self-management rehabilitation programme (or self-management care package) to address deficiencies in treatment and healthcare support for people with DUL-MSDs in order to optimise recovery, improve long-term function and reduce pain.",
+     "organisation": "UNIVERSITY OF LEEDS",
+     "organisation_type": "Academic",
+     "start_date": "2025-11-28",
+     "sublicensing": "No",
+     "title": "Digital- My Arm Pain Programme (D-MAPP) - DigiTrials Recruitment Service",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.2"
+  }
+ ]
+}

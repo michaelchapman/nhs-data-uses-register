@@ -1,0 +1,729 @@
+{
+ "base_reference": "DARS-NIC-147978-LZDFC",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147978-LZDFC-v0.0",
+   "states": [
+    {
+     "activities": "",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "",
+       "frequency": "One-Off",
+       "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+       "name": "MRIS - Personal Demographics Service",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "MRIS - Scottish NHS / Registration",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2027-12-31",
+     "expected_benefits": "",
+     "expected_output": "",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. \n\nThis study is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are Fibrinogen, Pulse Wave Velocity, and Quadriceps Maximum Voluntary Contraction which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. We want to explore these inter-relationships and determine if and how fibrinogen and other parameters; Carotid IMT, spirometry, a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThis may help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future, and in developing new treatments.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2012-02-22",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.0"
+  },
+  {
+   "reference": "DARS-NIC-147978-LZDFC-v5.4",
+   "states": [
+    {
+     "activities": "Linking Hospital Episode Statistics (HES) and Office of National Statistics (ONS) to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e. forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (ONS data), plus latest identifiers. HES Data returned back to ERICA study data controller, with ONS data returned to separate contact within  the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The ONS data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and ONS data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/ONS data will be published according to the agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "University of Cambridge"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-05-24",
+     "expected_benefits": "A majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. The systematic review and meta-analysis, and assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and ONS data will help the applicant to understand if and to what extent existing and novel biomarkers and questionnaire data can predict the longer-term outcomes (i.e. COPD exacerbation, hospitalisation, death) in COPD patients.\n\nWhen HES data are obtained the reliability of self-reported clinical outcomes measured through questionnaires will be compared with clinical outcomes recorded in electronic health records HES. Findings will help determine how reliable self-reported clinical outcomes measured are and may provide recommendations for future assessment of clinical outcomes in such a population.\n\nThe current number of deaths in the cohort has prevented the applicant for making any meaningful analysis using the ONS data. Causes of death in COPD are thought to frequently be related to respiratory disease with simultaneously a large portion attributed to cardiovascular disease. In the ERICA cohort, however, only a small proportion had a cardiac cause of death. It might be that globally the cause of death within COPD has changed over several decades with increased numbers of cardiac causes of deaths but data from the ERICA study does not indicate as many cardiac deaths and this trend might at least exclude the UK and warrants further exploration.\n\nFindings will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes.",
+     "expected_output": "Though the reports from PDS have been collected since 2012, the few number of events has prevented the applicant from making any meaningful analysis using the ONS data, apart from being used to run preliminary survival analysis. Syntax with statistical code is written allowing to quickly re-run the survival analysis once the ONS update is provided.\n\nProposal findings will be published and disseminated beyond the proposal team. The study is expected to result in a PhD. During the PhD multiple publications are expected to result from this project including:\n• A systematic literature review & meta-analysis of selected cardiovascular disease and musculoskeletal biomarkers in COPD. Expected target date manuscript journal submission is May 2017.\n• A paper on longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients. Expected target date manuscript journal submission is August 2018.\n• A paper assessing the reliability of self-reported hospital admission data compared to electronic health records hospital episode data. Expected target date manuscript journal submission is November 2018.\n• A risk model predicting future events of hospital admissions in COPD. Expected target date manuscript journal submission is December 2018.\n• The analysis of all the study objectives are expected to be completed at the end of the PhD. Expected target date is May 2019. \n\nIt is aimed to submit research findings to leading clinical open-access journals such as The Lancet Respiratory Medicine, Thorax, and the European Respiratory Journal. Readers of these journals include clinicians, decision-makers and academic scientists.\n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care.\n\nIn addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised.\n\nThe ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers − a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study − a multi-center observational, non-interventional, epidemiological cohort study − is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key regulator of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction, which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. The applicant wants to explore these inter-relationships and determine if and how fibrinogen and other parameters; carotid intima-media thickness test (a measure to diagnose the extent of carotid atherosclerotic vascular disease), spirometry (a test used in the diagnoses of lung disease), a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThe study objectives are to:\n(i)\tCompare the reliability of the linked electronic health records hospital episode (HES) data with that of self-reported hospital admission data collected via the ERICA study questionnaire for the incidence (frequency) of COPD exacerbations (worsening of disease) requiring hospital admission, and hospitalisations for selected cardiovascular disease.\n(ii)\tConduct a literature review summarising existing knowledge about the relationship between selected cardiovascular and musculoskeletal phenotypes (set of observable characteristics of an individual) and outcomes in COPD related to both COPD exacerbations, cardiovascular events and mortality and determine predictors of future events of hospital admissions.\n(iii)\tDetermine new biomarkers and evaluate the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of (a) hospital admissions for COPD (b) hospital admissions for selected cardiovascular diagnoses, (c) hospital-admissions related to frailty, falls and fracture, and (d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives linkage data within The ERICA study − a dataset containing numerous biomarkers and socio-demographic data – with mortality data from the Office of National Statistics (ONS) and Hospital Episode Statistics (HES) from NHS Digital is required. \n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031\n\nThe ERICA study is already receiving death registration data (from the Patient Demographic System ) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing agreement with NHS Digital.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2018-05-25",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Delays in accessing the data have been experienced, which has meant analysis has also been delayed. The findings from this analysis will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes."
+    },
+    {
+     "activities": "Linking Hospital Episode Statistics (HES) and Office of National Statistics (ONS) to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e. forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (ONS data), plus latest identifiers. HES Data returned back to ERICA study data controller, with ONS data returned to separate contact within  the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The ONS data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and ONS data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/ONS data will be published according to the agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-05-24",
+     "expected_benefits": "A majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. The systematic review and meta-analysis, and assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and ONS data will help the applicant to understand if and to what extent existing and novel biomarkers and questionnaire data can predict the longer-term outcomes (i.e. COPD exacerbation, hospitalisation, death) in COPD patients.\n\nWhen HES data are obtained the reliability of self-reported clinical outcomes measured through questionnaires will be compared with clinical outcomes recorded in electronic health records HES. Findings will help determine how reliable self-reported clinical outcomes measured are and may provide recommendations for future assessment of clinical outcomes in such a population.\n\nThe current number of deaths in the cohort has prevented the applicant for making any meaningful analysis using the ONS data. Causes of death in COPD are thought to frequently be related to respiratory disease with simultaneously a large portion attributed to cardiovascular disease. In the ERICA cohort, however, only a small proportion had a cardiac cause of death. It might be that globally the cause of death within COPD has changed over several decades with increased numbers of cardiac causes of deaths but data from the ERICA study does not indicate as many cardiac deaths and this trend might at least exclude the UK and warrants further exploration.\n\nFindings will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes.",
+     "expected_output": "Though the reports from PDS have been collected since 2012, the few number of events has prevented the applicant from making any meaningful analysis using the ONS data, apart from being used to run preliminary survival analysis. Syntax with statistical code is written allowing to quickly re-run the survival analysis once the ONS update is provided.\n\nProposal findings will be published and disseminated beyond the proposal team. The study is expected to result in a PhD. During the PhD multiple publications are expected to result from this project including:\n• A systematic literature review & meta-analysis of selected cardiovascular disease and musculoskeletal biomarkers in COPD. Expected target date manuscript journal submission is May 2017.\n• A paper on longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients. Expected target date manuscript journal submission is August 2018.\n• A paper assessing the reliability of self-reported hospital admission data compared to electronic health records hospital episode data. Expected target date manuscript journal submission is November 2018.\n• A risk model predicting future events of hospital admissions in COPD. Expected target date manuscript journal submission is December 2018.\n• The analysis of all the study objectives are expected to be completed at the end of the PhD. Expected target date is May 2019. \n\nIt is aimed to submit research findings to leading clinical open-access journals such as The Lancet Respiratory Medicine, Thorax, and the European Respiratory Journal. Readers of these journals include clinicians, decision-makers and academic scientists.\n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care.\n\nIn addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised.\n\nThe ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers − a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study − a multi-center observational, non-interventional, epidemiological cohort study − is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key regulator of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction, which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. The applicant wants to explore these inter-relationships and determine if and how fibrinogen and other parameters; carotid intima-media thickness test (a measure to diagnose the extent of carotid atherosclerotic vascular disease), spirometry (a test used in the diagnoses of lung disease), a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThe study objectives are to:\n(i)\tCompare the reliability of the linked electronic health records hospital episode (HES) data with that of self-reported hospital admission data collected via the ERICA study questionnaire for the incidence (frequency) of COPD exacerbations (worsening of disease) requiring hospital admission, and hospitalisations for selected cardiovascular disease.\n(ii)\tConduct a literature review summarising existing knowledge about the relationship between selected cardiovascular and musculoskeletal phenotypes (set of observable characteristics of an individual) and outcomes in COPD related to both COPD exacerbations, cardiovascular events and mortality and determine predictors of future events of hospital admissions.\n(iii)\tDetermine new biomarkers and evaluate the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of (a) hospital admissions for COPD (b) hospital admissions for selected cardiovascular diagnoses, (c) hospital-admissions related to frailty, falls and fracture, and (d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives linkage data within The ERICA study − a dataset containing numerous biomarkers and socio-demographic data – with mortality data from the Office of National Statistics (ONS) and Hospital Episode Statistics (HES) from NHS Digital is required. \n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031\n\nThe ERICA study is already receiving death registration data (from the Patient Demographic System ) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing agreement with NHS Digital.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2018-05-25",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Delays in accessing the data have been experienced, which has meant analysis has also been delayed. The findings from this analysis will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes."
+    },
+    {
+     "activities": "Linking Hospital Episode Statistics (HES) and Office of National Statistics (ONS) to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e. forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (ONS data), plus latest identifiers. HES Data returned back to ERICA study data controller, with ONS data returned to separate contact within  the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The ONS data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and ONS data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/ONS data will be published according to the agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-05-24",
+     "expected_benefits": "A majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. The systematic review and meta-analysis, and assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and ONS data will help the applicant to understand if and to what extent existing and novel biomarkers and questionnaire data can predict the longer-term outcomes (i.e. COPD exacerbation, hospitalisation, death) in COPD patients.\n\nWhen HES data are obtained the reliability of self-reported clinical outcomes measured through questionnaires will be compared with clinical outcomes recorded in electronic health records HES. Findings will help determine how reliable self-reported clinical outcomes measured are and may provide recommendations for future assessment of clinical outcomes in such a population.\n\nThe current number of deaths in the cohort has prevented the applicant for making any meaningful analysis using the ONS data. Causes of death in COPD are thought to frequently be related to respiratory disease with simultaneously a large portion attributed to cardiovascular disease. In the ERICA cohort, however, only a small proportion had a cardiac cause of death. It might be that globally the cause of death within COPD has changed over several decades with increased numbers of cardiac causes of deaths but data from the ERICA study does not indicate as many cardiac deaths and this trend might at least exclude the UK and warrants further exploration.\n\nFindings will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes.",
+     "expected_output": "Though the reports from PDS have been collected since 2012, the few number of events has prevented the applicant from making any meaningful analysis using the ONS data, apart from being used to run preliminary survival analysis. Syntax with statistical code is written allowing to quickly re-run the survival analysis once the ONS update is provided.\n\nProposal findings will be published and disseminated beyond the proposal team. The study is expected to result in a PhD. During the PhD multiple publications are expected to result from this project including:\n• A systematic literature review & meta-analysis of selected cardiovascular disease and musculoskeletal biomarkers in COPD. Expected target date manuscript journal submission is May 2017.\n• A paper on longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients. Expected target date manuscript journal submission is August 2018.\n• A paper assessing the reliability of self-reported hospital admission data compared to electronic health records hospital episode data. Expected target date manuscript journal submission is November 2018.\n• A risk model predicting future events of hospital admissions in COPD. Expected target date manuscript journal submission is December 2018.\n• The analysis of all the study objectives are expected to be completed at the end of the PhD. Expected target date is May 2019. \n\nIt is aimed to submit research findings to leading clinical open-access journals such as The Lancet Respiratory Medicine, Thorax, and the European Respiratory Journal. Readers of these journals include clinicians, decision-makers and academic scientists.\n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care.\n\nIn addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised.\n\nThe ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers − a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study − a multi-center observational, non-interventional, epidemiological cohort study − is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key regulator of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction, which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. The applicant wants to explore these inter-relationships and determine if and how fibrinogen and other parameters; carotid intima-media thickness test (a measure to diagnose the extent of carotid atherosclerotic vascular disease), spirometry (a test used in the diagnoses of lung disease), a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThe study objectives are to:\n(i)\tCompare the reliability of the linked electronic health records hospital episode (HES) data with that of self-reported hospital admission data collected via the ERICA study questionnaire for the incidence (frequency) of COPD exacerbations (worsening of disease) requiring hospital admission, and hospitalisations for selected cardiovascular disease.\n(ii)\tConduct a literature review summarising existing knowledge about the relationship between selected cardiovascular and musculoskeletal phenotypes (set of observable characteristics of an individual) and outcomes in COPD related to both COPD exacerbations, cardiovascular events and mortality and determine predictors of future events of hospital admissions.\n(iii)\tDetermine new biomarkers and evaluate the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of (a) hospital admissions for COPD (b) hospital admissions for selected cardiovascular diagnoses, (c) hospital-admissions related to frailty, falls and fracture, and (d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives linkage data within The ERICA study − a dataset containing numerous biomarkers and socio-demographic data – with mortality data from the Office of National Statistics (ONS) and Hospital Episode Statistics (HES) from NHS Digital is required. \n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031\n\nThe ERICA study is already receiving death registration data (from the Patient Demographic System ) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing agreement with NHS Digital.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2018-05-25",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Delays in accessing the data have been experienced, which has meant analysis has also been delayed. The findings from this analysis will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes."
+    }
+   ],
+   "version": "5.4"
+  },
+  {
+   "reference": "DARS-NIC-147978-LZDFC-v6.2",
+   "states": [
+    {
+     "activities": "Linking Hospital Episode Statistics (HES) and Office of National Statistics (ONS) to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e. forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (ONS data), plus latest identifiers. HES Data returned back to ERICA study data controller, with ONS data returned to separate contact within  the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The ONS data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and ONS data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/ONS data will be published according to the agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "University of Cambridge"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registration - Deaths",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-05-24",
+     "expected_benefits": "A majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. The systematic review and meta-analysis, and assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and ONS data will help the applicant to understand if and to what extent existing and novel biomarkers and questionnaire data can predict the longer-term outcomes (i.e. COPD exacerbation, hospitalisation, death) in COPD patients.\n\nWhen HES data are obtained the reliability of self-reported clinical outcomes measured through questionnaires will be compared with clinical outcomes recorded in electronic health records HES. Findings will help determine how reliable self-reported clinical outcomes measured are and may provide recommendations for future assessment of clinical outcomes in such a population.\n\nThe current number of deaths in the cohort has prevented the applicant for making any meaningful analysis using the ONS data. Causes of death in COPD are thought to frequently be related to respiratory disease with simultaneously a large portion attributed to cardiovascular disease. In the ERICA cohort, however, only a small proportion had a cardiac cause of death. It might be that globally the cause of death within COPD has changed over several decades with increased numbers of cardiac causes of deaths but data from the ERICA study does not indicate as many cardiac deaths and this trend might at least exclude the UK and warrants further exploration.\n\nFindings will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes.",
+     "expected_output": "Though the reports from PDS have been collected since 2012, the few number of events has prevented the applicant from making any meaningful analysis using the ONS data, apart from being used to run preliminary survival analysis. Syntax with statistical code is written allowing to quickly re-run the survival analysis once the ONS update is provided.\n\nProposal findings will be published and disseminated beyond the proposal team. The study is expected to result in a PhD. During the PhD multiple publications are expected to result from this project including:\n• A systematic literature review & meta-analysis of selected cardiovascular disease and musculoskeletal biomarkers in COPD. Expected target date manuscript journal submission is May 2017.\n• A paper on longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients. Expected target date manuscript journal submission is August 2018.\n• A paper assessing the reliability of self-reported hospital admission data compared to electronic health records hospital episode data. Expected target date manuscript journal submission is November 2018.\n• A risk model predicting future events of hospital admissions in COPD. Expected target date manuscript journal submission is December 2018.\n• The analysis of all the study objectives are expected to be completed at the end of the PhD. Expected target date is May 2019. \n\nIt is aimed to submit research findings to leading clinical open-access journals such as The Lancet Respiratory Medicine, Thorax, and the European Respiratory Journal. Readers of these journals include clinicians, decision-makers and academic scientists.\n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care.\n\nIn addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised.\n\nThe ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers − a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study − a multi-center observational, non-interventional, epidemiological cohort study − is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key regulator of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction, which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. The applicant wants to explore these inter-relationships and determine if and how fibrinogen and other parameters; carotid intima-media thickness test (a measure to diagnose the extent of carotid atherosclerotic vascular disease), spirometry (a test used in the diagnoses of lung disease), a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThe study objectives are to:\n(i)\tCompare the reliability of the linked electronic health records hospital episode (HES) data with that of self-reported hospital admission data collected via the ERICA study questionnaire for the incidence (frequency) of COPD exacerbations (worsening of disease) requiring hospital admission, and hospitalisations for selected cardiovascular disease.\n(ii)\tConduct a literature review summarising existing knowledge about the relationship between selected cardiovascular and musculoskeletal phenotypes (set of observable characteristics of an individual) and outcomes in COPD related to both COPD exacerbations, cardiovascular events and mortality and determine predictors of future events of hospital admissions.\n(iii)\tDetermine new biomarkers and evaluate the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of (a) hospital admissions for COPD (b) hospital admissions for selected cardiovascular diagnoses, (c) hospital-admissions related to frailty, falls and fracture, and (d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives linkage data within The ERICA study − a dataset containing numerous biomarkers and socio-demographic data – with mortality data from the Office of National Statistics (ONS) and Hospital Episode Statistics (HES) from NHS Digital is required. \n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031\n\nThe ERICA study is already receiving death registration data (from the Patient Demographic System ) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing agreement with NHS Digital.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2020-06-02",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Delays in accessing the data have been experienced, which has meant analysis has also been delayed. The findings from this analysis will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes."
+    },
+    {
+     "activities": "Linking Hospital Episode Statistics (HES) and Office of National Statistics (ONS) to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e. forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (ONS data), plus latest identifiers. HES Data returned back to ERICA study data controller, with ONS data returned to separate contact within  the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The ONS data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and ONS data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/ONS data will be published according to the agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registration - Deaths",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-05-24",
+     "expected_benefits": "A majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. The systematic review and meta-analysis, and assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and ONS data will help the applicant to understand if and to what extent existing and novel biomarkers and questionnaire data can predict the longer-term outcomes (i.e. COPD exacerbation, hospitalisation, death) in COPD patients.\n\nWhen HES data are obtained the reliability of self-reported clinical outcomes measured through questionnaires will be compared with clinical outcomes recorded in electronic health records HES. Findings will help determine how reliable self-reported clinical outcomes measured are and may provide recommendations for future assessment of clinical outcomes in such a population.\n\nThe current number of deaths in the cohort has prevented the applicant for making any meaningful analysis using the ONS data. Causes of death in COPD are thought to frequently be related to respiratory disease with simultaneously a large portion attributed to cardiovascular disease. In the ERICA cohort, however, only a small proportion had a cardiac cause of death. It might be that globally the cause of death within COPD has changed over several decades with increased numbers of cardiac causes of deaths but data from the ERICA study does not indicate as many cardiac deaths and this trend might at least exclude the UK and warrants further exploration.\n\nFindings will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes.",
+     "expected_output": "Though the reports from PDS have been collected since 2012, the few number of events has prevented the applicant from making any meaningful analysis using the ONS data, apart from being used to run preliminary survival analysis. Syntax with statistical code is written allowing to quickly re-run the survival analysis once the ONS update is provided.\n\nProposal findings will be published and disseminated beyond the proposal team. The study is expected to result in a PhD. During the PhD multiple publications are expected to result from this project including:\n• A systematic literature review & meta-analysis of selected cardiovascular disease and musculoskeletal biomarkers in COPD. Expected target date manuscript journal submission is May 2017.\n• A paper on longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients. Expected target date manuscript journal submission is August 2018.\n• A paper assessing the reliability of self-reported hospital admission data compared to electronic health records hospital episode data. Expected target date manuscript journal submission is November 2018.\n• A risk model predicting future events of hospital admissions in COPD. Expected target date manuscript journal submission is December 2018.\n• The analysis of all the study objectives are expected to be completed at the end of the PhD. Expected target date is May 2019. \n\nIt is aimed to submit research findings to leading clinical open-access journals such as The Lancet Respiratory Medicine, Thorax, and the European Respiratory Journal. Readers of these journals include clinicians, decision-makers and academic scientists.\n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care.\n\nIn addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised.\n\nThe ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers − a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study − a multi-center observational, non-interventional, epidemiological cohort study − is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key regulator of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction, which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. The applicant wants to explore these inter-relationships and determine if and how fibrinogen and other parameters; carotid intima-media thickness test (a measure to diagnose the extent of carotid atherosclerotic vascular disease), spirometry (a test used in the diagnoses of lung disease), a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThe study objectives are to:\n(i)\tCompare the reliability of the linked electronic health records hospital episode (HES) data with that of self-reported hospital admission data collected via the ERICA study questionnaire for the incidence (frequency) of COPD exacerbations (worsening of disease) requiring hospital admission, and hospitalisations for selected cardiovascular disease.\n(ii)\tConduct a literature review summarising existing knowledge about the relationship between selected cardiovascular and musculoskeletal phenotypes (set of observable characteristics of an individual) and outcomes in COPD related to both COPD exacerbations, cardiovascular events and mortality and determine predictors of future events of hospital admissions.\n(iii)\tDetermine new biomarkers and evaluate the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of (a) hospital admissions for COPD (b) hospital admissions for selected cardiovascular diagnoses, (c) hospital-admissions related to frailty, falls and fracture, and (d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives linkage data within The ERICA study − a dataset containing numerous biomarkers and socio-demographic data – with mortality data from the Office of National Statistics (ONS) and Hospital Episode Statistics (HES) from NHS Digital is required. \n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031\n\nThe ERICA study is already receiving death registration data (from the Patient Demographic System ) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing agreement with NHS Digital.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2020-06-02",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Delays in accessing the data have been experienced, which has meant analysis has also been delayed. The findings from this analysis will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes."
+    },
+    {
+     "activities": "Linking Hospital Episode Statistics (HES) and Office of National Statistics (ONS) to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e. forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (ONS data), plus latest identifiers. HES Data returned back to ERICA study data controller, with ONS data returned to separate contact within  the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The ONS data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and ONS data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/ONS data will be published according to the agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-05-24",
+     "expected_benefits": "A majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. The systematic review and meta-analysis, and assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and ONS data will help the applicant to understand if and to what extent existing and novel biomarkers and questionnaire data can predict the longer-term outcomes (i.e. COPD exacerbation, hospitalisation, death) in COPD patients.\n\nWhen HES data are obtained the reliability of self-reported clinical outcomes measured through questionnaires will be compared with clinical outcomes recorded in electronic health records HES. Findings will help determine how reliable self-reported clinical outcomes measured are and may provide recommendations for future assessment of clinical outcomes in such a population.\n\nThe current number of deaths in the cohort has prevented the applicant for making any meaningful analysis using the ONS data. Causes of death in COPD are thought to frequently be related to respiratory disease with simultaneously a large portion attributed to cardiovascular disease. In the ERICA cohort, however, only a small proportion had a cardiac cause of death. It might be that globally the cause of death within COPD has changed over several decades with increased numbers of cardiac causes of deaths but data from the ERICA study does not indicate as many cardiac deaths and this trend might at least exclude the UK and warrants further exploration.\n\nFindings will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes.",
+     "expected_output": "Though the reports from PDS have been collected since 2012, the few number of events has prevented the applicant from making any meaningful analysis using the ONS data, apart from being used to run preliminary survival analysis. Syntax with statistical code is written allowing to quickly re-run the survival analysis once the ONS update is provided.\n\nProposal findings will be published and disseminated beyond the proposal team. The study is expected to result in a PhD. During the PhD multiple publications are expected to result from this project including:\n• A systematic literature review & meta-analysis of selected cardiovascular disease and musculoskeletal biomarkers in COPD. Expected target date manuscript journal submission is May 2017.\n• A paper on longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients. Expected target date manuscript journal submission is August 2018.\n• A paper assessing the reliability of self-reported hospital admission data compared to electronic health records hospital episode data. Expected target date manuscript journal submission is November 2018.\n• A risk model predicting future events of hospital admissions in COPD. Expected target date manuscript journal submission is December 2018.\n• The analysis of all the study objectives are expected to be completed at the end of the PhD. Expected target date is May 2019. \n\nIt is aimed to submit research findings to leading clinical open-access journals such as The Lancet Respiratory Medicine, Thorax, and the European Respiratory Journal. Readers of these journals include clinicians, decision-makers and academic scientists.\n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care.\n\nIn addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised.\n\nThe ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers − a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study − a multi-center observational, non-interventional, epidemiological cohort study − is interested in identifying/developing new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key regulator of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction, which have a known relationship with inflammation and may cause muscle or cardiovascular problems in COPD patients. The applicant wants to explore these inter-relationships and determine if and how fibrinogen and other parameters; carotid intima-media thickness test (a measure to diagnose the extent of carotid atherosclerotic vascular disease), spirometry (a test used in the diagnoses of lung disease), a range of plasma and urine biomarkers, and questionnaire data can predict the longer-term outcomes in COPD patients. \n\nThe study objectives are to:\n(i)\tCompare the reliability of the linked electronic health records hospital episode (HES) data with that of self-reported hospital admission data collected via the ERICA study questionnaire for the incidence (frequency) of COPD exacerbations (worsening of disease) requiring hospital admission, and hospitalisations for selected cardiovascular disease.\n(ii)\tConduct a literature review summarising existing knowledge about the relationship between selected cardiovascular and musculoskeletal phenotypes (set of observable characteristics of an individual) and outcomes in COPD related to both COPD exacerbations, cardiovascular events and mortality and determine predictors of future events of hospital admissions.\n(iii)\tDetermine new biomarkers and evaluate the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of (a) hospital admissions for COPD (b) hospital admissions for selected cardiovascular diagnoses, (c) hospital-admissions related to frailty, falls and fracture, and (d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives linkage data within The ERICA study − a dataset containing numerous biomarkers and socio-demographic data – with mortality data from the Office of National Statistics (ONS) and Hospital Episode Statistics (HES) from NHS Digital is required. \n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031\n\nThe ERICA study is already receiving death registration data (from the Patient Demographic System ) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing agreement with NHS Digital.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2020-06-02",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": "Delays in accessing the data have been experienced, which has meant analysis has also been delayed. The findings from this analysis will help identify test(s) that can easily be measured in clinical practice to capture manifestations and that support early stage detection. Currently no individual biomarker is able to reliably identify or predict clinical adverse outcomes. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. Results are expected to help doctors determine which type of treatment is best for newly diagnosed COPD patients in the future and outcomes are expected to facilitate the development of new therapies with improved health outcomes."
+    }
+   ],
+   "version": "6.2"
+  },
+  {
+   "reference": "DARS-NIC-147978-LZDFC-v7.7",
+   "states": [
+    {
+     "activities": "All organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nLinking Hospital Episode Statistics (HES) and mortality data to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e., forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (mortality data), plus latest identifiers. HES Data returned back to ERICA study data controller, with mortality data returned to separate contact within the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The mortality data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and mortality data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/mortality data will be published according to the agreement.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registration - Deaths",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-12-05",
+     "expected_benefits": "The majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. Assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and Civil Registration data will help. \n\nCurrently no individual biomarker can reliably identify or predict clinical adverse outcomes in people with COPD. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. There is significant unmet need to understand the heterogeneity of COPD phenotypes and biomarkers that can help identify these phenotypes, which in turn will help progress more personalised medicines for traits associated with COPD Ongoing results from this study will help with this and having data for an extended period of follow up will enable a perspective analysis which is lacking from the literature. It is hoped the ongoing work with novel biomarkers analyses will help provide the basis for consideration of novel therapies for COPD.  \n\nIMPACT ON PEOPLE LIVING WITH COPD AND COPD CARE:\nCOPD is a very heterogenous condition and COPD phenotypes and biomarkers that can help identify these phenotypes, which in turn will help progress more personalised medicines for traits associated with COPD are urgently needed. Ongoing results from this study will help with this and having data for an extended period of follow up will enable a perspective analysis which is lacking from the literature.  Given COPD admissions are the 2nd leading cause of hospital admissions in the UK and COPD is a leading cause of death and COPD patients have significant comorbidities, better understanding phenotypes of patients and whether simply assessments can help identify at risk patients for outcomes is needed.",
+     "expected_output": "Outputs thus far from ERICA cohort have included multiple abstracts, oral and poster presentations at international and national conferences. Various manuscript publications have also been produced using the data held under this Agreement.\n\nNIHR Evidence Alert. Available here -  https://evidence.nihr.ac.uk/alert/a-simple-test-may-predict-the-risk-of-hospitalisation-for-flare-up-in-patients-with-copd-a-common-lung-disease/\n\nFurther expected outputs- measurement of testosterone as a biomarker in association with cardiovascular and musculoskeletal phenotypes and outcomes  of cause-specific hospitalisation and mortality. \n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care. In addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised. The ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.\n\nFrom the ERICA dataset combined with HES and Civil Registration data so far, the study team have already identified the benefits of simple easy to use tools to assess functional capacity to predict COPD hospitalisations, mortality and cardiovascular risk (i.e., simple sit to stand test which can be done anywhere and does not require specialist equipment) is strongly predictive of hospitalised exacerbations). The simple short physical performance battery test (SPPB) was shown to predict mortality in terms of predicting which COPD patients are admitted to hospital with cardiovascular disease or die from cardiovascular disease. Again, functional tests (i.e., 4 minute gait speed-easy to do anywhere, or 6 minute walk test) are the most useful to predict these outcomes in COPD patients.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers; a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study is a multi-center observational, non-interventional, epidemiological cohort study and was established to identify/develop new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key biomarker of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction. To have an extended period of outcome follow up for the ERICA cohort is extremely helpful to understand the importance of extrapulmonary manifestations associated with COPD and given that many COPD cohorts have follow up for <10 years, will be a uniquely rich dataset.\n\nCambridge University Hospitals NHS Foundation Trust and University of Cambridge are joint Data Controllers under this Agreement. No other organisation has any role in determining the purpose for which the data disseminated under this Agreement is processed. Cambridge University Hospitals NHS Foundation Trust are the sole Data Processers; no other organisations have access to, or process, the data held under this Agreement.\n\nUse of the clinical outcome data related to the ERICA cohort has so far shown that a simple functional assessment tool (the short physical performance battery) which can be done in low resource clinical settings predicts hospitalisation due to COPD exacerbations. (Fermont JM, Bolton CE, Fisk M, et al. Risk assessment for hospital admission in patients with COPD; a multi-centre UK prospective observational study. PLoS One. 2020 Feb 10;15(2):e0228940.) \n\nMoreover, using this data has also shown it predicts mortality (Fermont JM, Mohan D, Fisk M et al; ERICA consortium. Short physical performance battery as a practical tool to assess mortality risk in chronic obstructive pulmonary disease. Age Ageing. 2021 May 5;50(3):795-801. doi: 10.1093/ageing/afaa138) and functional capacity assessment by the six minute walk test is the strongest predictor of cardiovascular risk (Fermont JM, Fisk M, Bolton CE et al; ERICA consortium. Cardiovascular risk prediction using physical performance measures in COPD: results from a multicentre observational study. BMJ Open. 2020 Dec 28;10(12):e038360.) However, low event rates during follow up thus far has been a limitation.\n\nThe ERICA cohort is a unique COPD cohort having detailed cardiovascular and muscle measurements as well as markers of inflammation. Having a long period of follow up to analyse data in relation to outcomes is extremely important. Upcoming projects planned still in relation to this cohort include:\nDetermining new biomarkers and evaluating the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of \n(a) hospital admissions for COPD \n(b) hospital admissions for selected cardiovascular diagnoses, \n(c) hospital-admissions related to frailty, falls and fracture, and \n(d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives, linkage data within The ERICA study; a dataset containing numerous biomarkers and socio-demographic data with Demographics, Civil Registration (Deaths), Hospital Episode Statistics (HES) Accident and Emergency and HES APC data from NHS Digital is required. The ERICA study is already receiving death registration data (from the Patient Demographic System) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing Agreement with NHS Digital.\n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031. \n\nThe justification for processing is GDPR Article 6 (1) (e): The processing necessary to perform this task is in the public interest and the task has a clear basis in law. The results of this study will provide information about the risks of COPD associated with the ERICA study and these results could inform decisions about which treatment should be offered to patients in future. University of Cambridge are a public authority (university) carrying out a research project. GDPR Article 9 (2)(j): processing is necessary for scientific research purposes and shall be proportionate to the aim pursued, respect the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject. This is a scientific research project.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2021-12-06",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "All organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nLinking Hospital Episode Statistics (HES) and mortality data to the ERICA dataset enables answering the previously mentioned study objectives. \n\nData is stored and processed entirely within the NHS trust, and held on a secure NHS server. Only staff at the Trust will access and analyse the data, and no record level data will be shared with any third party. All outputs will be aggregated and anonymised in line with the HES analysis guide.\n\nThe data flow and processing activities of data received from NHS Digital are as follows:\n(i) Cambridge University Hospital: The ERICA study data controller sends NHS Digital the cohorts patient identifiable information (i.e., forename, surname, date of birth, postcode, NHS number, sex and study ID) for linkage to Hospital Episode Statistics (Admitted Patient Care), as well as matching to the Patient Demographic System (PDS) for cause of death, members and postings and cohort event notification reports.  Informed consent is the legal basis for sending data to the NHS Digital.\n\n(ii) NHS Digital: cohort identifiers used to link to the HES data, identifiers stripped with study ID remaining. PDS used to retrieve death details including date and causes of death (mortality data), plus latest identifiers. HES Data returned back to ERICA study data controller, with mortality data returned to separate contact within the Trust. \n\n(iii) Cambridge University Hospital: The ERICA study data controller receives the HES data, which will be handled and stored according to local NHS Trust security policies and procedures on the study database. The mortality data is received by a separate contact within the NHS Trust and will continue to be stored in the same separate database.\n\n(v) Cambridge University Hospital: The linked HES and mortality data will be accessed by a PhD candidate, for data analysis including the examination of associations, regression and survival analysis, and risk prediction. Study findings using HES/mortality data will be published according to the agreement.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "UNIVERSITY OF CAMBRIDGE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-12-05",
+     "expected_benefits": "The majority of studies assessing extra-pulmonary manifestations include only small sample sizes, are cross-sectional, have short follow-up periods, lack generalizability to a 'real world population' or are limited to inflammatory markers only failing to assess other cardiovascular and musculoskeletal biomarkers. Assessing the longitudinal outcomes of selected cardiovascular and musculoskeletal phenotypes in COPD patients using the ERICA cohort data combined with HES and Civil Registration data will help. \n\nCurrently no individual biomarker can reliably identify or predict clinical adverse outcomes in people with COPD. More so, in the past few decades no new classes of drugs have entered the market for COPD treatment. There is significant unmet need to understand the heterogeneity of COPD phenotypes and biomarkers that can help identify these phenotypes, which in turn will help progress more personalised medicines for traits associated with COPD Ongoing results from this study will help with this and having data for an extended period of follow up will enable a perspective analysis which is lacking from the literature. It is hoped the ongoing work with novel biomarkers analyses will help provide the basis for consideration of novel therapies for COPD.  \n\nIMPACT ON PEOPLE LIVING WITH COPD AND COPD CARE:\nCOPD is a very heterogenous condition and COPD phenotypes and biomarkers that can help identify these phenotypes, which in turn will help progress more personalised medicines for traits associated with COPD are urgently needed. Ongoing results from this study will help with this and having data for an extended period of follow up will enable a perspective analysis which is lacking from the literature.  Given COPD admissions are the 2nd leading cause of hospital admissions in the UK and COPD is a leading cause of death and COPD patients have significant comorbidities, better understanding phenotypes of patients and whether simply assessments can help identify at risk patients for outcomes is needed.",
+     "expected_output": "Outputs thus far from ERICA cohort have included multiple abstracts, oral and poster presentations at international and national conferences. Various manuscript publications have also been produced using the data held under this Agreement.\n\nNIHR Evidence Alert. Available here -  https://evidence.nihr.ac.uk/alert/a-simple-test-may-predict-the-risk-of-hospitalisation-for-flare-up-in-patients-with-copd-a-common-lung-disease/\n\nFurther expected outputs- measurement of testosterone as a biomarker in association with cardiovascular and musculoskeletal phenotypes and outcomes  of cause-specific hospitalisation and mortality. \n\nResearch findings will be submitted to major and internationally leading conferences such as the International Conference on Lung Health and Diseases, the British Thoracic Society, and the European Respiratory Society. These world-leading events on lung health bring together clinicians, academic scientists, decision-makers, industrial partners and other disciplines sharing research findings and advances in medical care promoting the improvement of lung disease and care. In addition to paper submissions to scientific journals, throughout the project the ERICA study website http://ericacopd.org will be used to disseminate research findings and study progression. When sharing research findings, results will be displayed as group results only, therefore individual data cannot be recognised. The ERICA consortium considers Patient and Public Involvement important and has worked with the British Lung Foundation https://www.blf.org.uk in the design of the project and to update patients and the public on its work.\n\nFrom the ERICA dataset combined with HES and Civil Registration data so far, the study team have already identified the benefits of simple easy to use tools to assess functional capacity to predict COPD hospitalisations, mortality and cardiovascular risk (i.e., simple sit to stand test which can be done anywhere and does not require specialist equipment) is strongly predictive of hospitalised exacerbations). The simple short physical performance battery test (SPPB) was shown to predict mortality in terms of predicting which COPD patients are admitted to hospital with cardiovascular disease or die from cardiovascular disease. Again, functional tests (i.e., 4 minute gait speed-easy to do anywhere, or 6 minute walk test) are the most useful to predict these outcomes in COPD patients.",
+     "objective": "Chronic Obstruction Pulmonary Disease (COPD) is the fourth leading cause of death globally and is predicted to increase in the coming decades. Capturing systemic (outside the lung) manifestations, which are often found in COPD patients, and assessing the predictive value of cardiovascular abnormalities, skeletal muscle weakness and plasma biomarkers; a characteristic by which a medical state can be observed from outside the patient − for hospital admission and mortality in COPD are recognised to be of increasing clinical importance.\n\nThe ERICA study is a multi-center observational, non-interventional, epidemiological cohort study and was established to identify/develop new biomarkers for COPD. The primary biomarkers of interest are fibrinogen (a key biomarker of inflammation), pulse wave velocity (a measure of arterial stiffness), and quadriceps maximum voluntary contraction. To have an extended period of outcome follow up for the ERICA cohort is extremely helpful to understand the importance of extrapulmonary manifestations associated with COPD and given that many COPD cohorts have follow up for <10 years, will be a uniquely rich dataset.\n\nCambridge University Hospitals NHS Foundation Trust and University of Cambridge are joint Data Controllers under this Agreement. No other organisation has any role in determining the purpose for which the data disseminated under this Agreement is processed. Cambridge University Hospitals NHS Foundation Trust are the sole Data Processers; no other organisations have access to, or process, the data held under this Agreement.\n\nUse of the clinical outcome data related to the ERICA cohort has so far shown that a simple functional assessment tool (the short physical performance battery) which can be done in low resource clinical settings predicts hospitalisation due to COPD exacerbations. (Fermont JM, Bolton CE, Fisk M, et al. Risk assessment for hospital admission in patients with COPD; a multi-centre UK prospective observational study. PLoS One. 2020 Feb 10;15(2):e0228940.) \n\nMoreover, using this data has also shown it predicts mortality (Fermont JM, Mohan D, Fisk M et al; ERICA consortium. Short physical performance battery as a practical tool to assess mortality risk in chronic obstructive pulmonary disease. Age Ageing. 2021 May 5;50(3):795-801. doi: 10.1093/ageing/afaa138) and functional capacity assessment by the six minute walk test is the strongest predictor of cardiovascular risk (Fermont JM, Fisk M, Bolton CE et al; ERICA consortium. Cardiovascular risk prediction using physical performance measures in COPD: results from a multicentre observational study. BMJ Open. 2020 Dec 28;10(12):e038360.) However, low event rates during follow up thus far has been a limitation.\n\nThe ERICA cohort is a unique COPD cohort having detailed cardiovascular and muscle measurements as well as markers of inflammation. Having a long period of follow up to analyse data in relation to outcomes is extremely important. Upcoming projects planned still in relation to this cohort include:\nDetermining new biomarkers and evaluating the relationship between baseline cardiovascular and musculoskeletal phenotypes and longitudinal outcomes of \n(a) hospital admissions for COPD \n(b) hospital admissions for selected cardiovascular diagnoses, \n(c) hospital-admissions related to frailty, falls and fracture, and \n(d) mortality events during follow-up using hospitals admission data.\n\nThe overarching aim of the ERICA consortium, which includes additional cohort studies such as ECLIPSE and ARCADE (though data from these studies are not linked to ERICA study data), is to relate systemic inflammation to non-pulmonary disease manifestations in COPD identified by candidate bedside biomarkers of cardiovascular and muscle function. Outcomes of this research will not only extend the understanding of these biomarkers through cross-sectional evaluation of subjects recruited from existing well-characterised cohorts in the UK and using experimental medicine hypothesis-testing trials in patients with evidence of systemic inflammation, but also:\n•\tHelp doctors determine the best type of treatment for newly diagnosed COPD patients.\n•\tReduce failures of new medicines (by generating evidence on stratification and efficacy of biomarkers to facilitate the design of smaller, more efficient Phase I-III clinical trials of medicines targeting inflammatory COPD subsets).\n•\tSupport the development of new therapies with improved health outcomes.\n\nTo answer these study objectives, linkage data within The ERICA study; a dataset containing numerous biomarkers and socio-demographic data with Demographics, Civil Registration (Deaths), Hospital Episode Statistics (HES) Accident and Emergency and HES APC data from NHS Digital is required. The ERICA study is already receiving death registration data (from the Patient Demographic System) including: registration district, sub district, number and entry number, date, cause (text) and place of death (text), ICD coding, date and place of birth, occupation and address, for which there is an existing Agreement with NHS Digital.\n\nThe ERICA study is a cohort study with a sample size of 734 patients with COPD. Five UK centres with an interest in COPD undertook this study, which ran from 2011-2013 with participants consenting to their identifiers being used. These centres are based in Cambridge, Edinburgh, Cardiff, Nottingham and London. The study includes data measured at baseline and 6 monthly follow up to two years.  A detailed study protocol by Mohan et al. (2014) “Evaluating the Role of Inflammation in Chronic Airways Disease: The ERICA Study” can be found at http://dx.doi.org/10.3109/15412555.2014.898031. \n\nThe justification for processing is GDPR Article 6 (1) (e): The processing necessary to perform this task is in the public interest and the task has a clear basis in law. The results of this study will provide information about the risks of COPD associated with the ERICA study and these results could inform decisions about which treatment should be offered to patients in future. University of Cambridge are a public authority (university) carrying out a research project. GDPR Article 9 (2)(j): processing is necessary for scientific research purposes and shall be proportionate to the aim pursued, respect the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject. This is a scientific research project.",
+     "organisation": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2021-12-06",
+     "sublicensing": "No",
+     "title": "MR1268 - Evaluation of the Role of Inflammation in non pulmonary disease manifestations in Chronic Airways",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "7.7"
+  }
+ ]
+}

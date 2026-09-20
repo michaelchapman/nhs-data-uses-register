@@ -1,0 +1,40 @@
+{
+ "base_reference": "DARS-NIC-729128-M5N1F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-729128-M5N1F-v0.3",
+   "states": [
+    {
+     "activities": "KCL will transfer data to NHS England. The data will consist of identifying details (specifically NHS Number, Date of Birth, and a unique person ID) for the cohort to be linked with NHS England Data.\n\nNHS England will provide the relevant records from the Demographics dataset to KCL. The Data will contain direct identifying Data items including full address, which is required for KCL to be able to provide a newsletter update to living cohort members.\n\nThe Data will not be transferred to any other location.\n\nThe data is stored on KCL servers and backed up on Cloud servers provided by Microsoft Ltd.\n\nThe Data will be accessed onsite at the premises of KCL only.\n\nThe Data will not leave England/Wales at any time.\n\nAccess is restricted to individuals within the Department of Population Health Sciences at KCL who have authorisation from the Chief Investigator. All such individuals are substantive employees of KCL.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will be linked at person record level with existing demographic information held by KCL relating to SLSR participants. This Data will be held separately to the pseudonymised SLSR research database which contains long-term follow-up data on post-stroke outcomes, including data requested under DARS-NIC-696708-J3L1R.\n\nEmployees from the Department of Population Health Sciences at KCL will use the Data only for the purposes described.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+      "KING'S COLLEGE LONDON"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2025-10-06",
+     "expected_benefits": "To enable ongoing contact with South London Stroke Register (SLSR) participants for the purposes of maximising Data collection in relation to stroke survivors' quality of life, whilst minimising the potential for causing distress by contacting SLSR participants who have died between recruitment and follow-up.  \n\nThe SLSR are requesting health Data from NHS England under DARS-NIC-696708-J3L1. Refer to DARS-NIC-696708-J3L1 for further information on the public and patient benefits expected to be achieved as an outcome of the proposed uses of this Data.",
+     "expected_output": "The expected outputs of the processing will be:\n\n1) an update to the South London Stroke Register (SLSR) participant databases to confirm who is deceased; whose information cannot be used in future to retrieve further information about their health status from NHS England under DARS-NIC-696708-J3L1R; and who is still alive and can be contacted in writing at their current address\n\n2) the provision of a newsletter to living SLSR participants; advising them that their hospital episode and mortality Data will be collected from NHS England in line with the updated study website and privacy notice; and how they can opt-out of the study if desired.\n\nDatabase updates and newsletter provision are intended to be completed by the end of 2024.\n\nFor further information about the SLSR study and its intended outputs, refer to DARS-NIC-696708-J3L1.",
+     "objective": "King’s College London (KCL) and Guy’s and St Thomas’ NHS Foundation Trust (GStT) require access to NHS England Data for the purpose of the following research programme: The South London Stroke Register (SLSR): Improving the lives of stroke survivors with data.\n\nThe SLSR is a long-running observational study which investigates the incidence, care, and outcomes of stroke in a geographically defined area of London. \n\nThe following is a summary of the aims of the research programme provided by KCL:\n\n• To improve the lives of stroke survivors through a program of data collection, analysis, modelling, and use in practice. \n• To improve patient care by identifying areas where improvements are needed, allowing effective planning of services, personalised care, and reducing inequalities in access to care and outcomes after stroke.\n• To use local data to describe the health, social, and economic effects of stroke.\n• To estimate the outcomes and needs of stroke survivors in the longer-term, both individually and at a population level for the next 30 years. \n• To estimate the cost of formal care and informal care provided by family and friends, often over many years.\n\nThe following NHS England Data will be accessed: \n• Demographics – necessary to confirm which cohort members have died, and to be able to provide a newsletter update to the most recent address of those who are still alive\n\nThe newsletter will constitute an update to the consent materials previously provided to SLSR participants, facilitating the request from KCL and GStT for further health outcomes follow-up data under DARS-NIC-696708-J3L1R.\n\nThe level of the Data will be identifiable because:\n1) some SLSR researchers at KCL have access to both the identifiable recruitment databases held at the hospital sites, as well as the pseudonymised research database at KCL, and\n2) most recent address is required in order to inform ongoing involvement in the study of those cohort members who are still alive\n\nThe Data will be minimised as follows:\n• Limited to a study cohort of stroke patients recruited into the SLSR which KCL will provide to NHS England. Cohort members will be those who were recruited to the study via consent and consultee advice pre 2022 and responsive to follow-up within the last 5 years.\n\nKCL and GStT are joint controllers and joint sponsors of the research programme. KCL also process the data. GStT receive and administer the funding for the study.\n\nThe funding is provided by National Institute for Health and Care Research (NIHR). The funding is specifically for the research programme described. Funding is in place until January 2027.\n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nMicrosoft Ltd provides Cloud hosting services to KCL and will store the data as contracted by KCL. \n\nA list of priority analyses were developed at the outset of the current 5-year programme involving all investigators of the programme. This process made extensive use of the feedback from the Stroke Research Patients and Family Group, which is the long-running SLSR public and patient involvement and engagement (PPIE) group. \n\nThe programme as a whole receives regular feedback from the Stakeholder Engagement Group, including stroke survivors, clinicians, and policy makers, who point out their priorities and help to shape proposals. The Programme Steering Committee is involved in the wider oversight of the programme and its direction.",
+     "organisation": "KING'S COLLEGE LONDON",
+     "organisation_type": "Academic",
+     "start_date": "2024-10-07",
+     "sublicensing": "No",
+     "title": "The South London Stroke Register: Preliminary List Clean",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.3"
+  }
+ ]
+}

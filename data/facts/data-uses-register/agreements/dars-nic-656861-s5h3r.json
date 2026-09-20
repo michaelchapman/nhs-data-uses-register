@@ -1,0 +1,40 @@
+{
+ "base_reference": "DARS-NIC-656861-S5H3R",
+ "versions": [
+  {
+   "reference": "DARS-NIC-656861-S5H3R-v1.2",
+   "states": [
+    {
+     "activities": "Data for England was obtained from the National Cancer Registry, maintained since 2013 by Public Health England and NHS England from 2021. The Office for National Statistics (ONS) and predecessor bodies had previously collated data from regional cancer registries covering the entire population of England since the 1960s. Individual cancer registrations are routinely updated with information on each patient’s vital status (alive, emigrated, dead or not traced). Data will be extracted for patients diagnosed during 1971-2018. As of 1 January 2021, the vital status at 31 December 2018 or 2019 is expected to be known for at least 99% of these patients. \n\nEquivalent data for Wales will be obtained from the Welsh Cancer Intelligence & Surveillance Unit.\n\nData will be requested for all adults (15-99 years) who were diagnosed with a first, primary, invasive malignancy, but patients diagnosed with a malignancy of the skin other than melanoma will not be included. \n\nExtensive, standardised quality control procedures will be performed on all the data sets. \n\nPopulation-based survival estimates must take account of the wide variations in background mortality by age, sex and region, and over time. Background mortality will be taken from life tables that we have created for England and Wales, comprising all-cause mortality rates per 100,000 by single year of age and sex for each calendar year 1971-2018.\n\nAnalyses for the cancer survival index will combine the data for England and Wales. \n\nSeparate analyses for England and for Wales may be produced later.\nThe study team will first produce estimates of net survival for each combination of cancer (or group of cancers), age at diagnosis (5 groups), sex and period of diagnosis. The study team will then construct the survival index as a weighted sum of the net survival estimates for every combination of these groupings, using the proportion of cancer patients diagnosed in England and Wales during 1996-99 in each age group, sex and type of cancer as the standard weights. \n\nThe LSHTM will use statistical models to estimate the excess hazard of death in each calendar period since 1971 among cancer patients in each stratum defined by age group, sex and type of cancer, over and above the corresponding risk of death in the same calendar period in the general population (obtained from the life tables). The study team will use flexible, parametric excess hazard regression models. The study team will include age and year at diagnosis as main effects, modelled on a continuous scale with regression cubic splines, in order to account for potential non-linearity of excess hazards with time since diagnosis. This will enable the study to make a reasonable prediction of survival up to 10 years after diagnosis for patients who were diagnosed as recently as 2018.\n\nThe standard weights to be used in all analyses will be the proportionate distribution by age, sex and type of cancer of patients who were diagnosed in England and Wales during 1996-1999, the same weights as used for previous analyses.\n\nModels will be fitted with the STATA command stpm2. Model selection procedures will be automated to choose the best-fitting model among candidate models, by choosing the model with the smallest Akaike Information Criterion. The STATA post-estimation command predictnl will be used to predict a cancer survival estimate from the cumulative excess hazard estimated by the model. Net survival estimates for each type of cancer, sex and year of diagnosis will be obtained by averaging the individual net survival curves, predicted by the model, over all the ages within each age group.\n\nThe LSHTM will present the number of cancer patients included in the analyses by type of cancer and period of diagnosis.\n\nThe LSHTM will provide estimates of the net survival index at 5 and 10 years after diagnosis, for each calendar period, for all adults (adjusted for age, sex and cancer), and separately by sex (adjusted only for age and cancer)",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "CANCER RESEARCH UK",
+      "LONDON SCHOOL OF HYGIENE AND TROPICAL MEDICINE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2023-12-31",
+     "expected_benefits": "The Cancer Survival Index (CSI) is a one number summary of survival for all cancers combined. It represents a weighted average of survival for each of the many types of cancer. Survival for the various types of cancer differs very widely, for example less than 10% at five years for pancreatic cancer, and almost 100% for testicular cancer. The weights that are used are designed to ensure that the CSI only changes over time if survival for a particular cancer changes, whether in men or women, or at a particular age. The CSI is therefore a useful simple measure that enables comparison within England and Wales over a very long period of time. The CSI can be estimated at one, five, seven or even 10 years after diagnosis. \n\nThe CSI is readily understood by the public and by politicians. Cancer Research UK has used previous iterations of the CSI extensively in its campaigns aimed to raise resources from the general public for research into improving cancer survival.",
+     "expected_output": "The aim of this project is to assess progress in an index of cancer survival for all cancers combined up to 10 years after diagnosis for patients diagnosed with a cancer during the period 1971-2018 in England or Wales and followed up to the end of 2019. The index is a simple, one-number summary of survival for all cancers combined.\n\nThe index was last published for patients who had been diagnosed in England and Wales between 1971 and 2010, as part of CRUK's research strategy launch in 2014. We expect that the cancer survival index at 10 years after diagnosis will have increased since 2014.",
+     "objective": "The aim of this project is to assess progress in an index of cancer survival up to 10 years after diagnosis for patients diagnosed with a cancer in England or Wales. \n \nThe index is a simple, one-number summary of survival for all cancers combined. \n\nThe index was last published for patients who had been diagnosed in England and Wales up to 2010, as part of CRUK's research strategy launch in 2014. The work is funded and commissioned by CRUK. \n\nIn this project, The LSHTM will update the cancer survival index with the most up-to-date available data. \n\nNoting CRUK commission this work to LSHTM, CRUK have been added as joint data controller under this iteration of the agreement.\n\nWhere individuals have opted out of disease registration by the National Disease Registration Service (NDRS), their data has been permanently removed from the registry and therefore will not be disseminated under this Data Sharing Agreement (DSA). https://digital.nhs.uk/ndrs/patients/opting-out",
+     "organisation": "LONDON SCHOOL OF HYGIENE AND TROPICAL MEDICINE",
+     "organisation_type": "Research",
+     "start_date": "2023-05-22",
+     "sublicensing": "No",
+     "title": "Updating trends in the cancer survival index for England and Wales ( ODR1920_179 )",
+     "yielded_benefits": "None so far - we expect to be able to produce a report for Cancer Research UK within the next six weeks, and to submit an article for peer-reviewed publication by the end of 2023."
+    }
+   ],
+   "version": "1.2"
+  }
+ ]
+}

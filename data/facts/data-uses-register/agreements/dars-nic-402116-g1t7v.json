@@ -1,0 +1,329 @@
+{
+ "base_reference": "DARS-NIC-402116-G1T7V",
+ "versions": [
+  {
+   "reference": "DARS-NIC-402116-G1T7V-v0.2",
+   "states": [
+    {
+     "activities": "NHS Digital will send  NHS Number and ethic category data to System C and Graphnet.\n\nThe data is then linked to the following feeds that  System C and Graphnet already receive from NHS Digital;\n \no\tDemographics\no\tVaccine activity data\no\tAt risk cohorts\n\nThe data is then used for reporting vaccine uptake rates by Central South West CSU in aggregate form.  Aggregated data will also be shared with ImmForm for PHE reporting.  ImmForm is the system used by the Department of Health, the National Health Service and Public Health England to:\n\n•\trecord data in relation to uptake against immunisation programmes and incidence of flu-like illness\n•\tprovide vaccine ordering facilities for the NHS\n\nGraphnet Health Ltd and System C Healthcare Ktd are acting as data processors in this agreement. \n\nThe National Imunisation Management service uses two integrated standard off the shelf software systems: the System C “CarePlus” immunisation system, and the Graphnet “CareCentric” shared record system, (System C and Graphnet are part of a Care Alliance).\n\nCarePlus currently manages immunisations for around half of children in England and combined with CareCentric it delivers the children’s immunisation programme for all of Greater London.   CareCentric holds and provides access to very detailed clinical records including primary care records for over 12m English citizens.  Together they will  work to  utilise NIMS in the best possible platform.\n\nNHS Digital will check the GDPPR and HES data will be checked fortnightly for any new information and if found that data will be released to NHS England so that they have the most current data to work from.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS England (Quarry House)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "GPES Data for Pandemic Planning and Research (COVID-19)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-09-16",
+     "expected_benefits": "The data supplied through this agreement will help NHS England to support the management of the flu vaccine programme with the aim of reducing pressure on the NHS throughout the winter period.  In turn this will relieve pressure within the NHS assist them in the management of the ongoing COVID-19 pandemic response.\n\nThe implementation of this service will deliver a centralised service for the management of seasonal flu immunisation and is an essential component of NHS England’s response to the COVID-19 pandemic. Benefits anticipated are;\n\n1.\thelp to ensure that any second “spike” in coronavirus infections in England separated in time as far as possible from the annual flu epidemic – so minimising pressures on NHS resources\n\n2.\t provide a protype for the delivery of a subsequent national COVID-19 immunisation programme by establishing a dynamic infrastructure capable of responding rapidly to target appropriate cohorts across the whole population of England.",
+     "expected_output": "The system provides a Business Intelligence (BI) solution using Microsoft Power-BI which allows comprehensive dashboarding and analysis of the vaccination programme in real time.  \n\nThis service is an integral part of the call/recall process and drives initiatives to increase uptake.  Dashboards will be provided at national, regional, STP, local authority, ICS/P or GP practice level and in each case will only cover statistics for the citizens covered at that area.",
+     "objective": "The purpose of the dissemination is to support the NHS England national call/recall for flu vaccination programme. The dissemination will provide Ethic category data to link to their existing systems.   \n \nEthnic category is required for:\n•\tRisk stratification of COVID patients to identify those at high risk of complications\n•\tManagement reporting for flu/COVID vaccinations to address health inequalities\n•\tThe management of the flu vaccinations is vital to ensure that the COVID vaccination programme can proceed efficiently and the two are linked by the time period required inbetween an individual taking the flu vaccination and the first COVID vaccination. The two processes are intrinsically linked and the provision of ethnic category data is vital to both.\n\nEthnic category is required for the flu vaccination element to ensure that there is optimal coverage of uptake of the vaccine across the population.  Reporting on uptake by ethic category will allow the system to manage the vaccine programme.\n\nOptimal management of the flu vaccine programme is important to help manage the national covid pandemic to try and prevent a double peak for both flu and Covid.  The management of the flu vaccine has implications on the management of any Covid vaccine in that anyone who has had a flu vaccine may not then receive a COVID-19 vaccine within a certain time period and so the management of the two together is essential.\n\nCertain ethnic groups have been connected  with increased morbidity and mortality in cases of CV19 and optimal uptake in these populations would be desirable if and when a CV vaccine is available.\n\nIt is essential that the two programmes are coordinated to accommodate the developing characteristics of the pandemic, and any interfaces between the vaccines, and their delivery processes as they are established. \n\nData disseminated under this agreement will not be used for performance management purposes.",
+     "organisation": "Health & Social Care Information Centre",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2020-09-17",
+     "sublicensing": "No",
+     "title": "Flu – Vaccination Programme – Ethnic Category information for secondary uses",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    },
+    {
+     "activities": "NHS Digital will send  NHS Number and ethic category data to System C and Graphnet.\n\nThe data is then linked to the following feeds that  System C and Graphnet already receive from NHS Digital;\n \no\tDemographics\no\tVaccine activity data\no\tAt risk cohorts\n\nThe data is then used for reporting vaccine uptake rates by Central South West CSU in aggregate form.  Aggregated data will also be shared with ImmForm for PHE reporting.  ImmForm is the system used by the Department of Health, the National Health Service and Public Health England to:\n\n•\trecord data in relation to uptake against immunisation programmes and incidence of flu-like illness\n•\tprovide vaccine ordering facilities for the NHS\n\nGraphnet Health Ltd and System C Healthcare Ktd are acting as data processors in this agreement. \n\nThe National Imunisation Management service uses two integrated standard off the shelf software systems: the System C “CarePlus” immunisation system, and the Graphnet “CareCentric” shared record system, (System C and Graphnet are part of a Care Alliance).\n\nCarePlus currently manages immunisations for around half of children in England and combined with CareCentric it delivers the children’s immunisation programme for all of Greater London.   CareCentric holds and provides access to very detailed clinical records including primary care records for over 12m English citizens.  Together they will  work to  utilise NIMS in the best possible platform.\n\nNHS Digital will check the GDPPR and HES data will be checked fortnightly for any new information and if found that data will be released to NHS England so that they have the most current data to work from.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "GPES Data for Pandemic Planning and Research (COVID-19)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-09-16",
+     "expected_benefits": "The data supplied through this agreement will help NHS England to support the management of the flu vaccine programme with the aim of reducing pressure on the NHS throughout the winter period.  In turn this will relieve pressure within the NHS assist them in the management of the ongoing COVID-19 pandemic response.\n\nThe implementation of this service will deliver a centralised service for the management of seasonal flu immunisation and is an essential component of NHS England’s response to the COVID-19 pandemic. Benefits anticipated are;\n\n1.\thelp to ensure that any second “spike” in coronavirus infections in England separated in time as far as possible from the annual flu epidemic – so minimising pressures on NHS resources\n\n2.\t provide a protype for the delivery of a subsequent national COVID-19 immunisation programme by establishing a dynamic infrastructure capable of responding rapidly to target appropriate cohorts across the whole population of England.",
+     "expected_output": "The system provides a Business Intelligence (BI) solution using Microsoft Power-BI which allows comprehensive dashboarding and analysis of the vaccination programme in real time.  \n\nThis service is an integral part of the call/recall process and drives initiatives to increase uptake.  Dashboards will be provided at national, regional, STP, local authority, ICS/P or GP practice level and in each case will only cover statistics for the citizens covered at that area.",
+     "objective": "The purpose of the dissemination is to support the NHS England national call/recall for flu vaccination programme. The dissemination will provide Ethic category data to link to their existing systems.   \n \nEthnic category is required for:\n•\tRisk stratification of COVID patients to identify those at high risk of complications\n•\tManagement reporting for flu/COVID vaccinations to address health inequalities\n•\tThe management of the flu vaccinations is vital to ensure that the COVID vaccination programme can proceed efficiently and the two are linked by the time period required inbetween an individual taking the flu vaccination and the first COVID vaccination. The two processes are intrinsically linked and the provision of ethnic category data is vital to both.\n\nEthnic category is required for the flu vaccination element to ensure that there is optimal coverage of uptake of the vaccine across the population.  Reporting on uptake by ethic category will allow the system to manage the vaccine programme.\n\nOptimal management of the flu vaccine programme is important to help manage the national covid pandemic to try and prevent a double peak for both flu and Covid.  The management of the flu vaccine has implications on the management of any Covid vaccine in that anyone who has had a flu vaccine may not then receive a COVID-19 vaccine within a certain time period and so the management of the two together is essential.\n\nCertain ethnic groups have been connected  with increased morbidity and mortality in cases of CV19 and optimal uptake in these populations would be desirable if and when a CV vaccine is available.\n\nIt is essential that the two programmes are coordinated to accommodate the developing characteristics of the pandemic, and any interfaces between the vaccines, and their delivery processes as they are established. \n\nData disseminated under this agreement will not be used for performance management purposes.",
+     "organisation": "HEALTH & SOCIAL CARE INFORMATION CENTRE",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2020-09-17",
+     "sublicensing": "No",
+     "title": "Flu – Vaccination Programme – Ethnic Category information for secondary uses",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    },
+    {
+     "activities": "NHS Digital will send  NHS Number and ethic category data to System C and Graphnet.\n\nThe data is then linked to the following feeds that  System C and Graphnet already receive from NHS Digital;\n \no\tDemographics\no\tVaccine activity data\no\tAt risk cohorts\n\nThe data is then used for reporting vaccine uptake rates by Central South West CSU in aggregate form.  Aggregated data will also be shared with ImmForm for PHE reporting.  ImmForm is the system used by the Department of Health, the National Health Service and Public Health England to:\n\n•\trecord data in relation to uptake against immunisation programmes and incidence of flu-like illness\n•\tprovide vaccine ordering facilities for the NHS\n\nGraphnet Health Ltd and System C Healthcare Ktd are acting as data processors in this agreement. \n\nThe National Imunisation Management service uses two integrated standard off the shelf software systems: the System C “CarePlus” immunisation system, and the Graphnet “CareCentric” shared record system, (System C and Graphnet are part of a Care Alliance).\n\nCarePlus currently manages immunisations for around half of children in England and combined with CareCentric it delivers the children’s immunisation programme for all of Greater London.   CareCentric holds and provides access to very detailed clinical records including primary care records for over 12m English citizens.  Together they will  work to  utilise NIMS in the best possible platform.\n\nNHS Digital will check the GDPPR and HES data will be checked fortnightly for any new information and if found that data will be released to NHS England so that they have the most current data to work from.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "COVID-19 General Practice Extraction Service (GPES) Data for Pandemic Planning and Research (GDPPR)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2021-09-16",
+     "expected_benefits": "The data supplied through this agreement will help NHS England to support the management of the flu vaccine programme with the aim of reducing pressure on the NHS throughout the winter period.  In turn this will relieve pressure within the NHS assist them in the management of the ongoing COVID-19 pandemic response.\n\nThe implementation of this service will deliver a centralised service for the management of seasonal flu immunisation and is an essential component of NHS England’s response to the COVID-19 pandemic. Benefits anticipated are;\n\n1.\thelp to ensure that any second “spike” in coronavirus infections in England separated in time as far as possible from the annual flu epidemic – so minimising pressures on NHS resources\n\n2.\t provide a protype for the delivery of a subsequent national COVID-19 immunisation programme by establishing a dynamic infrastructure capable of responding rapidly to target appropriate cohorts across the whole population of England.",
+     "expected_output": "The system provides a Business Intelligence (BI) solution using Microsoft Power-BI which allows comprehensive dashboarding and analysis of the vaccination programme in real time.  \n\nThis service is an integral part of the call/recall process and drives initiatives to increase uptake.  Dashboards will be provided at national, regional, STP, local authority, ICS/P or GP practice level and in each case will only cover statistics for the citizens covered at that area.",
+     "objective": "The purpose of the dissemination is to support the NHS England national call/recall for flu vaccination programme. The dissemination will provide Ethic category data to link to their existing systems.   \n \nEthnic category is required for:\n•\tRisk stratification of COVID patients to identify those at high risk of complications\n•\tManagement reporting for flu/COVID vaccinations to address health inequalities\n•\tThe management of the flu vaccinations is vital to ensure that the COVID vaccination programme can proceed efficiently and the two are linked by the time period required inbetween an individual taking the flu vaccination and the first COVID vaccination. The two processes are intrinsically linked and the provision of ethnic category data is vital to both.\n\nEthnic category is required for the flu vaccination element to ensure that there is optimal coverage of uptake of the vaccine across the population.  Reporting on uptake by ethic category will allow the system to manage the vaccine programme.\n\nOptimal management of the flu vaccine programme is important to help manage the national covid pandemic to try and prevent a double peak for both flu and Covid.  The management of the flu vaccine has implications on the management of any Covid vaccine in that anyone who has had a flu vaccine may not then receive a COVID-19 vaccine within a certain time period and so the management of the two together is essential.\n\nCertain ethnic groups have been connected  with increased morbidity and mortality in cases of CV19 and optimal uptake in these populations would be desirable if and when a CV vaccine is available.\n\nIt is essential that the two programmes are coordinated to accommodate the developing characteristics of the pandemic, and any interfaces between the vaccines, and their delivery processes as they are established. \n\nData disseminated under this agreement will not be used for performance management purposes.",
+     "organisation": "HEALTH & SOCIAL CARE INFORMATION CENTRE",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2020-09-17",
+     "sublicensing": "No",
+     "title": "Flu – Vaccination Programme – Ethnic Category information for secondary uses",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.2"
+  },
+  {
+   "reference": "DARS-NIC-402116-G1T7V-v1.2",
+   "states": [
+    {
+     "activities": "NHS Digital will send  NHS Number and ethic category data to System C, and Graphnet.  Version 1.2 or the agreement has added Palantir as an additional data processor along side System C and Graphnet to support NHS England as a processor for vaccination reporting.\n\nThe data is then linked to the following feeds that  System C and Graphnet already receive from NHS Digital;\n \no\tDemographics\no\tVaccine activity data\no\tAt risk cohorts\n\nThe data is then used for reporting vaccine uptake rates by Central South West CSU in aggregate form.  Aggregated data will also be shared with ImmForm for PHE reporting.  ImmForm is the system used by the Department of Health, the National Health Service and Public Health England to:\n\n•\trecord data in relation to uptake against immunisation programmes and incidence of flu-like illness\n•\tprovide vaccine ordering facilities for the NHS\n\nGraphnet Health Ltd and System C Healthcare Ktd are acting as data processors in this agreement. \n\nThe National Imunisation Management service uses two integrated standard off the shelf software systems: the System C “CarePlus” immunisation system, and the Graphnet “CareCentric” shared record system, (System C and Graphnet are part of a Care Alliance).\n\nCarePlus currently manages immunisations for around half of children in England and combined with CareCentric it delivers the children’s immunisation programme for all of Greater London.   CareCentric holds and provides access to very detailed clinical records including primary care records for over 12m English citizens.  Together they will  work to  utilise NIMS in the best possible platform.\n\nNHS Digital will check the GDPPR and HES data will be checked fortnightly for any new information and if found that data will be released to NHS England so that they have the most current data to work from.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS England (Quarry House)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "GPES Data for Pandemic Planning and Research (COVID-19)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2024-01-17",
+     "expected_benefits": "The data supplied through this agreement will help NHS England to support the management of the flu vaccine programme with the aim of reducing pressure on the NHS throughout the winter period.  In turn this will relieve pressure within the NHS assist them in the management of the ongoing COVID-19 pandemic response.\n\nThe implementation of this service will deliver a centralised service for the management of seasonal flu immunisation and is an essential component of NHS England’s response to the COVID-19 pandemic. Benefits anticipated are;\n\n1.\thelp to ensure that any second “spike” in coronavirus infections in England separated in time as far as possible from the annual flu epidemic – so minimising pressures on NHS resources\n\n2.\t provide a protype for the delivery of a subsequent national COVID-19 immunisation programme by establishing a dynamic infrastructure capable of responding rapidly to target appropriate cohorts across the whole population of England.",
+     "expected_output": "The system provides a Business Intelligence (BI) solution using Microsoft Power-BI which allows comprehensive dashboarding and analysis of the vaccination programme in real time.  \n\nThis service is an integral part of the call/recall process and drives initiatives to increase uptake.  Dashboards will be provided at national, regional, STP, local authority, ICS/P or GP practice level and in each case will only cover statistics for the citizens covered at that area.",
+     "objective": "The purpose of the dissemination is to support the NHS England national call/recall for flu vaccination programme. The dissemination will provide Ethic category data to link to their existing systems.   \n \nEthnic category is required for:\n•\tRisk stratification of COVID patients to identify those at high risk of complications\n•\tManagement reporting for flu/COVID vaccinations to address health inequalities\n•\tThe management of the flu vaccinations is vital to ensure that the COVID vaccination programme can proceed efficiently and the two are linked by the time period required inbetween an individual taking the flu vaccination and the first COVID vaccination. The two processes are intrinsically linked and the provision of ethnic category data is vital to both.\n\nEthnic category is required for the flu vaccination element to ensure that there is optimal coverage of uptake of the vaccine across the population.  Reporting on uptake by ethic category will allow the system to manage the vaccine programme.\n\nOptimal management of the flu vaccine programme is important to help manage the national covid pandemic to try and prevent a double peak for both flu and Covid.  The management of the flu vaccine has implications on the management of any Covid vaccine in that anyone who has had a flu vaccine may not then receive a COVID-19 vaccine within a certain time period and so the management of the two together is essential.\n\nCertain ethnic groups have been connected  with increased morbidity and mortality in cases of CV19 and optimal uptake in these populations would be desirable if and when a CV vaccine is available.\n\nIt is essential that the two programmes are coordinated to accommodate the developing characteristics of the pandemic, and any interfaces between the vaccines, and their delivery processes as they are established. \n\nData disseminated under this agreement will not be used for performance management purposes.",
+     "organisation": "Health & Social Care Information Centre",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2021-01-18",
+     "sublicensing": "No",
+     "title": "Flu – Vaccination Programme – Ethnic Category information for secondary uses",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "NHS Digital will send  NHS Number and ethic category data to System C, and Graphnet.  Version 1.2 or the agreement has added Palantir as an additional data processor along side System C and Graphnet to support NHS England as a processor for vaccination reporting.\n\nThe data is then linked to the following feeds that  System C and Graphnet already receive from NHS Digital;\n \no\tDemographics\no\tVaccine activity data\no\tAt risk cohorts\n\nThe data is then used for reporting vaccine uptake rates by Central South West CSU in aggregate form.  Aggregated data will also be shared with ImmForm for PHE reporting.  ImmForm is the system used by the Department of Health, the National Health Service and Public Health England to:\n\n•\trecord data in relation to uptake against immunisation programmes and incidence of flu-like illness\n•\tprovide vaccine ordering facilities for the NHS\n\nGraphnet Health Ltd and System C Healthcare Ktd are acting as data processors in this agreement. \n\nThe National Imunisation Management service uses two integrated standard off the shelf software systems: the System C “CarePlus” immunisation system, and the Graphnet “CareCentric” shared record system, (System C and Graphnet are part of a Care Alliance).\n\nCarePlus currently manages immunisations for around half of children in England and combined with CareCentric it delivers the children’s immunisation programme for all of Greater London.   CareCentric holds and provides access to very detailed clinical records including primary care records for over 12m English citizens.  Together they will  work to  utilise NIMS in the best possible platform.\n\nNHS Digital will check the GDPPR and HES data will be checked fortnightly for any new information and if found that data will be released to NHS England so that they have the most current data to work from.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "GPES Data for Pandemic Planning and Research (COVID-19)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2024-01-17",
+     "expected_benefits": "The data supplied through this agreement will help NHS England to support the management of the flu vaccine programme with the aim of reducing pressure on the NHS throughout the winter period.  In turn this will relieve pressure within the NHS assist them in the management of the ongoing COVID-19 pandemic response.\n\nThe implementation of this service will deliver a centralised service for the management of seasonal flu immunisation and is an essential component of NHS England’s response to the COVID-19 pandemic. Benefits anticipated are;\n\n1.\thelp to ensure that any second “spike” in coronavirus infections in England separated in time as far as possible from the annual flu epidemic – so minimising pressures on NHS resources\n\n2.\t provide a protype for the delivery of a subsequent national COVID-19 immunisation programme by establishing a dynamic infrastructure capable of responding rapidly to target appropriate cohorts across the whole population of England.",
+     "expected_output": "The system provides a Business Intelligence (BI) solution using Microsoft Power-BI which allows comprehensive dashboarding and analysis of the vaccination programme in real time.  \n\nThis service is an integral part of the call/recall process and drives initiatives to increase uptake.  Dashboards will be provided at national, regional, STP, local authority, ICS/P or GP practice level and in each case will only cover statistics for the citizens covered at that area.",
+     "objective": "The purpose of the dissemination is to support the NHS England national call/recall for flu vaccination programme. The dissemination will provide Ethic category data to link to their existing systems.   \n \nEthnic category is required for:\n•\tRisk stratification of COVID patients to identify those at high risk of complications\n•\tManagement reporting for flu/COVID vaccinations to address health inequalities\n•\tThe management of the flu vaccinations is vital to ensure that the COVID vaccination programme can proceed efficiently and the two are linked by the time period required inbetween an individual taking the flu vaccination and the first COVID vaccination. The two processes are intrinsically linked and the provision of ethnic category data is vital to both.\n\nEthnic category is required for the flu vaccination element to ensure that there is optimal coverage of uptake of the vaccine across the population.  Reporting on uptake by ethic category will allow the system to manage the vaccine programme.\n\nOptimal management of the flu vaccine programme is important to help manage the national covid pandemic to try and prevent a double peak for both flu and Covid.  The management of the flu vaccine has implications on the management of any Covid vaccine in that anyone who has had a flu vaccine may not then receive a COVID-19 vaccine within a certain time period and so the management of the two together is essential.\n\nCertain ethnic groups have been connected  with increased morbidity and mortality in cases of CV19 and optimal uptake in these populations would be desirable if and when a CV vaccine is available.\n\nIt is essential that the two programmes are coordinated to accommodate the developing characteristics of the pandemic, and any interfaces between the vaccines, and their delivery processes as they are established. \n\nData disseminated under this agreement will not be used for performance management purposes.",
+     "organisation": "HEALTH & SOCIAL CARE INFORMATION CENTRE",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2021-01-18",
+     "sublicensing": "No",
+     "title": "Flu – Vaccination Programme – Ethnic Category information for secondary uses",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "NHS Digital will send  NHS Number and ethic category data to System C, and Graphnet.  Version 1.2 or the agreement has added Palantir as an additional data processor along side System C and Graphnet to support NHS England as a processor for vaccination reporting.\n\nThe data is then linked to the following feeds that  System C and Graphnet already receive from NHS Digital;\n \no\tDemographics\no\tVaccine activity data\no\tAt risk cohorts\n\nThe data is then used for reporting vaccine uptake rates by Central South West CSU in aggregate form.  Aggregated data will also be shared with ImmForm for PHE reporting.  ImmForm is the system used by the Department of Health, the National Health Service and Public Health England to:\n\n•\trecord data in relation to uptake against immunisation programmes and incidence of flu-like illness\n•\tprovide vaccine ordering facilities for the NHS\n\nGraphnet Health Ltd and System C Healthcare Ktd are acting as data processors in this agreement. \n\nThe National Imunisation Management service uses two integrated standard off the shelf software systems: the System C “CarePlus” immunisation system, and the Graphnet “CareCentric” shared record system, (System C and Graphnet are part of a Care Alliance).\n\nCarePlus currently manages immunisations for around half of children in England and combined with CareCentric it delivers the children’s immunisation programme for all of Greater London.   CareCentric holds and provides access to very detailed clinical records including primary care records for over 12m English citizens.  Together they will  work to  utilise NIMS in the best possible platform.\n\nNHS Digital will check the GDPPR and HES data will be checked fortnightly for any new information and if found that data will be released to NHS England so that they have the most current data to work from.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "COVID-19 General Practice Extraction Service (GPES) Data for Pandemic Planning and Research (GDPPR)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2024-01-17",
+     "expected_benefits": "The data supplied through this agreement will help NHS England to support the management of the flu vaccine programme with the aim of reducing pressure on the NHS throughout the winter period.  In turn this will relieve pressure within the NHS assist them in the management of the ongoing COVID-19 pandemic response.\n\nThe implementation of this service will deliver a centralised service for the management of seasonal flu immunisation and is an essential component of NHS England’s response to the COVID-19 pandemic. Benefits anticipated are;\n\n1.\thelp to ensure that any second “spike” in coronavirus infections in England separated in time as far as possible from the annual flu epidemic – so minimising pressures on NHS resources\n\n2.\t provide a protype for the delivery of a subsequent national COVID-19 immunisation programme by establishing a dynamic infrastructure capable of responding rapidly to target appropriate cohorts across the whole population of England.",
+     "expected_output": "The system provides a Business Intelligence (BI) solution using Microsoft Power-BI which allows comprehensive dashboarding and analysis of the vaccination programme in real time.  \n\nThis service is an integral part of the call/recall process and drives initiatives to increase uptake.  Dashboards will be provided at national, regional, STP, local authority, ICS/P or GP practice level and in each case will only cover statistics for the citizens covered at that area.",
+     "objective": "The purpose of the dissemination is to support the NHS England national call/recall for flu vaccination programme. The dissemination will provide Ethic category data to link to their existing systems.   \n \nEthnic category is required for:\n•\tRisk stratification of COVID patients to identify those at high risk of complications\n•\tManagement reporting for flu/COVID vaccinations to address health inequalities\n•\tThe management of the flu vaccinations is vital to ensure that the COVID vaccination programme can proceed efficiently and the two are linked by the time period required inbetween an individual taking the flu vaccination and the first COVID vaccination. The two processes are intrinsically linked and the provision of ethnic category data is vital to both.\n\nEthnic category is required for the flu vaccination element to ensure that there is optimal coverage of uptake of the vaccine across the population.  Reporting on uptake by ethic category will allow the system to manage the vaccine programme.\n\nOptimal management of the flu vaccine programme is important to help manage the national covid pandemic to try and prevent a double peak for both flu and Covid.  The management of the flu vaccine has implications on the management of any Covid vaccine in that anyone who has had a flu vaccine may not then receive a COVID-19 vaccine within a certain time period and so the management of the two together is essential.\n\nCertain ethnic groups have been connected  with increased morbidity and mortality in cases of CV19 and optimal uptake in these populations would be desirable if and when a CV vaccine is available.\n\nIt is essential that the two programmes are coordinated to accommodate the developing characteristics of the pandemic, and any interfaces between the vaccines, and their delivery processes as they are established. \n\nData disseminated under this agreement will not be used for performance management purposes.",
+     "organisation": "HEALTH & SOCIAL CARE INFORMATION CENTRE",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2021-01-18",
+     "sublicensing": "No",
+     "title": "Flu – Vaccination Programme – Ethnic Category information for secondary uses",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "1.2"
+  }
+ ]
+}

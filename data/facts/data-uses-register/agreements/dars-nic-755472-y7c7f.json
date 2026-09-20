@@ -1,0 +1,79 @@
+{
+ "base_reference": "DARS-NIC-755472-Y7C7F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-755472-Y7C7F-v0.6",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will share data with CQC via the Unified Data Access Layer (UDAL) data share*. UDAL is a data management system within NHS England that enables patient data to be processed and made available for analytical purposes. \n\n*The data will be shared via the \"Data Share\" Service. This entails a data provider (NHS England UDAL) and a data consumer (CQCs Enterprise data platform), where the provider (NHS England) is in control of who receives data, when it is updated and how frequently. \n\nThe Data will be stored on servers at NHS England (UDAL) and CQC (based in the UK)\n\nCQC stores data on the cloud provided by Microsoft Limited.\n\nThe Data will be accessed by authorised personnel via remote access.  \n\nCQC must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThe Data will not leave the UK at any time.\n\nThere will be no attempt to re-identify individuals with the sole exception of trusts using Local Patient Identifier to identify patients whose care appears problematic where strictly necessary.\n\nData will be stored in a dedicated and separate database ensuring physical separation from identifiable data held by CQC (received via a separate data sharing agreement). The measures in place are established to mitigate the risk of re-identification and ensure compliance with data protection standards. \n\nSuppression methodology:\n\n- Where data is shared with health and care providers, CQC would be sharing their own data with them so there would be no increased risk to confidentiality through the disclosure and the data would be shared under strict controls, with CQC giving a clear direction that the provider should not publish or otherwise onwardly share the data. If, hypothetically, the provider chose to subsequently share/publish the data contrary to CQC’s direction, the individual trust/provider would be making that decision on its own data.\n\n- Where insight reports are subsequently shared with other arms-length bodies, CQC would work with these partners bodies to emphasise they must not be published because of NHS England suppression methodologies.\n\n- For any data shared with care providers or arms-length bodies, CQC will adhere to the following measures to limit identifiability of individuals in the data:\n\nIn place of the different NHS England suppression methodologies for HES and MHSDS, CQC will carry out the below process when dealing with publications for circulation internally within CQC or externally with care providers or arms-length bodies partnering CQC:\n\n- Zero allowed, 1-7 suppressed with '*', no rounding of values\n- Percentages will be based on raw data; where low number values can be deduced from denominator, percentages will be suppressed.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "CARE QUALITY COMMISSION (CQC)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Community Services Data Set (CSDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2026-08-22",
+     "expected_benefits": "The analysis of these datasets are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the study.\n\nPatients and the wider public will see improvements in the care, treatment, and experience of health care users of services across the NHS.\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will add to the body of evidence that is considered by the bodies, organisations and individual care practitioners charged with making policy decisions for or within the NHS or treatment decisions in relation to specific patients.  \n\nStakeholders will need to act based on the information provided to them to realise the potential improvement opportunities in their respective organisations.  For example, care home providers will be able to assess their own performance against best practices.\n\nCQC publishes the State of Care, an annual assessment of health care and social care in England. The report looks at the trends, shares examples of good and outstanding care, and highlights where care needs to improve. \n\nHES, MHSDS, ECDS and associated data are used to determine key performance indicators in the CQC insight products. Each indicator is categorised in one of the core domains that, in total, provide a view on the quality of the provision of care\n\nCQC has a suite of insight products which help the planning and review stages of an inspection that seeks to highlight areas of poor care requiring improvement while also seeking to promote good practice. The products use data (HES and/ or MHSDS as appropriate) both to present an overview of the core business of the trust in terms of activity ʹhelping to determine the specialist requirements of the inspection team - while also including specific metrics (e.g. HES re-admissions as descriptive statistics). CSDS + ECDS will be used for the same purposes to generate similar outputs.\n\nHES and MHSDS and associated data are used in analyses for thematic reviews and in the development of new CQC insight indicators; for example, in reviewing quality of access to care across different ethnicities. CSDS + ECDS will be used for the same purposes to generate similar outputs.\n\nCQC insight and associated dashboards are regularly updated. Outlier analyses are undertaken on a monthly or two-monthly basis. National reporting is a combination of predominantly annual reports as well as topic-specific reports released on a one-off basis.\n\nWhere CQC identifies poor care, or where the standards of registration are not being met, CQC can use its enforcement policy as described above.  Such action is targeted to drive improvements or, in extreme cases, protect the public from access to poor quality services.",
+     "expected_output": "Outputs would be indicators to inform CQC assessment, risk, and contextual information for operational staff. Other outputs to include information for State of Care and other statutory reporting.\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n \nThe outputs will be communicated to relevant recipients through the following dissemination channels:  \n•\tPublic reports\n\nOn-going produced outputs include:\n\n- data indicators that align to CQC's assessment framework for that sector \n- bringing together information from people who use services, knowledge from CQC’s inspections and data from CQC’s partners\n- outputs and reports indicating where the risk to the quality of care provided is greatest\n- monitors change over time for each of the measures\n- points to services where the quality may be improving\n\nOutputs are produced on an ongoing basis and shared with the specific provider as well as granting access to key arms-length partners; for example, NHS England. This is aggregate information with small numbers suppressed in line with the suppression rules as specified in processing activities.",
+     "objective": "This Data Sharing Agreement (DSA) is to establish and facilitate a collaborative initiative between the Care Quality Commission (CQC) and NHS England to conduct a pilot project. \n\nThe primary purpose of this project is to evaluate and test the Unified Data Access Layer (\"UDAL\") as an effective and efficient system for data sharing between CQC and NHS England.\n\nCQC is requesting data that is critical to its regulatory oversight of health and care providers. CQC’s remit is to make sure health and adult social care services provide people with safe, effective, compassionate, high-quality care and CQC encourages them to improve.\n\nAccess to these data help to ensure CQC can make use of its wide set of powers to protect people who use regulated services from harm and the risk of harm, and to ensure they receive health and social care services of an appropriate standard. These powers also hold registered providers and managers to account for failures in how the service is provided. CQC's enforcement policy sets out CQC's approach to taking action where CQC identify poor care, or where registered providers and managers do not meet the standards required in the regulations.\n\nThe following NHS England Data will be accessed: \n\n•\tCommunity Services Data Set (CSDS)  \n•\tEmergency Care Data Set (ECDS)  \n•\tHospital Episode Statistics Admitted Patient Care (HES APC)  \n•\tHospital Episode Statistics Critical Care (HES Critical Care)  \n•\tHospital Episode Statistics Outpatients (HES OP)  \n•\tMental Health Services Data Set (MHSDS)  \n\nCQC use these data in the following ways:\n-        to populate indicators within their Data & Insight Unit products and associated dashboards, to support prioritisation of regulatory activity (including inspections) and to inform judgements about the level of quality in services\n-        towards CQC's statutory role of monitoring the Mental Health Act and protecting the interests of people whose rights are restricted under the Act;\n-        in thematic reviews and national reporting; for example, the Annual State of Care report and\n-        to support the development and implementation of CQC’s remit to assess ICSs and Local Authorities (with respect to health and care responsibilities).\n\nThe level of data will be:\n•\tPseudonymised\n\nLocal Patient Identifier is required, it is occasionally necessary to identify to a trust examples of their own patients whose care appears problematical  'Local patient identifier' is used as the Token Person ID is not known to the trust. \n\nThe Data will be minimised as follows:\n•\tLimited to data between 2014 and latest available.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(i) - processing is necessary for reasons of public interest in the area of public health in that CQC’s remit is to make sure that health and adult social care services provide people with safe, effective, compassionate, high-quality care. \n\nAs per the Information Commissioner’s Officer (ICO) guidance; if an organisation is relying on Article 9(2)(i), they also need to meet the associated condition in UK law, set out in Part 1 of Schedule 1 of the DPA 2018. For Public health, this condition is met if the processing is necessary for reasons of public interest in the area of public health which for CQCs remit it is.\n\nMicrosoft Limited is a processor acting under the instructions of CQC. Microsoft Limited role is limited to cloud storage (Microsoft Azure).\n\nData will be accessed by:\n•\tSubstantive employees of CQC\n•\tNon-substantive employees (Contractors)\n\nWhere CQC use non-substantive employees (contractors), CQC include confidentiality clauses within contracts and obliges individuals to complete in-house training on data protection and confidentiality.",
+     "organisation": "CARE QUALITY COMMISSION (CQC)",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2024-08-23",
+     "sublicensing": "No",
+     "title": "NHSE UDAL - CQC",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.6"
+  }
+ ]
+}

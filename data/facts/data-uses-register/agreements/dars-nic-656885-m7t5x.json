@@ -1,0 +1,931 @@
+{
+ "base_reference": "DARS-NIC-656885-M7T5X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-656885-M7T5X-v1.2",
+   "states": [
+    {
+     "activities": "It is imperative that individuals in any routine non-cancer datasets in CORECT-R cannot be \ndirectly identified. Our data management and data flows are designed to prevent identification by \nundertaking linkage using a secure pseudonymisation process. Extracts of non-cancer data will be \nspecified from the relevant data source and their unique identifier (such as their NHS number) will \nbe put through a cryptographic ‘salt’ process. It is possible that there may be some overlap \nbetween the non-cancer dataset and the cancer dataset (for example, if we seek to find all who \nhave undergone a colonoscopy there will be some individuals within the population where a \ncancer was found and so known to CORECT-R already). As such, the identifiers of cancer \npatients will also be put through the same cryptographic ‘salt’ process. When the two datasets are \naligned the colorectal cancer patients within the full population will be identifiable as they will \nboth have the same salted key. For those without cancer only the resulting encrypted identifier \n(and the relevant clinical detail) will be accessible to the CORECT-R data managers. The salt ‘key \nkeepers’ will be nominated staff within the relevant data controller’s organisation and \nseparate from the CORECT-R data management team. This will remove the possibility of the \nCORECT-R team being able to ascertain the identity of those without cancer",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registry",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2024-03-17",
+     "expected_benefits": "The aim of the research is to improve bowel cancer treatment and care across the UK through identifying areas of poor practice and opportunities for improvement. It will do this by creating a data research platform, known as CORECT-R which will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials",
+     "objective": "The UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and \noutcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community.\n\nThe research team will access cancer registration data collated by the National Cancer Registration and Analysis Service (NCRAS; the national cancer registry in \nEngland) about all people who have been diagnosed with bowel cancer since 01 April 1997. This health data will include detailed information about each person: \n• (such as their age, ethnicity and the area they live in);\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and \nradiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets to build CORECT-R and support researchers to ask important questions about bowel cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2023-02-03",
+     "sublicensing": "No",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "It is imperative that individuals in any routine non-cancer datasets in CORECT-R cannot be \ndirectly identified. Our data management and data flows are designed to prevent identification by \nundertaking linkage using a secure pseudonymisation process. Extracts of non-cancer data will be \nspecified from the relevant data source and their unique identifier (such as their NHS number) will \nbe put through a cryptographic ‘salt’ process. It is possible that there may be some overlap \nbetween the non-cancer dataset and the cancer dataset (for example, if we seek to find all who \nhave undergone a colonoscopy there will be some individuals within the population where a \ncancer was found and so known to CORECT-R already). As such, the identifiers of cancer \npatients will also be put through the same cryptographic ‘salt’ process. When the two datasets are \naligned the colorectal cancer patients within the full population will be identifiable as they will \nboth have the same salted key. For those without cancer only the resulting encrypted identifier \n(and the relevant clinical detail) will be accessible to the CORECT-R data managers. The salt ‘key \nkeepers’ will be nominated staff within the relevant data controller’s organisation and \nseparate from the CORECT-R data management team. This will remove the possibility of the \nCORECT-R team being able to ascertain the identity of those without cancer",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2024-03-17",
+     "expected_benefits": "The aim of the research is to improve bowel cancer treatment and care across the UK through identifying areas of poor practice and opportunities for improvement. It will do this by creating a data research platform, known as CORECT-R which will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials",
+     "objective": "The UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and \noutcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community.\n\nThe research team will access cancer registration data collated by the National Cancer Registration and Analysis Service (NCRAS; the national cancer registry in \nEngland) about all people who have been diagnosed with bowel cancer since 01 April 1997. This health data will include detailed information about each person: \n• (such as their age, ethnicity and the area they live in);\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and \nradiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets to build CORECT-R and support researchers to ask important questions about bowel cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2023-02-03",
+     "sublicensing": "No",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "It is imperative that individuals in any routine non-cancer datasets in CORECT-R cannot be \ndirectly identified. Our data management and data flows are designed to prevent identification by \nundertaking linkage using a secure pseudonymisation process. Extracts of non-cancer data will be \nspecified from the relevant data source and their unique identifier (such as their NHS number) will \nbe put through a cryptographic ‘salt’ process. It is possible that there may be some overlap \nbetween the non-cancer dataset and the cancer dataset (for example, if we seek to find all who \nhave undergone a colonoscopy there will be some individuals within the population where a \ncancer was found and so known to CORECT-R already). As such, the identifiers of cancer \npatients will also be put through the same cryptographic ‘salt’ process. When the two datasets are \naligned the colorectal cancer patients within the full population will be identifiable as they will \nboth have the same salted key. For those without cancer only the resulting encrypted identifier \n(and the relevant clinical detail) will be accessible to the CORECT-R data managers. The salt ‘key \nkeepers’ will be nominated staff within the relevant data controller’s organisation and \nseparate from the CORECT-R data management team. This will remove the possibility of the \nCORECT-R team being able to ascertain the identity of those without cancer",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2024-03-17",
+     "expected_benefits": "The aim of the research is to improve bowel cancer treatment and care across the UK through identifying areas of poor practice and opportunities for improvement. It will do this by creating a data research platform, known as CORECT-R which will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials",
+     "objective": "The UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and \noutcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community.\n\nThe research team will access cancer registration data collated by the National Cancer Registration and Analysis Service (NCRAS; the national cancer registry in \nEngland) about all people who have been diagnosed with bowel cancer since 01 April 1997. This health data will include detailed information about each person: \n• (such as their age, ethnicity and the area they live in);\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and \nradiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets to build CORECT-R and support researchers to ask important questions about bowel cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2023-02-03",
+     "sublicensing": "No",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "1.2"
+  },
+  {
+   "reference": "DARS-NIC-656885-M7T5X-v2.3",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from the NDRS datasets to the University of Oxford. The Data will \n· contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient\n\nArrow Business Communications stores Data on the Cloud provided by AIMES Trusted Research Environment\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n\n- Access controls granting users the minimum level of access required are in place;\n\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n\n- Multifactor authentication (MFA) is required for remote access;\n\n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThe Data will not leave: the UK at any time.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis. All analyses will use the pseudonymised dataset. There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\n\nIt is imperative that individuals in any routine non-cancer datasets in CORECT-R cannot be directly identified. Our data management and data flows are designed to prevent identification by undertaking linkage using a secure pseudonymisation process. Extracts of non-cancer data will be specified from the relevant data source and their unique identifier (such as their NHS number) will be put through a cryptographic ‘salt’ process. It is possible that there may be some overlap between the non-cancer dataset and the cancer dataset (for example, if we seek to find all who have undergone a colonoscopy there will be some individuals within the population where a cancer was found and so known to CORECT-R already). As such, the identifiers of cancer patients will also be put through the same cryptographic ‘salt’ process. When the two datasets are aligned the bowel cancer patients within the full population will be identifiable as they will both have the same salted key. For those without cancer only the resulting encrypted identifier (and the relevant clinical detail) will be accessible to the CORECT-R data managers. The salt ‘key keepers’ will be nominated staff within the relevant data controller’s organisation and separate from the CORECT-R data management team. This will remove the possibility of the CORECT-R team being able to ascertain the identity of those without cancer.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2025-06-23",
+     "expected_benefits": "Colorectal cancer is a major public health problem. Each year in the UK around 41,000 people are diagnosed with the disease and 16,000 die from it. High-quality data could improve colorectal cancer outcomes. Good intelligence underpins patient choice, helping individuals reduce the risk of disease and access the best care. It identifies and quantifies inequalities, improves the cost-effectiveness and quality of services, and supports cancer research. Unfortunately, the availability of such high-quality cancer intelligence has been limited. Research access to such datasets is often challenging due to the need to protect patient confidentiality.\n\nThe aim of CORECT-R is to link together all datasets in the UK relevant to colorectal caner and to promote their use to produce robust research and intelligence.  The first iteration of CORECT-R sought to overcome this by robustly linking and analysing multiple electronic health data sources relevant to colorectal cancer, once, in a secure environment. This work has helped to reduce duplication and increase data security whilst also promoting the creation of intelligence that will help earlier diagnosis, treatment optimisation, and support clinical research.\n\nThe aim of the research is to improve bowel cancer treatment and care across the UK through identifying areas of poor practice and opportunities for improvement. The programme will also help support all aspects of bowel cancer research from supporting earlier diagnosis, tackling inequalities, to optimising cancer research.",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials\n\nDelivery of these outputs is dependent on the provision of the latest available data release.  We understand the 2021 data cut is now available for the NDRS Cancer Registry data, hence we seek for a renewal of this dataset and all linked datasets.  A data specification is attached to this application, which details the inclusion and exclusion criteria for the cohort and events.",
+     "objective": "University of Oxford requires access to NHS England data for the purpose of the following research programme:: Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)\n\nThe following is a summary of the aims of the research programme provided by the University of Oxford:\n\n1. Bring together all relevant partners in the intelligence community. The Hub will include a directly engaged community of patients, charities, data providers, data users, scientists from non-traditional cancer disciplines, and policy makers. Together they will ensure that the colorectal cancer data are used appropriately, with maximum impact on outcomes.\n\n2. Achieve reliable, patient-level linkage of all administrative and electronic health datasets relevant to colorectal cancer within the UK. An unparalleled data resource will be generated that will increase the granularity of available intelligence and the depth of research that can be undertaken.\n\n3. Develop a system to ensure these data are handled with the highest standards of information governance but are as accessible as possible for robust service evaluation and research.\n\n4. Promote the use of these data to generate intelligence to drive improvements in colorectal cancer outcomes.\n\nThe UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and outcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community.\n\nThe research team will access cancer registration data collated by the National Disease Registration Service (NDRS; the national cancer registry in England) about all people who have been diagnosed with bowel cancer since 01 April 1997. This health data will include detailed information about each person: \n• (such as their age, ethnicity and the area they live in);\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and radiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets (including the linked Hospital Episode Statistics data) to build CORECT-R and support researchers to ask important questions about bowel cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.\n\nThe following NHS England Data will be accessed:\n\n· NDRS Cancer Registrations\n· NDRS Linked Cancer Waiting Times (Treatments Only)\n· NDRS Linked DIDs\n· NDRS Linked HES AE\n· NDRS Linked HES APC\n· NDRS Linked HES Outpatient\n· NDRS National Cancer Patient Experience Survey (CPES)\n· NDRS National Radiotherapy Dataset (RTDS)\n· NDRS Rapid Cancer Registrations\n· NDRS Somatic Molecular Dataset\n· NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n· Post Colonoscopy Colorectal Cancer (PCCRC) Audit \n\nThe level of the Data will be:\n· Pseudonymised\n\nThe Data will be minimised as follows:\n· Limited to a study cohort identified by NHS England as meeting the following criteria: All people who have been diagnosed with Bowel Cancer since 01 April 1997.\n\nThe University of Oxford is the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(i) - Public interest in the area of public health\n\nThe funding is provided by Cancer Research UK The funding is specifically for the programme described. Funding is in place until 31/03/2025. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nARROW Business Communications Ltd (ARO) provides hosting services to the University of Oxford and will store the Data as contracted by the University of Oxford.  ARO provides the AIMES Trusted Research Environment (TRE) which is a “Cloud” based Data Safe Haven for safe storage and secure access to research data. The service was provided by AIMES Management Services Limited and it was then integrated into Arrow Business Communications Limited, Trading under the brand name ARO. \n\nThe Expert Advisory Group (EAG) oversees CORECT-R and provide it with strategic direction. Their responsibilities include:\n• Making decisions about the priority of data to be incorporated in CORECT-R.\n• Giving direction to the Hub’s funded researchers regarding which exemplar projects to pursue.\n• Overseeing the UK Colorectal Cancer Intelligence Hub Access Committee.\n• Overseeing the dissemination of the intelligence generated by the UK Colorectal Cancer Intelligence Hub.\n\nVolunteers from the EAG and a Patient Public Group (PPG) will sit on the UK Colorectal Cancer Intelligence Hub Access Committee. This committee meets regularly and has between 4 and 6 members who are responsible for overseeing access to data inside the CORECT-R resource.\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research. The group supported the collection of the data for the purposes described above. This is composed of independent advocates who engage with and represent the general public, those at high risk of developing colorectal cancer, and people with the disease. This group are offered a programme of training and support to inform them about the data available, all its potential uses and the current controversies relating to colorectal cancer management and outcome. The PPG works closely with the Expert Advisory Group (EAG) and the academic team to ensure the views of patients and the public are fully represented.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2024-06-24",
+     "sublicensing": "No",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": "To date, 35 projects have been approved to use CORECT-R (project summaries are available at https://www.ndph.ox.ac.uk/corectr/projects).  Many of these projects have published results to inform policy, care and future research.  A key example of yielded benefits is the project titled \"Variation in post-colonoscopy colorectal cancer across colonoscopy providers in the English National Health Service: A population-based cohort study\".\n\nPublic project description: https://www.ndph.ox.ac.uk/corectr/projects/variation-in-post-colonoscopy-colorectal-cancer-across-colonoscopy-providers-in-the-english-national-health-service-a-population-based-cohort-study-2013-update \n\nBritish Medical Journal paper: https://www.bmj.com/content/367/bmj.l6090 \n\nPress release: https://bci.leeds.ac.uk/?page_id=697&preview=true \n\nPlain language summary: https://bci.leeds.ac.uk/get-involved/publications/ \n\nAround 40,000 people are diagnosed with bowel cancer every year in England. As well as being the main test to detect cancer, colonoscopies can also prevent cancer. Unfortunately, colonoscopies are not perfect and sometimes a person develops bowel cancer after having a colonoscopy. This is referred to as a post-colonoscopy colorectal cancer (PCCRC). This work showed rates of PCCRC were lowest in those performed as part of the Bowel Cancer Screening Programme. Colonoscopies performed at private providers for the NHS had much higher rates. This work has directly benefited patient care by enabling many colonoscopy providers to improve their practice (providers were informed of their rate in relation to other providers and given a mechanism to identify their PCCRC cases for audit). The work has also directly informed the Post Colonoscopy Colorectal Cancer Audit, https://www.bsg.org.uk/clinical-resource/more-information-about-the-national-post-colonoscopy-colorectal-cancer-pccrc-audit/"
+    }
+   ],
+   "version": "2.3"
+  },
+  {
+   "reference": "DARS-NIC-656885-M7T5X-v3.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from the NDRS datasets to the University of Oxford. The Data will \n· contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient\n\nArrow Business Communications stores Data on the Cloud provided by AIMES Trusted Research Environment\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n\n- Access controls granting users the minimum level of access required are in place;\n\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n\n- Multifactor authentication (MFA) is required for remote access;\n\n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThe Data will not leave: the UK at any time.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis. All analyses will use the pseudonymised dataset. There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\n\nIt is imperative that individuals in any routine non-cancer datasets in CORECT-R cannot be directly identified. Our data management and data flows are designed to prevent identification by undertaking linkage using a secure pseudonymisation process. Extracts of non-cancer data will be specified from the relevant data source and their unique identifier (such as their NHS number) will be put through a cryptographic ‘salt’ process. It is possible that there may be some overlap between the non-cancer dataset and the cancer dataset (for example, if we seek to find all who have undergone a colonoscopy there will be some individuals within the population where a cancer was found and so known to CORECT-R already). As such, the identifiers of cancer patients will also be put through the same cryptographic ‘salt’ process. When the two datasets are aligned the bowel cancer patients within the full population will be identifiable as they will both have the same salted key. For those without cancer only the resulting encrypted identifier (and the relevant clinical detail) will be accessible to the CORECT-R data managers. The salt ‘key keepers’ will be nominated staff within the relevant data controller’s organisation and separate from the CORECT-R data management team. This will remove the possibility of the CORECT-R team being able to ascertain the identity of those without cancer.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Pathway",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2025-06-23",
+     "expected_benefits": "Colorectal cancer is a major public health problem. Each year in the UK around 41,000 people are diagnosed with the disease and 16,000 die from it. High-quality data could improve colorectal cancer outcomes. Good intelligence underpins patient choice, helping individuals reduce the risk of disease and access the best care. It identifies and quantifies inequalities, improves the cost-effectiveness and quality of services, and supports cancer research. Unfortunately, the availability of such high-quality cancer intelligence has been limited. Research access to such datasets is often challenging due to the need to protect patient confidentiality.\n\nThe aim of CORECT-R is to link together all datasets in the UK relevant to colorectal caner and to promote their use to produce robust research and intelligence.  The first iteration of CORECT-R sought to overcome this by robustly linking and analysing multiple electronic health data sources relevant to colorectal cancer, once, in a secure environment. This work has helped to reduce duplication and increase data security whilst also promoting the creation of intelligence that will help earlier diagnosis, treatment optimisation, and support clinical research.\n\nThe aim of the research is to improve bowel cancer treatment and care across the UK through identifying areas of poor practice and opportunities for improvement. The programme will also help support all aspects of bowel cancer research from supporting earlier diagnosis, tackling inequalities, to optimising cancer research.",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials\n\nDelivery of these outputs is dependent on the provision of the latest available data release.  We understand the 2021 data cut is now available for the NDRS Cancer Registry data, hence we seek for a renewal of this dataset and all linked datasets.  A data specification is attached to this application, which details the inclusion and exclusion criteria for the cohort and events.",
+     "objective": "University of Oxford requires access to NHS England data for the purpose of the following research programme:: Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)\n\nThe following is a summary of the aims of the research programme provided by the University of Oxford:\n\n1. Bring together all relevant partners in the intelligence community. The Hub will include a directly engaged community of patients, charities, data providers, data users, scientists from non-traditional cancer disciplines, and policy makers. Together they will ensure that the colorectal cancer data are used appropriately, with maximum impact on outcomes.\n\n2. Achieve reliable, patient-level linkage of all administrative and electronic health datasets relevant to colorectal cancer within the UK. An unparalleled data resource will be generated that will increase the granularity of available intelligence and the depth of research that can be undertaken.\n\n3. Develop a system to ensure these data are handled with the highest standards of information governance but are as accessible as possible for robust service evaluation and research.\n\n4. Promote the use of these data to generate intelligence to drive improvements in colorectal cancer outcomes.\n\nThe UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and outcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community.\n\nThe research team will access cancer registration data collated by the National Disease Registration Service (NDRS; the national cancer registry in England) about all people who have been diagnosed with bowel cancer since 01 April 1997. This health data will include detailed information about each person: \n• (such as their age, ethnicity and the area they live in);\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and radiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets (including the linked Hospital Episode Statistics data) to build CORECT-R and support researchers to ask important questions about bowel cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.\n\nThe following NHS England Data will be accessed:\n\n· NDRS Cancer Pathway\n· NDRS Cancer Registrations\n· NDRS Linked Cancer Waiting Times (Treatments Only)\n· NDRS Linked DIDs\n· NDRS Linked HES AE\n· NDRS Linked HES APC\n· NDRS Linked HES Outpatient\n· NDRS National Cancer Patient Experience Survey (CPES)\n· NDRS National Radiotherapy Dataset (RTDS)\n· NDRS Rapid Cancer Registrations\n· NDRS Somatic Molecular Dataset\n· NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n· Post Colonoscopy Colorectal Cancer (PCCRC) Audit \n\nThe level of the Data will be:\n· Pseudonymised\n\nThe Data will be minimised as follows:\n· Limited to a study cohort identified by NHS England as meeting the following criteria: All people who have been diagnosed with Bowel Cancer since 01 April 1997.\n\nThe University of Oxford is the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(i) - Public interest in the area of public health\n\nThe funding is provided by Cancer Research UK The funding is specifically for the programme described. Funding is in place until 31/03/2025. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nARROW Business Communications Ltd (ARO) provides hosting services to the University of Oxford and will store the Data as contracted by the University of Oxford.  ARO provides the AIMES Trusted Research Environment (TRE) which is a “Cloud” based Data Safe Haven for safe storage and secure access to research data. The service was provided by AIMES Management Services Limited and it was then integrated into Arrow Business Communications Limited, Trading under the brand name ARO. \n\nThe Expert Advisory Group (EAG) oversees CORECT-R and provide it with strategic direction. Their responsibilities include:\n• Making decisions about the priority of data to be incorporated in CORECT-R.\n• Giving direction to the Hub’s funded researchers regarding which exemplar projects to pursue.\n• Overseeing the UK Colorectal Cancer Intelligence Hub Access Committee.\n• Overseeing the dissemination of the intelligence generated by the UK Colorectal Cancer Intelligence Hub.\n\nVolunteers from the EAG and a Patient Public Group (PPG) will sit on the UK Colorectal Cancer Intelligence Hub Access Committee. This committee meets regularly and has between 4 and 6 members who are responsible for overseeing access to data inside the CORECT-R resource.\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research. The group supported the collection of the data for the purposes described above. This is composed of independent advocates who engage with and represent the general public, those at high risk of developing colorectal cancer, and people with the disease. This group are offered a programme of training and support to inform them about the data available, all its potential uses and the current controversies relating to colorectal cancer management and outcome. The PPG works closely with the Expert Advisory Group (EAG) and the academic team to ensure the views of patients and the public are fully represented.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2024-10-11",
+     "sublicensing": "No",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": "To date, 35 projects have been approved to use CORECT-R (project summaries are available at https://www.ndph.ox.ac.uk/corectr/projects).  Many of these projects have published results to inform policy, care and future research.  A key example of yielded benefits is the project titled \"Variation in post-colonoscopy colorectal cancer across colonoscopy providers in the English National Health Service: A population-based cohort study\".\n\nPublic project description: https://www.ndph.ox.ac.uk/corectr/projects/variation-in-post-colonoscopy-colorectal-cancer-across-colonoscopy-providers-in-the-english-national-health-service-a-population-based-cohort-study-2013-update \n\nBritish Medical Journal paper: https://www.bmj.com/content/367/bmj.l6090 \n\nPress release: https://bci.leeds.ac.uk/?page_id=697&preview=true \n\nPlain language summary: https://bci.leeds.ac.uk/get-involved/publications/ \n\nAround 40,000 people are diagnosed with bowel cancer every year in England. As well as being the main test to detect cancer, colonoscopies can also prevent cancer. Unfortunately, colonoscopies are not perfect and sometimes a person develops bowel cancer after having a colonoscopy. This is referred to as a post-colonoscopy colorectal cancer (PCCRC). This work showed rates of PCCRC were lowest in those performed as part of the Bowel Cancer Screening Programme. Colonoscopies performed at private providers for the NHS had much higher rates. This work has directly benefited patient care by enabling many colonoscopy providers to improve their practice (providers were informed of their rate in relation to other providers and given a mechanism to identify their PCCRC cases for audit). The work has also directly informed the Post Colonoscopy Colorectal Cancer Audit, https://www.bsg.org.uk/clinical-resource/more-information-about-the-national-post-colonoscopy-colorectal-cancer-pccrc-audit/"
+    },
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from the NDRS datasets to the University of Oxford. The Data will \n· contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient\n\nArrow Business Communications stores Data on the Cloud provided by AIMES Trusted Research Environment\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n\n- Access controls granting users the minimum level of access required are in place;\n\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n\n- Multifactor authentication (MFA) is required for remote access;\n\n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nThe Data will not leave: the UK at any time.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe identifying details will be stored in a separate database to the linked dataset used for analysis. All analyses will use the pseudonymised dataset. There will be no requirement and no attempt to reidentify individuals when using the pseudonymised dataset.\n\nIt is imperative that individuals in any routine non-cancer datasets in CORECT-R cannot be directly identified. Our data management and data flows are designed to prevent identification by undertaking linkage using a secure pseudonymisation process. Extracts of non-cancer data will be specified from the relevant data source and their unique identifier (such as their NHS number) will be put through a cryptographic ‘salt’ process. It is possible that there may be some overlap between the non-cancer dataset and the cancer dataset (for example, if we seek to find all who have undergone a colonoscopy there will be some individuals within the population where a cancer was found and so known to CORECT-R already). As such, the identifiers of cancer patients will also be put through the same cryptographic ‘salt’ process. When the two datasets are aligned the bowel cancer patients within the full population will be identifiable as they will both have the same salted key. For those without cancer only the resulting encrypted identifier (and the relevant clinical detail) will be accessible to the CORECT-R data managers. The salt ‘key keepers’ will be nominated staff within the relevant data controller’s organisation and separate from the CORECT-R data management team. This will remove the possibility of the CORECT-R team being able to ascertain the identity of those without cancer.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Pathway",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2025-06-23",
+     "expected_benefits": "Colorectal cancer is a major public health problem. Each year in the UK around 41,000 people are diagnosed with the disease and 16,000 die from it. High-quality data could improve colorectal cancer outcomes. Good intelligence underpins patient choice, helping individuals reduce the risk of disease and access the best care. It identifies and quantifies inequalities, improves the cost-effectiveness and quality of services, and supports cancer research. Unfortunately, the availability of such high-quality cancer intelligence has been limited. Research access to such datasets is often challenging due to the need to protect patient confidentiality.\n\nThe aim of CORECT-R is to link together all datasets in the UK relevant to colorectal caner and to promote their use to produce robust research and intelligence.  The first iteration of CORECT-R sought to overcome this by robustly linking and analysing multiple electronic health data sources relevant to colorectal cancer, once, in a secure environment. This work has helped to reduce duplication and increase data security whilst also promoting the creation of intelligence that will help earlier diagnosis, treatment optimisation, and support clinical research.\n\nThe aim of the research is to improve bowel cancer treatment and care across the UK through identifying areas of poor practice and opportunities for improvement. The programme will also help support all aspects of bowel cancer research from supporting earlier diagnosis, tackling inequalities, to optimising cancer research.",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials\n\nDelivery of these outputs is dependent on the provision of the latest available data release.  We understand the 2021 data cut is now available for the NDRS Cancer Registry data, hence we seek for a renewal of this dataset and all linked datasets.  A data specification is attached to this application, which details the inclusion and exclusion criteria for the cohort and events.",
+     "objective": "University of Oxford requires access to NHS England data for the purpose of the following research programme:: Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)\n\nThe following is a summary of the aims of the research programme provided by the University of Oxford:\n\n1. Bring together all relevant partners in the intelligence community. The Hub will include a directly engaged community of patients, charities, data providers, data users, scientists from non-traditional cancer disciplines, and policy makers. Together they will ensure that the colorectal cancer data are used appropriately, with maximum impact on outcomes.\n\n2. Achieve reliable, patient-level linkage of all administrative and electronic health datasets relevant to colorectal cancer within the UK. An unparalleled data resource will be generated that will increase the granularity of available intelligence and the depth of research that can be undertaken.\n\n3. Develop a system to ensure these data are handled with the highest standards of information governance but are as accessible as possible for robust service evaluation and research.\n\n4. Promote the use of these data to generate intelligence to drive improvements in colorectal cancer outcomes.\n\nThe UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and outcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community.\n\nThe research team will access cancer registration data collated by the National Disease Registration Service (NDRS; the national cancer registry in England) about all people who have been diagnosed with bowel cancer since 01 April 1997. This health data will include detailed information about each person: \n• (such as their age, ethnicity and the area they live in);\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and radiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets (including the linked Hospital Episode Statistics data) to build CORECT-R and support researchers to ask important questions about bowel cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.\n\nThe following NHS England Data will be accessed:\n\n· NDRS Cancer Pathway\n· NDRS Cancer Registrations\n· NDRS Linked Cancer Waiting Times (Treatments Only)\n· NDRS Linked DIDs\n· NDRS Linked HES AE\n· NDRS Linked HES APC\n· NDRS Linked HES Outpatient\n· NDRS National Cancer Patient Experience Survey (CPES)\n· NDRS National Radiotherapy Dataset (RTDS)\n· NDRS Rapid Cancer Registrations\n· NDRS Somatic Molecular Dataset\n· NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n· Post Colonoscopy Colorectal Cancer (PCCRC) Audit \n\nThe level of the Data will be:\n· Pseudonymised\n\nThe Data will be minimised as follows:\n· Limited to a study cohort identified by NHS England as meeting the following criteria: All people who have been diagnosed with Bowel Cancer since 01 April 1997.\n\nThe University of Oxford is the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(i) - Public interest in the area of public health\n\nThe funding is provided by Cancer Research UK The funding is specifically for the programme described. Funding is in place until 31/03/2025. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nARROW Business Communications Ltd (ARO) provides hosting services to the University of Oxford and will store the Data as contracted by the University of Oxford.  ARO provides the AIMES Trusted Research Environment (TRE) which is a “Cloud” based Data Safe Haven for safe storage and secure access to research data. The service was provided by AIMES Management Services Limited and it was then integrated into Arrow Business Communications Limited, Trading under the brand name ARO. \n\nThe Expert Advisory Group (EAG) oversees CORECT-R and provide it with strategic direction. Their responsibilities include:\n• Making decisions about the priority of data to be incorporated in CORECT-R.\n• Giving direction to the Hub’s funded researchers regarding which exemplar projects to pursue.\n• Overseeing the UK Colorectal Cancer Intelligence Hub Access Committee.\n• Overseeing the dissemination of the intelligence generated by the UK Colorectal Cancer Intelligence Hub.\n\nVolunteers from the EAG and a Patient Public Group (PPG) will sit on the UK Colorectal Cancer Intelligence Hub Access Committee. This committee meets regularly and has between 4 and 6 members who are responsible for overseeing access to data inside the CORECT-R resource.\n\nA Public and Patient Involvement and Engagement group helped refine the purpose of the research. The group supported the collection of the data for the purposes described above. This is composed of independent advocates who engage with and represent the general public, those at high risk of developing colorectal cancer, and people with the disease. This group are offered a programme of training and support to inform them about the data available, all its potential uses and the current controversies relating to colorectal cancer management and outcome. The PPG works closely with the Expert Advisory Group (EAG) and the academic team to ensure the views of patients and the public are fully represented.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2024-10-11",
+     "sublicensing": "Yes",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": "To date, 35 projects have been approved to use CORECT-R (project summaries are available at https://www.ndph.ox.ac.uk/corectr/projects).  Many of these projects have published results to inform policy, care and future research.  A key example of yielded benefits is the project titled \"Variation in post-colonoscopy colorectal cancer across colonoscopy providers in the English National Health Service: A population-based cohort study\".\n\nPublic project description: https://www.ndph.ox.ac.uk/corectr/projects/variation-in-post-colonoscopy-colorectal-cancer-across-colonoscopy-providers-in-the-english-national-health-service-a-population-based-cohort-study-2013-update \n\nBritish Medical Journal paper: https://www.bmj.com/content/367/bmj.l6090 \n\nPress release: https://bci.leeds.ac.uk/?page_id=697&preview=true \n\nPlain language summary: https://bci.leeds.ac.uk/get-involved/publications/ \n\nAround 40,000 people are diagnosed with bowel cancer every year in England. As well as being the main test to detect cancer, colonoscopies can also prevent cancer. Unfortunately, colonoscopies are not perfect and sometimes a person develops bowel cancer after having a colonoscopy. This is referred to as a post-colonoscopy colorectal cancer (PCCRC). This work showed rates of PCCRC were lowest in those performed as part of the Bowel Cancer Screening Programme. Colonoscopies performed at private providers for the NHS had much higher rates. This work has directly benefited patient care by enabling many colonoscopy providers to improve their practice (providers were informed of their rate in relation to other providers and given a mechanism to identify their PCCRC cases for audit). The work has also directly informed the Post Colonoscopy Colorectal Cancer Audit, https://www.bsg.org.uk/clinical-resource/more-information-about-the-national-post-colonoscopy-colorectal-cancer-pccrc-audit/"
+    }
+   ],
+   "version": "3.2"
+  },
+  {
+   "reference": "DARS-NIC-656885-M7T5X-v4.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from their datasets to the University of Oxford. The Data will \n· contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nARO stores Data on the Cloud via their Trusted Research Environment.\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n- Access controls granting users the minimum level of access required are in place;\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n- Multifactor authentication (MFA) is required for remote access;\n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within the UK.  The data will not leave UK at any time. \n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThere will be no requirement and no attempt to re-identify individuals when using the pseudonymised dataset",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Pathway",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2026-03-05",
+     "expected_benefits": "Colorectal cancer is a major public health problem. Each year in the UK around 41,000 people are diagnosed with the disease and 16,000 die from it. High-quality data could improve colorectal cancer outcomes. Good intelligence underpins patient choice, helping individuals reduce the risk of disease and access the best care. It identifies and quantifies inequalities, improves the cost-effectiveness and quality of services, and supports cancer research. Unfortunately, the availability of such high-quality cancer intelligence has been limited. Research access to such datasets is often challenging due to the need to protect patient confidentiality.\n\nThe aim of CORECT-R is to link together datasets relevant to colorectal cancer and to promote their use to produce robust research and intelligence.  The first iteration of CORECT-R sought to overcome this by robustly linking and analysing multiple electronic health data sources relevant to colorectal cancer, once, in a secure environment. This work has helped to reduce duplication and increase data security whilst also promoting the creation of intelligence that will help earlier diagnosis, treatment optimisation, and support clinical research.\n\nThe aim of the research is to improve bowel cancer treatment and care through identifying areas of poor practice and opportunities for improvement. The programme will also help support all aspects of bowel cancer research from supporting earlier diagnosis, tackling inequalities, to optimising cancer research",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.",
+     "objective": "The University of Oxford requires access to NHS England data for the purpose of the following research programme:\n\n Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249). As part of the programme, the University of Oxford is collaborating with the University of Edinburgh and the University of Leeds. For example, with advice from the University of Oxford, the University of Edinburgh has established a separate Scottish CORECT-R. However, with regard to the processing of data under this agreement, only the University of Oxford determines the purposes and means. Researchers from the University of Edinburgh and the University of Leeds, who wish to access data from this agreement, have to comply with the same sublicensing conditions as any other researcher that does not belong to the University of Oxford.\n\nThe UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and outcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community. \n\nResearchers and research students will access cancer registration data collated by the National Disease Registration Service (NDRS; the national cancer registry in England) and other NHS England datasets about all people who have been diagnosed with bowel and anal cancer since 01 April 1997. This health data will include detailed information about each person: \n• their age, ethnicity and the area they live in;\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and radiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets (including the linked Hospital Episode Statistics data) to build CORECT-R and then used by researchers to ask important questions about bowel and anal cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer via a Trusted Research Environment (TRE) with appropriate sub-licensing. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.\n\nThe following NHS England Data will be accessed:\n\n· NDRS Cancer Pathway\n· NDRS Cancer Registrations\n· NDRS Linked Cancer Waiting Times (Treatments Only)\n· NDRS Linked DIDs\n· NDRS Linked HES AE\n· NDRS Linked HES APC\n· NDRS Linked HES Outpatient\n· NDRS National Cancer Patient Experience Survey (CPES)\n· NDRS National Radiotherapy Dataset (RTDS)\n· NDRS Rapid Cancer Registrations\n· NDRS Somatic Molecular Dataset\n· NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n· Post Colonoscopy Colorectal Cancer (PCCRC) Audit \n\nThe level of the Data will be:\n· Pseudonymised\n\nThe Data will be minimised as follows:\n· Limited to a study cohort identified by NHS England as meeting the following criteria: All people who have been diagnosed with Bowel and Anal Cancer since 01 April 1997.\n\nThe University of Oxford is the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by Cancer Research UK The funding is specifically for the programme described. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nARROW Business Communications Ltd (ARO) provides hosting services to the University of Oxford and will store the Data as contracted by the University of Oxford.  ARO provides the TRE, which is a “Cloud” based Data Safe Haven for safe storage and secure access to research data. \n\nData will be accessed by: \n- Substantive employees of the University of Oxford\n- Undergraduate, Masters or PhD students enrolled with the University of Oxford.  Any student working with the Data held under this Data Sharing Agreement (DSA) must have completed relevant data protection and confidentiality training and are subject to the University of Oxford policies on data protection and confidentiality.  Any students accessing the Data will do so under the supervision of a substantive employee of the University of Oxford. the University of Oxford would be responsible and liable for any work carried out by students. These students would only work on the Data for the purposes described in this DSA.  \n\nVolunteers from a Patient Public Group (PPG) and UK universities sit on the Hub Access Committee. This committee meets regularly and has between 4 and 6 members who are responsible for reviewing applications to access data inside the TRE.\n\nThe PPG is composed of independent advocates who engage with and represent the general public, those at high risk of developing colorectal cancer, and people with the disease. Project proposals are typically presented to the PPG for their feedback. The PPG also helps researchers write plain language summaries of their proposals and research. It is a requirement for every project to have had patient and public engagement.  \n\nThe University of Oxford will make possible wider use of these data, under sublicensing arrangements, subject to the following access arrangements.\n\nApplicants must write a protocol detailing their objectives and the data fields required. They must show they have involved patients and the public, and explain their intended outputs. The protocol is reviewed by the Hub Access Committee to determine that the volume of data is justified, the project falls within the database ethics approval, and there are clear potential benefit to patients and the public (via benefits to healthcare provision or the promotion of health). \n\nOnce approved, their institution signs a Data Access Agreement with the University of Oxford. Researchers, once they have provided evidence of appropriate data protection training, are then given access to the requested data fields within the TRE. When they wish to export results they have to apply to an administrator who reviews the export against the protocol’s stated objectives and checks no individuals can be identified from what is exported. \n\nApplicants would not be able to obtain the same data directly from NHS England because of the extensive curation and refining of the data by staff at the University of Oxford. CORECT-R also contains derived fields.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2025-03-06",
+     "sublicensing": "Yes",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": "To date, 38 projects have been approved to use CORECT-R (project summaries are available at https://www.ndph.ox.ac.uk/corectr/projects).  Many of these projects have published results to inform policy, care and future research.  A key example of yielded benefits is the project titled \"Variation in post-colonoscopy colorectal cancer across colonoscopy providers in the English National Health Service: A population-based cohort study\".\n\nPublic project description: https://www.ndph.ox.ac.uk/corectr/projects/variation-in-post-colonoscopy-colorectal-cancer-across-colonoscopy-providers-in-the-english-national-health-service-a-population-based-cohort-study-2013-update \n\nBritish Medical Journal paper: https://www.bmj.com/content/367/bmj.l6090 \n\nPress release: https://bci.leeds.ac.uk/?page_id=697&preview=true \n\nPlain language summary: https://bci.leeds.ac.uk/get-involved/publications/ \n\nAround 40,000 people are diagnosed with bowel cancer every year in England. As well as being the main test to detect cancer, colonoscopies can also prevent cancer. Unfortunately, colonoscopies are not perfect and sometimes a person develops bowel cancer after having a colonoscopy. This is referred to as a post-colonoscopy colorectal cancer (PCCRC). This work showed rates of PCCRC were lowest in those performed as part of the Bowel Cancer Screening Programme. Colonoscopies performed at private providers for the NHS had much higher rates. This work has directly benefited patient care by enabling many colonoscopy providers to improve their practice (providers were informed of their rate in relation to other providers and given a mechanism to identify their PCCRC cases for audit). The work has also directly informed the Post Colonoscopy Colorectal Cancer Audit, https://www.bsg.org.uk/clinical-resource/more-information-about-the-national-post-colonoscopy-colorectal-cancer-pccrc-audit/"
+    }
+   ],
+   "version": "4.2"
+  },
+  {
+   "reference": "DARS-NIC-656885-M7T5X-v5.4",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from their datasets to the University of Oxford. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nARO stores Data on the Cloud via their Trusted Research Environment.\n\nThe Data will be accessed by authorised personnel via remote access.\n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n\n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n- Access controls granting users the minimum level of access required are in place;\n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n- Multifactor authentication (MFA) is required for remote access;\n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nRemote processing will be from secure locations within the UK.  The data will not leave UK at any time. \n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThere will be no requirement and no attempt to re-identify individuals when using the pseudonymised dataset",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Pathway",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked Cancer Waiting Times (Treatments only)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked DIDs",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES AE",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES APC",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Linked HES Outpatient",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Cancer Patient Experience Survey (CPES)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS National Radiotherapy Dataset (RTDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Rapid Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Somatic Molecular Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NDRS Systemic Anti-Cancer Therapy Dataset (SACT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2027-05-07",
+     "expected_benefits": "Colorectal cancer is a major public health problem. Each year in the UK around 41,000 people are diagnosed with the disease and 16,000 die from it. High-quality data could improve colorectal cancer outcomes. Good intelligence underpins patient choice, helping individuals reduce the risk of disease and access the best care. It identifies and quantifies inequalities, improves the cost-effectiveness and quality of services, and supports cancer research. Unfortunately, the availability of such high-quality cancer intelligence has been limited. Research access to such datasets is often challenging due to the need to protect patient confidentiality.\n\nThe aim of CORECT-R is to link together datasets relevant to colorectal cancer and to promote their use to produce robust research and intelligence.  The first iteration of CORECT-R sought to overcome this by robustly linking and analysing multiple electronic health data sources relevant to colorectal cancer, once, in a secure environment. This work has helped to reduce duplication and increase data security whilst also promoting the creation of intelligence that will help earlier diagnosis, treatment optimisation, and support clinical research.\n\nThe aim of the research is to improve bowel cancer treatment and care through identifying areas of poor practice and opportunities for improvement. The programme will also help support all aspects of bowel cancer research from supporting earlier diagnosis, tackling inequalities, to optimising cancer research",
+     "expected_output": "Linking multiple datasets relating to the management of bowel cancer together to provide a UK-wide view of care, experience and outcomes and making these available to authorised users for research. This linked data enables: \n• better understanding of the reasons for differences in care and outcomes in these patients \n• studies into the clinical performance of the NHS and to identify opportunities to improve performance\n• the NHS to make sure it delivers the best care and complies with clinical guidelines; and\n• supports the running of clinical trials\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.",
+     "objective": "The University of Oxford requires access to NHS England data for the purpose of the following research programme:\n\n Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249). As part of the programme, the University of Oxford is collaborating with the University of Edinburgh and the University of Leeds. For example, with advice from the University of Oxford, the University of Edinburgh has established a separate Scottish CORECT-R. However, with regard to the processing of data under this agreement, only the University of Oxford determines the purposes and means. Researchers from the University of Edinburgh and the University of Leeds, who wish to access data from this agreement, have to comply with the same sublicensing conditions as any other researcher that does not belong to the University of Oxford.\n\nThe UK Colorectal Cancer Intelligence Hub is a research programme whose aim is to generate high quality bowel cancer information that will improve care and outcomes for patients. It does this through compiling and using datasets relevant to the disease in the COloRECTal cancer data Repository (CORECT-R). This platform is available to the wider research community. \n\nResearchers and research students will access cancer registration data collated by the National Disease Registration Service (NDRS; the national cancer registry in England) and other NHS England datasets about all people who have been diagnosed with bowel and anal cancer since 01 April 1997. This health data will include detailed information about each person: \n• their age, ethnicity and the area they live in;\n• their diagnosis (the type of cancer they have, the stage and when it was diagnosed);\n• the treatment they received (including details of surgery, chemotherapy and radiotherapy);\n• attendances in hospital and their experience of care. \n\nThe data will be brought together with other health datasets (including the linked Hospital Episode Statistics data) to build CORECT-R and then used by researchers to ask important questions about bowel and anal cancer. Access to data within CORECT-R will be made available to the whole research community enabling pioneering research into bowel cancer via a Trusted Research Environment (TRE) with appropriate sub-licensing. The programme will also help support all aspects of bowel cancer research from laboratory studies to the delivery of clinical care to improve survival. The model used will also support research into other cancer sites and disease areas.\n\nThe following NHS England Data will be accessed:\n\n· NDRS Cancer Pathway\n· NDRS Cancer Registrations\n· NDRS Linked Cancer Waiting Times (Treatments Only)\n· NDRS Linked DIDs\n· NDRS Linked HES AE\n· NDRS Linked HES APC\n· NDRS Linked HES Outpatient\n· NDRS National Cancer Patient Experience Survey (CPES)\n· NDRS National Radiotherapy Dataset (RTDS)\n· NDRS Rapid Cancer Registrations\n· NDRS Somatic Molecular Dataset\n· NDRS Systemic Anti-Cancer Therapy Dataset (SACT)\n· Post Colonoscopy Colorectal Cancer (PCCRC) Audit \n\nThe level of the Data will be:\n· Pseudonymised\n\nThe Data will be minimised as follows:\n· Limited to a study cohort identified by NHS England as meeting the following criteria: All people who have been diagnosed with Bowel and Anal Cancer since 01 April 1997.\n\nThe University of Oxford is the controller as the organisation responsible for ensuring that the Data will only be processed for the purpose described above.\n\nThe lawful basis for processing personal data under the UK GDPR is:\n\nArticle 6(1)(e) - processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller\n\nThe lawful basis for processing special category data under the UK GDPR is:\n\nArticle 9(2)(j) - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject.\n\nThis processing is in the public interest because it adheres to the UK Policy Framework for Health and Social Care Research, which protects and promotes the interests of patients, service users and the public, and aims to produce generalisable and publicly available information to inform future decisions over patients’ treatments or care.\n\nThe funding is provided by Cancer Research UK The funding is specifically for the programme described. \n\nThe funder will have no ability to suppress or otherwise limit the publication of findings.\n\nARROW Business Communications Ltd (ARO) provides hosting services to the University of Oxford and will store the Data as contracted by the University of Oxford.  ARO provides the TRE, which is a “Cloud” based Data Safe Haven for safe storage and secure access to research data. \n\nData will be accessed by: \n- Substantive employees of the University of Oxford\n- Undergraduate, Masters or PhD students enrolled with the University of Oxford.  Any student working with the Data held under this Data Sharing Agreement (DSA) must have completed relevant data protection and confidentiality training and are subject to the University of Oxford policies on data protection and confidentiality.  Any students accessing the Data will do so under the supervision of a substantive employee of the University of Oxford. the University of Oxford would be responsible and liable for any work carried out by students. These students would only work on the Data for the purposes described in this DSA.  \n\nVolunteers from a Patient Public Group (PPG) and UK universities sit on the Hub Access Committee. This committee meets regularly and has between 4 and 6 members who are responsible for reviewing applications to access data inside the TRE.\n\nThe PPG is composed of independent advocates who engage with and represent the general public, those at high risk of developing colorectal cancer, and people with the disease. Project proposals are typically presented to the PPG for their feedback. The PPG also helps researchers write plain language summaries of their proposals and research. It is a requirement for every project to have had patient and public engagement.  \n\nThe University of Oxford will make possible wider use of these data, under sublicensing arrangements, subject to the following access arrangements.\n\nApplicants must write a protocol detailing their objectives and the data fields required. They must show they have involved patients and the public, and explain their intended outputs. The protocol is reviewed by the Hub Access Committee to determine that the volume of data is justified, the project falls within the database ethics approval, and there are clear potential benefit to patients and the public (via benefits to healthcare provision or the promotion of health). \n\nOnce approved, their institution signs a Data Access Agreement with the University of Oxford. Researchers, once they have provided evidence of appropriate data protection training, are then given access to the requested data fields within the TRE. When they wish to export results they have to apply to an administrator who reviews the export against the protocol’s stated objectives and checks no individuals can be identified from what is exported. \n\nApplicants would not be able to obtain the same data directly from NHS England because of the extensive curation and refining of the data by staff at the University of Oxford. CORECT-R also contains derived fields.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2026-05-08",
+     "sublicensing": "Yes",
+     "title": "Establishing a UK Colorectal Cancer Intelligence Hub - The COloRECTal Cancer Data Repository (CORECT-R) (ODR2021_249)",
+     "yielded_benefits": "To date, more than 45 projects have been approved to use CORECT-R (project summaries are available at https://www.ndph.ox.ac.uk/corectr/projects).  Many of these projects have published results to inform policy, care and future research.  A key example of yielded benefits is the project titled \"Variation in post-colonoscopy colorectal cancer across colonoscopy providers in the English National Health Service: A population-based cohort study\".\n\nPublic project description: https://www.ndph.ox.ac.uk/corectr/projects/variation-in-post-colonoscopy-colorectal-cancer-across-colonoscopy-providers-in-the-english-national-health-service-a-population-based-cohort-study-2013-update \n\nBritish Medical Journal paper: https://www.bmj.com/content/367/bmj.l6090 \n\nPress release: https://bci.leeds.ac.uk/?page_id=697&preview=true \n\nPlain language summary: https://bci.leeds.ac.uk/get-involved/publications/ \n\nAround 40,000 people are diagnosed with bowel cancer every year in England. As well as being the main test to detect cancer, colonoscopies can also prevent cancer. Unfortunately, colonoscopies are not perfect and sometimes a person develops bowel cancer after having a colonoscopy. This is referred to as a post-colonoscopy colorectal cancer (PCCRC). This work showed rates of PCCRC were lowest in those performed as part of the Bowel Cancer Screening Programme. Colonoscopies performed at private providers for the NHS had much higher rates. This work has directly benefited patient care by enabling many colonoscopy providers to improve their practice (providers were informed of their rate in relation to other providers and given a mechanism to identify their PCCRC cases for audit). The work has also directly informed the Post Colonoscopy Colorectal Cancer Audit, https://www.bsg.org.uk/clinical-resource/more-information-about-the-national-post-colonoscopy-colorectal-cancer-pccrc-audit/"
+    }
+   ],
+   "version": "5.4"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "base_reference": "DARS-NIC-787003-B1G4C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-787003-B1G4C-v0.4",
+   "states": [
+    {
+     "activities": "The University of Bristol will transfer data to NHS England.  The data will consist of identifying details (specifically NHS Number, date of birth, date of randomisation and a unique person ID) for the cohort to be linked with NHS England data.  \n\nNHS England will provide the relevant records from the HES datasets to the University of Bristol. The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient \n\nThe Data will not be transferred to any other location. \n\nThe Data will be stored on servers on the University of Bristol Data Safe Haven.   \n\nThe Data Safe Haven does not use traditional backups; instead, it relies on rolling 14‑day on‑disk snapshots stored in secure University of Bristol data centres to allow short‑term recovery \n\nThe Data will be accessed onsite at the premises of the University of Bristol and will be accessed by authorised personnel via remote access.   \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nThe Data will be linked with other record-level data held by the University of Bristol collected as part of the RADICAL trial. There will be no further data linkages.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "NORTH BRISTOL NHS TRUST",
+      "UNIVERSITY OF BRISTOL"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-03-26",
+     "expected_benefits": "The findings of the RADICAL study will inform policy makers in the UK and internationally. If the study demonstrates that RFD is not effective or cost-effective, this will lead directly to changes in practice through the updating of clinical guidelines and clinical practice allowing the money saved to be spent elsewhere in the health service.  \n\nIf the study demonstrates that RFD is effective and cost-effective this will provide strong evidence on which to base clinical guidelines and support clinicians and healthcare budget holders in decisions to make this service more widely available to all patients who would benefit from it. \n \nThe proposed outputs (i.e. journal articles, policy briefs, lay summaries, conferences) are targeted at key national and international stakeholder audiences in order to optimise potential public benefits.",
+     "expected_output": "The expected outputs of the processing will be: \n- Estimated four submissions to peer reviewed journals in 2026/2027 \n- Presentations at national and international conferences  \n\n The outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\n The outputs will be communicated to relevant recipients through the following dissemination channels: \n- Lay summaries and ‘policy briefs’ of findings for dissemination to RADICAL trial participants, policy makers and patient advocacy groups.  \n- Media briefings to accompany high profile publications in scientific journals. \n- A presentation of study results to the trial steering committee including patient representatives.  \n- A comprehensive report to the funder (NIHR)",
+     "objective": "The Data will be used for the purpose of a research project: Radiofrequency denervation for chronic and moderate to severe low back pain (RADICAL). \n\nThe Data will be used to evaluate the effectiveness and cost-effectiveness of Radiofrequency denervation (RFD) for moderate-severe chronic localised lower back pain (LBP).  \n\n Specific research questions include: \n- To evaluate whether Radiofrequency Denervation (RFD) can reduce hospital‑based healthcare use - hospital readmission, outpatient activity, and emergency department attendance - within a 24‑month follow‑up period when compared with placebo. \n- To examine whether RFD offers better cost‑effectiveness than placebo when cumulative hospital care use and related cost within a 24‑month period are taken into account.",
+     "organisation": "UNIVERSITY OF BRISTOL",
+     "organisation_type": "Academic",
+     "start_date": "2026-03-27",
+     "sublicensing": "No",
+     "title": "Radiofrequency denervation for chronic and moderate to severe low back pain (RADICAL)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.4"
+  }
+ ]
+}

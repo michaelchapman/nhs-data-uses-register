@@ -1,0 +1,56 @@
+{
+ "base_reference": "DARS-NIC-793230-S7H9P",
+ "versions": [
+  {
+   "reference": "DARS-NIC-793230-S7H9P-v0.5",
+   "states": [
+    {
+     "activities": "The University of Edinburgh will transfer data to NHS England. The data will consist of identifying details (specifically NHS Number, Date of Birth, Postcode, Gender and a unique person ID) for the cohort to be linked with NHS England data.\n\nNHS England will provide the relevant records from HES Admitted Patient Care, Civil Registrations of Death, and Medicines dispensed in primary care dataset (NHS BSA) to University of Edinburgh to allow them to upload onto the Trusted Research Environment within the ARO Ltd server. Once uploaded, the University of Edinburgh copy is destroyed.\n\nThe Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\nThe Data will be stored on servers at ARO Ltd\n\nThe Data will not be transferred to any other location.\n\nThe Data will be accessed by authorised personnel via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n•\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n•\tAccess controls granting users the minimum level of access required are in place;\n•\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n•\tMultifactor authentication (MFA) is required for remote access;\n•\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n•\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nNHS Lothian is not permitted to access the Data.\n\nThe Data will not be linked with any other data apart from data the study have collected themselves from participants.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "NHS LOTHIAN",
+      "UNIVERSITY OF EDINBURGH"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2031-02-28",
+     "expected_benefits": "The findings of this clinical trial are expected to contribute to evidence-based decision-making for policy-makers, local decision-makers such as doctors, and patients to inform best practice to improve the care, treatment and experience of health care users relevant to the subject matter of the clinical trial.\n\nThe ASPIRING trial could show that antiplatelet monotherapy reduces the risk of major adverse cardiovascular events after stroke due to intracerebral haemorrhage, then this could benefit hundreds of thousands of patients each year globally in future.\n\nThe use of the data could:\n\n•\thelp the system to better understand the health and care needs of populations. \n•\tlead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience.\n•\tadvance understanding of the need for, or effectiveness of, preventative health and care measures for particular populations or conditions such as major adverse cardiovascular events.\n•\tinform planning health services and programmes, for example to improve patient outcomes.\n•\tinform decisions on how to effectively allocate and evaluate funding according to health needs.\n•\tsupport knowledge creation or exploratory research (and the innovations and developments that might result from that exploratory work).",
+     "expected_output": "The expected outputs of this outcome Agreement will be University of Edinburgh and NHS Lothian observing and understanding the results of their clinical trial. University of Edinburgh and NHS Lothian hope to produce outputs after receipt of data linked to their cohort and expect to summarise and report on their findings.\n\nThe outputs will include the following outputs:\n•\tReports to: Funders and ASPIRING trial partners through milestone updates linked to the funding awards.\n•\tReports to the trial oversight committees (Trial Steering Committee Data Monitoring Committee) via reports to their meetings that occur at least annually.\n•\tLay friendly updates to the ASPIRING Patient Carer Public Involvement and Engagement Advisory Group via reports for their regular oversight meetings.\n•\tPresentations to professional audiences\n•\tPublications of the trial protocol and results.\n \nAny outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset from which the information was derived. Identifiable data requested from NHS England will only be used to identify and invite potential participants.\n \nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n•\tSocial Media\n•\tJournal (in the final report of the trial)\n•\tWebinars with investigators\n•\tPublic report (in any plain English summaries of the trial)\n•\tNewsletters for investigators, usually sent on a monthly basis",
+     "objective": "NHS Lothian and the University of Edinburgh require access to NHS England data for the purposes of a clinical trial: Antiplatelet Secondary Prevention International Randomised study after INtracerebral haemorrhaGe (ASPIRING) - DigiTrials Outcome Service.\n   \nThe Data will be used to answer the following questions:\nASPIRING will test the hypothesis that starting oral antiplatelet drug monotherapy is superior to avoiding antiplatelet drugs, in addition to standard care at the participating hospital, for increasing the time to first Major Adverse Cardiovascular Events (MACE) for survivors of stroke due to Intracerebral Haemorrhage (ICH). \nTo determine the effects of oral antiplatelet drug monotherapy on: \n        (i) ischaemic MACE (efficacy) \n        (ii) haemorrhagic MACE (safety) \n        (iii) individual components of MACE \n        (iv) all MACE, ischaemic MACE and haemorrhagic MACE in clinically important sub-groups \n        (v) non-cardiovascular death, and \n        (vi) generalisability of the effect on the primary outcome between countries.",
+     "organisation": "UNIVERSITY OF EDINBURGH",
+     "organisation_type": "Academic",
+     "start_date": "2026-03-20",
+     "sublicensing": "No",
+     "title": "Antiplatelet Secondary Prevention International Randomised study after INtracerebral haemorrhaGe (ASPIRING) - DigiTrials Outcome Service",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.5"
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "base_reference": "DARS-NIC-656867-F3Q3L",
+ "versions": [
+  {
+   "reference": "DARS-NIC-656867-F3Q3L-v0.2",
+   "states": [
+    {
+     "activities": "The BPSU system sends a monthly email to all paediatricians including neonatologists. This should pick up most if not all new-born babies with severe ichthyosis born during the 2 year study period. However, babies who are still-born or who die immediately after birth may not be seen by a paediatrician. After exploring various ways to identify missing cases (BWCNHSFT) approached the National Congenital Anomaly and Rare Disease Registration Service (NCARDRS) for help. \n\nAs advised by NCARDRS it was proposed to send them limited identifiers (NHS number and DOB), from the cases reported to (BWCNHSFT). The legal basis for releasing the data to NCARDRS would be the NCARDRS CAG s251 approval and GDPR articles 6(e), 9(h) and 9(i).  \n\nMeanwhile NCARDRS would extract cases identified by them and born during the 2 year period, using the relevant ICD10 codes (Q80.2, Q80.4, Q80.8, Q80.9). They would then compare the two datasets and remove from their dataset any cases already identified by the study team.  \n\nFrom their final dataset (that is cases missed by the study team), NCARDRS would provide the following information to the study team: date of birth, date of death if applicable, sex, ethnic group, postcode (sector level), NHS number (or equivalent), hospital number and hospital name. NCARDRS would then send this information to the study team, released in accordance with ODR protocols. The legal basis for this transfer would be the study CAG s251 approval and the relevant GDPR articles 6(e) and 9(j) (see section 5). \n\nAll transfers would be made over a secure file system (NHS SEFT or CyberArk).",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "BIRMINGHAM WOMEN'S AND CHILDREN'S NHS FOUNDATION TRUST"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); National Health Service Act 2006 - s251 - 'Control of patient information'.",
+       "name": "NDRS Congenital Anomalies",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2024-07-06",
+     "expected_benefits": "HI and CM, although rare, present significant public health issues particularly during the first weeks of life. These babies may remain on intensive care for prolonged periods with associated risk and cost. Due to its rarity, professional expertise is limited and currently families rely on each other for advice via the Ichthyosis Support Group. \n\nIt is unknown how many babies are born with ichthyosis and how many die. Accurate information is needed in order to improve care for these children and families, reducing misconceptions about the disease, variation in practice, and avoidable deaths. \n\nThe information from our study will support an application to NHS England for a Highly Specialised Service and may help us understand why some babies die. The information generated will also be shared with affected families via the ISG, with professional groups via academic publications and with international colleagues via the European Reference Network for Rare  and Undiagnosed Skin Disorders (ERN-Skin), in which the applicants are active participants.",
+     "expected_output": "The anonymous data will be analysed and the results will be published on the British Paediatric Surveillance Unit (BPSU) website, and shared with medical professionals, ichthyosis sufferers and NHS bodies concerned with improving services for patients.",
+     "objective": "This application from the Birmingham Women’s And Children’s NHS Foundation Trust (BWCNHSFT) set out the purpose of medical research using the established British Paediatric Surveillance Unit (BPSU) methodology to investigate incidence of Ichthyosis, which is a group of incurable genetic conditions with abnormally thick, scaly skin. The most severe type of ARCI is harlequin ichthyosis (HI) where thick scales (plaques) encase the baby, causing \nproblems with breathing, feeding, movement, eye closure and temperature control. \nHistorically such babies died at birth or in the first month of life (neonatal period) but they \ncan survive with modern treatments. Less extreme ARCI types present with a collodion \nmembrane (CM), where the skin is tight but less rigid. Many of these improve with time, \nsome even resolving completely within weeks.\n\nBabies with HI and CM are very rare. Staff in maternity units recognise them but need \nhelp from skin specialists to care for them. There is no proven correct treatment so \npractice varies; some babies remain in the neonatal intensive care unit for weeks whilst \nothers are nursed within a more normal setting. Babies with CM may suffer from \nunnecessary medical interventions. Some health professionals express the view that \nbabies with HI should be left to die, unaware that the condition is now treatable.\n\nThe study objectives are to establish:\n- the number of new cases per year  in the UK and Ireland \n- key components of management of these babies including age on discharge from hospital \n- factors relating to the health of mother and baby that might affect the outcome \n- death rates and significant problems within the first year. \n\nThe study has support under section 251 of the NHS Act 2006 to enable the common law duty of confidentiality to be temporarily lifted so that confidential patient information can be processed without consent.\n \nWhere individuals have opted out of disease registration by the National Disease Registration Service (NDRS), their data has been permanently removed from the registry and therefore will not be disseminated under this Data Sharing Agreement (DSA). https://digital.nhs.uk/ndrs/patients/opting-out",
+     "organisation": "BIRMINGHAM WOMEN'S AND CHILDREN'S NHS FOUNDATION TRUST",
+     "organisation_type": "NHS Trust",
+     "start_date": "2020-07-07",
+     "sublicensing": "No",
+     "title": "British Paediatric Surveillance Unit - Surveillance of Congenital Ichthyosis in Neonates (BPSU-SCIN) (ODR1920_247)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.2"
+  }
+ ]
+}

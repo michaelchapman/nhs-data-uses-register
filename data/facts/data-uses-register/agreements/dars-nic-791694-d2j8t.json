@@ -1,0 +1,47 @@
+{
+ "base_reference": "DARS-NIC-791694-D2J8T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-791694-D2J8T-v0.3",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from the Demographics dataset to the approved third-party provider. The Data will contain directly identifying data items including Name, Address and Postcode which are required for the purpose of contacting potential participants.\n\nNHS England will, in the 1st instance, contact the Mental Health Cohorts. The Dementia cohort will be added at a later date once the technical solution has been drawn up.\n\nNHS England will also provide an aggregate data quality report containing information about gender, age and geographic demographics of the mailing to Akrivia Health for the purposes of confirming that inclusion and exclusion criteria have been met for each mailing. \n\nThis report will also contain the total number of people who received the letter from the approved third-party supplier, and the number of people removed from the cohort prior to mailing based on trial-specific opt out, national data opt out, and special categories of people for whom the data should not be disseminated.\n\nAkrivia Health will not be given access to any individual’s data unless they are contacted directly by the individual following the mailout.\n\nThe Data will be stored on servers at the NHS England’s 3rd party mailing provider.\n\nThe Data will be accessed onsite at the premises of the 3rd part mailing provider only.\n\nThe Data will not be linked with any other data.\n\nThe approved third-party supplier will destroy all data files received from NHS England 2 weeks post mail-out, as instructed by NHS England.\n\nEach time NHS England create and disseminate an extract, the records will be added to a mailing list cohort dataset. Should a fresh extract be produced, it will be checked to ensure that any records appearing in this mailing list dataset are removed in order to prevent potential participants receiving multiple invitations. This mailing list dataset will be maintained for six months after the invitation process is complete in case this is required for analysis purposes by Akrivia Health. Only aggregated data would be used for such analysis.",
+     "commercial": "Yes",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "CRISTAL HEALTH LTD T/A AKRIVIA HEALTH"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "Customer - Data Quality Report - Aggregate (Recruitment)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "One-Off",
+       "legal_basis": "",
+       "name": "Mailing - Cohort - Non-aggregate (Comms & Recruitment)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-01-15",
+     "expected_benefits": "Any benefits to health and/or social care would be achieved by the study which is enabled by the use of the NHS DigiTrials Recruitment Service.\n\nThe NHS DigiTrials Recruitment Service aims to optimise recruitment utilising large message quantities to recruit in a timely, effective and efficient manner.",
+     "expected_output": "The expected output of this Recruitment Service will be the achievement of the recruitment target.\n\nIndividuals who wish to participate following receipt of the invitation letter will directly contact the Akrivia Health to register their interest.\n\nThe aims of the Recruitment Service are to efficiently target potential participants for recruitment leading to higher conversation rates and faster trial enrolment.",
+     "objective": "This Data Sharing Agreement (DSA) concerns the necessary processing of personal data for NHS England’s provision of an NHS DigiTrials Recruitment Service on behalf of Cristal Health trading as Akrivia Health for the purpose of ‘Global Minds: Developing an internationally-diverse, linked genomic and longitudinal phenotypic research dataset to accelerate precision psychiatry for patients with serious mental illness.’\n\nThe aim of the Global Minds study is to understand the links between both mental illnesses and dementias with human biology, and better understand the experiences of people with these conditions. This study aims to provide new insights into the nature and classification of severe mental illness and dementias that in time should help improve diagnostic practise, and enable the development of new and improved treatments.\n\nThe Global Minds study aims to issue 2.5 million invitations for the purpose of recruiting 50,000 participants (calculated by estimated response rates) under the following inclusion criteria:\n• Age 18 or over at time of invite\n• Resides in England\n• Male or Female\n• Have received a diagnosis and/or treatment/referral for mental illness for Major Depressive Disorder (MDD), Bipolar Disorder (BD) or Schizophrenia.\n\nNHS England will identify potential participants meeting the eligibility criteria specified by Akrivia Health and facilitate contact via letter to provide information about the study and provide details of how they can give consent to participate if they wish.\n\nThe number of individuals who will be sent communications will be proportionately limited based on the estimated response rate. If the target number of participants is not achieved, the number of individuals who are sent communications will be increased in increments.",
+     "organisation": "CRISTAL HEALTH LTD T/A AKRIVIA HEALTH",
+     "organisation_type": "Non NHS Provider",
+     "start_date": "2026-01-16",
+     "sublicensing": "No",
+     "title": "GlobalMinds - DigiTrials Recruitment Service",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.3"
+  }
+ ]
+}

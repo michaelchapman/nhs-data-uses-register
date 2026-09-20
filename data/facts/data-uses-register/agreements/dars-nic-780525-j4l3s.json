@@ -1,0 +1,644 @@
+{
+ "base_reference": "DARS-NIC-780525-J4L3S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-780525-J4L3S-v0.6",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nFor each approved project, the NHS England platform team will transfer the required dataset into a project specific “Pseudonymised Data Environment” in the Unified Data Access Layer (UDAL) or the Federated Data Platform (FDP) and will onboard approved analysts to do the specific work. \n\nThe Data will contain a pseudonymised ID which allows it to be linked to other datasets required for the specific project.\n\nThe Data will contain no direct identifying data items. The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at NHS England.\n\nThe Data will be accessed by authorised personnel via remote access. \n\nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nAccess is restricted to substantive employees of DHSC, seconded staff and substantive employees of NHS England. \n\nOnly a limited number of DHSC/NHSE analysts will be given access to the data in NHSE’s pseudonymised data environment for the purposes for each project. The analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "DEPARTMENT OF HEALTH AND SOCIAL CARE",
+      "NHS ENGLAND - X26"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Cancer Waiting Times - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Diagnostic Imaging Dataset - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Elective Patient Pathway (EPP) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "National Cancer Registries and Analysis Service (NCRAS) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Secondary Uses Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Waiting List Minimum Dataset - UDAL",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "e-Referral Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2028-10-30",
+     "expected_benefits": "The benefits of joint working and use of data is necessary to (a) prevent situations where conflicting information is presented to ministers, senior officials, policy teams and programme colleagues as a result of differences in how the data are processed and used; and (b) enable NHS England and DHSC to make use of a larger and more diverse pool of analytical resource to make sufficiently rapid progress on a wider set of projects, to identify and deploy the best analytical approaches, and to maximise the insightfulness and impact of the results.\n\nThe use of the data could:\n-\tHelp the system to better understand the health and care needs of populations.\n-\tLead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tInform planning health services and programmes\n-\tInform decisions on how to effectively allocate and evaluate funding according to health needs\n-\tProvide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nPatients might benefit from:\n-\tBetter evidence-based policy making\n-\tBetter outcomes from fewer patients having delayed discharges, meaning more capacity for new patients and better outcomes for patients with less delay.\n-\tInform Ministerial decision-making\n-\tLead to the identification or improvement of interventions, or health and care system design to improve health and care outcomes\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tTo improvements in health outcomes for cancer or other patients\n-\tThe data is used to inform and monitor policy decisions. Better understanding of the data will help inform colleagues and ministers to make effective decisions.\n\nProject Specific Benefits: \n\nElective, cancer and diagnostic (ECD) demand, waits, activity and pathways: individuals who are currently waiting for cancer, other elective or diagnostic treatment or who will require further treatment in the future will benefit from improvements in the quality, timeliness and efficiency of those services.  Individuals who will require further treatment in the future, or whose friends and family will require treatment, will benefit from improvements in the quality, timeliness and efficiency of those services. The wider public will also benefit through the positive impact on public finances, both directly as a result of the improved efficiency of those services and indirectly through the impact of better health on the wider economy.",
+     "expected_output": "The expected outputs produced for the requested datasets might include: \n-\tData dashboards; \n-\tWritten Reports and presentations to DHSC senior officials, Ministers, policy colleagues, and NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tCreation of software tools to track metrics within DHSC\n-\tNational, regional and provider tables on information relevant to the specific project. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n-\tData dashboards for use within DHSC and NHS England\n-\tWritten reports/briefing documents and presentations to DHSC senior officials, Ministers, policy colleagues NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tWorkshops with DHSC officials, Ministers NHS England and other government departments\n\nWritten reports/briefing documents and presentations are produced as and when requested. Data Dashboards will be refreshed in line with the refresh frequency of the data underlying them.\n\nThe outputs will not contain disclosive NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\nThe expected outputs of the processing will include tables, plot and reports required by each project. For each project, the analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations.",
+     "objective": "The Department of Health & Social Care (DHSC) and NHS England require access to NHS England Data to conduct timely analysis in response to ministerial and senior officials. This requirement aligns with the statutory duties of the Secretary of State for Health as outlined in the National Health Service Act 2006. The relevant legislative provisions are:  \n\n-\tDHSC – Secretary of State: section 1A - Duty as to improvement in quality of services\n-\tNHSE – Section 13E - Duty as to improvement in quality of services\n\nThe specific analyses required will emerge over time in response to programme and governmental needs. The analyses will be undertaken on behalf of DHSC and NHS England by project teams made up of a combination of DHSC and NHS England analysts. \n\nTo enable effective joint working, analysts required access to NHSEs pseudonymised data environments, which will be done by creating an area where both DHSC/NHSE colleagues can view and analyse the same data.  The datasets will be analysed in line with either of the following models:\n\n•  Joint Project – DHSC/NHSE have separate statutory functions as the basis for conducting activities and processing personal data, but those functions are related, and consequently their exercise is aligned. The purposes for processing are jointly determined to achieve this aligned exercise of functions.\n\n• Agency Model - One Party’s statutory or other lawful basis underpins the processing, but the processing may be conducted by employees of both Parties and may involve access to personal data held by one of the Parties. The means the analysis is determined by the Party whose function is being discharged.\n\nRequests for access to enable joint working / joint access to data will be assured via a single Data Protection Impact Assessment (DPIA) that will be reviewed iteratively as new requests are received. \n\nThe Data will be used for the following: \n\n1. Elective, cancer and diagnostic (ECD) demand, waits, activity and pathways: this will inform delivery of the Elective Reform Plan that sets out how the NHS will reform elective care services and meet the 18 week referral to treatment standard by March 2029. It will also inform development and delivery of the forthcoming cancer plan, which is expected to be published in the Autumn. The analyses will feed into funding decisions, policy development, the transformation of services, operational planning and management, and monitoring and evaluation. As a result, the policies adopted, initiatives taken forward and decisions made will have a stronger evidence base and consequently a greater likelihood of achieving the desired outcomes.\n\nOnly personnel of DHSC or NHS England are eligible to request and/or be given access to the Data. \n\nSpecific analyses will emerge over time in response to programme and governmental needs. The purpose must be: \n1. Aligned to statutory functions of DHSC and / or NHS England; and \n2. A collaboration / joint working project between DHSC and NHS England; and   \n3. Required to support programme delivery or meet governmental needs. These needs may arise following engagement with ministers or senior officials within DHSC, No.10, the Cabinet Office, HM Treasury, NHS England (central and regional teams), other NHS organisations, or relevant external stakeholders.\n\nData cannot be used for purposes outside the scope of the purpose outlined above.\n\nRequests will be submitted to representatives of the DHSC Data Access and Platforms team and discussed with representatives from NHS England Data Access & Partnership team and Privacy, Transparency and Trust (PTT). Requests identified where processing will be undertaken as a joint working project will be approved by a senior member of NHS England PTT and the relevant dataset Information Asset Owner (IAO).\n\nRequests for access to enable joint working / joint access to data will be assured via a single DPIA that will be reviewed iteratively as new requests are received. Criteria used to approve include: \n\n-\tThe Directions under which the Data are collected and processed do not include any restrictions which would preclude use by DHSC or for the proposed purpose.  \n-\tThe IAO is content for access to be provided \n-\tThe purpose is aligned to statutory functions of DHSC / NHS England as outlined in this DSA\n-\tThe project is collaboration / joint working project between DHSC and NHS England\n-\tThe project is required for rapid policy analysts to support programme delivery or meet governmental needs.\n-\tThe purpose is connected with health and care.\n\nThe following steps will be taken to enable joint working/joint access to the data: \n1. Identification of in scope project requests: \nRepresentative from the DHSC Data Access and Platforms team and NHS England Data Access & Partnerships will maintain a list of project requests and required datasets. This includes a proposed purpose, dataset, outputs and benefits of the use of data. This will identify whether the purpose of the request is aligned to DHSC sole controllership or where processing is a joint working project requiring governance in the form of adding to the joint working DPIA and this Data Sharing Agreement. \n\nWhere it is a joint working project, the DHSC and NHS England representative will liaise with the relevant analytical leads at DHSC and NHS England to determine whether the purpose is for joint working or agency working. \n\n2. Update of the DHSC-NHSE Joint Working DPIA and this Data Sharing Agreement (NIC-780525-J4L3S) \nWhen it has been agreed that the request is a collaboration or joint working project, NHS England PTT representative will work with the relevant NHS England project lead to update the DPIA with details of the project. This will include purpose of analysis, the dataset of data to be transferred to the NHS England pseudonymised environment, the statutory basis for collection, analysis, processing and dissemination, and proposed benefits of processing. The relevant dataset IAO is required to confirm agreement for access to be provided. \n\n3. Assurance of the Joint Working DPIA and update of the joint working DSA\nThe DPIA will be reviewed and approved by a senior member of the NHS England PTT. The updated DPIA will be shared with the Data Access Service (DAS) who will update this DSA and released for signature. \n\n4. Access arrangements \nThe relevant NHSE Data Platform team will be informed by NHS England PTT that the Joint working DPIA has been updated for a particular use case. The DAS will confirm when the DSA has been approved. The NHS England Data Platform team will transfer the Data into the pseudonymised data environment and onboard the approved DHSC / NHS England analysts to do the specified work environment.",
+     "organisation": "NHS ENGLAND - X26",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2025-10-31",
+     "sublicensing": "No",
+     "title": "NHS England and Department for Health and Social Care – joint working in pseudonymised data environments",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.6"
+  },
+  {
+   "reference": "DARS-NIC-780525-J4L3S-v1.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nFor each approved project, the NHS England platform team will transfer the required dataset into a project specific “Pseudonymised Data Environment” in the Unified Data Access Layer (UDAL) or the Federated Data Platform (FDP) and will onboard approved analysts to do the specific work. \n\nThe Data will contain a pseudonymised ID which allows it to be linked to other datasets required for the specific project.\n\nThe Data will contain no direct identifying data items. The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at NHS England.\n\nThe Data will be accessed by authorised personnel via remote access. \n\nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nAccess is restricted to substantive employees of DHSC, seconded staff and substantive employees of NHS England. \n\nOnly a limited number of DHSC/NHSE analysts will be given access to the data in NHSE’s pseudonymised data environment for the purposes for each project. The analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "DEPARTMENT OF HEALTH AND SOCIAL CARE",
+      "NHS ENGLAND - X26"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Cancer Waiting Times - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Dataset - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Elective Patient Pathway (EPP) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cancer Registries and Analysis Service (NCRAS) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cost Collection for the NHS (Published) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "",
+       "name": "PLICS Aggregate - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Patient Level Information and Costing Systems (PLICS) Pseudo - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Accident & Emergency (A&E) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Emergency Care Data Set (ECDS) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Waiting List Minimum Dataset - UDAL",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "e-Referral Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2028-12-10",
+     "expected_benefits": "The benefits of joint working and use of data is necessary to (a) prevent situations where conflicting information is presented to ministers, senior officials, policy teams and programme colleagues as a result of differences in how the data are processed and used; and (b) enable NHS England and DHSC to make use of a larger and more diverse pool of analytical resource to make sufficiently rapid progress on a wider set of projects, to identify and deploy the best analytical approaches, and to maximise the insightfulness and impact of the results.\n\nThe use of the data could:\n-\tHelp the system to better understand the health and care needs of populations.\n-\tLead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tInform planning health services and programmes\n-\tInform decisions on how to effectively allocate and evaluate funding according to health needs\n-\tProvide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nPatients might benefit from:\n-\tBetter evidence-based policy making\n-\tBetter outcomes from fewer patients having delayed discharges, meaning more capacity for new patients and better outcomes for patients with less delay.\n-\tInform Ministerial decision-making\n-\tLead to the identification or improvement of interventions, or health and care system design to improve health and care outcomes\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tTo improvements in health outcomes for cancer or other patients\n-\tThe data is used to inform and monitor policy decisions. Better understanding of the data will help inform colleagues and ministers to make effective decisions.\n\nProject Specific Benefits: \n\nElective, cancer and diagnostic (ECD) demand, waits, activity and pathways: individuals who are currently waiting for cancer, other elective or diagnostic treatment or who will require further treatment in the future will benefit from improvements in the quality, timeliness and efficiency of those services.  Individuals who will require further treatment in the future, or whose friends and family will require treatment, will benefit from improvements in the quality, timeliness and efficiency of those services. The wider public will also benefit through the positive impact on public finances, both directly as a result of the improved efficiency of those services and indirectly through the impact of better health on the wider economy.\n\nUrgent and Emergency Care Unit Costs Analysis: acting on opportunities for improved productivity derived from the analysis  supports the NHS to deliver the target to deliver a 2% year-on-year productivity gain for the next 3 years as set out in the 10 Year Health Plan for England. Increased productivity and efficiency will deliver measurable benefits in terms of more treatments for NHS patients, shorter waiting times for elective care and better provision of emergency care.",
+     "expected_output": "Elective, Cancer and Diagnostics Analysis: Access to the data will support policy analysis on demand, activity and waiting time between pathways to inform progress on Govt/DHSC priority of reducing the elective waiting list. This data set will be essential in developing future policy on best-timed pathways, as well as monitor progress of the elective reform plan and target live policy issues such as the change in case-mix in the elective waiting list. This dataset will allow further examination of variation in Elective Pathways between trusts due to difference in practice and difference in case-mix. This will enable policy interventions to target specific trusts and specific areas of the pathway and areas to help support the main priority of improving performance on the 18ww target and reducing the waiting list. It will also be used to support spending reviews, allowing for the evidencing of key assumptions underpinning these.\n\nUrgent and Emergency Care Unit Costs Analysis: Access to the data will be used to understand why unit costs of urgent and emergency care have increased since the pandemic. This includes how different categories of spend have changed since the pandemic, in which organisations and in which healthcare resource group (HRG).  Analysis at this level of detail is required to identify which unit cost increases have been caused by changes in case-mix, provider mix or a combination of these, and which are either avoidable or unavoidable. \nOutputs of analysis will be presented to policy leads within NHSE and DHSC explaining what categories of spend and types of activities have caused the increase in unit costs.\n\nThe expected outputs produced for the requested datasets might include: \n-\tData dashboards; \n-\tWritten Reports and presentations to DHSC senior officials, Ministers, policy colleagues, and NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tCreation of software tools to track metrics within DHSC\n-\tNational, regional and provider tables on information relevant to the specific project. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n-\tData dashboards for use within DHSC and NHS England\n-\tWritten reports/briefing documents and presentations to DHSC senior officials, Ministers, policy colleagues NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tWorkshops with DHSC officials, Ministers NHS England and other government departments\n\nWritten reports/briefing documents and presentations are produced as and when requested. Data Dashboards will be refreshed in line with the refresh frequency of the data underlying them.\n\nThe outputs will not contain disclosive NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\nThe expected outputs of the processing will include tables, plot and reports required by each project. For each project, the analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations.",
+     "objective": "The Department of Health & Social Care (DHSC) and NHS England require access to NHS England Data to conduct timely analysis in response to ministerial and senior officials. This requirement aligns with the statutory duties of the Secretary of State for Health as outlined in the National Health Service Act 2006. The relevant legislative provisions are:  \n\n-\tDHSC – Secretary of State: section 1A - Duty as to improvement in quality of services\n-\tNHSE – Section 13E - Duty as to improvement in quality of services\n\nThe specific analyses required will emerge over time in response to programme and governmental needs. The analyses will be undertaken on behalf of DHSC and NHS England by project teams made up of a combination of DHSC and NHS England analysts. \n\nTo enable effective joint working, analysts required access to NHSEs pseudonymised data environments, which will be done by creating an area where both DHSC/NHSE colleagues can view and analyse the same data.  The datasets will be analysed in line with either of the following models:\n\n•  Joint Project – DHSC/NHSE have separate statutory functions as the basis for conducting activities and processing personal data, but those functions are related, and consequently their exercise is aligned. The purposes for processing are jointly determined to achieve this aligned exercise of functions.\n\n• Agency Model - One Party’s statutory or other lawful basis underpins the processing, but the processing may be conducted by employees of both Parties and may involve access to personal data held by one of the Parties. The means the analysis is determined by the Party whose function is being discharged.\n\nRequests for access to enable joint working / joint access to data will be assured via a single Data Protection Impact Assessment (DPIA) that will be reviewed iteratively as new requests are received. \n\nThe Data will be used for the following: \n\n1. Elective, cancer and diagnostic (ECD) demand, waits, activity and pathways: this will inform delivery of the Elective Reform Plan that sets out how the NHS will reform elective care services and meet the 18 week referral to treatment standard by March 2029. It will also inform development and delivery of the forthcoming cancer plan, which is expected to be published in the Autumn. The analyses will feed into funding decisions, policy development, the transformation of services, operational planning and management, and monitoring and evaluation. As a result, the policies adopted, initiatives taken forward and decisions made will have a stronger evidence base and consequently a greater likelihood of achieving the desired outcomes.\n\n2. Urgent and Emergency Care Unit Costs Analysis: NHS England and the Department for Health and Social Care will undertake analysis of Patient Level Costing Data to understand why non-elective efficiency has reduced since the pandemic. It is a critical issue for the running of the NHS, and is also important for imputing into future financial plans and discussions with Treasury. The same output will be used by both DHSC and NHS England.\n\nOnly personnel of DHSC or NHS England are eligible to request and/or be given access to the Data. \n\nSpecific analyses will emerge over time in response to programme and governmental needs. The purpose must be: \n1. Aligned to statutory functions of DHSC and / or NHS England; and \n2. A collaboration / joint working project between DHSC and NHS England; and   \n3. Required to support programme delivery or meet governmental needs. These needs may arise following engagement with ministers or senior officials within DHSC, No.10, the Cabinet Office, HM Treasury, NHS England (central and regional teams), other NHS organisations, or relevant external stakeholders.\n\nData cannot be used for purposes outside the scope of the purpose outlined above.\n\nRequests will be submitted to representatives of the DHSC Data Access and Platforms team and discussed with representatives from NHS England Data Access & Partnership team and Privacy, Transparency and Trust (PTT). Requests identified where processing will be undertaken as a joint working project will be approved by a senior member of NHS England PTT and the relevant dataset Information Asset Owner (IAO).\n\nRequests for access to enable joint working / joint access to data will be assured via a single DPIA that will be reviewed iteratively as new requests are received. Criteria used to approve include: \n\n-\tThe Directions under which the Data are collected and processed do not include any restrictions which would preclude use by DHSC or for the proposed purpose.  \n-\tThe IAO is content for access to be provided \n-\tThe purpose is aligned to statutory functions of DHSC / NHS England as outlined in this DSA\n-\tThe project is collaboration / joint working project between DHSC and NHS England\n-\tThe project is required for rapid policy analysts to support programme delivery or meet governmental needs.\n-\tThe purpose is connected with health and care.\n\nThe following steps will be taken to enable joint working/joint access to the data: \n1. Identification of in scope project requests: \nRepresentative from the DHSC Data Access and Platforms team and NHS England Data Access & Partnerships will maintain a list of project requests and required datasets. This includes a proposed purpose, dataset, outputs and benefits of the use of data. This will identify whether the purpose of the request is aligned to DHSC sole controllership or where processing is a joint working project requiring governance in the form of adding to the joint working DPIA and this Data Sharing Agreement. \n\nWhere it is a joint working project, the DHSC and NHS England representative will liaise with the relevant analytical leads at DHSC and NHS England to determine whether the purpose is for joint working or agency working. \n\n2. Update of the DHSC-NHSE Joint Working DPIA and this Data Sharing Agreement (NIC-780525-J4L3S) \nWhen it has been agreed that the request is a collaboration or joint working project, NHS England PTT representative will work with the relevant NHS England project lead to update the DPIA with details of the project. This will include purpose of analysis, the dataset of data to be transferred to the NHS England pseudonymised environment, the statutory basis for collection, analysis, processing and dissemination, and proposed benefits of processing. The relevant dataset IAO is required to confirm agreement for access to be provided. \n\n3. Assurance of the Joint Working DPIA and update of the joint working DSA\nThe DPIA will be reviewed and approved by a senior member of the NHS England PTT. The updated DPIA will be shared with the Data Access Service (DAS) who will update this DSA and released for signature. \n\n4. Access arrangements \nThe relevant NHSE Data Platform team will be informed by NHS England PTT that the Joint working DPIA has been updated for a particular use case. The DAS will confirm when the DSA has been approved. The NHS England Data Platform team will transfer the Data into the pseudonymised data environment and onboard the approved DHSC / NHS England analysts to do the specified work environment.",
+     "organisation": "NHS ENGLAND - X26",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2025-12-11",
+     "sublicensing": "No",
+     "title": "NHS England and Department for Health and Social Care – joint working in pseudonymised data environments",
+     "yielded_benefits": "None yet reported"
+    }
+   ],
+   "version": "1.2"
+  },
+  {
+   "reference": "DARS-NIC-780525-J4L3S-v2.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nFor each approved project, the NHS England platform team will transfer the required dataset into a project specific “Pseudonymised Data Environment” in the Unified Data Access Layer (UDAL) or the Federated Data Platform (FDP) and will onboard approved analysts to do the specific work. \n\nThe Data will contain a pseudonymised ID which allows it to be linked to other datasets required for the specific project.\n\nThe Data will contain no direct identifying data items. The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at NHS England.\n\nPalantir Technologies UK Ltd support the FDP for NHS England and are listed as a data processor.  Palantir Technologies UK Ltd support the system and so will have access to personal data for support purposes. \n \nAmazon Web Services supply Cloud Services for Palantir Technologies UK Ltd and are therefore listed as a data processor, they supply support to the system but do not access data.   \n\nMicrosoft Limited supply cloud services for UDAL and are therefore listed as a data processor, they supply support to the system but do not access data. \n\nThe Data will be accessed by authorised personnel via remote access. \n\nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nAccess is restricted to substantive employees of DHSC, seconded staff and substantive employees of NHS England. \n\nOnly a limited number of DHSC/NHSE analysts will be given access to the data in NHSE’s pseudonymised data environment for the purposes for each project. The analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "DEPARTMENT OF HEALTH AND SOCIAL CARE",
+      "NHS ENGLAND - X26"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Cancer Waiting Times - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Dataset - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Elective Patient Pathway (EPP) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cancer Registries and Analysis Service (NCRAS) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cost Collection for the NHS (Published) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "",
+       "name": "PLICS Aggregate - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Patient Level Information and Costing Systems (PLICS) Pseudo - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Accident & Emergency (A&E) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Emergency Care Data Set (ECDS) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "UEC Workstation - FDP",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Waiting List Minimum Dataset - UDAL",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "e-Referral Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2028-12-16",
+     "expected_benefits": "The benefits of joint working and use of data is necessary to (a) prevent situations where conflicting information is presented to ministers, senior officials, policy teams and programme colleagues as a result of differences in how the data are processed and used; and (b) enable NHS England and DHSC to make use of a larger and more diverse pool of analytical resource to make sufficiently rapid progress on a wider set of projects, to identify and deploy the best analytical approaches, and to maximise the insightfulness and impact of the results.\n\nThe use of the data could:\n-\tHelp the system to better understand the health and care needs of populations.\n-\tLead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tInform planning health services and programmes\n-\tInform decisions on how to effectively allocate and evaluate funding according to health needs\n-\tProvide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nPatients might benefit from:\n-\tBetter evidence-based policy making\n-\tBetter outcomes from fewer patients having delayed discharges, meaning more capacity for new patients and better outcomes for patients with less delay.\n-\tInform Ministerial decision-making\n-\tLead to the identification or improvement of interventions, or health and care system design to improve health and care outcomes\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tTo improvements in health outcomes for cancer or other patients\n-\tThe data is used to inform and monitor policy decisions. Better understanding of the data will help inform colleagues and ministers to make effective decisions.\n\nProject Specific Benefits: \n\nElective, cancer and diagnostic (ECD) demand, waits, activity and pathways: individuals who are currently waiting for cancer, other elective or diagnostic treatment or who will require further treatment in the future will benefit from improvements in the quality, timeliness and efficiency of those services.  Individuals who will require further treatment in the future, or whose friends and family will require treatment, will benefit from improvements in the quality, timeliness and efficiency of those services. The wider public will also benefit through the positive impact on public finances, both directly as a result of the improved efficiency of those services and indirectly through the impact of better health on the wider economy.\n\nUrgent and Emergency Care Unit Costs Analysis: acting on opportunities for improved productivity derived from the analysis  supports the NHS to deliver the target to deliver a 2% year-on-year productivity gain for the next 3 years as set out in the 10 Year Health Plan for England. Increased productivity and efficiency will deliver measurable benefits in terms of more treatments for NHS patients, shorter waiting times for elective care and better provision of emergency care.\n\nUrgent and Emergency Care team working: Use of this data supports commissioners and policy makers to understand issues within the UEC system, use evidence to identify and test potential solutions and thus inform policy decisions ultimately leading to improvements to UEC systems and better patient experience.",
+     "expected_output": "Elective, Cancer and Diagnostics Analysis: Access to the data will support policy analysis on demand, activity and waiting time between pathways to inform progress on Govt/DHSC priority of reducing the elective waiting list. This data set will be essential in developing future policy on best-timed pathways, as well as monitor progress of the elective reform plan and target live policy issues such as the change in case-mix in the elective waiting list. This dataset will allow further examination of variation in Elective Pathways between trusts due to difference in practice and difference in case-mix. This will enable policy interventions to target specific trusts and specific areas of the pathway and areas to help support the main priority of improving performance on the 18ww target and reducing the waiting list. It will also be used to support spending reviews, allowing for the evidencing of key assumptions underpinning these.\n\nUrgent and Emergency Care Unit Costs Analysis: Access to the data will be used to understand why unit costs of urgent and emergency care have increased since the pandemic. This includes how different categories of spend have changed since the pandemic, in which organisations and in which healthcare resource group (HRG).  Analysis at this level of detail is required to identify which unit cost increases have been caused by changes in case-mix, provider mix or a combination of these, and which are either avoidable or unavoidable. \nOutputs of analysis will be presented to policy leads within NHSE and DHSC explaining what categories of spend and types of activities have caused the increase in unit costs.\n\nUrgent and Emergency Care team working: The use of the workstation for joint DHSC/NHSE working will allow analysts from both teams the ability to collaborate on projects such as analysing the ambulance dataset (ADS) to enable learning and policy development, as well as allowing delivery of any new requests from UEC stakeholders, giving UEC analysts the ability to prioritise workload across both teams.  This could include development of new dashboards within the workstations to allow UEC customers to “self-serve” or less formal responses to ad hoc data requests.\n\nThe expected outputs produced for the requested datasets might include: \n-\tData dashboards; \n-\tWritten Reports and presentations to DHSC senior officials, Ministers, policy colleagues, and NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tCreation of software tools to track metrics within DHSC\n-\tNational, regional and provider tables on information relevant to the specific project. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n-\tData dashboards for use within DHSC and NHS England\n-\tWritten reports/briefing documents and presentations to DHSC senior officials, Ministers, policy colleagues NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tWorkshops with DHSC officials, Ministers NHS England and other government departments\n\nWritten reports/briefing documents and presentations are produced as and when requested. Data Dashboards will be refreshed in line with the refresh frequency of the data underlying them.\n\nThe outputs will not contain disclosive NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\nThe expected outputs of the processing will include tables, plot and reports required by each project. For each project, the analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations.",
+     "objective": "The Department of Health & Social Care (DHSC) and NHS England require access to NHS England Data to conduct timely analysis in response to ministerial and senior officials. This requirement aligns with the statutory duties of the Secretary of State for Health as outlined in the National Health Service Act 2006. The relevant legislative provisions are:  \n\n-\tDHSC – Secretary of State: section 1A - Duty as to improvement in quality of services\n-\tNHSE – Section 13E - Duty as to improvement in quality of services\n\nThe specific analyses required will emerge over time in response to programme and governmental needs. The analyses will be undertaken on behalf of DHSC and NHS England by project teams made up of a combination of DHSC and NHS England analysts. \n\nTo enable effective joint working, analysts required access to NHSEs pseudonymised data environments, which will be done by creating an area where both DHSC/NHSE colleagues can view and analyse the same data.  The datasets will be analysed in line with either of the following models:\n\n•  Joint Project – DHSC/NHSE have separate statutory functions as the basis for conducting activities and processing personal data, but those functions are related, and consequently their exercise is aligned. The purposes for processing are jointly determined to achieve this aligned exercise of functions.\n\n• Agency Model - One Party’s statutory or other lawful basis underpins the processing, but the processing may be conducted by employees of both Parties and may involve access to personal data held by one of the Parties. The means the analysis is determined by the Party whose function is being discharged.\n\nRequests for access to enable joint working / joint access to data will be assured via a single Data Protection Impact Assessment (DPIA) that will be reviewed iteratively as new requests are received. \n\nThe Data will be used for the following: \n\n1. Elective, cancer and diagnostic (ECD) demand, waits, activity and pathways: this will inform delivery of the Elective Reform Plan that sets out how the NHS will reform elective care services and meet the 18 week referral to treatment standard by March 2029. It will also inform development and delivery of the forthcoming cancer plan, which is expected to be published in the Autumn. The analyses will feed into funding decisions, policy development, the transformation of services, operational planning and management, and monitoring and evaluation. As a result, the policies adopted, initiatives taken forward and decisions made will have a stronger evidence base and consequently a greater likelihood of achieving the desired outcomes.\n\n2. Urgent and Emergency Care Unit Costs Analysis: NHS England and the Department for Health and Social Care will undertake analysis of Patient Level Costing Data to understand why non-elective efficiency has reduced since the pandemic. It is a critical issue for the running of the NHS, and is also important for imputing into future financial plans and discussions with Treasury. The same output will be used by both DHSC and NHS England.\n\n3. Urgent and Emergency Care team working: The merger of NHSE and DHSC Urgent and Emergency Care (UEC) Programme teams will provide streamlined national guidance and support to drive continuous improvement in elective and urgent and emergency care services across the NHS.  Work of the programme works to commitments made in the Long-Term Plan for urgent and emergency care services and comprises workstreams relating to Integrated urgent care; Urgent treatment centres; Ambulance; Hospitals; Clinical review of NHS access standards and; Reducing length of stay.  \n\nIn addition, the programme is working collaboratively to meet the immediate objectives of the Urgent and emergency care plan 2025/26: https://www.england.nhs.uk/publication/urgent-and-emergency-care-plan-2025-26/ \n\nShared DHSC/NHSE access to the existing UEC analytical workspace which sits on the Federated Data Platform (FDP) will enable joint analysis to be carried out on data to support work in the UEC area.  Analysts will be able to create, collaborate and share their analysis, including topics such as 111, 999, A&E, discharges and others. Use of the data would also enable the programme to provide rapid analysis in response to ministerial and senior official requests and to answer policy questions.  Analysis will build a real evidence base on interventions including what works and what doesn’t, a clear narrative on where the problems lie, what the causes are and how improvements can be made. This is particularly important to inform the change programme in the UEC plan, the 10 year health plan and the 3 year UEC strategy. \n\nOnly personnel of DHSC or NHS England are eligible to request and/or be given access to the Data. \n\nSpecific analyses will emerge over time in response to programme and governmental needs. The purpose must be: \n1. Aligned to statutory functions of DHSC and / or NHS England; and \n2. A collaboration / joint working project between DHSC and NHS England; and   \n3. Required to support programme delivery or meet governmental needs. These needs may arise following engagement with ministers or senior officials within DHSC, No.10, the Cabinet Office, HM Treasury, NHS England (central and regional teams), other NHS organisations, or relevant external stakeholders.\n\nData cannot be used for purposes outside the scope of the purpose outlined above.\n\nRequests will be submitted to representatives of the DHSC Data Access and Platforms team and discussed with representatives from NHS England Data Access & Partnership team and Privacy, Transparency and Trust (PTT). Requests identified where processing will be undertaken as a joint working project will be approved by a senior member of NHS England PTT and the relevant dataset Information Asset Owner (IAO).\n\nRequests for access to enable joint working / joint access to data will be assured via a single DPIA that will be reviewed iteratively as new requests are received. Criteria used to approve include: \n\n-\tThe Directions under which the Data are collected and processed do not include any restrictions which would preclude use by DHSC or for the proposed purpose.  \n-\tThe IAO is content for access to be provided \n-\tThe purpose is aligned to statutory functions of DHSC / NHS England as outlined in this DSA\n-\tThe project is collaboration / joint working project between DHSC and NHS England\n-\tThe project is required for rapid policy analysts to support programme delivery or meet governmental needs.\n-\tThe purpose is connected with health and care.\n\nThe following steps will be taken to enable joint working/joint access to the data: \n1. Identification of in scope project requests: \nRepresentative from the DHSC Data Access and Platforms team and NHS England Data Access & Partnerships will maintain a list of project requests and required datasets. This includes a proposed purpose, dataset, outputs and benefits of the use of data. This will identify whether the purpose of the request is aligned to DHSC sole controllership or where processing is a joint working project requiring governance in the form of adding to the joint working DPIA and this Data Sharing Agreement. \n\nWhere it is a joint working project, the DHSC and NHS England representative will liaise with the relevant analytical leads at DHSC and NHS England to determine whether the purpose is for joint working or agency working. \n\n2. Update of the DHSC-NHSE Joint Working DPIA and this Data Sharing Agreement (NIC-780525-J4L3S) \nWhen it has been agreed that the request is a collaboration or joint working project, NHS England PTT representative will work with the relevant NHS England project lead to update the DPIA with details of the project. This will include purpose of analysis, the dataset of data to be transferred to the NHS England pseudonymised environment, the statutory basis for collection, analysis, processing and dissemination, and proposed benefits of processing. The relevant dataset IAO is required to confirm agreement for access to be provided. \n\n3. Assurance of the Joint Working DPIA and update of the joint working DSA\nThe DPIA will be reviewed and approved by a senior member of the NHS England PTT. The updated DPIA will be shared with the Data Access Service (DAS) who will update this DSA and released for signature. \n\n4. Access arrangements \nThe relevant NHSE Data Platform team will be informed by NHS England PTT that the Joint working DPIA has been updated for a particular use case. The DAS will confirm when the DSA has been approved. The NHS England Data Platform team will transfer the Data into the pseudonymised data environment and onboard the approved DHSC / NHS England analysts to do the specified work environment.",
+     "organisation": "NHS ENGLAND - X26",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2025-12-18",
+     "sublicensing": "No",
+     "title": "NHS England and Department for Health and Social Care – joint working in pseudonymised data environments",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "2.2"
+  },
+  {
+   "reference": "DARS-NIC-780525-J4L3S-v3.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nFor each approved project, the NHS England platform team will transfer the required dataset into a project specific “Pseudonymised Data Environment” in the Unified Data Access Layer (UDAL) or the Federated Data Platform (FDP) and will onboard approved analysts to do the specific work. \n\nThe Data will contain a pseudonymised ID which allows it to be linked to other datasets required for the specific project.\n\nThe Data will contain no direct identifying data items. The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at NHS England.\n\nPalantir Technologies UK Ltd support the FDP for NHS England and are listed as a data processor.  Palantir Technologies UK Ltd support the system and so will have access to personal data for support purposes. \n \nAmazon Web Services supply Cloud Services for Palantir Technologies UK Ltd and are therefore listed as a data processor, they supply support to the system but do not access data.   \n\nMicrosoft Limited supply cloud services for UDAL and are therefore listed as a data processor, they supply support to the system but do not access data. \n\nThe Data will be accessed by authorised personnel via remote access. \n\nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nAccess is restricted to substantive employees of DHSC, seconded staff and substantive employees of NHS England. \n\nOnly a limited number of DHSC/NHSE analysts will be given access to the data in NHSE’s pseudonymised data environment for the purposes for each project. The analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "DEPARTMENT OF HEALTH AND SOCIAL CARE",
+      "NHS ENGLAND - X26"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Cancer Waiting Times - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Dataset - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Elective Patient Pathway (EPP) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Other-NHS Act 2006 s.13Z3 (e) and (f)",
+       "name": "Elective, Cancer, and Diagnostics Workstation – FDP",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cancer Registries and Analysis Service (NCRAS) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cost Collection for the NHS (Published) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "PLICS Aggregate - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Patient Level Information and Costing Systems (PLICS) Pseudo - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Other-NHS Act 2006 s.13Z3 (e) and (f)",
+       "name": "Referral to Treatment Monthly Data - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Accident & Emergency (A&E) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Emergency Care Data Set (ECDS) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "UEC Workstation - FDP",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Waiting List Minimum Dataset - UDAL",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "e-Referral Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2029-03-17",
+     "expected_benefits": "The benefits of joint working and use of data is necessary to (a) prevent situations where conflicting information is presented to ministers, senior officials, policy teams and programme colleagues as a result of differences in how the data are processed and used; and (b) enable NHS England and DHSC to make use of a larger and more diverse pool of analytical resource to make sufficiently rapid progress on a wider set of projects, to identify and deploy the best analytical approaches, and to maximise the insightfulness and impact of the results.\n\nThe use of the data could:\n-\tHelp the system to better understand the health and care needs of populations.\n-\tLead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tInform planning health services and programmes\n-\tInform decisions on how to effectively allocate and evaluate funding according to health needs\n-\tProvide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nPatients might benefit from:\n-\tBetter evidence-based policy making\n-\tBetter outcomes from fewer patients having delayed discharges, meaning more capacity for new patients and better outcomes for patients with less delay.\n-\tInform Ministerial decision-making\n-\tLead to the identification or improvement of interventions, or health and care system design to improve health and care outcomes\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tTo improvements in health outcomes for cancer or other patients\n-\tThe data is used to inform and monitor policy decisions. Better understanding of the data will help inform colleagues and ministers to make effective decisions.\n\nProject Specific Benefits: \n\nElective, cancer and diagnostic (ECD) demand, waits, activity and pathways: individuals who are currently waiting for cancer, other elective or diagnostic treatment or who will require further treatment in the future will benefit from improvements in the quality, timeliness and efficiency of those services.  Individuals who will require further treatment in the future, or whose friends and family will require treatment, will benefit from improvements in the quality, timeliness and efficiency of those services. The wider public will also benefit through the positive impact on public finances, both directly as a result of the improved efficiency of those services and indirectly through the impact of better health on the wider economy.\n\nUrgent and Emergency Care Unit Costs Analysis: acting on opportunities for improved productivity derived from the analysis  supports the NHS to deliver the target to deliver a 2% year-on-year productivity gain for the next 3 years as set out in the 10 Year Health Plan for England. Increased productivity and efficiency will deliver measurable benefits in terms of more treatments for NHS patients, shorter waiting times for elective care and better provision of emergency care.\n\nUrgent and Emergency Care team working: Use of this data supports commissioners and policy makers to understand issues within the UEC system, use evidence to identify and test potential solutions and thus inform policy decisions ultimately leading to improvements to UEC systems and better patient experience.",
+     "expected_output": "Elective, Cancer and Diagnostics Analysis: Access to the data will support policy analysis on demand, activity and waiting time between pathways to inform progress on Govt/DHSC priority of reducing the elective waiting list. This data set will be essential in developing future policy on best-timed pathways, as well as monitor progress of the elective reform plan and target live policy issues such as the change in case-mix in the elective waiting list. This dataset will allow further examination of variation in Elective Pathways between trusts due to difference in practice and difference in case-mix. This will enable policy interventions to target specific trusts and specific areas of the pathway and areas to help support the main priority of improving performance on the 18ww target and reducing the waiting list. It will also be used to support spending reviews, allowing for the evidencing of key assumptions underpinning these.\n\nUrgent and Emergency Care Unit Costs Analysis: Access to the data will be used to understand why unit costs of urgent and emergency care have increased since the pandemic. This includes how different categories of spend have changed since the pandemic, in which organisations and in which healthcare resource group (HRG).  Analysis at this level of detail is required to identify which unit cost increases have been caused by changes in case-mix, provider mix or a combination of these, and which are either avoidable or unavoidable. \nOutputs of analysis will be presented to policy leads within NHSE and DHSC explaining what categories of spend and types of activities have caused the increase in unit costs.\n\nUrgent and Emergency Care team working: The use of the workstation for joint DHSC/NHSE working will allow analysts from both teams the ability to collaborate on projects such as analysing the ambulance dataset (ADS) to enable learning and policy development, as well as allowing delivery of any new requests from UEC stakeholders, giving UEC analysts the ability to prioritise workload across both teams.  This could include development of new dashboards within the workstations to allow UEC customers (for example the DHSC UEC policy team) to “self-serve” or less formal responses to ad hoc data requests. DHSC UEC policy team members will have access to outputs within the UEC workstation as “unrestricted viewers” and the some of the workstation outputs may include unsuppressed data. These will not be exported from the FDP. \n\nThe expected outputs produced for the requested datasets might include: \n-\tData dashboards; \n-\tWritten Reports and presentations to DHSC senior officials, Ministers, policy colleagues, and NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tCreation of software tools to track metrics within DHSC\n-\tNational, regional and provider tables on information relevant to the specific project. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n-\tData dashboards for use within DHSC and NHS England\n-\tWritten reports/briefing documents and presentations to DHSC senior officials, Ministers, policy colleagues NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tWorkshops with DHSC officials, Ministers NHS England and other government departments\n\nWritten reports/briefing documents and presentations are produced as and when requested. Data Dashboards will be refreshed in line with the refresh frequency of the data underlying them.\n\nThe outputs exported from the relevant NHS England platform will not contain disclosive NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\nThe expected outputs of the processing will include tables, plot and reports required by each project. For each project, the analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations.",
+     "objective": "The Department of Health & Social Care (DHSC) and NHS England require access to NHS England Data to conduct timely analysis in response to ministerial and senior officials. This requirement aligns with the statutory duties of the Secretary of State for Health as outlined in the National Health Service Act 2006. The relevant legislative provisions are:  \n\n-\tDHSC – Secretary of State: section 1A - Duty as to improvement in quality of services\n-\tNHSE – Section 13E - Duty as to improvement in quality of services\n\nThe specific analyses required will emerge over time in response to programme and governmental needs. The analyses will be undertaken on behalf of DHSC and NHS England by project teams made up of a combination of DHSC and NHS England analysts. \n\nTo enable effective joint working, analysts required access to NHSEs pseudonymised data environments, which will be done by creating an area where both DHSC/NHSE colleagues can view and analyse the same data.  The datasets will be analysed in line with either of the following models:\n\n•  Joint Project – DHSC/NHSE have separate statutory functions as the basis for conducting activities and processing personal data, but those functions are related, and consequently their exercise is aligned. The purposes for processing are jointly determined to achieve this aligned exercise of functions.\n\n• Agency Model - One Party’s statutory or other lawful basis underpins the processing, but the processing may be conducted by employees of both Parties and may involve access to personal data held by one of the Parties. The means the analysis is determined by the Party whose function is being discharged.\n\nRequests for access to enable joint working / joint access to data will be assured via a single Data Protection Impact Assessment (DPIA) that will be reviewed iteratively as new requests are received. \n\nThe Data will be used for the following: \n\n1. Elective, cancer and diagnostic (ECD) demand, waits, activity and pathways: this will inform delivery of the Elective Reform Plan that sets out how the NHS will reform elective care services and meet the 18 week referral to treatment standard by March 2029. It will also inform development and delivery of the forthcoming cancer plan, which is expected to be published in the Autumn. The analyses will feed into funding decisions, policy development, the transformation of services, operational planning and management, and monitoring and evaluation. As a result, the policies adopted, initiatives taken forward and decisions made will have a stronger evidence base and consequently a greater likelihood of achieving the desired outcomes.\n\nShared DHSC/NHSE access to the existing Elective, Cancer, and Diagnostics analytical Workstation (including a Cancer-specific Workstation) which sits on the Federated Data Platform (FDP) will enable joint analysis to be carried out on data to support work in the ECD area. Analysts will be able to create, collaborate and share their analysis, including topics such as elective demand/capacity/activity modelling, elective/cancer/diagnostic performance, dataset and metric development and publication processing.\n\nUse of the data would also enable the programme to provide rapid analysis in response to ministerial and senior official requests and to answer policy questions. Analysis will build a real evidence base on interventions including what works and what doesn’t, a clear narrative on where the problems lie, what the causes are and how improvements can be made. This is particularly important to aid the programme as we all work to achieve the elective (percentage waiting within 18 weeks), cancer (faster diagnosis and 62-day combined), and diagnostic (percentage waiting over 6 weeks) standards and ambitions. \n\nDHSC policy colleagues within the ECD programme will be permitted to view the outputs of aggregate data in the FDP ECD Workstation (or to have outputs of aggregate data shared with them), subject to approval by the product owner.\n\n2. Urgent and Emergency Care Unit Costs Analysis: NHS England and the Department for Health and Social Care will undertake analysis of Patient Level Costing Data to understand why non-elective efficiency has reduced since the pandemic. It is a critical issue for the running of the NHS, and is also important for imputing into future financial plans and discussions with Treasury. The same output will be used by both DHSC and NHS England.\n\n3. Urgent and Emergency Care team working: The merger of NHSE and DHSC Urgent and Emergency Care (UEC) Programme teams will provide streamlined national guidance and support to drive continuous improvement in elective and urgent and emergency care services across the NHS.  Work of the programme works to commitments made in the Long-Term Plan for urgent and emergency care services and comprises workstreams relating to Integrated urgent care; Urgent treatment centres; Ambulance; Hospitals; Clinical review of NHS access standards and; Reducing length of stay.  \n\nIn addition, the programme is working collaboratively to meet the immediate objectives of the Urgent and emergency care plan 2025/26: https://www.england.nhs.uk/publication/urgent-and-emergency-care-plan-2025-26/ \n\nShared DHSC/NHSE access to the existing UEC analytical workspace which sits on the Federated Data Platform (FDP) will enable joint analysis to be carried out on data to support work in the UEC area.  Analysts will be able to create, collaborate and share their analysis, including topics such as 111, 999, A&E, discharges and others. Use of the data would also enable the programme to provide rapid analysis in response to ministerial and senior official requests and to answer policy questions.  Analysis will build a real evidence base on interventions including what works and what doesn’t, a clear narrative on where the problems lie, what the causes are and how improvements can be made. This is particularly important to inform the change programme in the UEC plan, the 10 year health plan and the 3 year UEC strategy. \n\nDHSC policy colleagues within the UEC programme will be permitted to view the outputs of aggregate data in the FDP UEC Product (or to have outputs of aggregate data shared with them), subject to approval by the product owner. Outputs made available to the DHSC policy colleagues UEC may include unsuppressed Data, but will not be exported from the FDP. \n\nOnly personnel of DHSC or NHS England are eligible to request and/or be given access to the Data. \n\nSpecific analyses will emerge over time in response to programme and governmental needs. The purpose must be: \n1. Aligned to statutory functions of DHSC and / or NHS England; and \n2. A collaboration / joint working project between DHSC and NHS England; and   \n3. Required to support programme delivery or meet governmental needs. These needs may arise following engagement with ministers or senior officials within DHSC, No.10, the Cabinet Office, HM Treasury, NHS England (central and regional teams), other NHS organisations, or relevant external stakeholders.\n\nData cannot be used for purposes outside the scope of the purpose outlined above.\n\nRequests will be submitted to representatives of the DHSC Data Access and Platforms team and discussed with representatives from NHS England Data Access & Partnership team and Privacy, Transparency and Trust (PTT). Requests identified where processing will be undertaken as a joint working project will be approved by a senior member of NHS England PTT and the relevant dataset Information Asset Owner (IAO).\n\nRequests for access to enable joint working / joint access to data will be assured via a single DPIA that will be reviewed iteratively as new requests are received. Criteria used to approve include: \n\n-\tThe Directions under which the Data are collected and processed do not include any restrictions which would preclude use by DHSC or for the proposed purpose.  \n-\tThe IAO is content for access to be provided \n-\tThe purpose is aligned to statutory functions of DHSC / NHS England as outlined in this DSA\n-\tThe project is collaboration / joint working project between DHSC and NHS England\n-\tThe project is required for rapid policy analysts to support programme delivery or meet governmental needs.\n-\tThe purpose is connected with health and care.\n\nThe following steps will be taken to enable joint working/joint access to the data: \n1. Identification of in scope project requests: \nRepresentative from the DHSC Data Access and Platforms team and NHS England Data Access & Partnerships will maintain a list of project requests and required datasets. This includes a proposed purpose, dataset, outputs and benefits of the use of data. This will identify whether the purpose of the request is aligned to DHSC sole controllership or where processing is a joint working project requiring governance in the form of adding to the joint working DPIA and this Data Sharing Agreement. \n\nWhere it is a joint working project, the DHSC and NHS England representative will liaise with the relevant analytical leads at DHSC and NHS England to determine whether the purpose is for joint working or agency working. \n\n2. Update of the DHSC-NHSE Joint Working DPIA and this Data Sharing Agreement (NIC-780525-J4L3S) \nWhen it has been agreed that the request is a collaboration or joint working project, NHS England PTT representative will work with the relevant NHS England project lead to update the DPIA with details of the project. This will include purpose of analysis, the dataset of data to be transferred to the NHS England pseudonymised environment, the statutory basis for collection, analysis, processing and dissemination, and proposed benefits of processing. The relevant dataset IAO is required to confirm agreement for access to be provided. \n\n3. Assurance of the Joint Working DPIA and update of the joint working DSA\nThe DPIA will be reviewed and approved by a senior member of the NHS England PTT. The updated DPIA will be shared with the Data Access Service (DAS) who will update this DSA and released for signature. \n\n4. Access arrangements \nThe relevant NHSE Data Platform team will be informed by NHS England PTT that the Joint working DPIA has been updated for a particular use case. The DAS will confirm when the DSA has been approved. The NHS England Data Platform team will transfer the Data into the pseudonymised data environment and onboard the approved DHSC / NHS England analysts to do the specified work environment.",
+     "organisation": "NHS ENGLAND - X26",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2026-03-20",
+     "sublicensing": "No",
+     "title": "NHS England and Department for Health and Social Care – joint working in pseudonymised data environments",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "3.2"
+  },
+  {
+   "reference": "DARS-NIC-780525-J4L3S-v4.4",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nFor each approved project, the NHS England platform team will transfer the required dataset into a project specific “Pseudonymised Data Environment” in the Unified Data Access Layer (UDAL) or the Federated Data Platform (FDP) and will onboard approved analysts to do the specific work. \n\nThe Data will contain a pseudonymised ID which allows it to be linked to other datasets required for the specific project.\n\nThe Data will contain no direct identifying data items. The Data will be pseudonymised and individuals cannot be reidentified through linkage with other data in the possession of the recipient.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be stored on servers at NHS England.\n\nPalantir Technologies UK Ltd support the FDP for NHS England and are listed as a data processor.  Palantir Technologies UK Ltd support the system and so will have access to personal data for support purposes. \n \nAmazon Web Services supply Cloud Services for Palantir Technologies UK Ltd and are therefore listed as a data processor, they supply support to the system but do not access data.   \n\nMicrosoft Limited supply cloud services for UDAL and are therefore listed as a data processor, they supply support to the system but do not access data. \n\nThe Data will be accessed by authorised personnel via remote access. \n\nThe Controller must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \n- Remote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nAccess is restricted to substantive employees of DHSC, seconded staff and substantive employees of NHS England. \n\nOnly a limited number of DHSC/NHSE analysts will be given access to the data in NHSE’s pseudonymised data environment for the purposes for each project. The analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "DEPARTMENT OF HEALTH AND SOCIAL CARE",
+      "NHS ENGLAND - X26"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Cancer Waiting Times - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Diagnostic Imaging Dataset - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Elective Patient Pathway (EPP) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d); Other-NHS Act 2006 s.13Z3 (e) and (f)",
+       "name": "Elective, Cancer, and Diagnostics Workstation – FDP",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "HES - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cancer Registries and Analysis Service (NCRAS) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "National Cost Collection for the NHS (Published) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "PLICS Aggregate - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Patient Level Information and Costing Systems (PLICS) Pseudo - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Other-NHS Act 2006 s.13Z3 (e) and (f)",
+       "name": "Referral to Treatment Monthly Data - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Accident & Emergency (A&E) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS+ Emergency Care Data Set (ECDS) (Monthly) - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "UEC Workstation - FDP",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Waiting List Minimum Dataset - UDAL",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "System Access",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "e-Referral Service - UDAL",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2028-03-17",
+     "expected_benefits": "The benefits of joint working and use of data is necessary to (a) prevent situations where conflicting information is presented to ministers, senior officials, policy teams and programme colleagues as a result of differences in how the data are processed and used; and (b) enable NHS England and DHSC to make use of a larger and more diverse pool of analytical resource to make sufficiently rapid progress on a wider set of projects, to identify and deploy the best analytical approaches, and to maximise the insightfulness and impact of the results.\n\nThe use of the data could:\n-\tHelp the system to better understand the health and care needs of populations.\n-\tLead to the identification or improvement of treatments or interventions, or health and care system design to improve health and care outcomes or experience\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tInform planning health services and programmes\n-\tInform decisions on how to effectively allocate and evaluate funding according to health needs\n-\tProvide a mechanism for checking the quality of care. This could include identifying areas of good practice to learn from, or areas of poorer practice which need to be addressed.\n\nPatients might benefit from:\n-\tBetter evidence-based policy making\n-\tBetter outcomes from fewer patients having delayed discharges, meaning more capacity for new patients and better outcomes for patients with less delay.\n-\tInform Ministerial decision-making\n-\tLead to the identification or improvement of interventions, or health and care system design to improve health and care outcomes\n-\tAdvance understanding of regional and national trends in health and social care needs\n-\tTo improvements in health outcomes for cancer or other patients\n-\tThe data is used to inform and monitor policy decisions. Better understanding of the data will help inform colleagues and ministers to make effective decisions.\n\nProject Specific Benefits: \n\nElective, cancer and diagnostic (ECD) demand, waits, activity and pathways: individuals who are currently waiting for cancer, other elective or diagnostic treatment or who will require further treatment in the future will benefit from improvements in the quality, timeliness and efficiency of those services.  Individuals who will require further treatment in the future, or whose friends and family will require treatment, will benefit from improvements in the quality, timeliness and efficiency of those services. The wider public will also benefit through the positive impact on public finances, both directly as a result of the improved efficiency of those services and indirectly through the impact of better health on the wider economy.\n\nUrgent and Emergency Care Unit Costs Analysis: acting on opportunities for improved productivity derived from the analysis  supports the NHS to deliver the target to deliver a 2% year-on-year productivity gain for the next 3 years as set out in the 10 Year Health Plan for England. Increased productivity and efficiency will deliver measurable benefits in terms of more treatments for NHS patients, shorter waiting times for elective care and better provision of emergency care. This work will identify productivity opportunity for providers by showing which are optimal mixes of resources for certain populations. Increasing NHS productivity will mean more patients can be treated for the same amount of money. This will help reduce waiting lists and so patients will spend less time in pain/ill health waiting for treatment.\n\nUrgent and Emergency Care team working: Use of this data supports commissioners and policy makers to understand issues within the UEC system, use evidence to identify and test potential solutions and thus inform policy decisions ultimately leading to improvements to UEC systems and better patient experience.",
+     "expected_output": "Elective, Cancer and Diagnostics Analysis: Access to the data will support policy analysis on demand, activity and waiting time between pathways to inform progress on Govt/DHSC priority of reducing the elective waiting list. This data set will be essential in developing future policy on best-timed pathways, as well as monitor progress of the elective reform plan and target live policy issues such as the change in case-mix in the elective waiting list. This dataset will allow further examination of variation in Elective Pathways between trusts due to difference in practice and difference in case-mix. This will enable policy interventions to target specific trusts and specific areas of the pathway and areas to help support the main priority of improving performance on the 18ww target and reducing the waiting list. It will also be used to support spending reviews, allowing for the evidencing of key assumptions underpinning these.\n\nUrgent and Emergency Care Unit Costs Analysis: Access to the data will be used to understand why unit costs of urgent and emergency care have increased since the pandemic. This includes how different categories of spend have changed since the pandemic, in which organisations and in which healthcare resource group (HRG).  Analysis at this level of detail is required to identify which unit cost increases have been caused by changes in case-mix, provider mix or a combination of these, and which are either avoidable or unavoidable. Outputs will also help understand how changes in the use of resources are affecting NHS productivity. Outputs of analysis will be presented to policy leads within NHSE and DHSC explaining what categories of spend and types of activities have caused the increase in unit costs.\n\nUrgent and Emergency Care team working: The use of the workstation for joint DHSC/NHSE working will allow analysts from both teams the ability to collaborate on projects such as analysing the ambulance dataset (ADS) to enable learning and policy development, as well as allowing delivery of any new requests from UEC stakeholders, giving UEC analysts the ability to prioritise workload across both teams.  This could include development of new dashboards within the workstations to allow UEC customers (for example the DHSC UEC policy team) to “self-serve” or less formal responses to ad hoc data requests. DHSC UEC policy team members will have access to outputs within the UEC workstation as “unrestricted viewers” and the some of the workstation outputs may include unsuppressed data. These will not be exported from the FDP. \n\nThe expected outputs produced for the requested datasets might include: \n-\tData dashboards; \n-\tWritten Reports and presentations to DHSC senior officials, Ministers, policy colleagues, and NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tCreation of software tools to track metrics within DHSC\n-\tNational, regional and provider tables on information relevant to the specific project. \n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n-\tData dashboards for use within DHSC and NHS England\n-\tWritten reports/briefing documents and presentations to DHSC senior officials, Ministers, policy colleagues NHS England, No.10 and His Majesty's Treasury (HMT)\n-\tWorkshops with DHSC officials, Ministers NHS England and other government departments\n\nWritten reports/briefing documents and presentations are produced as and when requested. Data Dashboards will be refreshed in line with the refresh frequency of the data underlying them.\n\nThe outputs exported from the relevant NHS England platform will not contain disclosive NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived. \n\nThe expected outputs of the processing will include tables, plot and reports required by each project. For each project, the analytical approach, progress and draft outputs will be reviewed by senior analysts from the two organisations.",
+     "objective": "The Department of Health & Social Care (DHSC) and NHS England require access to NHS England Data to conduct timely analysis in response to ministerial and senior officials. This requirement aligns with the statutory duties of the Secretary of State for Health as outlined in the National Health Service Act 2006. The relevant legislative provisions are:  \n\n-\tDHSC – Secretary of State: section 1A - Duty as to improvement in quality of services\n-\tNHSE – Section 13E - Duty as to improvement in quality of services\n\nThe specific analyses required will emerge over time in response to programme and governmental needs. The analyses will be undertaken on behalf of DHSC and NHS England by project teams made up of a combination of DHSC and NHS England analysts. \n\nTo enable effective joint working, analysts required access to NHSEs pseudonymised data environments, which will be done by creating an area where both DHSC/NHSE colleagues can view and analyse the same data.  The datasets will be analysed in line with either of the following models:\n\n•  Joint Project – DHSC/NHSE have separate statutory functions as the basis for conducting activities and processing personal data, but those functions are related, and consequently their exercise is aligned. The purposes for processing are jointly determined to achieve this aligned exercise of functions.\n\n• Agency Model - One Party’s statutory or other lawful basis underpins the processing, but the processing may be conducted by employees of both Parties and may involve access to personal data held by one of the Parties. The means the analysis is determined by the Party whose function is being discharged.\n\nRequests for access to enable joint working / joint access to data will be assured via a single Data Protection Impact Assessment (DPIA) that will be reviewed iteratively as new requests are received. \n\nThe Data will be used for the following: \n\n1. Elective, cancer and diagnostic (ECD) demand, waits, activity and pathways: this will inform delivery of the Elective Reform Plan that sets out how the NHS will reform elective care services and meet the 18 week referral to treatment standard by March 2029. It will also inform development and delivery of the forthcoming cancer plan, which is expected to be published in the Autumn. The analyses will feed into funding decisions, policy development, the transformation of services, operational planning and management, and monitoring and evaluation. As a result, the policies adopted, initiatives taken forward and decisions made will have a stronger evidence base and consequently a greater likelihood of achieving the desired outcomes.\n\nShared DHSC/NHSE access to the existing Elective, Cancer, and Diagnostics analytical Workstation (including a Cancer-specific Workstation) which sits on the Federated Data Platform (FDP) will enable joint analysis to be carried out on data to support work in the ECD area. Analysts will be able to create, collaborate and share their analysis, including topics such as elective demand/capacity/activity modelling, elective/cancer/diagnostic performance, dataset and metric development and publication processing.\n\nUse of the data would also enable the programme to provide rapid analysis in response to ministerial and senior official requests and to answer policy questions. Analysis will build a real evidence base on interventions including what works and what doesn’t, a clear narrative on where the problems lie, what the causes are and how improvements can be made. This is particularly important to aid the programme as we all work to achieve the elective (percentage waiting within 18 weeks), cancer (faster diagnosis and 62-day combined), and diagnostic (percentage waiting over 6 weeks) standards and ambitions. \n\nDHSC policy colleagues within the ECD programme will be permitted to view the outputs of aggregate data in the FDP ECD Workstation (or to have outputs of aggregate data shared with them), subject to approval by the product owner.\n\n2. Urgent and Emergency Care Unit Costs Analysis: NHS England and the Department for Health and Social Care will undertake analysis of Patient Level Costing Data to understand why non-elective efficiency has reduced since the pandemic. It is a critical issue for the running of the NHS, and is also important for imputing into future financial plans and discussions with Treasury. Unit costs of urgent and emergency care have increased since the pandemic beyond inflation. To understand what has caused this and what can be done to rectify analysis of Patient Level  Information and Costing Systems (PLICS), National Cost Collection for the NHS, SUS and HES is needed. The same output will be used by both DHSC and NHS England.\n\n3. Urgent and Emergency Care team working: The merger of NHSE and DHSC Urgent and Emergency Care (UEC) Programme teams will provide streamlined national guidance and support to drive continuous improvement in elective and urgent and emergency care services across the NHS.  Work of the programme works to commitments made in the Long-Term Plan for urgent and emergency care services and comprises workstreams relating to Integrated urgent care; Urgent treatment centres; Ambulance; Hospitals; Clinical review of NHS access standards and; Reducing length of stay.  \n\nIn addition, the programme is working collaboratively to meet the immediate objectives of the Urgent and emergency care plan 2025/26: https://www.england.nhs.uk/publication/urgent-and-emergency-care-plan-2025-26/ \n\nShared DHSC/NHSE access to the existing UEC analytical workspace which sits on the Federated Data Platform (FDP) will enable joint analysis to be carried out on data to support work in the UEC area.  Analysts will be able to create, collaborate and share their analysis, including topics such as 111, 999, A&E, discharges and others. Use of the data would also enable the programme to provide rapid analysis in response to ministerial and senior official requests and to answer policy questions.  Analysis will build a real evidence base on interventions including what works and what doesn’t, a clear narrative on where the problems lie, what the causes are and how improvements can be made. This is particularly important to inform the change programme in the UEC plan, the 10 year health plan and the 3 year UEC strategy. \n\nDHSC policy colleagues within the UEC programme will be permitted to view the outputs of aggregate data in the FDP UEC Product (or to have outputs of aggregate data shared with them), subject to approval by the product owner. Outputs made available to the DHSC policy colleagues UEC may include unsuppressed Data, but will not be exported from the FDP. \n\nOnly personnel of DHSC or NHS England are eligible to request and/or be given access to the Data. \n\nSpecific analyses will emerge over time in response to programme and governmental needs. The purpose must be: \n1. Aligned to statutory functions of DHSC and / or NHS England; and \n2. A collaboration / joint working project between DHSC and NHS England; and   \n3. Required to support programme delivery or meet governmental needs. These needs may arise following engagement with ministers or senior officials within DHSC, No.10, the Cabinet Office, HM Treasury, NHS England (central and regional teams), other NHS organisations, or relevant external stakeholders.\n\nData cannot be used for purposes outside the scope of the purpose outlined above.\n\nRequests will be submitted to representatives of the DHSC Data Access and Platforms team and discussed with representatives from NHS England Data Access & Partnership team and Privacy, Transparency and Trust (PTT). Requests identified where processing will be undertaken as a joint working project will be approved by a senior member of NHS England PTT and the relevant dataset Information Asset Owner (IAO).\n\nRequests for access to enable joint working / joint access to data will be assured via a single DPIA that will be reviewed iteratively as new requests are received. Criteria used to approve include: \n\n-\tThe Directions under which the Data are collected and processed do not include any restrictions which would preclude use by DHSC or for the proposed purpose.  \n-\tThe IAO is content for access to be provided \n-\tThe purpose is aligned to statutory functions of DHSC / NHS England as outlined in this DSA\n-\tThe project is collaboration / joint working project between DHSC and NHS England\n-\tThe project is required for rapid policy analysts to support programme delivery or meet governmental needs.\n-\tThe purpose is connected with health and care.\n\nThe following steps will be taken to enable joint working/joint access to the data: \n1. Identification of in scope project requests: \nRepresentative from the DHSC Data Access and Platforms team and NHS England Data Access & Partnerships will maintain a list of project requests and required datasets. This includes a proposed purpose, dataset, outputs and benefits of the use of data. This will identify whether the purpose of the request is aligned to DHSC sole controllership or where processing is a joint working project requiring governance in the form of adding to the joint working DPIA and this Data Sharing Agreement. \n\nWhere it is a joint working project, the DHSC and NHS England representative will liaise with the relevant analytical leads at DHSC and NHS England to determine whether the purpose is for joint working or agency working. \n\n2. Update of the DHSC-NHSE Joint Working DPIA and this Data Sharing Agreement (NIC-780525-J4L3S) \nWhen it has been agreed that the request is a collaboration or joint working project, NHS England PTT representative will work with the relevant NHS England project lead to update the DPIA with details of the project. This will include purpose of analysis, the dataset of data to be transferred to the NHS England pseudonymised environment, the statutory basis for collection, analysis, processing and dissemination, and proposed benefits of processing. The relevant dataset IAO is required to confirm agreement for access to be provided. \n\n3. Assurance of the Joint Working DPIA and update of the joint working DSA\nThe DPIA will be reviewed and approved by a senior member of the NHS England PTT. The updated DPIA will be shared with the Data Access Service (DAS) who will update this DSA and released for signature. \n\n4. Access arrangements \nThe relevant NHSE Data Platform team will be informed by NHS England PTT that the Joint working DPIA has been updated for a particular use case. The DAS will confirm when the DSA has been approved. The NHS England Data Platform team will transfer the Data into the pseudonymised data environment and onboard the approved DHSC / NHS England analysts to do the specified work environment.",
+     "organisation": "NHS ENGLAND - X26",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2026-07-09",
+     "sublicensing": "No",
+     "title": "NHS England and Department for Health and Social Care – joint working in pseudonymised data environments",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "4.4"
+  }
+ ]
+}

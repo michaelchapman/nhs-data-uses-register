@@ -1,0 +1,541 @@
+{
+ "base_reference": "DARS-NIC-10123-M5K5H",
+ "versions": [
+  {
+   "reference": "DARS-NIC-10123-M5K5H-v3.2",
+   "states": [
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "University of Oxford"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-01-20",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "University of Oxford",
+     "organisation_type": "Academic",
+     "start_date": "2019-04-21",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    },
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-01-20",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2019-04-21",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    }
+   ],
+   "version": "3.2"
+  },
+  {
+   "reference": "DARS-NIC-10123-M5K5H-v4.2",
+   "states": [
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "University of Oxford"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registration - Deaths",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-01-20",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "University of Oxford",
+     "organisation_type": "Academic",
+     "start_date": "2020-06-01",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    },
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registration - Deaths",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-01-20",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2020-06-01",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    },
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-01-20",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2020-06-01",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    }
+   ],
+   "version": "4.2"
+  },
+  {
+   "reference": "DARS-NIC-10123-M5K5H-v5.1",
+   "states": [
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registration - Deaths",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-12-30",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2021-12-31",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    },
+    {
+     "activities": "It is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.  \n\na) The Clinical Trials Service Unit (CTSU) securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital.\nb) NHS Digital will flag the participants and link the data to Civil Registry mortality data. \nc) NHS Digital will return identifiable linked data in MRIS Cohort Event Notification reports and Cause of Death reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) CTSU stores the data on a server based at CTSU, which can be only accessed by CTSU staff at the University of Oxford.  \ne) CTSU will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email.\n\nData will only be accessed by individuals within CTSU and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford.\n\nThe data will be linked at record level with the trial data.\n\nAll contact data for the participants are held securely on a database at the Clinical Trials Service Unit and all paper documents are kept in a locked office to which only ACST-2 staff have access. \n\nThe patient-identifiable data will not be made available to any third parties, including the worldwide collaborators.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe Data will only be used for the purposes described in this Agreement.\n\nNo data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2022-12-30",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study enrolling asymptomatic patients across over 20 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS.  \n\nACST-2 will be the largest-ever trial of a vascular surgical procedure and its results will be impactful. If it shows that CEA is superior to CAS, large numbers of patients (who currently undergo CAS) may switch to CEA. Alternatively, if the long-term results of both procedures are comparable, patients and doctors have a choice, and many patients may prefer a less invasive stent over surgery. If CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. If CEA is equal in outcome to CAS then it becomes a patient/doctor choice and many patients may chose minimally invasive option of CAS. Either way, results may be impactful worldwide and will likely change practice. \n\nThe impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10-year follow up is reported in 2025-26.",
+     "expected_output": "Interim unblinded results are provided to the independent Data Monitoring Committee (DMC) annually. These reports are prepared by the trial statistician and data manager. There are no patient identifiable information contained in the report, which is circulated by email. This committee can advise the Trial Steering Committee (TSC) if there is proof ‘beyond reasonable doubt’ that one procedure is better than the other. In such circumstances, the TSC may choose to end the trial prematurely. \n\nTwo major reports are planned: It is expected that ACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). \n\nUntil then, the Principal Investigators will give trial updates at meetings of various learned societies aimed at raising the trial profile and encouraging recruitment. No patient identifiable data will be shared in such talks.\n\nThe ACST-2 have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The ACST-2 Trial Steering Committee includes lay members who have been present at the meetings throughout the course of the trial.  The University of Oxford  will continue to use these platforms not only to share information about the trial, but the disease process and Stroke.\n\nAll published outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+     "objective": "The University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients are followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. The UK is the only country to benefit from mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) ‘processing is necessary for the performance of a task carried out in the public interest’. Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question.\n\nACST-2 will complete recruitment in 2019-2020 with a major report (describing initial hazards of surgery and 4-year follow-up) envisaged in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2025 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2025-2026 (median follow-up of ~10 years). The data are reviewed annually by the independent Data Monitoring Committee (iDMC), comprising expert members who are independent of the trial. Their role is to ensure trial participants are not exposed to excess hazards due to their participation in ACST-2 by reviewing unblinded aggregate trial data. Unblinded aggregate data is pooled data that is broken down by treatment allocation only, prepared as a report and given to the iDMC. The iDMC does not have access to patient level data. Public interest is in line with Article 9(2)(j) ‘processing is necessary for scientific or historical research purposes’.\n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller. St George’s University of London has no ongoing involvement with the project and is not accessing any data. The trial was supported by the NIHR HTA and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It will be the largest trial of a carotid procedure ever completed. Currently 3134 participants have been recruited across 33 countries with the aim of recruiting 3600 by the end of 2019 / early 2020.\n\nEngland is currently the second largest recruiting country, with 426 patients randomised from 23 hospitals to date. The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the University of Oxford expects the results of ACST-2 to be similarly impactful in the UK and beyond.\n\nThe MRIS Cohort Event Notification and Cause of Death data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives.\n\nThe information requested from NHS Digital is to help the trial achieve its primary goals, namely the comparison of the peri-procedural risks (myocardial infarction [MI], stroke and death within 30 days of procedure and the longer term objective of preventing stroke, especially disabling of fatal strokes over the period of follow up (with major reports at 4 and 10 years median follow-up).  NHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress.\n\nThe study will compare:\n1) Peri-procedural risks (myocardial infarction [MI], stroke and death;\n2) Long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke.\n3) Procedural and stroke-related healthcare costs and;\n4) Evaluate quality of life.\n\nThe University of Oxford will be the sole data processor.  The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford.\n\nThe information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long term use of medications to prevent future strokes.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2021-12-31",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The trial is ongoing."
+    }
+   ],
+   "version": "5.1"
+  },
+  {
+   "reference": "DARS-NIC-10123-M5K5H-v6.3",
+   "states": [
+    {
+     "activities": "This Agreement is being extended only. There is no further data flowing under this Agreement, only retention and processing of data previously disseminated. The information below provides background on previous data flows for context.\n\nIt is necessary for the University of Oxford to use NHS Digital to follow-up patients and receive information relating to mortality so that the study has access to the correct survival status and cause of death of trial participants. The data supplied by NHS Digital will be used with other sources of event information to assess the long-term safety and efficacy of CEA and CAS.\n\nData Flows:\n a) The University of Oxford securely transfers a file of identifying information including NHS Number, Date of Birth and Postcode plus Unique Study ID to NHS Digital. No further additions will be made to the cohort of 470 but ongoing annual data is required to maintain follow up of patient deaths as time goes on.\nb) NHS Digital will flag the participants and link the data to Civil Registration Deaths and Demographics data. \nc) NHS Digital will return identifiable linked data in Civil Registration Deaths and Demographics reports. The data will include the Unique Study ID, date of birth, gender, name, NHS number, date and cause of death of those participants who have died.\nd) University of Oxford stores the data on a server based at University of Oxford, which can be only accessed by University of Oxford staff at the University of Oxford. \ne) University of Oxford will extract a subset of the data containing/comprised of those patients who have died and make this available to the ACST-2 Trial Manager within the same organisation via encrypted email. \n\nData will only be accessed by individuals within University of Oxford and ACST-2 who have authorisation from the data controller to access the data for the purpose(s) described, all of whom are substantive employees of University of Oxford. \n\nThe data will be linked at record level with the trial data. All contact data for the participants are held securely on a database at the University of Oxford and all paper documents are kept in a locked office to which only ACST-2 staff have access. Data from NHS Digital will not be made available to any third parties, including the worldwide collaborators. \n\nAll organisations party to this Agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by Personnel͟ (as defined within the Data Sharing Framework Contract - i.e., employees, agents and contractors of the Data Recipient who may have access to that data). The Data will only be used for the purposes described in this Agreement. No data will be shared with third parties. \n\nFor clarification, NHS Digital will not supply information about cancer notifications for the purpose of this trial.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Members and Postings Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2023-12-31",
+     "expected_benefits": "The ACST-2 study is a stroke prevention study which enrolled asymptomatic patients across over 30 countries in Europe (including the UK), North and South America and Asia, to compare the early safety and long-term efficacy of CEA v CAS. There are approximately 200,000 procedures in Europe and US per annum, half of which are CEA, half CAS. ACST-2 is the largest-ever trial of a vascular surgical procedure and its results have been impactful already. With around 5 years of follow-up, ACST-2 suggests that following successful surgery or stenting, the long-term results of both procedures are comparable when considering fatal or disabling stroke. This allows patients and doctors a choice, and many patients may prefer a less invasive stent over surgery. However, one of the limitations of minimally invasive endovascular procedures (like carotid stenting) is inferior long-term durability when compared to open surgery. Hence the need for continued follow-up. And, if CEA is better than CAS, 100,000 patients will directly benefit by avoiding an inferior procedure. Alternatively, if CEA is reliably shown to be equal in long-term outcome to CAS, then it remains a patient/doctor choice and many patients may choose minimally invasive option of CAS. Either way, results will be impactful worldwide and will likely change practice. The impact of ACST-2 will be tracked via national registries of vascular procedures. Practice changed worldwide following ACST-1 within 1-2 years, and University of Oxford expect ACST-2 to be similarly impactful once the 10- year follow up is reported in 2026-27.\n\nThe primary outputs from this data are and will be academic, including submissions to peer reviewed journals such as the Lancet, and national and international conferences.\n\nThe study team only present data at an aggregated level with small numbers suppressed. The study team present actual and modelled data in graphical and tabular format.\n\nThe University of Oxford contributes widely to health policy, particularly in the area of vascular risk prevention. It contributes to debate with academic papers, conference participation, lectures to the public and advice to government (including NHS Digital).\nExamples of the impact of the work performed by researchers up to 2014 is available from: https://results.ref.ac.uk/(S\n(ep5gbndxsprqnc0kork3mjyu))/Submissions/Impact/728\n\nThe study team also share outputs via all of the listed channels:\n- Study website\n- Open lectures and talks\n- Exhibition at public events\n- Posters\n- Press/media engagement and other public promotion of the research\n\nThe data controller aims to issue the next publication by Spring 2023.\n\nAll outputs will only contain results in highly aggregated format and as statistical summaries and measures of association. Small numbers will be suppressed in line with the HES Analysis Guide. Record level information will not be released to any third party.\n\nOutputs for the study so far include publication in peer-reviewed journal and presentations at international conferences. Information about the publications can be found on the ACST2 website (https://acst-2.org/index.html), and the benefits are described in Section 6iii (Yielded Benefits).",
+     "expected_output": "The primary outputs from this data are and will be academic, including submissions to peer reviewed journals such as the Lancet, and national and international conferences.\nThe study team only present data at an aggregated level with small numbers suppressed. The study team present actual and modelled data in graphical and tabular format.\n\nThe University of Oxford contributes widely to health policy, particularly in the area of vascular risk prevention. It contributes to debate with academic papers, conference participation, lectures to the public and advice to government (including NHS Digital).\nExamples of the impact of the work performed by the researchers up to 2014 is available from: https://results.ref.ac.uk/(S\n(ep5gbndxsprqnc0kork3mjyu))/Submissions/Impact/728\n\nThe study team also share outputs via all of the listed channels:\n- Study website\n- Open lectures and talks\n- Exhibition at public events\n- Posters\n- Press/media engagement and other public promotion of the research\n\nThe data controller aims to issue the next publication by Spring 2023.\n\nA major report describing procedural hazards and longer-term stroke rates was published in The Lancet in 2021.[DOI:https://doi.org/10.1016/S0140-6736(21)01910-3]Follow-up (exclusively questionnaire and registry-based) will continue until 2026 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2026 - 2027 (median follow-up of ~10 years). The ACST-2 team have been involved in disseminating information to the general public through various means including engaging with Social Media, the UK Stroke Forum and the Oxford Biomedical Research Centre. The University of Oxford will continue to use these platforms to share information about the trial.\n\nAll outputs will only contain results in highly aggregated format and as statistical summaries and measures of association. Small numbers will be suppressed in line with the HES Analysis Guide. Record level information will not be released to any third party.\n\nOutputs for the study so far include publication in peer-reviewed journal and presentations at international conferences. Information about the publications can be found on the ACST2 website (https://acst-2.org/index.html), and the benefits are described in Section 5iii (Yielded Benefits).",
+     "objective": "On 1 February 2023, NHS Digital merged with NHS England. NHS England has assumed responsibility for all activities previously undertaken by NHS Digital. The merger was completed by a statute change. Any reference made to NHS Digital within this Data Sharing Agreement is in reference to the merged organisation known as NHS England.\n\nThe University of Oxford requires identifiable data for the Asymptomatic Carotid Surgery Trial (ACST-2); a large international multi-centre randomized clinical trial comparing carotid endarterectomy (CEA) and carotid artery stenting (CAS) for stroke prevention. CEA and CAS are surgical procedures used to reduce the risk of stroke. In CEA, the surgeon opens the artery and removes the plaque. In CAS, a metal mesh tube (stent) is inserted into the vessel to serve as a scaffold that helps prevent the artery from narrowing again. ACST-2 is designed to reliably compare the long-term stroke risk of all patients randomized to CEA with those randomised to CAS. To do this, all patients were followed-up 1 month after the procedure by an independent neurologist (to record any procedural complications) and thereafter, follow-up is achieved via annual questionnaires, supplemented with cause-specific civil registry mortality data. \n\nACST-2 completed recruitment at the end of 2020 with a major report (describing initial hazards of surgery and 5-year follow-up) published in The Lancet in 2021. Follow-up (exclusively questionnaire and registry-based) will continue until 2026 (thereby ensuring a minimum follow-up of 5 years), with a final report in 2026-2027 (median follow-up of ~10 years). \n\nThe trial was started in 2008 at St George’s Hospital, London before moving to the University of Oxford in 2011. The University of Oxford is now the sole data controller who also process the data. St George’s University of London has no ongoing involvement with the project and is not accessing any data. \n\nThe UK is the only country to benefit from demographic and mortality data sourced from NHS Digital but all other countries in the trial use the same patient information and questionnaires. The University of Oxford is the coordinating centre and collate all of the data for this international study. \n\nThe proposed data processing is in line with Article 6(1)(e) processing is necessary for the performance of a task carried out in the public interest. Public interest is in line with Article 9(2)(j) processing is necessary for scientific or historical research purposes. \n\nThe trial was supported by the NIHR HTA, and the BUPA Foundation and more recently secure long-term funding has been provided by The Nuffield Department of Population Health. It is believed to be the largest trial of a carotid procedure ever completed. Recruitment closed with 3625 participants randomized across 33 countries. England is the second largest recruiting country, with 470 patients randomised from 23 hospitals.  Only the participants recruited across England form the cohort for this Agreement.\n\nThe Civil Registration Deaths and Demographics (previously MRIS Cohort Event Notification and Cause of Death) data that is provided by NHS Digital is critical in informing the study’s endpoints from both a safety and efficacy viewpoint as well as the primary short term and long-term objectives. The information requested from NHS Digital is to help the trial achieve one of its primary goals, namely the comparison of the longer-term efficacy of surgery versus stenting on stroke prevention, especially disabling or fatal strokes over the period of follow up, with a second major report in 2026-7 describing 10 years median follow-up.  This ensures prevention of loss to follow up and contributes to the high quality of the trial data.\n\nTo address the GDPR principle of data minimisation the University of Oxford only request fields that are deemed necessary for the purpose of this research, and only receive data that relates to a specific cohort of 470 individuals (minus any withdrawals). Identifiable record level data from central registries provide reports of fatal stroke and also inter-current mortality to allow appropriate censoring of the trial population. This data is the smallest amount that is necessary to answer the research question. \n\nNHS Digital data is also used to help avoid contacting the relatives of recently deceased patients, which would be intrusive and cause significant additional distress. The study has already compared peri-procedural risks (myocardial infarction [MI], stroke and death, and it is unlikely that these results will change materially with additional follow-up, although some patients who were randomized but did not undergo any carotid intervention may have a delayed procedure. \n\nThe primary focus now is on the long-term (>5 years) prevention of stroke, particularly disabling or fatal stroke; the long-term research purpose is to compare the 2 randomised groups with regards frequency of strokes in surgical patients verses stent patients. In addition, health economic analysis will evaluate procedural and stroke-related healthcare costs and quality of life. The University of Oxford will be the sole data processor. The only organisation that will have access to the data that is supplied by NHS Digital will be the designated personnel at the Clinical Trials Service Unit and the ACST-2 data team within the University of Oxford. The information provided by participants at the point of consent and randomisation as well as each year when they return their annual questionnaires will be used to describe the risks and benefits of not only the surgical procedures but the co-morbidities and the long-term use of medications to prevent future strokes. \n\nFunding for the study is currently provided internally from the University of Oxford.",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2023-01-01",
+     "sublicensing": "No",
+     "title": "MR1164 - The Asymptomatic Carotid Surgery Trial (ACST-2)",
+     "yielded_benefits": "The results of the first ACST trial (which compared CEA with medical therapy) changed clinical practice worldwide and the results of ACST-2 are proving to be similarly impactful in the UK and beyond."
+    }
+   ],
+   "version": "6.3"
+  }
+ ]
+}

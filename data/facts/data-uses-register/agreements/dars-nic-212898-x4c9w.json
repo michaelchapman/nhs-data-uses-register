@@ -1,0 +1,911 @@
+{
+ "base_reference": "DARS-NIC-212898-X4C9W",
+ "versions": [
+  {
+   "reference": "DARS-NIC-212898-X4C9W-v1.3",
+   "states": [
+    {
+     "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nDATA MINIMISATION\n\nNHS England is responsible for commissioning activities as per the NHS Act 2006 as amended by the Health and Social Care Act 2012. This gave NHS England, statutory responsibilities to directly undertake the commissioning of the following services:\n\n•\tPrescribed Specialised Services\n•\tSecondary Care Dental \n•\tArmed Forces\n•\tHealth in Justice\n•\tPublic Health\n\nOnly data related to the above directly commissioned services will be disseminated by NHS Digital. The purpose of the direct commissioning BI service is to support only those services which are commissioned by NHS England. The data is proactively managed to ensure any data which is utilised for commissioning and monitoring of provider contracts only covers areas where there is a clear need to do so.\n\nNHS Midlands and Lancashire Commissioning Support Unit and Greater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nInterxion, Ilkeston Community Hospital (Part of Derbyshire Community Health Services NHS Foundation Trust) and Pulsant do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nDirect commissioning activities are undertaken by 5 NHS Regional Teams. Each Regional Team will only get the direct commissioning data relating to their Regional Team – see table below.  \n\nThe 5 Regional Teams are supported by 3 CSUs (data processors).  The 3 data processors will only receive direct commissioning data for the regions which they support, as shown below:\nNHS Regional Team\t\t\tSupporting CSU (Data Processor)\nNorth Regional Team\t\t\tNorth of England CSU\nMidlands and East Regional Team\tArden and GEM CSU\nLondon Regional Team\t\tNorth and East London CSU\nSouth East Regional Team\t\tArden and GEM CSU\nSouth West Regional Team\t\tArden and GEM CSU\n\nThe relevant Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tDiagnostic Imaging Data Set (DIDS)\n7.     National Cancer Waiting Times (CWT)\n8.     Children and Young People's Health Service (CYPHS)\n9.     Community Services Data Set (CSDS)\nData quality management and pseudonymisation (anonymised in accordance with the ICO Anonymisation Code of Practice) is completed within the DSCRO data is then disseminated as follows:\n \n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to\na.\tNorth of England Commissioning Support Unit\nb.\tArden and Greater East Midlands Commissioning Support Unit\nc.\tNorth East London Commissioning Support Unit\nEach Commissioning Support Unit will only receive data relating to the regions processing the data: \n-\tNorth of England Commissioning Support Unit:\no\tNorth\n-\tArden and Greater East Midlands Commissioning Support Unit\no\tMidlands and East \no\tSouth East \no\tSouth West \n-\tNorth East London Commissioning Support Unit\no\tLondon \n2.\tThe Commissioning Support Units then add derived field and link data. They then provide analysis to: \na.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\nb.\tUndertake contracting monitoring\nc.\tUndertake data quality and validation checks\n3.\tAllowed linkage is between the data sets listed in this application.\n4.\tEach Commissioning Support Unit then passes the processed pseudonymised data and business intelligence reports to NHS England Regional Teams, who analyse the data to see patient journeys for pathway or service design, re-design and to support general commissioning and de-commissioning of services.\n5.\tPatient level data will not be shared outside of the data controller (apart from with the data processors listed in this application/agreement) and will only be shared within the data controller and data processors on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS England (Quarry House)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Acute-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Ambulance-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Children and Young People Health",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Community Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Community-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Demand for Service-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Diagnostic Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Emergency Care-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Experience, Quality and Outcomes-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health Minimum Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health and Learning Disabilities Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "National Cancer Waiting Times Monitoring DataSet (CWT)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Population Data-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Primary Care Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Public Health and Screening Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "SUS for Commissioners",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-08-31",
+     "expected_benefits": "1.\tSupporting the annual objectives as set by the Department of Health\n2.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n3.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n4.\tHealth economic modelling using:\na.\tAnalysis on provider performance against wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\n5.\tCommissioning cycle support for grouping and re-costing previous activity.\n6.\tEnables monitoring of:\na.\tOutcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\nd.\tCase management.\ne.\tCare service planning.\nf.\tCommissioning and performance management.\n7.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n8.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n11.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n12.\tFinancial validation of activity, budget control and the avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care.\n13.\tReviewing current service provision:\na.\tCost-benefit analysisand service impact assessments to underpin service transformation\nb.\tService planning and re-design\nc.\tImpact analysis fordidfferent odels of productivity measures, efficiency and expereience\nd.\tService and pathway review\ne.\tService utilisation review\n14.\tEnsuring compliance and testing of approaches with evidence and guidance.\n15.\tMonitoring outcomes and anlaysis of variations\n16.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis or productivity, outcomes, experience, plan targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact on services on health inequalities\n17.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience and outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n18.\tUnderstanding future drivers for change\na.\tForecasting health needs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained for procuring services across wider footprints and from new innovations\n19.\tDelivering services that meet changing needs of the population\na.\tAnalysis to support policy development\nb.\tEthnical and equality impact assessments\nc.\tWhat do next year’s contracts need to include\nd.\tWorkforce planning\n20.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment ins services analysis\nf.\tOpportunity analysis\n21.\tAnalysis of productivity, outcomes, experience, plan targets and actuals",
+     "expected_output": "1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis\n3.\tWaiting list/time analysis\n4.\tReconciliation of patient level and aggregate contract monitoring information with the agreed list of NHS England commissioned drugs to identify any instances of drugs or devices not listed on the NHS England commissioned list of drugs and devices.\n5.\tReporting on provider progress against contractual QIPP and CQUIN schemes.\n6.\tReporting on contract performance against programmes for Public Health \n7.\tReporting on commissioned provider activity against actual activity\n8.\tReporting on key performance indicators for Health and Justice services: \n9.\tReporting on commissioned activity against agreed clinical thresholds \n10.\tReporting on and investigation of any significant swings in reported service performance from the previous months reporting.\n11.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data set flows and associated Aggregate Inpatient and Outpatient contract monitoring at Specialised Service Code level and Point of Delivery.\n12.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated Aggregate Inpatient, Outpatient and A & E contract monitoring to indicate the match achieved at Main specialty / treatment function code level and Point of Delivery. \n13.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated patient level Inpatient and outpatient contract monitoring, to indicate the match achieved at Specialised Service Code level and Point of Delivery. \n14.\tAggregate reports to illustrate the level of reconciliation reported between aggregate data flows and associated patient level monitoring for non-standard datasets (e.g. local flows)., to match achieved at service level and Point of Delivery.\n15.\tPatient level reporting to illustrate instances where a Provider has charged a sub-region for a drug on the list of Cancer drugs which are expected to be funded centrally as part of the Cancer Drug Fund. \n16.\tAggregate performance report for each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan (for both activity and finance) and projected forecast outturn (for both activity and finance). \n17.\tAggregate performance reports by service to show the performance by each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan and projected forecast outturn.\n18.\tTrend analysis of the public health programme data.\n19.\tReporting on performance and quality KPIs.\n20.\tBenchmarking reports of secondary dental commissioning activities \n21.\tTrend analysis for services within a provider but also the trend of services (irrespective of provider) \n22.\tFinancial validation checks and challenges for contracted and non-contracted activity\n23.\tData Quality and Validation measures and monitoring against agreed data quality improvement plans.\n24.\tBudget reporting \n25.\tContract Management and Modelling \n26.\tProject/ programme level dashboards",
+     "objective": "NHS England commission secondary care activity for members of the Armed Forces and their families. As per the Armed Forces covenant, there are certain obligations which must be met for these patients e.g. priority treatment times. Contracts are held between NHS England and a total of 46 providers who deliver care for Armed Forces and as such the contracts are commissioned and monitored by using SUS and local provider flows. Similarly, patients within the Justice system who require secondary care, receive care from their local hospitals and the contracts for this care are commissioned and monitored by NHS England.\n\nThese services and responsibilities are referred to as Direct Commissioning and are covered by statute. NHS England’s statutory functions are defined in the 2012 Health and Social Care Act and the Mandate from the Department of Health which must be published annually. A copy of the 2018/19 mandate can be found here:\n\nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/691998/nhse-mandate-2018-19.pdf \n\nThe mandate sets NHS England seven objectives and these at the highest level are:\n\n1.\tThrough better commissioning, improve local and national health outcomes, particularly by addressing poor outcomes and inequalities.\n2.\tTo help create the safest, highest quality health and care service.\n3.\tTo balance the NHS budget and improve efficiency and productivity.\n4.\tTo lead a step change in the NHS in preventing ill health and supporting people to live healthier lives.\n5.\tTo maintain and improve performance against core standards.\n6.\tTo improve out-of-hospital care.\n7.\tTo support research, innovation and growth and to support the Government’s implementation of EU Exit in regard to health and care\n\nNHS England will use 3 Commissioning Support Units as data processors to support the Direct Commissioning BI Service as below:\n-\tNorth of England Commissioning Support Unit\n-\tArden and Greater East Midlands Commissioning Support Unit\n-\tNorth East London Commissioning Support Unit\n\nThe data will be processed by Regional Teams across England in much the same way, for the similar purposes and benefits as commissioning data is processed for any CCG.  There are 5 Regional Teams located across the 3 Commissioning Support Units.\n\n3 data processors are being utilised due to the geographical spread of national data and due to the NHS Digital-NHS England Area Team/Commissioning Hub legitimate relationship mappings currently in place. (It is not practical to deliver the service from a single NHS Digital DSCRO and single CSU, due to the level of consolidation that would be required, but the 3 CSUs can cover the whole of England.)  Each data processor is assigned to specific regions, as follows:\n\nNorth Regional Team - North of England CSU\nMidlands and East Regional Team - Arden and GEM CSU\nLondon Regional Team - North & East London CSU\nSouth East Regional Team - Arden and GEM CSU\nSouth West Regional Team - Arden and GEM CSU\n\nThe data processors are responsible for processing and linking the SUS+ data, Local Provider Flows, Mental Health (MHMDS, MHLDDS, MHSDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS), for the addition of derived fields, linkage of relevant data sets and analysis, contracting monitoring, reconciliation and invoice validation*, for their own regions and will work to support the relevant NHS England Regional BI Teams.\n\n*The term \"invoice validation\" is used to enable the data controller to use the data to check recorded activity against contracts or invoices and to facilitate discussions with providers using pseudonymised data. There is no identifiable data being requested and therefore no reliance on Section 251 support (CAG 2-03 or CAG 7-07(a-c)) and a Controlled Environment for Finance is not used.\nInvoice Validation is part of commissioning and has only been separated as a purpose when reliant on the specific Section 251 support (CAG 7-07(a-c))\nAs this is pseudonymised data, a separate purpose is not required – pseudonymised data will be used for commissioning, of which the invoice validation is part of.\n\nThe level of data requested is pseudonymised and anonymised in accordance with the ICO Anonymisation Code of Practice, to be used for the purposes outlined in this application/agreement.",
+     "organisation": "NHS Arden and Greater East Midlands Commissioning Support Unit",
+     "organisation_type": "Commissioning Support Unit (CSU)",
+     "start_date": "2019-09-01",
+     "sublicensing": "No",
+     "title": "DSfC - NHS England - Comm",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nDATA MINIMISATION\n\nNHS England is responsible for commissioning activities as per the NHS Act 2006 as amended by the Health and Social Care Act 2012. This gave NHS England, statutory responsibilities to directly undertake the commissioning of the following services:\n\n•\tPrescribed Specialised Services\n•\tSecondary Care Dental \n•\tArmed Forces\n•\tHealth in Justice\n•\tPublic Health\n\nOnly data related to the above directly commissioned services will be disseminated by NHS Digital. The purpose of the direct commissioning BI service is to support only those services which are commissioned by NHS England. The data is proactively managed to ensure any data which is utilised for commissioning and monitoring of provider contracts only covers areas where there is a clear need to do so.\n\nNHS Midlands and Lancashire Commissioning Support Unit and Greater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nInterxion, Ilkeston Community Hospital (Part of Derbyshire Community Health Services NHS Foundation Trust) and Pulsant do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nDirect commissioning activities are undertaken by 5 NHS Regional Teams. Each Regional Team will only get the direct commissioning data relating to their Regional Team – see table below.  \n\nThe 5 Regional Teams are supported by 3 CSUs (data processors).  The 3 data processors will only receive direct commissioning data for the regions which they support, as shown below:\nNHS Regional Team\t\t\tSupporting CSU (Data Processor)\nNorth Regional Team\t\t\tNorth of England CSU\nMidlands and East Regional Team\tArden and GEM CSU\nLondon Regional Team\t\tNorth and East London CSU\nSouth East Regional Team\t\tArden and GEM CSU\nSouth West Regional Team\t\tArden and GEM CSU\n\nThe relevant Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tDiagnostic Imaging Data Set (DIDS)\n7.     National Cancer Waiting Times (CWT)\n8.     Children and Young People's Health Service (CYPHS)\n9.     Community Services Data Set (CSDS)\nData quality management and pseudonymisation (anonymised in accordance with the ICO Anonymisation Code of Practice) is completed within the DSCRO data is then disseminated as follows:\n \n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to\na.\tNorth of England Commissioning Support Unit\nb.\tArden and Greater East Midlands Commissioning Support Unit\nc.\tNorth East London Commissioning Support Unit\nEach Commissioning Support Unit will only receive data relating to the regions processing the data: \n-\tNorth of England Commissioning Support Unit:\no\tNorth\n-\tArden and Greater East Midlands Commissioning Support Unit\no\tMidlands and East \no\tSouth East \no\tSouth West \n-\tNorth East London Commissioning Support Unit\no\tLondon \n2.\tThe Commissioning Support Units then add derived field and link data. They then provide analysis to: \na.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\nb.\tUndertake contracting monitoring\nc.\tUndertake data quality and validation checks\n3.\tAllowed linkage is between the data sets listed in this application.\n4.\tEach Commissioning Support Unit then passes the processed pseudonymised data and business intelligence reports to NHS England Regional Teams, who analyse the data to see patient journeys for pathway or service design, re-design and to support general commissioning and de-commissioning of services.\n5.\tPatient level data will not be shared outside of the data controller (apart from with the data processors listed in this application/agreement) and will only be shared within the data controller and data processors on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS England (Quarry House)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Acute-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Ambulance-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Children and Young People Health",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Community Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Community-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Demand for Service-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Diagnostic Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Emergency Care-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Experience, Quality and Outcomes-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health Minimum Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health and Learning Disabilities Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Population Data-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Primary Care Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Public Health and Screening Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "SUS for Commissioners",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-08-31",
+     "expected_benefits": "1.\tSupporting the annual objectives as set by the Department of Health\n2.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n3.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n4.\tHealth economic modelling using:\na.\tAnalysis on provider performance against wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\n5.\tCommissioning cycle support for grouping and re-costing previous activity.\n6.\tEnables monitoring of:\na.\tOutcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\nd.\tCase management.\ne.\tCare service planning.\nf.\tCommissioning and performance management.\n7.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n8.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n11.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n12.\tFinancial validation of activity, budget control and the avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care.\n13.\tReviewing current service provision:\na.\tCost-benefit analysisand service impact assessments to underpin service transformation\nb.\tService planning and re-design\nc.\tImpact analysis fordidfferent odels of productivity measures, efficiency and expereience\nd.\tService and pathway review\ne.\tService utilisation review\n14.\tEnsuring compliance and testing of approaches with evidence and guidance.\n15.\tMonitoring outcomes and anlaysis of variations\n16.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis or productivity, outcomes, experience, plan targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact on services on health inequalities\n17.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience and outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n18.\tUnderstanding future drivers for change\na.\tForecasting health needs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained for procuring services across wider footprints and from new innovations\n19.\tDelivering services that meet changing needs of the population\na.\tAnalysis to support policy development\nb.\tEthnical and equality impact assessments\nc.\tWhat do next year’s contracts need to include\nd.\tWorkforce planning\n20.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment ins services analysis\nf.\tOpportunity analysis\n21.\tAnalysis of productivity, outcomes, experience, plan targets and actuals",
+     "expected_output": "1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis\n3.\tWaiting list/time analysis\n4.\tReconciliation of patient level and aggregate contract monitoring information with the agreed list of NHS England commissioned drugs to identify any instances of drugs or devices not listed on the NHS England commissioned list of drugs and devices.\n5.\tReporting on provider progress against contractual QIPP and CQUIN schemes.\n6.\tReporting on contract performance against programmes for Public Health \n7.\tReporting on commissioned provider activity against actual activity\n8.\tReporting on key performance indicators for Health and Justice services: \n9.\tReporting on commissioned activity against agreed clinical thresholds \n10.\tReporting on and investigation of any significant swings in reported service performance from the previous months reporting.\n11.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data set flows and associated Aggregate Inpatient and Outpatient contract monitoring at Specialised Service Code level and Point of Delivery.\n12.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated Aggregate Inpatient, Outpatient and A & E contract monitoring to indicate the match achieved at Main specialty / treatment function code level and Point of Delivery. \n13.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated patient level Inpatient and outpatient contract monitoring, to indicate the match achieved at Specialised Service Code level and Point of Delivery. \n14.\tAggregate reports to illustrate the level of reconciliation reported between aggregate data flows and associated patient level monitoring for non-standard datasets (e.g. local flows)., to match achieved at service level and Point of Delivery.\n15.\tPatient level reporting to illustrate instances where a Provider has charged a sub-region for a drug on the list of Cancer drugs which are expected to be funded centrally as part of the Cancer Drug Fund. \n16.\tAggregate performance report for each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan (for both activity and finance) and projected forecast outturn (for both activity and finance). \n17.\tAggregate performance reports by service to show the performance by each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan and projected forecast outturn.\n18.\tTrend analysis of the public health programme data.\n19.\tReporting on performance and quality KPIs.\n20.\tBenchmarking reports of secondary dental commissioning activities \n21.\tTrend analysis for services within a provider but also the trend of services (irrespective of provider) \n22.\tFinancial validation checks and challenges for contracted and non-contracted activity\n23.\tData Quality and Validation measures and monitoring against agreed data quality improvement plans.\n24.\tBudget reporting \n25.\tContract Management and Modelling \n26.\tProject/ programme level dashboards",
+     "objective": "NHS England commission secondary care activity for members of the Armed Forces and their families. As per the Armed Forces covenant, there are certain obligations which must be met for these patients e.g. priority treatment times. Contracts are held between NHS England and a total of 46 providers who deliver care for Armed Forces and as such the contracts are commissioned and monitored by using SUS and local provider flows. Similarly, patients within the Justice system who require secondary care, receive care from their local hospitals and the contracts for this care are commissioned and monitored by NHS England.\n\nThese services and responsibilities are referred to as Direct Commissioning and are covered by statute. NHS England’s statutory functions are defined in the 2012 Health and Social Care Act and the Mandate from the Department of Health which must be published annually. A copy of the 2018/19 mandate can be found here:\n\nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/691998/nhse-mandate-2018-19.pdf \n\nThe mandate sets NHS England seven objectives and these at the highest level are:\n\n1.\tThrough better commissioning, improve local and national health outcomes, particularly by addressing poor outcomes and inequalities.\n2.\tTo help create the safest, highest quality health and care service.\n3.\tTo balance the NHS budget and improve efficiency and productivity.\n4.\tTo lead a step change in the NHS in preventing ill health and supporting people to live healthier lives.\n5.\tTo maintain and improve performance against core standards.\n6.\tTo improve out-of-hospital care.\n7.\tTo support research, innovation and growth and to support the Government’s implementation of EU Exit in regard to health and care\n\nNHS England will use 3 Commissioning Support Units as data processors to support the Direct Commissioning BI Service as below:\n-\tNorth of England Commissioning Support Unit\n-\tArden and Greater East Midlands Commissioning Support Unit\n-\tNorth East London Commissioning Support Unit\n\nThe data will be processed by Regional Teams across England in much the same way, for the similar purposes and benefits as commissioning data is processed for any CCG.  There are 5 Regional Teams located across the 3 Commissioning Support Units.\n\n3 data processors are being utilised due to the geographical spread of national data and due to the NHS Digital-NHS England Area Team/Commissioning Hub legitimate relationship mappings currently in place. (It is not practical to deliver the service from a single NHS Digital DSCRO and single CSU, due to the level of consolidation that would be required, but the 3 CSUs can cover the whole of England.)  Each data processor is assigned to specific regions, as follows:\n\nNorth Regional Team - North of England CSU\nMidlands and East Regional Team - Arden and GEM CSU\nLondon Regional Team - North & East London CSU\nSouth East Regional Team - Arden and GEM CSU\nSouth West Regional Team - Arden and GEM CSU\n\nThe data processors are responsible for processing and linking the SUS+ data, Local Provider Flows, Mental Health (MHMDS, MHLDDS, MHSDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS), for the addition of derived fields, linkage of relevant data sets and analysis, contracting monitoring, reconciliation and invoice validation*, for their own regions and will work to support the relevant NHS England Regional BI Teams.\n\n*The term \"invoice validation\" is used to enable the data controller to use the data to check recorded activity against contracts or invoices and to facilitate discussions with providers using pseudonymised data. There is no identifiable data being requested and therefore no reliance on Section 251 support (CAG 2-03 or CAG 7-07(a-c)) and a Controlled Environment for Finance is not used.\nInvoice Validation is part of commissioning and has only been separated as a purpose when reliant on the specific Section 251 support (CAG 7-07(a-c))\nAs this is pseudonymised data, a separate purpose is not required – pseudonymised data will be used for commissioning, of which the invoice validation is part of.\n\nThe level of data requested is pseudonymised and anonymised in accordance with the ICO Anonymisation Code of Practice, to be used for the purposes outlined in this application/agreement.",
+     "organisation": "NHS Arden and Greater East Midlands Commissioning Support Unit",
+     "organisation_type": "Commissioning Support Unit (CSU)",
+     "start_date": "2019-09-01",
+     "sublicensing": "No",
+     "title": "DSfC - NHS England - Comm",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nDATA MINIMISATION\n\nNHS England is responsible for commissioning activities as per the NHS Act 2006 as amended by the Health and Social Care Act 2012. This gave NHS England, statutory responsibilities to directly undertake the commissioning of the following services:\n\n•\tPrescribed Specialised Services\n•\tSecondary Care Dental \n•\tArmed Forces\n•\tHealth in Justice\n•\tPublic Health\n\nOnly data related to the above directly commissioned services will be disseminated by NHS Digital. The purpose of the direct commissioning BI service is to support only those services which are commissioned by NHS England. The data is proactively managed to ensure any data which is utilised for commissioning and monitoring of provider contracts only covers areas where there is a clear need to do so.\n\nNHS Midlands and Lancashire Commissioning Support Unit and Greater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nInterxion, Ilkeston Community Hospital (Part of Derbyshire Community Health Services NHS Foundation Trust) and Pulsant do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nDirect commissioning activities are undertaken by 5 NHS Regional Teams. Each Regional Team will only get the direct commissioning data relating to their Regional Team – see table below.  \n\nThe 5 Regional Teams are supported by 3 CSUs (data processors).  The 3 data processors will only receive direct commissioning data for the regions which they support, as shown below:\nNHS Regional Team\t\t\tSupporting CSU (Data Processor)\nNorth Regional Team\t\t\tNorth of England CSU\nMidlands and East Regional Team\tArden and GEM CSU\nLondon Regional Team\t\tNorth and East London CSU\nSouth East Regional Team\t\tArden and GEM CSU\nSouth West Regional Team\t\tArden and GEM CSU\n\nThe relevant Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tDiagnostic Imaging Data Set (DIDS)\n7.     National Cancer Waiting Times (CWT)\n8.     Children and Young People's Health Service (CYPHS)\n9.     Community Services Data Set (CSDS)\nData quality management and pseudonymisation (anonymised in accordance with the ICO Anonymisation Code of Practice) is completed within the DSCRO data is then disseminated as follows:\n \n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to\na.\tNorth of England Commissioning Support Unit\nb.\tArden and Greater East Midlands Commissioning Support Unit\nc.\tNorth East London Commissioning Support Unit\nEach Commissioning Support Unit will only receive data relating to the regions processing the data: \n-\tNorth of England Commissioning Support Unit:\no\tNorth\n-\tArden and Greater East Midlands Commissioning Support Unit\no\tMidlands and East \no\tSouth East \no\tSouth West \n-\tNorth East London Commissioning Support Unit\no\tLondon \n2.\tThe Commissioning Support Units then add derived field and link data. They then provide analysis to: \na.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\nb.\tUndertake contracting monitoring\nc.\tUndertake data quality and validation checks\n3.\tAllowed linkage is between the data sets listed in this application.\n4.\tEach Commissioning Support Unit then passes the processed pseudonymised data and business intelligence reports to NHS England Regional Teams, who analyse the data to see patient journeys for pathway or service design, re-design and to support general commissioning and de-commissioning of services.\n5.\tPatient level data will not be shared outside of the data controller (apart from with the data processors listed in this application/agreement) and will only be shared within the data controller and data processors on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Acute-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Ambulance-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Children and Young People Health",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Community Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Community-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Demand for Service-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Diagnostic Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Emergency Care-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Experience, Quality and Outcomes-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health Minimum Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health and Learning Disabilities Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Mental Health-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Population Data-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Primary Care Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "Public Health and Screening Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+       "name": "SUS for Commissioners",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-08-31",
+     "expected_benefits": "1.\tSupporting the annual objectives as set by the Department of Health\n2.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n3.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n4.\tHealth economic modelling using:\na.\tAnalysis on provider performance against wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\n5.\tCommissioning cycle support for grouping and re-costing previous activity.\n6.\tEnables monitoring of:\na.\tOutcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\nd.\tCase management.\ne.\tCare service planning.\nf.\tCommissioning and performance management.\n7.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n8.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n11.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n12.\tFinancial validation of activity, budget control and the avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care.\n13.\tReviewing current service provision:\na.\tCost-benefit analysisand service impact assessments to underpin service transformation\nb.\tService planning and re-design\nc.\tImpact analysis fordidfferent odels of productivity measures, efficiency and expereience\nd.\tService and pathway review\ne.\tService utilisation review\n14.\tEnsuring compliance and testing of approaches with evidence and guidance.\n15.\tMonitoring outcomes and anlaysis of variations\n16.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis or productivity, outcomes, experience, plan targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact on services on health inequalities\n17.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience and outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n18.\tUnderstanding future drivers for change\na.\tForecasting health needs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained for procuring services across wider footprints and from new innovations\n19.\tDelivering services that meet changing needs of the population\na.\tAnalysis to support policy development\nb.\tEthnical and equality impact assessments\nc.\tWhat do next year’s contracts need to include\nd.\tWorkforce planning\n20.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment ins services analysis\nf.\tOpportunity analysis\n21.\tAnalysis of productivity, outcomes, experience, plan targets and actuals",
+     "expected_output": "1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis\n3.\tWaiting list/time analysis\n4.\tReconciliation of patient level and aggregate contract monitoring information with the agreed list of NHS England commissioned drugs to identify any instances of drugs or devices not listed on the NHS England commissioned list of drugs and devices.\n5.\tReporting on provider progress against contractual QIPP and CQUIN schemes.\n6.\tReporting on contract performance against programmes for Public Health \n7.\tReporting on commissioned provider activity against actual activity\n8.\tReporting on key performance indicators for Health and Justice services: \n9.\tReporting on commissioned activity against agreed clinical thresholds \n10.\tReporting on and investigation of any significant swings in reported service performance from the previous months reporting.\n11.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data set flows and associated Aggregate Inpatient and Outpatient contract monitoring at Specialised Service Code level and Point of Delivery.\n12.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated Aggregate Inpatient, Outpatient and A & E contract monitoring to indicate the match achieved at Main specialty / treatment function code level and Point of Delivery. \n13.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated patient level Inpatient and outpatient contract monitoring, to indicate the match achieved at Specialised Service Code level and Point of Delivery. \n14.\tAggregate reports to illustrate the level of reconciliation reported between aggregate data flows and associated patient level monitoring for non-standard datasets (e.g. local flows)., to match achieved at service level and Point of Delivery.\n15.\tPatient level reporting to illustrate instances where a Provider has charged a sub-region for a drug on the list of Cancer drugs which are expected to be funded centrally as part of the Cancer Drug Fund. \n16.\tAggregate performance report for each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan (for both activity and finance) and projected forecast outturn (for both activity and finance). \n17.\tAggregate performance reports by service to show the performance by each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan and projected forecast outturn.\n18.\tTrend analysis of the public health programme data.\n19.\tReporting on performance and quality KPIs.\n20.\tBenchmarking reports of secondary dental commissioning activities \n21.\tTrend analysis for services within a provider but also the trend of services (irrespective of provider) \n22.\tFinancial validation checks and challenges for contracted and non-contracted activity\n23.\tData Quality and Validation measures and monitoring against agreed data quality improvement plans.\n24.\tBudget reporting \n25.\tContract Management and Modelling \n26.\tProject/ programme level dashboards",
+     "objective": "NHS England commission secondary care activity for members of the Armed Forces and their families. As per the Armed Forces covenant, there are certain obligations which must be met for these patients e.g. priority treatment times. Contracts are held between NHS England and a total of 46 providers who deliver care for Armed Forces and as such the contracts are commissioned and monitored by using SUS and local provider flows. Similarly, patients within the Justice system who require secondary care, receive care from their local hospitals and the contracts for this care are commissioned and monitored by NHS England.\n\nThese services and responsibilities are referred to as Direct Commissioning and are covered by statute. NHS England’s statutory functions are defined in the 2012 Health and Social Care Act and the Mandate from the Department of Health which must be published annually. A copy of the 2018/19 mandate can be found here:\n\nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/691998/nhse-mandate-2018-19.pdf \n\nThe mandate sets NHS England seven objectives and these at the highest level are:\n\n1.\tThrough better commissioning, improve local and national health outcomes, particularly by addressing poor outcomes and inequalities.\n2.\tTo help create the safest, highest quality health and care service.\n3.\tTo balance the NHS budget and improve efficiency and productivity.\n4.\tTo lead a step change in the NHS in preventing ill health and supporting people to live healthier lives.\n5.\tTo maintain and improve performance against core standards.\n6.\tTo improve out-of-hospital care.\n7.\tTo support research, innovation and growth and to support the Government’s implementation of EU Exit in regard to health and care\n\nNHS England will use 3 Commissioning Support Units as data processors to support the Direct Commissioning BI Service as below:\n-\tNorth of England Commissioning Support Unit\n-\tArden and Greater East Midlands Commissioning Support Unit\n-\tNorth East London Commissioning Support Unit\n\nThe data will be processed by Regional Teams across England in much the same way, for the similar purposes and benefits as commissioning data is processed for any CCG.  There are 5 Regional Teams located across the 3 Commissioning Support Units.\n\n3 data processors are being utilised due to the geographical spread of national data and due to the NHS Digital-NHS England Area Team/Commissioning Hub legitimate relationship mappings currently in place. (It is not practical to deliver the service from a single NHS Digital DSCRO and single CSU, due to the level of consolidation that would be required, but the 3 CSUs can cover the whole of England.)  Each data processor is assigned to specific regions, as follows:\n\nNorth Regional Team - North of England CSU\nMidlands and East Regional Team - Arden and GEM CSU\nLondon Regional Team - North & East London CSU\nSouth East Regional Team - Arden and GEM CSU\nSouth West Regional Team - Arden and GEM CSU\n\nThe data processors are responsible for processing and linking the SUS+ data, Local Provider Flows, Mental Health (MHMDS, MHLDDS, MHSDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS), for the addition of derived fields, linkage of relevant data sets and analysis, contracting monitoring, reconciliation and invoice validation*, for their own regions and will work to support the relevant NHS England Regional BI Teams.\n\n*The term \"invoice validation\" is used to enable the data controller to use the data to check recorded activity against contracts or invoices and to facilitate discussions with providers using pseudonymised data. There is no identifiable data being requested and therefore no reliance on Section 251 support (CAG 2-03 or CAG 7-07(a-c)) and a Controlled Environment for Finance is not used.\nInvoice Validation is part of commissioning and has only been separated as a purpose when reliant on the specific Section 251 support (CAG 7-07(a-c))\nAs this is pseudonymised data, a separate purpose is not required – pseudonymised data will be used for commissioning, of which the invoice validation is part of.\n\nThe level of data requested is pseudonymised and anonymised in accordance with the ICO Anonymisation Code of Practice, to be used for the purposes outlined in this application/agreement.",
+     "organisation": "NHS ARDEN AND GREATER EAST MIDLANDS COMMISSIONING SUPPORT UNIT",
+     "organisation_type": "Commissioning Support Unit (CSU)",
+     "start_date": "2019-09-01",
+     "sublicensing": "No",
+     "title": "DSfC - NHS England - Comm",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nDATA MINIMISATION\n\nNHS England is responsible for commissioning activities as per the NHS Act 2006 as amended by the Health and Social Care Act 2012. This gave NHS England, statutory responsibilities to directly undertake the commissioning of the following services:\n\n•\tPrescribed Specialised Services\n•\tSecondary Care Dental \n•\tArmed Forces\n•\tHealth in Justice\n•\tPublic Health\n\nOnly data related to the above directly commissioned services will be disseminated by NHS Digital. The purpose of the direct commissioning BI service is to support only those services which are commissioned by NHS England. The data is proactively managed to ensure any data which is utilised for commissioning and monitoring of provider contracts only covers areas where there is a clear need to do so.\n\nNHS Midlands and Lancashire Commissioning Support Unit and Greater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nInterxion, Ilkeston Community Hospital (Part of Derbyshire Community Health Services NHS Foundation Trust) and Pulsant do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nDirect commissioning activities are undertaken by 5 NHS Regional Teams. Each Regional Team will only get the direct commissioning data relating to their Regional Team – see table below.  \n\nThe 5 Regional Teams are supported by 3 CSUs (data processors).  The 3 data processors will only receive direct commissioning data for the regions which they support, as shown below:\nNHS Regional Team\t\t\tSupporting CSU (Data Processor)\nNorth Regional Team\t\t\tNorth of England CSU\nMidlands and East Regional Team\tArden and GEM CSU\nLondon Regional Team\t\tNorth and East London CSU\nSouth East Regional Team\t\tArden and GEM CSU\nSouth West Regional Team\t\tArden and GEM CSU\n\nThe relevant Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tDiagnostic Imaging Data Set (DIDS)\n7.     National Cancer Waiting Times (CWT)\n8.     Children and Young People's Health Service (CYPHS)\n9.     Community Services Data Set (CSDS)\nData quality management and pseudonymisation (anonymised in accordance with the ICO Anonymisation Code of Practice) is completed within the DSCRO data is then disseminated as follows:\n \n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to\na.\tNorth of England Commissioning Support Unit\nb.\tArden and Greater East Midlands Commissioning Support Unit\nc.\tNorth East London Commissioning Support Unit\nEach Commissioning Support Unit will only receive data relating to the regions processing the data: \n-\tNorth of England Commissioning Support Unit:\no\tNorth\n-\tArden and Greater East Midlands Commissioning Support Unit\no\tMidlands and East \no\tSouth East \no\tSouth West \n-\tNorth East London Commissioning Support Unit\no\tLondon \n2.\tThe Commissioning Support Units then add derived field and link data. They then provide analysis to: \na.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\nb.\tUndertake contracting monitoring\nc.\tUndertake data quality and validation checks\n3.\tAllowed linkage is between the data sets listed in this application.\n4.\tEach Commissioning Support Unit then passes the processed pseudonymised data and business intelligence reports to NHS England Regional Teams, who analyse the data to see patient journeys for pathway or service design, re-design and to support general commissioning and de-commissioning of services.\n5.\tPatient level data will not be shared outside of the data controller (apart from with the data processors listed in this application/agreement) and will only be shared within the data controller and data processors on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Acute-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Ambulance-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Children and Young People Health",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Community Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Community-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Demand for Service-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Diagnostic Imaging Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Diagnostic Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Emergency Care-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Experience, Quality and Outcomes-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health Minimum Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health Services Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health and Learning Disabilities Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Population Data-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Primary Care Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Public Health and Screening Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "SUS for Commissioners",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-08-31",
+     "expected_benefits": "1.\tSupporting the annual objectives as set by the Department of Health\n2.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n3.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n4.\tHealth economic modelling using:\na.\tAnalysis on provider performance against wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\n5.\tCommissioning cycle support for grouping and re-costing previous activity.\n6.\tEnables monitoring of:\na.\tOutcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\nd.\tCase management.\ne.\tCare service planning.\nf.\tCommissioning and performance management.\n7.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n8.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n11.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n12.\tFinancial validation of activity, budget control and the avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care.\n13.\tReviewing current service provision:\na.\tCost-benefit analysisand service impact assessments to underpin service transformation\nb.\tService planning and re-design\nc.\tImpact analysis fordidfferent odels of productivity measures, efficiency and expereience\nd.\tService and pathway review\ne.\tService utilisation review\n14.\tEnsuring compliance and testing of approaches with evidence and guidance.\n15.\tMonitoring outcomes and anlaysis of variations\n16.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis or productivity, outcomes, experience, plan targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact on services on health inequalities\n17.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience and outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n18.\tUnderstanding future drivers for change\na.\tForecasting health needs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained for procuring services across wider footprints and from new innovations\n19.\tDelivering services that meet changing needs of the population\na.\tAnalysis to support policy development\nb.\tEthnical and equality impact assessments\nc.\tWhat do next year’s contracts need to include\nd.\tWorkforce planning\n20.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment ins services analysis\nf.\tOpportunity analysis\n21.\tAnalysis of productivity, outcomes, experience, plan targets and actuals",
+     "expected_output": "1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis\n3.\tWaiting list/time analysis\n4.\tReconciliation of patient level and aggregate contract monitoring information with the agreed list of NHS England commissioned drugs to identify any instances of drugs or devices not listed on the NHS England commissioned list of drugs and devices.\n5.\tReporting on provider progress against contractual QIPP and CQUIN schemes.\n6.\tReporting on contract performance against programmes for Public Health \n7.\tReporting on commissioned provider activity against actual activity\n8.\tReporting on key performance indicators for Health and Justice services: \n9.\tReporting on commissioned activity against agreed clinical thresholds \n10.\tReporting on and investigation of any significant swings in reported service performance from the previous months reporting.\n11.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data set flows and associated Aggregate Inpatient and Outpatient contract monitoring at Specialised Service Code level and Point of Delivery.\n12.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated Aggregate Inpatient, Outpatient and A & E contract monitoring to indicate the match achieved at Main specialty / treatment function code level and Point of Delivery. \n13.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated patient level Inpatient and outpatient contract monitoring, to indicate the match achieved at Specialised Service Code level and Point of Delivery. \n14.\tAggregate reports to illustrate the level of reconciliation reported between aggregate data flows and associated patient level monitoring for non-standard datasets (e.g. local flows)., to match achieved at service level and Point of Delivery.\n15.\tPatient level reporting to illustrate instances where a Provider has charged a sub-region for a drug on the list of Cancer drugs which are expected to be funded centrally as part of the Cancer Drug Fund. \n16.\tAggregate performance report for each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan (for both activity and finance) and projected forecast outturn (for both activity and finance). \n17.\tAggregate performance reports by service to show the performance by each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan and projected forecast outturn.\n18.\tTrend analysis of the public health programme data.\n19.\tReporting on performance and quality KPIs.\n20.\tBenchmarking reports of secondary dental commissioning activities \n21.\tTrend analysis for services within a provider but also the trend of services (irrespective of provider) \n22.\tFinancial validation checks and challenges for contracted and non-contracted activity\n23.\tData Quality and Validation measures and monitoring against agreed data quality improvement plans.\n24.\tBudget reporting \n25.\tContract Management and Modelling \n26.\tProject/ programme level dashboards",
+     "objective": "NHS England commission secondary care activity for members of the Armed Forces and their families. As per the Armed Forces covenant, there are certain obligations which must be met for these patients e.g. priority treatment times. Contracts are held between NHS England and a total of 46 providers who deliver care for Armed Forces and as such the contracts are commissioned and monitored by using SUS and local provider flows. Similarly, patients within the Justice system who require secondary care, receive care from their local hospitals and the contracts for this care are commissioned and monitored by NHS England.\n\nThese services and responsibilities are referred to as Direct Commissioning and are covered by statute. NHS England’s statutory functions are defined in the 2012 Health and Social Care Act and the Mandate from the Department of Health which must be published annually. A copy of the 2018/19 mandate can be found here:\n\nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/691998/nhse-mandate-2018-19.pdf \n\nThe mandate sets NHS England seven objectives and these at the highest level are:\n\n1.\tThrough better commissioning, improve local and national health outcomes, particularly by addressing poor outcomes and inequalities.\n2.\tTo help create the safest, highest quality health and care service.\n3.\tTo balance the NHS budget and improve efficiency and productivity.\n4.\tTo lead a step change in the NHS in preventing ill health and supporting people to live healthier lives.\n5.\tTo maintain and improve performance against core standards.\n6.\tTo improve out-of-hospital care.\n7.\tTo support research, innovation and growth and to support the Government’s implementation of EU Exit in regard to health and care\n\nNHS England will use 3 Commissioning Support Units as data processors to support the Direct Commissioning BI Service as below:\n-\tNorth of England Commissioning Support Unit\n-\tArden and Greater East Midlands Commissioning Support Unit\n-\tNorth East London Commissioning Support Unit\n\nThe data will be processed by Regional Teams across England in much the same way, for the similar purposes and benefits as commissioning data is processed for any CCG.  There are 5 Regional Teams located across the 3 Commissioning Support Units.\n\n3 data processors are being utilised due to the geographical spread of national data and due to the NHS Digital-NHS England Area Team/Commissioning Hub legitimate relationship mappings currently in place. (It is not practical to deliver the service from a single NHS Digital DSCRO and single CSU, due to the level of consolidation that would be required, but the 3 CSUs can cover the whole of England.)  Each data processor is assigned to specific regions, as follows:\n\nNorth Regional Team - North of England CSU\nMidlands and East Regional Team - Arden and GEM CSU\nLondon Regional Team - North & East London CSU\nSouth East Regional Team - Arden and GEM CSU\nSouth West Regional Team - Arden and GEM CSU\n\nThe data processors are responsible for processing and linking the SUS+ data, Local Provider Flows, Mental Health (MHMDS, MHLDDS, MHSDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS), for the addition of derived fields, linkage of relevant data sets and analysis, contracting monitoring, reconciliation and invoice validation*, for their own regions and will work to support the relevant NHS England Regional BI Teams.\n\n*The term \"invoice validation\" is used to enable the data controller to use the data to check recorded activity against contracts or invoices and to facilitate discussions with providers using pseudonymised data. There is no identifiable data being requested and therefore no reliance on Section 251 support (CAG 2-03 or CAG 7-07(a-c)) and a Controlled Environment for Finance is not used.\nInvoice Validation is part of commissioning and has only been separated as a purpose when reliant on the specific Section 251 support (CAG 7-07(a-c))\nAs this is pseudonymised data, a separate purpose is not required – pseudonymised data will be used for commissioning, of which the invoice validation is part of.\n\nThe level of data requested is pseudonymised and anonymised in accordance with the ICO Anonymisation Code of Practice, to be used for the purposes outlined in this application/agreement.",
+     "organisation": "NHS ARDEN AND GREATER EAST MIDLANDS COMMISSIONING SUPPORT UNIT",
+     "organisation_type": "Commissioning Support Unit (CSU)",
+     "start_date": "2019-09-01",
+     "sublicensing": "No",
+     "title": "DSfC - NHS England - Comm",
+     "yielded_benefits": ""
+    },
+    {
+     "activities": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nONWARD SHARING:\nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nWhere the Data Processor and/or the Data Controller hold identifiable data with opt outs applied and identifiable data with opt outs not applied, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nDATA MINIMISATION\n\nNHS England is responsible for commissioning activities as per the NHS Act 2006 as amended by the Health and Social Care Act 2012. This gave NHS England, statutory responsibilities to directly undertake the commissioning of the following services:\n\n•\tPrescribed Specialised Services\n•\tSecondary Care Dental \n•\tArmed Forces\n•\tHealth in Justice\n•\tPublic Health\n\nOnly data related to the above directly commissioned services will be disseminated by NHS Digital. The purpose of the direct commissioning BI service is to support only those services which are commissioned by NHS England. The data is proactively managed to ensure any data which is utilised for commissioning and monitoring of provider contracts only covers areas where there is a clear need to do so.\n\nNHS Midlands and Lancashire Commissioning Support Unit and Greater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nInterxion, Ilkeston Community Hospital (Part of Derbyshire Community Health Services NHS Foundation Trust) and Pulsant do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nDirect commissioning activities are undertaken by 5 NHS Regional Teams. Each Regional Team will only get the direct commissioning data relating to their Regional Team – see table below.  \n\nThe 5 Regional Teams are supported by 3 CSUs (data processors).  The 3 data processors will only receive direct commissioning data for the regions which they support, as shown below:\nNHS Regional Team\t\t\tSupporting CSU (Data Processor)\nNorth Regional Team\t\t\tNorth of England CSU\nMidlands and East Regional Team\tArden and GEM CSU\nLondon Regional Team\t\tNorth and East London CSU\nSouth East Regional Team\t\tArden and GEM CSU\nSouth West Regional Team\t\tArden and GEM CSU\n\nThe relevant Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tDiagnostic Imaging Data Set (DIDS)\n7.     National Cancer Waiting Times (CWT)\n8.     Children and Young People's Health Service (CYPHS)\n9.     Community Services Data Set (CSDS)\nData quality management and pseudonymisation (anonymised in accordance with the ICO Anonymisation Code of Practice) is completed within the DSCRO data is then disseminated as follows:\n \n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to\na.\tNorth of England Commissioning Support Unit\nb.\tArden and Greater East Midlands Commissioning Support Unit\nc.\tNorth East London Commissioning Support Unit\nEach Commissioning Support Unit will only receive data relating to the regions processing the data: \n-\tNorth of England Commissioning Support Unit:\no\tNorth\n-\tArden and Greater East Midlands Commissioning Support Unit\no\tMidlands and East \no\tSouth East \no\tSouth West \n-\tNorth East London Commissioning Support Unit\no\tLondon \n2.\tThe Commissioning Support Units then add derived field and link data. They then provide analysis to: \na.\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\nb.\tUndertake contracting monitoring\nc.\tUndertake data quality and validation checks\n3.\tAllowed linkage is between the data sets listed in this application.\n4.\tEach Commissioning Support Unit then passes the processed pseudonymised data and business intelligence reports to NHS England Regional Teams, who analyse the data to see patient journeys for pathway or service design, re-design and to support general commissioning and de-commissioning of services.\n5.\tPatient level data will not be shared outside of the data controller (apart from with the data processors listed in this application/agreement) and will only be shared within the data controller and data processors on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "NHS ENGLAND (QUARRY HOUSE)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Acute-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Ambulance-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Children and Young People Health",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Community Services Data Set (CSDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Community-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Demand for Service-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Diagnostic Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Emergency Care-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Experience, Quality and Outcomes-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health Minimum Data Set (MHMDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health and Learning Disabilities Data Set (MHLDDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Mental Health-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "National Cancer Waiting Times Monitoring DataSet (NCWTMDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Population Data-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Primary Care Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "Public Health and Screening Services-Local Provider Flows",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "Frequent Adhoc Flow",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(b)(ii)",
+       "name": "SUS for Commissioners",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2022-08-31",
+     "expected_benefits": "1.\tSupporting the annual objectives as set by the Department of Health\n2.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n3.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n4.\tHealth economic modelling using:\na.\tAnalysis on provider performance against wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\n5.\tCommissioning cycle support for grouping and re-costing previous activity.\n6.\tEnables monitoring of:\na.\tOutcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\nd.\tCase management.\ne.\tCare service planning.\nf.\tCommissioning and performance management.\n7.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n8.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n11.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n12.\tFinancial validation of activity, budget control and the avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care.\n13.\tReviewing current service provision:\na.\tCost-benefit analysisand service impact assessments to underpin service transformation\nb.\tService planning and re-design\nc.\tImpact analysis fordidfferent odels of productivity measures, efficiency and expereience\nd.\tService and pathway review\ne.\tService utilisation review\n14.\tEnsuring compliance and testing of approaches with evidence and guidance.\n15.\tMonitoring outcomes and anlaysis of variations\n16.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis or productivity, outcomes, experience, plan targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact on services on health inequalities\n17.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience and outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n18.\tUnderstanding future drivers for change\na.\tForecasting health needs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained for procuring services across wider footprints and from new innovations\n19.\tDelivering services that meet changing needs of the population\na.\tAnalysis to support policy development\nb.\tEthnical and equality impact assessments\nc.\tWhat do next year’s contracts need to include\nd.\tWorkforce planning\n20.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment ins services analysis\nf.\tOpportunity analysis\n21.\tAnalysis of productivity, outcomes, experience, plan targets and actuals",
+     "expected_output": "1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis\n3.\tWaiting list/time analysis\n4.\tReconciliation of patient level and aggregate contract monitoring information with the agreed list of NHS England commissioned drugs to identify any instances of drugs or devices not listed on the NHS England commissioned list of drugs and devices.\n5.\tReporting on provider progress against contractual QIPP and CQUIN schemes.\n6.\tReporting on contract performance against programmes for Public Health \n7.\tReporting on commissioned provider activity against actual activity\n8.\tReporting on key performance indicators for Health and Justice services: \n9.\tReporting on commissioned activity against agreed clinical thresholds \n10.\tReporting on and investigation of any significant swings in reported service performance from the previous months reporting.\n11.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data set flows and associated Aggregate Inpatient and Outpatient contract monitoring at Specialised Service Code level and Point of Delivery.\n12.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated Aggregate Inpatient, Outpatient and A & E contract monitoring to indicate the match achieved at Main specialty / treatment function code level and Point of Delivery. \n13.\tAggregate reports to illustrate the level of reconciliation reported between commissioning data sets and associated patient level Inpatient and outpatient contract monitoring, to indicate the match achieved at Specialised Service Code level and Point of Delivery. \n14.\tAggregate reports to illustrate the level of reconciliation reported between aggregate data flows and associated patient level monitoring for non-standard datasets (e.g. local flows)., to match achieved at service level and Point of Delivery.\n15.\tPatient level reporting to illustrate instances where a Provider has charged a sub-region for a drug on the list of Cancer drugs which are expected to be funded centrally as part of the Cancer Drug Fund. \n16.\tAggregate performance report for each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan (for both activity and finance) and projected forecast outturn (for both activity and finance). \n17.\tAggregate performance reports by service to show the performance by each provider contract including clinical service, contractual activity plan and cost, actual activity and cost, variance from plan and projected forecast outturn.\n18.\tTrend analysis of the public health programme data.\n19.\tReporting on performance and quality KPIs.\n20.\tBenchmarking reports of secondary dental commissioning activities \n21.\tTrend analysis for services within a provider but also the trend of services (irrespective of provider) \n22.\tFinancial validation checks and challenges for contracted and non-contracted activity\n23.\tData Quality and Validation measures and monitoring against agreed data quality improvement plans.\n24.\tBudget reporting \n25.\tContract Management and Modelling \n26.\tProject/ programme level dashboards",
+     "objective": "NHS England commission secondary care activity for members of the Armed Forces and their families. As per the Armed Forces covenant, there are certain obligations which must be met for these patients e.g. priority treatment times. Contracts are held between NHS England and a total of 46 providers who deliver care for Armed Forces and as such the contracts are commissioned and monitored by using SUS and local provider flows. Similarly, patients within the Justice system who require secondary care, receive care from their local hospitals and the contracts for this care are commissioned and monitored by NHS England.\n\nThese services and responsibilities are referred to as Direct Commissioning and are covered by statute. NHS England’s statutory functions are defined in the 2012 Health and Social Care Act and the Mandate from the Department of Health which must be published annually. A copy of the 2018/19 mandate can be found here:\n\nhttps://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/691998/nhse-mandate-2018-19.pdf \n\nThe mandate sets NHS England seven objectives and these at the highest level are:\n\n1.\tThrough better commissioning, improve local and national health outcomes, particularly by addressing poor outcomes and inequalities.\n2.\tTo help create the safest, highest quality health and care service.\n3.\tTo balance the NHS budget and improve efficiency and productivity.\n4.\tTo lead a step change in the NHS in preventing ill health and supporting people to live healthier lives.\n5.\tTo maintain and improve performance against core standards.\n6.\tTo improve out-of-hospital care.\n7.\tTo support research, innovation and growth and to support the Government’s implementation of EU Exit in regard to health and care\n\nNHS England will use 3 Commissioning Support Units as data processors to support the Direct Commissioning BI Service as below:\n-\tNorth of England Commissioning Support Unit\n-\tArden and Greater East Midlands Commissioning Support Unit\n-\tNorth East London Commissioning Support Unit\n\nThe data will be processed by Regional Teams across England in much the same way, for the similar purposes and benefits as commissioning data is processed for any CCG.  There are 5 Regional Teams located across the 3 Commissioning Support Units.\n\n3 data processors are being utilised due to the geographical spread of national data and due to the NHS Digital-NHS England Area Team/Commissioning Hub legitimate relationship mappings currently in place. (It is not practical to deliver the service from a single NHS Digital DSCRO and single CSU, due to the level of consolidation that would be required, but the 3 CSUs can cover the whole of England.)  Each data processor is assigned to specific regions, as follows:\n\nNorth Regional Team - North of England CSU\nMidlands and East Regional Team - Arden and GEM CSU\nLondon Regional Team - North & East London CSU\nSouth East Regional Team - Arden and GEM CSU\nSouth West Regional Team - Arden and GEM CSU\n\nThe data processors are responsible for processing and linking the SUS+ data, Local Provider Flows, Mental Health (MHMDS, MHLDDS, MHSDS), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times Monitoring Data Set (CWT) and Diagnostic Imaging data (DIDS), for the addition of derived fields, linkage of relevant data sets and analysis, contracting monitoring, reconciliation and invoice validation*, for their own regions and will work to support the relevant NHS England Regional BI Teams.\n\n*The term \"invoice validation\" is used to enable the data controller to use the data to check recorded activity against contracts or invoices and to facilitate discussions with providers using pseudonymised data. There is no identifiable data being requested and therefore no reliance on Section 251 support (CAG 2-03 or CAG 7-07(a-c)) and a Controlled Environment for Finance is not used.\nInvoice Validation is part of commissioning and has only been separated as a purpose when reliant on the specific Section 251 support (CAG 7-07(a-c))\nAs this is pseudonymised data, a separate purpose is not required – pseudonymised data will be used for commissioning, of which the invoice validation is part of.\n\nThe level of data requested is pseudonymised and anonymised in accordance with the ICO Anonymisation Code of Practice, to be used for the purposes outlined in this application/agreement.",
+     "organisation": "NHS ARDEN AND GREATER EAST MIDLANDS COMMISSIONING SUPPORT UNIT",
+     "organisation_type": "Commissioning Support Unit (CSU)",
+     "start_date": "2019-09-01",
+     "sublicensing": "No",
+     "title": "DSfC - NHS England - Comm",
+     "yielded_benefits": ""
+    }
+   ],
+   "version": "1.3"
+  }
+ ]
+}
