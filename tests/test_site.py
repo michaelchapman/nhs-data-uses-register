@@ -152,3 +152,41 @@ class DatasetPage(unittest.TestCase):
     def test_lists_the_receiving_organisations_with_agreement_counts(self):
         self.assertIn("Organisations receiving it (2)", self.page)
         self.assertRegex(self.page, r'organisations/university-of-example/">UNIVERSITY OF EXAMPLE</a> \(1\)')
+
+
+class ChangesPages(unittest.TestCase):
+    def test_the_current_edition_has_one_changes_page_not_two(self):
+        history = [
+            {**FIRST_EDITION, "edition": "august2026"},
+            {**FIRST_EDITION, "edition": "september2026"},
+        ]
+        meta = {**site_meta(), "editions": [
+            {"edition": "july2026", "retrieved": "2026-07-20", "counts": {"agreement_versions": 1}},
+            {"edition": "august2026", "retrieved": "2026-08-20", "counts": {"agreement_versions": 2}},
+            {"edition": "september2026", "retrieved": "2026-09-20", "counts": {"agreement_versions": 3}},
+        ]}
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build.build(extract(workbook_bytes()), meta, FIRST_EDITION, out, changes_history=history)
+            self.assertTrue((out / "changes" / "august2026" / "index.html").exists())
+            self.assertFalse((out / "changes" / "september2026").exists())
+            latest = (out / "changes" / "index.html").read_text()
+            older = (out / "changes" / "august2026" / "index.html").read_text()
+            broken, _ = linkcheck.check(out)
+        self.assertEqual(dict(broken), {})
+        # Both pages mark September as current, whichever edition they describe.
+        for page in (latest, older):
+            self.assertRegex(page, r'<a href="/changes/">September 2026</a> <span class="tag tag-new">Current</span>')
+        self.assertIn('<a href="/changes/august2026/">August 2026</a>', older)
+
+
+class Csvs(unittest.TestCase):
+    def test_agreement_urls_are_absolute(self):
+        import csv
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build.build(extract(workbook_bytes()), site_meta("/repo"), FIRST_EDITION, out)
+            with (out / "downloads" / "agreements.csv").open(newline="", encoding="utf-8") as handle:
+                urls = [row["url"] for row in csv.DictReader(handle)]
+        self.assertTrue(urls)
+        self.assertTrue(all(u.startswith("https://example.test/repo/agreements/") for u in urls), urls)

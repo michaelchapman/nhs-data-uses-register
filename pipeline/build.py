@@ -136,8 +136,12 @@ def _counts(values) -> list[tuple[str, int]]:
     return sorted(tally.items(), key=lambda kv: (-kv[1], kv[0]))
 
 
-def write_csvs(data: dict, out: Path) -> list[dict]:
-    """Flat CSV extracts — the reusable form the register itself doesn't offer."""
+def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
+    """Flat CSV extracts — the reusable form the register itself doesn't offer.
+
+    `base_url` is where the site is served, so the `url` column still points at
+    the agreement page once the file has been downloaded and opened elsewhere.
+    """
     directory = out / "downloads"
     directory.mkdir(parents=True, exist_ok=True)
     written = []
@@ -165,7 +169,7 @@ def write_csvs(data: dict, out: Path) -> list[dict]:
                 v["organisation_type"], "; ".join(v["controllers"]), v["controller_basis"],
                 v["start_date"], v["end_date"], v["sublicensing"], v["commercial"],
                 "; ".join(d["name"] for d in v["datasets"]), v["files_released"],
-                f"/agreements/{a['slug']}/",
+                f"{base_url}/agreements/{a['slug']}/",
             ]
             for a in data["agreements"]
             for v in a["versions"]
@@ -230,7 +234,7 @@ def build(
     prepare_output(out)
 
     stats = compute_stats(data, meta["as_of"])
-    downloads = write_csvs(data, out)
+    downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     by_slug = {a["slug"]: a for a in data["agreements"]}
 
     # Attach change status to agreements so detail pages can flag recent activity.
@@ -247,6 +251,10 @@ def build(
 
     context = {
         "meta": meta,
+        # The edition being built. A historical changes page overrides `meta`
+        # to show its own edition, but its list of editions still needs to know
+        # which one is current.
+        "current_edition": meta["edition"],
         "stats": stats,
         "changes": changes,
         "downloads": downloads,
@@ -273,6 +281,9 @@ def build(
     # limited to the current edition — the fingerprints exist for the whole
     # backfilled history even when only the newest edition has a full extract.
     for entry in changes_history or []:
+        if entry["edition"] == meta["edition"]:
+            # Identical to /changes/, which already shows it.
+            continue
         render(
             "changes.html",
             f"changes/{entry['edition']}/index.html",

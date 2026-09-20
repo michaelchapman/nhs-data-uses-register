@@ -71,7 +71,7 @@
   <li>
     {% if loop.first %}
     {{ edition.edition|edition }}
-    {% elif loop.last %}
+    {% elif edition.edition == current_edition %}
     <a href="{{ meta.base_path }}/changes/">{{ edition.edition|edition }}</a> <span class="tag tag-new">Current</span>
     {% else %}
     <a href="{{ meta.base_path }}/changes/{{ edition.edition }}/">{{ edition.edition|edition }}</a>

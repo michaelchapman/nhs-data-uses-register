@@ -26,7 +26,7 @@
   </section>
   <section class="card">
     <h2><a href="{{ meta.base_path }}/changes/">What changed this month</a></h2>
-    <p>{% if changes.comparable %}{{ changes.added|length|commas }} added and {{ changes.amended|length|commas }} amended since the {{ changes.previous_edition|edition }} edition.{% else %}Month-on-month comparison starts from the next published edition.{% endif %}</p>
+    <p>{% if changes.comparable %}{{ changes.added|length|commas }} added and {{ changes.amended|length|commas }} amended since the {{ changes.previous_edition|edition }} edition.{% elif changes.reason == "first-edition" %}This is the earliest edition held, so there is nothing to compare it with.{% else %}This edition can't be compared with the one before it yet.{% endif %}</p>
   </section>
   <section class="card">
     <h2><a href="{{ meta.base_path }}/downloads/">Download the data</a></h2>
