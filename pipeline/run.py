@@ -157,7 +157,9 @@ def main() -> None:
         "source_file": entry.get("source_file", ""),
         "source_page": sources.LANDING_PAGE,
         "archive_page": sources.ARCHIVE_PAGE,
-        "today": dt.date.today().isoformat(),
+        # What "in term" is judged against: the edition's own date, not the
+        # build's, so it doesn't drift as the deployed page ages.
+        "as_of": sources.edition_date(edition),
         "editions": known,
     }
 

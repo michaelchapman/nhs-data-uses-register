@@ -158,6 +158,18 @@ def edition_published(edition: str) -> str:
     return f"{year:04d}-{month:02d}" if year and month else ""
 
 
+def edition_date(edition: str) -> str:
+    """``july2026`` -> ``2026-07-01``: the date an edition is read "as of".
+
+    An agreement is in term for an edition if it had not ended by the first day
+    of that edition's month. The date comes from the edition, not from when the
+    site happened to be built, so the same commit renders the same page on any
+    day, and an older edition is judged as it stood then.
+    """
+    published = edition_published(edition)
+    return f"{published}-01" if published else ""
+
+
 def asset_url(filename: str) -> str:
     """The canonical published URL for a workbook, from its filename."""
     return f"{ASSET_PREFIX}/{filename}"

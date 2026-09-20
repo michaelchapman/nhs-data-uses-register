@@ -24,7 +24,7 @@
   <fieldset class="field checkboxes">
     <legend>Show only</legend>
     <label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Commercial purposes</label>
-    <label><input type="checkbox" data-filter-flag data-key="active" value="yes"> Currently in term</label>
+    <label><input type="checkbox" data-filter-flag data-key="active" value="yes"> In term in {{ meta.edition|edition }}</label>
     <label><input type="checkbox" data-filter-flag data-key="sublicensing" value="yes"> Sublicensing allowed</label>
   </fieldset>
   <p class="filter-actions">
@@ -53,7 +53,7 @@
     <tr data-type="{{ a.organisation_type }}"
         data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}"
         data-sublicensing="{{ 'yes' if a.sublicensing == 'Yes' else 'no' }}"
-        data-active="{{ 'yes' if a.coverage_end >= meta.today else 'no' }}"
+        data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}"
         data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.organisation ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>

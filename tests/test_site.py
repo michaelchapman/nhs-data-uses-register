@@ -107,3 +107,26 @@ class PrepareOutput(unittest.TestCase):
             build.prepare_output(build.ROOT)
         with self.assertRaises(SystemExit):
             build.prepare_output(build.ROOT / "pipeline")  # not a build either
+
+
+class InTerm(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        with dataset_aliases():
+            cls.data = extract(workbook_bytes())
+
+    def test_active_agreements_depend_on_the_edition_date_not_the_build_date(self):
+        # Both fixture agreements run to 2030 or later.
+        self.assertEqual(build.compute_stats(self.data, "2026-09-01")["active_agreements"], 2)
+        self.assertEqual(build.compute_stats(self.data, "2030-06-01")["active_agreements"], 1)
+        self.assertEqual(build.compute_stats(self.data, "2035-01-01")["active_agreements"], 0)
+
+    def test_the_agreements_table_flags_terms_as_of_the_edition(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            meta = {**site_meta(), "as_of": "2030-06-01"}
+            build.build(self.data, meta, FIRST_EDITION, out)
+            page = (out / "agreements" / "index.html").read_text()
+        self.assertEqual(page.count('data-active="yes"'), 1)
+        self.assertEqual(page.count('data-active="no"'), 1)
+        self.assertIn("In term in September 2026", page)

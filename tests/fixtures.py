@@ -116,7 +116,7 @@ def site_meta(base_path: str = "") -> dict:
         "source_file": "source.xlsx",
         "source_page": "https://example.test/register",
         "archive_page": "https://example.test/archive",
-        "today": "2026-09-20",
+        "as_of": "2026-09-01",
         "editions": [
             {"edition": "september2026", "retrieved": "2026-09-20", "counts": {"agreement_versions": 3}}
         ],

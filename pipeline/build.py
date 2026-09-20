@@ -110,10 +110,9 @@ def _write(out: Path, path: str, html: str) -> None:
     target.write_text(html, encoding="utf-8")
 
 
-def compute_stats(data: dict) -> dict:
-    today = dt.date.today().isoformat()
+def compute_stats(data: dict, as_of: str) -> dict:
     agreements = data["agreements"]
-    active = [a for a in agreements if a["coverage_end"] >= today]
+    active = [a for a in agreements if a["coverage_end"] >= as_of]
     return {
         "agreements": len(agreements),
         "agreement_versions": sum(len(a["versions"]) for a in agreements),
@@ -230,7 +229,7 @@ def build(
     env = environment()
     prepare_output(out)
 
-    stats = compute_stats(data)
+    stats = compute_stats(data, meta["as_of"])
     downloads = write_csvs(data, out)
     by_slug = {a["slug"]: a for a in data["agreements"]}
 
