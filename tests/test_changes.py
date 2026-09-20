@@ -79,6 +79,56 @@ class Changes(unittest.TestCase):
             [a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]], [["Data controllers"]]
         )
 
+    def with_dataset_attribute(self, key, value):
+        changed = copy.deepcopy(self.versions)
+        changed[SECOND][0]["datasets"][0][key] = value
+        return changed
+
+    def test_a_dataset_released_under_a_new_legal_basis_is_an_amendment(self):
+        # December 2022: the register dropped "s261(1) and" from the legal basis
+        # cited on 10,066 dataset rows. The fingerprints counted it; so must this.
+        self.record(("july2026", self.versions),
+                    ("august2026", self.with_dataset_attribute("legal_basis", "Some other legal basis")))
+        result = changes.diff(REGISTER, "august2026")
+        self.assertEqual([a["fields"] for a in result["amended"]], [["Datasets"]])
+
+    def test_a_dataset_reclassified_as_non_sensitive_is_an_amendment(self):
+        self.record(("july2026", self.versions),
+                    ("august2026", self.with_dataset_attribute("sensitivity", "Non-Sensitive")))
+        self.assertEqual(len(changes.diff(REGISTER, "august2026")["amended"]), 1)
+
+    def test_a_dataset_attribute_retyped_is_not_an_amendment(self):
+        original = self.versions[SECOND][0]["datasets"][0]["legal_basis"]
+        self.record(("july2026", self.versions),
+                    ("august2026", self.with_dataset_attribute("legal_basis", original.upper() + "  ")))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+
+    def test_a_relabelled_dataset_with_a_new_legal_basis_is_still_an_amendment(self):
+        changed = copy.deepcopy(self.versions)
+        for dataset in changed[SECOND][0]["datasets"]:
+            if dataset["name"] == NEW_NAME:
+                dataset["name"] = OLD_NAME  # aliased to the same dataset
+                dataset["legal_basis"] = "Some other legal basis"
+        self.record(("july2026", self.versions), ("august2026", changed))
+        result = changes.diff(REGISTER, "august2026")
+        self.assertEqual([a["fields"] for a in result["amended"]], [["Datasets"]])
+
+    def test_a_dataset_that_loses_one_of_several_records_is_an_amendment(self):
+        # HES Critical Care went from four records to three in January 2023, with
+        # every individual value still present on another row.
+        twice = copy.deepcopy(self.versions)
+        extra = copy.deepcopy(twice[SECOND][0]["datasets"][0])
+        extra["sensitivity"], extra["legal_basis"] = "Non-Sensitive", "Another basis"
+        twice[SECOND][0]["datasets"].append(extra)
+        third = copy.deepcopy(twice)
+        both = copy.deepcopy(extra)
+        both["sensitivity"] = twice[SECOND][0]["datasets"][0]["sensitivity"]
+        third[SECOND][0]["datasets"].append(both)
+        self.record(("july2026", third), ("august2026", twice))
+        self.assertEqual(
+            [a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]], [["Datasets"]]
+        )
+
     def test_a_new_agreement_is_new_and_a_new_version_is_a_renewal(self):
         without = {FIRST: copy.deepcopy(self.versions[FIRST][:1])}
         self.record(("july2026", without), ("august2026", self.versions))

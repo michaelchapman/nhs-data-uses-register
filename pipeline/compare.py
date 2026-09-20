@@ -46,6 +46,16 @@ SCALAR_FIELDS = (
     ("commercial", "Commercial purposes"),
 )
 
+# What a dataset is recorded as being, beyond its name. A dataset re-classified
+# as sensitive, or released under a different legal basis, is a change a reader
+# would want flagged; `frequency` is left out, as it always has been.
+DATASET_ATTRIBUTES = (
+    ("legal_basis", "legal basis"),
+    ("sensitivity", "sensitivity"),
+    ("type_of_data", "type of data"),
+    ("confidentiality", "common law duty of confidentiality"),
+)
+
 QUOTES = str.maketrans(
     {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-"}
 )
@@ -344,6 +354,75 @@ def _dataset_names(version: dict, alias_map: dict[str, str]) -> set[str]:
     return {aliases.resolve(d["name"], alias_map) for d in version["datasets"] if d["name"]}
 
 
+def _dataset_attribute_changes(before: dict, after: dict, alias_map: dict[str, str]) -> tuple[list, bool]:
+    """Datasets named in both versions whose recorded attributes differ.
+
+    Returns `(changes, cosmetic)`. Datasets are matched on their name under the
+    reviewed aliases, so a relabelled dataset is compared with itself. A version
+    can list one name twice with different attributes, so each side is a set of
+    values and a difference is a difference in those sets. Values are compared
+    normalised and reported as written.
+    """
+
+    def by_name(version: dict) -> dict[str, list[dict]]:
+        grouped: dict[str, list[dict]] = {}
+        for dataset in version["datasets"]:
+            if dataset["name"]:
+                grouped.setdefault(aliases.resolve(dataset["name"], alias_map), []).append(dataset)
+        return grouped
+
+    old, new = by_name(before), by_name(after)
+    found, cosmetic = [], False
+    def combinations(datasets: list[dict]) -> dict[tuple, tuple]:
+        return {
+            tuple(normalise(d.get(key, "") or "") for key, _ in DATASET_ATTRIBUTES):
+                tuple(d.get(key, "") or "" for key, _ in DATASET_ATTRIBUTES)
+            for d in datasets
+        }
+
+    for name in sorted(set(old) & set(new)):
+        was_rows, now_rows = combinations(old[name]), combinations(new[name])
+        if set(was_rows) == set(now_rows):
+            if any(was_rows[k] != now_rows[k] for k in was_rows):
+                cosmetic = True
+            continue
+        per_attribute = 0
+        for key, label in DATASET_ATTRIBUTES:
+            was = sorted({d.get(key, "") or "" for d in old[name]})
+            now = sorted({d.get(key, "") or "" for d in new[name]})
+            if was == now:
+                continue
+            if {normalise(v) for v in was} == {normalise(v) for v in now}:
+                cosmetic = True
+                continue
+            per_attribute += 1
+            found.append(
+                {
+                    # One label for the whole family, so the changes page says
+                    # "Datasets" as it always has; `label` says which.
+                    "group": "Datasets",
+                    "label": f"{name}: {label}",
+                    "before": "; ".join(v for v in was if v),
+                    "after": "; ".join(v for v in now if v),
+                }
+            )
+        if not per_attribute:
+            # A dataset listed several times can lose one combination while each
+            # value survives on another row — HES Critical Care went from four
+            # records to three in January 2023 that way — so no single
+            # attribute moved and the rows themselves are the change.
+            render = lambda rows: "; ".join(" | ".join(v for v in row if v) for row in rows)
+            found.append(
+                {
+                    "group": "Datasets",
+                    "label": f"{name}: recorded details",
+                    "before": render(was_rows[k] for k in sorted(set(was_rows) - set(now_rows))),
+                    "after": render(now_rows[k] for k in sorted(set(now_rows) - set(was_rows))),
+                }
+            )
+    return found, cosmetic
+
+
 def _list_change(old: set[str], new: set[str]) -> dict | None:
     """What was added to and removed from a list of names, ignoring typography.
 
@@ -378,6 +457,10 @@ def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None
 
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    attribute_changes, attribute_cosmetic = _dataset_attribute_changes(before, after, alias_map)
+    scalars.extend(attribute_changes)
+    if attribute_cosmetic:
+        cosmetic.append("Datasets")
     for label, old, new in (
         ("Data controllers", set(before.get("controllers") or []), set(after.get("controllers") or [])),
         ("Datasets", _dataset_names(before, alias_map), _dataset_names(after, alias_map)),

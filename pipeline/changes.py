@@ -69,7 +69,7 @@ def _material(difference: dict | None) -> bool:
 
 
 def _labels(difference: dict) -> list[str]:
-    labels = [item["label"] for item in difference["scalars"]]
+    labels = [item.get("group", item["label"]) for item in difference["scalars"]]
     labels += [item["label"] for item in difference["lists"]]
     labels += [item["label"] for item in difference["prose"]]
     return sorted(set(labels))
