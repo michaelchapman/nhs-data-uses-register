@@ -20,9 +20,16 @@ Three kinds of file:
     appended to the list.
 
 ``data/facts/<register>/releases/<slug>.json``
-    One record per file released under that agreement, keyed by the file
-    reference the register issues — unique across all 104,451 rows of the
-    September 2026 edition — and naming the first edition that reported it.
+    Every file released under that agreement, keyed by the file reference the
+    register issues — unique across all 104,451 rows of the September 2026
+    edition — grouped by the version, dataset and channel a row belongs to.
+
+    A file can appear more than once. The register relabels a dataset and every
+    release row under it follows: between the July 2021 and September 2026
+    editions that happened to 33,841 of 104,451 files. Each description records
+    the edition it starts from, and a read takes the newest at or before the
+    edition being read, so an edition shows the names it used rather than the
+    names in force when the file was first seen.
 
     Releases are kept apart from the states above because they move every month
     by design: 211 of the 2,330 references with releases changed between the
@@ -178,7 +185,8 @@ def append_edition(register_slug: str, edition: str, versions_by_base: dict[str,
     index: dict[str, int] = {}
     counts = {
         "agreements": 0, "versions": 0, "new_agreements": 0, "new_states": 0, "files_written": 0,
-        "new_released_files": 0, "release_files_written": 0, "release_conflicts": 0,
+        "new_released_files": 0, "release_files_written": 0, "redescribed_files": 0,
+        "withdrawn_files": 0,
     }
     seen_slugs: dict[str, str] = {}
 
@@ -253,32 +261,72 @@ def _append_releases(register_slug: str, edition: str, versions_by_base: dict, c
             else {"base_reference": base_reference, "releases": []}
         )
         groups = {(r["reference"], r["dataset"], r["channel"]): r for r in stored["releases"]}
-        seen = {row[FILE]: (key, row) for key, group in groups.items() for row in group["files"]}
+        latest = _latest_observations(stored)
+        this_edition = sources.edition_sort_key(edition)
 
         for version, released in reported:
             key = (version["reference"], released["dataset"], released.get("channel", FILE_RELEASE))
+            row = [released["file"], released["month"], released["opt_outs_applied"], edition]
+            attributes = _differing_attributes(released, version)
+            was = latest.get(released["file"])
+            if was is not None and was[1] is not None:
+                was_key, was_row, was_attributes = was[1]
+                if was_key == key and was_row[:FIRST_EDITION] == row[:FIRST_EDITION] \
+                        and was_attributes == attributes:
+                    continue
+                counts["redescribed_files"] += 1
+            else:
+                counts["new_released_files"] += 1
             group = groups.get(key)
             if group is None:
                 group = {"reference": key[0], "dataset": key[1], "channel": key[2], "files": []}
                 groups[key] = group
                 stored["releases"].append(group)
-            row = [released["file"], released["month"], released["opt_outs_applied"], edition]
-            was = seen.get(released["file"])
-            if was is None:
-                group["files"].append(row)
-                seen[released["file"]] = (key, row)
-                counts["new_released_files"] += 1
-                attributes = _differing_attributes(released, version)
-                if attributes:
-                    group.setdefault("attributes", {})[released["file"]] = attributes
-            elif was[0] != key or was[1][:FIRST_EDITION] != row[:FIRST_EDITION]:
-                counts["release_conflicts"] += 1
+            group["files"].append(row)
+            if attributes:
+                group.setdefault("attributes", {})[released["file"]] = attributes
+            latest[released["file"]] = (this_edition, (key, row, attributes))
+
+        # A file this edition stopped reporting. The register does withdraw
+        # them — three vanished from DARS-NIC-343380-H5Q9K between the December
+        # 2022 and January 2023 editions — and without a note of it every later
+        # edition would inherit a release its workbook does not list.
+        reported_files = {released["file"] for _, released in reported}
+        for file_reference, (seen, description) in sorted(latest.items()):
+            if description is not None and file_reference not in reported_files:
+                stored.setdefault("withdrawn", []).append([file_reference, edition])
+                counts["withdrawn_files"] += 1
+        if stored.get("withdrawn"):
+            stored["withdrawn"].sort(key=lambda w: (w[0], sources.edition_sort_key(w[1])))
 
         for group in stored["releases"]:
-            group["files"].sort()
+            group["files"].sort(key=lambda r: (r[FILE], sources.edition_sort_key(r[FIRST_EDITION])))
         stored["releases"].sort(key=lambda r: (r["reference"], r["dataset"], r["channel"]))
         if _write_if_changed(path, _dumps(stored)):
             counts["release_files_written"] += 1
+
+
+def _latest_observations(stored: dict) -> dict:
+    """`{file: (edition, description)}` for each file's newest description.
+
+    The description is `(group key, row, attributes)`, or `None` where the
+    newest thing said about the file is that an edition stopped reporting it.
+    """
+    latest: dict[str, tuple] = {}
+
+    def offer(file_reference: str, edition: str, description) -> None:
+        seen = sources.edition_sort_key(edition)
+        current = latest.get(file_reference)
+        if current is None or seen >= current[0]:
+            latest[file_reference] = (seen, description)
+
+    for group in stored["releases"]:
+        key = (group["reference"], group["dataset"], group["channel"])
+        for row in group["files"]:
+            offer(row[FILE], row[FIRST_EDITION], (key, row, group.get("attributes", {}).get(row[FILE], {})))
+    for file_reference, edition in stored.get("withdrawn", []):
+        offer(file_reference, edition, None)
+    return latest
 
 
 def _differing_attributes(released: dict, version: dict) -> dict:
@@ -301,14 +349,15 @@ def _differing_attributes(released: dict, version: dict) -> dict:
     return attributes
 
 
-def read_releases(register_slug: str, base_reference: str) -> list[dict]:
+def read_releases(register_slug: str, base_reference: str) -> dict:
+    """One agreement's whole release record: its groups and its withdrawals."""
     path = releases_dir(register_slug) / f"{slugify(base_reference)}.json"
     if not path.exists():
-        return []
-    return json.loads(path.read_text(encoding="utf-8"))["releases"]
+        return {"base_reference": base_reference, "releases": [], "withdrawn": []}
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def released_files_as_at(groups: list[dict], edition: str, datasets_by_reference: dict) -> dict:
+def released_files_as_at(stored: dict, edition: str, datasets_by_reference: dict) -> dict:
     """`{version reference: released files}`, in the shape `extract` produces.
 
     Files first reported by a later edition are left out, so an edition built
@@ -318,25 +367,42 @@ def released_files_as_at(groups: list[dict], edition: str, datasets_by_reference
     from .extract import RELEASE_ATTRIBUTES
 
     cutoff = sources.edition_sort_key(edition)
+    # A file can be described more than once: the register relabels a dataset
+    # and every release row under it follows. Each description records the
+    # edition it starts from, so the one to use is the newest at or before the
+    # edition being read.
+    chosen: dict[str, tuple] = {}
+    for group in stored["releases"]:
+        for row in group["files"]:
+            seen = sources.edition_sort_key(row[FIRST_EDITION])
+            if seen > cutoff:
+                continue
+            current = chosen.get(row[FILE])
+            if current is None or seen >= current[0]:
+                chosen[row[FILE]] = (seen, group, row)
+    # An edition that stopped reporting a file drops it from that edition on,
+    # unless a later one within the cutoff reported it again.
+    for file_reference, edition_withdrawn in stored.get("withdrawn", []):
+        seen = sources.edition_sort_key(edition_withdrawn)
+        current = chosen.get(file_reference)
+        if current is not None and cutoff >= seen >= current[0]:
+            del chosen[file_reference]
+
     by_reference: dict[str, list[dict]] = {}
-    for group in groups:
-        attributes = group.get("attributes", {})
+    for file_reference, (_, group, row) in chosen.items():
         datasets = {d["name"]: d for d in datasets_by_reference.get(group["reference"], [])}
         shared = datasets.get(group["dataset"], {})
-        for file_reference, month, opt_outs, first_edition in group["files"]:
-            if sources.edition_sort_key(first_edition) > cutoff:
-                continue
-            own = attributes.get(file_reference)
-            by_reference.setdefault(group["reference"], []).append({
-                "file": file_reference,
-                "dataset": group["dataset"],
-                "month": month,
-                "channel": group["channel"],
-                "opt_outs_applied": opt_outs,
-                # Where the file did not disagree with its dataset, its
-                # attributes *are* the dataset's; only the exceptions are kept.
-                "attributes": own or {key: shared.get(key, "") for key in RELEASE_ATTRIBUTES},
-            })
+        own = group.get("attributes", {}).get(file_reference)
+        by_reference.setdefault(group["reference"], []).append({
+            "file": file_reference,
+            "dataset": group["dataset"],
+            "month": row[MONTH],
+            "channel": group["channel"],
+            "opt_outs_applied": row[OPT_OUTS],
+            # Where the file did not disagree with its dataset, its attributes
+            # *are* the dataset's; only the exceptions are kept.
+            "attributes": own or {key: shared.get(key, "") for key in RELEASE_ATTRIBUTES},
+        })
     for released in by_reference.values():
         released.sort(key=lambda f: f["file"])
     return by_reference

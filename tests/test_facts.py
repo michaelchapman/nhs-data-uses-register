@@ -202,7 +202,7 @@ class Store(unittest.TestCase):
         """One stored release row, as [file, month, opt-outs, first edition]."""
         return next(
             row
-            for group in facts.read_releases(REGISTER, base)
+            for group in facts.read_releases(REGISTER, base)["releases"]
             for row in group["files"]
             if row[facts.FILE] == file_reference
         )
@@ -214,11 +214,53 @@ class Store(unittest.TestCase):
         self.assertEqual(counts["release_files_written"], 0)
         self.assertEqual(self.stored_file(FIRST, "FILE0000900")[facts.FIRST_EDITION], "august2026")
 
-    def test_a_file_reported_differently_later_is_counted_not_overwritten(self):
+    def test_a_file_described_differently_later_keeps_both_descriptions(self):
         facts.append_edition(REGISTER, "august2026", self.released(month="2026-08"))
         counts = facts.append_edition(REGISTER, "september2026", self.released(month="2026-07"))
-        self.assertEqual(counts["release_conflicts"], 1)
-        self.assertEqual(self.stored_file(FIRST, "FILE0000900")[facts.MONTH], "2026-08")
+        self.assertEqual(counts["redescribed_files"], 1)
+        self.assertEqual(counts["new_released_files"], 0)
+        # Each edition reads back the month it reported, not the first one seen.
+        def month_in(edition):
+            files = facts.read_edition(REGISTER, edition)[FIRST][1]["released_files"]
+            return next(f["month"] for f in files if f["file"] == "FILE0000900")
+        self.assertEqual((month_in("august2026"), month_in("september2026")), ("2026-08", "2026-07"))
+
+    def test_a_file_the_register_stops_reporting_is_dropped_from_then_on(self):
+        facts.append_edition(REGISTER, "august2026", self.released(month="2026-08"))
+        counts = facts.append_edition(REGISTER, "september2026", self.versions)
+        self.assertEqual(counts["withdrawn_files"], 1)
+
+        def files_in(edition):
+            return {f["file"] for f in facts.read_edition(REGISTER, edition)[FIRST][1]["released_files"]}
+        self.assertIn("FILE0000900", files_in("august2026"))
+        self.assertNotIn("FILE0000900", files_in("september2026"))
+
+    def test_a_withdrawn_file_that_comes_back_is_reported_again(self):
+        facts.append_edition(REGISTER, "july2026", self.released(month="2026-07"))
+        facts.append_edition(REGISTER, "august2026", self.versions)
+        facts.append_edition(REGISTER, "september2026", self.released(month="2026-07"))
+
+        def files_in(edition):
+            return {f["file"] for f in facts.read_edition(REGISTER, edition)[FIRST][1]["released_files"]}
+        self.assertEqual(
+            ["FILE0000900" in files_in(e) for e in ("july2026", "august2026", "september2026")],
+            [True, False, True],
+        )
+
+    def test_a_relabelled_dataset_follows_the_edition_that_reported_it(self):
+        facts.append_edition(REGISTER, "august2026", self.versions)
+        renamed = copy.deepcopy(self.versions)
+        for released in renamed[FIRST][-1]["released_files"]:
+            released["dataset"] = "Renamed Data Set"
+        renamed[FIRST][-1]["releases"] = summarise_releases(
+            renamed[FIRST][-1]["released_files"], renamed[FIRST][-1]["datasets"]
+        )
+        facts.append_edition(REGISTER, "september2026", renamed)
+        def datasets_in(edition):
+            files = facts.read_edition(REGISTER, edition)[FIRST][1]["released_files"]
+            return {f["dataset"] for f in files}
+        self.assertEqual(datasets_in("september2026"), {"Renamed Data Set"})
+        self.assertNotIn("Renamed Data Set", datasets_in("august2026"))
 
     def test_recording_the_same_releases_again_writes_nothing(self):
         facts.append_edition(REGISTER, "september2026", self.versions)
@@ -248,13 +290,13 @@ class Store(unittest.TestCase):
         flagged = {r["dataset"]: r["attributes_differ"] for r in releases}
         self.assertTrue(flagged[NEW_NAME])
         # Only the file that disagreed is stored with attributes of its own.
-        kept = [g["attributes"] for g in facts.read_releases(REGISTER, SECOND) if "attributes" in g]
+        kept = [g["attributes"] for g in facts.read_releases(REGISTER, SECOND)["releases"] if "attributes" in g]
         self.assertEqual(len(kept), 1)
         self.assertEqual(next(iter(kept[0].values()))["sensitivity"], "Non-Sensitive")
 
     def test_every_release_records_the_channel_it_came_through(self):
         facts.append_edition(REGISTER, "september2026", self.versions)
-        channels = {r["channel"] for r in facts.read_releases(REGISTER, FIRST)}
+        channels = {r["channel"] for r in facts.read_releases(REGISTER, FIRST)["releases"]}
         self.assertEqual(channels, {"file"})
         release = facts.read_edition(REGISTER, "september2026")[FIRST][0]["releases"][0]
         self.assertEqual(release["channel"], "file")

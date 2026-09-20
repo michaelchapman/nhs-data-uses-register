@@ -138,11 +138,11 @@ def ingest_one(
         for version in versions:
             version.pop("released_files", None)
 
-    if counts["release_conflicts"]:
+    if counts["redescribed_files"]:
         print(
-            f"  note: {counts['release_conflicts']:,} released file(s) reported differently "
-            "than when first seen; the first report is kept. See docs/plan-release-coverage.md.",
-            file=sys.stderr,
+            f"  note: {counts['redescribed_files']:,} released file(s) described differently "
+            "than before; both descriptions are kept, and each edition reads back the one it "
+            "reported. Usually a dataset the register relabelled.",
         )
 
     return {
