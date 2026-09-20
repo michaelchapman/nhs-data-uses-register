@@ -19,7 +19,9 @@ import json
 import re
 from pathlib import Path
 
-ALIASES_PATH = Path(__file__).resolve().parent.parent / "data" / "organisation-aliases.json"
+DATA = Path(__file__).resolve().parent.parent / "data"
+ALIASES_PATH = DATA / "organisation-aliases.json"
+DATASET_ALIASES_PATH = DATA / "dataset-aliases.json"
 
 
 def _key(name: str) -> str:
@@ -34,10 +36,11 @@ def _key(name: str) -> str:
     return re.sub(r"\s+", " ", name).strip().casefold()
 
 
-def _read() -> dict:
-    if not ALIASES_PATH.exists():
+def _read(path: Path = None) -> dict:
+    path = path or ALIASES_PATH
+    if not path.exists():
         return {"aliases": [], "ignored": []}
-    data = json.loads(ALIASES_PATH.read_text())
+    data = json.loads(path.read_text())
     data.setdefault("aliases", [])
     data.setdefault("ignored", [])
     return data
@@ -54,33 +57,49 @@ DEFAULT_COMMENT = (
 )
 
 
-def _write(data: dict) -> None:
+DATASET_COMMENT = (
+    "Dataset name merges, for datasets the register has relabelled — see "
+    "docs/organisation-names.md and `python -m pipeline.datasetcheck`. Each "
+    "group: canonical (the name shown on the dataset page) and variants "
+    "(every spelling that should map to it). An entry marked \"source\": "
+    "\"auto\" was added by --auto on unambiguous evidence and nobody reviewed "
+    "it. `ignored` records candidates a reviewer decided were different "
+    "datasets."
+)
+
+
+def _default_comment(path: Path) -> str:
+    return DATASET_COMMENT if path == DATASET_ALIASES_PATH else DEFAULT_COMMENT
+
+
+def _write(data: dict, path: Path = None) -> None:
+    path = path or ALIASES_PATH
     # Key order is cosmetic but stable, so diffs in the committed file stay
     # readable rather than reshuffling every time something is saved.
     ordered = {
-        "_comment": data.get("_comment") or DEFAULT_COMMENT,
+        "_comment": data.get("_comment") or _default_comment(path),
         "aliases": data.get("aliases", []),
         "ignored": data.get("ignored", []),
     }
-    ALIASES_PATH.write_text(json.dumps(ordered, indent=2, ensure_ascii=False, sort_keys=False) + "\n")
+    path.write_text(json.dumps(ordered, indent=2, ensure_ascii=False, sort_keys=False) + "\n")
 
 
-def load_groups() -> list[dict]:
-    return _read()["aliases"]
+def load_groups(path: Path = None) -> list[dict]:
+    return _read(path)["aliases"]
 
 
-def load_ignored() -> list[list[str]]:
-    return _read()["ignored"]
+def load_ignored(path: Path = None) -> list[list[str]]:
+    return _read(path)["ignored"]
 
 
-def load_map() -> dict[str, str]:
+def load_map(path: Path = None) -> dict[str, str]:
     """`{normalised variant key: canonical name}`.
 
     Look up with `resolve()`, not this dict directly, since its keys are
     normalised rather than exact register text.
     """
     mapping: dict[str, str] = {}
-    for group in load_groups():
+    for group in load_groups(path):
         canonical = group["canonical"]
         for variant in group.get("variants", []):
             if _key(variant) != _key(canonical):
@@ -93,21 +112,27 @@ def resolve(name: str, alias_map: dict[str, str]) -> str:
     return alias_map.get(_key(name), name)
 
 
-def is_ignored(names: list[str], ignored: list[list[str]] | None = None) -> bool:
+def is_ignored(names: list[str], ignored: list[list[str]] | None = None, path: Path = None) -> bool:
     """Whether this exact candidate (as a set of names) was already dismissed."""
-    ignored = load_ignored() if ignored is None else ignored
+    ignored = load_ignored(path) if ignored is None else ignored
     key = frozenset(_key(n) for n in names)
     return any(key == frozenset(_key(n) for n in entry) for entry in ignored)
 
 
-def add_ignored(names: list[str]) -> None:
-    data = _read()
+def add_ignored(names: list[str], path: Path = None) -> None:
+    data = _read(path)
     if not is_ignored(names, data["ignored"]):
         data["ignored"].append(sorted(names))
-    _write(data)
+    _write(data, path)
 
 
-def add_alias(canonical: str, variants: list[str], reason: str = "") -> None:
+def add_alias(
+    canonical: str,
+    variants: list[str],
+    reason: str = "",
+    path: Path = None,
+    source: str = "",
+) -> None:
     """Add `variants` to the alias group for `canonical`, creating it if new.
 
     If `canonical` already has a group (matched by its own normalised name,
@@ -115,7 +140,7 @@ def add_alias(canonical: str, variants: list[str], reason: str = "") -> None:
     duplicates it), the new variants are merged in and the reason is kept
     only if the group didn't already have one.
     """
-    data = _read()
+    data = _read(path)
     groups = data["aliases"]
     existing = next((g for g in groups if _key(g["canonical"]) == _key(canonical)), None)
     if existing:
@@ -127,5 +152,83 @@ def add_alias(canonical: str, variants: list[str], reason: str = "") -> None:
         if reason and not existing.get("reason"):
             existing["reason"] = reason
     else:
-        groups.append({"canonical": canonical, "variants": sorted(set(variants)), "reason": reason})
-    _write(data)
+        group = {"canonical": canonical, "variants": sorted(set(variants)), "reason": reason}
+        if source:
+            # Marks an entry nobody looked at, so it can be found, audited or
+            # undone as a group later.
+            group["source"] = source
+        groups.append(group)
+    _write(data, path)
+
+
+# --- Merges safe to make without a person -----------------------------------
+
+# Legal-form suffixes that are written inconsistently and never distinguish two
+# organisations from each other.
+FORM_SUFFIX = r"(?:LIMITED|LTD|PLC|LLP|LLC|INC|INCORPORATED|CORP|CORPORATION)"
+_TRAILING_FORM = re.compile(rf"[\s,.]*\b{FORM_SUFFIX}\.?$", re.IGNORECASE)
+_TRAILING_BRACKET = re.compile(r"\s*[\(\[][^()\[\]]*[\)\]]\s*$")
+
+
+def _bare(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", name.lower()).strip()
+
+
+def auto_reason(first: str, second: str) -> str | None:
+    """Why these two names may be merged unreviewed, or `None` to ask a person.
+
+    Deliberately narrow. Each rule below describes a way of writing the *same*
+    name differently — punctuation, a bracketed acronym, a legal form — and
+    none of them can turn one organisation into another. Anything that adds or
+    removes a word of substance falls through to a human, because that is
+    where "NHS Sussex" and "NHS Surrey and Sussex" live, and merging those
+    would attribute one body's data sharing to another.
+    """
+    a, b = _bare(first), _bare(second)
+    if not a or not b:
+        return None
+    if a == b:
+        return "same name, differing only in punctuation, spacing or case"
+
+    # "Adult Psychiatric Morbidity Survey" / "... (APMS)"
+    short, long_ = sorted((first, second), key=len)
+    stripped = _bare(_TRAILING_BRACKET.sub("", long_))
+    if stripped == _bare(short) and stripped:
+        bracket = _TRAILING_BRACKET.search(long_)
+        return f"same name with {bracket.group().strip()} appended"
+
+    # "NEC Software Solutions" / "NEC Software Solutions UK Limited" differ by
+    # a legal form only.
+    if _bare(_TRAILING_FORM.sub("", first)) == _bare(_TRAILING_FORM.sub("", second)):
+        return "same name, differing only in legal form"
+
+    return None
+
+
+def auto_merge(
+    groups, path: Path = None, source: str = "auto"
+) -> list[dict]:
+    """Apply every pair that is safe to merge unreviewed.
+
+    Each entry is `(first, second)`, or `(first, second, reason)` to supply
+    evidence of your own. The second form is for renames found by comparing
+    editions, where a name vanished and another appeared on exactly the same
+    agreements: that is direct evidence of one dataset under two labels, and a
+    stronger reason than anything the spelling could show.
+
+    Returns what was written, so a caller can print it. These entries are
+    added without anyone seeing them, and an unexplained change to a reviewed
+    file would be worse than the manual review it saves.
+    """
+    applied = []
+    for group in groups:
+        first, second = group[0], group[1]
+        reason = group[2] if len(group) > 2 and group[2] else auto_reason(first, second)
+        if not reason:
+            continue
+        # The longer spelling is the canonical one: it is the one carrying the
+        # acronym or the legal form, and so the less ambiguous of the two.
+        canonical, variant = sorted((first, second), key=len, reverse=True)
+        add_alias(canonical, [canonical, variant], reason, path=path, source=source)
+        applied.append({"canonical": canonical, "variant": variant, "reason": reason})
+    return applied

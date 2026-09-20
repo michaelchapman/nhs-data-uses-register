@@ -114,14 +114,62 @@ LIST_SEPARATOR = re.compile(
 )
 
 
-def split_list(value) -> list[str]:
+def protected_spans(text: str, known: tuple[str, ...]) -> list[tuple[int, int]]:
+    """Where in `text` a known organisation name sits, longest match first.
+
+    Longest first so that "NHS Bedfordshire, Luton and Milton Keynes ICB -
+    M1J4Y" wins over a shorter name that happens to be a prefix of it.
+    """
+    spans: list[tuple[int, int]] = []
+    lowered = text.lower()
+    for name in known:
+        start = lowered.find(name.lower())
+        while start != -1:
+            end = start + len(name)
+            if not any(s <= start < e or s < end <= e for s, e in spans):
+                spans.append((start, end))
+            start = lowered.find(name.lower(), start + 1)
+    return spans
+
+
+def split_list(value, known: tuple[str, ...] = ()) -> list[str]:
+    """Split a list-shaped register field, keeping known names whole.
+
+    Some organisations have a comma in their name — "NHS Bristol, North
+    Somerset and South Gloucestershire ICB - 15C", "Cumbria, Northumberland,
+    Tyne and Wear NHS Foundation Trust" — and no rule about the text around
+    the comma tells those apart from two organisations listed together. What
+    does tell them apart is that the register names them in full elsewhere:
+    Applicant Organisation holds one organisation per row and is never split,
+    so the names appearing there are authoritative. Pass them as `known` and
+    the commas inside them stop being separators.
+    """
     text = clean(value)
     if not text:
         return []
-    return [p.strip() for p in LIST_SEPARATOR.split(text) if p.strip()]
+    spans = protected_spans(text, known) if known else []
+    if not spans:
+        return [p.strip() for p in LIST_SEPARATOR.split(text) if p.strip()]
+    parts, start = [], 0
+    for match in LIST_SEPARATOR.finditer(text):
+        if any(s <= match.start() < e for s, e in spans):
+            continue
+        parts.append(text[start : match.start()])
+        start = match.end()
+    parts.append(text[start:])
+    return [p.strip() for p in parts if p.strip()]
 
 
-def resplit_list(items: list[str]) -> list[str]:
+def known_organisation_names(names) -> tuple[str, ...]:
+    """The comma-bearing names to protect, longest first.
+
+    Only names with a comma matter: everything else splits the same either
+    way, and checking them all for every controller string would be waste.
+    """
+    return tuple(sorted({n for n in names if n and "," in n}, key=len, reverse=True))
+
+
+def resplit_list(items: list[str], known: tuple[str, ...] = ()) -> list[str]:
     """Re-apply `split_list`'s rules to an already-split list.
 
     For a committed extract written before this file's splitting rules
@@ -129,7 +177,7 @@ def resplit_list(items: list[str]) -> list[str]:
     re-joining and re-splitting the whole string isn't needed — splitting
     each existing item again is equivalent and cheaper.
     """
-    return [part for item in items for part in split_list(item)]
+    return [part for item in items for part in split_list(item, known)]
 
 
 def _read_sheet(workbook, name: str) -> list[dict]:
@@ -192,8 +240,15 @@ def extract(workbook_bytes: bytes) -> dict:
             if month > summary["last_month"]:
                 summary["last_month"] = month
 
+    agreement_rows = _read_sheet(workbook, "Agreements")
+    # Applicant Organisation holds one organisation per row and is never
+    # split, so it is the register telling us which names contain a comma.
+    # Read them first, then use them to keep those names whole in the
+    # controller lists, where the same organisations appear comma-joined.
+    known = known_organisation_names(clean(r.get("Applicant Organisation")) for r in agreement_rows)
+
     versions_by_base: dict[str, list[dict]] = defaultdict(list)
-    for row in _read_sheet(workbook, "Agreements"):
+    for row in agreement_rows:
         reference = clean(row.get("Reference Number"))
         if not reference:
             continue
@@ -210,7 +265,7 @@ def extract(workbook_bytes: bytes) -> dict:
                 "title": clean(row.get("Application Title")),
                 "organisation": clean(row.get("Applicant Organisation")),
                 "organisation_type": clean(row.get("Applicant Organisation Type")),
-                "controllers": split_list(row.get("Data Controller(s)")),
+                "controllers": split_list(row.get("Data Controller(s)"), known),
                 "controller_basis": clean(row.get("Sole/Joint Data Controller")),
                 "start_date": parse_date(row.get("DSA Start Date")),
                 "end_date": parse_date(row.get("DSA End Date")),
@@ -228,6 +283,7 @@ def extract(workbook_bytes: bytes) -> dict:
         )
 
     alias_map = aliases.load_map()
+    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
 
     agreements = []
     for base, versions in versions_by_base.items():
@@ -269,7 +325,11 @@ def extract(workbook_bytes: bytes) -> dict:
                 "latest_end": latest["end_date"],
                 "coverage_end": max(ends) if ends else "",
                 "dataset_names": dataset_names,
-                "dataset_slugs": [slugify(n) for n in dataset_names],
+                # Resolved through the dataset alias map, so a renamed
+                # dataset links to one page rather than two.
+                "dataset_slugs": [
+                    slugify(aliases.resolve(n, dataset_alias_map)) for n in dataset_names
+                ],
                 "legal_bases": legal_bases,
                 "files_released": sum(v["files_released"] for v in versions),
                 "versions": versions,
@@ -374,9 +434,15 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
 
 
 def _group_datasets(agreements: list[dict]) -> list[dict]:
+    # Datasets get relabelled at least as often as organisations — NHS England
+    # appended acronyms across the whole register in January 2023 — and a
+    # rename would otherwise split one dataset's history across two pages.
+    # Reviewed merges live in data/dataset-aliases.json; see datasetcheck.
+    alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     grouped: dict[str, dict] = {}
     for agreement in agreements:
-        for name in agreement["dataset_names"]:
+        for raw_name in agreement["dataset_names"]:
+            name = aliases.resolve(raw_name, alias_map)
             entry = grouped.setdefault(
                 name,
                 {"name": name, "slug": slugify(name), "agreements": [], "attributes": {}},
@@ -384,7 +450,7 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
             entry["agreements"].append(agreement)
             for version in agreement["versions"]:
                 for dataset in version["datasets"]:
-                    if dataset["name"] != name:
+                    if aliases.resolve(dataset["name"], alias_map) != name:
                         continue
                     for key in ("type_of_data", "sensitivity", "legal_basis", "frequency"):
                         if dataset[key]:

@@ -115,7 +115,8 @@ pipeline/snapshot.py            per-edition fingerprints and the month-on-month 
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site and the CSV extracts
 pipeline/orgcheck.py            finds organisation names that might be duplicates
-pipeline/aliases.py             applies reviewed organisation-name merges
+pipeline/aliases.py             applies reviewed organisation and dataset merges
+pipeline/datasetcheck.py        finds datasets the register has renamed
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
 pipeline/probe.py               field-level diff between two editions (diagnostic)
 pipeline/templates/             Jinja2 templates
@@ -124,6 +125,7 @@ data/raw/                       downloaded workbooks (gitignored)
 data/editions/                  committed extracts, and the manifest
 data/snapshots/                 committed edition fingerprints
 data/organisation-aliases.json  reviewed organisation-name merges
+data/dataset-aliases.json       reviewed dataset-name merges
 docs/manual-updates.md          the monthly routine
 docs/organisation-names.md      reviewing and merging organisation names
 docs/plan-*.md                  design notes, accepted and proposed

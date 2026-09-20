@@ -38,7 +38,12 @@ SNAPSHOT_ROOT = Path(__file__).resolve().parent.parent / "data" / "snapshots"
 # `rehydrate` cannot repair a stored extract — re-splitting an already-split
 # list can divide it further but never put it back together — so the fix only
 # lands on a re-ingest, and this makes a half-applied archive say so.
-FINGERPRINT_VERSION = 4
+#
+# v5 is the same kind of fix, one case wider: names like "NHS Bristol, North
+# Somerset and South Gloucestershire ICB - 15C" were being cut at their own
+# comma, which invented eight organisations and produced most of orgcheck's
+# outstanding candidates. It too needs a re-ingest to take effect.
+FINGERPRINT_VERSION = 5
 
 # Fields whose change we consider a substantive amendment to an agreement.
 FINGERPRINTED = (

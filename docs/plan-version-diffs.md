@@ -891,20 +891,68 @@ on a register of roughly 1,450 agreements. Most agreements in the
 register were restated more than once in those four months.
 
 These counts are already normalised, so unlike March 2026 they are not
-typography. That leaves two possibilities, and the archive cannot yet
-distinguish them: a relabelling of the October 2025 kind, which
-normalisation does not catch and only the alias map can, or a genuine
-mass revision. The probe answers it for any pair in minutes:
+typography. The probe has since been run over the largest pair, and
+the answer is the same shape as October 2025.
 
-```bash
-.venv/bin/python -m pipeline.probe \
-    data/raw/datausesregister_december2022.xlsx \
-    data/raw/datausesregister_january2023.xlsx --transitions 20
+### January 2023 was a dataset relabelling
+
+2,455 amendments, and every one is a dataset name gaining its acronym:
+
+```
+  Hospital Episode Statistics Admitted Patient Care
+    -> Hospital Episode Statistics Admitted Patient Care (HES APC)
+  Civil Registration - Deaths
+    -> Civil Registrations of Death
+  GPES Data for Pandemic Planning and Research (COVID-19)
+    -> COVID-19 General Practice Extraction Service (GPES) Data for
+       Pandemic Planning and Research (GDPPR)
 ```
 
-If January 2023 is one organisation renaming itself, `--renames` will
-offer it as a single alias and 2,455 amendments will resolve to one
-decision. That is the most valuable thing left to run.
+Nothing changed hands, no dataset was added to an agreement, and no
+purpose was rewritten. NHS England restyled its dataset names and the
+site recorded it as the largest event in the register's history —
+three quarters of five years of amendments, from one editorial pass.
+
+So the pattern established in §9 for organisations holds for datasets
+too, and more strongly. Of the five largest amendment events in the
+archive, four are now known to be editorial: March 2026 typography,
+October 2025 organisation relabelling, January 2023 dataset
+relabelling, and by inspection the October–December 2022 editions
+leading into it, which show the same dataset transitions part-applied.
+
+**This changed the tool, not just the conclusion.** The probe first
+reported January 2023 as "193 distinct changes", because it tallied
+whole-set transitions: the same twenty-odd renames appeared once per
+distinct combination of datasets an agreement happened to hold. Renames
+are now found per name, and the same edition reads as roughly twenty
+renames with nothing else.
+
+Finding them cannot be done by comparing how alike two names look.
+"Mental Health Minimum Data Set" and "Mental Health Services Data Set"
+are 79% alike and are different datasets; the GPES pair above is 62%
+alike and is one. What separates them is behaviour: a renamed dataset
+disappears from the edition entirely while something else appears on
+exactly the agreements it used to be on, whereas two datasets that
+merely read alike both carry on existing.
+
+### Datasets need the alias treatment organisations have
+
+`data/organisation-aliases.json` and `orgcheck --renames` exist because
+organisations get relabelled. Datasets get relabelled more, and they
+have none of that machinery. Nothing records that "Civil Registration
+- Deaths" and "Civil Registrations of Death" are one dataset, entitled
+to one page and one history.
+
+The same three pieces would do it — an alias file, resolution at build
+time, and a reviewed workflow fed by the rename detection that now
+exists. The evidence for each candidate is stronger than for
+organisations, because a dataset rename shows up as a clean
+disappearance-and-appearance across hundreds of agreements at once
+rather than as two similar strings sitting side by side.
+
+Until that exists, the register's dataset pages silently split a
+dataset's history at each rename, and any count of "agreements using
+HES APC" covers only the editions since it was called that.
 
 ### A gap in the archive
 
