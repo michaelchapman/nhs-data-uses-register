@@ -122,6 +122,13 @@ def compute_stats(data: dict, as_of: str) -> dict:
         "organisations": len(data["organisations"]),
         "datasets": len(data["datasets"]),
         "files_released": sum(a["files_released"] for a in agreements),
+        # Release history runs years earlier than the editions held, so the
+        # About page names both starts rather than implying one span.
+        "first_release_month": min(
+            (r["first_month"] for a in agreements for v in a["versions"]
+             for r in v["releases"] if r["first_month"]),
+            default="",
+        ),
         "commercial": sum(1 for a in agreements if a["commercial"] == "Yes"),
         "sublicensing": sum(1 for a in agreements if a["sublicensing"] == "Yes"),
         "joint_controller": sum(

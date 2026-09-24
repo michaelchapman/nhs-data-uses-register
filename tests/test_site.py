@@ -244,3 +244,53 @@ class OrganisationNames(unittest.TestCase):
             slug = "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c"
             page = (out / "organisations" / slug / "index.html").read_text()
         self.assertNotIn("writes this name in capitals", page)
+
+
+class ReleaseWording(unittest.TestCase):
+    """What a file release does and does not show, per docs/plan-release-coverage.md §5."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.out = Path(cls.directory.name)
+        with dataset_aliases():
+            data = extract(workbook_bytes())
+            by_slug = {a["slug"]: a for a in data["agreements"]}
+            # One agreement whose files all went out under an earlier version,
+            # and one with none at all that permits sublicensing.
+            earlier = by_slug["dars-nic-1-aaaaa"]
+            earlier["latest"]["releases"] = []
+            earlier["latest"]["files_released"] = 0
+            earlier["files_released"] = sum(v["files_released"] for v in earlier["versions"])
+            none = by_slug["dars-nic-2-bbbbb"]
+            none["latest"]["releases"] = []
+            none["latest"]["files_released"] = 0
+            none["latest"]["sublicensing"] = "Yes"
+            none["files_released"] = 0
+            build.build(data, site_meta(), FIRST_EDITION, cls.out)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def page(self, path):
+        return (self.out / path / "index.html").read_text()
+
+    def test_no_files_is_not_said_to_mean_no_data_shared(self):
+        page = self.page("agreements/dars-nic-2-bbbbb")
+        self.assertIn("No files recorded as released under this agreement.", page)
+        self.assertIn("/about/#file-releases", page)
+
+    def test_files_released_under_earlier_versions_are_pointed_to(self):
+        page = self.page("agreements/dars-nic-1-aaaaa")
+        self.assertIn("No files recorded as released under the current version. 3 were released", page)
+
+    def test_sublicensing_says_onward_sharing_is_not_recorded(self):
+        self.assertIn("permits sublicensing", self.page("agreements/dars-nic-2-bbbbb"))
+        self.assertNotIn("permits sublicensing", self.page("agreements/dars-nic-1-aaaaa"))
+
+    def test_about_page_does_not_treat_files_as_everything_that_moved(self):
+        page = self.page("about")
+        self.assertNotIn("better sense of what actually moved", page)
+        self.assertIn('id="file-releases"', page)
+        self.assertIn("File releases are recorded from January 2020.", page)
