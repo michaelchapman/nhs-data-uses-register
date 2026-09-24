@@ -172,6 +172,6 @@ last.
 
 1. **Store the release record of §4,** with `channel` and file grain. *Done.*
 2. Carry the wording of §5 into the templates when the release views are built
-   — see [plan-facts-store.md](plan-facts-store.md) §"What more could be done".
+   — the views listed in the status note at the top of this plan.
 3. Label the February 2023 discontinuity on the changes pages.
 4. Ask NHS England the question in §2, and record the answer here.

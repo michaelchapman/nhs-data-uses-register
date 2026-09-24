@@ -384,6 +384,11 @@ stated point of the project.
 
 ## 5. Suggested sequencing
 
+Superseded: this is the sequencing as it stood when written. The status table
+at the top of this plan is the current state. The archive was since parsed
+whole into the facts store, all 63 editions, so the re-ingests below no longer
+apply.
+
 | Step | State | Value |
 | --- | --- | --- |
 | Verify the local workbook set against the manifest ([§6](#6-backfilling-the-archive)) | done | Precondition |
