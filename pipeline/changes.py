@@ -83,6 +83,73 @@ def _material(difference: dict | None) -> bool:
     return bool(difference["scalars"] or difference["lists"] or difference["prose"])
 
 
+# How many agreements one edition must reword the same way before the site
+# reports it once, as a register-wide edit, instead of once per agreement.
+# Across the archive only December 2022 reaches it: "s261(1) and" taken out of
+# the legal basis cited for datasets on 639 agreements, accounting for 1,191 of
+# that edition's 1,192 amended versions. The next largest rewording in any
+# edition touches fewer than 20.
+WIDE_EDIT_AGREEMENTS = 50
+
+# Values longer than this are shown by the words that changed, not in full.
+LONG_VALUE = 60
+
+
+def _details(difference: dict, redlines: bool = False) -> list[dict]:
+    """What an amendment changed, for a reader: values, rewordings, lists and prose.
+
+    A short value is shown before and after. A long one that was reworded
+    rather than replaced — a legal basis with one clause taken out — is shown
+    by the words that changed, which is what a reader is looking for in it.
+    Prose carries its redline only with `redlines`, for an agreement's own
+    page; a changes page lists hundreds and names the field.
+    """
+    found = []
+    for item in difference["scalars"]:
+        edits, kept = compare.word_edits(item["before"], item["after"])
+        if kept and edits and max(len(item["before"]), len(item["after"])) > LONG_VALUE:
+            found.append({"label": item["label"], "kind": "edit",
+                          "edits": [{"removed": r, "added": a} for r, a in edits]})
+        else:
+            found.append({"label": item["label"], "kind": "value", "before": item["before"], "after": item["after"]})
+    for item in difference["lists"]:
+        found.append({"label": item["label"], "kind": "list", "added": item["added"], "removed": item["removed"]})
+    for item in difference["prose"]:
+        found.append({"label": item["label"], "kind": "prose", "filled_in": item["filled_in"],
+                      "blocks": item["blocks"] if redlines else None, "text": item["text"] if redlines else ""})
+    return found
+
+
+def _field(item: dict) -> str:
+    """The field a change is to: "Datasets: legal basis" for any dataset's legal basis."""
+    if item.get("group"):
+        return f"{item['group']}: {item['label'].rsplit(': ', 1)[-1]}"
+    return item["label"]
+
+
+def _partial_edits(difference: dict) -> list[tuple[str, str, str]]:
+    """`(field, removed, added)` for every rewording of part of a short field."""
+    found = []
+    for item in difference["scalars"]:
+        edits, kept = compare.word_edits(item["before"], item["after"])
+        if kept:
+            found += [(_field(item),) + edit for edit in edits]
+    return found
+
+
+def _only_rewordings(difference: dict) -> list[tuple[str, str, str]] | None:
+    """The rewordings, if rewording parts of fields is all a difference does; else None."""
+    if difference["lists"] or difference["prose"]:
+        return None
+    edits = []
+    for item in difference["scalars"]:
+        found, kept = compare.word_edits(item["before"], item["after"])
+        if not kept or not found:
+            return None
+        edits += [(_field(item),) + edit for edit in found]
+    return edits
+
+
 def _labels(difference: dict) -> list[str]:
     labels = [item.get("group", item["label"]) for item in difference["scalars"]]
     labels += [item["label"] for item in difference["lists"]]
@@ -147,7 +214,7 @@ def diff(
     if previous_edition is None:
         return {
             "comparable": False, "reason": "first-edition", "previous_edition": None,
-            "skipped": [], "added": [], "amended": [], "removed": [],
+            "skipped": [], "added": [], "amended": [], "removed": [], "wide_edits": [], "wide_ops": {},
         }
 
     if alias_map is None:
@@ -186,16 +253,34 @@ def diff(
             # not a brand new data release.
             "kind": "renewal" if base in old_bases else "new",
         })
+    found = []
     for reference in candidates:
         was, is_now = state_of(reference, before), state_of(reference, now)
         if was is None or is_now is None:
             continue
         difference = compare.compare_versions(was, is_now, alias_map, organisation_aliases, organisation_lineage)
         if _material(difference):
-            amended.append({
-                "reference": reference, "base": _base_and_version(reference)[0],
-                **_describe(is_now, organisation(reference, now)), "fields": _labels(difference),
-            })
+            found.append((reference, is_now, difference))
+
+    # The same rewording on enough agreements at once is one edit to the
+    # register, reported once: see WIDE_EDIT_AGREEMENTS.
+    reworded: dict[tuple, set[str]] = {}
+    for reference, _, difference in found:
+        for edit in _partial_edits(difference):
+            reworded.setdefault(edit, set()).add(_base_and_version(reference)[0])
+    wide_ops = {edit: len(bases) for edit, bases in reworded.items() if len(bases) >= WIDE_EDIT_AGREEMENTS}
+    wide: dict[tuple, list[dict]] = {}
+    for reference, is_now, difference in found:
+        item = {
+            "reference": reference, "base": _base_and_version(reference)[0],
+            **_describe(is_now, organisation(reference, now)),
+            "fields": _labels(difference), "details": _details(difference),
+        }
+        edits = _only_rewordings(difference)
+        if edits and all(edit in wide_ops for edit in edits):
+            wide.setdefault(tuple(sorted(set(edits))), []).append(item)
+        else:
+            amended.append(item)
     for reference in gone_refs:
         state = state_of(reference, before)
         removed.append({
@@ -204,6 +289,17 @@ def diff(
         })
 
     order = lambda item: (item["org"].lower(), item["reference"])
+    wide_edits = sorted(
+        (
+            {
+                "edits": [{"field": field, "removed": gone, "added": came} for field, gone, came in edits],
+                "agreements": len({item["base"] for item in items}),
+                "versions": sorted(items, key=order),
+            }
+            for edits, items in wide.items()
+        ),
+        key=lambda w: -len(w["versions"]),
+    )
     return {
         "comparable": True,
         "previous_edition": previous_edition,
@@ -211,10 +307,18 @@ def diff(
         "added": sorted(added, key=order),
         "amended": sorted(amended, key=order),
         "removed": sorted(removed, key=order),
+        "wide_edits": wide_edits,
+        # For `history`, which reads one agreement at a time and so cannot
+        # count across an edition itself.
+        "wide_ops": wide_ops,
     }
 
 
-def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict[str, dict]:
+def history(
+    register_slug: str,
+    alias_map: dict[str, str] | None = None,
+    wide: dict[str, dict[tuple, int]] | None = None,
+) -> dict[str, dict]:
     """When each agreement and each of its versions appeared or changed.
 
     `{base_reference: {"first_edition", "first_is_earliest", "events"}}`, with
@@ -225,7 +329,12 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
 
     An agreement present in the earliest edition held may well be older than
     that, so `first_is_earliest` marks the ones whose start we cannot see.
+
+    `wide` is `{edition: {rewording: agreements}}`, the register-wide edits
+    `diff` found in each edition. An amendment that is only those is recorded
+    under `wide`, not `amended`.
     """
+    wide = wide or {}
     editions = facts.stored_editions(register_slug)
     if not editions:
         return {}
@@ -274,9 +383,10 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         for event in events:
             entry = by_edition.setdefault(event["edition"], {
                 "edition": event["edition"], "skipped": event["skipped"],
-                "added": [], "amended": [], "removed": [], "fields": [], "reorganised": [],
+                "added": [], "amended": [], "removed": [], "fields": [], "reorganised": [], "wide": [],
             })
             fields: list[str] = []
+            details: list[dict] = []
             if event["kind"] == "amended":
                 version = states.get(event["reference"], [])
                 if event["from"] < len(version) and event["to"] < len(version):
@@ -297,13 +407,29 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
                             if item["label"] != "Organisation type" and pair not in entry["reorganised"]:
                                 entry["reorganised"].append(pair)
                         continue
+                    edits = _only_rewordings(difference)
+                    in_edition = wide.get(event["edition"], {})
+                    if edits and all(edit in in_edition for edit in edits):
+                        entry["wide"].append({
+                            "reference": event["reference"],
+                            "edits": [{"field": f, "removed": r, "added": a} for f, r, a in sorted(set(edits))],
+                            "agreements": max(in_edition[edit] for edit in edits),
+                        })
+                        continue
                     fields = _labels(difference)
-            entry[event["kind"]].append({"reference": event["reference"], "fields": fields})
+                    details = _details(difference, redlines=True)
+            entry[event["kind"]].append({"reference": event["reference"], "fields": fields, "details": details})
         for entry in by_edition.values():
             for kind in ("added", "amended", "removed"):
                 entry[kind].sort(key=lambda item: item["reference"])
-            if not (entry["added"] or entry["amended"] or entry["removed"] or entry["reorganised"]):
+            if not (entry["added"] or entry["amended"] or entry["removed"] or entry["reorganised"] or entry["wide"]):
                 continue
+            # One line per register-wide edit, naming every version it touched.
+            merged: dict[tuple, dict] = {}
+            for item in entry["wide"]:
+                key = tuple((e["field"], e["removed"], e["added"]) for e in item["edits"])
+                merged.setdefault(key, {**item, "references": []})["references"].append(item["reference"])
+            entry["wide"] = list(merged.values())
             # The union across the edition's amendments, for a one-line summary
             # when several versions were restated together.
             entry["fields"] = sorted({f for item in entry["amended"] for f in item["fields"]})
@@ -318,7 +444,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         # does not print the same edition twice. An edition that also amended
         # or removed something is left alone: it has more to say.
         first = [e for e in entry["events"] if e["edition"] == entry["first_edition"]]
-        if first and not (first[0]["amended"] or first[0]["removed"] or first[0]["reorganised"]):
+        if first and not (first[0]["amended"] or first[0]["removed"] or first[0]["reorganised"] or first[0]["wide"]):
             entry["first_versions"] = [item["reference"] for item in first[0]["added"]]
             entry["events"].remove(first[0])
         else:

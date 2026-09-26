@@ -11,7 +11,7 @@ reasoning that led there is in it.
 | R1 per-agreement edition timeline | shipped |
 | R2 per-field digests, so amendments name the fields that moved | shipped, then superseded: amendments are now derived from stored text at build time (`pipeline/changes.py`), so there are no digests or rule versions |
 | R4 redlines between versions of an agreement | shipped (`pipeline/compare.py`) |
-| R3 amendment log, R7 stored values for short fields | not started: the site can say *which* fields an edition changed in place, not their old and new text |
+| R3 amendment log, R7 stored values for short fields | superseded and shipped: the facts store holds every edition's text, so each in-place amendment shows its old and new values; see §12 |
 | R5 vocabulary for in-place amendments, R6 machine-readable change outputs | not started |
 | §9 item 1: resolve organisation names through the aliases before calling something an amendment | shipped; see §11 |
 | CCG to ICB successions, labelled from NHS ODS | planned in [plan-organisation-changes.md](plan-organisation-changes.md) |
@@ -1061,4 +1061,40 @@ not name matching. That needs:
    removed name's successor is among the added names;
 3. wording for it on the agreement page, and a note on organisation pages that
    a CCG's agreements continued under its successor.
+
+## 12. What an amendment changed, and register-wide edits
+
+Every in-place amendment now says what changed, not only which field, on the
+changes pages and on each agreement's timeline:
+
+- a short value before and after ("End date: 31 May 2022 → 30 November 2022");
+- a long value that was reworded rather than replaced, by the words that
+  changed ("legal basis: “s261(1) and” taken out");
+- a list by what was added and removed;
+- prose as "reworded", with the redline on the agreement's own page.
+
+This needed no stored log. The facts store holds each edition's text, so the
+values are read at build time, which is what R7 argued for.
+
+**Register-wide edits.** December 2022 held 1,192 of the 1,663 amendments
+left after the renames and successions of §11 and
+[plan-organisation-changes.md](plan-organisation-changes.md), nearly all of
+them one rewording: "s261(1) and" taken out of the legal basis cited for
+datasets on 639 agreements. It is a real change of wording, so it is not
+hidden. It is reported once, as one register-wide edit: the same rewording of
+part of a field, made to at least 50 agreements in one edition
+(`changes.WIDE_EDIT_AGREEMENTS`). The changes page gives it its own section,
+listing the versions it touched. Each agreement's timeline notes it without
+counting it as an amendment. A version with any other change stays an
+amendment, with the rewording among its changes.
+
+Across all 62 edition pairs the rule matches only December 2022, where it
+covers 1,191 of 1,192 amended versions. Bulk changes that are not rewordings
+stay amendments: 81 agreements gaining the HES-ID to MPS-ID datasets in October
+2021, and 34 end dates extended in July 2022.
+
+| | Before | After |
+| --- | ---: | ---: |
+| Amendments across the archive | 1,663 | **472** |
+| December 2022 | 1,192 | 1, plus one register-wide edit |
 

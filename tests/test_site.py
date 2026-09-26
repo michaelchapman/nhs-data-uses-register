@@ -465,3 +465,24 @@ class ArchivedAgreements(unittest.TestCase):
     def test_links_stay_whole(self):
         broken, _ = linkcheck.check(self.out)
         self.assertFalse(broken)
+
+
+class ChangeDetails(unittest.TestCase):
+    def test_the_changes_page_shows_what_changed_and_register_wide_edits_once(self):
+        amended = [{"base": "DARS-NIC-1-AAAAA", "reference": "DARS-NIC-1-AAAAA-v2", "title": "Maternity study",
+                    "org": "UNIVERSITY OF EXAMPLE", "fields": ["End date"],
+                    "details": [{"label": "End date", "kind": "value", "before": "2030-01-01", "after": "2031-06-01"}]}]
+        wide = [{"edits": [{"field": "Datasets: legal basis", "removed": "s261(1) and", "added": ""}],
+                 "agreements": 639, "versions": [{**amended[0], "reference": "DARS-NIC-1-AAAAA-v1"}]}]
+        changes = {**FIRST_EDITION, "comparable": True, "reason": "", "skipped": [],
+                   "previous_edition": "august2026", "amended": amended, "wide_edits": wide}
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            with dataset_aliases():
+                build.build(extract(workbook_bytes()), site_meta(), changes, out)
+            page = (out / "changes" / "index.html").read_text()
+        self.assertIn("<del>1 January 2030</del> → <ins>1 June 2031</ins>", page)
+        self.assertIn('id="register-wide"', page)
+        self.assertIn("Datasets: legal basis: “<del>s261(1) and</del>” taken out", page)
+        self.assertIn("across 639 agreements", page)
+        self.assertIn('<span class="stat-number">1</span><span class="stat-label">register-wide edit</span>', page)

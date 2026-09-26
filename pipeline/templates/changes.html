@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}What changed — {{ meta.site_name }}{% endblock %}
 {% block description %}Agreements added, amended and removed between editions of the NHS England Data Uses Register.{% endblock %}
+{% from "_change_details.html" import change_details, wide_edit %}
 {% macro rows(items, show_kind=false, show_fields=false) %}
 <div class="table-scroll">
 <table class="data-table">
@@ -16,7 +17,7 @@
       <td>{{ item.org|org }}</td>
       <td class="ref-cell">{{ item.reference }}</td>
       {% if show_kind %}<td>{{ "New agreement" if item.kind == "new" else "New version of an existing agreement" }}</td>{% endif %}
-      {% if show_fields %}<td>{% if item.fields %}{{ item.fields|join(", ") }}{% else %}<span class="hint">Not recorded for this edition</span>{% endif %}</td>{% endif %}
+      {% if show_fields %}<td>{% if item.details %}{{ change_details(item.details) }}{% elif item.fields %}{{ item.fields|join(", ") }}{% else %}<span class="hint">Not recorded for this edition</span>{% endif %}</td>{% endif %}
     </tr>
   {% endfor %}
   </tbody>
@@ -47,6 +48,7 @@
   <div class="stat"><span class="stat-number">{{ changes.added|length|commas }}</span><span class="stat-label">added</span></div>
   <div class="stat"><span class="stat-number">{{ changes.amended|length|commas }}</span><span class="stat-label">amended</span></div>
   <div class="stat"><span class="stat-number">{{ changes.removed|length|commas }}</span><span class="stat-label">no longer listed</span></div>
+  {% if changes.wide_edits %}<div class="stat"><span class="stat-number">{{ changes.wide_edits|length|commas }}</span><span class="stat-label">register-wide edit{{ "s" if changes.wide_edits|length != 1 }}</span></div>{% endif %}
 </div>
 
 <h2 id="added">Added ({{ changes.added|length|commas }})</h2>
@@ -64,6 +66,20 @@
 {% endif %}
 {{ rows(changes.amended, show_fields=true) }}
 {% else %}<p class="empty">Nothing amended.</p>{% endif %}
+
+{% if changes.wide_edits %}
+<h2 id="register-wide">Register-wide edits ({{ changes.wide_edits|length|commas }})</h2>
+<p>The same rewording, made to many agreements in one edition. Each is one edit to the register, so it is reported here once rather than as an amendment of every agreement it touched. A version with any other change is listed under Amended instead, with this edit among its changes.</p>
+{% for w in changes.wide_edits %}
+<div class="notice">
+  <p><strong>{{ wide_edit(w.edits) }}</strong></p>
+  <p>Made to {{ w.versions|length|commas }} agreement version{{ "s" if w.versions|length != 1 }} across {{ w.agreements|commas }} agreement{{ "s" if w.agreements != 1 }}. The register does not say why.</p>
+  <details class="prose-block"><summary>Show the agreement versions</summary>
+  {{ rows(w.versions) }}
+  </details>
+</div>
+{% endfor %}
+{% endif %}
 
 <h2 id="removed">No longer listed ({{ changes.removed|length|commas }})</h2>
 {% if changes.removed %}

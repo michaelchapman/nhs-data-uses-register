@@ -109,7 +109,7 @@ def main() -> None:
     else:
         changes = {
             "comparable": False, "reason": "not-ingested", "previous_edition": None,
-            "skipped": [], "added": [], "amended": [], "removed": [],
+            "skipped": [], "added": [], "amended": [], "removed": [], "wide_edits": [], "wide_ops": {},
         }
     if changes["comparable"]:
         print(
@@ -162,7 +162,9 @@ def main() -> None:
     }
 
     # An agreement's history reaches back over every edition the store holds.
-    history = changes_module.history(register.slug)
+    history = changes_module.history(
+        register.slug, wide={entry["edition"]: entry["wide_ops"] for entry in changes_history}
+    )
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history
     )
