@@ -255,6 +255,9 @@ def build(
     stats = compute_stats(data, meta["as_of"])
     downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     by_slug = {a["slug"]: a for a in data["agreements"]}
+    # Agreements earlier editions listed and this one does not: pages of their
+    # own, and never in a count. See `facts.read_archive`.
+    archived = data.get("archived", [])
 
     # Attach change status to agreements so detail pages can flag recent activity.
     changed_refs = {
@@ -291,10 +294,12 @@ def build(
         data["organisations"], key=lambda o: (-o["agreement_count"], o["name"].lower())
     )[:15]
     render("index.html", "index.html", agreements=data["agreements"], top_organisations=top_organisations)
-    render("agreements.html", "agreements/index.html", agreements=data["agreements"])
+    render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
+           org_slugs={o["slug"] for o in data["organisations"]})
     render("organisations.html", "organisations/index.html", organisations=data["organisations"])
     render("datasets.html", "datasets/index.html", datasets=data["datasets"])
-    changes_by_slug = {a["base_reference"]: a for a in data["agreements"]}
+    # An agreement no longer listed still has its page, so a row about it links.
+    changes_by_slug = {a["base_reference"]: a for a in archived + data["agreements"]}
     render("changes.html", "changes/index.html", by_slug=changes_by_slug)
     # A same-shaped page for every earlier edition pair, so "what changed" isn't
     # limited to the current edition — the facts store holds every edition
@@ -318,21 +323,28 @@ def build(
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     organisation_lineage = lineage.load()
-    for agreement in data["agreements"]:
+    for agreement in data["agreements"] + archived:
         render(
             "agreement.html",
             f"agreements/{agreement['slug']}/index.html",
             agreement=agreement,
             change_status={v["reference"]: changed_refs.get(v["reference"]) for v in agreement["versions"]},
             org_slugs=org_slugs,
+            # An agreement no longer listed can name a dataset no listed
+            # agreement does, which has no page.
+            dataset_slugs={d["slug"] for d in data["datasets"]},
             history=(history or {}).get(agreement["base_reference"]),
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
         )
+    archived_by_organisation: dict[str, list[dict]] = {}
+    for agreement in archived:
+        archived_by_organisation.setdefault(agreement["organisation_slug"], []).append(agreement)
     for organisation in data["organisations"]:
         render(
             "organisation.html",
             f"organisations/{organisation['slug']}/index.html",
             organisation=organisation,
+            archived=archived_by_organisation.get(organisation["slug"], []),
         )
     for dataset in data["datasets"]:
         render("dataset.html", f"datasets/{dataset['slug']}/index.html", dataset=dataset)
@@ -341,7 +353,7 @@ def build(
     (out / ".nojekyll").write_text("")
     _write(out, "meta.json", json.dumps({**meta, "stats": stats}, indent=1))
     _write(out, "sitemap.xml", env.get_template("sitemap.xml").render(
-        **context, agreements=data["agreements"],
+        **context, agreements=data["agreements"] + archived,
         organisations=data["organisations"], datasets=data["datasets"],
     ))
     _write(out, "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {meta['site_url']}/sitemap.xml\n")

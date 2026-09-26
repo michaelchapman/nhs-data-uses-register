@@ -391,3 +391,51 @@ class Exclusions(unittest.TestCase):
             self.assertNotIn("DARS-NIC-2-BBBBB", (out / "downloads" / "agreements.csv").read_text())
             self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
                           (out / "index.html").read_text())
+
+
+class ArchivedAgreements(unittest.TestCase):
+    """Agreements no longer in the register keep their pages, outside every count."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.out = Path(cls.directory.name)
+        with dataset_aliases():
+            data = extract(workbook_bytes())
+            left = next(a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-2-BBBBB")
+            data["agreements"].remove(left)
+            left["archived"] = {"last_edition": "january2023", "next_edition": "february2023"}
+            data["archived"] = [left]
+            removed = [{"base": "DARS-NIC-2-BBBBB", "reference": "DARS-NIC-2-BBBBB-v1",
+                        "title": "Ambulance study", "org": left["organisation"]}]
+            changes = {**FIRST_EDITION, "comparable": True, "reason": "", "skipped": [],
+                       "previous_edition": "august2026", "removed": removed}
+            build.build(data, site_meta(), changes, cls.out)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def read(self, path):
+        return (self.out / path / "index.html").read_text()
+
+    def test_the_page_says_it_is_no_longer_listed_and_why_it_most_likely_left(self):
+        page = self.read("agreements/dars-nic-2-bbbbb")
+        self.assertIn("No longer in the register.", page)
+        self.assertIn("last published in the January 2023 edition", page)
+        self.assertIn("most likely moved rather than ended", page)
+        self.assertIn("Latest version", page)
+
+    def test_it_is_listed_apart_and_not_counted(self):
+        listing = self.read("agreements")
+        self.assertIn("No longer in the register (1)", listing)
+        self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
+                      self.read(""))
+        self.assertNotIn("DARS-NIC-2-BBBBB", (self.out / "downloads" / "agreements.csv").read_text())
+
+    def test_the_changes_page_links_to_it(self):
+        self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', self.read("changes"))
+
+    def test_links_stay_whole(self):
+        broken, _ = linkcheck.check(self.out)
+        self.assertFalse(broken)

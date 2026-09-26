@@ -55,6 +55,11 @@ def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
             "See docs/manual-updates.md."
         )
     data = facts.read_extract(register.slug, edition)
+    # Agreements and versions earlier editions listed and this one does not,
+    # so a page once published keeps its URL. See `facts.read_archive`.
+    data["archived"], dropped = facts.read_archive(register.slug, edition)
+    for agreement in data["agreements"]:
+        agreement["dropped_versions"] = dropped.get(agreement["base_reference"], [])
     entry = facts.manifest_entry(register.slug, edition) or {}
     return data, edition, entry
 

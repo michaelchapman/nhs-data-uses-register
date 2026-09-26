@@ -79,13 +79,19 @@
   </ol>
 </nav>
 
+{% set now = "latest" if agreement.archived else "current" %}
 <h1>{{ agreement.title or agreement.base_reference }}</h1>
-<p class="lede"><a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+{% if agreement.archived %}
+<p class="notice"><strong>No longer in the register.</strong> This agreement was last published in the {{ agreement.archived.last_edition|edition }} edition{% if agreement.archived.next_edition %} and was not in the {{ agreement.archived.next_edition|edition }} edition{% endif %}.
+  {% if agreement.archived.next_edition == merger_edition %}NHS Digital merged into NHS England on 1 February 2023, and agreements within the merged organisation moved to a separate internal register, so this agreement most likely moved rather than ended.{% else %}The register does not say why an agreement leaves it.{% endif %}
+  This page shows what the register last said, and it is not counted in this site's figures.</p>
+{% endif %}
+<p class="lede">{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
 
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
-  <div><dt>Current version</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>
-  <div><dt>Term of current version</dt><dd>{{ v.start_date|date }} to {{ v.end_date|date }}</dd></div>
+  <div><dt>{{ now|capitalize }} version</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>
+  <div><dt>Term of {{ now }} version</dt><dd>{{ v.start_date|date }} to {{ v.end_date|date }}</dd></div>
   <div><dt>Start date</dt><dd>{{ "Before " if not agreement.first_start_known else "" }}{{ agreement.first_start|date }}</dd></div>
   <div><dt>Data controller</dt><dd>{{ v.controller_basis or "Not stated" }}</dd></div>
   <div><dt>Commercial purposes</dt><dd>{{ v.commercial or "Not stated" }}</dd></div>
@@ -121,7 +127,7 @@
 </details>
 {% endfor %}
 
-<h2 id="datasets">Datasets on the current version</h2>
+<h2 id="datasets">Datasets on the {{ now }} version</h2>
 {% if v.datasets %}
 {% set legal_bases = v.datasets|map(attribute='legal_basis')|select|unique|list %}
 <p class="hint"><strong>Legal basis for provision:</strong> {{ legal_bases|join("; ") if legal_bases else "Not stated" }}</p>
@@ -135,7 +141,7 @@
   <tbody>
   {% for d in v.datasets %}
     <tr>
-      <th scope="row"><a href="{{ meta.base_path }}/datasets/{{ d.name|dataset_slug }}/">{{ d.name }}</a></th>
+      <th scope="row">{% if d.name|dataset_slug in dataset_slugs %}<a href="{{ meta.base_path }}/datasets/{{ d.name|dataset_slug }}/">{{ d.name }}</a>{% else %}{{ d.name }}{% endif %}</th>
       <td>{{ d.type_of_data or "—" }}</td>
       <td>{{ d.sensitivity or "—" }}</td>
       <td>{{ d.frequency or "—" }}</td>
@@ -146,7 +152,7 @@
 </table>
 </div>
 {% else %}
-<p class="empty">No datasets are listed against the current version in the register.</p>
+<p class="empty">No datasets are listed against the {{ now }} version in the register.</p>
 {% endif %}
 
 <h2 id="releases">Files released</h2>
@@ -170,7 +176,7 @@
 </div>
 {% else %}
 {% if agreement.files_released %}
-<p class="empty">No files recorded as released under the current version. {{ agreement.files_released|commas }} {{ "was" if agreement.files_released == 1 else "were" }} released under earlier versions, shown in the <a href="#history">version history</a>.</p>
+<p class="empty">No files recorded as released under the {{ now }} version. {{ agreement.files_released|commas }} {{ "was" if agreement.files_released == 1 else "were" }} released under earlier versions, shown in the <a href="#history">version history</a>.</p>
 {% else %}
 <p class="empty">No files recorded as released under this agreement.</p>
 {% endif %}
@@ -214,6 +220,28 @@
   {% endif %}
 </details>
 {% endfor %}
+{% if agreement.dropped_versions %}
+<h3 id="no-longer-listed">Versions no longer in the register</h3>
+<p>Earlier editions listed {{ "this version" if agreement.dropped_versions|length == 1 else "these versions" }} of the agreement; the {{ meta.edition|edition }} edition does not. Each is shown as last published, and none is counted in this page's figures.</p>
+{% for version in agreement.dropped_versions %}
+<details class="version">
+  <summary>
+    <span class="version-ref">{{ version.reference }}</span>
+    <span class="version-term">{{ version.start_date|date }} to {{ version.end_date|date }}</span>
+    <span class="tag">Last listed {{ version.last_edition|edition }}</span>
+  </summary>
+  <dl class="key-facts compact">
+    <div><dt>Title</dt><dd>{{ version.title or "—" }}</dd></div>
+    <div><dt>Applicant</dt><dd>{{ version.organisation|org }}</dd></div>
+    <div><dt>Datasets</dt><dd>{{ version.datasets|length }}</dd></div>
+    <div><dt>Files released</dt><dd>{{ version.files_released|commas }}</dd></div>
+  </dl>
+  {% if version.datasets %}
+  <p class="dataset-line"><strong>Datasets:</strong> {{ version.datasets|map(attribute='name')|join('; ') }}</p>
+  {% endif %}
+</details>
+{% endfor %}
+{% endif %}
 
 <h2 id="register-history">Register history</h2>
 {% if history %}

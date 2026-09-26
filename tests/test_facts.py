@@ -37,6 +37,46 @@ class Store(unittest.TestCase):
         changed[base][index].update(fields)
         return changed
 
+    # The archive
+
+    def test_an_agreement_that_left_is_read_from_the_last_edition_that_listed_it(self):
+        gone = copy.deepcopy(self.versions)
+        del gone[SECOND]
+        facts.append_edition(REGISTER, "july2026", self.versions)
+        facts.append_edition(REGISTER, "august2026", self.edited(SECOND, 0, title="Renamed study"))
+        facts.append_edition(REGISTER, "september2026", gone)
+        archived, dropped = facts.read_archive(REGISTER, "september2026")
+        self.assertEqual([a["base_reference"] for a in archived], [SECOND])
+        self.assertEqual(archived[0]["title"], "Renamed study")
+        self.assertEqual(archived[0]["archived"], {"last_edition": "august2026", "next_edition": "september2026"})
+        self.assertEqual(dropped, {})
+
+    def test_a_version_that_left_a_listed_agreement_is_a_dropped_version(self):
+        fewer = copy.deepcopy(self.versions)
+        fewer[FIRST] = fewer[FIRST][1:]
+        facts.append_edition(REGISTER, "july2026", self.versions)
+        facts.append_edition(REGISTER, "august2026", fewer)
+        archived, dropped = facts.read_archive(REGISTER, "august2026")
+        self.assertEqual(archived, [])
+        self.assertEqual([(v["reference"], v["last_edition"]) for v in dropped[FIRST]],
+                         [(self.versions[FIRST][0]["reference"], "july2026")])
+
+    def test_an_edition_as_it_was_has_no_archive_from_later_editions(self):
+        gone = copy.deepcopy(self.versions)
+        del gone[SECOND]
+        facts.append_edition(REGISTER, "july2026", self.versions)
+        facts.append_edition(REGISTER, "august2026", gone)
+        self.assertEqual(facts.read_archive(REGISTER, "july2026"), ([], {}))
+
+    def test_an_excluded_agreement_is_not_archived(self):
+        from .fixtures import exclude
+        exclude(SECOND)
+        gone = copy.deepcopy(self.versions)
+        del gone[SECOND]
+        facts.append_edition(REGISTER, "july2026", self.versions)
+        facts.append_edition(REGISTER, "august2026", gone)
+        self.assertEqual(facts.read_archive(REGISTER, "august2026")[0], [])
+
     # The record
 
     def test_reading_an_edition_back_gives_exactly_what_was_recorded(self):

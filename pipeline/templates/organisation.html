@@ -80,6 +80,8 @@
 </div>
 {% endif %}
 
+{% with intro="Agreements with " ~ (organisation.name|org) ~ " as applicant that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=false %}{% include "_archived.html" %}{% endwith %}
+
 <h2>Datasets received</h2>
 <ul class="pill-list">
   {% for name in organisation.dataset_names %}

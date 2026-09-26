@@ -67,7 +67,7 @@
 
 <h2 id="removed">No longer listed ({{ changes.removed|length|commas }})</h2>
 {% if changes.removed %}
-<p>Present in the previous edition and absent from this one. This usually means an expired agreement has been retired from the published register rather than anything being withdrawn.</p>
+<p>Present in the previous edition and absent from this one. This usually means an expired agreement has been retired from the published register rather than anything being withdrawn. An agreement that has left entirely keeps its page here, marked as no longer in the register.</p>
 {{ rows(changes.removed) }}
 {% else %}<p class="empty">Nothing removed.</p>{% endif %}
 {% endif %}
