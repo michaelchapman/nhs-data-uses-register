@@ -42,8 +42,9 @@ Four kinds of file, all under ``data/facts/<register>/``:
     counter.
 
     Each record carries the `channel` it came through, today always a physical
-    file released through DARS. The register says nothing about data accessed
-    inside a secure environment or shared onward by a recipient, so a second
+    file released externally by DARS. The register says nothing about access
+    granted in NHS England's own systems, such as its Secure Data Environment,
+    or data shared onward by a recipient, so a second
     source can be added beside these rather than merged into them. See
     ``docs/plan-release-coverage.md``.
 

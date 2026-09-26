@@ -68,6 +68,7 @@ def environment() -> Environment:
     env.filters["commas"] = lambda n: f"{n:,}"
     env.filters["slug"] = slugify
     env.filters["org"] = display_name
+    env.globals["merger_edition"] = sources.MERGER_EDITION
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     # The page a dataset name links to, whichever spelling the register used.
     env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
@@ -122,6 +123,13 @@ def compute_stats(data: dict, as_of: str) -> dict:
         "organisations": len(data["organisations"]),
         "datasets": len(data["datasets"]),
         "files_released": sum(a["files_released"] for a in agreements),
+        # Release history runs years earlier than the editions held, so the
+        # About page names both starts rather than implying one span.
+        "first_release_month": min(
+            (r["first_month"] for a in agreements for v in a["versions"]
+             for r in v["releases"] if r["first_month"]),
+            default="",
+        ),
         "commercial": sum(1 for a in agreements if a["commercial"] == "Yes"),
         "sublicensing": sum(1 for a in agreements if a["sublicensing"] == "Yes"),
         "joint_controller": sum(

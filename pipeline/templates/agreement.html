@@ -141,6 +141,10 @@
 {% endif %}
 
 <h2 id="releases">Files released</h2>
+{% include "_release-scope.html" %}
+{% if v.sublicensing == "Yes" %}
+<p class="notice">This agreement permits sublicensing: the applicant may pass data on to others. Anything passed on is not recorded in this register.</p>
+{% endif %}
 {% if v.releases %}
 <p>Files released against version {{ v.version }} of this agreement, summarised by dataset.</p>
 <div class="table-scroll">
@@ -156,7 +160,11 @@
 </table>
 </div>
 {% else %}
-<p class="empty">No file releases are recorded against the current version.</p>
+{% if agreement.files_released %}
+<p class="empty">No files recorded as released under the current version. {{ agreement.files_released|commas }} {{ "was" if agreement.files_released == 1 else "were" }} released under earlier versions, shown in the <a href="#history">version history</a>.</p>
+{% else %}
+<p class="empty">No files recorded as released under this agreement.</p>
+{% endif %}
 {% endif %}
 
 <h2 id="history">Version history</h2>
@@ -235,6 +243,7 @@
     {% if event.removed %}
     <div class="timeline-line">{{ event.removed|length }} no longer listed:
       {% for item in event.removed %}<span class="version-ref">{{ item.reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+      {% if event.edition == merger_edition %}<span class="hint">(NHS Digital merged into NHS England that month, and agreements within the merged organisation moved to a separate internal register)</span>{% endif %}
     </div>
     {% endif %}
   </li>
