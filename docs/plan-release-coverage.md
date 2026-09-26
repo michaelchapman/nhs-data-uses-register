@@ -1,12 +1,13 @@
 # Plan: what a "file released" covers, and what it leaves out
 
-Status: **accepted, store support implemented; site features parked.** The
-record described in §4 is in `pipeline/facts.py`. The site wording in §5 and the
-release views (a `release-months.csv`, a "no files recorded" line and filter, a
-per-agreement timeline, a register-wide monthly chart, a release check) are
-deliberately left for a separate piece of work, agreed 2026-09-20, so the
-facts-store push carries no release-related site change. Nothing in the store
-needs revisiting to build them: they are all build-time work.
+Status: **accepted; store support and the §5 wording implemented; release
+views parked.** The record described in §4 is in `pipeline/facts.py`, and the
+§5 wording is on the pages that exist (see §6). The release views (a
+`release-months.csv`, a "no files recorded" line and filter, a per-agreement
+timeline, a register-wide monthly chart, a release check) are left for a
+separate piece of work, agreed 2026-09-20. Nothing in the store needs
+revisiting to build them: they are all build-time work. The question in §2 has
+been answered.
 
 This is a companion to [plan-facts-store.md](plan-facts-store.md), which decided
 *how* releases are stored. This one decides what they can honestly be said to
@@ -20,16 +21,16 @@ the September 2026 edition, 983 have had files released, 651 expired with none
 recorded, 257 have run over a year with none, and 59 are too recent to tell.
 
 The tempting headline — *half of these agreements never resulted in any data
-being shared* — is false. A release row records **a physical file leaving
-NHS England through DARS**, and that is one of several ways data reaches an
-applicant. NHS England's own description of the register is "details of
+being shared* — is false. A release row records **a file released externally
+by DARS**, and that is one of several ways data reaches an applicant. NHS England's own description of the register is "details of
 physical files that were released and when".
 
 ## 2. What is out of scope, and why
 
-**Access inside a secure environment.** Where an applicant analyses data in
-place, no file is released and nothing appears in `DataReleases`. NHS England
-names one such service on the register page — the OpenSAFELY COVID-19 service,
+**Access granted in NHS England's own systems.** Where an applicant is given
+access to data in NHS England's Secure Data Environment, or one of its
+predecessors, no file is released externally and nothing appears in
+`DataReleases`. The register page also names the OpenSAFELY COVID-19 service,
 whose approved users are listed on OpenSAFELY's own site, not here.
 
 **Onward releases by a recipient.** The register records NHS England releasing
@@ -67,14 +68,19 @@ separately again.
 history is deeper than change history and the two must not be described as one
 period.
 
-### Still open
+### Answered: what the release sheet covers
 
 Whether commissioning support units acting on NHS England's behalf were ever
-in scope *before* February 2023 is not answerable from the workbook: there is
+in scope *before* February 2023 was not answerable from the workbook: there is
 no column naming who performed a release or under what mechanism. The three
 sheets are `Agreements`, `Datasets` and `DataReleases`, and none carries an
-access-mechanism, releasing-body or onward-release field. Answering it means
-asking NHS England, not parsing harder.
+access-mechanism, releasing-body or onward-release field.
+
+The question was put to the DARS team in September 2026. The general position:
+the release sheet covers **files released externally by DARS**. It does not
+include system access, such as access granted in NHS England's own Secure
+Data Environment and its predecessors. The site's wording follows that
+position.
 
 ## 3. What this requires of the store
 
@@ -159,8 +165,8 @@ last.
 
 - **"No files recorded as released under this agreement"** rather than any
   wording that says data was not shared. §2 is the reason.
-- Every release view states that it covers files released through DARS, and
-  links to the other registers for what it does not cover.
+- Every release view states that it covers files released externally by DARS,
+  and links to the other registers for what it does not cover.
 - The February 2023 discontinuity is labelled wherever agreements leaving the
   register are counted, in the way the January 2025 gap already is.
 - Release history is described as running from 2016, and register change
@@ -177,4 +183,5 @@ last.
    count. The release views listed in the status note at the top of this plan
    carry it when they are built.
 3. Label the February 2023 discontinuity on the changes pages.
-4. Ask NHS England the question in §2, and record the answer here.
+4. Ask NHS England the question in §2, and record the answer here. *Done:*
+   see §2, "Answered".

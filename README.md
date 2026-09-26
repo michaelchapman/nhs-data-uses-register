@@ -161,9 +161,10 @@ register with the same shape needs no template changes.
   The edition and the date it was added are in the footer of every page. For
   anything consequential, check the source workbook.
 - File releases are summarised per dataset on the site. The facts store holds
-  every file, but a release row records a physical file leaving NHS England
-  through DARS; it says nothing about data analysed inside a secure environment
-  or shared onward by a recipient. See
+  every file, but a release row records a file released externally by DARS; it
+  does not cover access granted in NHS England's own systems, such as its
+  Secure Data Environment and predecessors, or data shared onward by a
+  recipient. See
   [docs/plan-release-coverage.md](docs/plan-release-coverage.md).
 - The register describes what applicants said they intended, not audited
   outcomes.
