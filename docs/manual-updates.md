@@ -109,6 +109,7 @@ is the point of it: most changes to the site's answers are a rebuild.
 | You want to | Do this | Re-parse? |
 | --- | --- | --- |
 | Record which NHS organisation a name is, or refresh ODS | `python -m pipeline.odscheck --apply`, then `python -m pipeline.ods` | No |
+| Leave out a record that is not data sharing (a test record, a spreadsheet note) | Add its base reference and the reason to `data/excluded-agreements.json` | No |
 | Merge two organisation or dataset names | Edit `data/organisation-aliases.json` or `data/dataset-aliases.json` (see [organisation-names.md](organisation-names.md)) | No |
 | Change what counts as an amendment | Edit `changes._material` or `compare.compare_versions` | No |
 | Change how names are displayed | Edit `pipeline/names.py` | No |

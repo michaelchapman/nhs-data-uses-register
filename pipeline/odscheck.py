@@ -25,7 +25,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 
-from . import aliases, facts, lineage, ods
+from . import aliases, exclusions, facts, lineage, ods
 
 CODE_IN_NAME = re.compile(r"\s[-–]\s*([A-Z0-9]*[0-9][A-Z0-9]*)$")
 CCG_NAME = re.compile(r"\bCCG\b|CLINICAL COMMISSIONING GROUP", re.IGNORECASE)
@@ -40,8 +40,11 @@ def register_names(register_slug: str) -> tuple[Counter, Counter]:
     the next, as applicant or as the only data controller to change.
     """
     names, swaps = Counter(), Counter()
+    excluded = exclusions.bases()
     for path in facts.agreements_dir(register_slug).glob("*.json"):
         record = json.loads(path.read_text(encoding="utf-8"))
+        if record.get("base_reference", "").upper() in excluded:
+            continue
         for version in record["versions"]:
             states = version["states"]
             used = set()

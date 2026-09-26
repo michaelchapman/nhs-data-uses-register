@@ -22,7 +22,7 @@ from collections import defaultdict
 
 import openpyxl
 
-from . import aliases, lineage
+from . import aliases, exclusions, lineage
 from .names import strip_code
 
 VERSION_SUFFIX = re.compile(r"-v([0-9]+(?:\.[0-9]+)?)$", re.IGNORECASE)
@@ -377,7 +377,9 @@ def extract(workbook_bytes: bytes) -> dict:
     versions_by_base: dict[str, list[dict]] = defaultdict(list)
     for row in agreement_rows:
         reference = clean(row.get("Reference Number"))
-        if not reference:
+        # A reference always holds a number. The March 2022 workbook carried
+        # a spreadsheet note, "No filters applied", in this column.
+        if not reference or not any(c.isdigit() for c in reference):
             continue
         base, version = _base_and_version(reference)
         datasets = datasets_by_ref.get(reference, [])
@@ -426,9 +428,11 @@ def assemble(versions_by_base: dict[str, list[dict]]) -> dict:
     alias_map = aliases.load_map()
     dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_lineage = lineage.load()
+    excluded = exclusions.bases()
     agreements = [
         build_agreement(base, versions, alias_map, dataset_alias_map, organisation_lineage)
         for base, versions in versions_by_base.items()
+        if base.upper() not in excluded
     ]
     agreements.sort(key=lambda a: (a["organisation"].lower(), a["base_reference"]))
     return {

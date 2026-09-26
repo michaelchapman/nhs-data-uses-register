@@ -376,3 +376,18 @@ class NhsLineage(unittest.TestCase):
     def test_the_about_page_credits_ods(self):
         page = (self.out / "about" / "index.html").read_text()
         self.assertIn("NHS Organisation Data Service", page)
+
+
+class Exclusions(unittest.TestCase):
+    def test_an_excluded_agreement_has_no_page_and_is_not_counted(self):
+        from .fixtures import exclude
+
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            with dataset_aliases():
+                exclude("DARS-NIC-2-BBBBB")
+                build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
+            self.assertFalse((out / "agreements" / "dars-nic-2-bbbbb").exists())
+            self.assertNotIn("DARS-NIC-2-BBBBB", (out / "downloads" / "agreements.csv").read_text())
+            self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
+                          (out / "index.html").read_text())

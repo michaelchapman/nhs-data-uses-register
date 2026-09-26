@@ -141,6 +141,17 @@ class Changes(unittest.TestCase):
                                                  "after": "NHS KENT AND MEDWAY ICB - 91Q", "date": "2022-07-01",
                                                  "kind": "succeeded"}])
 
+    def test_an_excluded_agreement_is_never_added_amended_or_removed(self):
+        from .fixtures import exclude
+        exclude(SECOND)
+        gone = copy.deepcopy(self.versions)
+        del gone[SECOND]
+        self.record(("july2026", self.versions), ("august2026", self.edited(end_date="2031-06-01")),
+                    ("september2026", gone))
+        self.assertEqual([a["reference"] for a in changes.diff(REGISTER, "august2026")["amended"]], [V2])
+        self.assertEqual(changes.diff(REGISTER, "september2026")["removed"], [])
+        self.assertNotIn(SECOND, changes.history(REGISTER))
+
     def with_dataset_attribute(self, key, value):
         changed = copy.deepcopy(self.versions)
         changed[SECOND][0]["datasets"][0][key] = value

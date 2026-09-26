@@ -33,6 +33,7 @@ from collections import defaultdict
 
 from . import aliases
 from . import compare
+from . import exclusions
 from . import facts
 from . import lineage
 from . import sources
@@ -60,6 +61,14 @@ def skipped_editions(previous: str, current: str) -> list[str]:
 def missing_editions(editions: list[str]) -> list[str]:
     """Every month between the first and last of `editions` (oldest first) that is absent."""
     return [gap for a, b in zip(editions, editions[1:]) for gap in skipped_editions(a, b)]
+
+
+def _included(index: dict[str, int]) -> dict[str, int]:
+    """An edition's index without the agreements `exclusions` leaves out."""
+    excluded = exclusions.bases()
+    if not excluded:
+        return index
+    return {ref: state for ref, state in index.items() if _base_and_version(ref)[0].upper() not in excluded}
 
 
 def _material(difference: dict | None) -> bool:
@@ -145,8 +154,8 @@ def diff(
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     organisation_lineage = lineage.load()
-    now = facts.edition_index(register_slug, edition)
-    before = facts.edition_index(register_slug, previous_edition)
+    now = _included(facts.edition_index(register_slug, edition))
+    before = _included(facts.edition_index(register_slug, previous_edition))
 
     new_refs = [r for r in now if r not in before]
     gone_refs = [r for r in before if r not in now]
@@ -224,7 +233,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     organisation_lineage = lineage.load()
-    indexes = {edition: facts.edition_index(register_slug, edition) for edition in editions}
+    indexes = {edition: _included(facts.edition_index(register_slug, edition)) for edition in editions}
     earliest = editions[0]
 
     # Pass one, over the indexes alone: which agreement changed in which

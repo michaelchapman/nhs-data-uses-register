@@ -134,6 +134,7 @@ pipeline/aliases.py             applies reviewed organisation and dataset merges
 pipeline/ods.py                 reads NHS organisation records from ODS into a snapshot
 pipeline/odscheck.py            finds the ODS code for each NHS name in the register
 pipeline/lineage.py             renames and successions between NHS organisations
+pipeline/exclusions.py          leaves out published records that are not data sharing
 pipeline/datasetcheck.py        finds datasets the register has renamed
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
@@ -145,6 +146,7 @@ data/facts/                     committed facts: every edition, and the manifest
 data/organisation-aliases.json  reviewed organisation-name merges
 data/dataset-aliases.json       reviewed dataset-name merges
 data/organisation-codes.json    the ODS code for each NHS name, and the evidence
+data/excluded-agreements.json   published records the site leaves out, with the reason
 data/ods/organisations.json     the ODS records the site uses (Open Government Licence)
 docs/manual-updates.md          the monthly routine
 docs/organisation-names.md      reviewing and merging organisation names

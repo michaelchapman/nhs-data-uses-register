@@ -17,7 +17,7 @@ from unittest import mock
 
 import openpyxl
 
-from pipeline import aliases, lineage, ods
+from pipeline import aliases, exclusions, lineage, ods
 
 OLD_NAME = "Maternity Services Data Set v1.5"
 NEW_NAME = "MSDS (Maternity Services Data Set) v1.5"
@@ -118,7 +118,8 @@ def dataset_aliases():
         with mock.patch.object(aliases, "DATASET_ALIASES_PATH", datasets), \
                 mock.patch.object(aliases, "ALIASES_PATH", organisations), \
                 mock.patch.object(lineage, "CODES_PATH", directory / "organisation-codes.json"), \
-                mock.patch.object(ods, "SNAPSHOT_PATH", directory / "ods.json"):
+                mock.patch.object(ods, "SNAPSHOT_PATH", directory / "ods.json"), \
+                mock.patch.object(exclusions, "EXCLUDED_PATH", directory / "excluded-agreements.json"):
             yield
 
 
@@ -162,6 +163,12 @@ ODS_CODES = [
     {"name": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST", "code": "RH8", "evidence": "test"},
     {"name": "NORTHERN DEVON HEALTHCARE NHS TRUST", "code": "RBZ", "evidence": "test"},
 ]
+
+
+def exclude(*references):
+    """Leave `references` out of the build. Use inside `dataset_aliases()`."""
+    exclusions.EXCLUDED_PATH.write_text(json.dumps(
+        {"agreements": [{"reference": r, "reason": "test"} for r in references]}))
 
 
 def lineage_files(codes=ODS_CODES, organisations=ODS_WORLD):
