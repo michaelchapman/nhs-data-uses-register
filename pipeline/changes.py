@@ -33,7 +33,9 @@ from collections import defaultdict
 
 from . import aliases
 from . import compare
+from . import exclusions
 from . import facts
+from . import lineage
 from . import sources
 from .extract import _base_and_version, slugify
 
@@ -59,6 +61,14 @@ def skipped_editions(previous: str, current: str) -> list[str]:
 def missing_editions(editions: list[str]) -> list[str]:
     """Every month between the first and last of `editions` (oldest first) that is absent."""
     return [gap for a, b in zip(editions, editions[1:]) for gap in skipped_editions(a, b)]
+
+
+def _included(index: dict[str, int]) -> dict[str, int]:
+    """An edition's index without the agreements `exclusions` leaves out."""
+    excluded = exclusions.bases()
+    if not excluded:
+        return index
+    return {ref: state for ref, state in index.items() if _base_and_version(ref)[0].upper() not in excluded}
 
 
 def _material(difference: dict | None) -> bool:
@@ -142,8 +152,10 @@ def diff(
 
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    now = facts.edition_index(register_slug, edition)
-    before = facts.edition_index(register_slug, previous_edition)
+    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    organisation_lineage = lineage.load()
+    now = _included(facts.edition_index(register_slug, edition))
+    before = _included(facts.edition_index(register_slug, previous_edition))
 
     new_refs = [r for r in now if r not in before]
     gone_refs = [r for r in before if r not in now]
@@ -178,7 +190,7 @@ def diff(
         was, is_now = state_of(reference, before), state_of(reference, now)
         if was is None or is_now is None:
             continue
-        difference = compare.compare_versions(was, is_now, alias_map)
+        difference = compare.compare_versions(was, is_now, alias_map, organisation_aliases, organisation_lineage)
         if _material(difference):
             amended.append({
                 "reference": reference, "base": _base_and_version(reference)[0],
@@ -219,7 +231,9 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         return {}
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    indexes = {edition: facts.edition_index(register_slug, edition) for edition in editions}
+    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    organisation_lineage = lineage.load()
+    indexes = {edition: _included(facts.edition_index(register_slug, edition)) for edition in editions}
     earliest = editions[0]
 
     # Pass one, over the indexes alone: which agreement changed in which
@@ -260,27 +274,35 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         for event in events:
             entry = by_edition.setdefault(event["edition"], {
                 "edition": event["edition"], "skipped": event["skipped"],
-                "added": [], "amended": [], "removed": [], "fields": [],
+                "added": [], "amended": [], "removed": [], "fields": [], "reorganised": [],
             })
             fields: list[str] = []
             if event["kind"] == "amended":
                 version = states.get(event["reference"], [])
                 if event["from"] < len(version) and event["to"] < len(version):
                     difference = compare.compare_versions(
-                        version[event["from"]], version[event["to"]], alias_map
+                        version[event["from"]], version[event["to"]], alias_map, organisation_aliases, organisation_lineage
                     )
                     # Naming the fields is the difference between "this was
                     # edited" and "the data controller was changed" — the
                     # second is what a reader came for, and the register itself
                     # never says it.
                     if not _material(difference):
+                        # A rename or an ODS succession is not an amendment,
+                        # but the timeline says it happened, once per edition.
+                        for item in (difference or {}).get("succeeded", []) + (difference or {}).get("renamed", []):
+                            pair = {"label": item["label"], "before": item["before"], "after": item["after"],
+                                    "date": item.get("date", ""),
+                                    "kind": "succeeded" if item in (difference or {}).get("succeeded", []) else "renamed"}
+                            if item["label"] != "Organisation type" and pair not in entry["reorganised"]:
+                                entry["reorganised"].append(pair)
                         continue
                     fields = _labels(difference)
             entry[event["kind"]].append({"reference": event["reference"], "fields": fields})
         for entry in by_edition.values():
             for kind in ("added", "amended", "removed"):
                 entry[kind].sort(key=lambda item: item["reference"])
-            if not (entry["added"] or entry["amended"] or entry["removed"]):
+            if not (entry["added"] or entry["amended"] or entry["removed"] or entry["reorganised"]):
                 continue
             # The union across the edition's amendments, for a one-line summary
             # when several versions were restated together.
@@ -296,7 +318,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         # does not print the same edition twice. An edition that also amended
         # or removed something is left alone: it has more to say.
         first = [e for e in entry["events"] if e["edition"] == entry["first_edition"]]
-        if first and not (first[0]["amended"] or first[0]["removed"]):
+        if first and not (first[0]["amended"] or first[0]["removed"] or first[0]["reorganised"]):
             entry["first_versions"] = [item["reference"] for item in first[0]["added"]]
             entry["events"].remove(first[0])
         else:

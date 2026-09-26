@@ -1,7 +1,7 @@
 import unittest
 
 from pipeline import facts
-from pipeline.names import display_name
+from pipeline.names import display_name, strip_code
 
 
 class DisplayName(unittest.TestCase):
@@ -12,9 +12,10 @@ class DisplayName(unittest.TestCase):
         self.check("UNIVERSITY OF OXFORD", "University of Oxford")
         self.check("LONDON BOROUGH OF HAMMERSMITH & FULHAM", "London Borough of Hammersmith & Fulham")
 
-    def test_acronyms_and_codes_stay_in_capitals(self):
+    def test_acronyms_stay_in_capitals_and_codes_are_dropped(self):
+        # The site shows ODS codes only where they explain lineage.
         self.check("NHS BEDFORDSHIRE, LUTON AND MILTON KEYNES ICB - M1J4Y",
-                   "NHS Bedfordshire, Luton and Milton Keynes ICB - M1J4Y")
+                   "NHS Bedfordshire, Luton and Milton Keynes ICB")
         self.check("CARE QUALITY COMMISSION (CQC)", "Care Quality Commission (CQC)")
         self.check("3M UNITED KINGDOM PLC", "3M United Kingdom PLC")
 
@@ -45,7 +46,7 @@ class DisplayName(unittest.TestCase):
         self.check("GLAXOSMITHKLINE RESEARCH & DEVELOPMENT LIMITED", "GlaxoSmithKline Research & Development Limited")
 
     def test_a_name_someone_capitalised_is_left_alone(self):
-        for name in ("NHS Bristol, North Somerset and South Gloucestershire ICB - 15C",
+        for name in ("NHS Bristol, North Somerset and South Gloucestershire ICB",
                      "University of Oxford", "McKinsey"):
             self.check(name, name)
 
@@ -65,9 +66,9 @@ class OverTheRealRegister(unittest.TestCase):
             a["organisation"] for a in data["agreements"]
         } | {c for a in data["agreements"] for c in a["controllers"]}
 
-    def test_only_capitalisation_ever_changes(self):
+    def test_only_capitalisation_and_a_trailing_code_ever_change(self):
         for name in self.names:
-            self.assertEqual(display_name(name).lower(), name.lower(), name)
+            self.assertEqual(display_name(name).lower(), strip_code(name).lower(), name)
 
     def test_it_is_idempotent(self):
         for name in self.names:

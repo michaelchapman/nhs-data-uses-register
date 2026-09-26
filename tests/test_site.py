@@ -330,3 +330,138 @@ class ReleaseScope(unittest.TestCase):
                     page = (out / path / "index.html").read_text()
                     self.assertIn("files released externally by DARS", page)
                     self.assertIn("/about/#file-releases", page)
+
+
+class NhsLineage(unittest.TestCase):
+    """One page per ICB, codes kept out of names: docs/plan-organisation-changes.md."""
+
+    @classmethod
+    def setUpClass(cls):
+        from .fixtures import _record, _role, lineage_files
+
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.out = Path(cls.directory.name)
+        codes = [
+            {"name": "NHS Bristol, North Somerset and South Gloucestershire ICB - 15C", "code": "15C", "evidence": "test"},
+            {"name": "NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE CCG", "code": "15C", "as": "CCG",
+             "evidence": "test"},
+        ]
+        world = {
+            "15C": _record("NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE ICB - 15C",
+                           [_role("RO98", "2020-04-01", primary=True), _role("RO319", "2022-07-01")], icb="QUY"),
+            "QUY": _record("NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+                           [_role("RO261", "2017-04-01", primary=True)]),
+        }
+        with dataset_aliases():
+            lineage_files(codes, world)
+            build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, cls.out)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def test_the_icb_has_one_page_listing_its_sub_icb_locations(self):
+        slug = "nhs-bristol-north-somerset-and-south-gloucestershire-integrated-care-board"
+        page = (self.out / "organisations" / slug / "index.html").read_text()
+        self.assertIn("<h1>NHS Bristol, North Somerset and South Gloucestershire Integrated Care Board</h1>", page)
+        self.assertIn(">15C</span>, formerly NHS Bristol, North Somerset and South Gloucestershire CCG", page)
+        self.assertIn("Open Government Licence v3.0", page)
+        self.assertFalse((self.out / "organisations" / "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c").exists())
+
+    def test_the_agreement_names_its_applicant_without_the_code(self):
+        page = (self.out / "agreements" / "dars-nic-2-bbbbb" / "index.html").read_text()
+        self.assertIn("NHS Bristol, North Somerset and South Gloucestershire ICB</a>", page)
+        self.assertNotIn("ICB - 15C", page)
+
+    def test_the_about_page_credits_ods(self):
+        page = (self.out / "about" / "index.html").read_text()
+        self.assertIn("NHS Organisation Data Service", page)
+
+
+class Exclusions(unittest.TestCase):
+    def test_an_excluded_agreement_has_no_page_and_is_not_counted(self):
+        from .fixtures import exclude
+
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            with dataset_aliases():
+                exclude("DARS-NIC-2-BBBBB")
+                build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
+            self.assertFalse((out / "agreements" / "dars-nic-2-bbbbb").exists())
+            self.assertNotIn("DARS-NIC-2-BBBBB", (out / "downloads" / "agreements.csv").read_text())
+            self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
+                          (out / "index.html").read_text())
+
+
+class ArchivedAgreements(unittest.TestCase):
+    """Agreements no longer in the register keep their pages, outside every count."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.out = Path(cls.directory.name)
+        with dataset_aliases():
+            data = extract(workbook_bytes())
+            left = next(a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-2-BBBBB")
+            # The register as it would be without it: organisations and
+            # datasets are derived from the agreements still listed.
+            from pipeline.extract import assemble
+            data = assemble({a["base_reference"]: a["versions"] for a in data["agreements"] if a is not left})
+            left["archived"] = {"last_edition": "january2023", "next_edition": "february2023"}
+            data["archived"] = [left]
+            kept = data["agreements"][0]
+            later = {**kept["latest"], "reference": "DARS-NIC-1-AAAAA-v3", "version": "3",
+                     "last_edition": "january2023"}
+            kept["dropped_versions"] = kept["later_dropped"] = [later]
+            removed = [{"base": "DARS-NIC-2-BBBBB", "reference": "DARS-NIC-2-BBBBB-v1",
+                        "title": "Ambulance study", "org": left["organisation"]}]
+            changes = {**FIRST_EDITION, "comparable": True, "reason": "", "skipped": [],
+                       "previous_edition": "august2026", "removed": removed}
+            build.build(data, site_meta(), changes, cls.out)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def read(self, path):
+        return (self.out / path / "index.html").read_text()
+
+    def test_the_page_says_it_is_no_longer_listed_and_why_it_most_likely_left(self):
+        page = self.read("agreements/dars-nic-2-bbbbb")
+        self.assertIn("No longer in the register.", page)
+        self.assertIn("last published in the January 2023 edition", page)
+        self.assertIn("most likely moved rather than ended", page)
+        self.assertIn("Latest version", page)
+
+    def test_it_is_listed_apart_and_not_counted(self):
+        listing = self.read("agreements")
+        self.assertIn("No longer in the register (1)", listing)
+        self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
+                      self.read(""))
+        self.assertNotIn("DARS-NIC-2-BBBBB", (self.out / "downloads" / "agreements.csv").read_text())
+
+    def test_the_changes_page_links_to_it(self):
+        self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', self.read("changes"))
+
+    def test_an_organisation_named_only_by_it_keeps_a_page_outside_the_counts(self):
+        slug = "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c"
+        self.assertIn("No longer in the register.", self.read(f"organisations/{slug}"))
+        self.assertIn("No longer in the register (1)", self.read("organisations"))
+        # University of Example, and Other Trust as a joint controller: not the archived one.
+        self.assertIn('<span class="stat-number">2</span><span class="stat-label">organisations', self.read(""))
+
+    def test_a_dataset_named_only_by_it_keeps_a_page_and_a_shared_one_lists_it_apart(self):
+        self.assertIn("No longer in the register.", self.read("datasets/other-data-set"))
+        self.assertIn("No longer in the register (1)", self.read("datasets"))
+        shared = self.read("datasets/msds-maternity-services-data-set-v1-5")
+        self.assertNotIn('<p class="notice"><strong>No longer in the register.', shared)
+        self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', shared)
+
+    def test_a_later_version_that_left_is_noted_beside_the_current_one(self):
+        page = self.read("agreements/dars-nic-1-aaaaa")
+        self.assertIn("A later version has left the register.", page)
+        self.assertIn("v3</a>", page)
+
+    def test_links_stay_whole(self):
+        broken, _ = linkcheck.check(self.out)
+        self.assertFalse(broken)

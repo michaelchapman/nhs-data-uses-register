@@ -10,14 +10,6 @@
       "reason": ""
     },
     {
-      "canonical": "CITY ST GEORGE'S UNIVERSITY OF LONDON",
-      "variants": [
-        "CITY ST GEORGE'S UNIVERSITY OF LONDON",
-        "CITY ST GEORGE’S"
-      ],
-      "reason": ""
-    },
-    {
       "canonical": "ADDENBROOKE'S HOSPITAL",
       "variants": [
         "ADDENBROOKE'S HOSPITAL",
@@ -93,15 +85,6 @@
       "source": "auto"
     },
     {
-      "canonical": "NHS England (Quarry House)",
-      "variants": [
-        "NHS ENGLAND (QUARRY HOUSE)",
-        "NHS England (Quarry House)"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
       "canonical": "King's College London",
       "variants": [
         "KING'S COLLEGE LONDON",
@@ -142,15 +125,6 @@
       "variants": [
         "UNIVERSITY OF LEEDS",
         "University of Leeds"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
-      "canonical": "The University of Manchester",
-      "variants": [
-        "THE UNIVERSITY OF MANCHESTER",
-        "The University of Manchester"
       ],
       "reason": "same name, differing only in punctuation, spacing or case",
       "source": "auto"
@@ -256,15 +230,6 @@
       "source": "auto"
     },
     {
-      "canonical": "Newcastle University",
-      "variants": [
-        "NEWCASTLE UNIVERSITY",
-        "Newcastle University"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
       "canonical": "NHS Frimley CCG",
       "variants": [
         "NHS FRIMLEY CCG",
@@ -278,15 +243,6 @@
       "variants": [
         "UNIVERSITY OF WARWICK",
         "University of Warwick"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
-      "canonical": "Institute of Cancer Research",
-      "variants": [
-        "INSTITUTE OF CANCER RESEARCH",
-        "Institute of Cancer Research"
       ],
       "reason": "same name, differing only in punctuation, spacing or case",
       "source": "auto"
@@ -886,15 +842,6 @@
       "source": "auto"
     },
     {
-      "canonical": "Royal Surrey NHS Foundation Trust",
-      "variants": [
-        "ROYAL SURREY NHS FOUNDATION TRUST",
-        "Royal Surrey NHS Foundation Trust"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
       "canonical": "Health & Social Care Information Centre",
       "variants": [
         "HEALTH & SOCIAL CARE INFORMATION CENTRE",
@@ -1115,15 +1062,6 @@
       "variants": [
         "NEIL WILSON ASSOCIATES LLP",
         "Neil Wilson Associates LLP"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
-      "canonical": "City University of London",
-      "variants": [
-        "CITY UNIVERSITY OF LONDON",
-        "City University of London"
       ],
       "reason": "same name, differing only in punctuation, spacing or case",
       "source": "auto"
@@ -1453,15 +1391,6 @@
       "source": "auto"
     },
     {
-      "canonical": "CITY, UNIVERSITY OF LONDON",
-      "variants": [
-        "CITY UNIVERSITY OF LONDON",
-        "CITY, UNIVERSITY OF LONDON"
-      ],
-      "reason": "same name, differing only in punctuation, spacing or case",
-      "source": "auto"
-    },
-    {
       "canonical": "BCP COUNCIL  [BOURNEMOUTH, CHRISTCHURCH AND POOLE]",
       "variants": [
         "BCP COUNCIL  (BOURNEMOUTH, CHRISTCHURCH AND POOLE)",
@@ -1784,6 +1713,95 @@
       ],
       "reason": "same name, differing only in legal form",
       "source": "auto"
+    },
+    {
+      "canonical": "NHS ENGLAND - X26",
+      "variants": [
+        "NHS ENGLAND (QUARRY HOUSE)",
+        "NHS England (Quarry House)",
+        "NHS ENGLAND - X26"
+      ],
+      "reason": "reviewed: NHS England relabelled from its Leeds building to its organisation code, October 2025"
+    },
+    {
+      "canonical": "THE INSTITUTE OF CANCER RESEARCH",
+      "variants": [
+        "Institute of Cancer Research",
+        "INSTITUTE OF CANCER RESEARCH",
+        "THE INSTITUTE OF CANCER RESEARCH"
+      ],
+      "reason": "reviewed: same body, with and without 'The'"
+    },
+    {
+      "canonical": "UNIVERSITY OF NEWCASTLE UPON TYNE",
+      "variants": [
+        "NEWCASTLE UNIVERSITY",
+        "Newcastle University",
+        "UNIVERSITY OF NEWCASTLE UPON TYNE"
+      ],
+      "reason": "reviewed: Newcastle University is the trading name of the University of Newcastle upon Tyne"
+    },
+    {
+      "canonical": "The University of Manchester",
+      "variants": [
+        "THE UNIVERSITY OF MANCHESTER",
+        "The University of Manchester",
+        "UNIVERSITY OF MANCHESTER"
+      ],
+      "reason": "reviewed: same body, with and without 'The'"
+    },
+    {
+      "canonical": "SOMERSET COUNCIL",
+      "variants": [
+        "SOMERSET COUNCIL",
+        "SOMERSET COUNTY COUNCIL"
+      ],
+      "reason": "reviewed: renamed on becoming a unitary authority"
+    },
+    {
+      "canonical": "NORTH YORKSHIRE COUNCIL",
+      "variants": [
+        "NORTH YORKSHIRE COUNCIL",
+        "NORTH YORKSHIRE COUNTY COUNCIL"
+      ],
+      "reason": "reviewed: renamed on becoming a unitary authority"
+    },
+    {
+      "canonical": "Royal Surrey NHS Foundation Trust",
+      "variants": [
+        "ROYAL SURREY COUNTY HOSPITAL NHS FOUNDATION TRUST",
+        "Royal Surrey NHS Foundation Trust",
+        "ROYAL SURREY NHS FOUNDATION TRUST"
+      ],
+      "reason": "reviewed: renamed trust"
+    },
+    {
+      "canonical": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST",
+      "variants": [
+        "ROYAL DEVON AND EXETER NHS FOUNDATION TRUST",
+        "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST"
+      ],
+      "reason": "reviewed: renamed trust"
+    },
+    {
+      "canonical": "CITY ST GEORGE'S UNIVERSITY OF LONDON",
+      "variants": [
+        "CITY ST GEORGE'S UNIVERSITY OF LONDON",
+        "CITY ST GEORGE’S",
+        "City University of London",
+        "CITY UNIVERSITY OF LONDON",
+        "CITY, UNIVERSITY OF LONDON"
+      ],
+      "reason": "reviewed: City, University of London renamed on merging with St George's, August 2024"
+    },
+    {
+      "canonical": "DR FOSTER LIMITED",
+      "variants": [
+        "DR FOSTER LIMITED",
+        "Dr. Foster Limited",
+        "TELSTRA HEALTH UK LIMITED"
+      ],
+      "reason": "reviewed: one company, recorded under its former and later names"
     }
   ],
   "ignored": [

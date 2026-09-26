@@ -50,5 +50,6 @@
   </tbody>
 </table>
 </div>
+{% with items=archived_organisations, kind="organisations" %}{% include "_archived_names.html" %}{% endwith %}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

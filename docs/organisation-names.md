@@ -201,6 +201,11 @@ another.
 - It only affects the **organisation** field (the applicant, and the data
   controller cross-reference on organisation pages) — never agreement titles,
   dataset names, or any other free text from the register.
+- It also decides what counts as a change. When a version's applicant or data
+  controllers move from one name to another that the aliases call the same
+  organisation, the site reports a rename, not an amendment. Merging two names
+  therefore changes the "what changed" counts as well as the pages. See
+  [plan-version-diffs.md](plan-version-diffs.md) §11.
 - It's forward and backward compatible with the committed edition store: an
   alias applies to every edition rebuilt after it's added, not just the one
   ingested at the time.

@@ -69,5 +69,6 @@
   </tbody>
 </table>
 </div>
+{% with intro="Agreements that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not. Most left in February 2023, when NHS Digital merged into NHS England and agreements within the merged organisation moved to a separate internal register.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

@@ -436,17 +436,24 @@ def edition_index(register_slug: str, edition: str) -> dict[str, int]:
     return json.loads(path.read_text(encoding="utf-8"))["versions"]
 
 
-def read_edition(register_slug: str, edition: str) -> dict[str, list[dict]]:
+def read_edition(register_slug: str, edition: str, only: set[str] | None = None) -> dict[str, list[dict]]:
     """`{base reference: versions}` exactly as `edition` published them.
 
     The shape `extract.extract` returns for a workbook and `editions.rehydrate`
     expects, so an edition read from here and one parsed from its workbook are
     interchangeable. The releases kept out of the states are put back here, as
     that edition reported them.
+
+    `only`, a set of base references, reads just those agreements.
     """
+    from .extract import slugify
+
     index = edition_index(register_slug, edition)
+    wanted = {f"{slugify(base)}.json" for base in only} if only is not None else None
     versions_by_base: dict[str, list[dict]] = {}
     for path in sorted(agreements_dir(register_slug).glob("*.json")):
+        if wanted is not None and path.name not in wanted:
+            continue
         stored = json.loads(path.read_text(encoding="utf-8"))
         versions = []
         for record in stored["versions"]:
@@ -570,3 +577,91 @@ def read_extract(register_slug: str, edition: str) -> dict:
         for version in versions:
             version.pop("released_files", None)
     return rehydrate(versions_by_base)
+
+
+def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str, list[dict]]]:
+    """What `edition` no longer lists but an earlier edition did.
+
+    Returns `(agreements, dropped_versions)`:
+
+    - `agreements`: each agreement no version of which is in `edition`, built
+      as the site builds any agreement, from the last edition that listed it.
+      Each carries `archived`: `{last_edition, next_edition}`, the edition
+      after being the one it was first missing from.
+    - `dropped_versions`: `{base reference: [version]}` for agreements still
+      listed that have lost a version, each as last published, with
+      `last_edition`.
+
+    Agreements `exclusions` leaves out are left out here too.
+    """
+    from . import aliases, exclusions, lineage
+    from .extract import _base_and_version, build_agreement, known_organisation_names, resplit_list, tidy_version
+
+    editions = stored_editions(register_slug)
+    if edition not in editions:
+        return [], {}
+    editions = editions[: editions.index(edition) + 1]
+    current = edition_index(register_slug, edition)
+    current_bases = {_base_and_version(ref)[0] for ref in current}
+    excluded = exclusions.bases()
+
+    last_seen: dict[str, str] = {}
+    for held in editions:
+        for reference in edition_index(register_slug, held):
+            last_seen[reference] = held
+    gone = {ref: held for ref, held in last_seen.items() if ref not in current}
+
+    def base_of(reference):
+        return _base_and_version(reference)[0]
+
+    archived_last: dict[str, str] = {}
+    dropped: dict[str, dict[str, str]] = {}
+    for reference, held in gone.items():
+        base = base_of(reference)
+        if base.upper() in excluded:
+            continue
+        if base in current_bases:
+            dropped.setdefault(held, {})[reference] = base
+        elif editions.index(held) >= editions.index(archived_last.get(base, held)):
+            archived_last[base] = held
+
+    def tidied(versions_by_base):
+        for versions in versions_by_base.values():
+            for version in versions:
+                version.pop("released_files", None)
+                tidy_version(version)
+        known = known_organisation_names(
+            version["organisation"] for versions in versions_by_base.values() for version in versions
+        )
+        for versions in versions_by_base.values():
+            for version in versions:
+                version["controllers"] = resplit_list(version["controllers"], known)
+        return versions_by_base
+
+    alias_map = aliases.load_map()
+    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    organisation_lineage = lineage.load()
+    agreements = []
+    by_edition: dict[str, set[str]] = {}
+    for base, held in archived_last.items():
+        by_edition.setdefault(held, set()).add(base)
+    for held, bases in by_edition.items():
+        position = editions.index(held)
+        following = editions[position + 1] if position + 1 < len(editions) else ""
+        for base, versions in tidied(read_edition(register_slug, held, bases)).items():
+            agreement = build_agreement(base, versions, alias_map, dataset_alias_map, organisation_lineage)
+            agreement["archived"] = {"last_edition": held, "next_edition": following}
+            agreements.append(agreement)
+    agreements.sort(key=lambda a: (a["organisation"].lower(), a["base_reference"]))
+
+    dropped_versions: dict[str, list[dict]] = {}
+    for held, references in dropped.items():
+        read = tidied(read_edition(register_slug, held, set(references.values())))
+        for base, versions in read.items():
+            for version in versions:
+                if version["reference"] in references:
+                    dropped_versions.setdefault(base, []).append({**version, "last_edition": held})
+    for versions in dropped_versions.values():
+        versions.sort(key=lambda v: v["reference"])
+    return agreements, dropped_versions
+

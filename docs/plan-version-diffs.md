@@ -13,6 +13,8 @@ reasoning that led there is in it.
 | R4 redlines between versions of an agreement | shipped (`pipeline/compare.py`) |
 | R3 amendment log, R7 stored values for short fields | not started: the site can say *which* fields an edition changed in place, not their old and new text |
 | R5 vocabulary for in-place amendments, R6 machine-readable change outputs | not started |
+| §9 item 1: resolve organisation names through the aliases before calling something an amendment | shipped; see §11 |
+| CCG to ICB successions, labelled from NHS ODS | planned in [plan-organisation-changes.md](plan-organisation-changes.md) |
 
 The sections below are kept as written, so §1 describes the site as it was
 before R1, R2 and R4 shipped; the table above is the current state.
@@ -843,7 +845,7 @@ values, so it should ride a re-ingest.
 1. **Resolve controllers through the alias map before calling something
    an amendment.** A relabelling is not a change of controller, and on
    the evidence it is the common case. This is the single highest-value
-   item left.
+   item left. *Done: see §11.*
 2. **Store the values** (R7) — still right, and now clearly for the
    rename display as much as for transfers: "NHS England (Quarry House)
    → NHS England — X26" is a useful thing for a page to say, provided it
@@ -1001,3 +1003,62 @@ re-reading the archive. The January 2023 changes page carries 2,455
 rows at 778 KB, or 70 KB gzipped as served. Both are fine; neither has
 much headroom left, and a register that keeps growing will need the
 per-edition pages paginated or trimmed eventually.
+
+## 11. Renames and successions
+
+§9's first recommendation is built. `compare_versions` matches the applicant
+organisation and the data controllers through `data/organisation-aliases.json`,
+so a name the aliases call the same organisation is reported under `renamed`
+and is not an amendment. A version-to-version redline shows the rename as one,
+labelled as not a change.
+
+The aliases only did this once the relabellings were in them. Resolving
+through the file as it stood removed 23 of 2,840 amendments across the
+archive. Ten reviewed merges (September 2026) took it to **2,565**:
+
+| Edition | Before | After |
+| --- | ---: | ---: |
+| October 2025 | 153 | 15 |
+| July 2025 | 60 | 10 |
+| December 2023 | 39 | 4 |
+| March 2026 | 17 | 0 |
+
+The merges are NHS England (Quarry House) and NHS England - X26; the Institute
+of Cancer Research with and without "The"; Newcastle University and the
+University of Newcastle upon Tyne; the University of Manchester with and
+without "The"; Somerset and North Yorkshire county councils and the unitary
+councils that replaced them; two renamed foundation trusts (Royal Surrey, Royal
+Devon); City, University of London and City St George's; and Dr Foster Limited
+and Telstra Health UK Limited. Each is marked `reviewed:` in the alias file.
+
+Candidates seen and not merged, for review: St George's, University of London
+and St George's Hospital Medical School (9 swaps); University Hospitals Bristol
+and Weston and Bristol NHS Foundation Trust (10); LA-SER Europe and Certara UK
+(4); NHS England (Skipton House) and NHS England London (Skipton House) (4).
+
+### Still to do: CCG to ICB successions
+
+Now planned in full in [plan-organisation-changes.md](plan-organisation-changes.md),
+which also finds that October 2022, put down to dataset relabelling in §10,
+was almost entirely the move from CCG to ICB names.
+
+773 of the 1,071 one-for-one controller swaps in the archive are a clinical
+commissioning group replaced by an integrated care board, from July 2022. These
+are not renames. They are different statutory bodies, and several CCGs often
+passed to one ICB, so merging them as aliases would put several bodies'
+agreements on one page. They stay amendments for now.
+
+The decision (September 2026) is to label them as successions: "NHS Kent and
+Medway CCG, succeeded by NHS Kent and Medway ICB", not counted as a change of
+controller. The source for who succeeded whom is **NHS ODS** (the Organisation
+Data Service), whose records carry predecessor and successor relationships,
+not name matching. That needs:
+
+1. a committed `data/organisation-successors.json`, generated from ODS and
+   reviewable like the alias file, keyed by ODS code where the register gives
+   one (most ICB names carry a code, as in "ICB - 91Q");
+2. a `succeeded` category in `compare_versions` beside `renamed`, where every
+   removed name's successor is among the added names;
+3. wording for it on the agreement page, and a note on organisation pages that
+   a CCG's agreements continued under its successor.
+

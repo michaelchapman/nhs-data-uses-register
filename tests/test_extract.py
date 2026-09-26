@@ -124,3 +124,23 @@ class Extract(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NotAReference(unittest.TestCase):
+    def test_a_note_in_the_reference_column_is_not_an_agreement(self):
+        # The March 2022 workbook carried "No filters applied" there.
+        import io
+
+        import openpyxl
+
+        from pipeline.extract import extract
+
+        from .fixtures import dataset_aliases, workbook_bytes
+
+        book = openpyxl.load_workbook(io.BytesIO(workbook_bytes()))
+        book["Agreements"].append(["No filters applied"])
+        buffer = io.BytesIO()
+        book.save(buffer)
+        with dataset_aliases():
+            bases = [a["base_reference"] for a in extract(buffer.getvalue())["agreements"]]
+        self.assertEqual(sorted(bases), ["DARS-NIC-1-AAAAA", "DARS-NIC-2-BBBBB"])

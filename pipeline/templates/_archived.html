@@ -1,0 +1,21 @@
+{#- Agreements no longer in the register: `archived`, and `org_slugs` when organisations are shown. -#}
+{% if archived %}
+<h2 id="no-longer-listed">No longer in the register ({{ archived|length|commas }})</h2>
+<p>{{ intro }} Each page shows what the register last said. None is counted in this site's figures.</p>
+<div class="table-scroll">
+<table class="data-table">
+  <caption class="visually-hidden">Agreements no longer in the register</caption>
+  <thead><tr><th scope="col">Agreement</th>{% if show_organisation %}<th scope="col">Organisation</th>{% endif %}<th scope="col">Last published</th></tr></thead>
+  <tbody>
+  {% for a in archived %}
+    <tr>
+      <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
+        <span class="ref">{{ a.base_reference }}</span></th>
+      {% if show_organisation %}<td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>{% endif %}
+      <td>{{ a.archived.last_edition|edition }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}

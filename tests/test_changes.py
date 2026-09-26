@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from pipeline import changes, facts
+from pipeline import aliases, changes, compare, facts
 from pipeline.extract import extract
 
 from .fixtures import NEW_NAME, OLD_NAME, dataset_aliases, workbook_bytes
@@ -78,6 +78,79 @@ class Changes(unittest.TestCase):
         self.assertEqual(
             [a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]], [["Data controllers"]]
         )
+
+    def merge_organisations(self, canonical, *variants):
+        # The fixture points ALIASES_PATH at an empty temporary file.
+        aliases.add_alias(canonical, [canonical, *variants])
+
+    def test_a_controller_the_aliases_call_the_same_organisation_is_a_rename_not_an_amendment(self):
+        # October 2025: NHS England relabelled itself on 126 agreements.
+        self.merge_organisations("NHS ENGLAND - X26", "NHS ENGLAND (QUARRY HOUSE)")
+        before = self.edited(controllers=["NHS ENGLAND (QUARRY HOUSE)", "OTHER TRUST"])
+        after = copy.deepcopy(before)
+        after[FIRST][-1]["controllers"] = ["NHS ENGLAND - X26", "OTHER TRUST"]
+        self.record(("july2026", before), ("august2026", after))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+        self.assertEqual(changes.history(REGISTER)[FIRST]["amendments"], 0)
+        difference = compare.compare_versions(before[FIRST][-1], after[FIRST][-1])
+        self.assertEqual(difference["lists"], [])
+        self.assertEqual(difference["renamed"], [{"label": "Data controllers",
+                                                  "before": "NHS ENGLAND (QUARRY HOUSE)",
+                                                  "after": "NHS ENGLAND - X26"}])
+
+    def test_a_renamed_applicant_is_a_rename_not_an_amendment(self):
+        self.merge_organisations("UNIVERSITY OF NEWCASTLE UPON TYNE", "NEWCASTLE UNIVERSITY")
+        before = self.edited(organisation="NEWCASTLE UNIVERSITY")
+        after = self.edited(organisation="UNIVERSITY OF NEWCASTLE UPON TYNE")
+        self.record(("july2026", before), ("august2026", after))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+        difference = compare.compare_versions(before[FIRST][-1], after[FIRST][-1])
+        self.assertEqual([r["label"] for r in difference["renamed"]], ["Applicant organisation"])
+
+    def test_a_rename_beside_a_real_controller_change_reports_only_the_real_one(self):
+        self.merge_organisations("NHS ENGLAND - X26", "NHS ENGLAND (QUARRY HOUSE)")
+        before = self.edited(controllers=["NHS ENGLAND (QUARRY HOUSE)"])
+        after = self.edited(controllers=["NHS ENGLAND - X26", "A NEW CONTROLLER LTD"])
+        self.record(("july2026", before), ("august2026", after))
+        self.assertEqual([a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]],
+                         [["Data controllers"]])
+        difference = compare.compare_versions(before[FIRST][-1], after[FIRST][-1])
+        self.assertEqual(difference["lists"], [{"label": "Data controllers",
+                                                "added": ["A NEW CONTROLLER LTD"], "removed": []}])
+        self.assertEqual(len(difference["renamed"]), 1)
+
+    def test_names_the_aliases_do_not_merge_are_still_a_change_of_controller(self):
+        # A CCG and the ICB that took over from it are different bodies.
+        before = self.edited(controllers=["NHS KENT AND MEDWAY CCG"])
+        after = self.edited(controllers=["NHS KENT AND MEDWAY ICB - 91Q"])
+        self.record(("july2026", before), ("august2026", after))
+        self.assertEqual([a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]],
+                         [["Data controllers"]])
+
+    def test_a_ccg_succeeded_by_its_icb_is_on_the_timeline_but_not_an_amendment(self):
+        from .fixtures import lineage_files
+        lineage_files()
+        before = self.edited(controllers=["NHS KENT AND MEDWAY CCG"])
+        after = self.edited(controllers=["NHS KENT AND MEDWAY ICB - 91Q"])
+        self.record(("july2026", before), ("august2026", after))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+        entry = changes.history(REGISTER)[FIRST]
+        self.assertEqual(entry["amendments"], 0)
+        (event,) = [e for e in entry["events"] if e["edition"] == "august2026"]
+        self.assertEqual(event["reorganised"], [{"label": "Data controllers", "before": "NHS KENT AND MEDWAY CCG",
+                                                 "after": "NHS KENT AND MEDWAY ICB - 91Q", "date": "2022-07-01",
+                                                 "kind": "succeeded"}])
+
+    def test_an_excluded_agreement_is_never_added_amended_or_removed(self):
+        from .fixtures import exclude
+        exclude(SECOND)
+        gone = copy.deepcopy(self.versions)
+        del gone[SECOND]
+        self.record(("july2026", self.versions), ("august2026", self.edited(end_date="2031-06-01")),
+                    ("september2026", gone))
+        self.assertEqual([a["reference"] for a in changes.diff(REGISTER, "august2026")["amended"]], [V2])
+        self.assertEqual(changes.diff(REGISTER, "september2026")["removed"], [])
+        self.assertNotIn(SECOND, changes.history(REGISTER))
 
     def with_dataset_attribute(self, key, value):
         changed = copy.deepcopy(self.versions)
