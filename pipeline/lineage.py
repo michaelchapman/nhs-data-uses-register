@@ -33,6 +33,7 @@ from .names import strip_code
 
 ROOT = Path(__file__).resolve().parent.parent
 CODES_PATH = ROOT / "data" / "organisation-codes.json"
+SUCCESSIONS_PATH = ROOT / "data" / "organisation-successions.json"
 
 SAME = "same"
 SUCCEEDED = "succeeded"
@@ -61,15 +62,49 @@ def write_codes(entries: list[dict], path: Path | None = None) -> None:
     path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def load_successions(path: Path | None = None) -> list[dict]:
+    """Successions a person recorded where ODS has none, or dates one wrongly.
+
+    Each is `{from, to, date, evidence}`, by register name. ODS stays the
+    source wherever it is right; this file is for the exceptions, each with
+    its reason.
+    """
+    path = path or SUCCESSIONS_PATH
+    if not path.exists():
+        return []
+    return json.loads(path.read_text(encoding="utf-8"))["successions"]
+
+
 def _roles(record: dict) -> dict[str, dict]:
     return {role["id"]: role for role in record.get("roles", [])}
 
 
 class Lineage:
-    def __init__(self, codes: list[dict], organisations: dict[str, dict], alias_map: dict[str, str]):
+    def __init__(
+        self,
+        codes: list[dict],
+        organisations: dict[str, dict],
+        alias_map: dict[str, str],
+        successions: list[dict] = (),
+    ):
         self.organisations = organisations
         self.alias_map = alias_map
         self.entries = {aliases._key(e["name"]): e for e in codes}
+        # A reviewed alias makes its names one organisation, so they share
+        # whichever code one of them has, and the page keeps the name the
+        # reviewer chose: "Milton Keynes City Council", where ODS still says
+        # "Milton Keynes Council".
+        self.chosen: dict[str, str] = {}
+        for variant, canonical in alias_map.items():
+            if aliases._key(canonical) not in self.entries and variant in self.entries:
+                self.entries[aliases._key(canonical)] = self.entries[variant]
+        for canonical in set(alias_map.values()):
+            entry = self.entries.get(aliases._key(canonical))
+            if entry and not entry.get("as"):
+                self.chosen.setdefault(entry["code"], canonical)
+        self.successions = {
+            aliases._key(aliases.resolve(s["from"], alias_map)): s for s in successions
+        }
         # ODS sometimes records a succession on one side only.
         self.later: dict[str, list[dict]] = {}
         for code, record in organisations.items():
@@ -95,14 +130,27 @@ class Lineage:
         )
 
     def node(self, name: str) -> str | None:
+        # A reviewed succession is a person's decision about this name, so it
+        # comes before any code a search matched it to: the register's "HEALTH
+        # & SOCIAL CARE INFORMATION CENTRE" also names an unrelated ODS record.
+        key = aliases._key(aliases.resolve(name, self.alias_map)) if name else ""
+        if key in self.successions:
+            return f"name:{key}"
         entry = self.entry(name)
         if not entry:
             return None
         return f"{'ccg' if entry.get('as') == 'CCG' else 'org'}:{entry['code']}"
 
+    def source(self, name: str) -> str:
+        """Where what the site says about `name`'s succession comes from: ODS, or a person."""
+        node = self.node(name)
+        return "reviewed" if node and node.startswith("name:") else "ODS"
+
     def identity(self, node: str) -> str:
         """The organisation a node belongs to: a sub-ICB location belongs to its ICB."""
         kind, code = node.split(":", 1)
+        if kind == "name":
+            return node
         record = self.organisations.get(code, {})
         if kind == "org" and record.get("icb") and ods.SUB_ICB_LOCATION in _roles(record):
             return f"org:{record['icb']}"
@@ -117,8 +165,12 @@ class Lineage:
         return f"org:{code}"
 
     def successors(self, node: str) -> list[tuple[str, str]]:
-        """`[(node, date)]` that `node` passed to, per ODS."""
+        """`[(node, date)]` that `node` passed to, per ODS or a reviewed succession."""
         kind, code = node.split(":", 1)
+        if kind == "name":
+            succession = self.successions[code]
+            later = self.node(succession["to"])
+            return [(self.identity(later), succession["date"])] if later else []
         record = self.organisations.get(code, {})
         found = []
         if kind == "ccg":
@@ -163,8 +215,23 @@ class Lineage:
 
     def page_name(self, identity: str) -> str:
         kind, code = identity.split(":", 1)
+        if kind == "name":
+            return strip_code(self.successions[code]["from"])
         record = self.organisations.get(code)
+        if kind == "org" and code in self.chosen:
+            return strip_code(self.chosen[code])
         if kind == "org" and record:
+            # ODS's name where the register uses it too. Where it does not, ODS
+            # may simply be out of date ("Velindre NHS Trust" for what the
+            # register calls Velindre University NHS Trust), so the register's
+            # own name stands. An ICB the register names only by its sub-ICB
+            # locations has no name of its own there, and takes ODS's.
+            used = sorted(
+                (e["name"] for e in self.entries.values() if e["code"] == code and not e.get("as")),
+                key=lambda n: (n != n.upper(), n),
+            )
+            if used and aliases._key(record["name"]) not in {aliases._key(n) for n in used}:
+                return strip_code(used[0])
             return strip_code(record["name"])
         # A CCG's name is gone from ODS if its record lives on as a sub-ICB
         # location, so it comes from the register.
@@ -199,8 +266,9 @@ class Lineage:
     def predecessors(self, identity: str) -> list[dict]:
         """`[{identity, name, date}]`: organisations named in the register that passed to this one."""
         found: dict[str, str] = {}
-        for entry in self.entries.values():
-            node = self.node(entry["name"])
+        names = [e["name"] for e in self.entries.values()] + [s["from"] for s in self.successions.values()]
+        for name in names:
+            node = self.node(name)
             own = self.identity(node)
             if own == identity:
                 continue
@@ -208,7 +276,7 @@ class Lineage:
                 if self.identity(later) == identity:
                     found[own] = date
         return [
-            {"identity": key, "name": self.page_name(key), "date": date}
+            {"identity": key, "name": self.page_name(key), "date": date, "reviewed": key.startswith("name:")}
             for key, date in sorted(found.items(), key=lambda kv: self.page_name(kv[0]).casefold())
         ]
 
@@ -219,7 +287,11 @@ class Lineage:
             own = self.identity(later)
             if own != identity:
                 found[own] = date
-        return [{"identity": key, "name": self.page_name(key), "date": date} for key, date in sorted(found.items())]
+        reviewed = identity.startswith("name:")
+        return [
+            {"identity": key, "name": self.page_name(key), "date": date, "reviewed": reviewed}
+            for key, date in sorted(found.items())
+        ]
 
 
 def load(codes_path: Path | None = None, snapshot_path: Path | None = None) -> Lineage:
@@ -227,4 +299,5 @@ def load(codes_path: Path | None = None, snapshot_path: Path | None = None) -> L
         load_codes(codes_path),
         ods.load_snapshot(snapshot_path)["organisations"],
         aliases.load_map(aliases.ALIASES_PATH),
+        load_successions(),
     )

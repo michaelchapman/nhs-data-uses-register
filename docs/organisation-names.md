@@ -196,6 +196,35 @@ When in doubt, skip or ignore it — an unmerged near-duplicate is a cosmetic
 inconvenience; a wrong merge attributes one organisation's data sharing to
 another.
 
+## Waiting for a decision
+
+Name changes seen in the register that might be one company renamed, or one
+company taking over another, and that could not be settled from here. Each is
+still counted as a change of data controller or applicant. Merge it in
+`data/organisation-aliases.json` once it is known to be the same legal entity,
+or add it to `ignored` once it is known not to be.
+
+| From | To | Seen | Question |
+| --- | --- | --- | --- |
+| LA-SER Europe Limited (a Certara company) | Certara UK | 8 changes, 2 agreements | Is Certara UK the same legal entity, or the company that acquired LA-SER? |
+| 2020 Delivery Ltd | The Public Service Consultants Limited | 2 changes, 1 agreement | A rebrand of one company, or a different one? |
+
+Recorded 2026-09-26.
+
+Also decided then, and not to be merged:
+- **Guy's and St Thomas' Royal Brompton site** ("GSTT @ Royal Brompton
+  Hospital" and "Royal Brompton Hospital", 7 changes across 3 agreements)
+  stays as written. Neither name is an organisation in ODS.
+- **Three `orgcheck` candidates** are different bodies and are marked
+  `ignored`: Sussex ICB and Surrey and Sussex ICB (ODS records the April 2026
+  merger, which the site shows as a succession); Lancashire & South Cumbria
+  NHS FT and the ICB; South Central and South Western ambulance trusts.
+
+Successions ODS has no record of, or dates misleadingly, are recorded by hand in
+`data/organisation-successions.json`, each with its reason. The first is the
+Health and Social Care Information Centre (NHS Digital) succeeded by NHS
+England on 1 February 2023, which ODS dates to April 2013.
+
 ## What this does and doesn't do
 
 - It only affects the **organisation** field (the applicant, and the data

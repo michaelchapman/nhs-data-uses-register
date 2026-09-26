@@ -139,7 +139,7 @@ class Changes(unittest.TestCase):
         (event,) = [e for e in entry["events"] if e["edition"] == "august2026"]
         self.assertEqual(event["reorganised"], [{"label": "Data controllers", "before": "NHS KENT AND MEDWAY CCG",
                                                  "after": "NHS KENT AND MEDWAY ICB - 91Q", "date": "2022-07-01",
-                                                 "kind": "succeeded"}])
+                                                 "source": "ODS", "kind": "succeeded"}])
 
     def test_an_excluded_agreement_is_never_added_amended_or_removed(self):
         from .fixtures import exclude

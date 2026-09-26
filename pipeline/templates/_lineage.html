@@ -2,7 +2,7 @@
 {% set l = organisation.lineage %}
 {% macro org_link(row) %}{% if row.slug %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %}{% endmacro %}
 {% if l.successors %}
-<p class="notice">{% if l.ccg %}Clinical commissioning groups were abolished when integrated care boards took over their functions. {% endif %}NHS ODS records {{ organisation.name|org }} as succeeded by
+<p class="notice">{% if l.ccg %}Clinical commissioning groups were abolished when integrated care boards took over their functions. {% endif %}{% if l.successors[0].reviewed %}This site records{% else %}NHS ODS records{% endif %} {{ organisation.name|org }} as succeeded by
   {% for row in l.successors %}{{ org_link(row) }}{% if row.date %} from {{ row.date|date }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
   Its agreements below are listed under the name the register gave them.</p>
 {% endif %}
@@ -17,12 +17,15 @@
 {% endif %}
 {% if l.predecessors %}
 <h2 id="predecessors">Predecessors</h2>
-<p>Organisations named in the register that NHS ODS records as succeeded by {{ organisation.name|org }}. The register renames an agreement's organisation when it succeeds, so their agreements are usually listed here{% if l.predecessors|selectattr("slug")|list %}, and on their own pages where they have one{% endif %}.</p>
+<p>Organisations named in the register that NHS ODS, or in a few cases this site, records as succeeded by {{ organisation.name|org }}. The register renames an agreement's organisation when it succeeds, so their agreements are usually listed here{% if l.predecessors|selectattr("slug")|list %}, and on their own pages where they have one{% endif %}.</p>
 <ul class="plain">
   {% for row in l.predecessors %}
-  <li>{{ org_link(row) }}{% if row.date %}, from {{ row.date|date }}{% endif %}</li>
+  <li>{{ org_link(row) }}{% if row.date %}, from {{ row.date|date }}{% endif %}{% if row.reviewed %} <span class="hint">(recorded by hand, where ODS dates it differently)</span>{% endif %}</li>
   {% endfor %}
 </ul>
+{% endif %}
+{% if (l.successors or l.predecessors)|selectattr("reviewed")|list %}
+<p class="hint">A succession marked as recorded by hand is one where ODS has no record, or dates it in a way that would mislead. Each is listed, with its reason, in <a href="{{ meta.repo_url }}/blob/main/data/organisation-successions.json">data/organisation-successions.json</a>.</p>
 {% endif %}
 {% if l.successors or l.sub_icb_locations or l.predecessors %}
 <p class="hint">Source: <a href="{{ ods.url }}">{{ ods.name }}</a>, published by {{ ods.publisher }} under the <a href="{{ ods.licence_url }}">{{ ods.licence }}</a>.</p>

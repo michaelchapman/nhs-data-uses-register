@@ -422,7 +422,7 @@ def history(
                         # but the timeline says it happened, once per edition.
                         for item in (difference or {}).get("succeeded", []) + (difference or {}).get("renamed", []):
                             pair = {"label": item["label"], "before": item["before"], "after": item["after"],
-                                    "date": item.get("date", ""),
+                                    "date": item.get("date", ""), "source": item.get("source", "ODS"),
                                     "kind": "succeeded" if item in (difference or {}).get("succeeded", []) else "renamed"}
                             if item["label"] != "Organisation type" and pair not in entry["reorganised"]:
                                 entry["reorganised"].append(pair)

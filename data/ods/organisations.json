@@ -20619,6 +20619,35 @@
    "successors": [],
    "predecessors": []
   },
+  "RQF": {
+   "name": "VELINDRE NHS TRUST",
+   "status": "Active",
+   "start": "1994-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1994-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO7",
+     "primary": false,
+     "start": "1994-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "WH5H5",
+     "date": "1994-04-01"
+    }
+   ]
+  },
   "RQL": {
    "name": "MOUNT VERNON AND WATFORD HOSPITALS NHS TRUST",
    "status": "Inactive",
@@ -28584,6 +28613,23 @@
      "date": "2023-04-01"
     }
    ]
+  },
+  "WH5H5": {
+   "name": "VELINDRE HOSPITAL",
+   "status": "Inactive",
+   "start": "1991-04-01",
+   "end": "1994-03-31",
+   "roles": [
+    {
+     "id": "RO114",
+     "primary": true,
+     "start": "1991-04-01",
+     "end": "1994-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
   },
   "X03": {
    "name": "HEALTHCARE COMMISSION",

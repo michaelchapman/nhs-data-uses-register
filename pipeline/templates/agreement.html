@@ -43,7 +43,7 @@
   <p class="diff-list"><strong>{{ change.label }}:</strong> renamed from {{ change.before|org }} to {{ change.after|org }}. <span class="hint">The same organisation under a new name, so not counted as a change.</span></p>
   {% endfor %}
   {% for change in diff.succeeded %}
-  <p class="diff-list"><strong>{{ change.label }}:</strong> {{ change.before|org }} succeeded by {{ change.after|org }}{% if change.date %} from {{ change.date|date }}{% endif %}. <span class="hint">{% if change.date %}NHS ODS records the succession, so this is not counted as a change.{% else %}Changed with the organisation, so not counted separately.{% endif %}</span></p>
+  <p class="diff-list"><strong>{{ change.label }}:</strong> {{ change.before|org }} succeeded by {{ change.after|org }}{% if change.date %} from {{ change.date|date }}{% endif %}. <span class="hint">{% if change.date and change.source == "reviewed" %}A succession recorded by hand, where ODS dates it differently, so this is not counted as a change.{% elif change.date %}NHS ODS records the succession, so this is not counted as a change.{% else %}Changed with the organisation, so not counted separately.{% endif %}</span></p>
   {% endfor %}
   {% if diff.cosmetic %}
   <p class="hint">Changed only in punctuation, spacing or capitalisation: {{ diff.cosmetic|join(", ") }}.</p>
@@ -277,7 +277,7 @@
     {% for item in event.reorganised %}
     <div class="timeline-line">
       <span class="tag">{{ "Succeeded" if item.kind == "succeeded" else "Renamed" }}</span>
-      {{ item.label }}: {{ item.before|org }} {{ "succeeded by" if item.kind == "succeeded" else "now named" }} {{ item.after|org }}{% if item.date %} from {{ item.date|date }}, according to NHS ODS{% endif %}. <span class="hint">Not counted as a change.</span>
+      {{ item.label }}: {{ item.before|org }} {{ "succeeded by" if item.kind == "succeeded" else "now named" }} {{ item.after|org }}{% if item.date %} from {{ item.date|date }}{% if item.source == "reviewed" %}, as recorded by hand where ODS dates it differently{% else %}, according to NHS ODS{% endif %}{% endif %}. <span class="hint">Not counted as a change.</span>
     </div>
     {% endfor %}
     {% if event.removed %}

@@ -538,10 +538,12 @@ def _lineage_pages(organisation_lineage) -> dict[str, tuple[str, str]]:
     if organisation_lineage is None:
         return {}
     pages = {}
-    for entry in organisation_lineage.entries.values():
-        identity = organisation_lineage.page(entry["name"])
-        name = organisation_lineage.page_name(identity)
-        pages[slugify(name)] = (name, identity)
+    names = [e["name"] for e in organisation_lineage.entries.values()]
+    names += [s["from"] for s in organisation_lineage.successions.values()]
+    for name in names:
+        identity = organisation_lineage.page(name)
+        page_name = organisation_lineage.page_name(identity)
+        pages[slugify(page_name)] = (page_name, identity)
     return pages
 
 
@@ -564,6 +566,7 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
     alias_map = aliases.load_map()
     dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     lineage_pages = _lineage_pages(organisation_lineage)
+    reviewed_names = {aliases._key(clean_line(g["canonical"])) for g in aliases.load_groups()}
     # The exact text a reviewer wrote as `canonical` in the alias file, keyed
     # by its own slug. Falling back to `aliases.resolve()` per agreement isn't
     # enough on its own: whichever raw name happens to be processed first
@@ -599,6 +602,7 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
         )
         if raw_name != entry["name"]:
             entry["known_as"].add(raw_name)
+        entry.setdefault("raw_names", set()).add(raw_name)
         entry["agreements"].append(agreement)
 
     # An organisation can also appear only as a data controller on someone else's
@@ -632,6 +636,7 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
                 seen_refs[controller_slug] = set()
             if controller != entry["name"]:
                 entry["known_as"].add(controller)
+            entry.setdefault("raw_names", set()).add(controller)
             if agreement["base_reference"] not in seen_refs[controller_slug]:
                 entry["controller_agreements"].append(agreement)
                 seen_refs[controller_slug].add(agreement["base_reference"])
@@ -654,6 +659,14 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
         # Codes are shown only where they explain lineage, which the sub-ICB
         # location list does; here they would only make one name look like two.
         entry["known_as"] = sorted({strip_code(n) for n in entry["known_as"]} - {strip_code(entry["name"])})
+        # Named as ODS names it, where the register never uses that name: a
+        # reviewer's chosen spelling does not count, as that is the register's.
+        raw_names = {aliases._key(strip_code(n)) for n in entry.pop("raw_names", set())}
+        entry["named_in_register"] = not (
+            entry["slug"] in lineage_pages
+            and aliases._key(strip_code(entry["name"])) not in raw_names
+            and aliases._key(entry["name"]) not in reviewed_names
+        )
     return sorted(grouped.values(), key=lambda o: o["name"].lower())
 
 
