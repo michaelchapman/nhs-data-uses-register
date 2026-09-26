@@ -198,11 +198,28 @@ def _agreement_organisation(record: dict | None, index: dict[str, int]) -> str:
     return max(held)[2] if held else ""
 
 
+def _compare(memo: dict | None, key: tuple, was: dict, now: dict, *maps) -> dict | None:
+    """`compare.compare_versions`, remembered in `memo` under `key` when one is given.
+
+    A build compares each amended version once for its edition's changes page
+    and again for its agreement's timeline. `run` passes one memo to both, so
+    the second is a lookup. The key is the version and the two stored states
+    it moved between, which is only unambiguous within one store and one set
+    of aliases: that is why the memo is passed in, never kept here.
+    """
+    if memo is None:
+        return compare.compare_versions(was, now, *maps)
+    if key not in memo:
+        memo[key] = compare.compare_versions(was, now, *maps)
+    return memo[key]
+
+
 def diff(
     register_slug: str,
     edition: str,
     previous_edition: str | None = None,
     alias_map: dict[str, str] | None = None,
+    memo: dict | None = None,
 ) -> dict:
     """Agreement-version level changes between `edition` and the one before it."""
     held = facts.stored_editions(register_slug)
@@ -258,7 +275,8 @@ def diff(
         was, is_now = state_of(reference, before), state_of(reference, now)
         if was is None or is_now is None:
             continue
-        difference = compare.compare_versions(was, is_now, alias_map, organisation_aliases, organisation_lineage)
+        difference = _compare(memo, (reference, before[reference], now[reference]), was, is_now,
+                              alias_map, organisation_aliases, organisation_lineage)
         if _material(difference):
             found.append((reference, is_now, difference))
 
@@ -318,6 +336,7 @@ def history(
     register_slug: str,
     alias_map: dict[str, str] | None = None,
     wide: dict[str, dict[tuple, int]] | None = None,
+    memo: dict | None = None,
 ) -> dict[str, dict]:
     """When each agreement and each of its versions appeared or changed.
 
@@ -390,8 +409,9 @@ def history(
             if event["kind"] == "amended":
                 version = states.get(event["reference"], [])
                 if event["from"] < len(version) and event["to"] < len(version):
-                    difference = compare.compare_versions(
-                        version[event["from"]], version[event["to"]], alias_map, organisation_aliases, organisation_lineage
+                    difference = _compare(
+                        memo, (event["reference"], event["from"], event["to"]),
+                        version[event["from"]], version[event["to"]], alias_map, organisation_aliases, organisation_lineage,
                     )
                     # Naming the fields is the difference between "this was
                     # edited" and "the data controller was changed" — the

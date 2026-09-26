@@ -104,8 +104,11 @@ def main() -> None:
     # editions comes from the facts store, so a workbook that has not been
     # ingested has nothing to be compared with.
     held = facts.stored_editions(register.slug)
+    # Every comparison made below, kept for the ones that come round again:
+    # see `changes._compare`.
+    memo: dict = {}
     if edition in held:
-        changes = changes_module.diff(register.slug, edition)
+        changes = changes_module.diff(register.slug, edition, memo=memo)
     else:
         changes = {
             "comparable": False, "reason": "not-ingested", "previous_edition": None,
@@ -136,7 +139,10 @@ def main() -> None:
     # only the newest.
     changes_history = []
     for held_edition in held[1:]:
-        history_entry = changes_module.diff(register.slug, held_edition)
+        # The edition being built was compared above; the same answer serves.
+        history_entry = changes if held_edition == edition else changes_module.diff(
+            register.slug, held_edition, memo=memo
+        )
         history_entry["edition"] = held_edition
         changes_history.append(history_entry)
     meta = {
@@ -163,7 +169,7 @@ def main() -> None:
 
     # An agreement's history reaches back over every edition the store holds.
     history = changes_module.history(
-        register.slug, wide={entry["edition"]: entry["wide_ops"] for entry in changes_history}
+        register.slug, wide={entry["edition"]: entry["wide_ops"] for entry in changes_history}, memo=memo
     )
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history

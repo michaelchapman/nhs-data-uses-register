@@ -251,6 +251,12 @@ Foundation Trust, succeeded by North London NHS Foundation Trust in November
 2024. The trust renames ODS confirms (Salford Royal, University Hospitals
 Bristol and Weston, West Hertfordshire) are reported as renames.
 
-The build takes about 90 seconds, against 30 before. Most of the difference is
-the lineage check in each of the archive's comparisons.
+The build took about 90 seconds at first, against 30 before. Profiling showed
+the lineage was not the cause: a rename check added to `compare._list_change`
+derived every name's key inside a loop over names, which is quadratic in a
+dataset list of hundreds. Fixing that, caching `normalise` and the alias key,
+and comparing each amended version once for both its changes page and its
+timeline brought the build to about 47 seconds, with the same output byte for
+byte and the same peak memory (about 1 GB). Most of what remains is reading and
+parsing the facts store, which is read one agreement at a time on purpose.
 
