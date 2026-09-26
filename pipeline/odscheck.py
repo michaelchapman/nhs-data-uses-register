@@ -14,7 +14,8 @@ A code is assigned only on evidence, strongest first:
 Anything else needs a person: an entry whose evidence starts "reviewed:" is
 kept on every run, and names that look like NHS organisations but match
 nothing are listed for review. Then run `python -m pipeline.ods` to refresh
-the records the codes point at. See docs/plan-organisation-changes.md.
+the records the codes point at. See docs/organisation-names.md,
+"NHS reorganisations (ODS)".
 """
 
 from __future__ import annotations

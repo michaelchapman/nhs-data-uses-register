@@ -188,6 +188,58 @@ Decisions land in `data/dataset-aliases.json`, which `extract` applies when
 grouping datasets, so a renamed dataset keeps one page and one history
 instead of splitting at the rename.
 
+## NHS reorganisations (ODS)
+
+Aliases say two names are one organisation. NHS reorganisations need more:
+a clinical commissioning group and the integrated care board that took over
+from it are different bodies, and several CCGs often passed to one ICB. For
+NHS organisations the site asks the NHS Organisation Data Service (ODS)
+instead, which records codes, roles and who succeeded whom, and says three
+things with it:
+
+- **renamed**: two names ODS gives one record, or a sub-ICB location and its
+  ICB. Not counted as a change.
+- **succeeded**: one organisation took over from another, with ODS's date.
+  Not counted as a change, and shown on the agreement's timeline and on both
+  organisation pages.
+- **one page per ICB**: every sub-ICB location's name goes to its ICB's page,
+  which lists the locations with the CCG each continued. Names are shown
+  without ODS codes, except in that list, where a code explains which body
+  continued which.
+
+Three committed files hold it, and the build never asks ODS anything:
+
+| File | What it holds | Written by |
+| --- | --- | --- |
+| `data/organisation-codes.json` | the ODS code for each register name, with the evidence | `python -m pipeline.odscheck --apply` |
+| `data/ods/organisations.json` | the ODS records those codes reach (Open Government Licence) | `python -m pipeline.ods` |
+| `data/organisation-successions.json` | successions ODS has no record of, or dates misleadingly | by hand |
+
+`odscheck` assigns a code only on evidence: the code is in the name ("NHS KENT
+AND MEDWAY ICB - 91Q"); the name is exactly one ODS organisation's current
+name; or the name is a CCG's, and the register replaced it with a coded name
+whose ODS record was a CCG and became a sub-ICB location. That last case exists
+because ODS kept most CCG records on 1 July 2022 and renamed them, so their
+old names are gone from ODS. A CCG name only ever matches a CCG record: ODS
+holds some prescribing records under old CCG names. An entry whose evidence
+starts `reviewed:` was decided by a person, and every run keeps it.
+
+How the pieces fit:
+
+- A reviewed alias wins over ODS. Names an alias merges share whichever code
+  one of them has, and the page keeps the reviewer's chosen name.
+- A page takes ODS's name only where the register uses it too. Otherwise the
+  register's own name stands, because ODS can be out of date ("Velindre NHS
+  Trust" for Velindre University NHS Trust).
+- A reviewed succession wins over any code the same name was matched to, and
+  pages say it was recorded by hand. The first is the Health and Social Care
+  Information Centre, succeeded by NHS England on 1 February 2023, which ODS
+  dates to April 2013.
+
+When a new edition names an NHS organisation the register has not used
+before, run both commands and commit the two data files; see
+[manual-updates.md](manual-updates.md).
+
 ## Deciding
 
 For each candidate ask: is this the same legal entity recorded
@@ -233,8 +285,7 @@ England on 1 February 2023, which ODS dates to April 2013.
 - It also decides what counts as a change. When a version's applicant or data
   controllers move from one name to another that the aliases call the same
   organisation, the site reports a rename, not an amendment. Merging two names
-  therefore changes the "what changed" counts as well as the pages. See
-  [plan-version-diffs.md](plan-version-diffs.md) §11.
+  therefore changes the "what changed" counts as well as the pages.
 - It's forward and backward compatible with the committed edition store: an
   alias applies to every edition rebuilt after it's added, not just the one
   ingested at the time.

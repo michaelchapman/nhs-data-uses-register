@@ -4,7 +4,7 @@ This is the only committed store. It holds the text of every edition, so a
 change to what counts as an amendment, a new alias, or a fix in `extract` costs
 a rebuild and never a re-parse of the workbooks. (It replaced a newest-edition
 extract plus a digest per edition, which made every answer a function of the
-rules in force the day it was written; see ``docs/plan-facts-store.md``.)
+rules in force the day it was written.)
 
 That is affordable because the register barely changes. Across the 63 editions
 held, 263,342 version-entries are only 5,702 distinct (agreement, version)
@@ -46,7 +46,7 @@ Four kinds of file, all under ``data/facts/<register>/``:
     granted in NHS England's own systems, such as its Secure Data Environment,
     or data shared onward by a recipient, so a second
     source can be added beside these rather than merged into them. See
-    ``docs/plan-release-coverage.md``.
+    ``docs/plan.md``, "Release views".
 
 ``editions/<edition>.json``
     Which state each version was in that month: ``{reference: state index}``.

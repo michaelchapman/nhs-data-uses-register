@@ -1,4 +1,4 @@
-{#- What NHS ODS records about an organisation page: see docs/plan-organisation-changes.md. -#}
+{#- What NHS ODS records about an organisation page: see docs/organisation-names.md. -#}
 {% set l = organisation.lineage %}
 {% macro org_link(row) %}{% if row.slug %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %}{% endmacro %}
 {% if l.successors %}

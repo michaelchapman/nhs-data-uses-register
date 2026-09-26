@@ -247,7 +247,7 @@ class OrganisationNames(unittest.TestCase):
 
 
 class ReleaseWording(unittest.TestCase):
-    """What a file release does and does not show, per docs/plan-release-coverage.md §5."""
+    """What a file release does and does not show, per docs/plan.md, "Release views"."""
 
     @classmethod
     def setUpClass(cls):
@@ -297,7 +297,7 @@ class ReleaseWording(unittest.TestCase):
 
 
 class MergerEdition(unittest.TestCase):
-    """February 2023's departures are labelled, per docs/plan-release-coverage.md §5."""
+    """February 2023's departures are labelled, per docs/plan.md, "Release views"."""
 
     def changes_page(self, edition: str) -> str:
         removed = [{"base": "DARS-NIC-9-ZZZZZ", "reference": "DARS-NIC-9-ZZZZZ-v1",
@@ -333,7 +333,7 @@ class ReleaseScope(unittest.TestCase):
 
 
 class NhsLineage(unittest.TestCase):
-    """One page per ICB, codes kept out of names: docs/plan-organisation-changes.md."""
+    """One page per ICB, codes kept out of names: docs/organisation-names.md."""
 
     @classmethod
     def setUpClass(cls):

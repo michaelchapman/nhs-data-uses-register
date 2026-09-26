@@ -31,7 +31,7 @@ VERSION_SUFFIX = re.compile(r"-v([0-9]+(?:\.[0-9]+)?)$", re.IGNORECASE)
 # a file released externally by DARS — and says nothing about access granted in
 # NHS England's own systems, such as its Secure Data Environment, or onward
 # sharing by the recipient, so this is named for what it holds rather than for
-# "releases" in general. See docs/plan-release-coverage.md.
+# "releases" in general. See docs/plan.md, "Release views".
 FILE_RELEASE = "file"
 
 # Attributes a release row repeats from the dataset it names, and which differ

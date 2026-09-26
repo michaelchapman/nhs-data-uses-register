@@ -19,7 +19,7 @@ over from it.
 A CCG and the sub-ICB location that continued it share an ODS code, because
 ODS renamed the record on 1 July 2022 rather than closing it. A register name
 recorded `"as": "CCG"` is the code as it was before then. That is how the two
-are told apart. See docs/plan-organisation-changes.md.
+are told apart. See docs/organisation-names.md, "NHS reorganisations (ODS)".
 """
 
 from __future__ import annotations
@@ -55,7 +55,7 @@ def write_codes(entries: list[dict], path: Path | None = None) -> None:
             "entry whose evidence starts \"reviewed:\" was decided by a person and "
             "is kept on every run. \"as\": \"CCG\" marks a name that belongs to the "
             "code as it was while a clinical commissioning group, before ODS renamed "
-            "the record as a sub-ICB location. See docs/plan-organisation-changes.md."
+            "the record as a sub-ICB location. See docs/organisation-names.md."
         ),
         "names": sorted(entries, key=lambda e: (e["name"].casefold(), e["name"])),
     }

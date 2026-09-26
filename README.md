@@ -87,9 +87,7 @@ the workbooks.
   that was ingested can be identified.
 
 The whole archive, July 2021 to September 2026, is about 420 MB on disk and
-42 MB packed in git; a monthly ingest adds under 1 MB. See
-[docs/plan-facts-store.md](docs/plan-facts-store.md) for why it is shaped this
-way.
+42 MB packed in git; a monthly ingest adds under 1 MB.
 
 The workbooks themselves (29 MB each) are never committed: `data/raw/` is
 gitignored.
@@ -150,7 +148,7 @@ data/excluded-agreements.json   published records the site leaves out, with the 
 data/ods/organisations.json     the ODS records the site uses (Open Government Licence)
 docs/manual-updates.md          the monthly routine
 docs/organisation-names.md      reviewing and merging organisation names
-docs/plan-*.md                  design notes, accepted and proposed
+docs/plan.md                    what is left to do
 ```
 
 ## Adding another register
@@ -171,8 +169,7 @@ register with the same shape needs no template changes.
   every file, but a release row records a file released externally by DARS; it
   does not cover access granted in NHS England's own systems, such as its
   Secure Data Environment and predecessors, or data shared onward by a
-  recipient. See
-  [docs/plan-release-coverage.md](docs/plan-release-coverage.md).
+  recipient. See [docs/plan.md](docs/plan.md#what-release-data-can-and-cannot-say).
 - The register describes what applicants said they intended, not audited
   outcomes.
 
