@@ -23,6 +23,7 @@ from . import build as build_module
 from . import changes as changes_module
 from . import facts
 from . import sources
+from .extract import _version_key
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SITE_URL = "https://michaelchapman.github.io"
@@ -60,6 +61,12 @@ def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
     data["archived"], dropped = facts.read_archive(register.slug, edition)
     for agreement in data["agreements"]:
         agreement["dropped_versions"] = dropped.get(agreement["base_reference"], [])
+        # A version numbered after the one now listed as current: the register
+        # went back to an older version, and a reader should be told.
+        current = _version_key(agreement["latest"]["version"])
+        agreement["later_dropped"] = [
+            v for v in agreement["dropped_versions"] if _version_key(v["version"]) > current
+        ]
     entry = facts.manifest_entry(register.slug, edition) or {}
     return data, edition, entry
 

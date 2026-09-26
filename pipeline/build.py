@@ -16,7 +16,7 @@ from . import lineage
 from . import ods
 from .names import display_name, strip_code
 from . import sources
-from .extract import slugify
+from .extract import archive_views, slugify
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Path(__file__).resolve().parent / "templates"
@@ -258,6 +258,9 @@ def build(
     # Agreements earlier editions listed and this one does not: pages of their
     # own, and never in a count. See `facts.read_archive`.
     archived = data.get("archived", [])
+    archive = archive_views(archived, data["organisations"], data["datasets"])
+    org_slugs = {o["slug"] for o in data["organisations"] + archive["organisations"]}
+    dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
 
     # Attach change status to agreements so detail pages can flag recent activity.
     changed_refs = {
@@ -295,9 +298,10 @@ def build(
     )[:15]
     render("index.html", "index.html", agreements=data["agreements"], top_organisations=top_organisations)
     render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
-           org_slugs={o["slug"] for o in data["organisations"]})
-    render("organisations.html", "organisations/index.html", organisations=data["organisations"])
-    render("datasets.html", "datasets/index.html", datasets=data["datasets"])
+           org_slugs=org_slugs)
+    render("organisations.html", "organisations/index.html", organisations=data["organisations"],
+           archived_organisations=archive["organisations"])
+    render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
     # An agreement no longer listed still has its page, so a row about it links.
     changes_by_slug = {a["base_reference"]: a for a in archived + data["agreements"]}
     render("changes.html", "changes/index.html", by_slug=changes_by_slug)
@@ -319,7 +323,6 @@ def build(
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
-    org_slugs = {o["slug"] for o in data["organisations"]}
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     organisation_lineage = lineage.load()
@@ -332,29 +335,35 @@ def build(
             org_slugs=org_slugs,
             # An agreement no longer listed can name a dataset no listed
             # agreement does, which has no page.
-            dataset_slugs={d["slug"] for d in data["datasets"]},
+            dataset_slugs=dataset_slugs,
             history=(history or {}).get(agreement["base_reference"]),
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
         )
-    archived_by_organisation: dict[str, list[dict]] = {}
-    for agreement in archived:
-        archived_by_organisation.setdefault(agreement["organisation_slug"], []).append(agreement)
-    for organisation in data["organisations"]:
+    for organisation in data["organisations"] + archive["organisations"]:
         render(
             "organisation.html",
             f"organisations/{organisation['slug']}/index.html",
             organisation=organisation,
-            archived=archived_by_organisation.get(organisation["slug"], []),
+            archived=archive["by_organisation"].get(organisation["slug"], []),
+            org_slugs=org_slugs,
+            dataset_slugs=dataset_slugs,
         )
-    for dataset in data["datasets"]:
-        render("dataset.html", f"datasets/{dataset['slug']}/index.html", dataset=dataset)
+    for dataset in data["datasets"] + archive["datasets"]:
+        render(
+            "dataset.html",
+            f"datasets/{dataset['slug']}/index.html",
+            dataset=dataset,
+            archived=archive["by_dataset"].get(dataset["slug"], []),
+            org_slugs=org_slugs,
+        )
 
     shutil.copytree(ASSETS, out / "assets", dirs_exist_ok=True)
     (out / ".nojekyll").write_text("")
     _write(out, "meta.json", json.dumps({**meta, "stats": stats}, indent=1))
     _write(out, "sitemap.xml", env.get_template("sitemap.xml").render(
         **context, agreements=data["agreements"] + archived,
-        organisations=data["organisations"], datasets=data["datasets"],
+        organisations=data["organisations"] + archive["organisations"],
+        datasets=data["datasets"] + archive["datasets"],
     ))
     _write(out, "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {meta['site_url']}/sitemap.xml\n")
     print(f"built {sum(1 for _ in out.rglob('*.html')):,} pages into {out}")

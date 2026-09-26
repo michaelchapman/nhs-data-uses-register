@@ -88,6 +88,11 @@
 {% endif %}
 <p class="lede">{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
 
+{% if agreement.later_dropped %}
+<p class="notice"><strong>A later version has left the register.</strong>
+  {% for version in agreement.later_dropped %}<a href="#no-longer-listed">v{{ version.version }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+  {{ "was" if agreement.later_dropped|length == 1 else "were" }} listed until the {{ agreement.later_dropped[0].last_edition|edition }} edition and {{ "has" if agreement.later_dropped|length == 1 else "have" }} not been listed since, so the version shown here as current is an earlier one. The register does not say why.</p>
+{% endif %}
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
   <div><dt>{{ now|capitalize }} version</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>

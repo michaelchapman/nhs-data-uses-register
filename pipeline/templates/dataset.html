@@ -11,6 +11,9 @@
 </nav>
 
 <h1>{{ dataset.name }}</h1>
+{% if dataset.archived %}
+<p class="notice"><strong>No longer in the register.</strong> Every agreement naming this dataset has left the register; the last was published in the {{ dataset.archived.last_edition|edition }} edition. This page shows those agreements as last published, and none is counted in this site's figures.</p>
+{% endif %}
 
 <dl class="key-facts">
   <div><dt>Agreements naming it</dt><dd>{{ dataset.agreement_count|commas }}</dd></div>
@@ -57,7 +60,7 @@
   <summary>Show the list, with the number of agreements for each</summary>
   <ul class="pill-list">
     {% for row in dataset.organisation_rows %}
-    <li><a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a> ({{ row.agreements|commas }})</li>
+    <li>{% if row.slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %} ({{ row.agreements|commas }})</li>
     {% endfor %}
   </ul>
 </details>
@@ -81,7 +84,7 @@
     <tr data-search="{{ (a.title ~ ' ' ~ a.organisation ~ ' ' ~ a.base_reference)|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
+      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>
       <td>{{ a.organisation_type or "—" }}</td>
       <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       <td>{{ a.commercial or "—" }}</td>
@@ -90,5 +93,6 @@
   </tbody>
 </table>
 </div>
+{% with intro="Agreements naming this dataset that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

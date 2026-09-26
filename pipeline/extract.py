@@ -726,3 +726,57 @@ def _group_datasets(agreements: list[dict], organisation_lineage=None) -> list[d
         entry["attributes"] = {k: sorted(v) for k, v in entry["attributes"].items()}
         entry["organisation_rows"] = _dataset_organisations(entry["agreements"], canonical_by_slug)
     return sorted(grouped.values(), key=lambda d: (-d["agreement_count"], d["name"].lower()))
+
+
+def archive_views(archived: list[dict], organisations: list[dict], datasets: list[dict]) -> dict:
+    """Organisation and dataset pages for agreements no longer in the register.
+
+    An organisation or dataset that only departed agreements name would
+    otherwise lose its page when they leave, though their pages still name it.
+    Returns:
+
+    - `organisations`, `datasets`: pages for those named only by departed
+      agreements, each marked `archived` with the last edition that named it;
+    - `by_organisation`, `by_dataset`: `{slug: [agreement]}`, the departed
+      agreements naming each page that is still current, for a section of its
+      own.
+
+    None of it is counted in the site's figures, which come from the
+    agreements still listed.
+    """
+    from . import sources
+
+    organisation_lineage = lineage.load()
+    order = lambda a: sources.edition_sort_key(a["archived"]["last_edition"])
+    current_organisations = {o["slug"] for o in organisations}
+    current_datasets = {d["slug"] for d in datasets}
+
+    by_organisation, archived_organisations = {}, []
+    for entry in _group_organisations(archived, organisation_lineage):
+        named = list({a["base_reference"]: a for a in entry["agreements"] + entry["controller_agreements"]}.values())
+        if entry["slug"] in current_organisations:
+            by_organisation[entry["slug"]] = named
+        else:
+            entry["archived"] = {"last_edition": max(named, key=order)["archived"]["last_edition"]}
+            archived_organisations.append(entry)
+
+    by_dataset, archived_datasets = {}, []
+    for entry in _group_datasets(archived, organisation_lineage):
+        if entry["slug"] in current_datasets:
+            by_dataset[entry["slug"]] = entry["agreements"]
+        else:
+            entry["archived"] = {"last_edition": max(entry["agreements"], key=order)["archived"]["last_edition"]}
+            archived_datasets.append(entry)
+
+    # Lineage links were worked out within each group; an archived CCG's
+    # successor may well be a current page, and the other way round.
+    slugs = current_organisations | {o["slug"] for o in archived_organisations}
+    for entry in organisations + archived_organisations:
+        for row in (entry.get("lineage") or {}).get("predecessors", []) + (entry.get("lineage") or {}).get("successors", []):
+            row["slug"] = slugify(row["name"]) if slugify(row["name"]) in slugs else ""
+    return {
+        "organisations": archived_organisations,
+        "datasets": archived_datasets,
+        "by_organisation": by_organisation,
+        "by_dataset": by_dataset,
+    }

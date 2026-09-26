@@ -12,6 +12,9 @@
 
 <h1>{{ organisation.name|org }}</h1>
 <p class="lede">{{ organisation.type or "Organisation type not stated" }}</p>
+{% if organisation.archived %}
+<p class="notice"><strong>No longer in the register.</strong> Every agreement naming {{ organisation.name|org }} has left the register; the last was published in the {{ organisation.archived.last_edition|edition }} edition. This page shows those agreements as last published, and none is counted in this site's figures.</p>
+{% endif %}
 {% if organisation.name|org != organisation.name|nocode %}
 <p class="hint">The register writes this name in capitals: {{ organisation.name|nocode }}.</p>
 {% endif %}
@@ -71,7 +74,7 @@
     <tr>
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
+      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>
       <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
     </tr>
   {% endfor %}
@@ -80,7 +83,7 @@
 </div>
 {% endif %}
 
-{% with intro="Agreements with " ~ (organisation.name|org) ~ " as applicant that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=false %}{% include "_archived.html" %}{% endwith %}
+{% with intro="Agreements naming " ~ (organisation.name|org) ~ " as applicant or data controller that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
 <h2>Datasets received</h2>
 <ul class="pill-list">

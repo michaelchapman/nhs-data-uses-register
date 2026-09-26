@@ -403,9 +403,16 @@ class ArchivedAgreements(unittest.TestCase):
         with dataset_aliases():
             data = extract(workbook_bytes())
             left = next(a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-2-BBBBB")
-            data["agreements"].remove(left)
+            # The register as it would be without it: organisations and
+            # datasets are derived from the agreements still listed.
+            from pipeline.extract import assemble
+            data = assemble({a["base_reference"]: a["versions"] for a in data["agreements"] if a is not left})
             left["archived"] = {"last_edition": "january2023", "next_edition": "february2023"}
             data["archived"] = [left]
+            kept = data["agreements"][0]
+            later = {**kept["latest"], "reference": "DARS-NIC-1-AAAAA-v3", "version": "3",
+                     "last_edition": "january2023"}
+            kept["dropped_versions"] = kept["later_dropped"] = [later]
             removed = [{"base": "DARS-NIC-2-BBBBB", "reference": "DARS-NIC-2-BBBBB-v1",
                         "title": "Ambulance study", "org": left["organisation"]}]
             changes = {**FIRST_EDITION, "comparable": True, "reason": "", "skipped": [],
@@ -435,6 +442,25 @@ class ArchivedAgreements(unittest.TestCase):
 
     def test_the_changes_page_links_to_it(self):
         self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', self.read("changes"))
+
+    def test_an_organisation_named_only_by_it_keeps_a_page_outside_the_counts(self):
+        slug = "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c"
+        self.assertIn("No longer in the register.", self.read(f"organisations/{slug}"))
+        self.assertIn("No longer in the register (1)", self.read("organisations"))
+        # University of Example, and Other Trust as a joint controller: not the archived one.
+        self.assertIn('<span class="stat-number">2</span><span class="stat-label">organisations', self.read(""))
+
+    def test_a_dataset_named_only_by_it_keeps_a_page_and_a_shared_one_lists_it_apart(self):
+        self.assertIn("No longer in the register.", self.read("datasets/other-data-set"))
+        self.assertIn("No longer in the register (1)", self.read("datasets"))
+        shared = self.read("datasets/msds-maternity-services-data-set-v1-5")
+        self.assertNotIn('<p class="notice"><strong>No longer in the register.', shared)
+        self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', shared)
+
+    def test_a_later_version_that_left_is_noted_beside_the_current_one(self):
+        page = self.read("agreements/dars-nic-1-aaaaa")
+        self.assertIn("A later version has left the register.", page)
+        self.assertIn("v3</a>", page)
 
     def test_links_stay_whole(self):
         broken, _ = linkcheck.check(self.out)
