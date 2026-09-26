@@ -1,0 +1,29 @@
+{#- What NHS ODS records about an organisation page: see docs/plan-organisation-changes.md. -#}
+{% set l = organisation.lineage %}
+{% macro org_link(row) %}{% if row.slug %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %}{% endmacro %}
+{% if l.successors %}
+<p class="notice">{% if l.ccg %}Clinical commissioning groups were abolished when integrated care boards took over their functions. {% endif %}NHS ODS records {{ organisation.name|org }} as succeeded by
+  {% for row in l.successors %}{{ org_link(row) }}{% if row.date %} from {{ row.date|date }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
+  Its agreements below are listed under the name the register used.</p>
+{% endif %}
+{% if l.sub_icb_locations %}
+<h2 id="sub-icb-locations">Sub-ICB locations</h2>
+<p>The register names this integrated care board by its sub-ICB locations as well as by its own name, so their agreements are listed here together. Each sub-ICB location continued a clinical commissioning group under the same ODS code, which is how they are told apart.</p>
+<ul class="plain">
+  {% for row in l.sub_icb_locations %}
+  <li><span class="version-ref">{{ row.code }}</span>{% if row.former %}, formerly {{ row.former[0]|org }}{% endif %}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if l.predecessors %}
+<h2 id="predecessors">Predecessors</h2>
+<p>Organisations named in the register that NHS ODS records as succeeded by {{ organisation.name|org }}. Their agreements stay on their own pages, under the names the register gave them.</p>
+<ul class="plain">
+  {% for row in l.predecessors %}
+  <li>{{ org_link(row) }}{% if row.date %}, from {{ row.date|date }}{% endif %}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if l.successors or l.sub_icb_locations or l.predecessors %}
+<p class="hint">Source: <a href="{{ ods.url }}">{{ ods.name }}</a>, published by {{ ods.publisher }} under the <a href="{{ ods.licence_url }}">{{ ods.licence }}</a>.</p>
+{% endif %}

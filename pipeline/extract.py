@@ -22,7 +22,8 @@ from collections import defaultdict
 
 import openpyxl
 
-from . import aliases
+from . import aliases, lineage
+from .names import strip_code
 
 VERSION_SUFFIX = re.compile(r"-v([0-9]+(?:\.[0-9]+)?)$", re.IGNORECASE)
 
@@ -424,19 +425,47 @@ def assemble(versions_by_base: dict[str, list[dict]]) -> dict:
     """
     alias_map = aliases.load_map()
     dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    organisation_lineage = lineage.load()
     agreements = [
-        build_agreement(base, versions, alias_map, dataset_alias_map)
+        build_agreement(base, versions, alias_map, dataset_alias_map, organisation_lineage)
         for base, versions in versions_by_base.items()
     ]
     agreements.sort(key=lambda a: (a["organisation"].lower(), a["base_reference"]))
     return {
         "agreements": agreements,
-        "organisations": _group_organisations(agreements),
-        "datasets": _group_datasets(agreements),
+        "organisations": _group_organisations(agreements, organisation_lineage),
+        "datasets": _group_datasets(agreements, organisation_lineage),
     }
 
 
-def build_agreement(base: str, versions: list[dict], alias_map: dict, dataset_alias_map: dict) -> dict:
+def organisation_slug(name: str, alias_map: dict, organisation_lineage=None) -> str:
+    """The organisation page a register name belongs on.
+
+    ODS decides first, for the NHS organisations it knows: every sub-ICB
+    location's name goes to its ICB's page, named as ODS names the ICB. The
+    reviewed aliases decide for everything else.
+    """
+    page = organisation_lineage.page(name) if organisation_lineage else None
+    if page:
+        return slugify(organisation_lineage.page_name(page))
+    return slugify(aliases.resolve(name, alias_map))
+
+
+def _controller_rows(controllers: list[str], slugs: list[str]) -> list[dict]:
+    """The data controllers to list, once per organisation page.
+
+    The register can name one ICB as several of its sub-ICB locations, which
+    read identically once their codes are dropped.
+    """
+    rows: dict[str, dict] = {}
+    for name, slug in zip(controllers, slugs):
+        rows.setdefault(slug or name, {"name": name, "slug": slug, "names": []})["names"].append(name)
+    return list(rows.values())
+
+
+def build_agreement(
+    base: str, versions: list[dict], alias_map: dict, dataset_alias_map: dict, organisation_lineage=None
+) -> dict:
     """One agreement page's worth of data, derived from its versions."""
     versions.sort(key=lambda v: (_version_key(v["version"]), v["start_date"]))
     latest = versions[-1]
@@ -456,19 +485,20 @@ def build_agreement(base: str, versions: list[dict], alias_map: dict, dataset_al
     # slugs used for grouping and links go through the alias map, so a
     # human-reviewed merge (see aliases.py) changes which page something links
     # to, never what it displays.
-    organisation_canonical = aliases.resolve(latest["organisation"], alias_map)
+    controller_slugs = [organisation_slug(c, alias_map, organisation_lineage) for c in latest["controllers"]]
     return {
         "base_reference": base,
         "slug": slugify(base),
         "title": latest["title"] or base,
         "organisation": latest["organisation"],
-        "organisation_slug": slugify(organisation_canonical),
+        "organisation_slug": organisation_slug(latest["organisation"], alias_map, organisation_lineage),
         "organisation_type": latest["organisation_type"],
         "commercial": latest["commercial"],
         "sublicensing": latest["sublicensing"],
         "controller_basis": latest["controller_basis"],
         "controllers": latest["controllers"],
-        "controller_slugs": [slugify(aliases.resolve(c, alias_map)) for c in latest["controllers"]],
+        "controller_slugs": controller_slugs,
+        "controller_rows": _controller_rows(latest["controllers"], controller_slugs),
         "first_start": min(starts) if starts else "",
         "first_start_known": first_known,
         "latest_start": latest["start_date"],
@@ -487,24 +517,55 @@ def build_agreement(base: str, versions: list[dict], alias_map: dict, dataset_al
     }
 
 
-def _canonical_names() -> dict[str, str]:
+def _canonical_names(organisation_lineage=None) -> dict[str, str]:
     """`{slug: the name a reviewer chose}` for every reviewed organisation merge.
 
     Cleaned like any other name: the alias file is typed by hand, and a canonical
-    copied out of the register keeps the register's double spaces.
+    copied out of the register keeps the register's double spaces. A page ODS
+    decides is named as ODS names the organisation.
     """
-    return {slugify(g["canonical"]): clean_line(g["canonical"]) for g in aliases.load_groups()}
+    names = {slugify(g["canonical"]): clean_line(g["canonical"]) for g in aliases.load_groups()}
+    names.update({slug: name for slug, (name, _) in _lineage_pages(organisation_lineage).items()})
+    return names
 
 
-def _group_organisations(agreements: list[dict]) -> list[dict]:
+def _lineage_pages(organisation_lineage) -> dict[str, tuple[str, str]]:
+    """`{slug: (page name, ODS identity)}` for every organisation page ODS decides."""
+    if organisation_lineage is None:
+        return {}
+    pages = {}
+    for entry in organisation_lineage.entries.values():
+        identity = organisation_lineage.page(entry["name"])
+        name = organisation_lineage.page_name(identity)
+        pages[slugify(name)] = (name, identity)
+    return pages
+
+
+def _lineage_facts(identity: str, organisation_lineage, slugs: set[str]) -> dict:
+    """What ODS says about an organisation page: its sub-ICB locations, predecessors and successors."""
+    def linked(rows):
+        return [{**row, "slug": slugify(row["name"]) if slugify(row["name"]) in slugs else ""} for row in rows]
+
+    kind, code = identity.split(":", 1)
+    return {
+        "code": code,
+        "ccg": kind == "ccg",
+        "sub_icb_locations": organisation_lineage.sub_icb_locations(identity),
+        "predecessors": linked(organisation_lineage.predecessors(identity)),
+        "successors": linked(organisation_lineage.successors_of(identity)),
+    }
+
+
+def _group_organisations(agreements: list[dict], organisation_lineage=None) -> list[dict]:
     alias_map = aliases.load_map()
     dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    lineage_pages = _lineage_pages(organisation_lineage)
     # The exact text a reviewer wrote as `canonical` in the alias file, keyed
     # by its own slug. Falling back to `aliases.resolve()` per agreement isn't
     # enough on its own: whichever raw name happens to be processed first
     # becomes the display name, which is only the reviewer's chosen spelling
     # by coincidence if the register's own text already matches it.
-    canonical_by_slug = _canonical_names()
+    canonical_by_slug = _canonical_names(organisation_lineage)
 
     # Group by the already-canonical `organisation_slug`, not by the raw
     # `organisation` text: a human-reviewed alias means two different strings
@@ -529,7 +590,7 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
                 # from two spellings that were never really different — a curly vs
                 # straight apostrophe — which slugify() already treats as one
                 # organisation without anyone having to review anything.
-                "reviewed_merge": slug in canonical_by_slug,
+                "reviewed_merge": slug in canonical_by_slug and slug not in lineage_pages,
             },
         )
         if raw_name != entry["name"]:
@@ -560,7 +621,7 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
                     "agreements": [],
                     "controller_agreements": [],
                     "known_as": set(),
-                    "reviewed_merge": controller_slug in canonical_by_slug,
+                    "reviewed_merge": controller_slug in canonical_by_slug and controller_slug not in lineage_pages,
                 }
                 grouped[controller_slug] = entry
                 by_slug[controller_slug] = entry
@@ -571,7 +632,14 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
                 entry["controller_agreements"].append(agreement)
                 seen_refs[controller_slug].add(agreement["base_reference"])
 
+    slugs = set(grouped)
     for entry in grouped.values():
+        page = lineage_pages.get(entry["slug"])
+        entry["lineage"] = _lineage_facts(page[1], organisation_lineage, slugs) if page else None
+        if entry["lineage"] and entry["lineage"]["sub_icb_locations"]:
+            # Listed under the ICB's sub-ICB locations instead, with the code
+            # that tells them apart.
+            entry["known_as"] = {n for n in entry["known_as"] if strip_code(n) == n}
         entry["agreement_count"] = len(entry["agreements"])
         entry["controller_agreement_count"] = len(entry["controller_agreements"])
         all_agreements = entry["agreements"] + entry["controller_agreements"]
@@ -587,9 +655,8 @@ def _group_organisations(agreements: list[dict]) -> list[dict]:
     return sorted(grouped.values(), key=lambda o: o["name"].lower())
 
 
-def _dataset_organisations(agreements: list[dict]) -> list[dict]:
+def _dataset_organisations(agreements: list[dict], canonical_by_slug: dict[str, str]) -> list[dict]:
     """Who receives a dataset: `{slug, name, agreements}`, busiest first."""
-    canonical_by_slug = _canonical_names()
     rows: dict[str, dict] = {}
     for agreement in agreements:
         slug = agreement["organisation_slug"]
@@ -605,7 +672,8 @@ def _dataset_organisations(agreements: list[dict]) -> list[dict]:
     return sorted(rows.values(), key=lambda r: (-r["agreements"], r["name"].lower()))
 
 
-def _group_datasets(agreements: list[dict]) -> list[dict]:
+def _group_datasets(agreements: list[dict], organisation_lineage=None) -> list[dict]:
+    canonical_by_slug = _canonical_names(organisation_lineage)
     # Datasets get relabelled at least as often as organisations — NHS England
     # appended acronyms across the whole register in January 2023 — and a
     # rename would otherwise split one dataset's history across two pages.
@@ -654,5 +722,5 @@ def _group_datasets(agreements: list[dict]) -> list[dict]:
             if aliases.resolve(r["dataset"], alias_map) == name
         )
         entry["attributes"] = {k: sorted(v) for k, v in entry["attributes"].items()}
-        entry["organisation_rows"] = _dataset_organisations(entry["agreements"])
+        entry["organisation_rows"] = _dataset_organisations(entry["agreements"], canonical_by_slug)
     return sorted(grouped.values(), key=lambda d: (-d["agreement_count"], d["name"].lower()))

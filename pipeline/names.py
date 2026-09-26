@@ -91,8 +91,19 @@ def _token(token: str, first: bool) -> str:
     return lead + "".join(cased) + trail
 
 
+# An ODS code the register appends to an NHS name: "NHS KENT AND MEDWAY ICB - 91Q".
+# Codes always hold a digit, which keeps "SAVING FACES - THE…" out of it.
+_TRAILING_CODE = re.compile(r"\s+[-–]\s+[A-Z0-9]*[0-9][A-Z0-9]*$")
+
+
+def strip_code(name: str) -> str:
+    """`name` without a trailing ODS code. The site shows codes only where they explain lineage."""
+    return _TRAILING_CODE.sub("", name or "")
+
+
 def display_name(name: str) -> str:
-    """`name` in ordinary capitalisation if the register wrote it in capitals."""
+    """`name` in ordinary capitalisation if the register wrote it in capitals, without a trailing code."""
+    name = strip_code(name)
     if not name or name != name.upper() or not any(c.isalpha() for c in name):
         return name
     tokens = name.split(" ")

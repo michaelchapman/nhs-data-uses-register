@@ -17,7 +17,7 @@ from unittest import mock
 
 import openpyxl
 
-from pipeline import aliases
+from pipeline import aliases, lineage, ods
 
 OLD_NAME = "Maternity Services Data Set v1.5"
 NEW_NAME = "MSDS (Maternity Services Data Set) v1.5"
@@ -114,9 +114,60 @@ def dataset_aliases():
         }))
         organisations = directory / "organisation-aliases.json"
         organisations.write_text(json.dumps({"aliases": [], "ignored": []}))
+        # No NHS lineage unless a test asks for it: see `lineage_files`.
         with mock.patch.object(aliases, "DATASET_ALIASES_PATH", datasets), \
-                mock.patch.object(aliases, "ALIASES_PATH", organisations):
+                mock.patch.object(aliases, "ALIASES_PATH", organisations), \
+                mock.patch.object(lineage, "CODES_PATH", directory / "organisation-codes.json"), \
+                mock.patch.object(ods, "SNAPSHOT_PATH", directory / "ods.json"):
             yield
+
+
+def _role(role_id, start, end="", primary=False):
+    return {"id": role_id, "primary": primary, "start": start, "end": end}
+
+
+def _record(name, roles, status="Active", icb="", successors=(), predecessors=()):
+    return {
+        "name": name, "status": status, "start": "", "end": "", "roles": roles, "icb": icb,
+        "successors": [{"type": "successor", "code": c, "date": d} for c, d in successors],
+        "predecessors": [{"type": "predecessor", "code": c, "date": d} for c, d in predecessors],
+    }
+
+
+# A small, true-to-shape piece of ODS: a CCG that became a sub-ICB location
+# under the same code, two CCGs that merged in 2021 before doing the same, and a
+# trust that absorbed another, recorded on one side only.
+ODS_WORLD = {
+    "91Q": _record("NHS KENT AND MEDWAY ICB - 91Q",
+                   [_role("RO98", "2020-04-01", primary=True), _role("RO319", "2022-07-01")], icb="QKS"),
+    "QKS": _record("NHS KENT AND MEDWAY INTEGRATED CARE BOARD", [_role("RO261", "2017-04-01", primary=True)]),
+    "03J": _record("NHS NORTH KIRKLEES CCG", [_role("RO98", "2013-04-01", "2021-03-31", primary=True)],
+                   status="Inactive", successors=[("X2C4Y", "2021-04-01")]),
+    "X2C4Y": _record("NHS WEST YORKSHIRE ICB - X2C4Y",
+                     [_role("RO98", "2021-04-01", primary=True), _role("RO319", "2022-07-01")], icb="QWO",
+                     predecessors=[("03J", "2021-04-01")]),
+    "QWO": _record("NHS WEST YORKSHIRE INTEGRATED CARE BOARD", [_role("RO261", "2017-04-01", primary=True)]),
+    "RH8": _record("ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST", [_role("RO197", "1993-04-01", primary=True)],
+                   predecessors=[("RBZ", "2022-04-01")]),
+    "RBZ": _record("NORTHERN DEVON HEALTHCARE NHS TRUST", [_role("RO197", "1993-04-01", "2022-03-31", primary=True)],
+                   status="Inactive"),
+}
+ODS_CODES = [
+    {"name": "NHS KENT AND MEDWAY CCG", "code": "91Q", "as": "CCG", "evidence": "test"},
+    {"name": "NHS KENT AND MEDWAY ICB - 91Q", "code": "91Q", "evidence": "test"},
+    {"name": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD", "code": "QKS", "evidence": "test"},
+    {"name": "NHS NORTH KIRKLEES CCG", "code": "03J", "as": "CCG", "evidence": "test"},
+    {"name": "NHS KIRKLEES CCG", "code": "X2C4Y", "as": "CCG", "evidence": "test"},
+    {"name": "NHS WEST YORKSHIRE ICB - X2C4Y", "code": "X2C4Y", "evidence": "test"},
+    {"name": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST", "code": "RH8", "evidence": "test"},
+    {"name": "NORTHERN DEVON HEALTHCARE NHS TRUST", "code": "RBZ", "evidence": "test"},
+]
+
+
+def lineage_files(codes=ODS_CODES, organisations=ODS_WORLD):
+    """Write `codes` and `organisations` where the patched lineage paths point. Use inside `dataset_aliases()`."""
+    lineage.write_codes(list(codes))
+    ods.write_snapshot(dict(organisations))
 
 
 def site_meta(base_path: str = "") -> dict:

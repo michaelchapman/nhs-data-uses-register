@@ -55,7 +55,10 @@
   {% endif %}
   {% endfor %}
   {% for change in diff.renamed %}
-  <p class="diff-list"><strong>{{ change.label }}:</strong> renamed from {{ change.before }} to {{ change.after }}. <span class="hint">The same organisation under a new name, so not counted as a change.</span></p>
+  <p class="diff-list"><strong>{{ change.label }}:</strong> renamed from {{ change.before|org }} to {{ change.after|org }}. <span class="hint">The same organisation under a new name, so not counted as a change.</span></p>
+  {% endfor %}
+  {% for change in diff.succeeded %}
+  <p class="diff-list"><strong>{{ change.label }}:</strong> {{ change.before|org }} succeeded by {{ change.after|org }}{% if change.date %} from {{ change.date|date }}{% endif %}. <span class="hint">{% if change.date %}NHS ODS records the succession, so this is not counted as a change.{% else %}Changed with the organisation, so not counted separately.{% endif %}</span></p>
   {% endfor %}
   {% if diff.cosmetic %}
   <p class="hint">Changed only in punctuation, spacing or capitalisation: {{ diff.cosmetic|join(", ") }}.</p>
@@ -91,8 +94,9 @@
 {% if v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}
 <h2>Data controllers</h2>
 <ul class="plain">
-  {% for controller in v.controllers %}
-  <li>{% if agreement.controller_slugs[loop.index0] in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.controller_slugs[loop.index0] }}/">{{ controller|org }}</a>{% else %}{{ controller|org }}{% endif %}</li>
+  {% for row in agreement.controller_rows %}
+  <li>{% if row.slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %}
+    {%- if row.names|length > 1 %} <span class="hint">(named in the register {{ row.names|length }} times, as different sub-ICB locations)</span>{% endif %}</li>
   {% endfor %}
 </ul>
 {% endif %}

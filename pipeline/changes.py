@@ -34,6 +34,7 @@ from collections import defaultdict
 from . import aliases
 from . import compare
 from . import facts
+from . import lineage
 from . import sources
 from .extract import _base_and_version, slugify
 
@@ -143,6 +144,7 @@ def diff(
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    organisation_lineage = lineage.load()
     now = facts.edition_index(register_slug, edition)
     before = facts.edition_index(register_slug, previous_edition)
 
@@ -179,7 +181,7 @@ def diff(
         was, is_now = state_of(reference, before), state_of(reference, now)
         if was is None or is_now is None:
             continue
-        difference = compare.compare_versions(was, is_now, alias_map, organisation_aliases)
+        difference = compare.compare_versions(was, is_now, alias_map, organisation_aliases, organisation_lineage)
         if _material(difference):
             amended.append({
                 "reference": reference, "base": _base_and_version(reference)[0],
@@ -221,6 +223,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    organisation_lineage = lineage.load()
     indexes = {edition: facts.edition_index(register_slug, edition) for edition in editions}
     earliest = editions[0]
 
@@ -269,7 +272,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
                 version = states.get(event["reference"], [])
                 if event["from"] < len(version) and event["to"] < len(version):
                     difference = compare.compare_versions(
-                        version[event["from"]], version[event["to"]], alias_map, organisation_aliases
+                        version[event["from"]], version[event["to"]], alias_map, organisation_aliases, organisation_lineage
                     )
                     # Naming the fields is the difference between "this was
                     # edited" and "the data controller was changed" — the

@@ -42,10 +42,26 @@ Budget about two minutes a month, plus about a minute for the parse.
    well under 1 MB. Check `git diff --stat` before committing: a change of tens
    of megabytes means something other than a monthly update happened.
 
-3. **Check the numbers look sane,** then commit and push:
+3. **Look up any new NHS organisations in ODS.** An edition that names an NHS
+   organisation the register has not used before needs its ODS code, or the
+   site cannot tell a reorganisation from a change of controller:
 
    ```bash
-   git add data/facts
+   .venv/bin/python -m pipeline.odscheck --apply   # codes for new names
+   .venv/bin/python -m pipeline.ods                # refresh their ODS records
+   ```
+
+   Both ask ODS over the network, and both write committed files:
+   `data/organisation-codes.json` and `data/ods/organisations.json`. Read the
+   names `odscheck` lists for review. If one is an NHS organisation that ODS
+   knows under another name, add it to the codes file by hand with evidence
+   starting `reviewed:`, which later runs keep. See
+   [plan-organisation-changes.md](plan-organisation-changes.md).
+
+4. **Check the numbers look sane,** then commit and push:
+
+   ```bash
+   git add data/facts data/organisation-codes.json data/ods
    git commit -m "Add the August 2026 edition"
    git push
    ```
@@ -55,7 +71,7 @@ Budget about two minutes a month, plus about a minute for the parse.
    change in how the register writes something down; its "what changed" page says
    which fields moved.
 
-4. GitHub Actions builds and deploys from the committed facts. It makes no
+5. GitHub Actions builds and deploys from the committed facts. It makes no
    external requests, so it cannot fail the way the old scheduled job did.
 
 To preview before pushing:
@@ -92,6 +108,7 @@ is the point of it: most changes to the site's answers are a rebuild.
 
 | You want to | Do this | Re-parse? |
 | --- | --- | --- |
+| Record which NHS organisation a name is, or refresh ODS | `python -m pipeline.odscheck --apply`, then `python -m pipeline.ods` | No |
 | Merge two organisation or dataset names | Edit `data/organisation-aliases.json` or `data/dataset-aliases.json` (see [organisation-names.md](organisation-names.md)) | No |
 | Change what counts as an amendment | Edit `changes._material` or `compare.compare_versions` | No |
 | Change how names are displayed | Edit `pipeline/names.py` | No |

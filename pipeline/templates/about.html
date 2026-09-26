@@ -15,6 +15,7 @@
   <li><strong>One page per agreement, not one row per renewal.</strong> The register lists every version of an agreement separately — {{ stats.agreement_versions|commas }} rows for {{ stats.agreements|commas }} agreements. Here versions are grouped under the agreement, with the history kept underneath.</li>
   <li><strong>The three sheets are joined.</strong> Datasets and file releases are shown on the agreement they belong to, rather than in separate sheets keyed on a reference number.</li>
   <li><strong>Free text is readable.</strong> Purpose, processing activities, expected outputs and benefits are laid out as prose instead of a single overflowing cell.</li>
+  <li><strong>NHS organisations are followed through reorganisations.</strong> Using the <a href="{{ ods.url }}">NHS Organisation Data Service</a> (ODS), the site recognises when the register renames an NHS organisation or names its successor, such as an integrated care board taking over from a clinical commissioning group in July 2022. Those are shown as renames and successions rather than counted as changes to an agreement, and each integrated care board has one page, listing the sub-ICB locations the register also names it by. Names are shown without their ODS codes, except where a code explains which organisation continued which.</li>
   <li><strong>Organisations and datasets get their own pages,</strong> so you can start from "what has this university received" or "who gets Hospital Episode Statistics".</li>
   <li><strong>Everything has a stable URL</strong> you can link to or cite.</li>
   <li><strong>Month-on-month changes are tracked</strong> on the <a href="{{ meta.base_path }}/changes/">what changed</a> page.</li>
@@ -36,7 +37,7 @@
 <p>By hand, and not automatically. This site shows the <strong>{{ meta.edition|edition }}</strong> edition, added on {{ meta.retrieved[:10]|date }}. NHS England publishes a new one each month, but it won't appear here until shortly afterwards — so if a newer edition is out, this site does not have it yet. The <a href="{{ meta.source_page }}">official register page</a> always has the current workbook, and the <a href="{{ meta.archive_page }}">release archive</a> has previous ones.</p>
 
 <h2>Licence</h2>
-<p>The register content is published by NHS England under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a> and remains under that licence here. The site's own code is MIT licensed.</p>
+<p>The register content is published by NHS England under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a> and remains under that licence here. NHS organisation codes, names and successions come from the <a href="{{ ods.url }}">{{ ods.name }}</a>, published by {{ ods.publisher }} under the <a href="{{ ods.licence_url }}">{{ ods.licence }}</a>; the snapshot used is in <code>data/ods/</code> in the repository. The site's own code is MIT licensed.</p>
 
 <h2>Acknowledgements</h2>
 <p>This site's code was built with AI assistance (Claude, from Anthropic), directed and reviewed by the site's maintainer.</p>

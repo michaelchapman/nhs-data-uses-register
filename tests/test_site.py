@@ -330,3 +330,49 @@ class ReleaseScope(unittest.TestCase):
                     page = (out / path / "index.html").read_text()
                     self.assertIn("files released externally by DARS", page)
                     self.assertIn("/about/#file-releases", page)
+
+
+class NhsLineage(unittest.TestCase):
+    """One page per ICB, codes kept out of names: docs/plan-organisation-changes.md."""
+
+    @classmethod
+    def setUpClass(cls):
+        from .fixtures import _record, _role, lineage_files
+
+        cls.directory = tempfile.TemporaryDirectory()
+        cls.out = Path(cls.directory.name)
+        codes = [
+            {"name": "NHS Bristol, North Somerset and South Gloucestershire ICB - 15C", "code": "15C", "evidence": "test"},
+            {"name": "NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE CCG", "code": "15C", "as": "CCG",
+             "evidence": "test"},
+        ]
+        world = {
+            "15C": _record("NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE ICB - 15C",
+                           [_role("RO98", "2020-04-01", primary=True), _role("RO319", "2022-07-01")], icb="QUY"),
+            "QUY": _record("NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+                           [_role("RO261", "2017-04-01", primary=True)]),
+        }
+        with dataset_aliases():
+            lineage_files(codes, world)
+            build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, cls.out)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.directory.cleanup()
+
+    def test_the_icb_has_one_page_listing_its_sub_icb_locations(self):
+        slug = "nhs-bristol-north-somerset-and-south-gloucestershire-integrated-care-board"
+        page = (self.out / "organisations" / slug / "index.html").read_text()
+        self.assertIn("<h1>NHS Bristol, North Somerset and South Gloucestershire Integrated Care Board</h1>", page)
+        self.assertIn(">15C</span>, formerly NHS Bristol, North Somerset and South Gloucestershire CCG", page)
+        self.assertIn("Open Government Licence v3.0", page)
+        self.assertFalse((self.out / "organisations" / "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c").exists())
+
+    def test_the_agreement_names_its_applicant_without_the_code(self):
+        page = (self.out / "agreements" / "dars-nic-2-bbbbb" / "index.html").read_text()
+        self.assertIn("NHS Bristol, North Somerset and South Gloucestershire ICB</a>", page)
+        self.assertNotIn("ICB - 15C", page)
+
+    def test_the_about_page_credits_ods(self):
+        page = (self.out / "about" / "index.html").read_text()
+        self.assertIn("NHS Organisation Data Service", page)

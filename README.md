@@ -131,6 +131,9 @@ pipeline/compare.py             field-by-field comparison of two agreement versi
 pipeline/build.py               renders the site and the CSV extracts
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/aliases.py             applies reviewed organisation and dataset merges
+pipeline/ods.py                 reads NHS organisation records from ODS into a snapshot
+pipeline/odscheck.py            finds the ODS code for each NHS name in the register
+pipeline/lineage.py             renames and successions between NHS organisations
 pipeline/datasetcheck.py        finds datasets the register has renamed
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
@@ -141,6 +144,8 @@ data/raw/                       downloaded workbooks (gitignored)
 data/facts/                     committed facts: every edition, and the manifest
 data/organisation-aliases.json  reviewed organisation-name merges
 data/dataset-aliases.json       reviewed dataset-name merges
+data/organisation-codes.json    the ODS code for each NHS name, and the evidence
+data/ods/organisations.json     the ODS records the site uses (Open Government Licence)
 docs/manual-updates.md          the monthly routine
 docs/organisation-names.md      reviewing and merging organisation names
 docs/plan-*.md                  design notes, accepted and proposed

@@ -12,7 +12,9 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from . import aliases
 from . import compare
-from .names import display_name
+from . import lineage
+from . import ods
+from .names import display_name, strip_code
 from . import sources
 from .extract import slugify
 
@@ -68,7 +70,9 @@ def environment() -> Environment:
     env.filters["commas"] = lambda n: f"{n:,}"
     env.filters["slug"] = slugify
     env.filters["org"] = display_name
+    env.filters["nocode"] = strip_code
     env.globals["merger_edition"] = sources.MERGER_EDITION
+    env.globals["ods"] = ods.SOURCE
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     # The page a dataset name links to, whichever spelling the register used.
     env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
@@ -221,6 +225,7 @@ def version_diffs(
     agreement: dict,
     dataset_aliases: dict[str, str] | None = None,
     organisation_aliases: dict[str, str] | None = None,
+    organisation_lineage=None,
 ) -> dict[str, dict]:
     """What each version changed from the one before it, keyed by reference.
 
@@ -230,7 +235,7 @@ def version_diffs(
     """
     diffs = {}
     for older, newer in zip(agreement["versions"], agreement["versions"][1:]):
-        difference = compare.compare_versions(older, newer, dataset_aliases, organisation_aliases)
+        difference = compare.compare_versions(older, newer, dataset_aliases, organisation_aliases, organisation_lineage)
         if difference:
             diffs[newer["reference"]] = {**difference, "previous": older["reference"]}
     return diffs
@@ -312,6 +317,7 @@ def build(
     org_slugs = {o["slug"] for o in data["organisations"]}
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    organisation_lineage = lineage.load()
     for agreement in data["agreements"]:
         render(
             "agreement.html",
@@ -320,7 +326,7 @@ def build(
             change_status={v["reference"]: changed_refs.get(v["reference"]) for v in agreement["versions"]},
             org_slugs=org_slugs,
             history=(history or {}).get(agreement["base_reference"]),
-            diffs=version_diffs(agreement, dataset_aliases, organisation_aliases),
+            diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
         )
     for organisation in data["organisations"]:
         render(

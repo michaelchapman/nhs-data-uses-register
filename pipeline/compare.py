@@ -455,11 +455,36 @@ def _list_change(old: set[str], new: set[str], alias_map: dict[str, str] | None 
 ORGANISATION_FIELDS = {"organisation"}
 
 
+def _lineage_pairs(removed: list[str], added: list[str], lineage) -> tuple[list[dict], set[str], set[str]]:
+    """Removed names ODS says are the same as, or succeeded by, an added one.
+
+    Returns `(pairs, explained_removed, explained_added)`. A removed name is
+    paired with the added name carrying its own code where there is one, so
+    nine Cheshire and Merseyside CCGs becoming nine sub-ICB locations read as
+    nine successions, not eighty-one.
+    """
+    pairs, gone, came = [], set(), set()
+    if lineage is None:
+        return pairs, gone, came
+    for was in removed:
+        related = [(now, lineage.relation(was, now)) for now in added]
+        related = [(now, rel) for now, rel in related if rel]
+        if not related:
+            continue
+        own = [(now, rel) for now, rel in related if lineage.node(now).split(":")[1] == lineage.node(was).split(":")[1]]
+        for now, (kind, date) in own or related[:1]:
+            pairs.append({"kind": kind, "before": was, "after": now, "date": date})
+        gone.add(was)
+        came.update(now for now, _ in related)
+    return pairs, gone, came
+
+
 def compare_versions(
     before: dict,
     after: dict,
     alias_map: dict[str, str] | None = None,
     organisation_aliases: dict[str, str] | None = None,
+    lineage=None,
 ) -> dict | None:
     """What changed between two versions of one agreement. `None` if nothing did.
 
@@ -474,10 +499,17 @@ def compare_versions(
     merged in the organisation aliases. `alias_map` is the dataset aliases and
     `organisation_aliases` the organisation ones; each is read from its file
     when not given.
+
+    With `lineage` (see `pipeline.lineage`), an NHS organisation that ODS says
+    took over from another — an ICB from a CCG, a trust from one it absorbed —
+    is reported under `succeeded`, with ODS's date, and is not an amendment
+    either. Two names ODS gives one organisation, such as an ICB and one of its
+    sub-ICB locations, are a rename.
     """
-    scalars, lists, prose, unchanged, cosmetic, renamed = [], [], [], [], [], []
+    scalars, lists, prose, unchanged, cosmetic, renamed, succeeded = [], [], [], [], [], [], []
     if organisation_aliases is None:
         organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    applicant_moved = False
 
     for key, label in SCALAR_FIELDS:
         old, new = before.get(key, "") or "", after.get(key, "") or ""
@@ -490,8 +522,24 @@ def compare_versions(
             aliases.resolve(new, organisation_aliases)
         ):
             renamed.append({"label": label, "before": old, "after": new})
+            applicant_moved = True
             continue
+        if key in ORGANISATION_FIELDS:
+            pairs, _, _ = _lineage_pairs([old], [new], lineage)
+            if pairs:
+                pair = pairs[0]
+                (renamed if pair["kind"] == "same" else succeeded).append(
+                    {"label": label, "before": old, "after": new, "date": pair["date"]}
+                )
+                applicant_moved = True
+                continue
         scalars.append({"label": label, "before": old, "after": new})
+    # A CCG becoming an ICB changes the applicant's type with it. That is part
+    # of the same event, not a second change.
+    if applicant_moved:
+        for item in [s for s in scalars if s["label"] == "Organisation type"]:
+            scalars.remove(item)
+            (succeeded or renamed).append(item)
 
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
@@ -505,6 +553,14 @@ def compare_versions(
         ("Datasets", _dataset_names(before, alias_map), _dataset_names(after, alias_map), None),
     ):
         moved = _list_change(old, new, names)
+        if moved and label == "Data controllers":
+            pairs, gone, came = _lineage_pairs(moved["removed"], moved["added"], lineage)
+            for pair in pairs:
+                (renamed if pair["kind"] == "same" else succeeded).append(
+                    {"label": label, "before": pair["before"], "after": pair["after"], "date": pair["date"]}
+                )
+            moved["removed"] = [n for n in moved["removed"] if n not in gone]
+            moved["added"] = [n for n in moved["added"] if n not in came]
         if moved and (moved["added"] or moved["removed"]):
             lists.append({"label": label, "added": moved["added"], "removed": moved["removed"]})
         renamed += [{"label": label, **pair} for pair in (moved or {}).get("renamed", [])]
@@ -527,7 +583,7 @@ def compare_versions(
             continue
         prose.append({"label": label, "filled_in": None, "blocks": diff_blocks(old, new), "text": ""})
 
-    if not (scalars or lists or prose or cosmetic or renamed):
+    if not (scalars or lists or prose or cosmetic or renamed or succeeded):
         return None
     return {
         "scalars": scalars,
@@ -535,6 +591,7 @@ def compare_versions(
         "prose": prose,
         "unchanged": unchanged,
         "cosmetic": sorted(set(cosmetic)),
-        # Not counted as an amendment: see `changes._material`.
+        # Neither is counted as an amendment: see `changes._material`.
         "renamed": renamed,
+        "succeeded": succeeded,
     }
