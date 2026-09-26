@@ -14,7 +14,7 @@ reasoning that led there is in it.
 | R3 amendment log, R7 stored values for short fields | not started: the site can say *which* fields an edition changed in place, not their old and new text |
 | R5 vocabulary for in-place amendments, R6 machine-readable change outputs | not started |
 | §9 item 1: resolve organisation names through the aliases before calling something an amendment | shipped; see §11 |
-| CCG to ICB successions, labelled from NHS ODS | not started; see §11 |
+| CCG to ICB successions, labelled from NHS ODS | planned in [plan-organisation-changes.md](plan-organisation-changes.md) |
 
 The sections below are kept as written, so §1 describes the site as it was
 before R1, R2 and R4 shipped; the table above is the current state.
@@ -1037,6 +1037,10 @@ and Weston and Bristol NHS Foundation Trust (10); LA-SER Europe and Certara UK
 (4); NHS England (Skipton House) and NHS England London (Skipton House) (4).
 
 ### Still to do: CCG to ICB successions
+
+Now planned in full in [plan-organisation-changes.md](plan-organisation-changes.md),
+which also finds that October 2022, put down to dataset relabelling in §10,
+was almost entirely the move from CCG to ICB names.
 
 773 of the 1,071 one-for-one controller swaps in the archive are a clinical
 commissioning group replaced by an integrated care board, from July 2022. These
