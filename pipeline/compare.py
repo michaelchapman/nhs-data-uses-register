@@ -421,29 +421,63 @@ def _dataset_attribute_changes(before: dict, after: dict, alias_map: dict[str, s
     return found, cosmetic
 
 
-def _list_change(old: set[str], new: set[str]) -> dict | None:
+def _list_change(old: set[str], new: set[str], alias_map: dict[str, str] | None = None) -> dict | None:
     """What was added to and removed from a list of names, ignoring typography.
 
     `2020 Delivery Ltd` and `2020 DELIVERY LTD` are one organisation written
     two ways, and the register restated 1,302 controller lists that way in
     October 2021 alone. Names are matched on their normalised form, as every
     other field is, and the names reported are the ones as written.
+
+    With `alias_map`, names are matched on what they resolve to instead, so an
+    organisation the register relabelled is neither added nor removed. It is
+    reported under `renamed`, as a pair of what was written before and after,
+    because a relabelling is worth showing and is not a change of who holds
+    the data.
     """
-    old_keys, new_keys = {normalise(name) for name in old}, {normalise(name) for name in new}
-    added = sorted(name for name in new if normalise(name) not in old_keys)
-    removed = sorted(name for name in old if normalise(name) not in new_keys)
-    return {"added": added, "removed": removed} if added or removed else None
+    key = lambda name: normalise(aliases.resolve(name, alias_map or {}))
+    old_keys, new_keys = {key(name) for name in old}, {key(name) for name in new}
+    added = sorted(name for name in new if key(name) not in old_keys)
+    removed = sorted(name for name in old if key(name) not in new_keys)
+    renamed = []
+    for shared in sorted(old_keys & new_keys):
+        was = sorted(name for name in old if key(name) == shared)
+        now = sorted(name for name in new if key(name) == shared)
+        if {normalise(name) for name in was} != {normalise(name) for name in now}:
+            renamed.append({"before": "; ".join(was), "after": "; ".join(now)})
+    if not (added or removed or renamed):
+        return None
+    return {"added": added, "removed": removed, "renamed": renamed}
 
 
-def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None = None) -> dict | None:
+# Fields that name an organisation, and so are compared through the reviewed
+# organisation aliases: a relabelling is reported as a rename, not a change.
+ORGANISATION_FIELDS = {"organisation"}
+
+
+def compare_versions(
+    before: dict,
+    after: dict,
+    alias_map: dict[str, str] | None = None,
+    organisation_aliases: dict[str, str] | None = None,
+) -> dict | None:
     """What changed between two versions of one agreement. `None` if nothing did.
 
     The data controllers and the datasets are reported as lists, and each
     dataset's recorded details as before-and-after pairs, because all three are
     changes a reader would want flagged and none is visible anywhere else on the
     page.
+
+    An organisation the register relabelled — "NHS ENGLAND (QUARRY HOUSE)"
+    becoming "NHS ENGLAND - X26" on 126 agreements in October 2025 — is
+    reported under `renamed` rather than as a change, once the two names are
+    merged in the organisation aliases. `alias_map` is the dataset aliases and
+    `organisation_aliases` the organisation ones; each is read from its file
+    when not given.
     """
-    scalars, lists, prose, unchanged, cosmetic = [], [], [], [], []
+    scalars, lists, prose, unchanged, cosmetic, renamed = [], [], [], [], [], []
+    if organisation_aliases is None:
+        organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
 
     for key, label in SCALAR_FIELDS:
         old, new = before.get(key, "") or "", after.get(key, "") or ""
@@ -451,6 +485,11 @@ def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None
             continue
         if normalise(old) == normalise(new):
             cosmetic.append(label)
+            continue
+        if key in ORGANISATION_FIELDS and normalise(aliases.resolve(old, organisation_aliases)) == normalise(
+            aliases.resolve(new, organisation_aliases)
+        ):
+            renamed.append({"label": label, "before": old, "after": new})
             continue
         scalars.append({"label": label, "before": old, "after": new})
 
@@ -460,14 +499,16 @@ def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None
     scalars.extend(attribute_changes)
     if attribute_cosmetic:
         cosmetic.append("Datasets")
-    for label, old, new in (
-        ("Data controllers", set(before.get("controllers") or []), set(after.get("controllers") or [])),
-        ("Datasets", _dataset_names(before, alias_map), _dataset_names(after, alias_map)),
+    for label, old, new, names in (
+        ("Data controllers", set(before.get("controllers") or []), set(after.get("controllers") or []),
+         organisation_aliases),
+        ("Datasets", _dataset_names(before, alias_map), _dataset_names(after, alias_map), None),
     ):
-        moved = _list_change(old, new)
-        if moved:
-            lists.append({"label": label, **moved})
-        elif old != new:
+        moved = _list_change(old, new, names)
+        if moved and (moved["added"] or moved["removed"]):
+            lists.append({"label": label, "added": moved["added"], "removed": moved["removed"]})
+        renamed += [{"label": label, **pair} for pair in (moved or {}).get("renamed", [])]
+        if not moved and old != new:
             cosmetic.append(label)
 
     for key, label in PROSE_FIELDS:
@@ -486,7 +527,7 @@ def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None
             continue
         prose.append({"label": label, "filled_in": None, "blocks": diff_blocks(old, new), "text": ""})
 
-    if not (scalars or lists or prose or cosmetic):
+    if not (scalars or lists or prose or cosmetic or renamed):
         return None
     return {
         "scalars": scalars,
@@ -494,4 +535,6 @@ def compare_versions(before: dict, after: dict, alias_map: dict[str, str] | None
         "prose": prose,
         "unchanged": unchanged,
         "cosmetic": sorted(set(cosmetic)),
+        # Not counted as an amendment: see `changes._material`.
+        "renamed": renamed,
     }

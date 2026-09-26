@@ -54,6 +54,9 @@
     {% for para in change.text|paragraphs %}<p><del>{{ para }}</del></p>{% endfor %}
   {% endif %}
   {% endfor %}
+  {% for change in diff.renamed %}
+  <p class="diff-list"><strong>{{ change.label }}:</strong> renamed from {{ change.before }} to {{ change.after }}. <span class="hint">The same organisation under a new name, so not counted as a change.</span></p>
+  {% endfor %}
   {% if diff.cosmetic %}
   <p class="hint">Changed only in punctuation, spacing or capitalisation: {{ diff.cosmetic|join(", ") }}.</p>
   {% endif %}

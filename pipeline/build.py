@@ -217,7 +217,11 @@ def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
     return written
 
 
-def version_diffs(agreement: dict, dataset_aliases: dict[str, str] | None = None) -> dict[str, dict]:
+def version_diffs(
+    agreement: dict,
+    dataset_aliases: dict[str, str] | None = None,
+    organisation_aliases: dict[str, str] | None = None,
+) -> dict[str, dict]:
     """What each version changed from the one before it, keyed by reference.
 
     Both versions are in the same extract, so this needs no stored history —
@@ -226,7 +230,7 @@ def version_diffs(agreement: dict, dataset_aliases: dict[str, str] | None = None
     """
     diffs = {}
     for older, newer in zip(agreement["versions"], agreement["versions"][1:]):
-        difference = compare.compare_versions(older, newer, dataset_aliases)
+        difference = compare.compare_versions(older, newer, dataset_aliases, organisation_aliases)
         if difference:
             diffs[newer["reference"]] = {**difference, "previous": older["reference"]}
     return diffs
@@ -307,6 +311,7 @@ def build(
 
     org_slugs = {o["slug"] for o in data["organisations"]}
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     for agreement in data["agreements"]:
         render(
             "agreement.html",
@@ -315,7 +320,7 @@ def build(
             change_status={v["reference"]: changed_refs.get(v["reference"]) for v in agreement["versions"]},
             org_slugs=org_slugs,
             history=(history or {}).get(agreement["base_reference"]),
-            diffs=version_diffs(agreement, dataset_aliases),
+            diffs=version_diffs(agreement, dataset_aliases, organisation_aliases),
         )
     for organisation in data["organisations"]:
         render(
