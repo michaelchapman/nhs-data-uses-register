@@ -63,6 +63,9 @@ QUOTES = str.maketrans(
 SMART_PUNCTUATION = re.compile("[‘’“”–—]")
 
 
+# The same dataset names and attribute values are compared thousands of times
+# over a build; a bounded cache makes each one's normal form a lookup.
+@functools.lru_cache(maxsize=200_000)
 def normalise(text: str) -> str:
     """Fold away differences that are typography rather than substance.
 
@@ -453,14 +456,18 @@ def _list_change(old: set[str], new: set[str], alias_map: dict[str, str] | None 
     because a relabelling is worth showing and is not a change of who holds
     the data.
     """
-    key = lambda name: normalise(aliases.resolve(name, alias_map or {}))
-    old_keys, new_keys = {key(name) for name in old}, {key(name) for name in new}
-    added = sorted(name for name in new if key(name) not in old_keys)
-    removed = sorted(name for name in old if key(name) not in new_keys)
+    alias_map = alias_map or {}
+    # Each name's key once: a dataset list runs to hundreds of names, and
+    # deriving keys inside the loops below made this quadratic.
+    old_by, new_by = {}, {}
+    for names, by in ((old, old_by), (new, new_by)):
+        for name in names:
+            by.setdefault(normalise(aliases.resolve(name, alias_map)), []).append(name)
+    added = sorted(name for k, names in new_by.items() if k not in old_by for name in names)
+    removed = sorted(name for k, names in old_by.items() if k not in new_by for name in names)
     renamed = []
-    for shared in sorted(old_keys & new_keys):
-        was = sorted(name for name in old if key(name) == shared)
-        now = sorted(name for name in new if key(name) == shared)
+    for shared in sorted(old_by.keys() & new_by.keys()):
+        was, now = sorted(old_by[shared]), sorted(new_by[shared])
         if {normalise(name) for name in was} != {normalise(name) for name in now}:
             renamed.append({"before": "; ".join(was), "after": "; ".join(now)})
     if not (added or removed or renamed):

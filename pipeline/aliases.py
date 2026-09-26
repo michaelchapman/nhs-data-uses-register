@@ -15,6 +15,7 @@ always checkable against the register rather than hidden.
 
 from __future__ import annotations
 
+import functools
 import json
 import re
 from pathlib import Path
@@ -24,6 +25,7 @@ ALIASES_PATH = DATA / "organisation-aliases.json"
 DATASET_ALIASES_PATH = DATA / "dataset-aliases.json"
 
 
+@functools.lru_cache(maxsize=200_000)
 def _key(name: str) -> str:
     """A case/whitespace-insensitive lookup key.
 
