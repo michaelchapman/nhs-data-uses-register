@@ -1,0 +1,56 @@
+{#- How a change is shown: on the changes pages, and on an agreement's timeline. -#}
+{% macro prose_diff(blocks) %}
+<p class="diff-text">
+  {% for block in blocks %}
+    {% if block.op == "equal" %}<span class="diff-elided">[{{ block.paragraphs }} paragraph{{ "s" if block.paragraphs != 1 }} unchanged]</span>
+    {% elif block.op == "insert" %}<ins>{{ block.text }}</ins>
+    {% elif block.op == "delete" %}<del>{{ block.text }}</del>
+    {% else %}
+      {% for run in block.runs %}
+        {% if run.op == "equal" %}{{ run.text }}
+        {% elif run.op == "insert" %}<ins>{{ run.text }}</ins>
+        {% elif run.op == "delete" %}<del>{{ run.text }}</del>
+        {% else %}<span class="diff-elided">[{{ run.words|commas }} words unchanged]</span>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</p>
+{% endmacro %}
+
+{% macro value(label, text) -%}
+{%- if not text %}Not stated{% elif label in ("Start date", "End date") %}{{ text|date }}{% elif label == "Applicant organisation" %}{{ text|nocode }}{% else %}{{ text }}{% endif -%}
+{%- endmacro %}
+
+{% macro rewording(edits) -%}
+{%- for e in edits -%}
+{%- if e.removed and e.added %}“<del>{{ e.removed }}</del>” became “<ins>{{ e.added }}</ins>”{% elif e.removed %}“<del>{{ e.removed }}</del>” taken out{% else %}“<ins>{{ e.added }}</ins>” added{% endif -%}
+{%- if not loop.last %}; {% endif -%}
+{%- endfor -%}
+{%- endmacro %}
+
+{#- `full` adds prose redlines, for an agreement's own page. -#}
+{% macro change_details(details, full=false) %}
+<ul class="change-list">
+{% for d in details %}
+  <li><strong>{{ d.label }}:</strong>
+  {% if d.kind == "value" %}<del>{{ value(d.label, d.before) }}</del> → <ins>{{ value(d.label, d.after) }}</ins>
+  {% elif d.kind == "edit" %}{{ rewording(d.edits) }}
+  {% elif d.kind == "list" %}{% set named = d.label == "Data controllers" %}
+    {%- for name in d.added %}<ins>+ {{ name|nocode if named else name }}</ins>{% if not loop.last %}; {% endif %}{% endfor %}
+    {%- if d.added and d.removed %} · {% endif %}
+    {%- for name in d.removed %}<del>− {{ name|nocode if named else name }}</del>{% if not loop.last %}; {% endif %}{% endfor %}
+  {% else %}{{ "filled in" if d.filled_in else ("taken out" if d.filled_in == false else "reworded") }}
+    {%- if full and (d.blocks or d.text) %}
+    <details class="prose-block"><summary>Show the change</summary>
+      {% if d.blocks %}{{ prose_diff(d.blocks) }}{% else %}{% for para in d.text|paragraphs %}<p>{% if d.filled_in %}<ins>{{ para }}</ins>{% else %}<del>{{ para }}</del>{% endif %}</p>{% endfor %}{% endif %}
+    </details>
+    {%- endif %}
+  {% endif %}</li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro wide_edit(edits) -%}
+{%- for e in edits %}{{ e.field }}: {{ rewording([e]) }}{% if not loop.last %}; {% endif %}{% endfor -%}
+{%- endmacro %}

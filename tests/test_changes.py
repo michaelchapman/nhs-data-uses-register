@@ -152,6 +152,52 @@ class Changes(unittest.TestCase):
         self.assertEqual(changes.diff(REGISTER, "september2026")["removed"], [])
         self.assertNotIn(SECOND, changes.history(REGISTER))
 
+    def test_an_amendment_says_what_changed_not_only_which_field(self):
+        self.record(("july2026", self.versions), ("august2026", self.edited(end_date="2031-06-01")))
+        (item,) = changes.diff(REGISTER, "august2026")["amended"]
+        self.assertEqual(item["details"], [{"label": "End date", "kind": "value",
+                                            "before": self.versions[FIRST][-1]["end_date"], "after": "2031-06-01"}])
+
+    def with_legal_basis(self, versions, value):
+        changed = copy.deepcopy(versions)
+        for base in (FIRST, SECOND):
+            for dataset in changed[base][-1]["datasets"]:
+                dataset["legal_basis"] = value
+        return changed
+
+    LONG_BASIS = "Health and Social Care Act 2012 - s261(1) and s261(2)(b)(ii); Common law duty of confidentiality applies"
+
+    def test_a_long_value_reworded_is_shown_by_the_words_that_changed(self):
+        before = self.with_legal_basis(self.versions, self.LONG_BASIS)
+        after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))
+        self.record(("july2026", before), ("august2026", after))
+        details = changes.diff(REGISTER, "august2026")["amended"][0]["details"]
+        self.assertEqual(details[0]["kind"], "edit")
+        self.assertEqual(details[0]["edits"], [{"removed": "s261(1) and", "added": ""}])
+
+    def test_the_same_rewording_on_enough_agreements_is_one_register_wide_edit(self):
+        before = self.with_legal_basis(self.versions, self.LONG_BASIS)
+        after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))
+        self.record(("july2026", before), ("august2026", after))
+        with mock.patch.object(changes, "WIDE_EDIT_AGREEMENTS", 2):
+            result = changes.diff(REGISTER, "august2026")
+            entry = changes.history(REGISTER, wide={"august2026": result["wide_ops"]})[FIRST]
+        self.assertEqual(result["amended"], [])
+        (wide,) = result["wide_edits"]
+        self.assertEqual(wide["edits"], [{"field": "Datasets: legal basis", "removed": "s261(1) and", "added": ""}])
+        self.assertEqual(wide["agreements"], 2)
+        self.assertEqual(entry["amendments"], 0)
+        (event,) = [e for e in entry["events"] if e["edition"] == "august2026"]
+        self.assertEqual(event["wide"][0]["references"], [V2])
+
+    def test_a_rewording_on_too_few_agreements_is_an_ordinary_amendment(self):
+        before = self.with_legal_basis(self.versions, self.LONG_BASIS)
+        after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))
+        self.record(("july2026", before), ("august2026", after))
+        result = changes.diff(REGISTER, "august2026")
+        self.assertEqual(len(result["amended"]), 2)
+        self.assertEqual(result["wide_edits"], [])
+
     def with_dataset_attribute(self, key, value):
         changed = copy.deepcopy(self.versions)
         changed[SECOND][0]["datasets"][0][key] = value

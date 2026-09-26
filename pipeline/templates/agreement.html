@@ -2,24 +2,7 @@
 {% set v = agreement.latest %}
 {% block title %}{{ agreement.title }} — {{ agreement.organisation|org }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ agreement.organisation|org }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
-{% macro prose_diff(blocks) %}
-<p class="diff-text">
-  {% for block in blocks %}
-    {% if block.op == "equal" %}<span class="diff-elided">[{{ block.paragraphs }} paragraph{{ "s" if block.paragraphs != 1 }} unchanged]</span>
-    {% elif block.op == "insert" %}<ins>{{ block.text }}</ins>
-    {% elif block.op == "delete" %}<del>{{ block.text }}</del>
-    {% else %}
-      {% for run in block.runs %}
-        {% if run.op == "equal" %}{{ run.text }}
-        {% elif run.op == "insert" %}<ins>{{ run.text }}</ins>
-        {% elif run.op == "delete" %}<del>{{ run.text }}</del>
-        {% else %}<span class="diff-elided">[{{ run.words|commas }} words unchanged]</span>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-</p>
-{% endmacro %}
+{% from "_change_details.html" import prose_diff, change_details, wide_edit %}
 {% macro version_diff(diff) %}
 <details class="diff">
   <summary>What changed from {{ diff.previous }}</summary>
@@ -275,11 +258,20 @@
     <div class="timeline-line">
       <span class="tag tag-amended">Amended</span>
       <span class="version-ref">{{ item.reference }}</span>
-      {% if item.fields %}
+      {% if item.details %}
+      {{ change_details(item.details, full=true) }}
+      {% elif item.fields %}
       — changed: {% for field in item.fields %}<strong>{{ field }}</strong>{% if not loop.last %}, {% endif %}{% endfor %}
       {% else %}
       — fields not recorded for this edition
       {% endif %}
+    </div>
+    {% endfor %}
+    {% for item in event.wide %}
+    <div class="timeline-line">
+      <span class="tag">Register-wide edit</span>
+      {% for reference in item.references %}<span class="version-ref">{{ reference }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+      — {{ wide_edit(item.edits) }}. <span class="hint">Made to {{ item.agreements|commas }} agreements in this edition, so it is reported <a href="{{ meta.base_path }}/changes/{% if event.edition != current_edition %}{{ event.edition }}/{% endif %}#register-wide">once, on the changes page</a>, and not counted as an amendment of this agreement.</span>
     </div>
     {% endfor %}
     {% for item in event.reorganised %}

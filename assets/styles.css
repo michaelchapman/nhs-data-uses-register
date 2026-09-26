@@ -261,6 +261,10 @@ details.diff .hint { margin: 0.25rem 0 0.5rem; }
 .diff-text del, .diff-list del, .data-table del { background: var(--del-bg); color: var(--del-ink); text-decoration: line-through; padding: 0 0.15em; }
 .diff-elided { color: var(--ink-muted); font-size: 0.8125rem; font-style: italic; white-space: nowrap; }
 .diff-list { margin: 0.35rem 0; }
+.change-list { list-style: none; margin: 0.25rem 0; padding: 0; }
+.change-list li { margin: 0.2rem 0; overflow-wrap: anywhere; }
+.change-list ins { background: var(--ins-bg); color: var(--ins-ink); text-decoration: underline; padding: 0 0.15em; }
+.change-list del { background: var(--del-bg); color: var(--del-ink); text-decoration: line-through; padding: 0 0.15em; }
 .data-table.compact th, .data-table.compact td { padding: 0.35rem 0.5rem; font-size: 0.875rem; }
 
 .timeline { list-style: none; padding: 0; margin: 0.5rem 0 1rem; }

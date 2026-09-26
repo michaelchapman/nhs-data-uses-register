@@ -160,6 +160,24 @@ def _too_different(before: str, after: str) -> bool:
     return 2.0 * shared / total < REWRITE_THRESHOLD
 
 
+def word_edits(before: str, after: str) -> tuple[list[tuple[str, str]], int]:
+    """`(edits, kept)`: the runs of words replaced between two values, and how many words stayed.
+
+    Each edit is `(removed, added)`, either of which may be empty. `kept` is
+    the number of words the two share: none means one value replaced the
+    other outright, which is a new value rather than a rewording.
+    """
+    a, b = before.split(), after.split()
+    matcher = difflib.SequenceMatcher(None, a, b, autojunk=False)
+    edits, kept = [], 0
+    for op, i1, i2, j1, j2 in matcher.get_opcodes():
+        if op == "equal":
+            kept += i2 - i1
+        else:
+            edits.append((" ".join(a[i1:i2]), " ".join(b[j1:j2])))
+    return edits, kept
+
+
 def diff_blocks(before: str, after: str) -> list[dict]:
     """Diff two free-text fields, paragraph by paragraph then word by word.
 
