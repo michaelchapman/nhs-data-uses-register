@@ -38,6 +38,10 @@
 <p class="notice"><strong>This covers {{ changes.skipped|length + 1 }} months, not one.</strong>
   {{ changes.skipped|map("edition")|join(" and ") }} {{ "is" if changes.skipped|length == 1 else "are" }} not held here, so whatever changed in {{ "that month" if changes.skipped|length == 1 else "those months" }} is included below, and nothing says which month it happened in.</p>
 {% endif %}
+{% if meta.edition == merger_edition and changes.removed %}
+<p class="notice"><strong>Most agreements no longer listed this month moved to another register rather than ended.</strong>
+  NHS Digital merged into NHS England on 1 February 2023. Agreements within the merged organisation left this register for a separate internal register, so far more are no longer listed this month than usual.</p>
+{% endif %}
 
 <div class="stat-grid">
   <div class="stat"><span class="stat-number">{{ changes.added|length|commas }}</span><span class="stat-label">added</span></div>

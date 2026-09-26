@@ -294,3 +294,39 @@ class ReleaseWording(unittest.TestCase):
         self.assertNotIn("better sense of what actually moved", page)
         self.assertIn('id="file-releases"', page)
         self.assertIn("File releases are recorded from January 2020.", page)
+
+
+class MergerEdition(unittest.TestCase):
+    """February 2023's departures are labelled, per docs/plan-release-coverage.md §5."""
+
+    def changes_page(self, edition: str) -> str:
+        removed = [{"base": "DARS-NIC-9-ZZZZZ", "reference": "DARS-NIC-9-ZZZZZ-v1",
+                    "title": "Internal flow", "org": "NHS DIGITAL"}]
+        changes = {**FIRST_EDITION, "comparable": True, "reason": "", "skipped": [],
+                   "previous_edition": "january2023", "removed": removed}
+        meta = {**site_meta(), "edition": edition}
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            with dataset_aliases():
+                build.build(extract(workbook_bytes()), meta, changes, out)
+            return (out / "changes" / "index.html").read_text()
+
+    def test_february_2023_says_departures_moved_register(self):
+        self.assertIn("moved to another register rather than ended", self.changes_page("february2023"))
+
+    def test_other_editions_say_nothing_about_the_merger(self):
+        self.assertNotIn("merged into NHS England", self.changes_page("march2023"))
+
+
+class ReleaseScope(unittest.TestCase):
+    def test_every_page_counting_files_says_what_they_cover(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            for path in ("agreements", "organisations", "datasets", "agreements/dars-nic-1-aaaaa",
+                         "organisations/university-of-example",
+                         "datasets/msds-maternity-services-data-set-v1-5"):
+                with self.subTest(path=path):
+                    page = (out / path / "index.html").read_text()
+                    self.assertIn("files released externally by DARS", page)
+                    self.assertIn("/about/#file-releases", page)

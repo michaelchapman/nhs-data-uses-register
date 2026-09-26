@@ -179,9 +179,12 @@ last.
 1. **Store the release record of §4,** with `channel` and file grain. *Done.*
 2. Carry the wording of §5 into the templates. *Done for the pages that exist:*
    the About page's caveats, the agreement page's release section (scope line,
-   "no files recorded" wording, the sublicensing note) and the home page's
-   count. The release views listed in the status note at the top of this plan
+   "no files recorded" wording, the sublicensing note), the home page's count,
+   and a scope note on every page that counts files released
+   (`_release-scope.html`). The release views listed in the status note at the top of this plan
    carry it when they are built.
-3. Label the February 2023 discontinuity on the changes pages.
+3. Label the February 2023 discontinuity on the changes pages. *Done:* the
+   February 2023 changes page and the agreement timelines that show an
+   agreement leaving that month (`sources.MERGER_EDITION`).
 4. Ask NHS England the question in §2, and record the answer here. *Done:*
    see §2, "Answered".

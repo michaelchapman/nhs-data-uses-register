@@ -17,6 +17,7 @@
   <div><dt>Organisations</dt><dd>{{ dataset.organisations|length|commas }}</dd></div>
   <div><dt>Files released</dt><dd>{{ dataset.files_released|commas }}</dd></div>
 </dl>
+{% include "_release-scope.html" %}
 
 {% set labels = [
   ("type_of_data", "Type of data"),

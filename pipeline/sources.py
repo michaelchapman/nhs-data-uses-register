@@ -25,6 +25,11 @@ LANDING_PAGE = (
     "https://digital.nhs.uk/services/data-access-request-service-dars/data-uses-register"
 )
 ARCHIVE_PAGE = f"{LANDING_PAGE}/release-register-archive"
+# The first edition after NHS Digital merged into NHS England on 1 February
+# 2023. Agreements within the merged organisation left this register for a
+# separate internal one then, so agreements leaving in this edition mostly
+# moved register rather than ended. See docs/plan-release-coverage.md §2.
+MERGER_EDITION = "february2023"
 # Published workbooks live under a stable asset prefix; the edition filename is
 # appended. Used to reconstruct a citation URL for a file downloaded by hand.
 ASSET_PREFIX = (

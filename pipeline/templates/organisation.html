@@ -26,6 +26,7 @@
   <div><dt>Files released</dt><dd>{{ organisation.files_released|commas }}</dd></div>
   <div><dt>Latest agreement end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
 </dl>
+{% include "_release-scope.html" %}
 
 <h2>Agreements</h2>
 {% if organisation.agreement_count > 15 %}

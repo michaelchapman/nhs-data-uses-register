@@ -68,6 +68,7 @@ def environment() -> Environment:
     env.filters["commas"] = lambda n: f"{n:,}"
     env.filters["slug"] = slugify
     env.filters["org"] = display_name
+    env.globals["merger_edition"] = sources.MERGER_EDITION
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
     # The page a dataset name links to, whichever spelling the register used.
     env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
