@@ -56,7 +56,7 @@ Budget about two minutes a month, plus about a minute for the parse.
    names `odscheck` lists for review. If one is an NHS organisation that ODS
    knows under another name, add it to the codes file by hand with evidence
    starting `reviewed:`, which later runs keep. See
-   [plan-organisation-changes.md](plan-organisation-changes.md).
+   [organisation-names.md](organisation-names.md#nhs-reorganisations-ods).
 
 4. **Check the numbers look sane,** then commit and push:
 

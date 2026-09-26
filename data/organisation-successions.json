@@ -1,0 +1,11 @@
+{
+ "_comment": "Successions recorded by hand, by register name, where NHS ODS has none or dates one in a way that would mislead. ODS stays the source everywhere else. See pipeline/lineage.py and docs/organisation-names.md.",
+ "successions": [
+  {
+   "from": "HEALTH & SOCIAL CARE INFORMATION CENTRE",
+   "to": "NHS ENGLAND - X26",
+   "date": "2023-02-01",
+   "evidence": "reviewed: NHS Digital, legally the Health and Social Care Information Centre, merged into NHS England on 1 February 2023. ODS links HSCIC to NHS England from April 2013, which would mislabel the merger."
+  }
+ ]
+}

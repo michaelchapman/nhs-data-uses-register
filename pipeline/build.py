@@ -229,9 +229,8 @@ def version_diffs(
 ) -> dict[str, dict]:
     """What each version changed from the one before it, keyed by reference.
 
-    Both versions are in the same extract, so this needs no stored history —
-    unlike the edition-to-edition case, which cannot be answered until the
-    amendment log in docs/plan-version-diffs.md exists.
+    Both versions are in the same extract, so this reads nothing more; the
+    edition-to-edition case is `changes`, which reads the facts store.
     """
     diffs = {}
     for older, newer in zip(agreement["versions"], agreement["versions"][1:]):

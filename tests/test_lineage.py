@@ -55,6 +55,40 @@ class Relations(unittest.TestCase):
         self.assertEqual(aliased.node("ROYAL DEVON AND EXETER NHS FOUNDATION TRUST"), "org:RH8")
 
 
+class Reviewed(unittest.TestCase):
+    SUCCESSION = {"from": "HEALTH & SOCIAL CARE INFORMATION CENTRE", "to": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+                  "date": "2023-02-01", "evidence": "reviewed: test"}
+
+    def lineage(self, alias_map=None):
+        return lineage.Lineage(list(ODS_CODES), copy.deepcopy(ODS_WORLD), alias_map or {}, [self.SUCCESSION])
+
+    def test_a_reviewed_succession_is_used_with_its_own_date_and_source(self):
+        lin = self.lineage()
+        self.assertEqual(lin.relation("HEALTH & SOCIAL CARE INFORMATION CENTRE", "NHS KENT AND MEDWAY ICB - 91Q"),
+                         (lineage.SUCCEEDED, "2023-02-01"))
+        self.assertEqual(lin.source("HEALTH & SOCIAL CARE INFORMATION CENTRE"), "reviewed")
+        self.assertEqual(lin.source("NHS KENT AND MEDWAY CCG"), "ODS")
+
+    def test_it_comes_before_a_code_the_same_name_was_matched_to(self):
+        codes = ODS_CODES + [{"name": "HEALTH & SOCIAL CARE INFORMATION CENTRE", "code": "YGM74", "evidence": "test"}]
+        lin = lineage.Lineage(codes, copy.deepcopy(ODS_WORLD), {}, [self.SUCCESSION])
+        self.assertEqual(lin.relation("HEALTH & SOCIAL CARE INFORMATION CENTRE", "NHS KENT AND MEDWAY ICB - 91Q"),
+                         (lineage.SUCCEEDED, "2023-02-01"))
+
+    def test_it_shows_on_both_pages_marked_as_reviewed(self):
+        lin = self.lineage()
+        (row,) = [p for p in lin.predecessors("org:QKS") if p["reviewed"]]
+        self.assertEqual(row["name"], "HEALTH & SOCIAL CARE INFORMATION CENTRE")
+        page = lin.page("HEALTH & SOCIAL CARE INFORMATION CENTRE")
+        self.assertEqual(lin.successors_of(page)[0]["identity"], "org:QKS")
+        self.assertTrue(lin.successors_of(page)[0]["reviewed"])
+
+    def test_an_alias_group_shares_the_code_one_of_its_names_has_and_keeps_its_chosen_name(self):
+        lin = self.lineage({"northern devon healthcare nhs trust": "NORTHERN DEVON HEALTHCARE (RENAMED)"})
+        self.assertEqual(lin.node("NORTHERN DEVON HEALTHCARE (RENAMED)"), "org:RBZ")
+        self.assertEqual(lin.page_name("org:RBZ"), "NORTHERN DEVON HEALTHCARE (RENAMED)")
+
+
 class Pages(unittest.TestCase):
     def setUp(self):
         self.lineage = world()
@@ -83,7 +117,7 @@ class Pages(unittest.TestCase):
         self.assertEqual([p["name"] for p in self.lineage.predecessors("org:QWO")], ["NHS KIRKLEES CCG"])
         self.assertEqual(self.lineage.successors_of("ccg:91Q"),
                          [{"identity": "org:QKS", "name": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
-                           "date": "2022-07-01"}])
+                           "date": "2022-07-01", "reviewed": False}])
 
     def test_an_empty_lineage_knows_nothing(self):
         empty = lineage.Lineage([], {}, {})
@@ -104,7 +138,8 @@ class Comparing(unittest.TestCase):
                                   self.version(controllers=["NHS KENT AND MEDWAY ICB - 91Q"]))
         self.assertEqual(difference["lists"], [])
         self.assertEqual(difference["succeeded"], [{"label": "Data controllers", "before": "NHS KENT AND MEDWAY CCG",
-                                                    "after": "NHS KENT AND MEDWAY ICB - 91Q", "date": "2022-07-01"}])
+                                                    "after": "NHS KENT AND MEDWAY ICB - 91Q", "date": "2022-07-01",
+                                                    "source": "ODS"}])
 
     def test_several_ccgs_pair_with_their_own_sub_icb_locations(self):
         codes = ODS_CODES + [

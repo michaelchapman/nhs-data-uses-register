@@ -1,5 +1,5 @@
 {
- "_comment": "The ODS code for each organisation name in the register that has one, and the evidence for it. Written by `python -m pipeline.odscheck`; an entry whose evidence starts \"reviewed:\" was decided by a person and is kept on every run. \"as\": \"CCG\" marks a name that belongs to the code as it was while a clinical commissioning group, before ODS renamed the record as a sub-ICB location. See docs/plan-organisation-changes.md.",
+ "_comment": "The ODS code for each organisation name in the register that has one, and the evidence for it. Written by `python -m pipeline.odscheck`; an entry whose evidence starts \"reviewed:\" was decided by a person and is kept on every run. \"as\": \"CCG\" marks a name that belongs to the code as it was while a clinical commissioning group, before ODS renamed the record as a sub-ICB location. See docs/organisation-names.md.",
  "names": [
   {
    "name": "3M UNITED KINGDOM PLC",
@@ -235,6 +235,11 @@
    "name": "CUMBERLAND COUNCIL",
    "code": "H6X4G",
    "evidence": "the name is this organisation's current ODS name"
+  },
+  {
+   "name": "CUMBRIA COUNTY COUNCIL",
+   "code": "102",
+   "evidence": "reviewed: ODS holds two inactive records with this name; 102 is the council, succeeded by Cumberland Council and Westmorland and Furness Council from April 2023"
   },
   {
    "name": "CUMBRIA, NORTHUMBERLAND, TYNE AND WEAR NHS FOUNDATION TRUST",
@@ -2936,6 +2941,11 @@
    "name": "UNIVERSITY OF YORK",
    "code": "EE133913",
    "evidence": "the name is this organisation's current ODS name"
+  },
+  {
+   "name": "VELINDRE UNIVERSITY NHS TRUST",
+   "code": "RQF",
+   "evidence": "reviewed: ODS names RQF 'Velindre NHS Trust'"
   },
   {
    "name": "WAKEFIELD METROPOLITAN DISTRICT COUNCIL",

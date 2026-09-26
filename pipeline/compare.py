@@ -498,7 +498,7 @@ def _lineage_pairs(removed: list[str], added: list[str], lineage) -> tuple[list[
             continue
         own = [(now, rel) for now, rel in related if lineage.node(now).split(":")[1] == lineage.node(was).split(":")[1]]
         for now, (kind, date) in own or related[:1]:
-            pairs.append({"kind": kind, "before": was, "after": now, "date": date})
+            pairs.append({"kind": kind, "before": was, "after": now, "date": date, "source": lineage.source(was)})
         gone.add(was)
         came.update(now for now, _ in related)
     return pairs, gone, came
@@ -554,7 +554,7 @@ def compare_versions(
             if pairs:
                 pair = pairs[0]
                 (renamed if pair["kind"] == "same" else succeeded).append(
-                    {"label": label, "before": old, "after": new, "date": pair["date"]}
+                    {"label": label, "before": old, "after": new, "date": pair["date"], "source": pair["source"]}
                 )
                 applicant_moved = True
                 continue
@@ -582,7 +582,8 @@ def compare_versions(
             pairs, gone, came = _lineage_pairs(moved["removed"], moved["added"], lineage)
             for pair in pairs:
                 (renamed if pair["kind"] == "same" else succeeded).append(
-                    {"label": label, "before": pair["before"], "after": pair["after"], "date": pair["date"]}
+                    {"label": label, "before": pair["before"], "after": pair["after"], "date": pair["date"],
+                     "source": pair["source"]}
                 )
             moved["removed"] = [n for n in moved["removed"] if n not in gone]
             moved["added"] = [n for n in moved["added"] if n not in came]

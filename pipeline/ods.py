@@ -10,7 +10,7 @@ depends on ODS being reachable and a refresh shows up as a reviewable diff.
 
 The snapshot holds the codes named in `data/organisation-codes.json`, and every
 code their successor, predecessor and ICB links reach, trimmed to what the site
-uses. See docs/plan-organisation-changes.md.
+uses. See docs/organisation-names.md, "NHS reorganisations (ODS)".
 """
 
 from __future__ import annotations

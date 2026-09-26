@@ -15,7 +15,9 @@
 {% if organisation.archived %}
 <p class="notice"><strong>No longer in the register.</strong> Every agreement naming {{ organisation.name|org }} has left the register; the last was published in the {{ organisation.archived.last_edition|edition }} edition. This page shows those agreements as last published, and none is counted in this site's figures.</p>
 {% endif %}
-{% if organisation.name|org != organisation.name|nocode %}
+{% if not organisation.named_in_register %}
+<p class="hint">Named as NHS ODS names it; the register names it only in the forms below.</p>
+{% elif organisation.name|org != organisation.name|nocode %}
 <p class="hint">The register writes this name in capitals: {{ organisation.name|nocode }}.</p>
 {% endif %}
 {% if organisation.known_as %}
