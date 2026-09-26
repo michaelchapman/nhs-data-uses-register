@@ -30,16 +30,18 @@
     <thead><tr><th scope="col">Field</th><th scope="col">Was</th><th scope="col">Became</th></tr></thead>
     <tbody>
     {% for change in diff.scalars %}
-      <tr><th scope="row">{{ change.label }}</th><td><del>{{ change.before or "Not stated" }}</del></td><td><ins>{{ change.after or "Not stated" }}</ins></td></tr>
+      {% set named = change.label == "Applicant organisation" %}
+      <tr><th scope="row">{{ change.label }}</th><td><del>{{ (change.before|nocode if named else change.before) or "Not stated" }}</del></td><td><ins>{{ (change.after|nocode if named else change.after) or "Not stated" }}</ins></td></tr>
     {% endfor %}
     </tbody>
   </table>
   {% endif %}
   {% for change in diff.lists %}
+  {% set named = change.label == "Data controllers" %}
   <p class="diff-list"><strong>{{ change.label }}:</strong>
-    {% for name in change.added %}<ins>+ {{ name }}</ins>{% if not loop.last %}; {% endif %}{% endfor %}
+    {% for name in change.added %}<ins>+ {{ name|nocode if named else name }}</ins>{% if not loop.last %}; {% endif %}{% endfor %}
     {% if change.added and change.removed %} · {% endif %}
-    {% for name in change.removed %}<del>− {{ name }}</del>{% if not loop.last %}; {% endif %}{% endfor %}
+    {% for name in change.removed %}<del>− {{ name|nocode if named else name }}</del>{% if not loop.last %}; {% endif %}{% endfor %}
   </p>
   {% endfor %}
   {% for change in diff.prose %}
@@ -245,6 +247,12 @@
       {% else %}
       — fields not recorded for this edition
       {% endif %}
+    </div>
+    {% endfor %}
+    {% for item in event.reorganised %}
+    <div class="timeline-line">
+      <span class="tag">{{ "Succeeded" if item.kind == "succeeded" else "Renamed" }}</span>
+      {{ item.label }}: {{ item.before|org }} {{ "succeeded by" if item.kind == "succeeded" else "now named" }} {{ item.after|org }}{% if item.date %} from {{ item.date|date }}, according to NHS ODS{% endif %}. <span class="hint">Not counted as a change.</span>
     </div>
     {% endfor %}
     {% if event.removed %}

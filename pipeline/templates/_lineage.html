@@ -4,7 +4,7 @@
 {% if l.successors %}
 <p class="notice">{% if l.ccg %}Clinical commissioning groups were abolished when integrated care boards took over their functions. {% endif %}NHS ODS records {{ organisation.name|org }} as succeeded by
   {% for row in l.successors %}{{ org_link(row) }}{% if row.date %} from {{ row.date|date }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
-  Its agreements below are listed under the name the register used.</p>
+  Its agreements below are listed under the name the register gave them.</p>
 {% endif %}
 {% if l.sub_icb_locations %}
 <h2 id="sub-icb-locations">Sub-ICB locations</h2>
@@ -17,7 +17,7 @@
 {% endif %}
 {% if l.predecessors %}
 <h2 id="predecessors">Predecessors</h2>
-<p>Organisations named in the register that NHS ODS records as succeeded by {{ organisation.name|org }}. Their agreements stay on their own pages, under the names the register gave them.</p>
+<p>Organisations named in the register that NHS ODS records as succeeded by {{ organisation.name|org }}. The register renames an agreement's organisation when it succeeds, so their agreements are usually listed here{% if l.predecessors|selectattr("slug")|list %}, and on their own pages where they have one{% endif %}.</p>
 <ul class="plain">
   {% for row in l.predecessors %}
   <li>{{ org_link(row) }}{% if row.date %}, from {{ row.date|date }}{% endif %}</li>

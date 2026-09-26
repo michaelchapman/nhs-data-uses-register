@@ -265,7 +265,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         for event in events:
             entry = by_edition.setdefault(event["edition"], {
                 "edition": event["edition"], "skipped": event["skipped"],
-                "added": [], "amended": [], "removed": [], "fields": [],
+                "added": [], "amended": [], "removed": [], "fields": [], "reorganised": [],
             })
             fields: list[str] = []
             if event["kind"] == "amended":
@@ -279,13 +279,21 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
                     # second is what a reader came for, and the register itself
                     # never says it.
                     if not _material(difference):
+                        # A rename or an ODS succession is not an amendment,
+                        # but the timeline says it happened, once per edition.
+                        for item in (difference or {}).get("succeeded", []) + (difference or {}).get("renamed", []):
+                            pair = {"label": item["label"], "before": item["before"], "after": item["after"],
+                                    "date": item.get("date", ""),
+                                    "kind": "succeeded" if item in (difference or {}).get("succeeded", []) else "renamed"}
+                            if item["label"] != "Organisation type" and pair not in entry["reorganised"]:
+                                entry["reorganised"].append(pair)
                         continue
                     fields = _labels(difference)
             entry[event["kind"]].append({"reference": event["reference"], "fields": fields})
         for entry in by_edition.values():
             for kind in ("added", "amended", "removed"):
                 entry[kind].sort(key=lambda item: item["reference"])
-            if not (entry["added"] or entry["amended"] or entry["removed"]):
+            if not (entry["added"] or entry["amended"] or entry["removed"] or entry["reorganised"]):
                 continue
             # The union across the edition's amendments, for a one-line summary
             # when several versions were restated together.
@@ -301,7 +309,7 @@ def history(register_slug: str, alias_map: dict[str, str] | None = None) -> dict
         # does not print the same edition twice. An edition that also amended
         # or removed something is left alone: it has more to say.
         first = [e for e in entry["events"] if e["edition"] == entry["first_edition"]]
-        if first and not (first[0]["amended"] or first[0]["removed"]):
+        if first and not (first[0]["amended"] or first[0]["removed"] or first[0]["reorganised"]):
             entry["first_versions"] = [item["reference"] for item in first[0]["added"]]
             entry["events"].remove(first[0])
         else:

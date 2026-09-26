@@ -90,13 +90,25 @@ def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, 
             found = active if len(active) == 1 else found
         if len(found) == 1:
             (code, match_), = found.items()
+            if CCG_NAME.search(name) and match_["role"] != ods.CCG:
+                # Some prescribing and service records carry an old CCG's
+                # name. A CCG name belongs to a CCG record or to none.
+                continue
             entry = {"name": name, "code": code, "evidence": "the name is this organisation's current ODS name"}
-            if match_["role"] == ods.CCG and CCG_NAME.search(name):
+            if match_["role"] == ods.CCG:
                 entry["as"] = "CCG"
             entries[key] = entry
 
-    # The CCG bridge: ODS kept the record and changed its name, so the code
-    # comes from the name that replaced it on the register.
+    bridge_ccgs(entries, unique, swaps, record)
+    for_review = sorted(
+        name for key, name in unique.items() if key not in entries and NHS_NAME.search(name)
+    )
+    return list(entries.values()), for_review
+
+
+def bridge_ccgs(entries: dict, unique: dict, swaps, record) -> None:
+    """The CCG bridge: ODS kept the record and changed its name, so the code
+    comes from the name that replaced it on the register."""
     replaced_by = defaultdict(Counter)
     for (was, now), count in swaps.items():
         if CCG_NAME.search(was) and CODE_IN_NAME.search(now):
@@ -113,11 +125,6 @@ def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, 
                 "evidence": f"replaced by {now} on {count} version{'s' if count != 1 else ''}; "
                             f"ODS records {code} as a CCG that became a sub-ICB location",
             }
-
-    for_review = sorted(
-        name for key, name in unique.items() if key not in entries and NHS_NAME.search(name)
-    )
-    return list(entries.values()), for_review
 
 
 def main() -> None:

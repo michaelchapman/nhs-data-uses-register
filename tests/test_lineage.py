@@ -72,6 +72,13 @@ class Pages(unittest.TestCase):
         self.assertEqual(self.lineage.sub_icb_locations("org:QKS"),
                          [{"code": "91Q", "former": ["NHS KENT AND MEDWAY CCG"]}])
 
+    def test_a_council_in_the_icbs_area_is_not_one_of_its_sub_icb_locations(self):
+        codes = ODS_CODES + [{"name": "KENT COUNTY COUNCIL", "code": "886", "evidence": "test"}]
+        organisations = {**ODS_WORLD, "886": {**ODS_WORLD["QKS"], "name": "KENT COUNTY COUNCIL", "icb": "QKS",
+                                              "roles": [{"id": "RO141", "primary": True, "start": "", "end": ""}]}}
+        self.assertEqual([r["code"] for r in world(codes, organisations).sub_icb_locations("org:QKS")], ["91Q"])
+        self.assertEqual(world(codes, organisations).page("KENT COUNTY COUNCIL"), "org:886")
+
     def test_predecessors_and_successors_are_the_register_named_ones(self):
         self.assertEqual([p["name"] for p in self.lineage.predecessors("org:QWO")], ["NHS KIRKLEES CCG"])
         self.assertEqual(self.lineage.successors_of("ccg:91Q"),
@@ -213,6 +220,17 @@ class Proposing(unittest.TestCase):
         })
         self.assertEqual(entries[0]["code"], "03J")
         self.assertEqual(entries[0]["as"], "CCG")
+
+    def test_a_ccg_name_on_a_record_that_is_not_a_ccg_is_not_a_match(self):
+        # ODS has prescribing records named after old CCGs.
+        entries, _ = self.propose(
+            ["NHS KENT AND MEDWAY CCG", "NHS KENT AND MEDWAY ICB - 91Q"],
+            swaps={("NHS KENT AND MEDWAY CCG", "NHS KENT AND MEDWAY ICB - 91Q"): 3},
+            searches={"NHS KENT AND MEDWAY CCG": [
+                {"code": "Y04158", "name": "NHS KENT AND MEDWAY CCG", "status": "Active", "role": "RO177"}]},
+        )
+        ccg = next(e for e in entries if e["name"] == "NHS KENT AND MEDWAY CCG")
+        self.assertEqual((ccg["code"], ccg["as"]), ("91Q", "CCG"))
 
     def test_a_ccg_gets_the_code_of_the_name_that_replaced_it(self):
         entries, _ = self.propose(

@@ -127,6 +127,20 @@ class Changes(unittest.TestCase):
         self.assertEqual([a["fields"] for a in changes.diff(REGISTER, "august2026")["amended"]],
                          [["Data controllers"]])
 
+    def test_a_ccg_succeeded_by_its_icb_is_on_the_timeline_but_not_an_amendment(self):
+        from .fixtures import lineage_files
+        lineage_files()
+        before = self.edited(controllers=["NHS KENT AND MEDWAY CCG"])
+        after = self.edited(controllers=["NHS KENT AND MEDWAY ICB - 91Q"])
+        self.record(("july2026", before), ("august2026", after))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+        entry = changes.history(REGISTER)[FIRST]
+        self.assertEqual(entry["amendments"], 0)
+        (event,) = [e for e in entry["events"] if e["edition"] == "august2026"]
+        self.assertEqual(event["reorganised"], [{"label": "Data controllers", "before": "NHS KENT AND MEDWAY CCG",
+                                                 "after": "NHS KENT AND MEDWAY ICB - 91Q", "date": "2022-07-01",
+                                                 "kind": "succeeded"}])
+
     def with_dataset_attribute(self, key, value):
         changed = copy.deepcopy(self.versions)
         changed[SECOND][0]["datasets"][0][key] = value

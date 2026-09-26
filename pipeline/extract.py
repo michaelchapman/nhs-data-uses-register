@@ -636,10 +636,6 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
     for entry in grouped.values():
         page = lineage_pages.get(entry["slug"])
         entry["lineage"] = _lineage_facts(page[1], organisation_lineage, slugs) if page else None
-        if entry["lineage"] and entry["lineage"]["sub_icb_locations"]:
-            # Listed under the ICB's sub-ICB locations instead, with the code
-            # that tells them apart.
-            entry["known_as"] = {n for n in entry["known_as"] if strip_code(n) == n}
         entry["agreement_count"] = len(entry["agreements"])
         entry["controller_agreement_count"] = len(entry["controller_agreements"])
         all_agreements = entry["agreements"] + entry["controller_agreements"]
@@ -651,7 +647,9 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
         )
         entry["latest_end"] = max((a["coverage_end"] for a in entry["agreements"]), default="")
         entry["commercial"] = any(a["commercial"] == "Yes" for a in entry["agreements"])
-        entry["known_as"] = sorted(entry["known_as"])
+        # Codes are shown only where they explain lineage, which the sub-ICB
+        # location list does; here they would only make one name look like two.
+        entry["known_as"] = sorted({strip_code(n) for n in entry["known_as"]} - {strip_code(entry["name"])})
     return sorted(grouped.values(), key=lambda o: o["name"].lower())
 
 

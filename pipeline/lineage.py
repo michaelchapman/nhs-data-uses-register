@@ -183,7 +183,10 @@ class Lineage:
         rows: dict[str, set[str]] = {}
         for entry in self.entries.values():
             code = entry["code"]
-            if code == icb or self.organisations.get(code, {}).get("icb") != icb:
+            record = self.organisations.get(code, {})
+            # ODS places councils and trusts "in the geography of" an ICB too;
+            # only a sub-ICB location is part of it.
+            if code == icb or record.get("icb") != icb or ods.SUB_ICB_LOCATION not in _roles(record):
                 continue
             rows.setdefault(code, set())
             if entry.get("as") == "CCG":

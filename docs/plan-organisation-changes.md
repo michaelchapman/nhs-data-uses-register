@@ -1,6 +1,7 @@
 # Plan: NHS organisation changes, from ODS
 
-Status: **proposed.** Nothing here is built. It follows from
+Status: **implemented (September 2026)**, with the decisions in §5 made as
+recorded there; §7 has the outcome. It follows from
 [plan-version-diffs.md](plan-version-diffs.md) §11, which merged the
 organisations the register had merely relabelled and left the NHS
 reorganisations for this piece of work. All figures below are from the facts
@@ -170,6 +171,11 @@ identity over time.
 
 ## 5. Decisions needed
 
+*Decided 2026-09-26: one page per ICB, listing its sub-ICB locations; credit
+ODS as source and licence; include every NHS organisation change ODS can
+identify, not only CCGs. Names are shown without ODS codes, except where a
+code explains which organisation continued which.*
+
 1. **Is a sub-ICB location the same organisation as its ICB?** The register
    uses both forms: "NHS KENT AND MEDWAY ICB - 91Q" (a sub-ICB location, an
    ODS record in its own right) and "NHS KENT AND MEDWAY INTEGRATED CARE BOARD"
@@ -201,3 +207,50 @@ identity over time.
 5. Measure the archive before and after, and record the result here, as §8 and
    §11 of plan-version-diffs.md did.
 6. The later scopes in §5.3.
+
+## 7. Outcome
+
+Built as §4 describes, with these differences found on the way:
+
+- **The CCG bridge needed a guard.** ODS holds some prescribing records under
+  old CCG names (Gloucestershire, Rotherham and Wirral among them), so an
+  exact-name match took them for the CCG. A CCG name now accepts an exact match
+  only on a CCG record.
+- **"In the geography of" is not membership.** ODS places councils and trusts
+  in an ICB's area with the same relationship a sub-ICB location has, so the
+  sub-ICB location list keeps only records holding that role.
+- **Successions appear on the timeline.** Most happen in place between
+  editions, not between versions, so a redline would rarely show them. Each
+  agreement's edition timeline now says "succeeded by", with ODS's date,
+  and does not count it as a change: 366 agreement pages carry one.
+- **Reviewed codes.** Eight trusts that ODS holds under a newer name or a
+  duplicate record were added by hand, marked `reviewed:`. They include Salford
+  Royal (now Northern Care Alliance), University Hospitals Bristol and Weston
+  (now Bristol NHS Foundation Trust) and West Hertfordshire Hospitals.
+  `odscheck` lists the rest for review: NHS England's regional offices,
+  Welsh and Scottish bodies, and "NHS". The Health and Social Care Information
+  Centre is left unmatched on purpose. ODS dates its succession by NHS England
+  to April 2013, which would mislabel the 2023 merger.
+
+Measured over the archive, after §11 of plan-version-diffs.md's renames:
+
+| | Before | After |
+| --- | ---: | ---: |
+| Amendments | 2,565 | **1,663** |
+| October 2022 | 881 | 2 |
+| Amendments naming data controllers | 934 | 43 |
+| naming the applicant organisation | 929 | 41 |
+| naming the organisation type | 882 | 6 |
+| Organisation pages | 611 | 506 |
+
+The codes cover 589 of 992 register names: 107 from a code in the name, 368 by
+exact ODS name, 106 CCGs through the bridge, and the eight reviewed. The ODS
+snapshot holds 1,088 records, 0.5 MB. The only succession outside CCGs to ICBs
+that the register shows between versions is Camden and Islington NHS
+Foundation Trust, succeeded by North London NHS Foundation Trust in November
+2024. The trust renames ODS confirms (Salford Royal, University Hospitals
+Bristol and Weston, West Hertfordshire) are reported as renames.
+
+The build takes about 90 seconds, against 30 before. Most of the difference is
+the lineage check in each of the archive's comparisons.
+
