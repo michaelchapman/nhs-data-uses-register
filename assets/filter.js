@@ -69,7 +69,15 @@
 
       if (text) setParam("q", text.value.trim());
       selects.forEach(function (select) { setParam(select.dataset.key, select.value); });
-      flags.forEach(function (flag) { setParam(flag.dataset.key, flag.checked ? flag.value : ""); });
+      flags.forEach(function (flag) { setParam(flag.dataset.key, flagParam(flag)); });
+    }
+
+    // A flag marked `data-default="on"` starts ticked. The URL records only a
+    // departure from that — `active=all` once it is unticked — so the default
+    // view keeps a clean URL and a link to the full list still gives the full list.
+    function flagParam(flag) {
+      if (flag.dataset.default === "on") return flag.checked ? "" : "all";
+      return flag.checked ? flag.value : "";
     }
 
     // Debounce typing so a 2,000-row table stays responsive; react immediately
@@ -105,7 +113,12 @@
         select.value = wanted;
       }
     });
-    flags.forEach(function (flag) { flag.checked = params.get(flag.dataset.key) === flag.value; });
+    // Ticked here rather than in the HTML: with JavaScript off every row shows,
+    // so a box ticked in the markup would claim a filter that isn't applied.
+    flags.forEach(function (flag) {
+      var wanted = params.get(flag.dataset.key);
+      flag.checked = wanted === flag.value || (flag.dataset.default === "on" && wanted === null);
+    });
     apply();
   });
 

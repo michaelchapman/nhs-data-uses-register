@@ -130,6 +130,10 @@ class InTerm(unittest.TestCase):
         self.assertEqual(page.count('data-active="yes"'), 1)
         self.assertEqual(page.count('data-active="no"'), 1)
         self.assertIn("In term in September 2026", page)
+        # On by default, but ticked by the script: with JavaScript off every row
+        # shows, so the markup must not claim the filter is applied.
+        self.assertRegex(page, r'<input type="checkbox" data-filter-flag data-key="active" value="yes" data-default="on">')
+        self.assertNotRegex(page, r'data-key="active"[^>]*checked')
 
     def test_status_is_shown_on_every_page_that_lists_or_describes_an_agreement(self):
         # As of June 2030, DARS-NIC-1 (to January 2030) has ended and DARS-NIC-2 has not.
