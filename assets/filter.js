@@ -97,7 +97,8 @@
       reset.addEventListener("click", function () {
         if (text) text.value = "";
         selects.forEach(function (select) { select.value = ""; });
-        flags.forEach(function (flag) { flag.checked = false; });
+        // Back to the view the page opens on, so a default-on flag is ticked again.
+        flags.forEach(function (flag) { flag.checked = flag.dataset.default === "on"; });
         apply();
         if (text) text.focus();
       });
