@@ -13,6 +13,16 @@
     <input type="search" id="q" data-filter-text autocomplete="off" placeholder="e.g. Oxford, IQVIA, council">
   </div>
   <div class="field">
+    <label for="sector">Sector</label>
+    <select id="sector" data-filter-select data-key="sector" aria-describedby="sector-hint">
+      <option value="">All sectors</option>
+      {% for name, count in stats.organisation_sectors %}
+      <option value="{{ name }}">{{ name }} ({{ count|commas }})</option>
+      {% endfor %}
+    </select>
+    <p class="hint" id="sector-hint">Grouped from the register's organisation types, with some organisations corrected. <a href="{{ meta.base_path }}/about/#sectors">How sectors are decided</a></p>
+  </div>
+  <div class="field">
     <label for="type">Organisation type</label>
     <select id="type" data-filter-select data-key="type">
       <option value="">All types</option>
@@ -39,7 +49,7 @@
   </tr></thead>
   <tbody>
   {% for o in organisations %}
-    <tr data-type="{{ o.type }}" data-commercial="{{ 'yes' if o.commercial else 'no' }}"
+    <tr data-sector="{{ o.sector }}" data-type="{{ o.type }}" data-commercial="{{ 'yes' if o.commercial else 'no' }}"
         data-search="{{ (o.name ~ ' ' ~ o.type)|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name|org }}</a></th>
       <td>{{ o.type or "—" }}</td>

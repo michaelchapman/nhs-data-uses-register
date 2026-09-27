@@ -1,0 +1,335 @@
+{
+ "_comment": "Reviewed by a person. Groups the register's organisation types into sectors for the Sector filter, and corrects the sector of an organisation whose type does not say what it is: the register files universities, charities, public bodies and companies alike as \"Research\". A correction is by organisation page slug and applies to every agreement the organisation holds. See pipeline/sectors.py.",
+ "sectors": [
+  {
+   "name": "NHS",
+   "types": [
+    "Sub ICB Location",
+    "ICB - Integrated Care Board",
+    "NHS Trust",
+    "NHS Trust Site",
+    "Hospital",
+    "NHS Treatment Centre",
+    "Commissioning Support Unit (CSU)",
+    "Network",
+    "Academic Health Science Network (AHSN)",
+    "Specialised Commissioning Hub",
+    "Area Team",
+    "Devolved Administration"
+   ]
+  },
+  {
+   "name": "Local government",
+   "types": [
+    "Local Authority"
+   ]
+  },
+  {
+   "name": "Central government and public bodies",
+   "types": [
+    "Ministerial Department",
+    "Agency/Public Body",
+    "Public Corporation"
+   ]
+  },
+  {
+   "name": "Universities",
+   "types": [
+    "Academic"
+   ]
+  },
+  {
+   "name": "Charities and not-for-profits",
+   "types": [
+    "Charity",
+    "Society"
+   ]
+  },
+  {
+   "name": "Companies",
+   "types": [
+    "Commercial",
+    "Supplier",
+    "Supplier (IT)",
+    "Consultancy",
+    "SME",
+    "Non NHS Provider",
+    "Private Healthcare",
+    "Legal Sector",
+    "Independent Sector Healthcare Provider"
+   ]
+  }
+ ],
+ "corrections": [
+  {
+   "organisation": "clinical-practice-research-datalink-cprd",
+   "name": "Clinical Practice Research Datalink (CPRD)",
+   "sector": "Central government and public bodies",
+   "reason": "Part of the Medicines and Healthcare products Regulatory Agency. The register files it as Research."
+  },
+  {
+   "organisation": "genomics-england",
+   "name": "GENOMICS ENGLAND",
+   "sector": "Central government and public bodies",
+   "reason": "A company wholly owned by the Department of Health and Social Care. The register files it as Research."
+  },
+  {
+   "organisation": "national-audit-office",
+   "name": "NATIONAL AUDIT OFFICE",
+   "sector": "Central government and public bodies",
+   "reason": "The public spending watchdog, answerable to Parliament. The register files it as Research."
+  },
+  {
+   "organisation": "national-institute-for-health-research",
+   "name": "National Institute for Health Research",
+   "sector": "Central government and public bodies",
+   "reason": "The research funding body of the Department of Health and Social Care. The register files it as Research."
+  },
+  {
+   "organisation": "national-institute-for-health-research-nihr-bioresource",
+   "name": "National Institute for Health Research (NIHR) Bioresource",
+   "sector": "Central government and public bodies",
+   "reason": "Funded by the National Institute for Health Research. The register files it as Research."
+  },
+  {
+   "organisation": "the-lampard-inquiry",
+   "name": "THE LAMPARD INQUIRY",
+   "sector": "Central government and public bodies",
+   "reason": "A statutory public inquiry. The register files it as Legal Sector."
+  },
+  {
+   "organisation": "east-anglian-air-ambulance",
+   "name": "EAST ANGLIAN AIR AMBULANCE",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Agency/Public Body."
+  },
+  {
+   "organisation": "genome-research-limited",
+   "name": "GENOME RESEARCH LIMITED",
+   "sector": "Charities and not-for-profits",
+   "reason": "The charity that runs the Wellcome Sanger Institute. The register files it as Research."
+  },
+  {
+   "organisation": "health-data-research-uk",
+   "name": "Health Data Research UK",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Academic."
+  },
+  {
+   "organisation": "healthcare-quality-improvement-partnership-hqip",
+   "name": "Healthcare Quality Improvement Partnership (HQIP)",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Agency/Public Body."
+  },
+  {
+   "organisation": "institute-for-fiscal-studies",
+   "name": "INSTITUTE FOR FISCAL STUDIES",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Research."
+  },
+  {
+   "organisation": "institute-of-occupational-medicine-iom",
+   "name": "INSTITUTE OF OCCUPATIONAL MEDICINE (IOM)",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Research."
+  },
+  {
+   "organisation": "intensive-care-national-audit-research-centre-icnarc",
+   "name": "Intensive Care National Audit & Research Centre (ICNARC)",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Research."
+  },
+  {
+   "organisation": "natcen-social-research",
+   "name": "NATCEN SOCIAL RESEARCH",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Research."
+  },
+  {
+   "organisation": "national-centre-for-social-research",
+   "name": "National Centre For Social Research",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity, now NatCen Social Research. The register files it as Research."
+  },
+  {
+   "organisation": "prescqipp-cic",
+   "name": "PRESCQIPP CIC",
+   "sector": "Charities and not-for-profits",
+   "reason": "A community interest company, which is not-for-profit. The register files it as Consultancy."
+  },
+  {
+   "organisation": "private-healthcare-information-network-phin",
+   "name": "Private Healthcare Information Network (PHIN)",
+   "sector": "Charities and not-for-profits",
+   "reason": "An independent not-for-profit organisation. The register files it as Research."
+  },
+  {
+   "organisation": "quality-by-randomization-limited-trading-as-protas",
+   "name": "QUALITY BY RANDOMIZATION LIMITED (TRADING AS PROTAS)",
+   "sector": "Charities and not-for-profits",
+   "reason": "A not-for-profit company. The register files it as Research."
+  },
+  {
+   "organisation": "rand-europe-community-interest-company",
+   "name": "RAND EUROPE COMMUNITY INTEREST COMPANY",
+   "sector": "Charities and not-for-profits",
+   "reason": "A community interest company, which is not-for-profit. The register files it as Research."
+  },
+  {
+   "organisation": "royal-college-of-anaesthetists",
+   "name": "ROYAL COLLEGE OF ANAESTHETISTS",
+   "sector": "Charities and not-for-profits",
+   "reason": "A royal college, which is a registered charity. The register files it as Academic."
+  },
+  {
+   "organisation": "royal-college-of-physicians-of-london",
+   "name": "ROYAL COLLEGE OF PHYSICIANS OF LONDON",
+   "sector": "Charities and not-for-profits",
+   "reason": "A royal college, which is a registered charity. The register files it as Academic."
+  },
+  {
+   "organisation": "royal-college-of-obstetricians-and-gynaecologists-rcog",
+   "name": "Royal College of Obstetricians and Gynaecologists (RCOG)",
+   "sector": "Charities and not-for-profits",
+   "reason": "A royal college, which is a registered charity. The register files it as Agency/Public Body."
+  },
+  {
+   "organisation": "royal-college-of-paediatrics-child-health-rcpch",
+   "name": "Royal College of Paediatrics & Child Health (RCPCH)",
+   "sector": "Charities and not-for-profits",
+   "reason": "A royal college, which is a registered charity. The register files it as Academic."
+  },
+  {
+   "organisation": "royal-college-of-psychiatrists",
+   "name": "Royal College of Psychiatrists",
+   "sector": "Charities and not-for-profits",
+   "reason": "A royal college, which is a registered charity. The register files it as Academic."
+  },
+  {
+   "organisation": "society-of-endocrinology",
+   "name": "Society of Endocrinology",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Research."
+  },
+  {
+   "organisation": "the-nuffield-trust-for-research-and-policy-studies-in-health-services",
+   "name": "THE NUFFIELD TRUST FOR RESEARCH AND POLICY STUDIES IN HEALTH SERVICES",
+   "sector": "Charities and not-for-profits",
+   "reason": "A registered charity. The register files it as Research."
+  },
+  {
+   "organisation": "the-royal-college-of-surgeons-of-england",
+   "name": "THE ROYAL COLLEGE OF SURGEONS OF ENGLAND",
+   "sector": "Charities and not-for-profits",
+   "reason": "A royal college, which is a registered charity. The register files it as Academic."
+  },
+  {
+   "organisation": "astrazeneca-ab",
+   "name": "AstraZeneca AB",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "civil-eyes-research-ltd",
+   "name": "CIVIL EYES RESEARCH LTD",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "evidera-ltd",
+   "name": "EVIDERA LTD",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "ipsos-market-research-ltd",
+   "name": "IPSOS (MARKET RESEARCH) LTD",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "mac-clinical-research-finance-ltd",
+   "name": "MAC CLINICAL RESEARCH FINANCE LTD",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "modernatx-inc",
+   "name": "MODERNATX, INC",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "medicago-r-d-incorporated",
+   "name": "Medicago R&D Incorporated",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "northwest-ehealth-limited",
+   "name": "NorthWest EHealth Limited",
+   "sector": "Companies",
+   "reason": "A limited company. The register files it as Agency/Public Body."
+  },
+  {
+   "organisation": "observational-and-pragmatic-research-international-limited",
+   "name": "OBSERVATIONAL AND PRAGMATIC RESEARCH INTERNATIONAL LIMITED",
+   "sector": "Companies",
+   "reason": "A company, which the register files as Research."
+  },
+  {
+   "organisation": "addenbrooke-s-hospital",
+   "name": "ADDENBROOKE'S HOSPITAL",
+   "sector": "NHS",
+   "reason": "Part of Cambridge University Hospitals NHS Foundation Trust. The register files it as Independent Sector Healthcare Provider on one agreement and NHS Trust Site on another."
+  },
+  {
+   "organisation": "northern-ireland-clinical-trials-unit",
+   "name": "NORTHERN IRELAND CLINICAL TRIALS UNIT",
+   "sector": "NHS",
+   "reason": "Part of the Belfast Health and Social Care Trust, in Northern Ireland's health service. The register files it as Research."
+  },
+  {
+   "organisation": "rm-partners",
+   "name": "RM PARTNERS",
+   "sector": "NHS",
+   "reason": "The cancer alliance for west London, hosted by The Royal Marsden NHS Foundation Trust. The register files it as Independent Sector Healthcare Provider."
+  },
+  {
+   "organisation": "cambridge-centre-for-health-services-research",
+   "name": "Cambridge Centre for Health Services Research",
+   "sector": "Universities",
+   "reason": "A research centre at the University of Cambridge. The register files it as Research."
+  },
+  {
+   "organisation": "erasmus-university-medical-centre",
+   "name": "Erasmus University Medical Centre",
+   "sector": "Universities",
+   "reason": "The university hospital of Erasmus University Rotterdam. The register files it as Private Healthcare."
+  },
+  {
+   "organisation": "london-school-of-hygiene-and-tropical-medicine",
+   "name": "London School of Hygiene and Tropical Medicine",
+   "sector": "Universities",
+   "reason": "A university: a college of the University of London. The register files it as Research."
+  },
+  {
+   "organisation": "national-cjd-surveillance-unit",
+   "name": "National CJD Surveillance Unit",
+   "sector": "Universities",
+   "reason": "Part of the University of Edinburgh. The register files it as Research."
+  },
+  {
+   "organisation": "the-institute-of-cancer-research",
+   "name": "THE INSTITUTE OF CANCER RESEARCH",
+   "sector": "Universities",
+   "reason": "A college of the University of London. The register files it as Research."
+  },
+  {
+   "organisation": "university-of-kent",
+   "name": "UNIVERSITY OF KENT",
+   "sector": "Universities",
+   "reason": "A university. The register files it as Research."
+  }
+ ]
+}

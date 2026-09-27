@@ -15,6 +15,7 @@ from . import compare
 from . import lineage
 from . import ods
 from . import search
+from . import sectors
 from .names import display_name, strip_code
 from . import sources
 from .extract import archive_views, slugify
@@ -144,6 +145,15 @@ def compute_stats(data: dict, as_of: str) -> dict:
     }
 
 
+def _sector_counts(values) -> list[tuple[str, int]]:
+    """`[(sector, count)]` in the order the sectors are listed, leaving out empty ones."""
+    tally: dict[str, int] = {}
+    for value in values:
+        tally[value] = tally.get(value, 0) + 1
+    order = sectors.names(sectors.load()) + [sectors.OTHER, sectors.NOT_STATED]
+    return [(name, tally[name]) for name in order if name in tally]
+
+
 def _counts(values) -> list[tuple[str, int]]:
     tally: dict[str, int] = {}
     for value in values:
@@ -179,7 +189,7 @@ def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
         [
             "base_reference", "reference", "version", "title", "organisation",
             "organisation_type", "data_controllers", "controller_basis", "start_date",
-            "end_date", "sublicensing", "commercial", "datasets", "files_released", "url",
+            "end_date", "sublicensing", "commercial", "datasets", "files_released", "url", "sector",
         ],
         (
             [
@@ -187,7 +197,7 @@ def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
                 v["organisation_type"], "; ".join(v["controllers"]), v["controller_basis"],
                 v["start_date"], v["end_date"], v["sublicensing"], v["commercial"],
                 "; ".join(d["name"] for d in v["datasets"]), v["files_released"],
-                f"{base_url}/agreements/{a['slug']}/",
+                f"{base_url}/agreements/{a['slug']}/", a["sector"],
             ]
             for a in data["agreements"]
             for v in a["versions"]
@@ -256,13 +266,19 @@ def build(
     prepare_output(out)
 
     stats = compute_stats(data, meta["as_of"])
-    downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     by_slug = {a["slug"]: a for a in data["agreements"]}
     # Agreements earlier editions listed and this one does not: pages of their
     # own, and never in a count. See `facts.read_archive`.
     archived = data.get("archived", [])
     archive = archive_views(archived, data["organisations"], data["datasets"])
     org_slugs = {o["slug"] for o in data["organisations"] + archive["organisations"]}
+    # Sectors for the Sector filters, from data/organisation-sectors.json.
+    for warning in sectors.assign(data["organisations"] + archive["organisations"]):
+        print(f"sectors: {warning}")
+    stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
+    stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
+    # After the sectors, which agreements.csv includes.
+    downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
 
     # Attach change status to agreements so detail pages can flag recent activity.

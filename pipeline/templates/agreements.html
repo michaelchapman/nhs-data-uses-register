@@ -14,6 +14,16 @@
     <p class="hint" id="q-hint">Searches the title, reference, organisation, datasets and the purpose of each agreement. Words under four letters match whole words; longer words also match the start of a word, so “pharma” finds “pharmaceutical”.</p>
   </div>
   <div class="field">
+    <label for="sector">Sector</label>
+    <select id="sector" data-filter-select data-key="sector" aria-describedby="sector-hint">
+      <option value="">All sectors</option>
+      {% for name, count in stats.agreement_sectors %}
+      <option value="{{ name }}">{{ name }} ({{ count|commas }})</option>
+      {% endfor %}
+    </select>
+    <p class="hint" id="sector-hint">Grouped from the register's organisation types, with some organisations corrected. <a href="{{ meta.base_path }}/about/#sectors">How sectors are decided</a></p>
+  </div>
+  <div class="field">
     <label for="type">Organisation type</label>
     <select id="type" data-filter-select data-key="type">
       <option value="">All types</option>
@@ -53,7 +63,7 @@
   </thead>
   <tbody>
   {% for a in agreements %}
-    <tr data-i="{{ search_numbers[a.slug] }}" data-type="{{ a.organisation_type }}"
+    <tr data-i="{{ search_numbers[a.slug] }}" data-sector="{{ a.sector }}" data-type="{{ a.organisation_type }}"
         data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}"
         data-sublicensing="{{ 'yes' if a.sublicensing == 'Yes' else 'no' }}"
         data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}"
