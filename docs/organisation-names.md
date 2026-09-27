@@ -277,6 +277,16 @@ Europe), Erasmus University Medical Centre, and St George's Hospital Medical
 School, the legal name of St George's, University of London, which merged into
 City St George's in 2024.
 
+Also not merged, by decision on 2026-09-27: bodies hosted by an organisation
+rather than part of it, even where the host is the only data controller named.
+They are RM Partners (The Royal Marsden), Health Innovation Network South
+London (Guy's and St Thomas'), the NIHR BioResource (Cambridge University
+Hospitals), the Regional Drug & Therapeutic Centre (Newcastle upon Tyne
+Hospitals), the Northern Ireland Clinical Trials Unit (Belfast Health and Social
+Care Trust) and the National Institute for Health Research (the Department of
+Health and Social Care); and the cancer alliances and commissioning support
+units, whose hosts vary and change.
+
 An applicant can rightly differ from the data controller: the Institute of
 Child Health, as UCL, is a commissioned processor for the Department of Health
 and Social Care, which is the controller on its agreement. Merging a part onto
