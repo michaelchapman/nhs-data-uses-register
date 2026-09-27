@@ -57,11 +57,14 @@ September 2026 edition:
 
 ### To build
 
+Steps 1 and 2 are built (`pipeline/search.py`, `assets/filter.js`).
+
 1. **An index built with the site**, one JSON file per first character of the
-   word (36 files, a median of 17 KB and at most 79 KB gzipped). Each maps a word
-   to the agreements whose latest version uses it. Words in more than half the
-   agreements ("the", "nhs", 385 in all) are left out, as are numbers longer than
-   four digits. Titles, references, organisation and dataset names go in too, so
+   word (36 files, 927 KB gzipped in all, a median of 19 KB and at most 87 KB).
+   Each maps a word to the agreements whose latest version uses it. Every word
+   is kept: leaving out the commonest would make a search for "nhs" find
+   nothing, and a word in more than one agreement in twelve is stored as a
+   bitset, which keeps those small. Titles, references, organisation and dataset names go in too, so
    one set of word rules covers the whole search. Apostrophes are dropped from
    words, so "kings college" finds "King's College" (121 agreements; none today).
    An acronym's plural indexes as the acronym too, judged per agreement from

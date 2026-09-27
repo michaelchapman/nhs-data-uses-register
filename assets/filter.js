@@ -18,6 +18,42 @@
 
   var params = new URLSearchParams(window.location.search);
 
+  // The word index (pipeline/search.py): one file per first character, mapping
+  // a word to the numbers of the agreements that use it. A search term under
+  // four letters matches a whole word, so "ai" doesn't find "maintain"; a
+  // longer one matches the start of a word, so "pharma" finds "pharmaceutical".
+  function searchWords(value) {
+    // Split as the index was built: apostrophes dropped, so "king's" is "kings".
+    return (value || "").toLowerCase().replace(/['\u2019]/g, "").match(/[a-z0-9]+/g) || [];
+  }
+
+  // "x" and a hexadecimal bitset, or hexadecimal gaps between numbers.
+  function decode(postings) {
+    var numbers = [];
+    if (postings.charAt(0) === "x") {
+      for (var k = postings.length - 1, bit = 0; k > 0; k--, bit += 4) {
+        var nibble = parseInt(postings.charAt(k), 16);
+        for (var j = 0; j < 4; j++) if (nibble >> j & 1) numbers.push(bit + j);
+      }
+    } else {
+      var previous = -1;
+      postings.split(",").forEach(function (gap) { previous += parseInt(gap, 16); numbers.push(previous); });
+    }
+    return numbers;
+  }
+
+  // The agreement numbers matching one term, as {number: true}.
+  function matching(term, shard) {
+    var found = {};
+    function add(word) { decode(shard[word]).forEach(function (n) { found[n] = true; }); }
+    if (term.length < 4) {
+      if (Object.prototype.hasOwnProperty.call(shard, term)) add(term);
+    } else {
+      Object.keys(shard).forEach(function (word) { if (word.lastIndexOf(term, 0) === 0) add(word); });
+    }
+    return found;
+  }
+
   document.querySelectorAll("[data-filter-form]").forEach(function (form) {
     var table = document.getElementById(form.dataset.target);
     if (!table) return;
@@ -31,16 +67,70 @@
     var noun = (count && /\b(agreements|organisations|datasets)\b/.exec(count.textContent) || [, "rows"])[1];
     var total = rows.length;
     var timer;
+    // Where this table's word index is, if it has one. Files are fetched when a
+    // search needs them and kept; until they arrive, or if they can't be had,
+    // the search falls back to the text each row carries in `data-search`.
+    var indexUrl = form.dataset.searchIndex;
+    var shards = {};
+    var loading = {};
+    var indexFailed = !indexUrl || !window.fetch;
+
+    function load(key) {
+      if (!loading[key]) {
+        loading[key] = fetch(indexUrl + key + ".json")
+          .then(function (response) {
+            // No file means no word starts with this character.
+            if (response.status === 404) return { words: {} };
+            if (!response.ok) throw new Error(response.status);
+            return response.json();
+          })
+          .then(function (data) { shards[key] = data.words; })
+          .catch(function () { indexFailed = true; });
+      }
+      return loading[key];
+    }
+
+    // Row numbers matching every word searched for, as {number: true}; null to
+    // search `data-search` instead; undefined while files are still loading.
+    function indexed(value) {
+      if (indexFailed) return null;
+      var words = searchWords(value);
+      if (!words.length) return null;
+      var missing = words.map(function (w) { return w.charAt(0); })
+        .filter(function (key, i, keys) { return !shards[key] && keys.indexOf(key) === i; });
+      if (missing.length) {
+        Promise.all(missing.map(load)).then(apply);
+        return undefined;
+      }
+      return words.reduce(function (found, word) {
+        var these = matching(word, shards[word.charAt(0)]);
+        if (found === null) return these;
+        var both = {};
+        Object.keys(found).forEach(function (n) { if (these[n]) both[n] = true; });
+        return both;
+      }, null);
+    }
 
     form.addEventListener("submit", function (event) { event.preventDefault(); });
 
     function apply() {
+      var hits = indexed(text && text.value);
+      if (hits === undefined) {
+        // Rows stay as they are until the index files arrive; apply runs again then.
+        if (count) count.textContent = "Searching…";
+        return;
+      }
       var terms = (text && text.value || "").toLowerCase().split(/\s+/).filter(Boolean);
       var shown = 0;
 
       rows.forEach(function (row) {
-        var haystack = row.dataset.search || row.textContent.toLowerCase();
-        var match = terms.every(function (term) { return haystack.indexOf(term) !== -1; });
+        var match;
+        if (hits) {
+          match = hits[row.dataset.i] === true;
+        } else {
+          var haystack = row.dataset.search || row.textContent.toLowerCase();
+          match = terms.every(function (term) { return haystack.indexOf(term) !== -1; });
+        }
 
         if (match) {
           match = selects.every(function (select) {

@@ -25,6 +25,10 @@ Pages are plain semantic HTML with no cookies, analytics or third-party
 requests. Table filtering and sorting are progressive enhancements: every row is in the
 HTML, so the site works with JavaScript disabled. The filters and the sort are
 kept in the URL, so a filtered view can be linked to.
+The agreements search also reads each agreement's purpose text, through a word
+index the build writes to `search/<edition>/` — one small file per first
+letter, fetched from the site itself only when someone searches. Without it,
+the search falls back to titles and names.
 
 ## Running it locally
 

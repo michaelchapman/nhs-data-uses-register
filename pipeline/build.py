@@ -14,6 +14,7 @@ from . import aliases
 from . import compare
 from . import lineage
 from . import ods
+from . import search
 from .names import display_name, strip_code
 from . import sources
 from .extract import archive_views, slugify
@@ -300,7 +301,9 @@ def build(
     )[:15]
     render("index.html", "index.html", agreements=data["agreements"], top_organisations=top_organisations)
     render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
-           org_slugs=org_slugs)
+           org_slugs=org_slugs, search_numbers={a["slug"]: n for n, a in enumerate(data["agreements"])})
+    # The word index the agreements search fetches from, numbered as above.
+    search.write_index(data["agreements"], out / "search" / meta["edition"])
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
            archived_organisations=archive["organisations"])
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
