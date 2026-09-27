@@ -3,7 +3,7 @@
 `data/excluded-agreements.json` lists them by base reference, each with the
 reason. The facts store keeps them, because it records what each workbook said,
 so this is a build-time decision like the aliases: an entry removes an agreement
-from every page, count, download and "what changed" comparison at the next
+from every page, count and "what changed" comparison at the next
 build, and taking it out brings it back, with nothing to re-parse.
 
 Only records that are not data sharing at all belong here: a test record

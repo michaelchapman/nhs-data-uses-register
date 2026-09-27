@@ -58,7 +58,7 @@ September 2026 edition:
 ### To build
 
 All four steps are built (`pipeline/search.py`, `assets/filter.js`,
-`assets/highlight.js`). What is left is the purpose text in the CSVs, below.
+`assets/highlight.js`).
 
 1. **An index built with the site**, one JSON file per first character of the
    word (36 files, 927 KB gzipped in all, a median of 19 KB and at most 87 KB).
@@ -93,9 +93,6 @@ All four steps are built (`pipeline/search.py`, `assets/filter.js`,
    could not show "pharmaceutical" for "pharma", and a page cannot read it to
    open a collapsed section in every browser.
 
-The purpose text in the CSVs (#26) is separate. It is 41 MB for the latest versions
-alone, so it needs its own file and a decision on its size.
-
 ## 2. Release views
 
 The facts store holds every file released, 104,451 rows from April 2016, one
@@ -105,9 +102,9 @@ needs to change.
 
 To build, in this order:
 
-1. **`release-months.csv`** on the downloads page: files released per
-   agreement, dataset and month. With it, a **release check** that the months
-   add up to `releases.csv`, per agreement.
+1. **A release check** at build time: files released per agreement, dataset
+   and month, checked against the per-dataset totals the pages show. Nothing is
+   published; the next two steps rest on it.
 2. **A release timeline on each agreement page**: files per month, by dataset.
 3. **A register-wide monthly chart** of files released.
 4. **Last, a "no files recorded" line and filter** on the agreements list. It
@@ -159,6 +156,8 @@ be merged into them.
 
 ## 3. Change downloads
 
+Optional. The site publishes no data files (see section 7), and this is the one
+export that could earn a place: no single workbook holds the change history.
 Everything on the changes pages is computed at build time, so publishing it is
 cheap, and it makes the month-on-month history usable by other people's
 tooling:
@@ -211,6 +210,12 @@ when a re-parse is needed, which is rare.
 
 ## 7. Considered and not planned
 
+- **CSV extracts of the register.** Published until 2026-09-27, then removed.
+  They were one edition's three sheets as CSV, which the register's own
+  workbook already provides, and carried none of what the site adds: merged
+  names, successions, status or change history. Extending them (#26) meant a
+  41 MB file of purpose text. The downloads page, kept at its address but out
+  of the menu, points to the workbook and to the facts store.
 - **An amendment log for prose.** Proposed to show old and new text between
   editions. Unnecessary: the facts store keeps every edition's text, so the
   site shows prose redlines already.

@@ -223,25 +223,21 @@ class ChangesPages(unittest.TestCase):
         self.assertNotIn("/changes/september2026/", sitemap)
 
 
-class Csvs(unittest.TestCase):
-    def test_agreement_urls_are_absolute(self):
-        import csv
-        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
-            out = Path(directory)
-            build.build(extract(workbook_bytes()), site_meta("/repo"), FIRST_EDITION, out)
-            with (out / "downloads" / "agreements.csv").open(newline="", encoding="utf-8-sig") as handle:
-                urls = [row["url"] for row in csv.DictReader(handle)]
-        self.assertTrue(urls)
-        self.assertTrue(all(u.startswith("https://example.test/repo/agreements/") for u in urls), urls)
-
-
-    def test_each_file_starts_with_a_byte_order_mark_for_excel(self):
+class Downloads(unittest.TestCase):
+    def test_the_page_points_to_the_register_and_the_archive_and_is_not_in_the_menu(self):
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
             build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
-            starts = {path.name: path.read_bytes()[:3] for path in (out / "downloads").glob("*.csv")}
-        self.assertEqual(set(starts), {"agreements.csv", "datasets.csv", "releases.csv"})
-        self.assertTrue(all(start == b"\xef\xbb\xbf" for start in starts.values()), starts)
+            page = (out / "downloads" / "index.html").read_text()
+            home = (out / "index.html").read_text()
+            files = sorted(path.name for path in (out / "downloads").iterdir())
+        self.assertEqual(files, ["index.html"])  # no data files
+        self.assertIn("<h1>Get the data</h1>", page)
+        self.assertIn('href="https://example.test/source.xlsx"', page)
+        self.assertIn('href="https://example.test/repo/tree/main/data/facts"', page)
+        nav = home[home.index('<nav aria-label="Main">'):home.index("</nav>")]
+        self.assertNotIn("/downloads/", nav)
+        self.assertIn('href="/downloads/">Get the data</a>', home)
 
 
 class Robots(unittest.TestCase):
@@ -289,13 +285,11 @@ class OrganisationNames(unittest.TestCase):
             page = (out / "organisations" / "university-of-example" / "index.html").read_text()
             listing = (out / "organisations" / "index.html").read_text()
             agreement = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
-            csv_text = (out / "downloads" / "agreements.csv").read_text()
         self.assertIn("<h1>University of Example</h1>", page)
         self.assertIn("The register writes this name in capitals: UNIVERSITY OF EXAMPLE.", page)
         self.assertIn(">University of Example</a>", listing)
         self.assertIn(">Other Trust</a>", agreement)  # a joint controller, listed on the agreement
-        # What is stored, searched and exported stays as the register wrote it.
-        self.assertIn("UNIVERSITY OF EXAMPLE", csv_text)
+        # What is stored and searched stays as the register wrote it.
         self.assertIn('data-search="', listing)
 
     def test_a_name_already_in_mixed_case_gets_no_note(self):
@@ -453,7 +447,7 @@ class Exclusions(unittest.TestCase):
                 exclude("DARS-NIC-2-BBBBB")
                 build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
             self.assertFalse((out / "agreements" / "dars-nic-2-bbbbb").exists())
-            self.assertNotIn("DARS-NIC-2-BBBBB", (out / "downloads" / "agreements.csv").read_text())
+            self.assertNotIn("DARS-NIC-2-BBBBB", (out / "agreements" / "index.html").read_text())
             self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
                           (out / "index.html").read_text())
 
@@ -503,7 +497,9 @@ class ArchivedAgreements(unittest.TestCase):
         self.assertIn("No longer in the register (1)", listing)
         self.assertIn('<span class="stat-number">1</span><span class="stat-label">data sharing agreements',
                       self.read(""))
-        self.assertNotIn("DARS-NIC-2-BBBBB", (self.out / "downloads" / "agreements.csv").read_text())
+        # Listed apart, below the table, not in it.
+        table = listing[listing.index('id="agreements-table"'):listing.index("</table>")]
+        self.assertNotIn("DARS-NIC-2-BBBBB", table)
 
     def test_the_changes_page_links_to_it(self):
         self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', self.read("changes"))

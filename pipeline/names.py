@@ -3,7 +3,7 @@
 The register writes most organisations in capitals — 463 of the 611 names on
 the site — and a table of them reads as shouting. `display_name` gives those
 ordinary capitalisation for display only. The register's own spelling is still
-what is stored, searched, exported to CSV and listed under "recorded in the
+what is stored, searched and listed under "recorded in the
 register as", so nothing here changes which organisation a name belongs to.
 
 A name that already contains a lower-case letter is returned untouched: it was

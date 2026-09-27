@@ -20,7 +20,7 @@
   <li><strong>Organisations and datasets get their own pages,</strong> so you can start from "what agreements does this university hold" or "which agreements name Hospital Episode Statistics".</li>
   <li><strong>Everything has a stable URL</strong> you can link to or cite. An agreement that leaves the register keeps its page, marked as no longer in the register and showing what the register last said, but it is not counted in this site's figures.</li>
   <li><strong>Month-on-month changes are tracked</strong> on the <a href="{{ meta.base_path }}/changes/">what changed</a> page.</li>
-  <li><strong>Flat CSVs are available</strong> on the <a href="{{ meta.base_path }}/downloads/">download</a> page for anyone who wants to do their own analysis.</li>
+  <li><strong>It publishes pages, not data files.</strong> For analysis, <a href="{{ meta.base_path }}/downloads/">get the data</a> from the register itself, or from this site's archive of every edition.</li>
 </ul>
 
 <h2>Caveats</h2>
@@ -31,7 +31,7 @@
   <li><strong>An agreement is not the same as an active data flow.</strong> Some agreements may simply allow organisations to continue to use data they already hold.</li>
   <li><strong>Many listed agreements have ended.</strong> The register keeps an agreement after its term has passed, so {{ (stats.agreements - stats.active_agreements)|commas }} of the {{ stats.agreements|commas }} agreements in the {{ meta.edition|edition }} edition are marked "Expired" here. An agreement is counted as in term if its latest version had not ended by the first day of the edition's month.</li>
   <li><strong>Counts change between editions</strong> as NHS England corrects entries and retires expired agreements, so figures here will not always reconcile with earlier published analyses.</li>
-  <li><strong>Organisation names are re-capitalised for reading.</strong> The register writes most of them in capitals, so this site shows "UNIVERSITY OF OXFORD" as "University of Oxford". It is a display change only, done by rule, so an unusual name or an acronym it doesn't know can come out wrong ("Ims Health"). A page whose name was changed says how the register writes it, and the CSV downloads keep the register's own spelling.</li>
+  <li><strong>Organisation names are re-capitalised for reading.</strong> The register writes most of them in capitals, so this site shows "UNIVERSITY OF OXFORD" as "University of Oxford". It is a display change only, done by rule, so an unusual name or an acronym it doesn't know can come out wrong ("Ims Health"). A page whose name was changed says how the register writes it.</li>
   <li id="file-releases"><strong>File releases are summarised by dataset</strong> rather than listed file by file. The full file-level rows are in the source workbook. The files-released figures give a view of files released. They don't cover access granted in NHS England's own systems, such as its Secure Data Environment and predecessors.</li>
   {% if stats.first_release_month and meta.editions %}<li><strong>Release history and change history cover different periods.</strong> File releases are recorded from {{ stats.first_release_month|month }}. The month-on-month change history starts with the earliest edition held here, {{ meta.editions[0].edition|edition }}.</li>{% endif %}
 </ul>

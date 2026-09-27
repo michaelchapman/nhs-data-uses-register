@@ -19,7 +19,6 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
-- **Flat CSV extracts** of agreements, datasets and releases.
 
 Pages are plain semantic HTML with no cookies, analytics or third-party
 requests. Table filtering and sorting are progressive enhancements: every row is in the
@@ -130,7 +129,7 @@ pipeline/facts.py               the facts store: every edition, its releases and
 pipeline/extract.py             workbook -> agreements / organisations / datasets
 pipeline/changes.py             what changed between editions, worked out from the facts
 pipeline/compare.py             field-by-field comparison of two agreement versions
-pipeline/build.py               renders the site and the CSV extracts
+pipeline/build.py               renders the site
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/aliases.py             applies reviewed organisation and dataset merges
 pipeline/ods.py                 reads NHS organisation records from ODS into a snapshot
