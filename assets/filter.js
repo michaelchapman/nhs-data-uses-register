@@ -125,10 +125,15 @@
       }
       var terms = (text && text.value || "").toLowerCase().split(/\s+/).filter(Boolean);
       var shown = 0;
+      // An agreement opened from a search shows where the words are: its page
+      // reads `q` and highlights them (assets/highlight.js).
+      var carried = indexUrl && text && text.value.trim() ? "?q=" + encodeURIComponent(text.value.trim()) : "";
 
       rows.forEach(function (row) {
         var match;
-        if (hits) {
+        // A row with no number (an agreement no longer listed) isn't indexed,
+        // so it is searched by the text it carries.
+        if (hits && row.dataset.i) {
           match = hits[row.dataset.i] === true;
         } else {
           var haystack = row.dataset.search || row.textContent.toLowerCase();
@@ -144,6 +149,14 @@
           match = flags.every(function (flag) {
             return !flag.checked || row.dataset[flag.dataset.key] === flag.value;
           });
+        }
+
+        if (indexUrl) {
+          var link = row.querySelector("th a");
+          if (link) {
+            if (link.dataset.href === undefined) link.dataset.href = link.getAttribute("href");
+            link.setAttribute("href", link.dataset.href + carried);
+          }
         }
 
         row.hidden = !match;

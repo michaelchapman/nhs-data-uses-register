@@ -38,10 +38,11 @@
 
 <h2>Agreements</h2>
 {% if organisation.agreement_count > 15 %}
-<form class="filters" data-filter-form data-target="organisation-agreements" role="search" aria-label="Filter agreements">
+<form class="filters" data-filter-form data-target="organisation-agreements" data-search-index="{{ meta.base_path }}/search/{{ meta.edition }}/" role="search" aria-label="Filter agreements">
   <div class="field">
     <label for="q">Search these agreements</label>
-    <input type="search" id="q" data-filter-text autocomplete="off" placeholder="title, reference or dataset">
+    <input type="search" id="q" data-filter-text autocomplete="off" aria-describedby="q-hint" placeholder="e.g. cancer, HES">
+    <p class="hint" id="q-hint">Searches the title, reference, datasets and purpose of each agreement.</p>
   </div>
   <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
 </form>
@@ -53,7 +54,7 @@
   <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Status</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
   {% for a in organisation.agreements|sort(attribute='coverage_end', reverse=true) %}
-    <tr data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
+    <tr {% if a.slug in search_numbers %}data-i="{{ search_numbers[a.slug] }}" {% endif %}data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
       <td class="num">{{ a.dataset_names|length }}</td>

@@ -57,7 +57,8 @@ September 2026 edition:
 
 ### To build
 
-Steps 1 and 2 are built (`pipeline/search.py`, `assets/filter.js`).
+All four steps are built (`pipeline/search.py`, `assets/filter.js`,
+`assets/highlight.js`). What is left is the purpose text in the CSVs, below.
 
 1. **An index built with the site**, one JSON file per first character of the
    word (36 files, 927 KB gzipped in all, a median of 19 KB and at most 87 KB).
@@ -85,9 +86,12 @@ Steps 1 and 2 are built (`pipeline/search.py`, `assets/filter.js`).
 3. **The organisation and dataset tables** use the same files, which the
    browser has already cached if the visitor searched elsewhere first.
 4. **Show why a row matched.** A row found only in the purpose text has
-   nothing on screen explaining the match. Its link can carry a text fragment
-   (`#:~:text=dementia`), which Chrome, Edge and Safari scroll to and highlight,
-   opening the collapsed section if needed.
+   nothing on screen explaining the match, so while a search is active its link
+   carries it (`?q=dementia`), and the agreement page highlights the words,
+   opens the purpose sections they are in and scrolls to the first. The plan
+   was a text fragment (`#:~:text=`), but that matches whole words only, so it
+   could not show "pharmaceutical" for "pharma", and a page cannot read it to
+   open a collapsed section in every browser.
 
 The purpose text in the CSVs (#26) is separate. It is 41 MB for the latest versions
 alone, so it needs its own file and a decision on its size.

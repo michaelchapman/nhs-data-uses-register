@@ -66,13 +66,13 @@
 {% set in_term = agreement.coverage_end >= meta.as_of %}
 {# An expired agreement is still listed, but its latest version is not "current". #}
 {% set now = "latest" if agreement.archived or not in_term else "current" %}
-<h1>{{ agreement.title or agreement.base_reference }}</h1>
+<h1 data-highlight>{{ agreement.title or agreement.base_reference }}</h1>
 {% if agreement.archived %}
 <p class="notice"><strong>No longer in the register.</strong> This agreement was last published in the {{ agreement.archived.last_edition|edition }} edition{% if agreement.archived.next_edition %} and was not in the {{ agreement.archived.next_edition|edition }} edition{% endif %}.
   {% if agreement.archived.next_edition == merger_edition %}NHS Digital merged into NHS England on 1 February 2023, and agreements within the merged organisation moved to a separate internal register, so this agreement most likely moved rather than ended.{% else %}The register does not say why an agreement leaves it.{% endif %}
   This page shows what the register last said, and it is not counted in this site's figures.</p>
 {% endif %}
-<p class="lede">{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+<p class="lede" data-highlight>{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
 
 {% if agreement.later_dropped %}
 <p class="notice"><strong>A later version has left the register.</strong>
@@ -106,6 +106,7 @@
 </ul>
 {% endif %}
 
+<p class="search-note" data-search-note hidden></p>
 <h2>Why the data was released</h2>
 {% for section, text in [
   ("Objective for processing", v.objective),
@@ -114,7 +115,7 @@
   ("Expected measurable benefits", v.expected_benefits),
   ("Benefits reported so far", v.yielded_benefits),
 ] %}
-<details class="prose-block" {% if loop.first %}open{% endif %}>
+<details class="prose-block" data-highlight {% if loop.first %}open{% endif %}>
   <summary><h3>{{ section }}</h3></summary>
   {% if text %}
     {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
@@ -129,7 +130,7 @@
 {% set legal_bases = v.datasets|map(attribute='legal_basis')|select|unique|list %}
 <p class="hint"><strong>Legal basis for provision:</strong> {{ legal_bases|join("; ") if legal_bases else "Not stated" }}</p>
 <div class="table-scroll">
-<table class="data-table">
+<table class="data-table" data-highlight>
   <caption class="visually-hidden">Datasets approved under {{ v.reference }}</caption>
   <thead><tr>
     <th scope="col">Dataset</th><th scope="col">Type of data</th><th scope="col">Sensitivity</th>
@@ -307,3 +308,4 @@
 
 <p class="source-note">Source: <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>, {{ meta.edition|edition }} edition of the NHS England Data Uses Register. Search that workbook for <code>{{ agreement.base_reference }}</code> to see the original rows.</p>
 {% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/highlight.js" defer></script>{% endblock %}

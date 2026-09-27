@@ -300,10 +300,12 @@ def build(
         data["organisations"], key=lambda o: (-o["agreement_count"], o["name"].lower())
     )[:15]
     render("index.html", "index.html", agreements=data["agreements"], top_organisations=top_organisations)
-    render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
-           org_slugs=org_slugs, search_numbers={a["slug"]: n for n, a in enumerate(data["agreements"])})
-    # The word index the agreements search fetches from, numbered as above.
+    # The word index the agreement searches fetch from. An agreement is numbered
+    # by its place in the list, and every table row naming it carries the number.
     search.write_index(data["agreements"], out / "search" / meta["edition"])
+    search_numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
+    render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
+           org_slugs=org_slugs, search_numbers=search_numbers)
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
            archived_organisations=archive["organisations"])
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
@@ -361,6 +363,7 @@ def build(
             archived=archive["by_organisation"].get(organisation["slug"], []),
             org_slugs=org_slugs,
             dataset_slugs=dataset_slugs,
+            search_numbers=search_numbers,
         )
     for dataset in data["datasets"] + archive["datasets"]:
         render(
@@ -369,6 +372,7 @@ def build(
             dataset=dataset,
             archived=archive["by_dataset"].get(dataset["slug"], []),
             org_slugs=org_slugs,
+            search_numbers=search_numbers,
         )
 
     shutil.copytree(ASSETS, out / "assets", dirs_exist_ok=True)

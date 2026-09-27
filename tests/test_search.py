@@ -98,3 +98,22 @@ class BuiltIndex(unittest.TestCase):
         self.assertIn(f'data-search-index="/search/{meta["edition"]}/"', page)
         for number, a in enumerate(data["agreements"]):
             self.assertRegex(page, rf'<tr data-i="{number}"[^>]*>\s*<th scope="row"><a href="/agreements/{a["slug"]}/"')
+
+    def test_organisation_and_dataset_tables_search_the_same_index(self):
+        with tempfile.TemporaryDirectory() as directory, dataset_aliases():
+            out = Path(directory)
+            data = extract(workbook_bytes())
+            meta = site_meta()
+            build.build(data, meta, FIRST_EDITION, out)
+            numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
+            dataset = (out / "datasets" / "msds-maternity-services-data-set-v1-5" / "index.html").read_text()
+            agreement = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+
+        self.assertIn(f'data-search-index="/search/{meta["edition"]}/"', dataset)
+        for slug in ("dars-nic-1-aaaaa", "dars-nic-2-bbbbb"):
+            self.assertRegex(dataset, rf'<tr data-i="{numbers[slug]}" [^>]*>\s*<th scope="row"><a href="/agreements/{slug}/"')
+        # The agreement page highlights a search it was opened from.
+        self.assertIn('<script src="/assets/highlight.js" defer></script>', agreement)
+        self.assertIn("data-search-note hidden", agreement)
+        self.assertEqual(agreement.count('<details class="prose-block" data-highlight'), 5)
+

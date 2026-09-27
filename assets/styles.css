@@ -16,6 +16,8 @@
   --tag-new-ink: #10503f;
   --tag-amended-bg: #fdf0d8;
   --tag-amended-ink: #6b4708;
+  --mark-bg: #ffe58a;
+  --mark-ink: #17191c;
   --ins-bg: #dff0e4;
   --ins-ink: #10401f;
   --del-bg: #fbe3e3;
@@ -39,6 +41,8 @@
     --tag-new-ink: #97e0cb;
     --tag-amended-bg: #3d3116;
     --tag-amended-ink: #f0cd8a;
+    --mark-bg: #6b5410;
+    --mark-ink: #fff6d6;
     --ins-bg: #17351f;
     --ins-ink: #a6e3b8;
     --del-bg: #3a1c1c;
@@ -227,6 +231,8 @@ details.version summary::before { top: 0.85rem; }
 .version-term { font-weight: 400; color: var(--ink-muted); font-size: 0.9375rem; }
 .dataset-line { font-size: 0.9375rem; }
 
+mark { background: var(--mark-bg); color: var(--mark-ink); border-radius: 2px; padding: 0 0.1em; }
+.search-note { background: var(--bg-notice); border-left: 4px solid var(--mark-bg); padding: 0.5rem 0.75rem; max-width: 70ch; }
 .tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border-radius: 3px; padding: 0.125rem 0.5rem; }
 .tag-new { background: var(--tag-new-bg); color: var(--tag-new-ink); }
 .tag-amended { background: var(--tag-amended-bg); color: var(--tag-amended-ink); }
