@@ -275,9 +275,26 @@ legal entity itself: Hull York Medical School (the universities of Hull and
 York), the Cambridge Centre for Health Services Research (Cambridge and RAND
 Europe), Erasmus University Medical Centre, and St George's Hospital Medical
 School, the legal name of St George's, University of London, which merged into
-City St George's in 2024. Royal Brompton Hospital stays as decided below: its
-agreements name the hospital itself as data controller, and it belonged to a
-different trust before February 2021.
+City St George's in 2024.
+
+An applicant can rightly differ from the data controller: the Institute of
+Child Health, as UCL, is a commissioned processor for the Department of Health
+and Social Care, which is the controller on its agreement. Merging a part onto
+its organisation changes only which page lists it as applicant; the controllers
+are always shown as the register records them.
+
+A hospital that changed hands goes to the organisation it belonged to when its
+agreements were made. Every agreement version naming Royal Brompton Hospital
+began before 1 February 2021, when Royal Brompton & Harefield NHS Foundation
+Trust merged into Guy's and St Thomas' NHS Foundation Trust, so the name is
+recorded under the former trust's ODS code (RT3) and its page takes that
+trust's name. ODS records the merger, so the site shows Guy's and St Thomas' as
+its successor, and an agreement renewed under Guy's and St Thomas' shows a
+succession, not a change of applicant; DARS-NIC-144568-D7G6V says the same in
+its own text. "GSTT @ Royal Brompton Hospital", the register's label for the
+same agreements from October 2021 to May 2022, goes to Guy's and St Thomas'.
+When the register went back to "Royal Brompton Hospital" in June 2022, that is
+still reported as a change of applicant, as the register made it.
 
 ## Waiting for a decision
 
@@ -295,9 +312,8 @@ or add it to `ignored` once it is known not to be.
 Recorded 2026-09-26.
 
 Also decided then, and not to be merged:
-- **Guy's and St Thomas' Royal Brompton site** ("GSTT @ Royal Brompton
-  Hospital" and "Royal Brompton Hospital", 7 changes across 3 agreements)
-  stays as written. Neither name is an organisation in ODS.
+- **Royal Brompton Hospital** was left as written then, and is now placed by
+  date (2026-09-27, below).
 - **Three `orgcheck` candidates** are different bodies and are marked
   `ignored`: Sussex ICB and Surrey and Sussex ICB (ODS records the April 2026
   merger, which the site shows as a succession); Lancashire & South Cumbria

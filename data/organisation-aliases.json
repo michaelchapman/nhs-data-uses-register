@@ -68,7 +68,7 @@
         "UNIVERSITY COLLEGE LONDON (UCL)",
         "University College London (UCL)"
       ],
-      "reason": "reviewed: The Institute of Child Health is part of UCL (the UCL Great Ormond Street Institute of Child Health), not a legal entity that can hold an agreement; the register names the Department of Health and Social Care as data controller on its agreement, not UCL; also same name, differing only in punctuation, spacing or case"
+      "reason": "reviewed: The Institute of Child Health is part of UCL (the UCL Great Ormond Street Institute of Child Health), not a legal entity that can hold an agreement, so UCL is the applicant. The register names the Department of Health and Social Care as data controller on its agreement, for which the institute acts as a commissioned processor; that difference is kept, as the controllers always are; also same name, differing only in punctuation, spacing or case"
     },
     {
       "canonical": "Imperial College London",
@@ -1756,6 +1756,22 @@
         "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST"
       ],
       "reason": "reviewed: The National Centre for Stereotactic Radiosurgery is a treatment centre run by Sheffield Teaching Hospitals NHS Foundation Trust, not a legal entity that can hold an agreement; the register names the trust as data controller on the same agreement"
+    },
+    {
+      "canonical": "ROYAL BROMPTON & HAREFIELD NHS FOUNDATION TRUST",
+      "variants": [
+        "ROYAL BROMPTON & HAREFIELD NHS FOUNDATION TRUST",
+        "ROYAL BROMPTON HOSPITAL"
+      ],
+      "reason": "reviewed: Royal Brompton Hospital is a hospital, not a legal entity that can hold an agreement. Every agreement version naming it began before 1 February 2021, while the hospital belonged to Royal Brompton & Harefield NHS Foundation Trust; Guy's and St Thomas' NHS Foundation Trust succeeded that trust then, which the site shows from ODS. The register names the hospital as data controller too, on the same agreements and on the University of Cambridge's DARS-NIC-258780-S9H7G"
+    },
+    {
+      "canonical": "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+      "variants": [
+        "GSTT @ ROYAL BROMPTON HOSPITAL",
+        "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST"
+      ],
+      "reason": "reviewed: \"GSTT @ Royal Brompton Hospital\" is the Royal Brompton Hospital site of Guy's and St Thomas' NHS Foundation Trust, as the register labelled the Royal Brompton agreements from October 2021 to May 2022, after the merger"
     }
   ],
   "ignored": [
