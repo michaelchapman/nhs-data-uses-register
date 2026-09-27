@@ -15,8 +15,8 @@ From one edition of the register (~5,500 agreement versions):
   with purpose, expected outputs, benefits, datasets and file releases joined
   from all three sheets onto one page.
 - **~570 organisation pages** and **~210 dataset pages** — the two questions the
-  spreadsheet makes hardest: what has this organisation been given, and who
-  receives this dataset.
+  spreadsheet makes hardest: what agreements does this organisation hold, and
+  which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
 - **Flat CSV extracts** of agreements, datasets and releases.

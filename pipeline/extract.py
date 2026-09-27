@@ -481,8 +481,12 @@ def build_agreement(
     # is trivially the first. Otherwise the earliest version we hold is only
     # really "the first" if its own number says so — a backfill that starts
     # partway through an agreement's history has an earliest version that
-    # isn't v1, and the page needs to say "before", not "from".
-    first_known = earliest["version"] in ("", "1", "1.0")
+    # isn't v1, and the page needs to say "before", not "from". A v0.x number
+    # is the register's numbering for an agreement's first published version:
+    # across every edition held, no lower version of one has ever surfaced.
+    first_known = (
+        earliest["version"] in ("", "1", "1.0") or earliest["version"].split(".")[0] == "0"
+    )
     legal_bases = sorted({d["legal_basis"] for v in versions for d in v["datasets"] if d["legal_basis"]})
     # `organisation`/`controllers` stay exactly as the register recorded them —
     # what an agreement page shows is always the literal source text. Only the
@@ -507,7 +511,11 @@ def build_agreement(
         "first_start_known": first_known,
         "latest_start": latest["start_date"],
         "latest_end": latest["end_date"],
-        "coverage_end": max(ends) if ends else "",
+        # When the agreement's term ends, which decides whether it is in term.
+        # The latest version supersedes the ones before it, so its end date
+        # counts even where an older version's is later: a v0.0 record can
+        # carry a placeholder end years after the agreement lapsed.
+        "coverage_end": latest["end_date"] or (max(ends) if ends else ""),
         "dataset_names": dataset_names,
         # Resolved through the dataset alias map, so a renamed
         # dataset links to one page rather than two.

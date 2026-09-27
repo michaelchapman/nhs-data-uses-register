@@ -23,6 +23,7 @@
     if (!table) return;
 
     var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var wrapper = table.closest(".table-scroll") || table;
     var count = form.parentNode.querySelector("[data-filter-count]");
     var text = form.querySelector("[data-filter-text]");
     var selects = Array.prototype.slice.call(form.querySelectorAll("[data-filter-select]"));
@@ -57,10 +58,14 @@
       });
 
       if (count) {
-        count.textContent = shown === total
+        count.textContent = shown === 0
+          ? "No " + noun + " match. Try fewer or shorter search words, or clear the filters."
+          : shown === total
           ? "Showing all " + total.toLocaleString("en-GB") + " " + noun + "."
           : "Showing " + shown.toLocaleString("en-GB") + " of " + total.toLocaleString("en-GB") + " " + noun + ".";
       }
+      // An empty table is only a row of headings, so it goes while nothing matches.
+      wrapper.hidden = shown === 0;
 
       if (text) setParam("q", text.value.trim());
       selects.forEach(function (select) { setParam(select.dataset.key, select.value); });

@@ -162,7 +162,10 @@ def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
 
     def dump(name: str, header: list[str], rows) -> None:
         path = directory / name
-        with path.open("w", newline="", encoding="utf-8") as handle:
+        # With a byte-order mark, so Excel reads the file as UTF-8 rather than
+        # garbling the register's dashes and curly quotes. Python's csv module
+        # and most tools read it as UTF-8 either way ("utf-8-sig" drops it).
+        with path.open("w", newline="", encoding="utf-8-sig") as handle:
             writer = csv.writer(handle)
             writer.writerow(header)
             writer.writerows(rows)
@@ -307,16 +310,25 @@ def build(
     # A same-shaped page for every earlier edition pair, so "what changed" isn't
     # limited to the current edition — the facts store holds every edition
     # ingested, so each can have its own page.
+    editions = {e["edition"]: e for e in meta.get("editions", [])}
     for entry in changes_history or []:
         if entry["edition"] == meta["edition"]:
             # Identical to /changes/, which already shows it.
             continue
+        # The footer cites the workbook the page describes, not the newest one.
+        held = editions.get(entry["edition"], {})
         render(
             "changes.html",
             f"changes/{entry['edition']}/index.html",
             changes=entry,
             by_slug=changes_by_slug,
-            meta={**meta, "edition": entry["edition"]},
+            meta={
+                **meta,
+                "edition": entry["edition"],
+                "retrieved": held.get("retrieved", ""),
+                "source_file": held.get("source_file", ""),
+                "source_url": held.get("source_url", ""),
+            },
         )
     render("about.html", "about/index.html")
     render("downloads.html", "downloads/index.html")
@@ -363,7 +375,11 @@ def build(
         **context, agreements=data["agreements"] + archived,
         organisations=data["organisations"] + archive["organisations"],
         datasets=data["datasets"] + archive["datasets"],
+        changes_editions=[e["edition"] for e in changes_history or [] if e["edition"] != meta["edition"]],
     ))
-    _write(out, "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {meta['site_url']}/sitemap.xml\n")
+    _write(
+        out, "robots.txt",
+        f"User-agent: *\nAllow: /\nSitemap: {meta['site_url']}{meta['base_path']}/sitemap.xml\n",
+    )
     print(f"built {sum(1 for _ in out.rglob('*.html')):,} pages into {out}")
     return by_slug

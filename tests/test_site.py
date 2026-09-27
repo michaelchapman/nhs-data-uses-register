@@ -149,8 +149,8 @@ class DatasetPage(unittest.TestCase):
         for value in ("Identifiable", "Sensitive", "One-off", "Consent"):
             self.assertIn(f"<li>{value}</li>", self.page)
 
-    def test_lists_the_receiving_organisations_with_agreement_counts(self):
-        self.assertIn("Organisations receiving it (2)", self.page)
+    def test_lists_the_organisations_naming_it_with_agreement_counts(self):
+        self.assertIn("Organisations whose agreements name it (2)", self.page)
         self.assertRegex(self.page, r'organisations/university-of-example/">University of Example</a> \(1\)')
 
 
@@ -162,7 +162,8 @@ class ChangesPages(unittest.TestCase):
         ]
         meta = {**site_meta(), "editions": [
             {"edition": "july2026", "retrieved": "2026-07-20", "counts": {"agreement_versions": 1}},
-            {"edition": "august2026", "retrieved": "2026-08-20", "counts": {"agreement_versions": 2}},
+            {"edition": "august2026", "retrieved": "2026-08-20", "counts": {"agreement_versions": 2},
+             "source_file": "datausesregister_august2026.xlsx", "source_url": "https://example.test/august.xlsx"},
             {"edition": "september2026", "retrieved": "2026-09-20", "counts": {"agreement_versions": 3}},
         ]}
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
@@ -172,12 +173,20 @@ class ChangesPages(unittest.TestCase):
             self.assertFalse((out / "changes" / "september2026").exists())
             latest = (out / "changes" / "index.html").read_text()
             older = (out / "changes" / "august2026" / "index.html").read_text()
+            sitemap = (out / "sitemap.xml").read_text()
             broken, _ = linkcheck.check(out)
         self.assertEqual(dict(broken), {})
         # Both pages mark September as current, whichever edition they describe.
         for page in (latest, older):
             self.assertRegex(page, r'<a href="/changes/">September 2026</a> <span class="tag tag-new">Current</span>')
         self.assertIn('<a href="/changes/august2026/">August 2026</a>', older)
+        # Each page's footer cites the workbook it describes.
+        self.assertIn('retrieved 20 August 2026 from <a href="https://example.test/august.xlsx">datausesregister_august2026.xlsx</a>', older)
+        self.assertNotIn("source.xlsx", older)
+        self.assertIn("source.xlsx", latest)
+        # The older edition's page is in the sitemap; the current one is /changes/.
+        self.assertIn("<loc>https://example.test/changes/august2026/</loc>", sitemap)
+        self.assertNotIn("/changes/september2026/", sitemap)
 
 
 class Csvs(unittest.TestCase):
@@ -186,10 +195,28 @@ class Csvs(unittest.TestCase):
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
             build.build(extract(workbook_bytes()), site_meta("/repo"), FIRST_EDITION, out)
-            with (out / "downloads" / "agreements.csv").open(newline="", encoding="utf-8") as handle:
+            with (out / "downloads" / "agreements.csv").open(newline="", encoding="utf-8-sig") as handle:
                 urls = [row["url"] for row in csv.DictReader(handle)]
         self.assertTrue(urls)
         self.assertTrue(all(u.startswith("https://example.test/repo/agreements/") for u in urls), urls)
+
+
+    def test_each_file_starts_with_a_byte_order_mark_for_excel(self):
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
+            starts = {path.name: path.read_bytes()[:3] for path in (out / "downloads").glob("*.csv")}
+        self.assertEqual(set(starts), {"agreements.csv", "datasets.csv", "releases.csv"})
+        self.assertTrue(all(start == b"\xef\xbb\xbf" for start in starts.values()), starts)
+
+
+class Robots(unittest.TestCase):
+    def test_the_sitemap_is_named_under_the_base_path(self):
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build.build(extract(workbook_bytes()), site_meta("/repo"), FIRST_EDITION, out)
+            robots = (out / "robots.txt").read_text()
+        self.assertIn("Sitemap: https://example.test/repo/sitemap.xml\n", robots)
 
 
 class EditionGap(unittest.TestCase):

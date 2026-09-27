@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Datasets — {{ meta.site_name }}{% endblock %}
-{% block description %}The {{ stats.datasets }} NHS datasets released under agreements in the Data Uses Register, ranked by how many organisations receive them.{% endblock %}
+{% block description %}The {{ stats.datasets }} NHS datasets named in agreements in the Data Uses Register, ranked by how many agreements name them.{% endblock %}
 {% block content %}
 <h1>Datasets</h1>
 <p class="lede">{{ stats.datasets|commas }} distinct datasets appear in the {{ meta.edition|edition }} register, ordered by how many agreements name them.</p>

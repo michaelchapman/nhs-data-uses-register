@@ -100,7 +100,7 @@ def weighted_similarity(names: list[str]) -> list[Candidate]:
     for i, n1 in enumerate(uniq):
         for n2 in uniq[i + 1 :]:
             t1, t2 = toksets[n1], toksets[n2]
-            if t1 == t2 or not t1 or not t2:
+            if not t1 or not t2:
                 continue
             s = score(t1, t2)
             if s >= SIMILARITY_THRESHOLD:

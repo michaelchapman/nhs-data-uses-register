@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ meta.site_name }}{% endblock %}</title>
-<meta name="description" content="{% block description %}A readable, searchable view of the NHS England Data Uses Register: who has accessed data held by NHS England, for what, and which datasets were released.{% endblock %}">
+<meta name="description" content="{% block description %}A readable, searchable view of the NHS England Data Uses Register: the organisations that hold data sharing agreements with NHS England, what for, and which datasets those agreements cover.{% endblock %}">
 <link rel="stylesheet" href="{{ meta.base_path }}/assets/styles.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>&#128203;</text></svg>">
 </head>
@@ -39,7 +39,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>Source: NHS England Data Uses Register, {{ meta.edition|edition }} edition, retrieved {{ meta.retrieved[:10]|date }} from <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>.</p>
+    <p>Source: NHS England Data Uses Register, {{ meta.edition|edition }} edition{% if meta.retrieved %}, retrieved {{ meta.retrieved[:10]|date }}{% endif %}{% if meta.source_file %} from <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>{% endif %}.</p>
     <p>Register content is published by NHS England under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Site code is open source — <a href="{{ meta.repo_url }}">view it on GitHub</a>.</p>
     <p>Site rebuilt {{ build_time }}.</p>
   </div>

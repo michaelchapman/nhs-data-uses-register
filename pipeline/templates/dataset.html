@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ dataset.name }} — {{ meta.site_name }}{% endblock %}
-{% block description %}{{ dataset.agreement_count }} agreements cover the release of {{ dataset.name }} to {{ dataset.organisations|length }} organisations.{% endblock %}
+{% block description %}{{ dataset.agreement_count }} agreements with {{ dataset.organisations|length }} organisations name {{ dataset.name }} in the NHS England Data Uses Register.{% endblock %}
 {% block content %}
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
@@ -55,7 +55,7 @@
 </dl>
 {% endif %}
 
-<h2 id="organisations">Organisations receiving it ({{ dataset.organisation_rows|length|commas }})</h2>
+<h2 id="organisations">Organisations whose agreements name it ({{ dataset.organisation_rows|length|commas }})</h2>
 <details class="prose-block" {% if dataset.organisation_rows|length <= 30 %}open{% endif %}>
   <summary>Show the list, with the number of agreements for each</summary>
   <ul class="pill-list">
