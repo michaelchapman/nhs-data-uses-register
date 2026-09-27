@@ -62,7 +62,10 @@
   </ol>
 </nav>
 
-{% set now = "latest" if agreement.archived else "current" %}
+{% from "_status.html" import status_tag %}
+{% set in_term = agreement.coverage_end >= meta.as_of %}
+{# An expired agreement is still listed, but its latest version is not "current". #}
+{% set now = "latest" if agreement.archived or not in_term else "current" %}
 <h1>{{ agreement.title or agreement.base_reference }}</h1>
 {% if agreement.archived %}
 <p class="notice"><strong>No longer in the register.</strong> This agreement was last published in the {{ agreement.archived.last_edition|edition }} edition{% if agreement.archived.next_edition %} and was not in the {{ agreement.archived.next_edition|edition }} edition{% endif %}.
@@ -75,6 +78,12 @@
 <p class="notice"><strong>A later version has left the register.</strong>
   {% for version in agreement.later_dropped %}<a href="#no-longer-listed">v{{ version.version }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
   {{ "was" if agreement.later_dropped|length == 1 else "were" }} listed until the {{ agreement.later_dropped[0].last_edition|edition }} edition and {{ "has" if agreement.later_dropped|length == 1 else "have" }} not been listed since, so the version shown here as current is an earlier one. The register does not say why.</p>
+{% endif %}
+{% if not agreement.archived %}
+<p class="term-status">{{ status_tag(agreement, meta.as_of) }}
+  {% if in_term %}In term in the {{ meta.edition|edition }} edition: the latest version runs to {{ agreement.coverage_end|date }}.
+  {% elif agreement.coverage_end %}The latest version ended on {{ agreement.coverage_end|date }}. The {{ meta.edition|edition }} register still lists the agreement, but its term has passed.
+  {% else %}The register gives no end date for the latest version.{% endif %}</p>
 {% endif %}
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>

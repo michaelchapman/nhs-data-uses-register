@@ -2,6 +2,7 @@
 {% block title %}{{ organisation.name|org }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ organisation.name|org }} holds {{ organisation.agreement_count }} data sharing agreements with NHS England covering {{ organisation.dataset_names|length }} datasets.{% endblock %}
 {% block content %}
+{% from "_status.html" import status_cell, status_tag %}
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
     <li><a href="{{ meta.base_path }}/">Home</a></li>
@@ -28,6 +29,7 @@
 
 <dl class="key-facts">
   <div><dt>Agreements as applicant</dt><dd>{{ organisation.agreement_count|commas }}</dd></div>
+  <div><dt>In term in {{ meta.edition|edition }}</dt><dd>{{ organisation.agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length|commas }}</dd></div>
   <div><dt>Distinct datasets</dt><dd>{{ organisation.dataset_names|length }}</dd></div>
   <div><dt>Files released</dt><dd>{{ organisation.files_released|commas }}</dd></div>
   <div><dt>Latest agreement end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
@@ -48,7 +50,7 @@
 <div class="table-scroll">
 <table class="data-table sortable" id="organisation-agreements">
   <caption class="visually-hidden">Agreements held by {{ organisation.name|org }}</caption>
-  <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Commercial</th></tr></thead>
+  <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Status</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
   {% for a in organisation.agreements|sort(attribute='coverage_end', reverse=true) %}
     <tr data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
@@ -57,6 +59,7 @@
       <td class="num">{{ a.dataset_names|length }}</td>
       <td class="num">{{ a.files_released|commas }}</td>
       <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      {{ status_cell(a, meta.as_of) }}
       <td>{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}
@@ -70,7 +73,7 @@
 <div class="table-scroll">
 <table class="data-table">
   <caption class="visually-hidden">Agreements where {{ organisation.name|org }} is a data controller</caption>
-  <thead><tr><th scope="col">Agreement</th><th scope="col">Applicant</th><th scope="col">Latest term</th></tr></thead>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Applicant</th><th scope="col">Latest term</th><th scope="col">Status</th></tr></thead>
   <tbody>
   {% for a in organisation.controller_agreements|sort(attribute='coverage_end', reverse=true) %}
     <tr>
@@ -78,6 +81,7 @@
         <span class="ref">{{ a.base_reference }}</span></th>
       <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>
       <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      {{ status_cell(a, meta.as_of) }}
     </tr>
   {% endfor %}
   </tbody>

@@ -1,0 +1,12 @@
+{# Whether an agreement is in term as of the edition, from `coverage_end`: the
+   latest version's end date, which supersedes the earlier versions'. #}
+{% macro status_cell(a, as_of) -%}
+<td data-sort="{{ '1' if a.coverage_end >= as_of else '0' }}">{{ status_tag(a, as_of) }}</td>
+{%- endmacro %}
+
+{% macro status_tag(a, as_of) -%}
+{%- if a.coverage_end >= as_of -%}<span class="tag tag-in-term">In term</span>
+{%- elif a.coverage_end -%}<span class="tag tag-expired">Expired</span>
+{%- else -%}<span class="tag tag-expired">End not stated</span>
+{%- endif -%}
+{%- endmacro %}
