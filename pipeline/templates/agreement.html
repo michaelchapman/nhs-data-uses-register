@@ -73,6 +73,12 @@
   This page shows what the register last said, and it is not counted in this site's figures.</p>
 {% endif %}
 <p class="lede" data-highlight>{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+{# The register's own name is shown; where its page is named differently (a
+   merged spelling, or part of an organisation listed under the whole), say so. #}
+{% set listed_under = org_names.get(agreement.organisation_slug) %}
+{% if listed_under and listed_under|org|lower != agreement.organisation|org|lower %}
+<p class="hint">Listed under <a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ listed_under|org }}</a>, which the register also names this way.</p>
+{% endif %}
 
 {% if agreement.later_dropped %}
 <p class="notice"><strong>A later version has left the register.</strong>

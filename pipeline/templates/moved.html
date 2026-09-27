@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ name|org }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ name|org }}'s agreements are listed on the page for {{ target_name|org }}.{% endblock %}
+{% block head %}<meta http-equiv="refresh" content="0; url={{ meta.base_path }}/organisations/{{ target }}/">
+<link rel="canonical" href="{{ meta.site_url }}{{ meta.base_path }}/organisations/{{ target }}/">
+<meta name="robots" content="noindex">
+{% endblock %}
+{% block content %}
+<h1>{{ name|org }}</h1>
+<p class="lede">This page has moved. {{ name|org }}'s agreements are listed on the page for <a href="{{ meta.base_path }}/organisations/{{ target }}/">{{ target_name|org }}</a>.</p>
+<p class="hint">The register names it in a way this site has merged with another name: a different spelling, or part of an organisation recorded under the organisation that holds its agreements. See <a href="{{ meta.repo_url }}/blob/main/data/organisation-aliases.json">data/organisation-aliases.json</a>.</p>
+{% endblock %}

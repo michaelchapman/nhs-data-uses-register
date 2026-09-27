@@ -57,6 +57,11 @@ class Assign(unittest.TestCase):
         self.assertEqual(len(warnings), 1)
         self.assertIn('"Space Agency"', warnings[0])
 
+    def test_an_unmapped_type_placed_by_other_agreements_is_not_reported(self):
+        org = organisation("university", "Academic", "Academic", "Research")
+        self.assertEqual(sectors.assign([org], CONFIG), [])
+        self.assertEqual(org["sector"], "Universities")
+
     def test_no_type_is_not_stated(self):
         org = organisation("controller-only", type_="")
         self.assertEqual(sectors.assign([org], CONFIG), [])

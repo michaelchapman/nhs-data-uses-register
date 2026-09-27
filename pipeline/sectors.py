@@ -53,10 +53,7 @@ def assign(organisations: list[dict], config: dict | None = None) -> list[str]:
     def sector_of(organisation_type: str) -> str:
         if not organisation_type:
             return NOT_STATED
-        if organisation_type not in by_type:
-            unmapped[organisation_type] += 1
-            return OTHER
-        return by_type[organisation_type]
+        return by_type.get(organisation_type, OTHER)
 
     for organisation in organisations:
         correction = corrections.get(organisation["slug"])
@@ -69,6 +66,10 @@ def assign(organisations: list[dict], config: dict | None = None) -> list[str]:
             # Most agreements win; a tie goes to the sector listed first.
             order = names(config) + [OTHER, NOT_STATED]
             sector = max(tally, key=lambda s: (tally[s], -order.index(s)))
+            # Worth a warning only where it decides the sector: an organisation
+            # placed by its other agreements is placed.
+            if sector == OTHER:
+                unmapped.update(t for t in types if t and t not in by_type)
         organisation["sector"] = sector
         for agreement in organisation["agreements"]:
             agreement["sector"] = sector

@@ -248,6 +248,37 @@ When in doubt, skip or ignore it — an unmerged near-duplicate is a cosmetic
 inconvenience; a wrong merge attributes one organisation's data sharing to
 another.
 
+### Parts of an organisation
+
+The register sometimes names a part of an organisation as the applicant: a
+hospital ("Addenbrooke's Hospital"), a medical school or department ("Cardiff
+University School of Medicine"), a unit ("National CJD Surveillance Unit").
+None of these is a legal entity, so none can hold an agreement; the
+organisation it belongs to does. Merge the part onto that organisation, so its
+agreements are counted where they are held. The register usually confirms
+which organisation that is, by naming it as data controller on the same
+agreement.
+
+Merged on 2026-09-27, each with its reason in the alias file: Addenbrooke's
+Hospital, Norfolk and Norwich University Hospital, Royal Liverpool University
+Hospital and the National Centre for Stereotactic Radiosurgery onto their
+trusts; Barts and The London School of Medicine and Dentistry and the Wolfson
+Institute of Preventive Medicine (Queen Mary University of London), Cardiff
+University School of Medicine, Imperial College Business School, the Nuffield
+Department of Primary Health Sciences and the Department of Paediatrics
+(Oxford), the National CJD Surveillance Unit (Edinburgh), the Leeds Institute
+of Health Sciences and the Institute of Child Health (UCL) onto their
+universities.
+
+Not merged, because the part belongs to more than one organisation or is a
+legal entity itself: Hull York Medical School (the universities of Hull and
+York), the Cambridge Centre for Health Services Research (Cambridge and RAND
+Europe), Erasmus University Medical Centre, and St George's Hospital Medical
+School, the legal name of St George's, University of London, which merged into
+City St George's in 2024. Royal Brompton Hospital stays as decided below: its
+agreements name the hospital itself as data controller, and it belonged to a
+different trust before February 2021.
+
 ## Waiting for a decision
 
 Name changes seen in the register that might be one company renamed, or one
@@ -289,6 +320,9 @@ England on 1 February 2023, which ODS dates to April 2013.
 - It's forward and backward compatible with the committed edition store: an
   alias applies to every edition rebuilt after it's added, not just the one
   ingested at the time.
+- A name merged away does not lose its address. Its old organisation page
+  becomes a page that forwards to the one its agreements are now on, and an
+  agreement whose applicant is listed under a differently named page says so.
 - It does not edit or correct the register itself, and doesn't claim to —
   this site is a mirror (see the About page's caveats). It only decides which
   of this site's own pages a name's agreements appear on.
