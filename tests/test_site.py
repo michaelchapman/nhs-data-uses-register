@@ -130,6 +130,40 @@ class InTerm(unittest.TestCase):
         self.assertEqual(page.count('data-active="yes"'), 1)
         self.assertEqual(page.count('data-active="no"'), 1)
         self.assertIn("In term in September 2026", page)
+        # On by default, but ticked by the script: with JavaScript off every row
+        # shows, so the markup must not claim the filter is applied.
+        self.assertRegex(page, r'<input type="checkbox" data-filter-flag data-key="active" value="yes" data-default="on">')
+        self.assertNotRegex(page, r'data-key="active"[^>]*checked')
+
+    def test_status_is_shown_on_every_page_that_lists_or_describes_an_agreement(self):
+        # As of June 2030, DARS-NIC-1 (to January 2030) has ended and DARS-NIC-2 has not.
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            meta = {**site_meta(), "as_of": "2030-06-01"}
+            build.build(self.data, meta, FIRST_EDITION, out)
+
+            def read(*parts):
+                return (out.joinpath(*parts) / "index.html").read_text()
+
+            listing = read("agreements")
+            self.assertEqual(listing.count('<span class="tag tag-in-term">In term</span>'), 1)
+            self.assertEqual(listing.count('<span class="tag tag-expired">Expired</span>'), 1)
+            self.assertIn("1 are in term in September 2026", listing)
+
+            expired = read("agreements", "dars-nic-1-aaaaa")
+            self.assertIn('<span class="tag tag-expired">Expired</span>', expired)
+            self.assertIn("<dt>Latest version</dt>", expired)
+            self.assertNotIn("Current version", expired)
+            current = read("agreements", "dars-nic-2-bbbbb")
+            self.assertIn('<span class="tag tag-in-term">In term</span>', current)
+            self.assertIn("<dt>Current version</dt>", current)
+
+            self.assertRegex(read("organisations", "university-of-example"),
+                             r"<dt>In term in September 2026</dt><dd>0</dd>")
+            dataset = read("datasets", "msds-maternity-services-data-set-v1-5")
+            self.assertRegex(dataset, r"<dt>In term in September 2026</dt><dd>1</dd>")
+            self.assertEqual(dataset.count("tag-expired"), 1)
+            self.assertIn("data sharing agreements in term, of 2 listed", read())
 
 
 class DatasetPage(unittest.TestCase):
