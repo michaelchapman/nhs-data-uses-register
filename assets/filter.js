@@ -65,6 +65,9 @@
     var selects = Array.prototype.slice.call(form.querySelectorAll("[data-filter-select]"));
     var flags = Array.prototype.slice.call(form.querySelectorAll("[data-filter-flag]"));
     var noun = (count && /\b(agreements|organisations|datasets)\b/.exec(count.textContent) || [, "rows"])[1];
+    var reset = form.querySelector("[data-filter-reset]");
+    // "Clear filters", or "Reset filters" where a filter is on by default.
+    var resetLabel = reset ? reset.textContent.trim().toLowerCase() : "clear filters";
     var total = rows.length;
     var timer;
     // Where this table's word index is, if it has one. Files are fetched when a
@@ -149,7 +152,7 @@
 
       if (count) {
         count.textContent = shown === 0
-          ? "No " + noun + " match. Try fewer or shorter search words, or clear the filters."
+          ? "No " + noun + " match. Try fewer or shorter search words, or " + resetLabel.replace(" filters", " the filters") + "."
           : shown === total
           ? "Showing all " + total.toLocaleString("en-GB") + " " + noun + "."
           : "Showing " + shown.toLocaleString("en-GB") + " of " + total.toLocaleString("en-GB") + " " + noun + ".";
@@ -159,7 +162,15 @@
 
       if (text) setParam("q", text.value.trim());
       selects.forEach(function (select) { setParam(select.dataset.key, select.value); });
-      flags.forEach(function (flag) { setParam(flag.dataset.key, flag.checked ? flag.value : ""); });
+      flags.forEach(function (flag) { setParam(flag.dataset.key, flagParam(flag)); });
+    }
+
+    // A flag marked `data-default="on"` starts ticked. The URL records only a
+    // departure from that — `active=all` once it is unticked — so the default
+    // view keeps a clean URL and a link to the full list still gives the full list.
+    function flagParam(flag) {
+      if (flag.dataset.default === "on") return flag.checked ? "" : "all";
+      return flag.checked ? flag.value : "";
     }
 
     // Debounce typing so a 2,000-row table stays responsive; react immediately
@@ -174,12 +185,12 @@
       control.addEventListener("change", apply);
     });
 
-    var reset = form.querySelector("[data-filter-reset]");
     if (reset) {
       reset.addEventListener("click", function () {
         if (text) text.value = "";
         selects.forEach(function (select) { select.value = ""; });
-        flags.forEach(function (flag) { flag.checked = false; });
+        // Back to the view the page opens on, so a default-on flag is ticked again.
+        flags.forEach(function (flag) { flag.checked = flag.dataset.default === "on"; });
         apply();
         if (text) text.focus();
       });
@@ -195,7 +206,12 @@
         select.value = wanted;
       }
     });
-    flags.forEach(function (flag) { flag.checked = params.get(flag.dataset.key) === flag.value; });
+    // Ticked here rather than in the HTML: with JavaScript off every row shows,
+    // so a box ticked in the markup would claim a filter that isn't applied.
+    flags.forEach(function (flag) {
+      var wanted = params.get(flag.dataset.key);
+      flag.checked = wanted === flag.value || (flag.dataset.default === "on" && wanted === null);
+    });
     apply();
   });
 

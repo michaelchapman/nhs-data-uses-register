@@ -2,8 +2,9 @@
 {% block title %}Agreements — {{ meta.site_name }}{% endblock %}
 {% block description %}Search all {{ stats.agreements }} data sharing agreements in the NHS England Data Uses Register by organisation, dataset, purpose or type.{% endblock %}
 {% block content %}
+{% from "_status.html" import status_cell, status_tag %}
 <h1>Data sharing agreements</h1>
-<p class="lede">{{ stats.agreements|commas }} agreements, each shown once with its renewals grouped underneath.</p>
+<p class="lede">{{ stats.agreements|commas }} agreements, each shown once with its renewals grouped underneath. {{ stats.active_agreements|commas }} are in term in {{ meta.edition|edition }}; the rest have passed their end date but are still listed.</p>
 
 <form class="filters" data-filter-form data-target="agreements-table" data-search-index="{{ meta.base_path }}/search/{{ meta.edition }}/" role="search" aria-label="Filter agreements">
   <div class="field">
@@ -24,11 +25,11 @@
   <fieldset class="field checkboxes">
     <legend>Show only</legend>
     <label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Commercial purposes</label>
-    <label><input type="checkbox" data-filter-flag data-key="active" value="yes"> In term in {{ meta.edition|edition }}</label>
+    <label><input type="checkbox" data-filter-flag data-key="active" value="yes" data-default="on"> In term in {{ meta.edition|edition }}</label>
     <label><input type="checkbox" data-filter-flag data-key="sublicensing" value="yes"> Sublicensing allowed</label>
   </fieldset>
   <p class="filter-actions">
-    <button type="button" data-filter-reset>Clear filters</button>
+    <button type="button" data-filter-reset>Reset filters</button>
   </p>
 </form>
 
@@ -46,6 +47,7 @@
       <th scope="col" class="num">Datasets</th>
       <th scope="col" class="num">Files</th>
       <th scope="col">Latest term</th>
+      <th scope="col">Status</th>
       <th scope="col">Commercial</th>
     </tr>
   </thead>
@@ -63,6 +65,7 @@
       <td class="num">{{ a.dataset_names|length }}</td>
       <td class="num">{{ a.files_released|commas }}</td>
       <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      {{ status_cell(a, meta.as_of) }}
       <td>{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}
