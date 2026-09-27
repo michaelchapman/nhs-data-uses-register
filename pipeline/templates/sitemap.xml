@@ -3,6 +3,9 @@
 {% for path in ["/", "/agreements/", "/organisations/", "/datasets/", "/changes/", "/downloads/", "/about/"] %}
   <url><loc>{{ meta.site_url }}{{ meta.base_path }}{{ path }}</loc></url>
 {% endfor %}
+{% for edition in changes_editions %}
+  <url><loc>{{ meta.site_url }}{{ meta.base_path }}/changes/{{ edition }}/</loc></url>
+{% endfor %}
 {% for a in agreements %}
   <url><loc>{{ meta.site_url }}{{ meta.base_path }}/agreements/{{ a.slug }}/</loc></url>
 {% endfor %}

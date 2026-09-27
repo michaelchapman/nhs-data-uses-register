@@ -87,7 +87,7 @@
 
 {% with intro="Agreements naming " ~ (organisation.name|org) ~ " as applicant or data controller that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
-<h2>Datasets received</h2>
+<h2>Datasets named in its agreements</h2>
 <ul class="pill-list">
   {% for name in organisation.dataset_names %}
   <li><a href="{{ meta.base_path }}/datasets/{{ name|dataset_slug }}/">{{ name }}</a></li>

@@ -171,7 +171,7 @@
 {% endif %}
 
 <h2 id="history">Version history</h2>
-<p>The register lists each renewal of this agreement as a separate row. This site has {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }}{% if not agreement.first_start_known %} — earlier versions existed before this site's records begin{% endif %}.</p>
+<p>The register lists each renewal of this agreement as a separate row. This site has {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }}{% if not agreement.first_start_known %} — {% if history and not history.first_is_earliest %}earlier versions exist, but none has been listed in an edition this site holds{% else %}earlier versions existed before this site's records begin{% endif %}{% endif %}.</p>
 {% for version in agreement.versions|reverse %}
 <details class="version" {% if loop.first %}open{% endif %}>
   <summary>

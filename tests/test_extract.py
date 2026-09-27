@@ -1,7 +1,7 @@
 import unittest
 
 from pipeline import facts
-from pipeline.extract import clean_line, extract, slugify, split_list, tidy_version
+from pipeline.extract import build_agreement, clean_line, extract, slugify, split_list, tidy_version
 
 from .fixtures import NEW_NAME, OLD_NAME, dataset_aliases, workbook_bytes
 
@@ -120,6 +120,45 @@ class Extract(unittest.TestCase):
     def test_organisation_dataset_names_are_canonical(self):
         university = next(o for o in self.data["organisations"] if o["name"] == "UNIVERSITY OF EXAMPLE")
         self.assertEqual(university["dataset_names"], [NEW_NAME])
+
+
+def _version(version, start, end):
+    return {
+        "reference": f"DARS-NIC-9-ZZZZZ-v{version}", "version": version, "title": "A study",
+        "organisation": "UNIVERSITY OF EXAMPLE", "organisation_type": "Academic",
+        "commercial": "No", "sublicensing": "No", "controller_basis": "Sole Data Controller",
+        "controllers": ["UNIVERSITY OF EXAMPLE"], "start_date": start, "end_date": end,
+        "datasets": [], "releases": [], "files_released": 0,
+    }
+
+
+class AgreementTerm(unittest.TestCase):
+    def agreement(self, *versions):
+        return build_agreement("DARS-NIC-9-ZZZZZ", list(versions), {}, {})
+
+    def test_a_first_version_numbered_below_one_is_the_first(self):
+        agreement = self.agreement(_version("0.4", "2025-01-27", "2030-01-26"))
+        self.assertTrue(agreement["first_start_known"])
+
+    def test_an_earliest_version_above_one_has_versions_before_it(self):
+        agreement = self.agreement(_version("5.2", "2024-01-01", "2027-01-01"))
+        self.assertFalse(agreement["first_start_known"])
+
+    def test_the_latest_version_decides_when_the_term_ends(self):
+        # DARS-NIC-147978-LZDFC: a v0.0 record runs to 2027, but v7.7, the
+        # version that superseded it, ended in December 2022.
+        agreement = self.agreement(
+            _version("0.0", "2012-02-22", "2027-12-31"),
+            _version("7.7", "2021-12-06", "2022-12-05"),
+        )
+        self.assertEqual(agreement["coverage_end"], "2022-12-05")
+
+    def test_a_latest_version_with_no_end_date_falls_back_to_the_others(self):
+        agreement = self.agreement(
+            _version("1", "2020-01-01", "2023-01-01"),
+            _version("2", "2023-01-01", ""),
+        )
+        self.assertEqual(agreement["coverage_end"], "2023-01-01")
 
 
 if __name__ == "__main__":

@@ -130,6 +130,9 @@ def main() -> None:
         {
             "edition": held_edition,
             "retrieved": by_edition.get(held_edition, {}).get("ingested", ""),
+            # Each edition's own workbook, which its changes page cites.
+            "source_file": by_edition.get(held_edition, {}).get("source_file", ""),
+            "source_url": by_edition.get(held_edition, {}).get("source_url", ""),
             "counts": by_edition.get(held_edition, {}).get("counts")
             or {"agreement_versions": len(facts.edition_index(register.slug, held_edition))},
         }

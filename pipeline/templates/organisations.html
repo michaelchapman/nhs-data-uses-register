@@ -3,7 +3,9 @@
 {% block description %}The {{ stats.organisations }} organisations that hold data sharing agreements with NHS England under the Data Uses Register.{% endblock %}
 {% block content %}
 <h1>Organisations</h1>
-<p class="lede">{{ stats.organisations|commas }} organisations hold at least one agreement in the {{ meta.edition|edition }} register.</p>
+{% set applicants = organisations|selectattr("agreement_count")|list|length %}
+{% set controllers_only = organisations|length - applicants %}
+<p class="lede">{{ applicants|commas }} organisations hold at least one agreement in the {{ meta.edition|edition }} register{% if controllers_only %}, and {{ controllers_only|commas }} more are named only as a data controller on another organisation's agreement{% endif %}.</p>
 
 <form class="filters" data-filter-form data-target="organisations-table" role="search" aria-label="Filter organisations">
   <div class="field">

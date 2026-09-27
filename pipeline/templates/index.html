@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Who has access to data held by NHS England, and what for?</h1>
 
-<p class="lede">Every month NHS England publishes the Data Uses Register: a spreadsheet of every agreement under which data it holds has been released to an organisation outside NHS England. This site turns that spreadsheet into pages you can read, search, link to and cite.</p>
+<p class="lede">Every month NHS England publishes the Data Uses Register: a spreadsheet of the agreements under which organisations outside NHS England may use data it holds. This site turns that spreadsheet into pages you can read, search, link to and cite.</p>
 
 <div class="stat-grid">
   <div class="stat"><span class="stat-number">{{ stats.agreements|commas }}</span><span class="stat-label">data sharing agreements</span></div>
@@ -18,11 +18,11 @@
   </section>
   <section class="card">
     <h2><a href="{{ meta.base_path }}/organisations/">By organisation</a></h2>
-    <p>See everything a single university, council, trust or company has accessed, in one place.</p>
+    <p>See every agreement a single university, council, trust or company holds, in one place.</p>
   </section>
   <section class="card">
     <h2><a href="{{ meta.base_path }}/datasets/">By dataset</a></h2>
-    <p>Start from a dataset — Hospital Episode Statistics, civil registration deaths, GP data — and see who receives it.</p>
+    <p>Start from a dataset — Hospital Episode Statistics, civil registration deaths, GP data — and see which organisations' agreements name it.</p>
   </section>
   <section class="card">
     <h2><a href="{{ meta.base_path }}/changes/">What changed this month</a></h2>
@@ -40,6 +40,7 @@
 
 <h2 id="top-organisations">Who holds agreements</h2>
 <p class="hint">The 15 organisations with the most agreements as applicant.</p>
+<div class="table-scroll">
 <table class="data-table">
   <caption class="visually-hidden">Top organisations by number of agreements</caption>
   <thead><tr><th scope="col">Organisation</th><th scope="col" class="num">Agreements</th></tr></thead>
@@ -49,4 +50,5 @@
   {% endfor %}
   </tbody>
 </table>
+</div>
 {% endblock %}

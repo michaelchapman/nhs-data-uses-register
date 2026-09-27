@@ -128,8 +128,8 @@ p, li { max-width: 68ch; }
 
 /* 1px gaps over a page-coloured background, with each cell drawing its own
    hairline, so a part-filled last row doesn't leave a block of grid colour. */
-.key-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1px; background: var(--bg); margin: 1.5rem 0; }
-.key-facts.wide { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); }
+.key-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr)); gap: 1px; background: var(--bg); margin: 1.5rem 0; }
+.key-facts.wide { grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr)); }
 .key-facts > div { background: var(--bg); padding: 0.75rem 1rem; box-shadow: 0 0 0 1px var(--line); }
 .key-facts dt { font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-muted); }
 .key-facts dd { margin: 0.25rem 0 0; font-weight: 600; }
@@ -159,10 +159,12 @@ p, li { max-width: 68ch; }
 /* Filters ----------------------------------------------------------------- */
 
 .filters { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: flex-end; background: var(--bg-muted); border: 1px solid var(--line); border-radius: 4px; padding: 1rem 1.25rem; margin: 1.5rem 0 1rem; }
-.filters .field { display: flex; flex-direction: column; gap: 0.25rem; }
+/* A field, and the control in it, never grow wider than the form: a select is
+   otherwise as wide as its longest option, which is wider than a phone. */
+.filters .field { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; max-width: 100%; }
 .filters label, .filters legend { font-weight: 600; font-size: 0.9375rem; }
 .filters input[type="search"], .filters select {
-  font: inherit; padding: 0.5rem 0.625rem; min-width: 16rem;
+  font: inherit; padding: 0.5rem 0.625rem; min-width: min(16rem, 100%); max-width: 100%;
   border: 2px solid var(--ink-muted); border-radius: 3px; background: var(--bg); color: var(--ink);
 }
 .filters fieldset { border: 0; margin: 0; padding: 0; }
