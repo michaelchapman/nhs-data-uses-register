@@ -6,12 +6,12 @@
 <h1>Data sharing agreements</h1>
 <p class="lede">{{ stats.agreements|commas }} agreements, each shown once with its renewals grouped underneath. {{ stats.active_agreements|commas }} are in term in {{ meta.edition|edition }}; the rest have passed their end date but are still listed.</p>
 
-<form class="filters" data-filter-form data-target="agreements-table" role="search" aria-label="Filter agreements">
+<form class="filters" data-filter-form data-target="agreements-table" data-search-index="{{ meta.base_path }}/search/{{ meta.edition }}/" role="search" aria-label="Filter agreements">
   <div class="field">
     <label for="q">Search agreements</label>
-    <input type="search" id="q" name="q" data-filter-text autocomplete="off"
+    <input type="search" id="q" name="q" data-filter-text autocomplete="off" aria-describedby="q-hint"
            placeholder="e.g. cancer, Kings College, HES">
-    <p class="hint" id="q-hint">Matches title, reference number, organisation and dataset names.</p>
+    <p class="hint" id="q-hint">Searches the title, reference, organisation, datasets and the purpose of each agreement. Words under four letters match whole words; longer words also match the start of a word, so “pharma” finds “pharmaceutical”.</p>
   </div>
   <div class="field">
     <label for="type">Organisation type</label>
@@ -53,7 +53,7 @@
   </thead>
   <tbody>
   {% for a in agreements %}
-    <tr data-type="{{ a.organisation_type }}"
+    <tr data-i="{{ search_numbers[a.slug] }}" data-type="{{ a.organisation_type }}"
         data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}"
         data-sublicensing="{{ 'yes' if a.sublicensing == 'Yes' else 'no' }}"
         data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}"
