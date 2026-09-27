@@ -45,6 +45,12 @@ September 2026 edition:
   must match words: a whole word under four letters ("ai" 37, "hiv" 18), and
   the start of a word from four letters, so "pharma" finds 525 and "diabet"
   537.
+- **Adding "s" to every short word.** Whole-word matching would miss "GPs"
+  when someone searches "GP", but letting any short word also match itself
+  plus "s" takes "ha" from 8 agreements to 1,871 ("has"), "doe" from 1 to 874
+  ("does") and "los" (length of stay) from 16 to 137 ("loss"). The plurals
+  worth matching are acronyms, and the text shows which those are: they are
+  written in capitals with a lower-case "s".
 - **Earlier versions' text.** The page shows the latest version, and a match
   only in superseded text could not be seen on it: "marketing" is in 106
   latest versions and 248 including earlier ones.
@@ -58,6 +64,14 @@ September 2026 edition:
    four digits. Titles, references, organisation and dataset names go in too, so
    one set of word rules covers the whole search. Apostrophes are dropped from
    words, so "kings college" finds "King's College" (121 agreements; none today).
+   An acronym's plural indexes as the acronym too, judged per agreement from
+   how its own text writes the word: "GPs" also indexes as "gp", and "GP"
+   written in capitals also as "gps". "gp" then finds 899 agreements (872 as
+   a whole word alone) and "gps" 900 (392); "icbs" 734 (248), "ccgs" 550 (476).
+   Ordinary words are untouched ("ha", "doe" and "los" match as before), and
+   so is "mri", although the register also has "MRIS", a different acronym
+   in capitals. Short ordinary plurals are not matched: "age" does not find
+   "ages".
    The files sit under the edition's name, so a cached index never answers for
    another edition.
 2. **The agreements list fetches the shards a search needs** when someone
