@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import csv
 import datetime as dt
 import json
 import shutil
@@ -161,80 +160,6 @@ def _counts(values) -> list[tuple[str, int]]:
     return sorted(tally.items(), key=lambda kv: (-kv[1], kv[0]))
 
 
-def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
-    """Flat CSV extracts — the reusable form the register itself doesn't offer.
-
-    `base_url` is where the site is served, so the `url` column still points at
-    the agreement page once the file has been downloaded and opened elsewhere.
-    """
-    directory = out / "downloads"
-    directory.mkdir(parents=True, exist_ok=True)
-    written = []
-
-    def dump(name: str, header: list[str], rows) -> None:
-        path = directory / name
-        # With a byte-order mark, so Excel reads the file as UTF-8 rather than
-        # garbling the register's dashes and curly quotes. Python's csv module
-        # and most tools read it as UTF-8 either way ("utf-8-sig" drops it).
-        with path.open("w", newline="", encoding="utf-8-sig") as handle:
-            writer = csv.writer(handle)
-            writer.writerow(header)
-            writer.writerows(rows)
-        written.append(
-            {"name": name, "size_kb": round(path.stat().st_size / 1024), "header": header}
-        )
-
-    dump(
-        "agreements.csv",
-        [
-            "base_reference", "reference", "version", "title", "organisation",
-            "organisation_type", "data_controllers", "controller_basis", "start_date",
-            "end_date", "sublicensing", "commercial", "datasets", "files_released", "url", "sector",
-        ],
-        (
-            [
-                a["base_reference"], v["reference"], v["version"], v["title"], v["organisation"],
-                v["organisation_type"], "; ".join(v["controllers"]), v["controller_basis"],
-                v["start_date"], v["end_date"], v["sublicensing"], v["commercial"],
-                "; ".join(d["name"] for d in v["datasets"]), v["files_released"],
-                f"{base_url}/agreements/{a['slug']}/", a["sector"],
-            ]
-            for a in data["agreements"]
-            for v in a["versions"]
-        ),
-    )
-    dump(
-        "datasets.csv",
-        [
-            "reference", "organisation", "dataset", "type_of_data", "sensitivity",
-            "frequency", "legal_basis", "common_law_duty_of_confidentiality",
-        ],
-        (
-            [
-                v["reference"], v["organisation"], d["name"], d["type_of_data"],
-                d["sensitivity"], d["frequency"], d["legal_basis"], d["confidentiality"],
-            ]
-            for a in data["agreements"]
-            for v in a["versions"]
-            for d in v["datasets"]
-        ),
-    )
-    dump(
-        "releases.csv",
-        ["reference", "organisation", "dataset", "files_released", "first_month", "last_month", "opt_outs_applied"],
-        (
-            [
-                v["reference"], v["organisation"], r["dataset"], r["files"],
-                r["first_month"], r["last_month"], r["opt_outs_applied"],
-            ]
-            for a in data["agreements"]
-            for v in a["versions"]
-            for r in v["releases"]
-        ),
-    )
-    return written
-
-
 def version_diffs(
     agreement: dict,
     dataset_aliases: dict[str, str] | None = None,
@@ -279,8 +204,6 @@ def build(
         print(f"sectors: {warning}")
     stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
     stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
-    # After the sectors, which agreements.csv includes.
-    downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
 
     # Attach change status to agreements so detail pages can flag recent activity.
@@ -303,7 +226,6 @@ def build(
         "current_edition": meta["edition"],
         "stats": stats,
         "changes": changes,
-        "downloads": downloads,
         "build_time": dt.datetime.now(dt.timezone.utc).strftime("%d %B %Y"),
     }
 

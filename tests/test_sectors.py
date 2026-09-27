@@ -1,4 +1,3 @@
-import csv
 import tempfile
 import unittest
 from pathlib import Path
@@ -87,7 +86,7 @@ class SectorsFile(unittest.TestCase):
 
 
 class BuiltSite(unittest.TestCase):
-    def test_the_lists_filter_by_sector_and_the_csv_has_it(self):
+    def test_the_lists_filter_by_sector(self):
         with tempfile.TemporaryDirectory() as directory, dataset_aliases():
             out = Path(directory)
             data = extract(workbook_bytes())
@@ -95,8 +94,6 @@ class BuiltSite(unittest.TestCase):
             agreements = (out / "agreements" / "index.html").read_text()
             organisations = (out / "organisations" / "index.html").read_text()
             organisation = (out / "organisations" / "university-of-example" / "index.html").read_text()
-            with (out / "downloads" / "agreements.csv").open(encoding="utf-8-sig") as handle:
-                rows = list(csv.DictReader(handle))
 
         for page in (agreements, organisations):
             self.assertIn('<select id="sector" data-filter-select data-key="sector"', page)
@@ -105,5 +102,3 @@ class BuiltSite(unittest.TestCase):
         self.assertIn('<option value="Universities">Universities (2)</option>', agreements)
         self.assertIn("<dt>Sector</dt><dd>Universities</dd>", organisation)
         self.assertNotIn("Sector set by hand", organisation)
-        self.assertEqual(list(rows[0])[-1], "sector")
-        self.assertEqual({r["sector"] for r in rows if r["organisation"] == "UNIVERSITY OF EXAMPLE"}, {"Universities"})
