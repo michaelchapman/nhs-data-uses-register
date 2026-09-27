@@ -248,6 +248,64 @@ When in doubt, skip or ignore it — an unmerged near-duplicate is a cosmetic
 inconvenience; a wrong merge attributes one organisation's data sharing to
 another.
 
+### Parts of an organisation
+
+The register sometimes names a part of an organisation as the applicant: a
+hospital ("Addenbrooke's Hospital"), a medical school or department ("Cardiff
+University School of Medicine"), a unit ("National CJD Surveillance Unit").
+None of these is a legal entity, so none can hold an agreement; the
+organisation it belongs to does. Merge the part onto that organisation, so its
+agreements are counted where they are held. The register usually confirms
+which organisation that is, by naming it as data controller on the same
+agreement.
+
+Merged on 2026-09-27, each with its reason in the alias file: Addenbrooke's
+Hospital, Norfolk and Norwich University Hospital, Royal Liverpool University
+Hospital and the National Centre for Stereotactic Radiosurgery onto their
+trusts; Barts and The London School of Medicine and Dentistry and the Wolfson
+Institute of Preventive Medicine (Queen Mary University of London), Cardiff
+University School of Medicine, Imperial College Business School, the Nuffield
+Department of Primary Health Sciences and the Department of Paediatrics
+(Oxford), the National CJD Surveillance Unit (Edinburgh), the Leeds Institute
+of Health Sciences and the Institute of Child Health (UCL) onto their
+universities.
+
+Not merged, because the part belongs to more than one organisation or is a
+legal entity itself: Hull York Medical School (the universities of Hull and
+York), the Cambridge Centre for Health Services Research (Cambridge and RAND
+Europe), Erasmus University Medical Centre, and St George's Hospital Medical
+School, the legal name of St George's, University of London, which merged into
+City St George's in 2024.
+
+Also not merged, by decision on 2026-09-27: bodies hosted by an organisation
+rather than part of it, even where the host is the only data controller named.
+They are RM Partners (The Royal Marsden), Health Innovation Network South
+London (Guy's and St Thomas'), the NIHR BioResource (Cambridge University
+Hospitals), the Regional Drug & Therapeutic Centre (Newcastle upon Tyne
+Hospitals), the Northern Ireland Clinical Trials Unit (Belfast Health and Social
+Care Trust) and the National Institute for Health Research (the Department of
+Health and Social Care); and the cancer alliances and commissioning support
+units, whose hosts vary and change.
+
+An applicant can rightly differ from the data controller: the Institute of
+Child Health, as UCL, is a commissioned processor for the Department of Health
+and Social Care, which is the controller on its agreement. Merging a part onto
+its organisation changes only which page lists it as applicant; the controllers
+are always shown as the register records them.
+
+A hospital that changed hands goes to the organisation it belonged to when its
+agreements were made. Every agreement version naming Royal Brompton Hospital
+began before 1 February 2021, when Royal Brompton & Harefield NHS Foundation
+Trust merged into Guy's and St Thomas' NHS Foundation Trust, so the name is
+recorded under the former trust's ODS code (RT3) and its page takes that
+trust's name. ODS records the merger, so the site shows Guy's and St Thomas' as
+its successor, and an agreement renewed under Guy's and St Thomas' shows a
+succession, not a change of applicant; DARS-NIC-144568-D7G6V says the same in
+its own text. "GSTT @ Royal Brompton Hospital", the register's label for the
+same agreements from October 2021 to May 2022, goes to Guy's and St Thomas'.
+When the register went back to "Royal Brompton Hospital" in June 2022, that is
+still reported as a change of applicant, as the register made it.
+
 ## Waiting for a decision
 
 Name changes seen in the register that might be one company renamed, or one
@@ -264,9 +322,8 @@ or add it to `ignored` once it is known not to be.
 Recorded 2026-09-26.
 
 Also decided then, and not to be merged:
-- **Guy's and St Thomas' Royal Brompton site** ("GSTT @ Royal Brompton
-  Hospital" and "Royal Brompton Hospital", 7 changes across 3 agreements)
-  stays as written. Neither name is an organisation in ODS.
+- **Royal Brompton Hospital** was left as written then, and is now placed by
+  date (2026-09-27, below).
 - **Three `orgcheck` candidates** are different bodies and are marked
   `ignored`: Sussex ICB and Surrey and Sussex ICB (ODS records the April 2026
   merger, which the site shows as a succession); Lancashire & South Cumbria
@@ -289,6 +346,9 @@ England on 1 February 2023, which ODS dates to April 2013.
 - It's forward and backward compatible with the committed edition store: an
   alias applies to every edition rebuilt after it's added, not just the one
   ingested at the time.
+- A name merged away does not lose its address. Its old organisation page
+  becomes a page that forwards to the one its agreements are now on, and an
+  agreement whose applicant is listed under a differently named page says so.
 - It does not edit or correct the register itself, and doesn't claim to —
   this site is a mirror (see the About page's caveats). It only decides which
   of this site's own pages a name's agreements appear on.

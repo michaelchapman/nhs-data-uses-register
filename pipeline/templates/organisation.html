@@ -28,12 +28,16 @@
 {% if organisation.lineage %}{% include "_lineage.html" %}{% endif %}
 
 <dl class="key-facts">
+  <div><dt>Sector</dt><dd>{{ organisation.sector }}</dd></div>
   <div><dt>Agreements as applicant</dt><dd>{{ organisation.agreement_count|commas }}</dd></div>
   <div><dt>In term in {{ meta.edition|edition }}</dt><dd>{{ organisation.agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length|commas }}</dd></div>
   <div><dt>Distinct datasets</dt><dd>{{ organisation.dataset_names|length }}</dd></div>
   <div><dt>Files released</dt><dd>{{ organisation.files_released|commas }}</dd></div>
   <div><dt>Latest agreement end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
 </dl>
+{% if organisation.sector_reason %}
+<p class="hint">Sector set by hand: {{ organisation.sector_reason }} See <a href="{{ meta.repo_url }}/blob/main/data/organisation-sectors.json">data/organisation-sectors.json</a> in the repository.</p>
+{% endif %}
 {% include "_release-scope.html" %}
 
 <h2>Agreements</h2>

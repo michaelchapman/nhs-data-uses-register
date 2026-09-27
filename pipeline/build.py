@@ -15,9 +15,10 @@ from . import compare
 from . import lineage
 from . import ods
 from . import search
+from . import sectors
 from .names import display_name, strip_code
 from . import sources
-from .extract import archive_views, slugify
+from .extract import archive_views, organisation_slug, slugify
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Path(__file__).resolve().parent / "templates"
@@ -144,6 +145,15 @@ def compute_stats(data: dict, as_of: str) -> dict:
     }
 
 
+def _sector_counts(values) -> list[tuple[str, int]]:
+    """`[(sector, count)]` in the order the sectors are listed, leaving out empty ones."""
+    tally: dict[str, int] = {}
+    for value in values:
+        tally[value] = tally.get(value, 0) + 1
+    order = sectors.names(sectors.load()) + [sectors.OTHER, sectors.NOT_STATED]
+    return [(name, tally[name]) for name in order if name in tally]
+
+
 def _counts(values) -> list[tuple[str, int]]:
     tally: dict[str, int] = {}
     for value in values:
@@ -179,7 +189,7 @@ def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
         [
             "base_reference", "reference", "version", "title", "organisation",
             "organisation_type", "data_controllers", "controller_basis", "start_date",
-            "end_date", "sublicensing", "commercial", "datasets", "files_released", "url",
+            "end_date", "sublicensing", "commercial", "datasets", "files_released", "url", "sector",
         ],
         (
             [
@@ -187,7 +197,7 @@ def write_csvs(data: dict, out: Path, base_url: str) -> list[dict]:
                 v["organisation_type"], "; ".join(v["controllers"]), v["controller_basis"],
                 v["start_date"], v["end_date"], v["sublicensing"], v["commercial"],
                 "; ".join(d["name"] for d in v["datasets"]), v["files_released"],
-                f"{base_url}/agreements/{a['slug']}/",
+                f"{base_url}/agreements/{a['slug']}/", a["sector"],
             ]
             for a in data["agreements"]
             for v in a["versions"]
@@ -256,13 +266,21 @@ def build(
     prepare_output(out)
 
     stats = compute_stats(data, meta["as_of"])
-    downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     by_slug = {a["slug"]: a for a in data["agreements"]}
     # Agreements earlier editions listed and this one does not: pages of their
     # own, and never in a count. See `facts.read_archive`.
     archived = data.get("archived", [])
     archive = archive_views(archived, data["organisations"], data["datasets"])
     org_slugs = {o["slug"] for o in data["organisations"] + archive["organisations"]}
+    # Page names, so an agreement can say which page its applicant is listed under.
+    org_names = {o["slug"]: o["name"] for o in data["organisations"] + archive["organisations"]}
+    # Sectors for the Sector filters, from data/organisation-sectors.json.
+    for warning in sectors.assign(data["organisations"] + archive["organisations"]):
+        print(f"sectors: {warning}")
+    stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
+    stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
+    # After the sectors, which agreements.csv includes.
+    downloads = write_csvs(data, out, meta["site_url"] + meta["base_path"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
 
     # Attach change status to agreements so detail pages can flag recent activity.
@@ -347,6 +365,7 @@ def build(
             "agreement.html",
             f"agreements/{agreement['slug']}/index.html",
             agreement=agreement,
+            org_names=org_names,
             change_status={v["reference"]: changed_refs.get(v["reference"]) for v in agreement["versions"]},
             org_slugs=org_slugs,
             # An agreement no longer listed can name a dataset no listed
@@ -365,6 +384,20 @@ def build(
             dataset_slugs=dataset_slugs,
             search_numbers=search_numbers,
         )
+    # A page a merge retired still answers. Before an alias or ODS moved a name
+    # onto another organisation's page, it had a page of its own at the slug of
+    # its own spelling; that address now forwards, so a link to it still works.
+    page_names = org_names
+    retired: dict[str, tuple[str, str]] = {}
+    for agreement in data["agreements"] + archived:
+        for version in agreement["versions"]:
+            for name in [version["organisation"], *version["controllers"]]:
+                own, now = slugify(name), organisation_slug(name, organisation_aliases, organisation_lineage)
+                if own != now and own not in page_names and now in page_names:
+                    retired.setdefault(own, (name, now))
+    for own, (name, now) in sorted(retired.items()):
+        render("moved.html", f"organisations/{own}/index.html", name=name, target=now, target_name=page_names[now])
+
     for dataset in data["datasets"] + archive["datasets"]:
         render(
             "dataset.html",

@@ -427,7 +427,11 @@ class NhsLineage(unittest.TestCase):
         self.assertIn("<h1>NHS Bristol, North Somerset and South Gloucestershire Integrated Care Board</h1>", page)
         self.assertIn(">15C</span>, formerly NHS Bristol, North Somerset and South Gloucestershire CCG", page)
         self.assertIn("Open Government Licence v3.0", page)
-        self.assertFalse((self.out / "organisations" / "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c").exists())
+        # The sub-ICB location has no page of its own: its old address forwards to the ICB's.
+        old = (self.out / "organisations" / "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c" / "index.html").read_text()
+        self.assertIn(f'<meta http-equiv="refresh" content="0; url=/organisations/{slug}/">', old)
+        self.assertIn('<meta name="robots" content="noindex">', old)
+        self.assertNotIn("<table", old)
 
     def test_the_agreement_names_its_applicant_without_the_code(self):
         page = (self.out / "agreements" / "dars-nic-2-bbbbb" / "index.html").read_text()
