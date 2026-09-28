@@ -4,8 +4,8 @@ A static site that reformats the [NHS England Data Uses Register](https://digita
 — published monthly as a 29 MB, three-sheet spreadsheet — into pages you can
 read, search, link to and cite.
 
-It is unofficial. NHS England publishes the data; this repository only
-rearranges it.
+It is published at **[healthdatauses.uk](https://healthdatauses.uk)**. It is
+unofficial. NHS England publishes the data; this repository only rearranges it.
 
 ## What it produces
 
