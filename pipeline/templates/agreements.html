@@ -44,6 +44,7 @@
 </form>
 
 <p class="result-count" role="status" data-filter-count>Showing all {{ stats.agreements|commas }} agreements.</p>
+<p class="hint">Newest first, by when the latest version of each agreement started. Select a column heading to sort by it.</p>
 {% include "_release-scope.html" %}
 
 <div class="table-scroll">
@@ -62,7 +63,9 @@
     </tr>
   </thead>
   <tbody>
-  {% for a in agreements %}
+  {# Newest first. The sort is stable, so agreements starting on the same day
+     keep the register's order by organisation name. #}
+  {% for a in agreements|sort(attribute="latest_start", reverse=true) %}
     <tr data-i="{{ search_numbers[a.slug] }}" data-sector="{{ a.sector }}" data-type="{{ a.organisation_type }}"
         data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}"
         data-sublicensing="{{ 'yes' if a.sublicensing == 'Yes' else 'no' }}"

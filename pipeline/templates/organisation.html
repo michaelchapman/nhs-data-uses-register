@@ -41,13 +41,24 @@
 {% include "_release-scope.html" %}
 
 <h2>Agreements</h2>
-{% if organisation.agreement_count > 15 %}
+{# Filters where there are enough agreements to need them, and each flag only
+   where it would divide the list. #}
+{% set in_term_count = organisation.agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length %}
+{% set commercial_count = organisation.agreements|selectattr("commercial", "eq", "Yes")|list|length %}
+{% if organisation.agreement_count > 5 %}
 <form class="filters" data-filter-form data-target="organisation-agreements" data-search-index="{{ meta.base_path }}/search/{{ meta.edition }}/" role="search" aria-label="Filter agreements">
   <div class="field">
     <label for="q">Search these agreements</label>
     <input type="search" id="q" data-filter-text autocomplete="off" aria-describedby="q-hint" placeholder="e.g. cancer, HES">
     <p class="hint" id="q-hint">Searches the title, reference, datasets and purpose of each agreement.</p>
   </div>
+  {% if 0 < in_term_count < organisation.agreement_count or 0 < commercial_count < organisation.agreement_count %}
+  <fieldset class="field checkboxes">
+    <legend>Show only</legend>
+    {% if 0 < in_term_count < organisation.agreement_count %}<label><input type="checkbox" data-filter-flag data-key="active" value="yes"> In term in {{ meta.edition|edition }}</label>{% endif %}
+    {% if 0 < commercial_count < organisation.agreement_count %}<label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Commercial purposes</label>{% endif %}
+  </fieldset>
+  {% endif %}
   <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
 </form>
 <p class="result-count" role="status" data-filter-count>Showing all {{ organisation.agreement_count|commas }} agreements.</p>
@@ -58,7 +69,8 @@
   <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Status</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
   {% for a in organisation.agreements|sort(attribute='coverage_end', reverse=true) %}
-    <tr {% if a.slug in search_numbers %}data-i="{{ search_numbers[a.slug] }}" {% endif %}data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
+    <tr {% if a.slug in search_numbers %}data-i="{{ search_numbers[a.slug] }}" {% endif %}data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.dataset_names|join(' '))|lower }}"
+        data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}" data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
       <td class="num">{{ a.dataset_names|length }}</td>

@@ -679,7 +679,11 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
 
 
 def _dataset_organisations(agreements: list[dict], canonical_by_slug: dict[str, str]) -> list[dict]:
-    """Who receives a dataset: `{slug, name, agreements}`, busiest first."""
+    """Who receives a dataset: `{slug, name, agreements, ends}`, busiest first.
+
+    `ends` holds each agreement's end date, so a page can tell which of an
+    organisation's agreements are in term in the edition it shows.
+    """
     rows: dict[str, dict] = {}
     for agreement in agreements:
         slug = agreement["organisation_slug"]
@@ -689,9 +693,11 @@ def _dataset_organisations(agreements: list[dict], canonical_by_slug: dict[str, 
                 "slug": slug,
                 "name": canonical_by_slug.get(slug) or agreement["organisation"] or "Unnamed organisation",
                 "agreements": 0,
+                "ends": [],
             },
         )
         row["agreements"] += 1
+        row["ends"].append(agreement["coverage_end"])
     return sorted(rows.values(), key=lambda r: (-r["agreements"], r["name"].lower()))
 
 

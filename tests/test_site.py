@@ -63,6 +63,20 @@ class BuiltSite(unittest.TestCase):
         self.assertIn('href="/datasets/', releases)
         self.assertIn('<nav aria-label="On this page"', page)
 
+    def test_agreements_list_opens_newest_first(self):
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            data = extract(workbook_bytes())
+            # The register's order is by organisation name, which puts Ambulance
+            # study (NHS Bristol...) first; a later start puts Maternity study first.
+            for agreement in data["agreements"]:
+                if agreement["title"] == "Maternity study":
+                    agreement["latest_start"] = "2025-01-01"
+            build.build(data, site_meta(), FIRST_EDITION, out)
+            page = (out / "agreements" / "index.html").read_text()
+        table = page[page.index('id="agreements-table"'):]
+        self.assertLess(table.index("Maternity study"), table.index("Ambulance study"))
+
 
 class LinkCheck(unittest.TestCase):
     def write(self, out: Path, name: str, html: str) -> None:
@@ -210,6 +224,15 @@ class DatasetPage(unittest.TestCase):
     def test_lists_the_organisations_naming_it_with_agreement_counts(self):
         self.assertIn("Organisations whose agreements name it (2)", self.page)
         self.assertRegex(self.page, r'organisations/university-of-example/">University of Example</a> \(1\)')
+        self.assertIn("With an agreement in term in September 2026 (2)", self.page)
+        self.assertNotIn("With expired agreements only", self.page)
+
+    def test_agreements_can_be_filtered_and_show_this_datasets_files(self):
+        self.assertIn('data-key="active"', self.page)
+        self.assertIn('data-active="yes"', self.page)
+        self.assertIn('<th scope="col" class="num">Files</th>', self.page)
+        table = self.page[self.page.index('id="dataset-agreements"'):]
+        self.assertIn('<td class="num">5</td>', table)
 
 
 class ChangesPages(unittest.TestCase):
@@ -238,6 +261,11 @@ class ChangesPages(unittest.TestCase):
         for page in (latest, older):
             self.assertRegex(page, r'<a href="/changes/">September 2026</a> <span class="tag tag-new">Current</span>')
         self.assertIn('<a href="/changes/august2026/">August 2026</a>', older)
+        # Each page links to the editions either side; July, the first held, has no page.
+        self.assertIn('Previous: <a href="/changes/august2026/">August 2026</a>', latest)
+        self.assertNotIn("Next:", latest)
+        self.assertIn('Next: <a href="/changes/">September 2026</a>', older)
+        self.assertNotIn("Previous:", older)
         # Each page's footer cites the workbook it describes.
         self.assertIn('retrieved 20 August 2026 from <a href="https://example.test/august.xlsx">datausesregister_august2026.xlsx</a>', older)
         self.assertNotIn("source.xlsx", older)
@@ -245,6 +273,19 @@ class ChangesPages(unittest.TestCase):
         # The older edition's page is in the sitemap; the current one is /changes/.
         self.assertIn("<loc>https://example.test/changes/august2026/</loc>", sitemap)
         self.assertNotIn("/changes/september2026/", sitemap)
+
+    def test_changes_link_their_organisations_and_can_be_searched(self):
+        changes = {**FIRST_EDITION, "comparable": True, "reason": "", "previous_edition": "august2026",
+                   "skipped": [], "added": [{"base": "DARS-NIC-1-AAAAA", "reference": "DARS-NIC-1-AAAAA-v1",
+                                             "title": "Maternity study", "org": "UNIVERSITY OF EXAMPLE",
+                                             "kind": "new"}]}
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build.build(extract(workbook_bytes()), site_meta(), changes, out)
+            page = (out / "changes" / "index.html").read_text()
+        self.assertIn('<a href="/organisations/university-of-example/">University of Example</a>', page)
+        self.assertIn('data-target="added-table amended-table removed-table"', page)
+        self.assertIn("Showing all 1 changes.", page)
 
 
 class Downloads(unittest.TestCase):
