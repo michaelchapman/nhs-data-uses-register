@@ -57,14 +57,31 @@
 </dl>
 {% endif %}
 
+{# Split by whether the organisation holds an agreement naming the dataset
+   that is in term in this edition. #}
+{% set current, expired = [], [] %}
+{% for row in dataset.organisation_rows %}
+{% set in_term = row.ends|select("ge", meta.as_of)|list|length %}
+{% set _ = (current if in_term else expired).append((row, in_term)) %}
+{% endfor %}
+{% macro organisation_pills(entries) %}
+  <ul class="pill-list">
+    {% for row, in_term in entries %}
+    <li>{% if row.slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %} ({% if 0 < in_term < row.agreements %}{{ in_term|commas }} of {{ row.agreements|commas }} in term{% else %}{{ row.agreements|commas }}{% endif %})</li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
 <h2 id="organisations">Organisations whose agreements name it ({{ dataset.organisation_rows|length|commas }})</h2>
 <details class="prose-block" {% if dataset.organisation_rows|length <= 30 %}open{% endif %}>
   <summary>Show the list, with the number of agreements for each</summary>
-  <ul class="pill-list">
-    {% for row in dataset.organisation_rows %}
-    <li>{% if row.slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %} ({{ row.agreements|commas }})</li>
-    {% endfor %}
-  </ul>
+  {% if current %}
+  <h3>With an agreement in term in {{ meta.edition|edition }} ({{ current|length|commas }})</h3>
+  {{ organisation_pills(current) }}
+  {% endif %}
+  {% if expired %}
+  <h3>With expired agreements only ({{ expired|length|commas }})</h3>
+  {{ organisation_pills(expired) }}
+  {% endif %}
 </details>
 
 <h2>Agreements covering this dataset</h2>
@@ -74,21 +91,31 @@
     <input type="search" id="q" data-filter-text autocomplete="off" aria-describedby="q-hint" placeholder="e.g. dementia, King’s College">
     <p class="hint" id="q-hint">Searches the title, reference, organisation and purpose of each agreement.</p>
   </div>
+  <fieldset class="field checkboxes">
+    <legend>Show only</legend>
+    <label><input type="checkbox" data-filter-flag data-key="active" value="yes"> In term in {{ meta.edition|edition }}</label>
+    <label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Commercial purposes</label>
+  </fieldset>
   <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
 </form>
 <p class="result-count" role="status" data-filter-count>Showing all {{ dataset.agreement_count|commas }} agreements.</p>
+<p class="hint">Files: files of this dataset released under the agreement, across all its versions.</p>
 
 <div class="table-scroll">
 <table class="data-table sortable" id="dataset-agreements">
   <caption class="visually-hidden">Agreements covering {{ dataset.name }}</caption>
-  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Type</th><th scope="col">Latest term</th><th scope="col">Status</th><th scope="col">Commercial</th></tr></thead>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Type</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Status</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
   {% for a in dataset.agreements|sort(attribute='coverage_end', reverse=true) %}
-    <tr {% if a.slug in search_numbers %}data-i="{{ search_numbers[a.slug] }}" {% endif %}data-search="{{ (a.title ~ ' ' ~ a.organisation ~ ' ' ~ a.base_reference)|lower }}">
+    {% set files = namespace(n=0) %}
+    {% for version in a.versions %}{% for r in version.releases if r.dataset|dataset_slug == dataset.slug %}{% set files.n = files.n + r.files %}{% endfor %}{% endfor %}
+    <tr {% if a.slug in search_numbers %}data-i="{{ search_numbers[a.slug] }}" {% endif %}data-search="{{ (a.title ~ ' ' ~ a.organisation ~ ' ' ~ a.base_reference)|lower }}"
+        data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}" data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
       <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>
       <td>{{ a.organisation_type or "—" }}</td>
+      <td class="num">{{ files.n|commas }}</td>
       <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       {{ status_cell(a, meta.as_of) }}
       <td>{{ a.commercial or "—" }}</td>

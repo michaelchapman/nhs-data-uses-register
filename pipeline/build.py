@@ -205,6 +205,11 @@ def build(
     stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
     stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
+    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
+    organisation_lineage = lineage.load()
+    # The page a register name is listed on, for tables that carry only the
+    # name as some edition wrote it.
+    env.filters["org_slug"] = lambda name: organisation_slug(name, organisation_aliases, organisation_lineage)
 
     # Attach change status to agreements so detail pages can flag recent activity.
     changed_refs = {
@@ -234,7 +239,13 @@ def build(
         # page overrides `meta` to show its own edition, for instance), so merge
         # rather than spread both as separate keyword arguments — spreading both
         # would raise on any key they share.
-        _write(out, path, env.get_template(template).render(**{**context, **kwargs}))
+        # The page's own address, for its canonical link, and the section of the
+        # main menu it belongs to. The 404 page answers at every address, so it
+        # has neither.
+        page_path = None if path == "404.html" else "/" + path.removesuffix("index.html")
+        section = page_path.split("/")[1] if page_path else None
+        pages = {"page_path": page_path, "section": section}
+        _write(out, path, env.get_template(template).render(**{**context, **pages, **kwargs}))
 
     top_organisations = sorted(
         data["organisations"], key=lambda o: (-o["agreement_count"], o["name"].lower())
@@ -251,7 +262,7 @@ def build(
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
     # An agreement no longer listed still has its page, so a row about it links.
     changes_by_slug = {a["base_reference"]: a for a in archived + data["agreements"]}
-    render("changes.html", "changes/index.html", by_slug=changes_by_slug)
+    render("changes.html", "changes/index.html", by_slug=changes_by_slug, org_slugs=org_slugs)
     # A same-shaped page for every earlier edition pair, so "what changed" isn't
     # limited to the current edition — the facts store holds every edition
     # ingested, so each can have its own page.
@@ -267,6 +278,7 @@ def build(
             f"changes/{entry['edition']}/index.html",
             changes=entry,
             by_slug=changes_by_slug,
+            org_slugs=org_slugs,
             meta={
                 **meta,
                 "edition": entry["edition"],
@@ -280,8 +292,6 @@ def build(
     render("not-found.html", "404.html")
 
     dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
-    organisation_lineage = lineage.load()
     for agreement in data["agreements"] + archived:
         render(
             "agreement.html",

@@ -102,8 +102,21 @@
   <div><dt>Files released to date</dt><dd>{{ agreement.files_released|commas }}</dd></div>
 </dl>
 
-{% if v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}
-<h2>Data controllers</h2>
+{% set show_controllers = v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}
+<nav aria-label="On this page" class="contents">
+  <h2 class="contents-title">On this page</h2>
+  <ul>
+    {% if show_controllers %}<li><a href="#controllers">Data controllers</a></li>{% endif %}
+    <li><a href="#purpose">Why the data was released</a></li>
+    <li><a href="#datasets">Datasets</a></li>
+    <li><a href="#releases">Files released</a></li>
+    <li><a href="#history">Version history</a></li>
+    <li><a href="#register-history">Register history</a></li>
+  </ul>
+</nav>
+
+{% if show_controllers %}
+<h2 id="controllers">Data controllers</h2>
 <ul class="plain">
   {% for row in agreement.controller_rows %}
   <li>{% if row.slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ row.slug }}/">{{ row.name|org }}</a>{% else %}{{ row.name|org }}{% endif %}
@@ -113,7 +126,7 @@
 {% endif %}
 
 <p class="search-note" data-search-note hidden></p>
-<h2>Why the data was released</h2>
+<h2 id="purpose">Why the data was released</h2>
 {% for section, text in [
   ("Objective for processing", v.objective),
   ("Processing activities", v.activities),
@@ -121,7 +134,7 @@
   ("Expected measurable benefits", v.expected_benefits),
   ("Benefits reported so far", v.yielded_benefits),
 ] %}
-<details class="prose-block" data-highlight {% if loop.first %}open{% endif %}>
+<details class="prose-block" data-highlight>
   <summary><h3>{{ section }}</h3></summary>
   {% if text %}
     {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
@@ -172,7 +185,7 @@
   <thead><tr><th scope="col">Dataset</th><th scope="col" class="num">Files</th><th scope="col">First released</th><th scope="col">Last released</th><th scope="col">Opt-outs applied</th></tr></thead>
   <tbody>
   {% for r in v.releases %}
-    <tr><th scope="row">{{ r.dataset }}</th><td class="num">{{ r.files|commas }}</td>
+    <tr><th scope="row">{% if r.dataset|dataset_slug in dataset_slugs %}<a href="{{ meta.base_path }}/datasets/{{ r.dataset|dataset_slug }}/">{{ r.dataset }}</a>{% else %}{{ r.dataset }}{% endif %}</th><td class="num">{{ r.files|commas }}</td>
       <td>{{ r.first_month|month }}</td><td>{{ r.last_month|month }}</td><td>{{ r.opt_outs_applied or "—" }}</td></tr>
   {% endfor %}
   </tbody>

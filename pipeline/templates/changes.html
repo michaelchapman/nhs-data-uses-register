@@ -2,19 +2,20 @@
 {% block title %}What changed — {{ meta.site_name }}{% endblock %}
 {% block description %}Agreements added, amended and removed between editions of the NHS England Data Uses Register.{% endblock %}
 {% from "_change_details.html" import change_details, wide_edit %}
-{% macro rows(items, show_kind=false, show_fields=false) %}
+{% macro rows(items, id, show_kind=false, show_fields=false) %}
 <div class="table-scroll">
-<table class="data-table">
+<table class="data-table" id="{{ id }}">
   <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Reference</th>{% if show_kind %}<th scope="col">Kind</th>{% endif %}{% if show_fields %}<th scope="col">What changed</th>{% endif %}</tr></thead>
   <tbody>
   {% for item in items %}
-    <tr>
+    <tr data-search="{{ ((item.title or '') ~ ' ' ~ item.base ~ ' ' ~ item.reference ~ ' ' ~ (item.org|org) ~ ' ' ~ (item.fields or [])|join(' '))|lower }}">
       <th scope="row">
         {% if by_slug.get(item.base) %}
         <a href="{{ meta.base_path }}/agreements/{{ by_slug[item.base].slug }}/">{{ item.title or item.base }}</a>
         {% else %}{{ item.title or item.base }}{% endif %}
       </th>
-      <td>{{ item.org|org }}</td>
+      {% set org_slug = item.org|org_slug if item.org else "" %}
+      <td>{% if org_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ org_slug }}/">{{ item.org|org }}</a>{% else %}{{ item.org|org }}{% endif %}</td>
       <td class="ref-cell">{{ item.reference }}</td>
       {% if show_kind %}<td>{{ "New agreement" if item.kind == "new" else "New version of an existing agreement" }}</td>{% endif %}
       {% if show_fields %}<td>{% if item.details %}{{ change_details(item.details) }}{% elif item.fields %}{{ item.fields|join(", ") }}{% else %}<span class="hint">Not recorded for this edition</span>{% endif %}</td>{% endif %}
@@ -26,6 +27,21 @@
 {% endmacro %}
 {% block content %}
 <h1>What changed</h1>
+
+{# The editions either side of this one that have a page of their own: the
+   earliest edition held has nothing before it to compare with, so no page. #}
+{% set held = meta.editions|map(attribute="edition")|list %}
+{% if meta.edition in held %}
+{% set i = held.index(meta.edition) %}
+{% macro edition_link(edition) %}<a href="{{ meta.base_path }}/changes/{% if edition != current_edition %}{{ edition }}/{% endif %}">{{ edition|edition }}</a>{% endmacro %}
+<nav aria-label="Editions" class="edition-nav">
+  <ul>
+    {% if i > 1 %}<li>Previous: {{ edition_link(held[i - 1]) }}</li>{% endif %}
+    {% if i + 1 < held|length %}<li>Next: {{ edition_link(held[i + 1]) }}</li>{% endif %}
+    <li><a href="#editions">All editions</a></li>
+  </ul>
+</nav>
+{% endif %}
 
 {% if not changes.comparable and changes.reason == "not-ingested" %}
 <p class="lede">This edition has not been ingested, so it cannot be compared with the one before it.</p>
@@ -51,10 +67,22 @@
   {% if changes.wide_edits %}<div class="stat"><span class="stat-number">{{ changes.wide_edits|length|commas }}</span><span class="stat-label">register-wide edit{{ "s" if changes.wide_edits|length != 1 }}</span></div>{% endif %}
 </div>
 
+{% set tables = ["added-table", "amended-table", "removed-table"] %}
+{% for w in changes.wide_edits %}{% set _ = tables.append("register-wide-" ~ loop.index) %}{% endfor %}
+<form class="filters" data-filter-form data-target="{{ tables|join(' ') }}" role="search" aria-label="Search this month's changes">
+  <div class="field">
+    <label for="q">Search this month's changes</label>
+    <input type="search" id="q" data-filter-text autocomplete="off" aria-describedby="q-hint" placeholder="e.g. University of Oxford, DARS-NIC-12345">
+    <p class="hint" id="q-hint">Searches the title, reference and organisation of each change, and what an amendment changed.</p>
+  </div>
+</form>
+{% set change_count = changes.added|length + changes.amended|length + changes.removed|length + changes.wide_edits|sum(attribute="versions", start=[])|length %}
+<p class="result-count" role="status" data-filter-count>Showing all {{ change_count|commas }} changes.</p>
+
 <h2 id="added">Added ({{ changes.added|length|commas }})</h2>
 {% if changes.added %}
 <p>Agreement versions that appear in this edition but not the last. A "new version of an existing agreement" is usually a renewal or amendment of something already in the register.</p>
-{{ rows(changes.added, show_kind=true) }}
+{{ rows(changes.added, "added-table", show_kind=true) }}
 {% else %}<p class="empty">Nothing added.</p>{% endif %}
 
 <h2 id="amended">Amended ({{ changes.amended|length|commas }})</h2>
@@ -64,7 +92,7 @@
 {% if field_tally %}
 <p class="hint">Changes here are counted only where the wording itself moved. An edition that reformats text — different quote characters, spacing or capitalisation — no longer counts as an amendment.</p>
 {% endif %}
-{{ rows(changes.amended, show_fields=true) }}
+{{ rows(changes.amended, "amended-table", show_fields=true) }}
 {% else %}<p class="empty">Nothing amended.</p>{% endif %}
 
 {% if changes.wide_edits %}
@@ -75,7 +103,7 @@
   <p><strong>{{ wide_edit(w.edits) }}</strong></p>
   <p>Made to {{ w.versions|length|commas }} agreement version{{ "s" if w.versions|length != 1 }} across {{ w.agreements|commas }} agreement{{ "s" if w.agreements != 1 }}. The register does not say why.</p>
   <details class="prose-block"><summary>Show the agreement versions</summary>
-  {{ rows(w.versions) }}
+  {{ rows(w.versions, "register-wide-" ~ loop.index) }}
   </details>
 </div>
 {% endfor %}
@@ -84,11 +112,11 @@
 <h2 id="removed">No longer listed ({{ changes.removed|length|commas }})</h2>
 {% if changes.removed %}
 <p>Present in the previous edition and absent from this one. This usually means an expired agreement has been retired from the published register rather than anything being withdrawn. An agreement that has left entirely keeps its page here, marked as no longer in the register.</p>
-{{ rows(changes.removed) }}
+{{ rows(changes.removed, "removed-table") }}
 {% else %}<p class="empty">Nothing removed.</p>{% endif %}
 {% endif %}
 
-<h2>Editions processed</h2>
+<h2 id="editions">Editions processed</h2>
 <p class="hint">Every edition below has its own "what changed" page against the one before it — not just the latest.</p>
 <ul class="plain">
   {% for edition in meta.editions %}
@@ -108,3 +136,4 @@
 <p class="hint">Not held: {{ meta.missing_editions|map("edition")|join(", ") }}. The workbook for {{ "that month has" if meta.missing_editions|length == 1 else "those months has" }} not been added, so the edition after {{ "it" if meta.missing_editions|length == 1 else "each" }} is compared with the one before the gap.</p>
 {% endif %}
 {% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

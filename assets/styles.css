@@ -96,6 +96,7 @@ summary:focus-visible {
 .site-title a { color: var(--ink); text-decoration: none; }
 .site-title a:hover { text-decoration: underline; }
 .site-header nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+.site-header nav a[aria-current] { color: var(--ink); font-weight: 700; text-decoration-thickness: 3px; }
 
 .notice-bar { background: var(--bg-notice); border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
 .notice-bar p { margin: 0; padding: 0.75rem 0; }
@@ -115,6 +116,11 @@ p, li { max-width: 68ch; }
 
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0 0 1rem; padding: 0; font-size: 0.9375rem; }
 .breadcrumb li + li::before { content: "›"; margin-right: 0.5rem; color: var(--ink-muted); }
+
+.contents { border-left: 4px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1.5rem 0; }
+.contents-title { font-size: 1rem; margin: 0 0 0.25rem; }
+.contents ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+.edition-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; list-style: none; margin: 0 0 1rem; padding: 0; }
 
 /* Stats and cards --------------------------------------------------------- */
 

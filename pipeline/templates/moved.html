@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block title %}{{ name|org }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ name|org }}'s agreements are listed on the page for {{ target_name|org }}.{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ meta.site_url }}{{ meta.base_path }}/organisations/{{ target }}/">
+{% endblock %}
 {% block head %}<meta http-equiv="refresh" content="0; url={{ meta.base_path }}/organisations/{{ target }}/">
-<link rel="canonical" href="{{ meta.site_url }}{{ meta.base_path }}/organisations/{{ target }}/">
 <meta name="robots" content="noindex">
 {% endblock %}
 {% block content %}

@@ -55,19 +55,26 @@
   }
 
   document.querySelectorAll("[data-filter-form]").forEach(function (form) {
-    var table = document.getElementById(form.dataset.target);
-    if (!table) return;
+    // One form can filter several tables: the changes page searches all of its
+    // tables at once. `data-target` lists their ids.
+    var tables = form.dataset.target.split(/\s+/)
+      .map(function (id) { return document.getElementById(id); })
+      .filter(Boolean);
+    if (!tables.length) return;
 
-    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
-    var wrapper = table.closest(".table-scroll") || table;
+    var rows = [];
+    tables.forEach(function (table) {
+      Array.prototype.forEach.call(table.tBodies[0].rows, function (row) { rows.push(row); });
+    });
     var count = form.parentNode.querySelector("[data-filter-count]");
     var text = form.querySelector("[data-filter-text]");
     var selects = Array.prototype.slice.call(form.querySelectorAll("[data-filter-select]"));
     var flags = Array.prototype.slice.call(form.querySelectorAll("[data-filter-flag]"));
-    var noun = (count && /\b(agreements|organisations|datasets)\b/.exec(count.textContent) || [, "rows"])[1];
+    var noun = (count && /\b(agreements|organisations|datasets|changes)\b/.exec(count.textContent) || [, "rows"])[1];
     var reset = form.querySelector("[data-filter-reset]");
-    // "Clear filters", or "Reset filters" where a filter is on by default.
-    var resetLabel = reset ? reset.textContent.trim().toLowerCase() : "clear filters";
+    // "Clear filters", or "Reset filters" where a filter is on by default. A
+    // form with only a search box has no button: the box clears itself.
+    var resetLabel = reset ? reset.textContent.trim().toLowerCase() : "";
     var total = rows.length;
     var timer;
     // Where this table's word index is, if it has one. Files are fetched when a
@@ -165,13 +172,19 @@
 
       if (count) {
         count.textContent = shown === 0
-          ? "No " + noun + " match. Try fewer or shorter search words, or " + resetLabel.replace(" filters", " the filters") + "."
+          ? "No " + noun + " match. Try fewer or shorter search words" + (resetLabel ? ", or " + resetLabel.replace(" filters", " the filters") : "") + "."
           : shown === total
           ? "Showing all " + total.toLocaleString("en-GB") + " " + noun + "."
           : "Showing " + shown.toLocaleString("en-GB") + " of " + total.toLocaleString("en-GB") + " " + noun + ".";
       }
-      // An empty table is only a row of headings, so it goes while nothing matches.
-      wrapper.hidden = shown === 0;
+      // An empty table is only a row of headings, so it goes while nothing
+      // matches. A table folded away that a search finds rows in is unfolded.
+      tables.forEach(function (table) {
+        var visible = Array.prototype.some.call(table.tBodies[0].rows, function (row) { return !row.hidden; });
+        (table.closest(".table-scroll") || table).hidden = !visible;
+        var folded = table.closest("details");
+        if (folded && visible && terms.length) folded.open = true;
+      });
 
       if (text) setParam("q", text.value.trim());
       selects.forEach(function (select) { setParam(select.dataset.key, select.value); });
