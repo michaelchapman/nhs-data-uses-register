@@ -19,6 +19,7 @@ import json
 import re
 from pathlib import Path
 
+from . import sources
 from .names import display_name
 
 # The text a search looks through: what the agreements table already searched,
@@ -135,24 +136,27 @@ def write_index(agreements: list[dict], directory: Path) -> int:
 def names(organisations: list[dict], datasets: list[dict], dataset_groups: list[dict]) -> dict:
     """The organisation and dataset names a search is also matched against.
 
-    Each entry is `[name, slug, agreements, other names, controller of, gone]`,
+    Each entry is `[name, slug, agreements, other names, controller of, last listed]`,
     busiest first. Other names are the spellings merged onto the page, so
     "Addenbrooke's Hospital" finds Cambridge University Hospitals. `agreements`
     counts those the organisation applied for; `controller of` those naming it
-    only as a data controller, which is all some organisations have. `gone` is
-    1 for a page no longer in the register, whose agreements are not counted.
+    only as a data controller, which is all some organisations have. `last
+    listed` is, for a page no longer in the register, the last edition that
+    named it ("January 2023"), and empty otherwise; such a page's agreements
+    are not counted, and it comes last.
     """
     def entries(pages: list[dict], others) -> list[list]:
         rows = []
         for page in pages:
             name = display_name(page["name"])
             other = sorted({display_name(n) for n in others(page)} - {name}, key=str.lower)
-            gone = bool(page.get("archived"))
+            gone = page.get("archived")
             rows.append([
                 name, page["slug"], 0 if gone else page["agreement_count"], other,
-                0 if gone else len(page.get("controller_agreements") or []), int(gone),
+                0 if gone else len(page.get("controller_agreements") or []),
+                sources.edition_label(gone["last_edition"]) if gone else "",
             ])
-        return sorted(rows, key=lambda row: (row[5], -row[2], -row[4], row[0].lower()))
+        return sorted(rows, key=lambda row: (bool(row[5]), -row[2], -row[4], row[0].lower()))
 
     variants: dict[str, list[str]] = {}
     for group in dataset_groups:

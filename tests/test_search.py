@@ -134,14 +134,14 @@ class Names(unittest.TestCase):
         groups = [{"canonical": "MSDS v1.5", "variants": ["Maternity Services Data Set v1.5"]}]
         names = search.names(organisations, datasets, groups)
         self.assertEqual(names["organisations"], [
-            ["Cambridge University Hospitals NHS Foundation Trust", "cuh", 9, ["Addenbrooke's Hospital"], 0, 0],
-            ["Small Trust", "small-trust", 1, [], 0, 0],
+            ["Cambridge University Hospitals NHS Foundation Trust", "cuh", 9, ["Addenbrooke's Hospital"], 0, ""],
+            ["Small Trust", "small-trust", 1, [], 0, ""],
             # Still in the register, but only as a data controller.
-            ["Controller Ltd", "controller-ltd", 0, [], 1, 0],
+            ["Controller Ltd", "controller-ltd", 0, [], 1, ""],
             # No longer in the register: none of its agreements is counted.
-            ["Gone Ltd", "gone-ltd", 0, [], 0, 1],
+            ["Gone Ltd", "gone-ltd", 0, [], 0, "January 2023"],
         ])
-        self.assertEqual(names["datasets"], [["MSDS v1.5", "msds-v1-5", 3, ["Maternity Services Data Set v1.5"], 0, 0]])
+        self.assertEqual(names["datasets"], [["MSDS v1.5", "msds-v1-5", 3, ["Maternity Services Data Set v1.5"], 0, ""]])
 
     def test_the_build_writes_names_beside_the_word_index(self):
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:

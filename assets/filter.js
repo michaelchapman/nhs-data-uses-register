@@ -67,8 +67,8 @@
 
   // Organisations and datasets whose names match a search, shown above the
   // agreements it found (pipeline/search.py, `names`). Each entry is
-  // [name, slug, agreements, other names, controller of, gone]; a match on
-  // another name says which.
+  // [name, slug, agreements, other names, controller of, last listed]; a match
+  // on another name says which.
   function nameMatches(box, names, value) {
     var terms = searchWords(value);
     while (box.firstChild) box.removeChild(box.firstChild);
@@ -98,7 +98,7 @@
         line.appendChild(link);
         var notes = [];
         if (match[1]) notes.push("recorded as " + match[1]);
-        if (entry[5]) notes.push("no longer in the register");
+        if (entry[5]) notes.push("no longer in the register, last listed " + entry[5]);
         else if (entry[2]) notes.push(entry[2].toLocaleString("en-GB") + (entry[2] === 1 ? " agreement" : " agreements"));
         else if (entry[4]) notes.push("data controller on " + entry[4].toLocaleString("en-GB") + (entry[4] === 1 ? " agreement" : " agreements"));
         if (notes.length) line.appendChild(document.createTextNode(" (" + notes.join(", ") + ")"));
@@ -184,6 +184,32 @@
 
     form.addEventListener("submit", function (event) { event.preventDefault(); });
 
+    // Agreements no longer in the register, listed apart below the table. A
+    // search looks through them too, with a count of their own, so the main
+    // count still means agreements in the register. Only the search applies:
+    // the other filters describe agreements in the register.
+    var archivedTable = document.getElementById("archived-table");
+    var archivedCount = document.querySelector("[data-archived-count]");
+    function filterArchived(value) {
+      if (!archivedTable || !text) return;
+      var terms = searchWords(value);
+      var archivedRows = Array.prototype.slice.call(archivedTable.tBodies[0].rows);
+      var shown = 0;
+      archivedRows.forEach(function (row) {
+        var match = !terms.length || matchesAll(terms, row.dataset.search || row.textContent);
+        row.hidden = !match;
+        if (match) shown++;
+      });
+      (archivedTable.closest(".table-scroll") || archivedTable).hidden = shown === 0;
+      if (archivedCount) {
+        archivedCount.hidden = !terms.length;
+        var total = archivedRows.length;
+        archivedCount.textContent = shown === 0
+          ? "None of these " + total.toLocaleString("en-GB") + " matches the search."
+          : shown + " of " + total.toLocaleString("en-GB") + " match the search.";
+      }
+    }
+
     // Where a search here also looks up organisation and dataset names. The
     // file is fetched once, when the first search needs it.
     var namesBox = form.parentNode.querySelector("[data-name-matches]");
@@ -265,6 +291,7 @@
       });
 
       showNames();
+      filterArchived(text ? text.value : "");
       if (text) setParam("q", text.value.trim());
       selects.forEach(function (select) { setParam(select.dataset.key, select.value); });
       flags.forEach(function (flag) { setParam(flag.dataset.key, flagParam(flag)); });

@@ -613,6 +613,12 @@ class ArchivedAgreements(unittest.TestCase):
     def test_the_changes_page_links_to_it(self):
         self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', self.read("changes"))
 
+    def test_a_search_can_look_through_the_agreements_no_longer_listed(self):
+        listing = self.read("agreements")
+        self.assertIn('<table class="data-table" id="archived-table">', listing)
+        self.assertIn('<tr data-search="Ambulance study DARS-NIC-2-BBBBB', listing)
+        self.assertIn("data-archived-count hidden", listing)
+
     def test_its_citation_names_the_last_edition_that_listed_it(self):
         page = self.read("agreements/dars-nic-2-bbbbb")
         self.assertIn("NHS England (2023) <cite>Data Uses Register</cite>, January 2023 edition, "
