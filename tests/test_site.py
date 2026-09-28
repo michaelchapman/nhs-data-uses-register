@@ -109,6 +109,18 @@ class BuiltSite(unittest.TestCase):
         self.assertIn('<form class="home-search" action="/repo/agreements/"', home)
         self.assertNotIn('class="site-search"', listing)
 
+    def test_an_organisation_named_only_as_a_controller_says_so(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "organisations" / "other-trust" / "index.html").read_text()
+        self.assertIn("Named in the register only as a data controller", page)
+        self.assertIn("<h2>Named as a data controller</h2>", page)
+        # No empty table of its own agreements, and an end date from those naming it.
+        self.assertNotIn('id="organisation-agreements"', page)
+        self.assertNotIn("Organisation type not stated", page)
+        self.assertRegex(page, r"<dt>Latest end date</dt><dd>\d+ \w+ \d{4}</dd>")
+
 
 class LinkCheck(unittest.TestCase):
     def write(self, out: Path, name: str, html: str) -> None:

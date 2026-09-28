@@ -662,7 +662,11 @@ def _group_organisations(agreements: list[dict], organisation_lineage=None) -> l
         entry["dataset_names"] = sorted(
             {aliases.resolve(n, dataset_alias_map) for a in all_agreements for n in a["dataset_names"]}
         )
-        entry["latest_end"] = max((a["coverage_end"] for a in entry["agreements"]), default="")
+        # An organisation named only as a data controller has no agreements of
+        # its own, so its latest end date is that of the agreements naming it.
+        entry["latest_end"] = max(
+            (a["coverage_end"] for a in entry["agreements"] or entry["controller_agreements"]), default=""
+        )
         entry["commercial"] = any(a["commercial"] == "Yes" for a in entry["agreements"])
         # Codes are shown only where they explain lineage, which the sub-ICB
         # location list does; here they would only make one name look like two.
