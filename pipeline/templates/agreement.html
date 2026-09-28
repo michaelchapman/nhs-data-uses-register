@@ -177,6 +177,19 @@
 {% if v.sublicensing == "Yes" %}
 <p class="notice">This agreement permits sublicensing: the applicant may pass data on to others. Anything passed on is not recorded in this register.</p>
 {% endif %}
+{% if agreement.opt_outs and agreement.opt_outs.files %}
+{% set o = agreement.opt_outs %}
+<p data-opt-outs="{{ o.state }}">
+  {%- if o.files == 1 -%}
+  Patient opt-outs were {{ "" if o.applied else "not " }}applied to the one file released under this agreement.
+  {%- elif o.state == "all" -%}
+  Patient opt-outs were applied to all {{ o.files|commas }} files released under this agreement, across every version.
+  {%- elif o.state == "none" -%}
+  Patient opt-outs were not applied to any of the {{ o.files|commas }} files released under this agreement, across every version.
+  {%- else -%}
+  Patient opt-outs were applied to {{ o.applied|commas }} of the {{ o.files|commas }} files released under this agreement, across every version.
+  {%- endif %} <a href="{{ meta.base_path }}/about/#opt-outs">About opt-outs</a></p>
+{% endif %}
 {% if v.releases %}
 <p>Files released against version {{ v.version }} of this agreement, summarised by dataset.</p>
 <div class="table-scroll">

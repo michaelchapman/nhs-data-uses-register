@@ -210,6 +210,15 @@ when a re-parse is needed, which is rare.
 
 ## 7. Considered and not planned
 
+- **Filters on sensitivity, legal basis for provision and type of data** (#23).
+  Deferred, not rejected: #23 built the two questions that mattered most,
+  confidential data and patient opt-outs (`pipeline/privacy.py`). Legal basis
+  records NHS England's power to release, and 1,887 of 1,950 agreements cite
+  the Health and Social Care Act 2012 s261, so a filter on it separates almost
+  nothing; its consent and s251 values would also sit beside the confidential
+  data filter's, meaning something different. If it is added, group it by
+  statute and tidy the dash and quote variants first.
+
 - **CSV extracts of the register.** Published until 2026-09-27, then removed.
   They were one edition's three sheets as CSV, which the register's own
   workbook already provides, and carried none of what the site adds: merged

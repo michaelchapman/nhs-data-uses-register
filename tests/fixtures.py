@@ -49,7 +49,7 @@ def _agreement(reference, title, organisation, controllers, start, end):
 
 
 def _dataset(reference, name):
-    return [reference, name, "Identifiable", "Sensitive", "One-off", "Consent", "Yes"]
+    return [reference, name, "Identifiable", "Sensitive", "One-off", "Consent", "Section 251 NHS Act 2006"]
 
 
 def workbook_bytes() -> bytes:

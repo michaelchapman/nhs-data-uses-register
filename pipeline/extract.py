@@ -147,18 +147,20 @@ def summarise_releases(released: list[dict], datasets: list[dict]) -> list[dict]
 
     `opt_outs_applied` is `"Mixed"` where the register gave both answers for one
     dataset, which it does for 130 of 8,449 pairs. Reporting whichever row came
-    first, as this used to, hid that.
+    first, as this used to, hid that. `opt_out_files` counts the files under
+    each answer, which is what the opt-out filter reads (see `privacy`).
     """
     expected = _expected_attributes(datasets)
     grouped: dict[tuple, dict] = {}
     for entry in released:
         key = (entry.get("channel", FILE_RELEASE), entry["dataset"])
         summary = grouped.setdefault(
-            key, {"files": 0, "months": {}, "opt_outs": set(), "attributes_differ": False}
+            key, {"files": 0, "months": {}, "opt_outs": {}, "attributes_differ": False}
         )
         summary["files"] += 1
         summary["months"][entry["month"]] = summary["months"].get(entry["month"], 0) + 1
-        summary["opt_outs"].add(entry["opt_outs_applied"])
+        answer = entry["opt_outs_applied"]
+        summary["opt_outs"][answer] = summary["opt_outs"].get(answer, 0) + 1
         if _attribute_key(entry.get("attributes")) not in expected.get(entry["dataset"], set()):
             summary["attributes_differ"] = True
 
@@ -174,6 +176,7 @@ def summarise_releases(released: list[dict], datasets: list[dict]) -> list[dict]
             "last_month": dated[-1] if dated else "",
             "months": {month: summary["months"][month] for month in sorted(summary["months"])},
             "opt_outs_applied": opt_outs[0] if len(opt_outs) == 1 else ("Mixed" if opt_outs else ""),
+            "opt_out_files": {answer: summary["opt_outs"][answer] for answer in sorted(summary["opt_outs"])},
             "attributes_differ": summary["attributes_differ"],
         })
     summaries.sort(key=lambda r: (-r["files"], r["dataset"]))
