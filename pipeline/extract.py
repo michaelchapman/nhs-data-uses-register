@@ -282,13 +282,21 @@ def split_list(value, known: tuple[str, ...] = ()) -> list[str]:
     return [p.strip() for p in parts if p.strip()]
 
 
+# Names with a comma that the register uses only for data controllers, never
+# for an applicant, so Applicant Organisation can't vouch for them. Without
+# this, "THE MINISTRY OF HOUSING, COMMUNITIES AND LOCAL GOVERNMENT" became two
+# organisations, one of them "COMMUNITIES AND LOCAL GOVERNMENT".
+CONTROLLER_COMMA_NAMES = ("Ministry of Housing, Communities and Local Government",)
+
+
 def known_organisation_names(names) -> tuple[str, ...]:
     """The comma-bearing names to protect, longest first.
 
     Only names with a comma matter: everything else splits the same either
     way, and checking them all for every controller string would be waste.
     """
-    return tuple(sorted({n for n in names if n and "," in n}, key=len, reverse=True))
+    names = {n for n in names if n and "," in n} | set(CONTROLLER_COMMA_NAMES)
+    return tuple(sorted(names, key=len, reverse=True))
 
 
 def resplit_list(items: list[str], known: tuple[str, ...] = ()) -> list[str]:
@@ -299,7 +307,19 @@ def resplit_list(items: list[str], known: tuple[str, ...] = ()) -> list[str]:
     re-joining and re-splitting the whole string isn't needed — splitting
     each existing item again is equivalent and cheaper.
     """
-    return [part for item in items for part in split_list(item, known)]
+    parts = [part for item in items for part in split_list(item, known)]
+    # A known name the store holds already split at its comma, because it was
+    # stored before the name was known: put the halves back together.
+    joined: list[str] = []
+    for part in parts:
+        if joined and known:
+            candidate = f"{joined[-1]}, {part}"
+            boundary = len(joined[-1])
+            if any(s < boundary < e for s, e in protected_spans(candidate, known)):
+                joined[-1] = candidate
+                continue
+        joined.append(part)
+    return joined
 
 
 def _read_sheet(workbook, name: str) -> list[dict]:
