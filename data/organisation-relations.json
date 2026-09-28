@@ -1,0 +1,82 @@
+{
+ "_comment": "Reviewed by a person. Organisations that are related but are not the same organisation, so are not merged in organisation-aliases.json: companies in one group, bodies hosted by another organisation, bodies run jointly by several, and organisations that merged into another. Each organisation page named here links to the others. Organisations are named by page slug. See pipeline/relations.py and docs/organisation-names.md.",
+ "groups": [
+  {
+   "name": "IQVIA",
+   "members": ["iqvia-ltd", "iqvia-solutions-uk-limited", "iqvia-technology-services-ltd", "iqvia-world-publications-ltd"],
+   "reason": "Companies of the IQVIA group, each a separate legal entity; the register names IQVIA World Publications as a data controller on an IQVIA Solutions UK agreement."
+  },
+  {
+   "name": "AstraZeneca",
+   "members": ["astrazeneca-uk-limited", "astrazeneca-ab"],
+   "reason": "AstraZeneca UK Limited and AstraZeneca AB (Sweden) are companies of the AstraZeneca group."
+  },
+  {
+   "name": "Adelphi",
+   "members": ["adelphi-group-limited", "adelphi-real-world"],
+   "reason": "Adelphi Real World is a company of Adelphi Group."
+  },
+  {
+   "name": "GRAIL",
+   "members": ["grail-llc", "grail-bio-uk-ltd"],
+   "reason": "Grail Bio UK Ltd is the UK company of GRAIL, LLC, which the register names as a data controller."
+  },
+  {
+   "name": "Methods",
+   "members": ["methods-business-and-digital-technology-limited", "methods-analytics-ltd"],
+   "reason": "Methods Analytics Ltd and Methods Business and Digital Technology Limited are companies of the Methods group."
+  }
+ ],
+ "hosted": [
+  {
+   "body": "rm-partners",
+   "host": "the-royal-marsden-nhs-foundation-trust",
+   "reason": "RM Partners, the West London cancer alliance, is hosted by The Royal Marsden. Not merged, by decision on 2026-09-27: a hosted body is not part of its host."
+  },
+  {
+   "body": "health-innovation-network-south-london",
+   "host": "guy-s-and-st-thomas-nhs-foundation-trust",
+   "reason": "Health Innovation Network South London is hosted by Guy's and St Thomas'. Not merged, by decision on 2026-09-27."
+  },
+  {
+   "body": "national-institute-for-health-research-nihr-bioresource",
+   "host": "cambridge-university-hospitals-nhs-foundation-trust",
+   "reason": "The NIHR BioResource is hosted by Cambridge University Hospitals. Not merged, by decision on 2026-09-27."
+  },
+  {
+   "body": "regional-drug-therapeutic-centre",
+   "host": "the-newcastle-upon-tyne-hospitals-nhs-foundation-trust",
+   "reason": "The Regional Drug & Therapeutic Centre is hosted by The Newcastle upon Tyne Hospitals. Not merged, by decision on 2026-09-27."
+  },
+  {
+   "body": "northern-ireland-clinical-trials-unit",
+   "host": "belfast-health-and-social-care-trust",
+   "reason": "The Northern Ireland Clinical Trials Unit is hosted by the Belfast Health and Social Care Trust. Not merged, by decision on 2026-09-27."
+  },
+  {
+   "body": "national-institute-for-health-research",
+   "host": "department-of-health-and-social-care",
+   "reason": "The National Institute for Health Research is funded by the Department of Health and Social Care. Not merged, by decision on 2026-09-27."
+  }
+ ],
+ "joint": [
+  {
+   "body": "hull-york-medical-school",
+   "parents": ["university-of-hull", "university-of-york"],
+   "reason": "Hull York Medical School is run jointly by the universities of Hull and York, so it is not merged onto either."
+  },
+  {
+   "body": "cambridge-centre-for-health-services-research",
+   "parents": ["university-of-cambridge", "rand-europe-community-interest-company"],
+   "reason": "The Cambridge Centre for Health Services Research is a collaboration between the University of Cambridge and RAND Europe, so it is not merged onto either."
+  }
+ ],
+ "merged": [
+  {
+   "from": "st-george-s-hospital-medical-school",
+   "into": "city-st-george-s-university-of-london",
+   "year": "2024",
+   "reason": "St George's Hospital Medical School is the legal name of St George's, University of London, which merged with City, University of London in 2024 to form City St George's. Its agreements were made before then, so they stay on its own page."
+  }
+ ]
+}

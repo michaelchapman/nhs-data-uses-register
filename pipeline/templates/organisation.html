@@ -12,7 +12,14 @@
 </nav>
 
 <h1>{{ organisation.name|org }}</h1>
+{# Named only as a data controller: never an applicant, so the register gives
+   it no organisation type and it holds no agreements of its own. #}
+{% set controller_only = not organisation.agreements and organisation.controller_agreements %}
+{% if controller_only %}
+<p class="lede">Named in the register only as a data controller, on agreements other organisations applied for.</p>
+{% else %}
 <p class="lede">{{ organisation.type or "Organisation type not stated" }}</p>
+{% endif %}
 {% if organisation.archived %}
 <p class="notice"><strong>No longer in the register.</strong> Every agreement naming {{ organisation.name|org }} has left the register; the last was published in the {{ organisation.archived.last_edition|edition }} edition. This page shows those agreements as last published, and none is counted in this site's figures.</p>
 {% endif %}
@@ -26,18 +33,40 @@
 {%- if organisation.reviewed_merge %} These spellings have been reviewed and merged onto this page — see <a href="{{ meta.repo_url }}/blob/main/data/organisation-aliases.json">data/organisation-aliases.json</a> in the repository.{% endif %}</p>
 {% endif %}
 {% if organisation.lineage %}{% include "_lineage.html" %}{% endif %}
+{% if related %}
+<div class="related">
+  <h2>Related organisations</h2>
+  <ul class="plain">
+    {% for line in related %}
+    {# A name ending in a full stop ("Ltd.") takes the place of the line's own. #}
+    {% set last = namespace(name="") %}
+    <li>{% for kind, value in line %}{% if kind == "org" %}{% set last.name = org_names.get(value, value)|org %}{% if value in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ value }}/">{{ last.name }}</a>{% else %}{{ last.name }}{% endif %}{% elif not (value == "." and last.name.endswith(".")) %}{{ value }}{% endif %}{% endfor %}</li>
+    {% endfor %}
+  </ul>
+  <p class="hint">Separate organisations, so their agreements are listed on their own pages. Why each is linked is in <a href="{{ meta.repo_url }}/blob/main/data/organisation-relations.json">data/organisation-relations.json</a>.</p>
+</div>
+{% endif %}
 
 <dl class="key-facts">
+  {% if controller_only %}
+  {% if organisation.sector != "Not stated" %}<div><dt>Sector</dt><dd>{{ organisation.sector }}</dd></div>{% endif %}
+  <div><dt>Agreements naming it as data controller</dt><dd>{{ organisation.controller_agreements|length|commas }}</dd></div>
+  <div><dt>In term in {{ meta.edition|edition }}</dt><dd>{{ organisation.controller_agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length|commas }}</dd></div>
+  <div><dt>Distinct datasets</dt><dd>{{ organisation.dataset_names|length }}</dd></div>
+  <div><dt>Latest end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
+  {% else %}
   <div><dt>Sector</dt><dd>{{ organisation.sector }}</dd></div>
   <div><dt>Agreements as applicant</dt><dd>{{ organisation.agreement_count|commas }}</dd></div>
   <div><dt>In term in {{ meta.edition|edition }}</dt><dd>{{ organisation.agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length|commas }}</dd></div>
   <div><dt>Distinct datasets</dt><dd>{{ organisation.dataset_names|length }}</dd></div>
   <div><dt>Files released</dt><dd>{{ organisation.files_released|commas }}</dd></div>
   <div><dt>Latest agreement end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
+  {% endif %}
 </dl>
 {% if organisation.sector_reason %}
 <p class="hint">Sector set by hand: {{ organisation.sector_reason }} See <a href="{{ meta.repo_url }}/blob/main/data/organisation-sectors.json">data/organisation-sectors.json</a> in the repository.</p>
 {% endif %}
+{% if not controller_only %}
 {% include "_release-scope.html" %}
 
 <h2>Agreements</h2>
@@ -83,9 +112,10 @@
   </tbody>
 </table>
 </div>
+{% endif %}
 
 {% if organisation.controller_agreements %}
-<h2>Also listed as a data controller</h2>
+<h2>{{ "Named as a data controller" if controller_only else "Also listed as a data controller" }}</h2>
 <p class="hint">Agreements where {{ organisation.name|org }} is named as a data controller rather than the applicant. This is matched from the free-text controller field on each agreement, so a controller recorded under a different spelling of the name won't appear here.</p>
 <div class="table-scroll">
 <table class="data-table">
@@ -114,5 +144,8 @@
   <li><a href="{{ meta.base_path }}/datasets/{{ name|dataset_slug }}/">{{ name }}</a></li>
   {% endfor %}
 </ul>
+
+{% from "_cite.html" import cite with context %}
+{{ cite("agreements naming " ~ (organisation.name|org), organisation.archived.last_edition if organisation.archived else meta.edition) }}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

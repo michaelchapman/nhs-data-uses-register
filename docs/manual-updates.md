@@ -68,7 +68,11 @@ Budget about two minutes a month, plus about a minute for the parse.
    It lists any type with no sector and any correction that no longer names an
    organisation, then each sector's totals. Add a new type to a sector in
    `data/organisation-sectors.json`, and correct an organisation there if its
-   type misplaces it.
+   type misplaces it. Then check the related organisations still have pages:
+
+   ```bash
+   .venv/bin/python -m pipeline.relations
+   ```
 
 5. **Check the numbers look sane,** then commit and push:
 
@@ -123,6 +127,7 @@ is the point of it: most changes to the site's answers are a rebuild.
 | Record which NHS organisation a name is, or refresh ODS | `python -m pipeline.odscheck --apply`, then `python -m pipeline.ods` | No |
 | Leave out a record that is not data sharing (a test record, a spreadsheet note) | Add its base reference and the reason to `data/excluded-agreements.json` | No |
 | Put an organisation type in a sector, or place an organisation in a different sector | Edit `data/organisation-sectors.json`, then `python -m pipeline.sectors` | No |
+| Link related organisations that are not one organisation (a company group, a hosted body) | Edit `data/organisation-relations.json`, then `python -m pipeline.relations` | No |
 | Merge two organisation or dataset names | Edit `data/organisation-aliases.json` or `data/dataset-aliases.json` (see [organisation-names.md](organisation-names.md)) | No |
 | Change what counts as an amendment | Edit `changes._material` or `compare.compare_versions` | No |
 | Change how names are displayed | Edit `pipeline/names.py` | No |

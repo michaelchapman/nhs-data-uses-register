@@ -306,6 +306,28 @@ same agreements from October 2021 to May 2022, goes to Guy's and St Thomas'.
 When the register went back to "Royal Brompton Hospital" in June 2022, that is
 still reported as a change of applicant, as the register made it.
 
+### Related, not merged
+
+Organisations that belong together without being one organisation are linked
+instead of merged, in `data/organisation-relations.json`, by page slug:
+
+- **groups**: companies of one group, such as the four IQVIA companies;
+- **hosted**: a body and the organisation hosting it, such as RM Partners and
+  The Royal Marsden, the hosted bodies decided on above;
+- **joint**: a body run by more than one organisation, such as Hull York
+  Medical School;
+- **merged**: an organisation that merged into another after its agreements
+  were made, such as St George's Hospital Medical School into City St George's.
+
+Each page named gets a "Related organisations" line linking the others, and
+their agreements stay on their own pages. Every entry gives its reason. Nothing
+is suggested automatically: names that share a word are more often neighbours
+than relations. After an edition, check every slug still has a page:
+
+```bash
+.venv/bin/python -m pipeline.relations
+```
+
 ## Waiting for a decision
 
 Name changes seen in the register that might be one company renamed, or one
