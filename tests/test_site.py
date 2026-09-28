@@ -39,6 +39,30 @@ class BuiltSite(unittest.TestCase):
         self.assertIn(OLD_NAME, page)
         self.assertNotIn("/datasets/maternity-services-data-set-v1-5/", page)
 
+    def test_pages_name_their_own_address_and_section(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out, "/repo")
+            index = (out / "agreements" / "index.html").read_text()
+            agreement = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+            not_found = (out / "404.html").read_text()
+        self.assertIn('<link rel="canonical" href="https://example.test/repo/agreements/">', index)
+        self.assertIn('<link rel="canonical" href="https://example.test/repo/agreements/dars-nic-1-aaaaa/">', agreement)
+        self.assertIn('<meta property="og:title"', agreement)
+        self.assertIn('href="/repo/agreements/" aria-current="page"', index)
+        self.assertIn('href="/repo/agreements/" aria-current="true"', agreement)
+        self.assertNotIn('rel="canonical"', not_found)
+        self.assertNotIn("aria-current", not_found)
+
+    def test_released_datasets_link_to_their_pages(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+        releases = page[page.index('id="releases"'):page.index('id="history"')]
+        self.assertIn('href="/datasets/', releases)
+        self.assertIn('<nav aria-label="On this page"', page)
+
 
 class LinkCheck(unittest.TestCase):
     def write(self, out: Path, name: str, html: str) -> None:

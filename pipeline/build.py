@@ -234,7 +234,13 @@ def build(
         # page overrides `meta` to show its own edition, for instance), so merge
         # rather than spread both as separate keyword arguments — spreading both
         # would raise on any key they share.
-        _write(out, path, env.get_template(template).render(**{**context, **kwargs}))
+        # The page's own address, for its canonical link, and the section of the
+        # main menu it belongs to. The 404 page answers at every address, so it
+        # has neither.
+        page_path = None if path == "404.html" else "/" + path.removesuffix("index.html")
+        section = page_path.split("/")[1] if page_path else None
+        pages = {"page_path": page_path, "section": section}
+        _write(out, path, env.get_template(template).render(**{**context, **pages, **kwargs}))
 
     top_organisations = sorted(
         data["organisations"], key=lambda o: (-o["agreement_count"], o["name"].lower())

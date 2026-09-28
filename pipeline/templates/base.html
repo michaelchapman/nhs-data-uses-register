@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ meta.site_name }}{% endblock %}</title>
 <meta name="description" content="{% block description %}A readable, searchable view of the NHS England Data Uses Register: the organisations that hold data sharing agreements with NHS England, what for, and which datasets those agreements cover.{% endblock %}">
+{% if page_path %}
+{% block canonical %}<link rel="canonical" href="{{ meta.site_url }}{{ meta.base_path }}{{ page_path }}">
+{% endblock %}
+<meta property="og:url" content="{{ meta.site_url }}{{ meta.base_path }}{{ page_path }}">
+{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ meta.site_name }}">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="{{ meta.base_path }}/assets/styles.css">
 {% block head %}{% endblock %}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>&#128203;</text></svg>">
@@ -16,11 +26,11 @@
     <p class="site-title"><a href="{{ meta.base_path }}/">{{ meta.site_name }}</a></p>
     <nav aria-label="Main">
       <ul>
-        <li><a href="{{ meta.base_path }}/agreements/">Agreements</a></li>
-        <li><a href="{{ meta.base_path }}/organisations/">Organisations</a></li>
-        <li><a href="{{ meta.base_path }}/datasets/">Datasets</a></li>
-        <li><a href="{{ meta.base_path }}/changes/">What changed</a></li>
-        <li><a href="{{ meta.base_path }}/about/">About</a></li>
+        {# The section the page is in is marked: its own index as the current
+           page, and every page under it as the current section. #}
+        {% for slug, label in [("agreements", "Agreements"), ("organisations", "Organisations"), ("datasets", "Datasets"), ("changes", "What changed"), ("about", "About")] %}
+        <li><a href="{{ meta.base_path }}/{{ slug }}/"{% if section == slug %} aria-current="{{ 'page' if page_path == '/' ~ slug ~ '/' else 'true' }}"{% endif %}>{{ label }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </div>
