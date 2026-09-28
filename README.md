@@ -73,6 +73,8 @@ git add data/facts && git commit -m "Add the August 2026 edition"
 `.github/workflows/build.yml` then rebuilds and deploys on push to `main`, from
 committed data only. Because it never reaches outside the repository, it cannot
 fail the way the scheduled job did.
+`.github/workflows/ci.yml` runs the same tests, build and link check on every
+pull request, without deploying.
 
 One thing is committed: **`data/facts/<register>/`**, the text of every
 edition. Nothing derived is stored — what changed between editions, and the
