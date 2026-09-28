@@ -97,6 +97,13 @@ To preview before pushing:
 .venv/bin/python -m http.server 8000 --directory _site
 ```
 
+If the build stops with `privacy: unknown … value`, the edition has reworded
+the "Common Law Duty of Confidentiality" or "Patient Opt-Outs Applied" column.
+Read what the new wording means, then add it to `CONFIDENTIALITY` or
+`OPT_OUT_ANSWERS` in `pipeline/privacy.py`. The build stops rather than guess,
+because a guess would put agreements under the wrong filter option without
+anyone noticing.
+
 ## Backfilling the archive
 
 NHS England keeps previous editions on the

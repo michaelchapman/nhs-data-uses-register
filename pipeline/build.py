@@ -14,6 +14,7 @@ from . import compare
 from . import lineage
 from . import relations
 from . import ods
+from . import privacy
 from . import search
 from . import sectors
 from .names import display_name, strip_code
@@ -205,6 +206,9 @@ def build(
         print(f"sectors: {warning}")
     stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
     stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
+    # Confidential data and patient opt-outs, for the agreements list's filters.
+    privacy.assign(data["agreements"] + archived)
+    stats["privacy"] = privacy.counts(data["agreements"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
     # Related organisations, from data/organisation-relations.json.
     related_config = relations.load()

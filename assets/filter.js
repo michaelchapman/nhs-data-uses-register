@@ -253,7 +253,14 @@
 
         if (match) {
           match = selects.every(function (select) {
-            return !select.value || row.dataset[select.dataset.key] === select.value;
+            if (!select.value) return true;
+            var value = row.dataset[select.dataset.key] || "";
+            // A row can carry several values, space-separated, where one
+            // agreement fits more than one option (`data-filter-tokens`).
+            if (select.hasAttribute("data-filter-tokens")) {
+              return value.split(" ").indexOf(select.value) !== -1;
+            }
+            return value === select.value;
           });
         }
         if (match) {

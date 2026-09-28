@@ -134,6 +134,7 @@ pipeline/changes.py             what changed between editions, worked out from t
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site
 pipeline/orgcheck.py            finds organisation names that might be duplicates
+pipeline/privacy.py             confidential data and opt-outs, for the agreements list's filters
 pipeline/aliases.py             applies reviewed organisation and dataset merges
 pipeline/ods.py                 reads NHS organisation records from ODS into a snapshot
 pipeline/odscheck.py            finds the ODS code for each NHS name in the register
