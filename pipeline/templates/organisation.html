@@ -58,8 +58,8 @@
     {% if 0 < in_term_count < organisation.agreement_count %}<label><input type="checkbox" data-filter-flag data-key="active" value="yes"> In term in {{ meta.edition|edition }}</label>{% endif %}
     {% if 0 < commercial_count < organisation.agreement_count %}<label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Commercial purposes</label>{% endif %}
   </fieldset>
-  {% endif %}
   <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
+  {% endif %}
 </form>
 <p class="result-count" role="status" data-filter-count>Showing all {{ organisation.agreement_count|commas }} agreements.</p>
 {% endif %}
