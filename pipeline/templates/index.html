@@ -4,6 +4,15 @@
 
 <p class="lede">Every month NHS England publishes the Data Uses Register: a spreadsheet of the agreements under which organisations outside NHS England may use data it holds. This site turns that spreadsheet into pages you can read, search, link to and cite.</p>
 
+<form class="home-search" action="{{ meta.base_path }}/agreements/" method="get" role="search" aria-label="Search the register">
+  <label for="home-search">Search agreements, organisations and datasets</label>
+  <div class="home-search-row">
+    <input type="search" id="home-search" name="q" placeholder="e.g. cancer, University of Leeds, HES" autocomplete="off">
+    <input type="hidden" name="active" value="all">
+    <button type="submit">Search</button>
+  </div>
+</form>
+
 <div class="stat-grid">
   <div class="stat"><span class="stat-number">{{ stats.active_agreements|commas }}</span><span class="stat-label">data sharing agreements in term, of {{ stats.agreements|commas }} listed</span></div>
   <div class="stat"><span class="stat-number">{{ stats.organisations|commas }}</span><span class="stat-label">organisations</span></div>

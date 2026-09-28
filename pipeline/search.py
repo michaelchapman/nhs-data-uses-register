@@ -19,6 +19,8 @@ import json
 import re
 from pathlib import Path
 
+from .names import display_name
+
 # The text a search looks through: what the agreements table already searched,
 # plus the latest version's purpose text. Only the latest version, since that is
 # what the agreement's page shows; a match in superseded text couldn't be seen.
@@ -128,3 +130,38 @@ def write_index(agreements: list[dict], directory: Path) -> int:
             encoding="utf-8",
         )
     return len(shards)
+
+
+def names(organisations: list[dict], datasets: list[dict], dataset_groups: list[dict]) -> dict:
+    """The organisation and dataset names a search is also matched against.
+
+    Each entry is `[name, slug, agreements, other names]`, busiest first. Other
+    names are the spellings merged onto the page, so "Addenbrooke's Hospital"
+    finds Cambridge University Hospitals. A page no longer in the register has
+    no agreements counted, so it comes last.
+    """
+    def entries(pages: list[dict], others) -> list[list]:
+        rows = []
+        for page in pages:
+            name = display_name(page["name"])
+            other = sorted({display_name(n) for n in others(page)} - {name}, key=str.lower)
+            rows.append([name, page["slug"], 0 if page.get("archived") else page["agreement_count"], other])
+        return sorted(rows, key=lambda row: (-row[2], row[0].lower()))
+
+    variants: dict[str, list[str]] = {}
+    for group in dataset_groups:
+        variants.setdefault(group["canonical"], []).extend(group.get("variants", []))
+    return {
+        "organisations": entries(organisations, lambda o: o.get("known_as") or []),
+        "datasets": entries(datasets, lambda d: variants.get(d["name"], [])),
+    }
+
+
+def write_names(organisations: list[dict], datasets: list[dict], dataset_groups: list[dict], directory: Path) -> None:
+    """Write `names.json` beside the word index. No word starts with "names"
+    as a file name, since the word files are named by one character."""
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / "names.json").write_text(
+        json.dumps(names(organisations, datasets, dataset_groups), separators=(",", ":"), ensure_ascii=False),
+        encoding="utf-8",
+    )

@@ -27,7 +27,10 @@ kept in the URL, so a filtered view can be linked to.
 The agreements search also reads each agreement's purpose text, through a word
 index the build writes to `search/<edition>/` — one small file per first
 letter, fetched from the site itself only when someone searches. Without it,
-the search falls back to titles and names.
+the search falls back to titles and names. Every page has a search box that
+leads there, and a search also lists the organisations and datasets whose
+names match, from `search/<edition>/names.json`, including the other spellings
+merged onto each page.
 
 ## Running it locally
 

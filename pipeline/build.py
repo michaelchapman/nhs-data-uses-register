@@ -254,6 +254,13 @@ def build(
     # The word index the agreement searches fetch from. An agreement is numbered
     # by its place in the list, and every table row naming it carries the number.
     search.write_index(data["agreements"], out / "search" / meta["edition"])
+    # Organisation and dataset names, which the agreements search also shows.
+    search.write_names(
+        data["organisations"] + archive["organisations"],
+        data["datasets"] + archive["datasets"],
+        aliases.load_groups(aliases.DATASET_ALIASES_PATH),
+        out / "search" / meta["edition"],
+    )
     search_numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
     render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
            org_slugs=org_slugs, search_numbers=search_numbers)

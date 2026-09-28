@@ -33,6 +33,16 @@
         {% endfor %}
       </ul>
     </nav>
+    {# Every page but the agreements list, which has its own search box. It
+       searches all agreements, not only those in term, which the list opens on. #}
+    {% if page_path != "/agreements/" %}
+    <form class="site-search" action="{{ meta.base_path }}/agreements/" method="get" role="search" aria-label="Site">
+      <label for="site-search" class="visually-hidden">Search agreements, organisations and datasets</label>
+      <input type="search" id="site-search" name="q" placeholder="e.g. HES, UCL" autocomplete="off">
+      <input type="hidden" name="active" value="all">
+      <button type="submit">Search</button>
+    </form>
+    {% endif %}
   </div>
 </header>
 

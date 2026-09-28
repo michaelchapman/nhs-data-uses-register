@@ -95,6 +95,20 @@ class BuiltSite(unittest.TestCase):
         for page in (agreement, organisation, dataset):
             self.assertIn('<script src="/repo/assets/cite.js" defer></script>', page)
 
+    def test_every_page_but_the_agreements_list_searches_all_agreements(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out, "/repo")
+            home = (out / "index.html").read_text()
+            agreement = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+            listing = (out / "agreements" / "index.html").read_text()
+        for page in (home, agreement):
+            header = page[page.index('<header class="site-header">'):page.index("</header>")]
+            self.assertIn('<form class="site-search" action="/repo/agreements/" method="get"', header)
+            self.assertIn('<input type="hidden" name="active" value="all">', header)
+        self.assertIn('<form class="home-search" action="/repo/agreements/"', home)
+        self.assertNotIn('class="site-search"', listing)
+
 
 class LinkCheck(unittest.TestCase):
     def write(self, out: Path, name: str, html: str) -> None:

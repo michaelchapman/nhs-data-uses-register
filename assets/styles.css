@@ -97,6 +97,17 @@ summary:focus-visible {
 .site-title a:hover { text-decoration: underline; }
 .site-header nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
 .site-header nav a[aria-current] { color: var(--ink); font-weight: 700; text-decoration-thickness: 3px; }
+.site-search { display: flex; gap: 0.375rem; flex: 1 1 13rem; max-width: 22rem; margin-left: auto; }
+.site-search input, .home-search input { font: inherit; padding: 0.375rem 0.5rem; border: 2px solid var(--ink); border-radius: 3px; background: var(--bg); color: var(--ink); min-width: 0; }
+.site-search input { flex: 1 1 auto; width: 100%; }
+.site-search button { flex: none; }
+.site-search button, .home-search button { font: inherit; padding: 0.375rem 0.875rem; border: 2px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 3px; cursor: pointer; }
+.home-search { margin: 1.5rem 0 2rem; max-width: 40rem; }
+.home-search label { display: block; font-weight: 700; margin-bottom: 0.375rem; }
+.home-search-row { display: flex; gap: 0.5rem; }
+.home-search-row input { flex: 1; font-size: 1.125rem; padding: 0.5rem 0.75rem; }
+.name-matches { margin: 0 0 1rem; padding: 0.5rem 1rem; border-left: 4px solid var(--accent); background: var(--bg-muted); }
+.name-matches p { margin: 0.25rem 0; }
 
 .notice-bar { background: var(--bg-notice); border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
 .notice-bar p { margin: 0; padding: 0.75rem 0; }
@@ -265,7 +276,7 @@ td .tag { white-space: nowrap; }
 .site-footer p { margin: 0.5rem 0; max-width: 80ch; }
 
 @media print {
-  .site-header nav, .filters, .notice-bar { display: none; }
+  .site-header nav, .site-search, .filters, .notice-bar { display: none; }
   body { font-size: 11pt; }
 }
 
