@@ -77,6 +77,24 @@ class BuiltSite(unittest.TestCase):
         table = page[page.index('id="agreements-table"'):]
         self.assertLess(table.index("Maternity study"), table.index("Ambulance study"))
 
+    def test_pages_offer_a_citation_of_the_register_read_here(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out, "/repo")
+            agreement = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+            organisation = (out / "organisations" / "university-of-example" / "index.html").read_text()
+            dataset = (out / "datasets" / "msds-maternity-services-data-set-v1-5" / "index.html").read_text()
+        self.assertIn(
+            "NHS England (2026) <cite>Data Uses Register</cite>, September 2026 edition, agreement "
+            "DARS-NIC-1-AAAAA, “Maternity study”. Read via Test site (unofficial), "
+            "https://example.test/repo/agreements/dars-nic-1-aaaaa/ (accessed <span data-cite-date>[date]</span>).",
+            agreement,
+        )
+        self.assertIn("September 2026 edition, agreements naming University of Example. Read via", organisation)
+        self.assertIn("September 2026 edition, agreements naming MSDS (Maternity Services Data Set) v1.5. Read via", dataset)
+        for page in (agreement, organisation, dataset):
+            self.assertIn('<script src="/repo/assets/cite.js" defer></script>', page)
+
 
 class LinkCheck(unittest.TestCase):
     def write(self, out: Path, name: str, html: str) -> None:
@@ -568,6 +586,11 @@ class ArchivedAgreements(unittest.TestCase):
 
     def test_the_changes_page_links_to_it(self):
         self.assertIn('href="/agreements/dars-nic-2-bbbbb/"', self.read("changes"))
+
+    def test_its_citation_names_the_last_edition_that_listed_it(self):
+        page = self.read("agreements/dars-nic-2-bbbbb")
+        self.assertIn("NHS England (2023) <cite>Data Uses Register</cite>, January 2023 edition, "
+                      "agreement DARS-NIC-2-BBBBB, “Ambulance study”.", page)
 
     def test_an_organisation_named_only_by_it_keeps_a_page_outside_the_counts(self):
         slug = "nhs-bristol-north-somerset-and-south-gloucestershire-icb-15c"

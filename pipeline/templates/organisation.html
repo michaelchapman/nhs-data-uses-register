@@ -114,5 +114,8 @@
   <li><a href="{{ meta.base_path }}/datasets/{{ name|dataset_slug }}/">{{ name }}</a></li>
   {% endfor %}
 </ul>
+
+{% from "_cite.html" import cite with context %}
+{{ cite("agreements naming " ~ (organisation.name|org), organisation.archived.last_edition if organisation.archived else meta.edition) }}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

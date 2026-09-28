@@ -247,6 +247,12 @@ mark { background: var(--mark-bg); color: var(--mark-ink); border-radius: 2px; p
 .term-status .tag { margin-right: 0.5rem; }
 td .tag { white-space: nowrap; }
 
+.cite { margin-top: 2.5rem; }
+.cite summary h2 { font-size: 1.125rem; margin: 0; }
+.cite-text { max-width: 70ch; }
+.cite-actions { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
+.cite-actions button { font: inherit; padding: 0.375rem 0.875rem; border: 2px solid var(--ink); background: var(--bg); color: var(--ink); border-radius: 3px; cursor: pointer; }
+.cite-actions button:hover { background: var(--ink); color: var(--bg); }
 .source-note { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.9375rem; color: var(--ink-muted); max-width: 70ch; }
 .download { border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
 .download h2 { margin-bottom: 0.25rem; }

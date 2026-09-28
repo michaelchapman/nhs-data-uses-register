@@ -325,6 +325,10 @@
 <p class="empty">No edition history is available for this agreement.</p>
 {% endif %}
 
+{% from "_cite.html" import cite with context %}
+{{ cite("agreement " ~ agreement.base_reference ~ (", “" ~ agreement.title ~ "”" if agreement.title else ""),
+        agreement.archived.last_edition if agreement.archived else meta.edition) }}
+
 <p class="source-note">Source: <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>, {{ meta.edition|edition }} edition of the NHS England Data Uses Register. Search that workbook for <code>{{ agreement.base_reference }}</code> to see the original rows.</p>
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/highlight.js" defer></script>{% endblock %}

@@ -125,5 +125,8 @@
 </table>
 </div>
 {% with intro="Agreements naming this dataset that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
+
+{% from "_cite.html" import cite with context %}
+{{ cite("agreements naming " ~ dataset.name, dataset.archived.last_edition if dataset.archived else meta.edition) }}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}
