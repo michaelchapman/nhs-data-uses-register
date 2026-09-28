@@ -12,6 +12,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from . import aliases
 from . import compare
 from . import lineage
+from . import relations
 from . import ods
 from . import search
 from . import sectors
@@ -205,6 +206,11 @@ def build(
     stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
     stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
+    # Related organisations, from data/organisation-relations.json.
+    related_config = relations.load()
+    for slug in relations.unknown(related_config, org_slugs):
+        print(f"relations: no organisation page for {slug}")
+    related = relations.lines(related_config)
     organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     organisation_lineage = lineage.load()
     # The page a register name is listed on, for tables that carry only the
@@ -318,6 +324,8 @@ def build(
             "organisation.html",
             f"organisations/{organisation['slug']}/index.html",
             organisation=organisation,
+            related=related.get(organisation["slug"], []),
+            org_names=org_names,
             archived=archive["by_organisation"].get(organisation["slug"], []),
             org_slugs=org_slugs,
             dataset_slugs=dataset_slugs,

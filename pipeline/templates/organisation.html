@@ -33,6 +33,19 @@
 {%- if organisation.reviewed_merge %} These spellings have been reviewed and merged onto this page — see <a href="{{ meta.repo_url }}/blob/main/data/organisation-aliases.json">data/organisation-aliases.json</a> in the repository.{% endif %}</p>
 {% endif %}
 {% if organisation.lineage %}{% include "_lineage.html" %}{% endif %}
+{% if related %}
+<div class="related">
+  <h2>Related organisations</h2>
+  <ul class="plain">
+    {% for line in related %}
+    {# A name ending in a full stop ("Ltd.") takes the place of the line's own. #}
+    {% set last = namespace(name="") %}
+    <li>{% for kind, value in line %}{% if kind == "org" %}{% set last.name = org_names.get(value, value)|org %}{% if value in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ value }}/">{{ last.name }}</a>{% else %}{{ last.name }}{% endif %}{% elif not (value == "." and last.name.endswith(".")) %}{{ value }}{% endif %}{% endfor %}</li>
+    {% endfor %}
+  </ul>
+  <p class="hint">Separate organisations, so their agreements are listed on their own pages. Why each is linked is in <a href="{{ meta.repo_url }}/blob/main/data/organisation-relations.json">data/organisation-relations.json</a>.</p>
+</div>
+{% endif %}
 
 <dl class="key-facts">
   {% if controller_only %}

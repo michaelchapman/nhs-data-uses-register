@@ -128,6 +128,8 @@ p, li { max-width: 68ch; }
 .breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0 0 1rem; padding: 0; font-size: 0.9375rem; }
 .breadcrumb li + li::before { content: "›"; margin-right: 0.5rem; color: var(--ink-muted); }
 
+.related { margin: 1rem 0 1.5rem; }
+.related h2 { font-size: 1.125rem; margin: 0 0 0.25rem; }
 .contents { border-left: 4px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1.5rem 0; }
 .contents-title { font-size: 1rem; margin: 0 0 0.25rem; }
 .contents ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
