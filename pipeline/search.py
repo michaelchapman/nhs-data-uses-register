@@ -135,18 +135,24 @@ def write_index(agreements: list[dict], directory: Path) -> int:
 def names(organisations: list[dict], datasets: list[dict], dataset_groups: list[dict]) -> dict:
     """The organisation and dataset names a search is also matched against.
 
-    Each entry is `[name, slug, agreements, other names]`, busiest first. Other
-    names are the spellings merged onto the page, so "Addenbrooke's Hospital"
-    finds Cambridge University Hospitals. A page no longer in the register has
-    no agreements counted, so it comes last.
+    Each entry is `[name, slug, agreements, other names, controller of, gone]`,
+    busiest first. Other names are the spellings merged onto the page, so
+    "Addenbrooke's Hospital" finds Cambridge University Hospitals. `agreements`
+    counts those the organisation applied for; `controller of` those naming it
+    only as a data controller, which is all some organisations have. `gone` is
+    1 for a page no longer in the register, whose agreements are not counted.
     """
     def entries(pages: list[dict], others) -> list[list]:
         rows = []
         for page in pages:
             name = display_name(page["name"])
             other = sorted({display_name(n) for n in others(page)} - {name}, key=str.lower)
-            rows.append([name, page["slug"], 0 if page.get("archived") else page["agreement_count"], other])
-        return sorted(rows, key=lambda row: (-row[2], row[0].lower()))
+            gone = bool(page.get("archived"))
+            rows.append([
+                name, page["slug"], 0 if gone else page["agreement_count"], other,
+                0 if gone else len(page.get("controller_agreements") or []), int(gone),
+            ])
+        return sorted(rows, key=lambda row: (row[5], -row[2], -row[4], row[0].lower()))
 
     variants: dict[str, list[str]] = {}
     for group in dataset_groups:

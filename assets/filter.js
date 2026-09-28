@@ -67,7 +67,8 @@
 
   // Organisations and datasets whose names match a search, shown above the
   // agreements it found (pipeline/search.py, `names`). Each entry is
-  // [name, slug, agreements, other names]; a match on another name says which.
+  // [name, slug, agreements, other names, controller of, gone]; a match on
+  // another name says which.
   function nameMatches(box, names, value) {
     var terms = searchWords(value);
     while (box.firstChild) box.removeChild(box.firstChild);
@@ -97,9 +98,10 @@
         line.appendChild(link);
         var notes = [];
         if (match[1]) notes.push("recorded as " + match[1]);
-        if (entry[2]) notes.push(entry[2].toLocaleString("en-GB") + (entry[2] === 1 ? " agreement" : " agreements"));
-        else notes.push("no longer in the register");
-        line.appendChild(document.createTextNode(" (" + notes.join(", ") + ")"));
+        if (entry[5]) notes.push("no longer in the register");
+        else if (entry[2]) notes.push(entry[2].toLocaleString("en-GB") + (entry[2] === 1 ? " agreement" : " agreements"));
+        else if (entry[4]) notes.push("data controller on " + entry[4].toLocaleString("en-GB") + (entry[4] === 1 ? " agreement" : " agreements"));
+        if (notes.length) line.appendChild(document.createTextNode(" (" + notes.join(", ") + ")"));
       });
       if (found.length > 5) {
         line.appendChild(document.createTextNode("; "));
