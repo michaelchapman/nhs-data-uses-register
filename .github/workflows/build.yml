@@ -39,19 +39,22 @@ jobs:
       - name: Check for LLM-cliché phrasing
         run: python -m pipeline.clichecheck --advisory
 
+      # The site is served from the root of its custom domain, set in the
+      # repository's Pages settings. GitHub redirects the old address,
+      # <owner>.github.io/<repo>/, there. To serve it as project pages again,
+      # set SITE_URL to https://<owner>.github.io and SITE_BASE_PATH to /<repo>
+      # here and in the link check.
       - name: Build site
         env:
-          SITE_URL: https://${{ github.repository_owner }}.github.io
-          # GitHub project pages are served from /<repo>/. Set this to an empty
-          # string if you move the site to a custom domain or a user page.
-          SITE_BASE_PATH: /${{ github.event.repository.name }}
+          SITE_URL: https://healthdatauses.uk
+          SITE_BASE_PATH: ""
         run: python -m pipeline.run
 
       # After the build, before anything is uploaded: a page that links to a
       # page that does not exist should stop the deploy, not reach readers.
       - name: Check internal links
         env:
-          SITE_BASE_PATH: /${{ github.event.repository.name }}
+          SITE_BASE_PATH: ""
         run: python -m pipeline.linkcheck _site --base-path "$SITE_BASE_PATH"
 
       - uses: actions/configure-pages@v5

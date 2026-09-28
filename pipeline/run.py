@@ -26,10 +26,11 @@ from . import sources
 from .extract import _version_key
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_SITE_URL = "https://michaelchapman.github.io"
+# Where the site is published: a custom domain, served from its root.
+DEFAULT_SITE_URL = "https://healthdatauses.uk"
 # Empty means the site is served at the root of its domain, which is what a local
-# preview and a custom domain both want. GitHub project pages live under
-# /<repo>/, so the deploy workflow sets SITE_BASE_PATH to match.
+# preview and the custom domain both want. Set SITE_BASE_PATH only to serve it
+# under a subpath, as GitHub project pages at <owner>.github.io/<repo>/ would.
 DEFAULT_BASE_PATH = ""
 REPO_URL = "https://github.com/michaelchapman/nhs-data-uses-register"
 
