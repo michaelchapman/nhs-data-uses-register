@@ -1,7 +1,9 @@
 import unittest
 
 from pipeline import facts
-from pipeline.extract import build_agreement, clean_line, extract, slugify, split_list, tidy_version
+from pipeline.extract import (
+    build_agreement, clean_line, extract, known_organisation_names, resplit_list, slugify, split_list, tidy_version,
+)
 
 from .fixtures import NEW_NAME, OLD_NAME, dataset_aliases, workbook_bytes
 
@@ -24,6 +26,23 @@ class SplitList(unittest.TestCase):
             split_list("NHS Bristol, North Somerset and South Gloucestershire ICB - 15C, UNIVERSITY OF YORK", known),
             ["NHS Bristol, North Somerset and South Gloucestershire ICB - 15C", "UNIVERSITY OF YORK"],
         )
+
+    def test_a_controller_only_name_with_a_comma_stays_whole(self):
+        # Never an applicant, so only the built-in list vouches for it.
+        known = known_organisation_names(["UNIVERSITY OF YORK"])
+        self.assertEqual(
+            split_list("UNIVERSITY OF YORK, THE MINISTRY OF HOUSING, COMMUNITIES AND LOCAL GOVERNMENT", known),
+            ["UNIVERSITY OF YORK", "THE MINISTRY OF HOUSING, COMMUNITIES AND LOCAL GOVERNMENT"],
+        )
+
+    def test_resplitting_rejoins_a_known_name_stored_in_halves(self):
+        known = known_organisation_names([])
+        self.assertEqual(
+            resplit_list(["UNIVERSITY OF YORK", "THE MINISTRY OF HOUSING", "COMMUNITIES AND LOCAL GOVERNMENT"], known),
+            ["UNIVERSITY OF YORK", "THE MINISTRY OF HOUSING, COMMUNITIES AND LOCAL GOVERNMENT"],
+        )
+        # Two organisations that are not one known name stay apart.
+        self.assertEqual(resplit_list(["A", "B"], known), ["A", "B"])
 
 
 class Whitespace(unittest.TestCase):
