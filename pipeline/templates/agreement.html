@@ -134,7 +134,7 @@
   ("Expected measurable benefits", v.expected_benefits),
   ("Benefits reported so far", v.yielded_benefits),
 ] %}
-<details class="prose-block" data-highlight {% if loop.first %}open{% endif %}>
+<details class="prose-block" data-highlight>
   <summary><h3>{{ section }}</h3></summary>
   {% if text %}
     {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
