@@ -72,8 +72,9 @@
     var flags = Array.prototype.slice.call(form.querySelectorAll("[data-filter-flag]"));
     var noun = (count && /\b(agreements|organisations|datasets|changes)\b/.exec(count.textContent) || [, "rows"])[1];
     var reset = form.querySelector("[data-filter-reset]");
-    // "Clear filters", or "Reset filters" where a filter is on by default.
-    var resetLabel = reset ? reset.textContent.trim().toLowerCase() : "clear filters";
+    // "Clear filters", or "Reset filters" where a filter is on by default. A
+    // form with only a search box has no button: the box clears itself.
+    var resetLabel = reset ? reset.textContent.trim().toLowerCase() : "";
     var total = rows.length;
     var timer;
     // Where this table's word index is, if it has one. Files are fetched when a
@@ -171,7 +172,7 @@
 
       if (count) {
         count.textContent = shown === 0
-          ? "No " + noun + " match. Try fewer or shorter search words, or " + resetLabel.replace(" filters", " the filters") + "."
+          ? "No " + noun + " match. Try fewer or shorter search words" + (resetLabel ? ", or " + resetLabel.replace(" filters", " the filters") : "") + "."
           : shown === total
           ? "Showing all " + total.toLocaleString("en-GB") + " " + noun + "."
           : "Showing " + shown.toLocaleString("en-GB") + " of " + total.toLocaleString("en-GB") + " " + noun + ".";

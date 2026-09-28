@@ -75,7 +75,6 @@
     <input type="search" id="q" data-filter-text autocomplete="off" aria-describedby="q-hint" placeholder="e.g. University of Oxford, DARS-NIC-12345">
     <p class="hint" id="q-hint">Searches the title, reference and organisation of each change, and what an amendment changed.</p>
   </div>
-  <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
 </form>
 {% set change_count = changes.added|length + changes.amended|length + changes.removed|length + changes.wide_edits|sum(attribute="versions", start=[])|length %}
 <p class="result-count" role="status" data-filter-count>Showing all {{ change_count|commas }} changes.</p>
