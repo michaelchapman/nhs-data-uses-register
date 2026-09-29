@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for path in ["/", "/agreements/", "/organisations/", "/datasets/", "/changes/", "/downloads/", "/about/"] %}
+{% for path in ["/", "/agreements/", "/organisations/", "/datasets/", "/releases/", "/changes/", "/downloads/", "/about/"] %}
   <url><loc>{{ meta.site_url }}{{ meta.base_path }}{{ path }}</loc></url>
 {% endfor %}
 {% for edition in changes_editions %}

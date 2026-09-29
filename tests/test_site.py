@@ -3,8 +3,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from pipeline import build, linkcheck
+from pipeline import build, linkcheck, model
 from pipeline.extract import extract
+from pipeline.rules import Rules
 
 from .fixtures import FIRST_EDITION, NEW_NAME, OLD_NAME, dataset_aliases, site_meta, workbook_bytes
 
@@ -294,7 +295,8 @@ class InTerm(unittest.TestCase):
         self.assertEqual(build.compute_stats(self.data, "2035-01-01")["active_agreements"], 0)
 
     def test_the_agreements_table_flags_terms_as_of_the_edition(self):
-        with tempfile.TemporaryDirectory() as directory:
+        # Built under the alias file the data was grouped under, as a real build is.
+        with tempfile.TemporaryDirectory() as directory, dataset_aliases():
             out = Path(directory)
             meta = {**site_meta(), "as_of": "2030-06-01"}
             build.build(self.data, meta, FIRST_EDITION, out)
@@ -309,7 +311,7 @@ class InTerm(unittest.TestCase):
 
     def test_status_is_shown_on_every_page_that_lists_or_describes_an_agreement(self):
         # As of June 2030, DARS-NIC-1 (to January 2030) has ended and DARS-NIC-2 has not.
-        with tempfile.TemporaryDirectory() as directory:
+        with tempfile.TemporaryDirectory() as directory, dataset_aliases():
             out = Path(directory)
             meta = {**site_meta(), "as_of": "2030-06-01"}
             build.build(self.data, meta, FIRST_EDITION, out)
@@ -521,6 +523,9 @@ class ReleaseWording(unittest.TestCase):
             none["latest"]["files_released"] = 0
             none["latest"]["sublicensing"] = "Yes"
             none["files_released"] = 0
+            # The dataset pages count files from the agreements, so regroup
+            # them after the edit, as a build from such a register would.
+            data["datasets"] = model._group_datasets(data["agreements"], Rules.load())
             build.build(data, site_meta(), FIRST_EDITION, cls.out)
 
     @classmethod

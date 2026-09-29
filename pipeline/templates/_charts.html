@@ -1,0 +1,66 @@
+{#- Charts drawn at build time as plain HTML: no script, no SVG scaling, text at
+    the page's own size. Every value is also in a table beside the chart, and
+    each mark carries it as a tooltip. See pipeline/releases.py. -#}
+
+{% macro month_chart(chart, title, unit, units, id) %}
+{#- One measure by month: columns placed by position, so empty months cost nothing. -#}
+<figure class="month-chart" aria-labelledby="{{ id }}-title">
+  <figcaption id="{{ id }}-title" class="chart-title">{{ title }}</figcaption>
+  <div class="chart-body">
+    <div class="chart-ticks" aria-hidden="true">
+      {% for tick in chart.ticks %}<span style="bottom: {{ '%.2f'|format(tick.bottom) }}%">{{ tick.value|commas }}</span>{% endfor %}
+    </div>
+    <div class="chart-plot" role="img" aria-label="{{ title }}, by month. The table below gives every value.">
+      {% for tick in chart.ticks %}<span class="chart-grid" style="bottom: {{ '%.2f'|format(tick.bottom) }}%"></span>{% endfor %}
+      {% for c in chart.columns %}<span class="chart-col" style="left: {{ '%.3f'|format(c.left) }}%; width: {{ '%.3f'|format(c.width) }}%; height: {{ '%.2f'|format(c.height) }}%" title="{{ c.month|month }}: {{ c.value|commas }} {{ unit if c.value == 1 else units }}"></span>{% endfor %}
+    </div>
+    <div class="chart-years" aria-hidden="true">
+      {% for y in chart.years if y.label %}<span style="left: {{ '%.3f'|format(y.left) }}%">{{ y.year }}</span>{% endfor %}
+    </div>
+  </div>
+</figure>
+{% endmacro %}
+
+{% macro timeline(t, dataset_slugs) %}
+{#- An agreement's files by month and dataset, with its terms behind them. -#}
+<figure class="timeline" aria-labelledby="timeline-title">
+  <figcaption id="timeline-title" class="chart-title">Months with files released, by dataset</figcaption>
+  <p class="hint">{{ t.start|month }} to {{ t.end|month }}{% if t.runs_on %}, the last month this edition reports; the agreement's term runs on{% endif %}. A mark is a month in which at least one file of that dataset was released. Shading is the term of a version of the agreement.</p>
+  <div class="tl" role="img" aria-label="Months with files released, by dataset. The table below gives every value.">
+    <div class="tl-row tl-terms">
+      <span class="tl-label">Agreement term</span>
+      <span class="tl-track">
+        {% for term in t.terms %}<span class="tl-term" style="left: {{ '%.3f'|format(term.left) }}%; width: {{ '%.3f'|format(term.width) }}%" title="Version {{ term.version }}: {{ term.start|date }} to {{ term.end|date if term.end else 'no end date' }}"></span>{% endfor %}
+      </span>
+    </div>
+    {% for s in t.strips %}
+    <div class="tl-row">
+      <span class="tl-label">{{ s.dataset }} <span class="tl-count">{{ s.files|commas }} file{{ "s" if s.files != 1 }} in {{ s.months|commas }} month{{ "s" if s.months != 1 }}</span></span>
+      <span class="tl-track">
+        {% for term in t.terms %}<span class="tl-shade" style="left: {{ '%.3f'|format(term.left) }}%; width: {{ '%.3f'|format(term.width) }}%"></span>{% endfor %}
+        {% for m in s.marks %}<span class="tl-mark" style="left: {{ '%.3f'|format(m.left) }}%; width: {{ '%.3f'|format(m.width) }}%" title="{{ m.month|month }}: {{ m.files|commas }} file{{ 's' if m.files != 1 }}"></span>{% endfor %}
+      </span>
+    </div>
+    {% endfor %}
+    <div class="tl-row tl-axis" aria-hidden="true">
+      <span class="tl-label"></span>
+      <span class="tl-track">{% for y in t.years if y.label %}<span style="left: {{ '%.3f'|format(y.left) }}%">{{ y.year }}</span>{% endfor %}</span>
+    </div>
+  </div>
+</figure>
+<details class="chart-table">
+  <summary>Files by dataset and year, as a table</summary>
+  <div class="table-scroll">
+  <table class="data-table">
+    <caption class="visually-hidden">Files released under this agreement, by dataset and year</caption>
+    <thead><tr><th scope="col">Dataset</th>{% for y in t.table_years %}<th scope="col" class="num">{{ y }}</th>{% endfor %}<th scope="col" class="num">Total</th></tr></thead>
+    <tbody>
+    {% for s in t.strips %}
+      <tr><th scope="row">{% if s.slug in dataset_slugs %}<a href="{{ meta.base_path }}/datasets/{{ s.slug }}/">{{ s.dataset }}</a>{% else %}{{ s.dataset }}{% endif %}</th>
+        {% for y in t.table_years %}<td class="num">{{ s.by_year[y]|commas if s.by_year[y] else "—" }}</td>{% endfor %}<td class="num">{{ s.files|commas }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</details>
+{% endmacro %}
