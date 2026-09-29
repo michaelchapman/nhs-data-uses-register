@@ -28,7 +28,7 @@
       <ul>
         {# The section the page is in is marked: its own index as the current
            page, and every page under it as the current section. #}
-        {% for slug, label in [("agreements", "Agreements"), ("organisations", "Organisations"), ("datasets", "Datasets"), ("changes", "What changed"), ("about", "About")] %}
+        {% for slug, label in [("agreements", "Agreements"), ("organisations", "Organisations"), ("datasets", "Datasets"), ("releases", "Files released"), ("changes", "What changed"), ("about", "About")] %}
         <li><a href="{{ meta.base_path }}/{{ slug }}/"{% if section == slug %} aria-current="{{ 'page' if page_path == '/' ~ slug ~ '/' else 'true' }}"{% endif %}>{{ label }}</a></li>
         {% endfor %}
       </ul>

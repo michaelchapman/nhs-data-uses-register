@@ -133,6 +133,12 @@ class Pages(unittest.TestCase):
         self.assertIn('href="/releases/"', self.read(""))
         self.assertIn('href="/releases/"', self.read("about"))
 
+    def test_it_is_in_the_main_menu_and_marked_there_as_the_current_page(self):
+        def menu(page):
+            return page[page.index('<nav aria-label="Main">'):page.index("</nav>")]
+        self.assertIn('href="/releases/">Files released</a>', menu(self.read("datasets")))
+        self.assertIn('href="/releases/" aria-current="page">Files released</a>', menu(self.read("releases")))
+
 
 if __name__ == "__main__":
     unittest.main()
