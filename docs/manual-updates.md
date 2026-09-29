@@ -65,8 +65,9 @@ Budget about two minutes a month, plus about a minute for the parse.
    .venv/bin/python -m pipeline.sectors
    ```
 
-   It lists any type with no sector and any correction that no longer names an
-   organisation, then each sector's totals. Add a new type to a sector in
+   It lists any type that lacks a sector and any correction naming an
+   organisation page the site does not have, as after a page's slug changes,
+   then each sector's totals. Add a new type to a sector in
    `data/organisation-sectors.json`, and correct an organisation there if its
    type misplaces it. Then check the related organisations still have pages:
 
