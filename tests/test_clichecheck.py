@@ -60,5 +60,23 @@ class Annotate(unittest.TestCase):
         self.assertIsNone(clichecheck.annotate("clichecheck: clean"))
 
 
+
+class Markdown(unittest.TestCase):
+    def test_a_row_of_badges_is_not_read_as_prose(self):
+        badges = "\n".join(
+            f"[![{name}](https://img.shields.io/badge/{name}-x-blue)](https://example.test/{name})"
+            for name in ("build", "site", "edition", "licence")
+        )
+        stripped = clichecheck.strip_markdown_code("# Title\n\n" + badges + "\n\nPlain words.\n")
+        self.assertNotIn("shields", stripped)
+        self.assertEqual(stripped.count("\n"), ("# Title\n\n" + badges + "\n\nPlain words.\n").count("\n"))
+        self.assertIn("Plain words.", stripped)
+        self.assertEqual(clichecheck.find_sentence_anaphora(stripped), [])
+
+    def test_a_link_that_is_not_an_image_is_kept(self):
+        self.assertIn("[the register](https://example.test)", clichecheck.strip_markdown_code(
+            "See [the register](https://example.test)."
+        ))
+
 if __name__ == "__main__":
     unittest.main()
