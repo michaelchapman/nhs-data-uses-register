@@ -71,15 +71,17 @@ def ingest_one(path: Path, register: sources.Register, source_url: str | None) -
             f"  {path.name}: no agreements found. The sheet layout may differ in this "
             "edition — check the workbook's sheet and column names against extract.py."
         )
+    # What the workbook held. Organisation and dataset counts are left out:
+    # they depend on the alias and lineage files, which change after the
+    # edition is ingested, so a count recorded now would soon disagree with
+    # the site. They are printed, as a check on this ingest, and not kept.
     counts = {
         "agreements": len(data["agreements"]),
         "agreement_versions": sum(len(a["versions"]) for a in data["agreements"]),
-        "organisations": len(data["organisations"]),
-        "datasets": len(data["datasets"]),
     }
     print(
         f"  {counts['agreements']:,} agreements, "
-        f"{counts['organisations']:,} organisations, {counts['datasets']:,} datasets"
+        f"{len(data['organisations']):,} organisations, {len(data['datasets']):,} datasets"
     )
 
     versions_by_base = {a["base_reference"]: a["versions"] for a in data["agreements"]}

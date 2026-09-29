@@ -67,6 +67,8 @@ class Ingest(unittest.TestCase):
         self.assertEqual(len(entry["sha256"]), 64)
         self.assertEqual(entry["counts"]["agreements"], 2)
         self.assertEqual(entry["counts"]["agreement_versions"], 3)
+        # Organisations and datasets depend on the alias files, and would date.
+        self.assertEqual(set(entry["counts"]), {"agreements", "agreement_versions"})
         self.assertNotIn("has_full_extract", entry)
 
     def test_a_source_url_is_recorded_when_given(self):
