@@ -190,6 +190,37 @@ class Changes(unittest.TestCase):
         (event,) = [e for e in entry["events"] if e["edition"] == "august2026"]
         self.assertEqual(event["wide"][0]["references"], [V2])
 
+    def every_kind_of_change(self):
+        """Four editions: a rewording, a register-wide edit, a version dropped."""
+        before = self.with_legal_basis(self.versions, self.LONG_BASIS)
+        after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))
+        retitled = copy.deepcopy(after)
+        retitled[FIRST][-1]["title"] = "A new title"
+        dropped = copy.deepcopy(retitled)
+        del dropped[SECOND]
+        self.record(("july2026", before), ("august2026", after), ("september2026", retitled),
+                    ("october2026", dropped))
+
+    def test_every_edition_answers_as_diff_and_history_do_one_at_a_time(self):
+        self.every_kind_of_change()
+        with mock.patch.object(changes, "WIDE_EDIT_AGREEMENTS", 2):
+            diffs, timeline = changes.every_edition(REGISTER)
+            one_at_a_time = {edition: changes.diff(REGISTER, edition) for edition in facts.stored_editions(REGISTER)}
+            wide = {edition: d["wide_ops"] for edition, d in one_at_a_time.items() if d["comparable"]}
+            self.assertEqual(timeline, changes.history(REGISTER, wide=wide))
+        self.assertEqual(diffs, one_at_a_time)
+        self.assertTrue(diffs["august2026"]["wide_edits"])
+        self.assertTrue(diffs["september2026"]["amended"])
+        self.assertTrue(diffs["october2026"]["removed"])
+
+    def test_every_edition_reads_each_agreement_once(self):
+        self.every_kind_of_change()
+        with mock.patch.object(facts, "read_agreement", wraps=facts.read_agreement) as read:
+            changes.every_edition(REGISTER)
+        bases = [call.args[1] for call in read.call_args_list]
+        self.assertEqual(sorted(bases), sorted(set(bases)))
+        self.assertEqual(set(bases), {FIRST, SECOND})
+
     def test_a_rewording_on_too_few_agreements_is_an_ordinary_amendment(self):
         before = self.with_legal_basis(self.versions, self.LONG_BASIS)
         after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))

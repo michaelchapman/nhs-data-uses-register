@@ -231,6 +231,8 @@ when a re-parse is needed, which is rare.
 - **Paging the changes pages.** December 2022 was 1,192 rows. As one
   register-wide edit it is one row and a collapsed list, and the largest page is
   now 370 KB.
-- **Holding the facts store in memory** to shorten the build further. Most of
-  the remaining 47 seconds is reading it, but reading one agreement at a time
-  keeps peak memory near 1 GB, which matters more.
+- **Holding the facts store in memory** to shorten the build further. The
+  build reads each agreement's file twice, once for the edition it shows and
+  once for every edition's changes and timeline (`changes.every_edition`), in
+  about 28 seconds. Reading one agreement at a time keeps peak memory near
+  650 MB, which matters more.

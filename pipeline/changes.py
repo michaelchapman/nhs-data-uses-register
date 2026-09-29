@@ -19,16 +19,19 @@ changes:
 its state index differs, so `facts.edition_index` — 192 KB an edition — finds
 every candidate without reading a word of the register.
 
-*The text says what changed.* Only the candidates are read, and only their two
-states, which `compare.compare_versions` compares field by field with the same
-normalisation the agreement pages use. A version whose text moved only in
-typography is not an amendment, and neither is a dataset the register merely
-relabelled.
+*The text says what changed.* Only the candidates are read, each agreement once
+however many editions changed it, and only their states are compared, by
+`compare.compare_versions`, field by field with the same normalisation the
+agreement pages use. A version whose text moved only in typography is not an
+amendment, and neither is a dataset the register merely relabelled.
+
+A build wants every edition's changes and every agreement's timeline, and
+`every_edition` answers both from that one read. `diff` and `history` answer
+one question each, the same way.
 """
 
 from __future__ import annotations
 
-import json
 from collections import defaultdict
 
 from . import aliases
@@ -37,7 +40,7 @@ from . import exclusions
 from . import facts
 from . import lineage
 from . import sources
-from .extract import _base_and_version, slugify
+from .extract import _base_and_version
 
 
 def skipped_editions(previous: str, current: str) -> list[str]:
@@ -157,30 +160,20 @@ def _labels(difference: dict) -> list[str]:
     return sorted(set(labels))
 
 
-def _agreement_records(register_slug: str, bases) -> dict[str, dict]:
-    """The stored record of each named agreement, read once."""
-    records = {}
-    for base in bases:
-        path = facts.agreements_dir(register_slug) / f"{slugify(base)}.json"
-        if path.exists():
-            records[base] = json.loads(path.read_text(encoding="utf-8"))
-    return records
-
-
 def _states(record: dict) -> dict[str, list[dict]]:
     return {version["reference"]: version["states"] for version in record["versions"]}
 
 
-def _describe(state: dict, organisation: str) -> dict:
+def _describe(row: dict) -> dict:
     """What a row on the changes page shows: the version's title, under its agreement's organisation.
 
     The organisation is the agreement's — that of its latest version in the
     edition — because the row links to the agreement page, which shows that
-    one, and because the digests this replaced recorded it that way. A
-    version's own applicant can differ: DARS-NIC-204580-F5B0C-v0.6 was applied
-    for by a hospital trust while the agreement is now a cancer alliance's.
+    one. A version's own applicant can differ: DARS-NIC-204580-F5B0C-v0.6 was
+    applied for by a hospital trust while the agreement is now a cancer
+    alliance's.
     """
-    return {"org": organisation, "title": state.get("title", "")}
+    return {"org": row["org"], "title": row["title"]}
 
 
 def _agreement_organisation(record: dict | None, index: dict[str, int]) -> str:
@@ -198,87 +191,119 @@ def _agreement_organisation(record: dict | None, index: dict[str, int]) -> str:
     return max(held)[2] if held else ""
 
 
-def _compare(memo: dict | None, key: tuple, was: dict, now: dict, *maps) -> dict | None:
-    """`compare.compare_versions`, remembered in `memo` under `key` when one is given.
+def not_comparable(reason: str) -> dict:
+    """A `diff` result for an edition with nothing to compare it with.
 
-    A build compares each amended version once for its edition's changes page
-    and again for its agreement's timeline. `run` passes one memo to both, so
-    the second is a lookup. The key is the version and the two stored states
-    it moved between, which is only unambiguous within one store and one set
-    of aliases: that is why the memo is passed in, never kept here.
+    `reason` is "first-edition" for the earliest edition held, or
+    "not-ingested" for one built straight from a workbook.
     """
-    if memo is None:
-        return compare.compare_versions(was, now, *maps)
-    if key not in memo:
-        memo[key] = compare.compare_versions(was, now, *maps)
-    return memo[key]
+    return {
+        "comparable": False, "reason": reason, "previous_edition": None,
+        "skipped": [], "added": [], "amended": [], "removed": [], "wide_edits": [], "wide_ops": {},
+    }
 
 
-def diff(
-    register_slug: str,
-    edition: str,
-    previous_edition: str | None = None,
-    alias_map: dict[str, str] | None = None,
-    memo: dict | None = None,
-) -> dict:
-    """Agreement-version level changes between `edition` and the one before it."""
-    held = facts.stored_editions(register_slug)
-    if edition not in held:
-        raise SystemExit(f"no stored facts for the {edition} edition of {register_slug}")
-    if previous_edition is None:
-        position = held.index(edition)
-        previous_edition = held[position - 1] if position else None
-    if previous_edition is None:
-        return {
-            "comparable": False, "reason": "first-edition", "previous_edition": None,
-            "skipped": [], "added": [], "amended": [], "removed": [], "wide_edits": [], "wide_ops": {},
-        }
-
+def _maps(alias_map: dict[str, str] | None) -> tuple:
+    """What `compare.compare_versions` compares under: dataset aliases, organisation aliases, lineage."""
     if alias_map is None:
         alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
-    organisation_lineage = lineage.load()
-    now = _included(facts.edition_index(register_slug, edition))
-    before = _included(facts.edition_index(register_slug, previous_edition))
+    return alias_map, aliases.load_map(aliases.ALIASES_PATH), lineage.load()
 
-    new_refs = [r for r in now if r not in before]
-    gone_refs = [r for r in before if r not in now]
+
+def _indexes(register_slug: str, editions) -> dict[str, dict[str, int]]:
+    return {edition: _included(facts.edition_index(register_slug, edition)) for edition in editions}
+
+
+# Three steps, so that each agreement's file — the whole of its text, in every
+# state it has had — is read once however many editions changed it:
+#
+# 1. `_ask_edition` and `_timeline` go through the indexes alone and note, for
+#    each agreement, which rows describe it and which pairs of its states are
+#    to be compared.
+# 2. `_read` reads each of those agreements once, one at a time, and answers.
+# 3. `_edition_changes` and `_history` assemble the answers.
+
+
+def _work() -> defaultdict:
+    """`{base: {"rows": [(edition, reference, side)], "compare": {(reference, from, to)}}}`."""
+    return defaultdict(lambda: {"rows": [], "compare": set()})
+
+
+def _references(before: dict[str, int], now: dict[str, int]) -> tuple[list[str], list[str], list[str]]:
+    """`(new, gone, candidates)`: the references `now` adds, drops, and holds in another state."""
+    new = [r for r in now if r not in before]
+    gone = [r for r in before if r not in now]
     candidates = [r for r, state in now.items() if r in before and before[r] != state]
+    return new, gone, candidates
 
-    bases = {_base_and_version(r)[0] for r in new_refs + gone_refs + candidates}
-    records = _agreement_records(register_slug, bases)
-    states = {base: _states(record) for base, record in records.items()}
 
-    def state_of(reference: str, index: dict) -> dict | None:
-        base = _base_and_version(reference)[0]
-        versions = states.get(base, {})
-        if reference not in versions:
-            return None
-        return versions[reference][index[reference]]
+def _ask_edition(work: dict, previous: str, edition: str, indexes: dict) -> None:
+    """Note what the changes page for `edition` needs to know."""
+    before, now = indexes[previous], indexes[edition]
+    new, gone, candidates = _references(before, now)
+    for reference in new + candidates:
+        work[_base_and_version(reference)[0]]["rows"].append((edition, reference, edition))
+    # A version no longer listed is described as the edition before published it.
+    for reference in gone:
+        work[_base_and_version(reference)[0]]["rows"].append((edition, reference, previous))
+    for reference in candidates:
+        work[_base_and_version(reference)[0]]["compare"].add((reference, before[reference], now[reference]))
 
-    def organisation(reference: str, index: dict) -> str:
-        return _agreement_organisation(records.get(_base_and_version(reference)[0]), index)
+
+def _read(register_slug: str, work: dict, indexes: dict, maps: tuple) -> tuple[dict, dict]:
+    """Read each agreement in `work` once, and answer what was asked of it.
+
+    Returns `(rows, differences)`: `{(edition, reference): {title, org, held}}`
+    for each row, and `{(reference, from, to): difference}` for each pair of
+    states, leaving out a pair the stored record cannot supply. One agreement
+    is held at a time, so the store never sits in memory whole.
+    """
+    rows: dict[tuple[str, str], dict] = {}
+    differences: dict[tuple[str, int, int], dict | None] = {}
+    for base in sorted(work):
+        record = facts.read_agreement(register_slug, base)
+        states = _states(record) if record else {}
+        asked = work[base]
+        for edition, reference, side in asked["rows"]:
+            index = indexes[side]
+            versions = states.get(reference, [])
+            state = versions[index[reference]] if index[reference] < len(versions) else None
+            rows[(edition, reference)] = {
+                "title": (state or {}).get("title", ""),
+                "org": _agreement_organisation(record, index),
+                "held": state is not None,
+            }
+        for key in sorted(asked["compare"]):
+            reference, was, now = key
+            versions = states.get(reference, [])
+            if was < len(versions) and now < len(versions):
+                differences[key] = compare.compare_versions(versions[was], versions[now], *maps)
+    return rows, differences
+
+
+def _edition_changes(previous: str, edition: str, indexes: dict, rows: dict, differences: dict) -> dict:
+    """Agreement-version level changes between `edition` and `previous`, from `_read`'s answers."""
+    before, now = indexes[previous], indexes[edition]
+    new_refs, gone_refs, candidates = _references(before, now)
 
     old_bases = {_base_and_version(r)[0] for r in before}
     added, amended, removed = [], [], []
     for reference in new_refs:
-        state = state_of(reference, now)
         base = _base_and_version(reference)[0]
         added.append({
-            "reference": reference, "base": base, **_describe(state or {}, organisation(reference, now)),
+            "reference": reference, "base": base, **_describe(rows[(edition, reference)]),
             # A new version of an agreement we already knew about is a renewal,
             # not a brand new data release.
             "kind": "renewal" if base in old_bases else "new",
         })
     found = []
     for reference in candidates:
-        was, is_now = state_of(reference, before), state_of(reference, now)
-        if was is None or is_now is None:
+        key = (reference, before[reference], now[reference])
+        if key not in differences:
             continue
-        difference = _compare(memo, (reference, before[reference], now[reference]), was, is_now,
-                              alias_map, organisation_aliases, organisation_lineage)
+        difference = differences[key]
         if _material(difference):
-            found.append((reference, is_now, difference))
+            found.append((reference, rows[(edition, reference)], difference))
 
     # The same rewording on enough agreements at once is one edit to the
     # register, reported once: see WIDE_EDIT_AGREEMENTS.
@@ -288,10 +313,9 @@ def diff(
             reworded.setdefault(edit, set()).add(_base_and_version(reference)[0])
     wide_ops = {edit: len(bases) for edit, bases in reworded.items() if len(bases) >= WIDE_EDIT_AGREEMENTS}
     wide: dict[tuple, list[dict]] = {}
-    for reference, is_now, difference in found:
+    for reference, row, difference in found:
         item = {
-            "reference": reference, "base": _base_and_version(reference)[0],
-            **_describe(is_now, organisation(reference, now)),
+            "reference": reference, "base": _base_and_version(reference)[0], **_describe(row),
             "fields": _labels(difference), "details": _details(difference),
         }
         edits = _only_rewordings(difference)
@@ -300,10 +324,9 @@ def diff(
         else:
             amended.append(item)
     for reference in gone_refs:
-        state = state_of(reference, before)
         removed.append({
             "reference": reference, "base": _base_and_version(reference)[0],
-            **_describe(state or {}, organisation(reference, before)),
+            **_describe(rows[(edition, reference)]),
         })
 
     order = lambda item: (item["org"].lower(), item["reference"])
@@ -320,8 +343,8 @@ def diff(
     )
     return {
         "comparable": True,
-        "previous_edition": previous_edition,
-        "skipped": skipped_editions(previous_edition, edition),
+        "previous_edition": previous,
+        "skipped": skipped_editions(previous, edition),
         "added": sorted(added, key=order),
         "amended": sorted(amended, key=order),
         "removed": sorted(removed, key=order),
@@ -332,44 +355,19 @@ def diff(
     }
 
 
-def history(
-    register_slug: str,
-    alias_map: dict[str, str] | None = None,
-    wide: dict[str, dict[tuple, int]] | None = None,
-    memo: dict | None = None,
-) -> dict[str, dict]:
-    """When each agreement and each of its versions appeared or changed.
+def _timeline(editions: list[str], indexes: dict, work: dict) -> tuple[dict[str, dict], dict[str, list[dict]]]:
+    """Which agreement changed in which edition, and between which two states.
 
-    `{base_reference: {"first_edition", "first_is_earliest", "events"}}`, with
-    one event per edition in which something happened, oldest first so it reads
-    as a timeline. Events are grouped by edition rather than one per version:
-    NHS England restates every version of an agreement at once often enough
-    that the ungrouped list runs to sixteen near-identical lines for one edit.
-
-    An agreement present in the earliest edition held may well be older than
-    that, so `first_is_earliest` marks the ones whose start we cannot see.
-
-    `wide` is `{edition: {rewording: agreements}}`, the register-wide edits
-    `diff` found in each edition. An amendment that is only those is recorded
-    under `wide`, not `amended`.
+    Returns `(index, pending)`: each agreement's first appearance, and its
+    events, one per version that was added, amended or removed. The pairs of
+    states an amendment moved between are added to `work`. No register text is
+    read.
     """
-    wide = wide or {}
-    editions = facts.stored_editions(register_slug)
-    if not editions:
-        return {}
-    if alias_map is None:
-        alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
-    organisation_lineage = lineage.load()
-    indexes = {edition: _included(facts.edition_index(register_slug, edition)) for edition in editions}
-    earliest = editions[0]
-
-    # Pass one, over the indexes alone: which agreement changed in which
-    # edition, and between which two states. No register text is read.
     pending: dict[str, list[dict]] = defaultdict(list)
     index: dict[str, dict] = {}
     previous: dict[str, int] = {}
     previous_edition = ""
+    earliest = editions[0]
     for edition in editions:
         current = indexes[edition]
         skipped = skipped_editions(previous_edition, edition) if previous_edition else []
@@ -387,17 +385,19 @@ def history(
             elif previous[reference] != state:
                 pending[base].append({"edition": edition, "skipped": skipped, "kind": "amended",
                                       "reference": reference, "from": previous[reference], "to": state})
+                work[base]["compare"].add((reference, previous[reference], state))
         for reference, state in previous.items():
             base = _base_and_version(reference)[0]
             if reference not in current and base in index:
                 pending[base].append({"edition": edition, "skipped": skipped, "kind": "removed",
                                       "reference": reference, "from": state, "to": None})
         previous, previous_edition = current, edition
+    return index, pending
 
-    # Pass two, one agreement at a time: name the fields each amendment moved.
-    # Held one record at a time so the whole archive never sits in memory.
+
+def _history(index: dict, pending: dict, differences: dict, wide: dict) -> dict[str, dict]:
+    """Name the fields each amendment moved, and group each agreement's events by edition."""
     for base, events in pending.items():
-        states = _states(_agreement_records(register_slug, [base]).get(base, {"versions": []}))
         by_edition: dict[str, dict] = {}
         for event in events:
             entry = by_edition.setdefault(event["edition"], {
@@ -406,38 +406,34 @@ def history(
             })
             fields: list[str] = []
             details: list[dict] = []
-            if event["kind"] == "amended":
-                version = states.get(event["reference"], [])
-                if event["from"] < len(version) and event["to"] < len(version):
-                    difference = _compare(
-                        memo, (event["reference"], event["from"], event["to"]),
-                        version[event["from"]], version[event["to"]], alias_map, organisation_aliases, organisation_lineage,
-                    )
-                    # Naming the fields is the difference between "this was
-                    # edited" and "the data controller was changed" — the
-                    # second is what a reader came for, and the register itself
-                    # never says it.
-                    if not _material(difference):
-                        # A rename or an ODS succession is not an amendment,
-                        # but the timeline says it happened, once per edition.
-                        for item in (difference or {}).get("succeeded", []) + (difference or {}).get("renamed", []):
-                            pair = {"label": item["label"], "before": item["before"], "after": item["after"],
-                                    "date": item.get("date", ""), "source": item.get("source", "ODS"),
-                                    "kind": "succeeded" if item in (difference or {}).get("succeeded", []) else "renamed"}
-                            if item["label"] != "Organisation type" and pair not in entry["reorganised"]:
-                                entry["reorganised"].append(pair)
-                        continue
-                    edits = _only_rewordings(difference)
-                    in_edition = wide.get(event["edition"], {})
-                    if edits and all(edit in in_edition for edit in edits):
-                        entry["wide"].append({
-                            "reference": event["reference"],
-                            "edits": [{"field": f, "removed": r, "added": a} for f, r, a in sorted(set(edits))],
-                            "agreements": max(in_edition[edit] for edit in edits),
-                        })
-                        continue
-                    fields = _labels(difference)
-                    details = _details(difference, redlines=True)
+            key = (event["reference"], event["from"], event["to"])
+            if event["kind"] == "amended" and key in differences:
+                difference = differences[key]
+                # Naming the fields is the difference between "this was
+                # edited" and "the data controller was changed" — the
+                # second is what a reader came for, and the register itself
+                # never says it.
+                if not _material(difference):
+                    # A rename or an ODS succession is not an amendment,
+                    # but the timeline says it happened, once per edition.
+                    for item in (difference or {}).get("succeeded", []) + (difference or {}).get("renamed", []):
+                        pair = {"label": item["label"], "before": item["before"], "after": item["after"],
+                                "date": item.get("date", ""), "source": item.get("source", "ODS"),
+                                "kind": "succeeded" if item in (difference or {}).get("succeeded", []) else "renamed"}
+                        if item["label"] != "Organisation type" and pair not in entry["reorganised"]:
+                            entry["reorganised"].append(pair)
+                    continue
+                edits = _only_rewordings(difference)
+                in_edition = wide.get(event["edition"], {})
+                if edits and all(edit in in_edition for edit in edits):
+                    entry["wide"].append({
+                        "reference": event["reference"],
+                        "edits": [{"field": f, "removed": r, "added": a} for f, r, a in sorted(set(edits))],
+                        "agreements": max(in_edition[edit] for edit in edits),
+                    })
+                    continue
+                fields = _labels(difference)
+                details = _details(difference, redlines=True)
             entry[event["kind"]].append({"reference": event["reference"], "fields": fields, "details": details})
         for entry in by_edition.values():
             for kind in ("added", "amended", "removed"):
@@ -470,3 +466,79 @@ def history(
         else:
             entry["first_versions"] = []
     return index
+
+
+def diff(
+    register_slug: str,
+    edition: str,
+    previous_edition: str | None = None,
+    alias_map: dict[str, str] | None = None,
+) -> dict:
+    """Agreement-version level changes between `edition` and the one before it."""
+    held = facts.stored_editions(register_slug)
+    if edition not in held:
+        raise SystemExit(f"no stored facts for the {edition} edition of {register_slug}")
+    if previous_edition is None:
+        position = held.index(edition)
+        previous_edition = held[position - 1] if position else None
+    if previous_edition is None:
+        return not_comparable("first-edition")
+
+    indexes = _indexes(register_slug, (previous_edition, edition))
+    work = _work()
+    _ask_edition(work, previous_edition, edition, indexes)
+    rows, differences = _read(register_slug, work, indexes, _maps(alias_map))
+    return _edition_changes(previous_edition, edition, indexes, rows, differences)
+
+
+def history(
+    register_slug: str,
+    alias_map: dict[str, str] | None = None,
+    wide: dict[str, dict[tuple, int]] | None = None,
+) -> dict[str, dict]:
+    """When each agreement and each of its versions appeared or changed.
+
+    `{base_reference: {"first_edition", "first_is_earliest", "events"}}`, with
+    one event per edition in which something happened, oldest first so it reads
+    as a timeline. Events are grouped by edition rather than one per version:
+    NHS England restates every version of an agreement at once often enough
+    that the ungrouped list runs to sixteen near-identical lines for one edit.
+
+    An agreement present in the earliest edition held may well be older than
+    that, so `first_is_earliest` marks the ones whose start we cannot see.
+
+    `wide` is `{edition: {rewording: agreements}}`, the register-wide edits
+    `diff` found in each edition. An amendment that is only those is recorded
+    under `wide`, not `amended`.
+    """
+    editions = facts.stored_editions(register_slug)
+    if not editions:
+        return {}
+    indexes = _indexes(register_slug, editions)
+    work = _work()
+    index, pending = _timeline(editions, indexes, work)
+    _, differences = _read(register_slug, work, indexes, _maps(alias_map))
+    return _history(index, pending, differences, wide or {})
+
+
+def every_edition(register_slug: str, alias_map: dict[str, str] | None = None) -> tuple[dict[str, dict], dict[str, dict]]:
+    """`({edition: diff}, history)` for every edition held, reading each agreement once.
+
+    The same answers as `diff` for each edition after the first and `history`
+    with their register-wide edits, for a build, which wants them all: asked
+    one edition at a time, an agreement amended in many editions is read once
+    for each of them.
+    """
+    editions = facts.stored_editions(register_slug)
+    if not editions:
+        return {}, {}
+    indexes = _indexes(register_slug, editions)
+    pairs = list(zip(editions, editions[1:]))
+    work = _work()
+    for previous, edition in pairs:
+        _ask_edition(work, previous, edition, indexes)
+    index, pending = _timeline(editions, indexes, work)
+    rows, differences = _read(register_slug, work, indexes, _maps(alias_map))
+    diffs = {edition: _edition_changes(previous, edition, indexes, rows, differences) for previous, edition in pairs}
+    timeline = _history(index, pending, differences, {edition: d["wide_ops"] for edition, d in diffs.items()})
+    return {editions[0]: not_comparable("first-edition"), **diffs}, timeline

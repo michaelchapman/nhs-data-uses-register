@@ -109,16 +109,14 @@ def main() -> None:
     held = facts.stored_editions(register.slug)
     if edition not in held:
         held = []
-    # Every comparison made below, kept for the ones that come round again:
-    # see `changes._compare`.
-    memo: dict = {}
-    if edition in held:
-        changes = changes_module.diff(register.slug, edition, memo=memo)
+    # Every edition's changes and every agreement's history, from one read of
+    # each agreement in the store.
+    if held:
+        by_edition_changes, history = changes_module.every_edition(register.slug)
+        changes = by_edition_changes[edition]
     else:
-        changes = {
-            "comparable": False, "reason": "not-ingested", "previous_edition": None,
-            "skipped": [], "added": [], "amended": [], "removed": [], "wide_edits": [], "wide_ops": {},
-        }
+        by_edition_changes, history = {}, {}
+        changes = changes_module.not_comparable("not-ingested")
     if changes["comparable"]:
         print(
             f"  vs {changes['previous_edition']}: +{len(changes['added'])} added, "
@@ -147,10 +145,7 @@ def main() -> None:
     # only the newest.
     changes_history = []
     for held_edition in held[1:]:
-        # The edition being built was compared above; the same answer serves.
-        history_entry = changes if held_edition == edition else changes_module.diff(
-            register.slug, held_edition, memo=memo
-        )
+        history_entry = by_edition_changes[held_edition]
         history_entry["edition"] = held_edition
         changes_history.append(history_entry)
     meta = {
@@ -175,10 +170,6 @@ def main() -> None:
         "missing_editions": changes_module.missing_editions(held),
     }
 
-    # An agreement's history reaches back over every edition the store holds.
-    history = changes_module.history(
-        register.slug, wide={entry["edition"]: entry["wide_ops"] for entry in changes_history}, memo=memo
-    ) if held else {}
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history
     )

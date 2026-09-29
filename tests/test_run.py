@@ -38,9 +38,9 @@ class WorkbookBuild(unittest.TestCase):
             out = Path(directory) / "site"
             argv = ["run", "--workbook", str(workbook), "--output", str(out)]
             with mock.patch.object(sys, "argv", argv), mock.patch("builtins.print"), \
-                    mock.patch.object(run.changes_module, "history") as history:
+                    mock.patch.object(run.changes_module, "every_edition") as every_edition:
                 run.main()
-            history.assert_not_called()
+            every_edition.assert_not_called()
             # Only the workbook's own changes page: none for the store's editions.
             self.assertEqual([p.name for p in (out / "changes").iterdir()], ["index.html"])
             changes = (out / "changes" / "index.html").read_text(encoding="utf-8")
