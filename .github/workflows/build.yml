@@ -25,37 +25,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - run: pip install -r requirements.txt
-
-      - name: Run tests
-        run: python -m unittest
-
-      # Advisory: findings show as warnings on the run but never stop a deploy.
-      - name: Check for LLM-cliché phrasing
-        run: python -m pipeline.clichecheck --advisory
-
+      # Tests, lint, type check, build and link check, as on every pull request.
       # The site is served from the root of its custom domain, set in the
       # repository's Pages settings. GitHub redirects the old address,
       # <owner>.github.io/<repo>/, there. To serve it as project pages again,
-      # set SITE_URL to https://<owner>.github.io and SITE_BASE_PATH to /<repo>
-      # here and in the link check.
-      - name: Build site
-        env:
-          SITE_URL: https://healthdatauses.uk
-          SITE_BASE_PATH: ""
-        run: python -m pipeline.run
-
-      # After the build, before anything is uploaded: a page that links to a
-      # page that does not exist should stop the deploy, not reach readers.
-      - name: Check internal links
-        env:
-          SITE_BASE_PATH: ""
-        run: python -m pipeline.linkcheck _site --base-path "$SITE_BASE_PATH"
+      # set site-url to https://<owner>.github.io and base-path to /<repo>.
+      - uses: ./.github/actions/check
+        with:
+          site-url: https://healthdatauses.uk
+          base-path: ""
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
