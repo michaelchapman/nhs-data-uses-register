@@ -115,6 +115,19 @@ def ingest_one(path: Path, register: sources.Register, source_url: str | None) -
     }
 
 
+def keep_recorded(recorded: dict | None, entry: dict, source_url: str | None) -> dict:
+    """The manifest entry to keep for an edition that may already be recorded.
+
+    The same workbook again changes nothing: its entry stays as first written,
+    including when it was ingested, which the site shows as the date the
+    edition was retrieved. Only a `--source-url` given this time replaces the
+    one recorded. A different workbook for the same edition is a new entry.
+    """
+    if not recorded or recorded.get("sha256") != entry["sha256"]:
+        return entry
+    return {**recorded, "source_url": source_url} if source_url else recorded
+
+
 def report_changes(register_slug: str, edition: str) -> None:
     """What this edition changed against the one before it."""
     result = changes.diff(register_slug, edition)
@@ -151,6 +164,7 @@ def main(argv: list[str] | None = None) -> None:
     for path in ordered:
         register = resolve_register(path, args.register)
         entry = ingest_one(path, register, args.source_url)
+        entry = keep_recorded(facts.manifest_entry(register.slug, entry["edition"]), entry, args.source_url)
         facts.upsert(register.slug, entry)
         report_changes(register.slug, entry["edition"])
         registers.add(register.slug)

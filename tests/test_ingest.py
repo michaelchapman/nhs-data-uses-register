@@ -73,6 +73,25 @@ class Ingest(unittest.TestCase):
         self.run_ingest("--source-url", "https://example.test/archived.xlsx", str(self.workbook("august2026")))
         self.assertEqual(facts.manifest_entry(REGISTER, "august2026")["source_url"], "https://example.test/archived.xlsx")
 
+    def test_ingesting_the_same_workbook_again_keeps_when_it_was_first_ingested(self):
+        path = self.workbook("august2026")
+        self.run_ingest(str(path))
+        # Dated well before any run, so a rewritten entry could not match it.
+        first = {**facts.manifest_entry(REGISTER, "august2026"), "ingested": "2000-01-01T00:00:00+00:00"}
+        facts.upsert(REGISTER, first)
+        self.run_ingest(str(path))
+        self.assertEqual(facts.manifest_entry(REGISTER, "august2026"), first)
+
+    def test_a_source_url_given_again_replaces_only_the_url(self):
+        path = self.workbook("august2026")
+        self.run_ingest(str(path))
+        first = facts.manifest_entry(REGISTER, "august2026")
+        self.run_ingest("--source-url", "https://example.test/archived.xlsx", str(path))
+        self.assertEqual(
+            facts.manifest_entry(REGISTER, "august2026"),
+            {**first, "source_url": "https://example.test/archived.xlsx"},
+        )
+
     def test_a_later_edition_reports_what_it_changed(self):
         self.run_ingest(str(self.workbook("july2026")))
         output = self.run_ingest(str(self.workbook("august2026")))
@@ -81,8 +100,8 @@ class Ingest(unittest.TestCase):
     def test_ingesting_the_same_edition_twice_writes_nothing_the_second_time(self):
         path = self.workbook("august2026")
         self.run_ingest(str(path))
-        before = {p: p.stat().st_mtime_ns for p in facts.register_dir(REGISTER).rglob("*.json")
-                  if p.name != "manifest.json"}
+        before = {p: p.stat().st_mtime_ns for p in facts.register_dir(REGISTER).rglob("*.json")}
+        self.assertIn(facts.manifest_path(REGISTER), before)
         output = self.run_ingest(str(path))
         self.assertIn("facts -> 0 new version states in 0 agreement file(s)", output)
         self.assertIn("0 newly released file(s)", output)
