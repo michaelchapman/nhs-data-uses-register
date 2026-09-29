@@ -25,9 +25,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from . import aliases
-from . import facts
-from . import sources
+from . import aliases, facts, sources
 
 DROP_TOKENS = {"THE", "LIMITED", "LTD", "LLC", "LLP", "PLC", "AND", "&", "CO", "OF"}
 CODE_RE = re.compile(r"-\s*([A-Z0-9]{2,6})$")

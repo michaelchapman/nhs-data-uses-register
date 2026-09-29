@@ -101,8 +101,8 @@ def trim(record: dict) -> dict:
         **_dates(organisation.get("Date")),
         "roles": sorted(roles, key=lambda r: (not r["primary"], r["id"])),
         "icb": in_icb[0] if in_icb else "",
-        "successors": sorted((l for l in links if l["type"] == "successor"), key=lambda l: l["code"]),
-        "predecessors": sorted((l for l in links if l["type"] == "predecessor"), key=lambda l: l["code"]),
+        "successors": sorted((link for link in links if link["type"] == "successor"), key=lambda link: link["code"]),
+        "predecessors": sorted((link for link in links if link["type"] == "predecessor"), key=lambda link: link["code"]),
     }
 
 
@@ -166,7 +166,7 @@ def gather(codes, fetcher=fetch, depth: int = MAX_DEPTH) -> dict[str, dict]:
             if record is None:
                 continue
             held[code] = record
-            following |= {l["code"] for l in record["successors"] + record["predecessors"]}
+            following |= {link["code"] for link in record["successors"] + record["predecessors"]}
             if record["icb"]:
                 following.add(record["icb"])
         frontier = sorted(following - set(held))

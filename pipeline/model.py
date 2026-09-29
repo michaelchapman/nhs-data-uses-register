@@ -226,8 +226,10 @@ def _group_organisations(agreements: list[dict], rules: Rules) -> list[dict]:
         for controller, controller_slug in zip(agreement["controllers"], agreement["controller_slugs"]):
             if not controller_slug or controller_slug == applicant_slug:
                 continue
-            entry = by_slug.get(controller_slug)
-            if entry is None:
+            found = by_slug.get(controller_slug)
+            if found is not None:
+                entry = found
+            else:
                 canonical_controller = canonical_by_slug.get(controller_slug) or aliases.resolve(controller, alias_map)
                 entry = {
                     "name": canonical_controller,

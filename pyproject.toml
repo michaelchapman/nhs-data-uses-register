@@ -1,0 +1,24 @@
+# Settings for the checks CI runs. The site is built with `python -m
+# pipeline.run`; what it needs is in requirements.txt, and the checkers
+# themselves are pinned in requirements-dev.txt.
+
+[tool.ruff]
+# The oldest Python the pipeline is run on; CI uses 3.12.
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+# Named in full rather than left to ruff's defaults, which change between
+# releases: pyflakes, the pycodestyle errors that are not matters of style,
+# import order, bugbear and pyupgrade.
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+ignore = [
+    "E731",  # `order = lambda item: ...` is how this code names a sort key it uses twice
+    "B905",  # zip(xs, xs[1:]) pairs neighbours, so it can never be strict
+]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["pipeline"]
+# openpyxl publishes no type information.
+ignore_missing_imports = true

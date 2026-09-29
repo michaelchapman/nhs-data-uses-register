@@ -10,18 +10,11 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases
-from . import compare
-from . import relations
-from . import ods
-from . import privacy
-from . import search
-from . import sectors
-from .names import display_name, strip_code
-from .rules import Rules
-from . import sources
+from . import aliases, compare, ods, privacy, relations, search, sectors, sources
 from .model import archive_views, organisation_slug
+from .names import display_name, strip_code
 from .references import slugify
+from .rules import Rules
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Path(__file__).resolve().parent / "templates"
@@ -236,7 +229,7 @@ def build(
         "current_edition": meta["edition"],
         "stats": stats,
         "changes": changes,
-        "build_time": dt.datetime.now(dt.timezone.utc).strftime("%d %B %Y"),
+        "build_time": dt.datetime.now(dt.UTC).strftime("%d %B %Y"),
     }
 
     def render(template: str, path: str, **kwargs) -> None:

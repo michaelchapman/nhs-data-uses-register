@@ -167,6 +167,18 @@ class Changes(unittest.TestCase):
 
     LONG_BASIS = "Health and Social Care Act 2012 - s261(1) and s261(2)(b)(ii); Common law duty of confidentiality applies"
 
+    def test_register_wide_edits_are_listed_most_versions_first(self):
+        # A retitled v1 is found before the two versions whose legal basis
+        # changed, and is listed after them.
+        before = self.with_legal_basis(self.versions, self.LONG_BASIS)
+        after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))
+        after[FIRST][0]["title"] = "Maternity research"
+        self.record(("july2026", before), ("august2026", after))
+        with mock.patch.object(changes, "WIDE_EDIT_AGREEMENTS", 1):
+            wide_edits = changes.diff(REGISTER, "august2026")["wide_edits"]
+        self.assertEqual([len(w["versions"]) for w in wide_edits], [2, 1])
+        self.assertEqual(wide_edits[1]["edits"], [{"field": "Title", "removed": "study", "added": "research"}])
+
     def test_a_long_value_reworded_is_shown_by_the_words_that_changed(self):
         before = self.with_legal_basis(self.versions, self.LONG_BASIS)
         after = self.with_legal_basis(self.versions, self.LONG_BASIS.replace("s261(1) and ", ""))

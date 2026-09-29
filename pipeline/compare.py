@@ -20,6 +20,7 @@ import functools
 import re
 import unicodedata
 from collections import Counter
+from typing import Any
 
 from . import aliases
 
@@ -344,7 +345,9 @@ def membership_renames(
                 scored.append((jaccard, was, now))
     scored.sort(reverse=True)
 
-    renames, used_was, used_now = [], set(), set()
+    renames: list[dict[str, Any]] = []
+    used_was: set[str] = set()
+    used_now: set[str] = set()
     for jaccard, was, now in scored:
         if was in used_was or now in used_now:
             continue
@@ -459,7 +462,8 @@ def _list_change(old: set[str], new: set[str], alias_map: dict[str, str] | None 
     alias_map = alias_map or {}
     # Each name's key once: a dataset list runs to hundreds of names, and
     # deriving keys inside the loops below made this quadratic.
-    old_by, new_by = {}, {}
+    old_by: dict[str, list[str]] = {}
+    new_by: dict[str, list[str]] = {}
     for names, by in ((old, old_by), (new, new_by)):
         for name in names:
             by.setdefault(normalise(aliases.resolve(name, alias_map)), []).append(name)
@@ -488,7 +492,9 @@ def _lineage_pairs(removed: list[str], added: list[str], lineage) -> tuple[list[
     nine Cheshire and Merseyside CCGs becoming nine sub-ICB locations read as
     nine successions, not eighty-one.
     """
-    pairs, gone, came = [], set(), set()
+    pairs: list[dict] = []
+    gone: set[str] = set()
+    came: set[str] = set()
     if lineage is None:
         return pairs, gone, came
     for was in removed:
@@ -531,7 +537,13 @@ def compare_versions(
     either. Two names ODS gives one organisation, such as an ICB and one of its
     sub-ICB locations, are a rename.
     """
-    scalars, lists, prose, unchanged, cosmetic, renamed, succeeded = [], [], [], [], [], [], []
+    scalars: list[dict] = []
+    lists: list[dict] = []
+    prose: list[dict] = []
+    unchanged: list[str] = []
+    cosmetic: list[str] = []
+    renamed: list[dict] = []
+    succeeded: list[dict] = []
     if organisation_aliases is None:
         organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
     applicant_moved = False

@@ -25,6 +25,7 @@ are told apart. See docs/organisation-names.md, "NHS reorganisations (ODS)".
 from __future__ import annotations
 
 import json
+from collections.abc import Iterable
 from pathlib import Path
 
 from . import aliases, ods
@@ -84,7 +85,7 @@ class Lineage:
         codes: list[dict],
         organisations: dict[str, dict],
         alias_map: dict[str, str],
-        successions: list[dict] = (),
+        successions: Iterable[dict] = (),
     ):
         self.organisations = organisations
         self.alias_map = alias_map
@@ -276,6 +277,8 @@ class Lineage:
         names = [e["name"] for e in self.entries.values()] + [s["from"] for s in self.successions.values()]
         for name in names:
             node = self.node(name)
+            if node is None:
+                continue
             own = self.identity(node)
             if own == identity:
                 continue

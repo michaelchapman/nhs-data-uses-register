@@ -40,7 +40,8 @@ def register_names(register_slug: str) -> tuple[Counter, Counter]:
     times one name replaced another on a version between one stored state and
     the next, as applicant or as the only data controller to change.
     """
-    names, swaps = Counter(), Counter()
+    names: Counter[str] = Counter()
+    swaps: Counter[tuple[str, str]] = Counter()
     excluded = exclusions.bases()
     for path in facts.agreements_dir(register_slug).glob("*.json"):
         record = json.loads(path.read_text(encoding="utf-8"))
@@ -75,7 +76,7 @@ def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, 
             records[code] = fetch(code)
         return records[code]
 
-    unique = {}
+    unique: dict[str, str] = {}
     for name in sorted(names, key=lambda n: (n != n.upper(), n)):
         unique.setdefault(aliases.name_key(name), name)
 
@@ -113,7 +114,7 @@ def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, 
 def bridge_ccgs(entries: dict, unique: dict, swaps, record) -> None:
     """The CCG bridge: ODS kept the record and changed its name, so the code
     comes from the name that replaced it on the register."""
-    replaced_by = defaultdict(Counter)
+    replaced_by: defaultdict[str, Counter[str]] = defaultdict(Counter)
     for (was, now), count in swaps.items():
         if CCG_NAME.search(was) and CODE_IN_NAME.search(now):
             replaced_by[aliases.name_key(was)][now] += count
@@ -121,7 +122,10 @@ def bridge_ccgs(entries: dict, unique: dict, swaps, record) -> None:
         if key in entries or len(targets) != 1:
             continue
         (now, count), = targets.items()
-        code = CODE_IN_NAME.search(now)[1]
+        match = CODE_IN_NAME.search(now)
+        if match is None:  # every name kept above has a code; this is for the type checker
+            continue
+        code = match[1]
         roles = {r["id"] for r in (record(code) or {}).get("roles", [])}
         if {ods.CCG, ods.SUB_ICB_LOCATION} <= roles:
             entries[key] = {

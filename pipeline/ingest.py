@@ -19,9 +19,7 @@ import datetime as dt
 import hashlib
 from pathlib import Path
 
-from . import changes
-from . import facts
-from . import sources
+from . import changes, facts, sources
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -63,7 +61,7 @@ def ingest_one(path: Path, register: sources.Register, source_url: str | None) -
     edition = sources.parse_edition(path.stem)
     payload = path.read_bytes()
     digest = hashlib.sha256(payload).hexdigest()
-    ingested = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    ingested = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
     url = source_url or sources.asset_url(path.name)
 
     print(f"{path.name} ({edition}, {len(payload) / 1e6:.1f} MB)")

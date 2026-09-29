@@ -88,8 +88,14 @@ from pathlib import Path
 from . import sources
 from .model import assemble, build_agreement
 from .records import (
-    FILE_RELEASE, RELEASE_ATTRIBUTES, attribute_key, expected_attributes, known_organisation_names, resplit_list,
-    summarise_releases, tidy_version,
+    FILE_RELEASE,
+    RELEASE_ATTRIBUTES,
+    attribute_key,
+    expected_attributes,
+    known_organisation_names,
+    resplit_list,
+    summarise_releases,
+    tidy_version,
 )
 from .references import base_and_version, slugify, version_key
 from .rules import Rules
@@ -228,10 +234,8 @@ def append_edition(register_slug: str, edition: str, versions_by_base: dict[str,
                 stored["versions"].append(record)
             state = canonical_state(version)
             wanted = _key(state)
-            for position, existing in enumerate(record["states"]):
-                if _key(existing) == wanted:
-                    break
-            else:
+            position = next((i for i, existing in enumerate(record["states"]) if _key(existing) == wanted), None)
+            if position is None:
                 position = len(record["states"])
                 record["states"].append(state)
                 counts["new_states"] += 1

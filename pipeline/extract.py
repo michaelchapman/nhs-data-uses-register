@@ -23,7 +23,15 @@ import openpyxl
 
 from . import sources
 from .model import assemble
-from .records import FILE_RELEASE, clean, clean_line, known_organisation_names, split_list, summarise_releases, tidy_version
+from .records import (
+    FILE_RELEASE,
+    clean,
+    clean_line,
+    known_organisation_names,
+    split_list,
+    summarise_releases,
+    tidy_version,
+)
 from .references import base_and_version
 from .rules import Rules
 

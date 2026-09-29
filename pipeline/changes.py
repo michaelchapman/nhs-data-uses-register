@@ -34,9 +34,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from . import compare
-from . import facts
-from . import sources
+from . import compare, facts, sources
 from .references import base_and_version, version_key
 from .rules import Rules
 
@@ -326,16 +324,16 @@ def _edition_changes(previous: str, edition: str, indexes: dict, rows: dict, dif
         })
 
     order = lambda item: (item["org"].lower(), item["reference"])
-    wide_edits = sorted(
+    wide_edits = list(
         (
             {
                 "edits": [{"field": field, "removed": gone, "added": came} for field, gone, came in edits],
                 "agreements": len({item["base"] for item in items}),
                 "versions": sorted(items, key=order),
             }
-            for edits, items in wide.items()
+            # Most versions first; a tie keeps the order the edits were found in.
+            for edits, items in sorted(wide.items(), key=lambda pair: -len(pair[1]))
         ),
-        key=lambda w: -len(w["versions"]),
     )
     return {
         "comparable": True,
@@ -439,8 +437,8 @@ def _history(index: dict, pending: dict, differences: dict, wide: dict) -> dict[
             # One line per register-wide edit, naming every version it touched.
             merged: dict[tuple, dict] = {}
             for item in entry["wide"]:
-                key = tuple((e["field"], e["removed"], e["added"]) for e in item["edits"])
-                merged.setdefault(key, {**item, "references": []})["references"].append(item["reference"])
+                rewording = tuple((e["field"], e["removed"], e["added"]) for e in item["edits"])
+                merged.setdefault(rewording, {**item, "references": []})["references"].append(item["reference"])
             entry["wide"] = list(merged.values())
             # The union across the edition's amendments, for a one-line summary
             # when several versions were restated together.
