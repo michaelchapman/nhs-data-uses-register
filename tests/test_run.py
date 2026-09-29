@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from pipeline import run
+from pipeline import facts, run
 
 from .fixtures import workbook_bytes
 
@@ -30,6 +30,23 @@ class WorkbookBuild(unittest.TestCase):
             after = tree(run.ROOT / "data")
             self.assertTrue((out / "index.html").exists())
         self.assertEqual(before, after)
+
+    def test_a_one_off_workbook_build_shows_none_of_the_stores_history(self):
+        with tempfile.TemporaryDirectory() as directory:
+            workbook = Path(directory) / "datausesregister_october2099.xlsx"
+            workbook.write_bytes(workbook_bytes())
+            out = Path(directory) / "site"
+            argv = ["run", "--workbook", str(workbook), "--output", str(out)]
+            with mock.patch.object(sys, "argv", argv), mock.patch("builtins.print"), \
+                    mock.patch.object(run.changes_module, "history") as history:
+                run.main()
+            history.assert_not_called()
+            # Only the workbook's own changes page: none for the store's editions.
+            self.assertEqual([p.name for p in (out / "changes").iterdir()], ["index.html"])
+            changes = (out / "changes" / "index.html").read_text(encoding="utf-8")
+            self.assertNotIn("Editions processed", changes)
+            for edition in facts.stored_editions("data-uses-register"):
+                self.assertNotIn(f"/changes/{edition}/", changes)
 
 
 if __name__ == "__main__":
