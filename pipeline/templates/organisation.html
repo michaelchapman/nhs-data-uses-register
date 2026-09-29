@@ -93,7 +93,7 @@
 <p class="result-count" role="status" data-filter-count>Showing all {{ organisation.agreement_count|commas }} agreements.</p>
 {% endif %}
 <div class="table-scroll">
-<table class="data-table sortable" id="organisation-agreements">
+<table class="data-table sortable stack" id="organisation-agreements">
   <caption class="visually-hidden">Agreements held by {{ organisation.name|org }}</caption>
   <thead><tr><th scope="col">Agreement</th><th scope="col" class="num">Datasets</th><th scope="col" class="num">Files</th><th scope="col">Latest term</th><th scope="col">Status</th><th scope="col">Commercial</th></tr></thead>
   <tbody>
@@ -102,11 +102,11 @@
         data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}" data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td class="num">{{ a.dataset_names|length }}</td>
-      <td class="num">{{ a.files_released|commas }}</td>
-      <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td class="num" data-label="Datasets">{{ a.dataset_names|length }}</td>
+      <td class="num" data-label="Files">{{ a.files_released|commas }}</td>
+      <td class="nowrap" data-label="Latest term" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       {{ status_cell(a, meta.as_of) }}
-      <td>{{ a.commercial or "—" }}</td>
+      <td data-label="Commercial">{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}
   </tbody>
@@ -118,7 +118,7 @@
 <h2>{{ "Named as a data controller" if controller_only else "Also listed as a data controller" }}</h2>
 <p class="hint">Agreements where {{ organisation.name|org }} is named as a data controller rather than the applicant. This is matched from the free-text controller field on each agreement, so a controller recorded under a different spelling of the name won't appear here.</p>
 <div class="table-scroll">
-<table class="data-table">
+<table class="data-table stack">
   <caption class="visually-hidden">Agreements where {{ organisation.name|org }} is a data controller</caption>
   <thead><tr><th scope="col">Agreement</th><th scope="col">Applicant</th><th scope="col">Latest term</th><th scope="col">Status</th></tr></thead>
   <tbody>
@@ -126,8 +126,8 @@
     <tr>
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>
-      <td class="nowrap">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td data-label="Applicant">{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org }}{% endif %}</td>
+      <td class="nowrap" data-label="Latest term">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       {{ status_cell(a, meta.as_of) }}
     </tr>
   {% endfor %}
