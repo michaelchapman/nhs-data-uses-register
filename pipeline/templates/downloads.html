@@ -1,12 +1,25 @@
 {% extends "base.html" %}
 {% block title %}Get the data — {{ meta.site_name }}{% endblock %}
-{% block description %}Where to get the NHS England Data Uses Register itself, and this site's archive of every edition, for your own analysis.{% endblock %}
+{% block description %}The NHS England Data Uses Register itself, a CSV of every agreement as this site reads it, and this site's archive of every edition, for your own analysis.{% endblock %}
 {% block content %}
 <h1>Get the data</h1>
-<p class="lede">This site publishes pages, not data files. For analysis, start from the register itself, or from this site's archive of every edition.</p>
+<p class="lede">For analysis, start from the register itself, from this site's table of agreements, or from its archive of every edition.</p>
 
 <h2>The register</h2>
 <p>NHS England publishes the Data Uses Register monthly as a spreadsheet workbook, with agreements, datasets and file releases on three sheets. It is the authoritative source. The {{ meta.edition|edition }} edition, which this site was built from, is <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>, listed on the <a href="{{ meta.source_page }}">Data Uses Register page</a>.</p>
+
+<section class="download" id="agreements-csv">
+<h2>Agreements, as this site reads them</h2>
+{% set size = agreements_csv.bytes %}
+<p><a href="{{ meta.base_path }}/downloads/agreements.csv" download>agreements.csv</a> <span class="filesize">(CSV, {{ agreements_csv.rows|commas }} rows, {% if size < 1000000 %}{{ (size / 1000)|round|int }} KB{% else %}{{ "%.1f"|format(size / 1000000) }} MB{% endif %})</span></p>
+<p>One row per agreement in the {{ meta.edition|edition }} edition, with what this site adds to the workbook: the organisation page each applicant and data controller is listed under, after merged spellings and NHS reorganisations; its sector; whether the agreement is in term; the bases on which confidential data may flow and whether patient opt-outs were applied; and each dataset under one name. The purpose text is left out, as are agreements no longer in the register: the workbook holds the first, and the second are in no count on this site.</p>
+<details class="prose-block">
+  <summary><h3>Columns</h3></summary>
+  <dl class="columns">
+    {% for name, meaning in csv_columns %}<dt><code>{{ name }}</code></dt><dd>{{ meaning }}</dd>{% endfor %}
+  </dl>
+</details>
+</section>
 
 <h2>Every edition, as this site holds it</h2>
 <p>The site is built from a store of what every edition held since {{ meta.editions[0].edition|edition if meta.editions else "the first edition ingested" }}: one JSON file per agreement, with every version and each state it was published in, and one per agreement for its file releases. It is in the site's <a href="{{ meta.repo_url }}/tree/main/data/facts">code repository</a>, with the code that reads the workbooks and builds these pages, so you can see how each page is made and build it yourself.</p>

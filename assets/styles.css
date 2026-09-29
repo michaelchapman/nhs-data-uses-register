@@ -67,14 +67,20 @@ a:visited { color: var(--link-visited); }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible,
 button:focus-visible,
-input:focus-visible,
-select:focus-visible,
 summary:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
   background: var(--focus);
   color: #000;
   text-decoration: none;
+}
+/* A text box or a menu keeps its own colours while it has focus, since it is
+   read and typed in then: the ring goes round it instead. */
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px var(--ink);
 }
 
 .skip-link {
@@ -157,6 +163,14 @@ p, li { max-width: 68ch; }
 .key-facts dt { font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-muted); }
 .key-facts dd { margin: 0.25rem 0 0; font-weight: 600; }
 .key-facts.compact { margin: 0.75rem 0; }
+/* Two to a row on a phone, where one each took a whole screen before the page
+   reached what the agreement is for. */
+@media (max-width: 40rem) {
+  .key-facts, .key-facts.wide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .key-facts > div { padding: 0.5rem 0.75rem; }
+  .key-facts dt { font-size: 0.75rem; }
+  .key-facts dd { overflow-wrap: anywhere; }
+}
 .value-list { margin: 0; padding-left: 1.125rem; font-weight: 400; }
 .value-list li { padding: 0.125rem 0; }
 
@@ -186,6 +200,27 @@ p, li { max-width: 68ch; }
 .data-table th[scope="row"] { font-weight: 600; min-width: 16rem; }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .nowrap { white-space: nowrap; }
+/* A wide table on a phone: each row a card, each cell a line labelled with its
+   column (`data-label`), and the headings a row of sort buttons. Without this
+   the agreements table is three screens wide. */
+@media (max-width: 40rem) {
+  .data-table.stack, .data-table.stack thead, .data-table.stack tbody,
+  .data-table.stack tr, .data-table.stack th, .data-table.stack td { display: block; }
+  .data-table.stack tr[hidden] { display: none; }
+  .data-table.stack thead tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; padding: 0.5rem 1rem; background: var(--bg-muted); border-bottom: 2px solid var(--line); }
+  .data-table.stack thead tr::before { content: "Sort by"; color: var(--ink-muted); font-size: 0.875rem; }
+  .data-table.stack thead th { padding: 0; border: 0; background: none; }
+  /* Short values two to a line; the title, a linked name and a term take a
+     line each. `dense` lets a short value fill the gap a long one leaves. */
+  .data-table.stack tbody tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: dense; column-gap: 1rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--line); }
+  .data-table.stack tbody tr[hidden] { display: none; }
+  .data-table.stack tbody th, .data-table.stack tbody td:has(> a), .data-table.stack tbody td.nowrap { grid-column: 1 / -1; }
+  .data-table.stack tbody tr:last-child { border-bottom: 0; }
+  .data-table.stack tbody th, .data-table.stack tbody td { padding: 0.125rem 0; border: 0; min-width: 0; text-align: left; }
+  .data-table.stack tbody th { margin-bottom: 0.25rem; }
+  .data-table.stack td[data-label]::before { content: attr(data-label) ": "; color: var(--ink-muted); font-size: 0.875rem; }
+  .data-table.stack .nowrap { white-space: normal; }
+}
 .ref, .ref-cell { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8125rem; font-weight: 400; color: var(--ink-muted); }
 
 /* Filters ----------------------------------------------------------------- */
@@ -205,6 +240,14 @@ p, li { max-width: 68ch; }
 .filters button { font: inherit; padding: 0.5rem 1rem; border: 2px solid var(--ink); background: var(--bg); color: var(--ink); border-radius: 3px; cursor: pointer; }
 .filters button:hover { background: var(--ink); color: var(--bg); }
 .filter-actions { margin: 0; }
+/* Lays out as if it were not there, except on a phone, where assets/filter.js
+   folds it behind a button. */
+.filter-more { display: contents; }
+.filters .filter-toggle { display: none; }
+@media (max-width: 40rem) {
+  .filters .filter-toggle { display: inline-block; }
+  .filter-more.is-folded { display: none; }
+}
 .result-count { font-weight: 600; margin: 0 0 0.5rem; }
 .hint { margin: 0; }
 
@@ -280,6 +323,8 @@ td .tag { white-space: nowrap; }
 .download h2 { margin-bottom: 0.25rem; }
 .filesize { font-weight: 400; font-size: 0.9375rem; color: var(--ink-muted); }
 .columns { font-size: 0.875rem; color: var(--ink-muted); max-width: 80ch; }
+dl.columns dt { margin-top: 0.5rem; color: var(--ink); }
+dl.columns dd { margin: 0; }
 
 /* Footer ------------------------------------------------------------------ */
 

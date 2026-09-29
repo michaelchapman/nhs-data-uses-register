@@ -19,6 +19,9 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
+- **`downloads/agreements.csv`** — one row per agreement, with the merged
+  organisation pages, sector, status, confidential data bases and opt-outs the
+  site works out, for analysis elsewhere.
 
 Pages are plain semantic HTML with no cookies, analytics or third-party
 requests. Table filtering and sorting are progressive enhancements: every row is in the
@@ -139,6 +142,7 @@ pipeline/rules.py               the alias, lineage and exclusion files, read onc
 pipeline/changes.py             what changed between editions, worked out from the facts
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site
+pipeline/export.py              the agreements CSV on the downloads page
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/privacy.py             confidential data and opt-outs, for the agreements list's filters
 pipeline/aliases.py             applies reviewed organisation and dataset merges

@@ -138,9 +138,37 @@
     var resetLabel = reset ? reset.textContent.trim().toLowerCase() : "";
     var total = rows.length;
     var timer;
+
+    // Filters beyond the search box, folded behind a button on a phone (the
+    // stylesheet shows the button, and lets the fold take effect, only there).
+    // The button says how many are on, so a folded filter is never a hidden one.
+    var more = form.querySelector("[data-filter-more]");
+    var toggle = null;
+    if (more) {
+      toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "filter-toggle";
+      toggle.setAttribute("aria-controls", more.id);
+      more.parentNode.insertBefore(toggle, more);
+      more.classList.add("is-folded");
+      toggle.addEventListener("click", function () {
+        more.classList.toggle("is-folded");
+        labelToggle();
+      });
+      labelToggle();
+    }
+    function labelToggle() {
+      if (!toggle) return;
+      var folded = more.classList.contains("is-folded");
+      var on = selects.filter(function (select) { return select.value; }).length +
+        flags.filter(function (flag) { return flag.checked; }).length;
+      toggle.textContent = (folded ? "Show filters" : "Hide filters") + (on ? " (" + on + " on)" : "");
+      toggle.setAttribute("aria-expanded", folded ? "false" : "true");
+    }
     // Where this table's word index is, if it has one. Files are fetched when a
     // search needs them and kept; until they arrive, or if they can't be had,
-    // the search falls back to the text each row carries in `data-search`.
+    // the search falls back to the text each row carries in `data-search`, or
+    // to the text it shows where it carries none.
     var indexUrl = form.dataset.searchIndex;
     var shards = {};
     var loading = {};
@@ -297,6 +325,7 @@
         if (folded && visible && terms.length) folded.open = true;
       });
 
+      labelToggle();
       showNames();
       filterArchived(text ? text.value : "");
       if (text) setParam("q", text.value.trim());

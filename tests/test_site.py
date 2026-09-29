@@ -1,11 +1,12 @@
+import csv
 import tempfile
 import unittest
 from pathlib import Path
 
-from pipeline import build, linkcheck
+from pipeline import build, export, linkcheck
 from pipeline.extract import extract
 
-from .fixtures import FIRST_EDITION, OLD_NAME, dataset_aliases, site_meta, workbook_bytes
+from .fixtures import FIRST_EDITION, NEW_NAME, OLD_NAME, dataset_aliases, site_meta, workbook_bytes
 
 
 def build_site(out: Path, base_path: str = "") -> None:
@@ -82,6 +83,72 @@ class BuiltSite(unittest.TestCase):
             page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
             self.assertTrue((out / "assets" / "print.js").exists())
         self.assertIn('<script src="/assets/print.js" defer></script>', page)
+
+    def test_an_earlier_version_repeats_only_the_text_that_differs(self):
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            data = extract(workbook_bytes())
+            (agreement,) = [a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-1-AAAAA"]
+            agreement["versions"][0]["expected_output"] = "An output only the first version promised"
+            build.build(data, site_meta(), FIRST_EDITION, out)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+        history = page[page.index('id="history"'):page.index('id="register-history"')]
+        first = history[history.index('<span class="version-ref">DARS-NIC-1-AAAAA-v1</span>'):]
+        self.assertIn("The same as v2: Objective for processing.", first)
+        self.assertIn("An output only the first version promised", first)
+        self.assertEqual(first.count('<details class="prose-block">'), 1)
+
+    def test_wide_tables_label_their_cells_for_a_phone(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            pages = {
+                "agreements-table": (out / "agreements" / "index.html").read_text(),
+                "organisations-table": (out / "organisations" / "index.html").read_text(),
+            }
+        for table_id, page in pages.items():
+            table = page[page.index(f'id="{table_id}"'):]
+            table = table[:table.index("</table>")]
+            self.assertIn("stack", page[page.rindex("<table", 0, page.index(f'id="{table_id}"')):page.index(f'id="{table_id}"')])
+            body = table[table.index("<tbody>"):]
+            cells = body.count("<td")
+            self.assertGreater(cells, 0)
+            self.assertEqual(body.count("<td") - body.count("data-label="), 0, table_id)
+
+    def test_the_agreements_filters_fold_behind_a_button_on_a_phone(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "agreements" / "index.html").read_text()
+        form = page[page.index("<form class=\"filters\""):page.index("</form>")]
+        folded = form[form.index("data-filter-more"):]
+        # The search box stays out; every other control folds.
+        self.assertNotIn('id="q"', folded)
+        for control in ('id="sector"', 'id="type"', 'id="confidentiality"', 'id="optouts"', "data-filter-reset"):
+            self.assertIn(control, folded)
+
+    def test_the_agreements_csv_holds_what_the_site_works_out(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            with open(out / "downloads" / "agreements.csv", newline="", encoding="utf-8") as file:
+                reader = csv.DictReader(file)
+                header, rows = reader.fieldnames, list(reader)
+            listing = (out / "agreements" / "index.html").read_text()
+            downloads = (out / "downloads" / "index.html").read_text()
+        self.assertEqual(header, [name for name, _ in export.COLUMNS])
+        self.assertEqual(len(rows), listing.count("<tr data-i="))
+        row = next(r for r in rows if r["reference"] == "DARS-NIC-1-AAAAA")
+        # The renamed dataset is one dataset, under the name its page uses.
+        self.assertEqual(row["datasets"], NEW_NAME)
+        self.assertEqual(row["dataset_count"], "1")
+        self.assertEqual(row["data_controllers"], "UNIVERSITY OF EXAMPLE; OTHER TRUST")
+        self.assertEqual(row["status"], "In term")
+        self.assertEqual(row["confidential_data"], "Section 251 support")
+        self.assertEqual(row["opt_outs"], "Applied to every file released")
+        self.assertEqual(row["url"], "https://example.test/agreements/dars-nic-1-aaaaa/")
+        self.assertIn('href="/downloads/agreements.csv"', downloads)
+        self.assertIn(f"{len(rows)} rows", downloads)
 
     def test_agreements_list_opens_newest_first(self):
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
@@ -296,7 +363,7 @@ class DatasetPage(unittest.TestCase):
         self.assertIn('data-active="yes"', self.page)
         self.assertIn('<th scope="col" class="num">Files</th>', self.page)
         table = self.page[self.page.index('id="dataset-agreements"'):]
-        self.assertIn('<td class="num">5</td>', table)
+        self.assertIn('<td class="num" data-label="Files">5</td>', table)
 
 
 class ChangesPages(unittest.TestCase):
@@ -360,7 +427,8 @@ class Downloads(unittest.TestCase):
             page = (out / "downloads" / "index.html").read_text()
             home = (out / "index.html").read_text()
             files = sorted(path.name for path in (out / "downloads").iterdir())
-        self.assertEqual(files, ["index.html"])  # no data files
+        # One data file, the site's own reading of the agreements.
+        self.assertEqual(files, ["agreements.csv", "index.html"])
         self.assertIn("<h1>Get the data</h1>", page)
         self.assertIn('href="https://example.test/source.xlsx"', page)
         self.assertIn('href="https://example.test/repo/tree/main/data/facts"', page)

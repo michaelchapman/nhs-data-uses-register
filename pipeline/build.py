@@ -12,6 +12,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from . import aliases
 from . import compare
+from . import export
 from . import relations
 from . import ods
 from . import privacy
@@ -300,7 +301,12 @@ def build(
             },
         )
     render("about.html", "about/index.html")
-    render("downloads.html", "downloads/index.html")
+    # The agreements as this site reads them, for analysis: see `export`.
+    agreements_csv = export.agreements_csv(data["agreements"], meta, org_names, rules.dataset_aliases)
+    _write(out, "downloads/agreements.csv", agreements_csv)
+    render("downloads.html", "downloads/index.html",
+           agreements_csv={"rows": len(data["agreements"]), "bytes": len(agreements_csv.encode("utf-8"))},
+           csv_columns=export.COLUMNS)
     render("not-found.html", "404.html")
 
     dataset_aliases = rules.dataset_aliases
