@@ -55,8 +55,10 @@ Four kinds of file, all under ``data/facts/<register>/``:
 
 ``manifest.json``
     Provenance for each edition: the SHA-256 of the workbook it came from, its
-    size, its source URL and when it was ingested. It records where the facts
-    came from rather than what they say.
+    size, its source URL, when it was ingested, and how many agreements and
+    versions it held. It records where the facts came from rather than what
+    they say: nothing that depends on the alias or lineage files, which would
+    date.
 
 Four properties this file is responsible for keeping:
 
