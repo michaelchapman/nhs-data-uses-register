@@ -34,13 +34,11 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from . import aliases
 from . import compare
-from . import exclusions
 from . import facts
-from . import lineage
 from . import sources
 from .extract import _base_and_version
+from .rules import Rules
 
 
 def skipped_editions(previous: str, current: str) -> list[str]:
@@ -66,9 +64,8 @@ def missing_editions(editions: list[str]) -> list[str]:
     return [gap for a, b in zip(editions, editions[1:]) for gap in skipped_editions(a, b)]
 
 
-def _included(index: dict[str, int]) -> dict[str, int]:
+def _included(index: dict[str, int], excluded: frozenset[str]) -> dict[str, int]:
     """An edition's index without the agreements `exclusions` leaves out."""
-    excluded = exclusions.bases()
     if not excluded:
         return index
     return {ref: state for ref, state in index.items() if _base_and_version(ref)[0].upper() not in excluded}
@@ -203,15 +200,16 @@ def not_comparable(reason: str) -> dict:
     }
 
 
-def _maps(alias_map: dict[str, str] | None) -> tuple:
-    """What `compare.compare_versions` compares under: dataset aliases, organisation aliases, lineage."""
-    if alias_map is None:
-        alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    return alias_map, aliases.load_map(aliases.ALIASES_PATH), lineage.load()
+def _maps(rules: Rules, alias_map: dict[str, str] | None) -> tuple:
+    """What `compare.compare_versions` compares under: dataset aliases, organisation aliases, lineage.
+
+    `alias_map`, when given, stands in for the dataset aliases.
+    """
+    return (rules.dataset_aliases if alias_map is None else alias_map), rules.organisation_aliases, rules.lineage
 
 
-def _indexes(register_slug: str, editions) -> dict[str, dict[str, int]]:
-    return {edition: _included(facts.edition_index(register_slug, edition)) for edition in editions}
+def _indexes(register_slug: str, editions, rules: Rules) -> dict[str, dict[str, int]]:
+    return {edition: _included(facts.edition_index(register_slug, edition), rules.excluded) for edition in editions}
 
 
 # Three steps, so that each agreement's file — the whole of its text, in every
@@ -473,6 +471,7 @@ def diff(
     edition: str,
     previous_edition: str | None = None,
     alias_map: dict[str, str] | None = None,
+    rules: Rules | None = None,
 ) -> dict:
     """Agreement-version level changes between `edition` and the one before it."""
     held = facts.stored_editions(register_slug)
@@ -484,10 +483,11 @@ def diff(
     if previous_edition is None:
         return not_comparable("first-edition")
 
-    indexes = _indexes(register_slug, (previous_edition, edition))
+    rules = rules or Rules.load()
+    indexes = _indexes(register_slug, (previous_edition, edition), rules)
     work = _work()
     _ask_edition(work, previous_edition, edition, indexes)
-    rows, differences = _read(register_slug, work, indexes, _maps(alias_map))
+    rows, differences = _read(register_slug, work, indexes, _maps(rules, alias_map))
     return _edition_changes(previous_edition, edition, indexes, rows, differences)
 
 
@@ -495,6 +495,7 @@ def history(
     register_slug: str,
     alias_map: dict[str, str] | None = None,
     wide: dict[str, dict[tuple, int]] | None = None,
+    rules: Rules | None = None,
 ) -> dict[str, dict]:
     """When each agreement and each of its versions appeared or changed.
 
@@ -514,14 +515,17 @@ def history(
     editions = facts.stored_editions(register_slug)
     if not editions:
         return {}
-    indexes = _indexes(register_slug, editions)
+    rules = rules or Rules.load()
+    indexes = _indexes(register_slug, editions, rules)
     work = _work()
     index, pending = _timeline(editions, indexes, work)
-    _, differences = _read(register_slug, work, indexes, _maps(alias_map))
+    _, differences = _read(register_slug, work, indexes, _maps(rules, alias_map))
     return _history(index, pending, differences, wide or {})
 
 
-def every_edition(register_slug: str, alias_map: dict[str, str] | None = None) -> tuple[dict[str, dict], dict[str, dict]]:
+def every_edition(
+    register_slug: str, alias_map: dict[str, str] | None = None, rules: Rules | None = None
+) -> tuple[dict[str, dict], dict[str, dict]]:
     """`({edition: diff}, history)` for every edition held, reading each agreement once.
 
     The same answers as `diff` for each edition after the first and `history`
@@ -532,13 +536,14 @@ def every_edition(register_slug: str, alias_map: dict[str, str] | None = None) -
     editions = facts.stored_editions(register_slug)
     if not editions:
         return {}, {}
-    indexes = _indexes(register_slug, editions)
+    rules = rules or Rules.load()
+    indexes = _indexes(register_slug, editions, rules)
     pairs = list(zip(editions, editions[1:]))
     work = _work()
     for previous, edition in pairs:
         _ask_edition(work, previous, edition, indexes)
     index, pending = _timeline(editions, indexes, work)
-    rows, differences = _read(register_slug, work, indexes, _maps(alias_map))
+    rows, differences = _read(register_slug, work, indexes, _maps(rules, alias_map))
     diffs = {edition: _edition_changes(previous, edition, indexes, rows, differences) for previous, edition in pairs}
     timeline = _history(index, pending, differences, {edition: d["wide_ops"] for edition, d in diffs.items()})
     return {editions[0]: not_comparable("first-edition"), **diffs}, timeline

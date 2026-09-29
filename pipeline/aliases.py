@@ -100,8 +100,13 @@ def load_map(path: Path = None) -> dict[str, str]:
     Look up with `resolve()`, not this dict directly, since its keys are
     normalised rather than exact register text.
     """
+    return map_of(load_groups(path))
+
+
+def map_of(groups: list[dict]) -> dict[str, str]:
+    """`load_map`, for alias groups already read."""
     mapping: dict[str, str] = {}
-    for group in load_groups(path):
+    for group in groups:
         canonical = group["canonical"]
         for variant in group.get("variants", []):
             if _key(variant) != _key(canonical):

@@ -22,8 +22,9 @@ from collections import defaultdict
 
 import openpyxl
 
-from . import aliases, exclusions, lineage
+from . import aliases
 from .names import strip_code
+from .rules import Rules
 
 VERSION_SUFFIX = re.compile(r"-v([0-9]+(?:\.[0-9]+)?)$", re.IGNORECASE)
 
@@ -344,8 +345,8 @@ def _version_key(version: str) -> tuple:
     return tuple(int(p) for p in version.split(".")) if version else (0,)
 
 
-def extract(workbook_bytes: bytes) -> dict:
-    """Parse workbook bytes into `{agreements, organisations, datasets, stats}`."""
+def extract(workbook_bytes: bytes, rules: Rules | None = None) -> dict:
+    """Parse workbook bytes into `{agreements, organisations, datasets}`."""
     workbook = openpyxl.load_workbook(io.BytesIO(workbook_bytes), read_only=True, data_only=True)
 
     datasets_by_ref: dict[str, list[dict]] = defaultdict(list)
@@ -436,10 +437,10 @@ def extract(workbook_bytes: bytes) -> dict:
             })
         )
 
-    return assemble(versions_by_base)
+    return assemble(versions_by_base, rules)
 
 
-def assemble(versions_by_base: dict[str, list[dict]]) -> dict:
+def assemble(versions_by_base: dict[str, list[dict]], rules: Rules | None = None) -> dict:
     """`{agreements, organisations, datasets}` from each agreement's versions.
 
     Everything but the versions themselves is derived from them, plus the
@@ -448,20 +449,17 @@ def assemble(versions_by_base: dict[str, list[dict]]) -> dict:
     and come out the same, and an alias reviewed since the extract was written
     takes effect on the next build without a re-ingest.
     """
-    alias_map = aliases.load_map()
-    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    organisation_lineage = lineage.load()
-    excluded = exclusions.bases()
+    rules = rules or Rules.load()
     agreements = [
-        build_agreement(base, versions, alias_map, dataset_alias_map, organisation_lineage)
+        build_agreement(base, versions, rules.organisation_aliases, rules.dataset_aliases, rules.lineage)
         for base, versions in versions_by_base.items()
-        if base.upper() not in excluded
+        if base.upper() not in rules.excluded
     ]
     agreements.sort(key=lambda a: (a["organisation"].lower(), a["base_reference"]))
     return {
         "agreements": agreements,
-        "organisations": _group_organisations(agreements, organisation_lineage),
-        "datasets": _group_datasets(agreements, organisation_lineage),
+        "organisations": _group_organisations(agreements, rules),
+        "datasets": _group_datasets(agreements, rules),
     }
 
 
@@ -552,15 +550,15 @@ def build_agreement(
     }
 
 
-def _canonical_names(organisation_lineage=None) -> dict[str, str]:
+def _canonical_names(rules: Rules) -> dict[str, str]:
     """`{slug: the name a reviewer chose}` for every reviewed organisation merge.
 
     Cleaned like any other name: the alias file is typed by hand, and a canonical
     copied out of the register keeps the register's double spaces. A page ODS
     decides is named as ODS names the organisation.
     """
-    names = {slugify(g["canonical"]): clean_line(g["canonical"]) for g in aliases.load_groups()}
-    names.update({slug: name for slug, (name, _) in _lineage_pages(organisation_lineage).items()})
+    names = {slugify(g["canonical"]): clean_line(g["canonical"]) for g in rules.organisation_groups}
+    names.update({slug: name for slug, (name, _) in _lineage_pages(rules.lineage).items()})
     return names
 
 
@@ -593,17 +591,18 @@ def _lineage_facts(identity: str, organisation_lineage, slugs: set[str]) -> dict
     }
 
 
-def _group_organisations(agreements: list[dict], organisation_lineage=None) -> list[dict]:
-    alias_map = aliases.load_map()
-    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+def _group_organisations(agreements: list[dict], rules: Rules) -> list[dict]:
+    alias_map = rules.organisation_aliases
+    dataset_alias_map = rules.dataset_aliases
+    organisation_lineage = rules.lineage
     lineage_pages = _lineage_pages(organisation_lineage)
-    reviewed_names = {aliases._key(clean_line(g["canonical"])) for g in aliases.load_groups()}
+    reviewed_names = {aliases._key(clean_line(g["canonical"])) for g in rules.organisation_groups}
     # The exact text a reviewer wrote as `canonical` in the alias file, keyed
     # by its own slug. Falling back to `aliases.resolve()` per agreement isn't
     # enough on its own: whichever raw name happens to be processed first
     # becomes the display name, which is only the reviewer's chosen spelling
     # by coincidence if the register's own text already matches it.
-    canonical_by_slug = _canonical_names(organisation_lineage)
+    canonical_by_slug = _canonical_names(rules)
 
     # Group by the already-canonical `organisation_slug`, not by the raw
     # `organisation` text: a human-reviewed alias means two different strings
@@ -728,13 +727,13 @@ def _dataset_organisations(agreements: list[dict], canonical_by_slug: dict[str, 
     return sorted(rows.values(), key=lambda r: (-r["agreements"], r["name"].lower()))
 
 
-def _group_datasets(agreements: list[dict], organisation_lineage=None) -> list[dict]:
-    canonical_by_slug = _canonical_names(organisation_lineage)
+def _group_datasets(agreements: list[dict], rules: Rules) -> list[dict]:
+    canonical_by_slug = _canonical_names(rules)
     # Datasets get relabelled at least as often as organisations — NHS England
     # appended acronyms across the whole register in January 2023 — and a
     # rename would otherwise split one dataset's history across two pages.
     # Reviewed merges live in data/dataset-aliases.json; see datasetcheck.
-    alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    alias_map = rules.dataset_aliases
     grouped: dict[str, dict] = {}
     listed: set[tuple[str, str]] = set()
     for agreement in agreements:
@@ -782,7 +781,9 @@ def _group_datasets(agreements: list[dict], organisation_lineage=None) -> list[d
     return sorted(grouped.values(), key=lambda d: (-d["agreement_count"], d["name"].lower()))
 
 
-def archive_views(archived: list[dict], organisations: list[dict], datasets: list[dict]) -> dict:
+def archive_views(
+    archived: list[dict], organisations: list[dict], datasets: list[dict], rules: Rules | None = None
+) -> dict:
     """Organisation and dataset pages for agreements no longer in the register.
 
     An organisation or dataset that only departed agreements name would
@@ -800,13 +801,13 @@ def archive_views(archived: list[dict], organisations: list[dict], datasets: lis
     """
     from . import sources
 
-    organisation_lineage = lineage.load()
+    rules = rules or Rules.load()
     order = lambda a: sources.edition_sort_key(a["archived"]["last_edition"])
     current_organisations = {o["slug"] for o in organisations}
     current_datasets = {d["slug"] for d in datasets}
 
     by_organisation, archived_organisations = {}, []
-    for entry in _group_organisations(archived, organisation_lineage):
+    for entry in _group_organisations(archived, rules):
         named = list({a["base_reference"]: a for a in entry["agreements"] + entry["controller_agreements"]}.values())
         if entry["slug"] in current_organisations:
             by_organisation[entry["slug"]] = named
@@ -815,7 +816,7 @@ def archive_views(archived: list[dict], organisations: list[dict], datasets: lis
             archived_organisations.append(entry)
 
     by_dataset, archived_datasets = {}, []
-    for entry in _group_datasets(archived, organisation_lineage):
+    for entry in _group_datasets(archived, rules):
         if entry["slug"] in current_datasets:
             by_dataset[entry["slug"]] = entry["agreements"]
         else:

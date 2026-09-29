@@ -24,6 +24,7 @@ from . import changes as changes_module
 from . import facts
 from . import sources
 from .extract import _version_key
+from .rules import Rules
 
 ROOT = Path(__file__).resolve().parent.parent
 # Where the site is published: a custom domain, served from its root.
@@ -46,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
+def from_store(register, edition: str | None, rules: Rules) -> tuple[dict, str, dict]:
     """`(data, edition, manifest_entry)` for the edition we are building."""
     edition = edition or facts.latest_edition(register.slug)
     if not edition:
@@ -56,10 +57,10 @@ def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
             "    python -m pipeline.ingest data/raw/<workbook>.xlsx\n"
             "See docs/manual-updates.md."
         )
-    data = facts.read_extract(register.slug, edition)
+    data = facts.read_extract(register.slug, edition, rules)
     # Agreements and versions earlier editions listed and this one does not,
     # so a page once published keeps its URL. See `facts.read_archive`.
-    data["archived"], dropped = facts.read_archive(register.slug, edition)
+    data["archived"], dropped = facts.read_archive(register.slug, edition, rules)
     for agreement in data["agreements"]:
         agreement["dropped_versions"] = dropped.get(agreement["base_reference"], [])
         # A version numbered after the one now listed as current: the register
@@ -72,13 +73,13 @@ def from_store(register, edition: str | None) -> tuple[dict, str, dict]:
     return data, edition, entry
 
 
-def from_workbook(path: Path, register) -> tuple[dict, str, dict]:
+def from_workbook(path: Path, register, rules: Rules) -> tuple[dict, str, dict]:
     from .extract import extract
 
     edition = sources.parse_edition(path.stem)
     print(f"building straight from {path} (edition {edition}); not ingesting")
     return (
-        extract(path.read_bytes()),
+        extract(path.read_bytes(), rules),
         edition,
         {"source_file": path.name, "source_url": sources.asset_url(path.name)},
     )
@@ -87,11 +88,13 @@ def from_workbook(path: Path, register) -> tuple[dict, str, dict]:
 def main() -> None:
     args = parse_args()
     register = sources.registers(args.register)[0]
+    # The alias, lineage and exclusion files, read once for the whole build.
+    rules = Rules.load()
 
     if args.workbook:
-        data, edition, entry = from_workbook(args.workbook, register)
+        data, edition, entry = from_workbook(args.workbook, register, rules)
     else:
-        data, edition, entry = from_store(register, args.edition)
+        data, edition, entry = from_store(register, args.edition, rules)
     print(
         f"{edition}: {len(data['agreements']):,} agreements, "
         f"{len(data['organisations']):,} organisations, {len(data['datasets']):,} datasets"
@@ -112,7 +115,7 @@ def main() -> None:
     # Every edition's changes and every agreement's history, from one read of
     # each agreement in the store.
     if held:
-        by_edition_changes, history = changes_module.every_edition(register.slug)
+        by_edition_changes, history = changes_module.every_edition(register.slug, rules=rules)
         changes = by_edition_changes[edition]
     else:
         by_edition_changes, history = {}, {}
@@ -171,7 +174,7 @@ def main() -> None:
     }
 
     build_module.build(
-        data, meta, changes, args.output, changes_history=changes_history, history=history
+        data, meta, changes, args.output, changes_history=changes_history, history=history, rules=rules
     )
 
 

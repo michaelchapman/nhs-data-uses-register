@@ -5,6 +5,7 @@ from pathlib import Path
 from unittest import mock
 
 from pipeline import facts, run
+from pipeline.rules import Rules
 
 from .fixtures import workbook_bytes
 
@@ -47,6 +48,16 @@ class WorkbookBuild(unittest.TestCase):
             self.assertNotIn("Editions processed", changes)
             for edition in facts.stored_editions("data-uses-register"):
                 self.assertNotIn(f"/changes/{edition}/", changes)
+
+    def test_a_build_reads_the_alias_lineage_and_exclusion_files_once(self):
+        with tempfile.TemporaryDirectory() as directory:
+            workbook = Path(directory) / "datausesregister_october2099.xlsx"
+            workbook.write_bytes(workbook_bytes())
+            argv = ["run", "--workbook", str(workbook), "--output", str(Path(directory) / "site")]
+            with mock.patch.object(sys, "argv", argv), mock.patch("builtins.print"), \
+                    mock.patch.object(Rules, "load", wraps=Rules.load) as load:
+                run.main()
+        load.assert_called_once_with()
 
 
 if __name__ == "__main__":

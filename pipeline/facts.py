@@ -87,6 +87,7 @@ from pathlib import Path
 
 from . import sources
 from .extract import FILE_RELEASE, slugify, summarise_releases
+from .rules import Rules
 
 FACTS_ROOT = Path(__file__).resolve().parent.parent / "data" / "facts"
 MANIFEST_NAME = "manifest.json"
@@ -544,14 +545,16 @@ def manifest_entry(register_slug: str, edition: str) -> dict | None:
     return None
 
 
-def rehydrate(versions_by_base: dict[str, list[dict]]) -> dict:
-    """Rebuild everything the store leaves out, from each agreement's versions."""
-    from .extract import assemble, known_organisation_names, resplit_list, tidy_version
+def _tidy(versions_by_base: dict[str, list[dict]]) -> dict[str, list[dict]]:
+    """Stored versions under today's rules for names and controller lists, in place.
 
-    # The same authoritative list `extract` builds from the workbook, so a
-    # rebuild splits controllers the way an ingest does. Re-splitting is
-    # idempotent, so a version stored under an older, narrower rule gets the
-    # current one applied every time it is read.
+    Controllers are split against the same authoritative list `extract` builds
+    from the workbook, the applicants' names, so a rebuild splits them the way
+    an ingest does. Both steps are idempotent, so a version stored under an
+    older, narrower rule gets the current one applied every time it is read.
+    """
+    from .extract import known_organisation_names, resplit_list, tidy_version
+
     for versions in versions_by_base.values():
         for version in versions:
             tidy_version(version)
@@ -561,10 +564,17 @@ def rehydrate(versions_by_base: dict[str, list[dict]]) -> dict:
     for versions in versions_by_base.values():
         for version in versions:
             version["controllers"] = resplit_list(version["controllers"], known)
-    return assemble(versions_by_base)
+    return versions_by_base
 
 
-def read_extract(register_slug: str, edition: str) -> dict:
+def rehydrate(versions_by_base: dict[str, list[dict]], rules: Rules | None = None) -> dict:
+    """Rebuild everything the store leaves out, from each agreement's versions."""
+    from .extract import assemble
+
+    return assemble(_tidy(versions_by_base), rules)
+
+
+def read_extract(register_slug: str, edition: str, rules: Rules | None = None) -> dict:
     """`edition` as the site is built from it: `{agreements, organisations, datasets}`.
 
     The row-by-row release detail is left out. The site reads the per-dataset
@@ -575,10 +585,12 @@ def read_extract(register_slug: str, edition: str) -> dict:
     for versions in versions_by_base.values():
         for version in versions:
             version.pop("released_files", None)
-    return rehydrate(versions_by_base)
+    return rehydrate(versions_by_base, rules)
 
 
-def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str, list[dict]]]:
+def read_archive(
+    register_slug: str, edition: str, rules: Rules | None = None
+) -> tuple[list[dict], dict[str, list[dict]]]:
     """What `edition` no longer lists but an earlier edition did.
 
     Returns `(agreements, dropped_versions)`:
@@ -593,8 +605,7 @@ def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str
 
     Agreements `exclusions` leaves out are left out here too.
     """
-    from . import aliases, exclusions, lineage
-    from .extract import _base_and_version, build_agreement, known_organisation_names, resplit_list, tidy_version
+    from .extract import _base_and_version, build_agreement
 
     editions = stored_editions(register_slug)
     if edition not in editions:
@@ -602,7 +613,7 @@ def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str
     editions = editions[: editions.index(edition) + 1]
     current = edition_index(register_slug, edition)
     current_bases = {_base_and_version(ref)[0] for ref in current}
-    excluded = exclusions.bases()
+    rules = rules or Rules.load()
 
     last_seen: dict[str, str] = {}
     for held in editions:
@@ -617,7 +628,7 @@ def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str
     dropped: dict[str, dict[str, str]] = {}
     for reference, held in gone.items():
         base = base_of(reference)
-        if base.upper() in excluded:
+        if base.upper() in rules.excluded:
             continue
         if base in current_bases:
             dropped.setdefault(held, {})[reference] = base
@@ -628,18 +639,8 @@ def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str
         for versions in versions_by_base.values():
             for version in versions:
                 version.pop("released_files", None)
-                tidy_version(version)
-        known = known_organisation_names(
-            version["organisation"] for versions in versions_by_base.values() for version in versions
-        )
-        for versions in versions_by_base.values():
-            for version in versions:
-                version["controllers"] = resplit_list(version["controllers"], known)
-        return versions_by_base
+        return _tidy(versions_by_base)
 
-    alias_map = aliases.load_map()
-    dataset_alias_map = aliases.load_map(aliases.DATASET_ALIASES_PATH)
-    organisation_lineage = lineage.load()
     agreements = []
     by_edition: dict[str, set[str]] = {}
     for base, held in archived_last.items():
@@ -648,7 +649,9 @@ def read_archive(register_slug: str, edition: str) -> tuple[list[dict], dict[str
         position = editions.index(held)
         following = editions[position + 1] if position + 1 < len(editions) else ""
         for base, versions in tidied(read_edition(register_slug, held, bases)).items():
-            agreement = build_agreement(base, versions, alias_map, dataset_alias_map, organisation_lineage)
+            agreement = build_agreement(
+                base, versions, rules.organisation_aliases, rules.dataset_aliases, rules.lineage
+            )
             agreement["archived"] = {"last_edition": held, "next_edition": following}
             agreements.append(agreement)
     agreements.sort(key=lambda a: (a["organisation"].lower(), a["base_reference"]))
