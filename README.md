@@ -11,10 +11,10 @@ unofficial. NHS England publishes the data; this repository only rearranges it.
 
 From one edition of the register (~5,500 agreement versions):
 
-- **~1,900 agreement pages** — versions of the same agreement grouped together,
+- **~1,950 agreement pages** — versions of the same agreement grouped together,
   with purpose, expected outputs, benefits, datasets and file releases joined
   from all three sheets onto one page.
-- **~570 organisation pages** and **~210 dataset pages** — the two questions the
+- **~500 organisation pages** and **~210 dataset pages** — the two questions the
   spreadsheet makes hardest: what agreements does this organisation hold, and
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
@@ -140,6 +140,7 @@ and `base-path` where `.github/workflows/build.yml` runs the check action.
 ## Layout
 
 ```
+pipeline/run.py                 builds the site from the facts store (the entry point)
 pipeline/sources.py             register definitions, filename and edition rules
 pipeline/ingest.py              workbook -> the committed facts store
 pipeline/facts.py               the facts store: every edition, its releases and its manifest
@@ -151,8 +152,12 @@ pipeline/rules.py               the alias, lineage and exclusion files, read onc
 pipeline/changes.py             what changed between editions, worked out from the facts
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site
+pipeline/search.py              the word index behind the agreements search
+pipeline/names.py               shows a name the register wrote in capitals in ordinary case
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/privacy.py             confidential data and opt-outs, for the agreements list's filters
+pipeline/sectors.py             groups organisations into sectors, for the Sector filters
+pipeline/relations.py           links related organisations that stay separate pages
 pipeline/aliases.py             applies reviewed organisation and dataset merges
 pipeline/ods.py                 reads NHS organisation records from ODS into a snapshot
 pipeline/odscheck.py            finds the ODS code for each NHS name in the register
@@ -163,17 +168,24 @@ pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own pro
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
 pipeline/templates/             Jinja2 templates
 tests/                          unit tests and a synthetic register (python -m unittest)
-assets/                         CSS and the table-filter script
+assets/                         CSS, and the scripts for filtering, search highlighting, citing and printing
+.github/actions/check/          the checks and build both workflows run
+pyproject.toml                  ruff and mypy settings
+requirements.txt                what the build needs, pinned
+requirements-dev.txt            the checkers, pinned
 data/raw/                       downloaded workbooks (gitignored)
 data/facts/                     committed facts: every edition, and the manifest
 data/organisation-aliases.json  reviewed organisation-name merges
 data/dataset-aliases.json       reviewed dataset-name merges
 data/organisation-codes.json    the ODS code for each NHS name, and the evidence
 data/excluded-agreements.json   published records the site leaves out, with the reason
+data/organisation-sectors.json  organisation types to sectors, and corrections
+data/organisation-relations.json related organisations, and why each is linked
+data/organisation-successions.json successions recorded by hand where ODS has none
 data/ods/organisations.json     the ODS records the site uses (Open Government Licence)
 docs/manual-updates.md          the monthly routine
 docs/organisation-names.md      reviewing and merging organisation names
-docs/plan.md                    what is left to do
+docs/plan.md                    what the site is for, and what is left to do
 ```
 
 ## Adding another register
