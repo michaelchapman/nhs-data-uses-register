@@ -6,7 +6,8 @@ from pathlib import Path
 from unittest import mock
 
 from pipeline import facts
-from pipeline.extract import extract, summarise_releases
+from pipeline.extract import extract
+from pipeline.records import summarise_releases
 
 from .fixtures import NEW_NAME, dataset_aliases, workbook_bytes
 

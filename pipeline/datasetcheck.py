@@ -40,12 +40,13 @@ def datasets_in_workbook(path: Path) -> dict[str, set[str]]:
     """`{reference: dataset names}` from the Datasets sheet alone."""
     import openpyxl
 
-    from .extract import _read_sheet, clean
+    from .extract import read_sheet
+    from .records import clean
 
     workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
     try:
         found: dict[str, set[str]] = {}
-        for row in _read_sheet(workbook, "Datasets"):
+        for row in read_sheet(workbook, "Datasets"):
             reference = clean(row.get("Reference Number"))
             name = clean(row.get("Dataset"))
             if reference and name:

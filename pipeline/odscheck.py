@@ -54,20 +54,20 @@ def register_names(register_slug: str) -> tuple[Counter, Counter]:
             names.update(used)
             for before, after in zip(states, states[1:]):
                 pairs = [(before.get("organisation", ""), after.get("organisation", ""))]
-                old = {aliases._key(n): n for n in before.get("controllers") or []}
-                new = {aliases._key(n): n for n in after.get("controllers") or []}
+                old = {aliases.name_key(n): n for n in before.get("controllers") or []}
+                new = {aliases.name_key(n): n for n in after.get("controllers") or []}
                 gone, came = set(old) - set(new), set(new) - set(old)
                 if len(gone) == 1 and len(came) == 1:
                     pairs.append((old[gone.pop()], new[came.pop()]))
                 for was, now in pairs:
-                    if was and now and aliases._key(was) != aliases._key(now):
+                    if was and now and aliases.name_key(was) != aliases.name_key(now):
                         swaps[(was, now)] += 1
     return names, swaps
 
 
 def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, report=print) -> tuple[list[dict], list[str]]:
     """`(entries, for_review)`: a code for every name the evidence supports."""
-    entries = {aliases._key(e["name"]): e for e in kept}
+    entries = {aliases.name_key(e["name"]): e for e in kept}
     records: dict[str, dict | None] = {}
 
     def record(code):
@@ -77,7 +77,7 @@ def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, 
 
     unique = {}
     for name in sorted(names, key=lambda n: (n != n.upper(), n)):
-        unique.setdefault(aliases._key(name), name)
+        unique.setdefault(aliases.name_key(name), name)
 
     for count, (key, name) in enumerate(sorted(unique.items()), 1):
         if count % 100 == 0:
@@ -116,7 +116,7 @@ def bridge_ccgs(entries: dict, unique: dict, swaps, record) -> None:
     replaced_by = defaultdict(Counter)
     for (was, now), count in swaps.items():
         if CCG_NAME.search(was) and CODE_IN_NAME.search(now):
-            replaced_by[aliases._key(was)][now] += count
+            replaced_by[aliases.name_key(was)][now] += count
     for key, targets in replaced_by.items():
         if key in entries or len(targets) != 1:
             continue

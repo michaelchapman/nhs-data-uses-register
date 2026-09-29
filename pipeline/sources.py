@@ -145,10 +145,7 @@ def edition_sort_key(edition: str) -> tuple[int, int]:
     return (int(match.group(2)), MONTH_NUMBER.get(match.group(1).lower(), 0))
 
 
-MONTH_NAMES = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
-]
+MONTH_NAMES = [name.capitalize() for name in MONTHS]
 
 
 def edition_label(edition: str) -> str:

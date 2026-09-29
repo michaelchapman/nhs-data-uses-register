@@ -4,10 +4,11 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from pipeline import facts, run
+from pipeline import facts, run, sources
+from pipeline.extract import extract
 from pipeline.rules import Rules
 
-from .fixtures import workbook_bytes
+from .fixtures import dataset_aliases, workbook_bytes
 
 
 def tree(root: Path) -> dict[str, tuple[int, int]]:
@@ -58,6 +59,19 @@ class WorkbookBuild(unittest.TestCase):
                     mock.patch.object(Rules, "load", wraps=Rules.load) as load:
                 run.main()
         load.assert_called_once_with()
+
+
+class FromStore(unittest.TestCase):
+    """The review tools (`sectors`, `relations`) read the newest edition this way."""
+
+    def test_the_newest_edition_can_be_read_without_passing_rules(self):
+        with tempfile.TemporaryDirectory() as directory, dataset_aliases(), \
+                mock.patch.object(facts, "FACTS_ROOT", Path(directory)):
+            versions = {a["base_reference"]: a["versions"] for a in extract(workbook_bytes())["agreements"]}
+            facts.append_edition("data-uses-register", "september2026", versions)
+            data, edition, _ = run.from_store(sources.registers("data-uses-register")[0], None)
+        self.assertEqual(edition, "september2026")
+        self.assertEqual(len(data["agreements"]), len(versions))
 
 
 if __name__ == "__main__":

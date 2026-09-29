@@ -88,21 +88,21 @@ class Lineage:
     ):
         self.organisations = organisations
         self.alias_map = alias_map
-        self.entries = {aliases._key(e["name"]): e for e in codes}
+        self.entries = {aliases.name_key(e["name"]): e for e in codes}
         # A reviewed alias makes its names one organisation, so they share
         # whichever code one of them has, and the page keeps the name the
         # reviewer chose: "Milton Keynes City Council", where ODS still says
         # "Milton Keynes Council".
         self.chosen: dict[str, str] = {}
         for variant, canonical in alias_map.items():
-            if aliases._key(canonical) not in self.entries and variant in self.entries:
-                self.entries[aliases._key(canonical)] = self.entries[variant]
+            if aliases.name_key(canonical) not in self.entries and variant in self.entries:
+                self.entries[aliases.name_key(canonical)] = self.entries[variant]
         for canonical in set(alias_map.values()):
-            entry = self.entries.get(aliases._key(canonical))
+            entry = self.entries.get(aliases.name_key(canonical))
             if entry and not entry.get("as"):
                 self.chosen.setdefault(entry["code"], canonical)
         self.successions = {
-            aliases._key(aliases.resolve(s["from"], alias_map)): s for s in successions
+            aliases.name_key(aliases.resolve(s["from"], alias_map)): s for s in successions
         }
         # `relation` is asked the same pairs of names thousands of times a build.
         self._relations: dict[tuple[str, str], tuple[str, str] | None] = {}
@@ -126,15 +126,15 @@ class Lineage:
         """
         if not name:
             return None
-        return self.entries.get(aliases._key(aliases.resolve(name, self.alias_map))) or self.entries.get(
-            aliases._key(name)
+        return self.entries.get(aliases.name_key(aliases.resolve(name, self.alias_map))) or self.entries.get(
+            aliases.name_key(name)
         )
 
     def node(self, name: str) -> str | None:
         # A reviewed succession is a person's decision about this name, so it
         # comes before any code a search matched it to: the register's "HEALTH
         # & SOCIAL CARE INFORMATION CENTRE" also names an unrelated ODS record.
-        key = aliases._key(aliases.resolve(name, self.alias_map)) if name else ""
+        key = aliases.name_key(aliases.resolve(name, self.alias_map)) if name else ""
         if key in self.successions:
             return f"name:{key}"
         entry = self.entry(name)
@@ -237,7 +237,7 @@ class Lineage:
                 (e["name"] for e in self.entries.values() if e["code"] == code and not e.get("as")),
                 key=lambda n: (n != n.upper(), n),
             )
-            if used and aliases._key(record["name"]) not in {aliases._key(n) for n in used}:
+            if used and aliases.name_key(record["name"]) not in {aliases.name_key(n) for n in used}:
                 return strip_code(used[0])
             return strip_code(record["name"])
         # A CCG's name is gone from ODS if its record lives on as a sub-ICB

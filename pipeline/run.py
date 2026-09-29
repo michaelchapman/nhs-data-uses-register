@@ -23,7 +23,7 @@ from . import build as build_module
 from . import changes as changes_module
 from . import facts
 from . import sources
-from .extract import _version_key
+from .references import version_key
 from .rules import Rules
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -47,8 +47,13 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def from_store(register, edition: str | None, rules: Rules) -> tuple[dict, str, dict]:
-    """`(data, edition, manifest_entry)` for the edition we are building."""
+def from_store(register, edition: str | None, rules: Rules | None = None) -> tuple[dict, str, dict]:
+    """`(data, edition, manifest_entry)` for the edition we are building.
+
+    The review tools call this too, to check their files against the newest
+    edition; without `rules` it reads the alias, lineage and exclusion files.
+    """
+    rules = rules or Rules.load()
     edition = edition or facts.latest_edition(register.slug)
     if not edition:
         raise SystemExit(
@@ -65,9 +70,9 @@ def from_store(register, edition: str | None, rules: Rules) -> tuple[dict, str, 
         agreement["dropped_versions"] = dropped.get(agreement["base_reference"], [])
         # A version numbered after the one now listed as current: the register
         # went back to an older version, and a reader should be told.
-        current = _version_key(agreement["latest"]["version"])
+        current = version_key(agreement["latest"]["version"])
         agreement["later_dropped"] = [
-            v for v in agreement["dropped_versions"] if _version_key(v["version"]) > current
+            v for v in agreement["dropped_versions"] if version_key(v["version"]) > current
         ]
     entry = facts.manifest_entry(register.slug, edition) or {}
     return data, edition, entry

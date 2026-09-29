@@ -100,10 +100,12 @@ def main() -> None:
     corrections that no longer name an organisation, then the sectors' totals.
     """
     from . import run, sources
-    from .extract import archive_views
+    from .model import archive_views
+    from .rules import Rules
 
-    data, edition, _ = run.from_store(sources.registers()[0], None)
-    archive = archive_views(data.get("archived", []), data["organisations"], data["datasets"])
+    rules = Rules.load()
+    data, edition, _ = run.from_store(sources.registers()[0], None, rules)
+    archive = archive_views(data.get("archived", []), data["organisations"], data["datasets"], rules)
     organisations = data["organisations"] + archive["organisations"]
     problems = assign(organisations) + unused_corrections(organisations)
     for problem in problems:

@@ -140,12 +140,13 @@ def names_in_workbook(path: Path) -> dict[str, tuple[str, frozenset]]:
     """
     import openpyxl
 
-    from .extract import _read_sheet, clean, split_list
+    from .extract import read_sheet
+    from .records import clean, split_list
 
     workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
     try:
         found = {}
-        for row in _read_sheet(workbook, "Agreements"):
+        for row in read_sheet(workbook, "Agreements"):
             reference = clean(row.get("Reference Number"))
             if reference:
                 found[reference] = (

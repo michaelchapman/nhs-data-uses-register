@@ -76,7 +76,7 @@ to gate comparisons on. Whether two states differ in a way worth calling an
 byte-identical files, so a re-ingest that changed nothing shows an empty diff.
 
 Nothing derived is stored. The organisation and dataset views are rebuilt from
-the versions on every read (`extract.assemble`), so they are never stale against
+the versions on every read (`model.assemble`), so they are never stale against
 the alias files.
 """
 
@@ -86,7 +86,12 @@ import json
 from pathlib import Path
 
 from . import sources
-from .extract import FILE_RELEASE, slugify, summarise_releases
+from .model import assemble, build_agreement
+from .records import (
+    FILE_RELEASE, RELEASE_ATTRIBUTES, attribute_key, expected_attributes, known_organisation_names, resplit_list,
+    summarise_releases, tidy_version,
+)
+from .references import base_and_version, slugify, version_key
 from .rules import Rules
 
 FACTS_ROOT = Path(__file__).resolve().parent.parent / "data" / "facts"
@@ -169,9 +174,7 @@ def _write_if_changed(path: Path, text: str) -> bool:
 
 
 def _version_sort_key(record: dict) -> tuple:
-    from .extract import _version_key
-
-    return (_version_key(record.get("version", "")), record.get("reference", ""))
+    return (version_key(record.get("version", "")), record.get("reference", ""))
 
 
 def read_agreement(register_slug: str, base_reference: str) -> dict | None:
@@ -357,11 +360,9 @@ def _differing_attributes(released: dict, version: dict) -> dict:
     whose dataset name the version lists more than once with different
     attributes, where "the same as its dataset" does not name one answer.
     """
-    from .extract import _attribute_key, _expected_attributes
-
-    expected = _expected_attributes(version.get("datasets", [])).get(released["dataset"], set())
+    expected = expected_attributes(version.get("datasets", [])).get(released["dataset"], set())
     attributes = released.get("attributes") or {}
-    if len(expected) == 1 and _attribute_key(attributes) in expected:
+    if len(expected) == 1 and attribute_key(attributes) in expected:
         return {}
     return attributes
 
@@ -381,8 +382,6 @@ def released_files_as_at(stored: dict, edition: str, datasets_by_reference: dict
     from the store shows the release history that edition actually had rather
     than everything known since.
     """
-    from .extract import RELEASE_ATTRIBUTES
-
     cutoff = sources.edition_sort_key(edition)
     # A file can be described more than once: the register relabels a dataset
     # and every release row under it follows. Each description records the
@@ -440,15 +439,13 @@ def edition_index(register_slug: str, edition: str) -> dict[str, int]:
 def read_edition(register_slug: str, edition: str, only: set[str] | None = None) -> dict[str, list[dict]]:
     """`{base reference: versions}` exactly as `edition` published them.
 
-    The shape `extract.extract` returns for a workbook and `editions.rehydrate`
+    The shape `extract.extract` returns for a workbook and `rehydrate`
     expects, so an edition read from here and one parsed from its workbook are
     interchangeable. The releases kept out of the states are put back here, as
     that edition reported them.
 
     `only`, a set of base references, reads just those agreements.
     """
-    from .extract import slugify
-
     index = edition_index(register_slug, edition)
     wanted = {f"{slugify(base)}.json" for base in only} if only is not None else None
     versions_by_base: dict[str, list[dict]] = {}
@@ -553,8 +550,6 @@ def _tidy(versions_by_base: dict[str, list[dict]]) -> dict[str, list[dict]]:
     an ingest does. Both steps are idempotent, so a version stored under an
     older, narrower rule gets the current one applied every time it is read.
     """
-    from .extract import known_organisation_names, resplit_list, tidy_version
-
     for versions in versions_by_base.values():
         for version in versions:
             tidy_version(version)
@@ -569,8 +564,6 @@ def _tidy(versions_by_base: dict[str, list[dict]]) -> dict[str, list[dict]]:
 
 def rehydrate(versions_by_base: dict[str, list[dict]], rules: Rules | None = None) -> dict:
     """Rebuild everything the store leaves out, from each agreement's versions."""
-    from .extract import assemble
-
     return assemble(_tidy(versions_by_base), rules)
 
 
@@ -605,14 +598,12 @@ def read_archive(
 
     Agreements `exclusions` leaves out are left out here too.
     """
-    from .extract import _base_and_version, build_agreement
-
     editions = stored_editions(register_slug)
     if edition not in editions:
         return [], {}
     editions = editions[: editions.index(edition) + 1]
     current = edition_index(register_slug, edition)
-    current_bases = {_base_and_version(ref)[0] for ref in current}
+    current_bases = {base_and_version(ref)[0] for ref in current}
     rules = rules or Rules.load()
 
     last_seen: dict[str, str] = {}
@@ -622,7 +613,7 @@ def read_archive(
     gone = {ref: held for ref, held in last_seen.items() if ref not in current}
 
     def base_of(reference):
-        return _base_and_version(reference)[0]
+        return base_and_version(reference)[0]
 
     archived_last: dict[str, str] = {}
     dropped: dict[str, dict[str, str]] = {}

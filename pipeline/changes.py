@@ -37,7 +37,7 @@ from collections import defaultdict
 from . import compare
 from . import facts
 from . import sources
-from .extract import _base_and_version
+from .references import base_and_version, version_key
 from .rules import Rules
 
 
@@ -68,7 +68,7 @@ def _included(index: dict[str, int], excluded: frozenset[str]) -> dict[str, int]
     """An edition's index without the agreements `exclusions` leaves out."""
     if not excluded:
         return index
-    return {ref: state for ref, state in index.items() if _base_and_version(ref)[0].upper() not in excluded}
+    return {ref: state for ref, state in index.items() if base_and_version(ref)[0].upper() not in excluded}
 
 
 def _material(difference: dict | None) -> bool:
@@ -177,10 +177,8 @@ def _agreement_organisation(record: dict | None, index: dict[str, int]) -> str:
     """The organisation of the latest version of an agreement that `index` lists."""
     if not record:
         return ""
-    from .extract import _version_key
-
     held = [
-        (_version_key(version["version"]), version["states"][index[version["reference"]]].get("start_date", ""),
+        (version_key(version["version"]), version["states"][index[version["reference"]]].get("start_date", ""),
          version["states"][index[version["reference"]]].get("organisation", ""))
         for version in record["versions"]
         if version["reference"] in index and index[version["reference"]] < len(version["states"])
@@ -240,12 +238,12 @@ def _ask_edition(work: dict, previous: str, edition: str, indexes: dict) -> None
     before, now = indexes[previous], indexes[edition]
     new, gone, candidates = _references(before, now)
     for reference in new + candidates:
-        work[_base_and_version(reference)[0]]["rows"].append((edition, reference, edition))
+        work[base_and_version(reference)[0]]["rows"].append((edition, reference, edition))
     # A version no longer listed is described as the edition before published it.
     for reference in gone:
-        work[_base_and_version(reference)[0]]["rows"].append((edition, reference, previous))
+        work[base_and_version(reference)[0]]["rows"].append((edition, reference, previous))
     for reference in candidates:
-        work[_base_and_version(reference)[0]]["compare"].add((reference, before[reference], now[reference]))
+        work[base_and_version(reference)[0]]["compare"].add((reference, before[reference], now[reference]))
 
 
 def _read(register_slug: str, work: dict, indexes: dict, maps: tuple) -> tuple[dict, dict]:
@@ -284,10 +282,10 @@ def _edition_changes(previous: str, edition: str, indexes: dict, rows: dict, dif
     before, now = indexes[previous], indexes[edition]
     new_refs, gone_refs, candidates = _references(before, now)
 
-    old_bases = {_base_and_version(r)[0] for r in before}
+    old_bases = {base_and_version(r)[0] for r in before}
     added, amended, removed = [], [], []
     for reference in new_refs:
-        base = _base_and_version(reference)[0]
+        base = base_and_version(reference)[0]
         added.append({
             "reference": reference, "base": base, **_describe(rows[(edition, reference)]),
             # A new version of an agreement we already knew about is a renewal,
@@ -308,12 +306,12 @@ def _edition_changes(previous: str, edition: str, indexes: dict, rows: dict, dif
     reworded: dict[tuple, set[str]] = {}
     for reference, _, difference in found:
         for edit in _partial_edits(difference):
-            reworded.setdefault(edit, set()).add(_base_and_version(reference)[0])
+            reworded.setdefault(edit, set()).add(base_and_version(reference)[0])
     wide_ops = {edit: len(bases) for edit, bases in reworded.items() if len(bases) >= WIDE_EDIT_AGREEMENTS}
     wide: dict[tuple, list[dict]] = {}
     for reference, row, difference in found:
         item = {
-            "reference": reference, "base": _base_and_version(reference)[0], **_describe(row),
+            "reference": reference, "base": base_and_version(reference)[0], **_describe(row),
             "fields": _labels(difference), "details": _details(difference),
         }
         edits = _only_rewordings(difference)
@@ -323,7 +321,7 @@ def _edition_changes(previous: str, edition: str, indexes: dict, rows: dict, dif
             amended.append(item)
     for reference in gone_refs:
         removed.append({
-            "reference": reference, "base": _base_and_version(reference)[0],
+            "reference": reference, "base": base_and_version(reference)[0],
             **_describe(rows[(edition, reference)]),
         })
 
@@ -370,7 +368,7 @@ def _timeline(editions: list[str], indexes: dict, work: dict) -> tuple[dict[str,
         current = indexes[edition]
         skipped = skipped_editions(previous_edition, edition) if previous_edition else []
         for reference, state in current.items():
-            base = _base_and_version(reference)[0]
+            base = base_and_version(reference)[0]
             index.setdefault(base, {
                 "first_edition": edition,
                 "first_is_earliest": edition == earliest,
@@ -385,7 +383,7 @@ def _timeline(editions: list[str], indexes: dict, work: dict) -> tuple[dict[str,
                                       "reference": reference, "from": previous[reference], "to": state})
                 work[base]["compare"].add((reference, previous[reference], state))
         for reference, state in previous.items():
-            base = _base_and_version(reference)[0]
+            base = base_and_version(reference)[0]
             if reference not in current and base in index:
                 pending[base].append({"edition": edition, "skipped": skipped, "kind": "removed",
                                       "reference": reference, "from": state, "to": None})

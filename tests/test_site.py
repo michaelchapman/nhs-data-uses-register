@@ -593,7 +593,7 @@ class ArchivedAgreements(unittest.TestCase):
             left = next(a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-2-BBBBB")
             # The register as it would be without it: organisations and
             # datasets are derived from the agreements still listed.
-            from pipeline.extract import assemble
+            from pipeline.model import assemble
             data = assemble({a["base_reference"]: a["versions"] for a in data["agreements"] if a is not left})
             left["archived"] = {"last_edition": "january2023", "next_edition": "february2023"}
             data["archived"] = [left]

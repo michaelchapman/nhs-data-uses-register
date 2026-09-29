@@ -3,7 +3,8 @@ import unittest
 from pathlib import Path
 
 from pipeline import build, privacy
-from pipeline.extract import extract, summarise_releases
+from pipeline.extract import extract
+from pipeline.records import summarise_releases
 
 from .fixtures import FIRST_EDITION, dataset_aliases, site_meta, workbook_bytes
 

@@ -1,9 +1,10 @@
 import unittest
 
 from pipeline import facts
-from pipeline.extract import (
-    build_agreement, clean_line, extract, known_organisation_names, resplit_list, slugify, split_list, tidy_version,
-)
+from pipeline.extract import extract
+from pipeline.model import build_agreement
+from pipeline.records import clean_line, known_organisation_names, resplit_list, split_list, tidy_version
+from pipeline.references import slugify
 
 from .fixtures import NEW_NAME, OLD_NAME, dataset_aliases, workbook_bytes
 

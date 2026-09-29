@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import shutil
+from collections import Counter
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -19,17 +20,12 @@ from . import sectors
 from .names import display_name, strip_code
 from .rules import Rules
 from . import sources
-from .extract import archive_views, organisation_slug, slugify
+from .model import archive_views, organisation_slug
+from .references import slugify
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 ASSETS = ROOT / "assets"
-
-MONTH_NAMES = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
-]
-
 
 def format_date(value: str) -> str:
     if not value:
@@ -38,14 +34,14 @@ def format_date(value: str) -> str:
         parsed = dt.date.fromisoformat(value)
     except ValueError:
         return value
-    return f"{parsed.day} {MONTH_NAMES[parsed.month - 1]} {parsed.year}"
+    return f"{parsed.day} {sources.MONTH_NAMES[parsed.month - 1]} {parsed.year}"
 
 
 def format_month(value: str) -> str:
     if not value or len(value) < 7:
         return "—"
     year, month = value.split("-")[:2]
-    return f"{MONTH_NAMES[int(month) - 1]} {year}"
+    return f"{sources.MONTH_NAMES[int(month) - 1]} {year}"
 
 
 def format_edition(edition: str) -> str:
@@ -148,18 +144,14 @@ def compute_stats(data: dict, as_of: str) -> dict:
 
 def _sector_counts(values, config: dict) -> list[tuple[str, int]]:
     """`[(sector, count)]` in the order the sectors are listed, leaving out empty ones."""
-    tally: dict[str, int] = {}
-    for value in values:
-        tally[value] = tally.get(value, 0) + 1
+    tally = Counter(values)
     order = sectors.names(config) + [sectors.OTHER, sectors.NOT_STATED]
     return [(name, tally[name]) for name in order if name in tally]
 
 
 def _counts(values) -> list[tuple[str, int]]:
-    tally: dict[str, int] = {}
-    for value in values:
-        tally[value] = tally.get(value, 0) + 1
-    return sorted(tally.items(), key=lambda kv: (-kv[1], kv[0]))
+    """`[(value, count)]`, commonest first."""
+    return sorted(Counter(values).items(), key=lambda kv: (-kv[1], kv[0]))
 
 
 def version_diffs(

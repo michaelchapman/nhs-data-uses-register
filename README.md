@@ -131,7 +131,11 @@ Using a custom domain or a user page instead of a project page? Set
 pipeline/sources.py             register definitions, filename and edition rules
 pipeline/ingest.py              workbook -> the committed facts store
 pipeline/facts.py               the facts store: every edition, its releases and its manifest
-pipeline/extract.py             workbook -> agreements / organisations / datasets
+pipeline/extract.py             workbook -> agreement versions
+pipeline/references.py          base references, version numbers and page slugs
+pipeline/records.py             one version record: tidying names, splitting controllers, summarising releases
+pipeline/model.py               versions -> agreement, organisation and dataset pages
+pipeline/rules.py               the alias, lineage and exclusion files, read once per build
 pipeline/changes.py             what changed between editions, worked out from the facts
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site

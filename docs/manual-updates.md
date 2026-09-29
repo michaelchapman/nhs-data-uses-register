@@ -138,7 +138,7 @@ is the point of it: most changes to the site's answers are a rebuild.
 | Merge two organisation or dataset names | Edit `data/organisation-aliases.json` or `data/dataset-aliases.json` (see [organisation-names.md](organisation-names.md)) | No |
 | Change what counts as an amendment | Edit `changes._material` or `compare.compare_versions` | No |
 | Change how names are displayed | Edit `pipeline/names.py` | No |
-| Change how controllers are split, or how names are tidied | Edit `extract.py`; `facts.rehydrate` re-applies it on every read | Usually no |
+| Change how controllers are split, or how names are tidied | Edit `records.py`; `facts.rehydrate` re-applies it on every read | Usually no |
 | Capture a column the parser never read | Edit `extract.py` and re-ingest | **Yes** |
 | Fix a bug in how a workbook is parsed | Edit `extract.py` and re-ingest | **Yes** |
 
