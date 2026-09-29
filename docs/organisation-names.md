@@ -177,7 +177,8 @@ own file and tool:
 ```
 
 It works only across editions, since a renamed dataset's old name is absent
-from the current one. Candidates come from what left and arrived on the same
+from the current one, and it reads every edition from the facts store, so it
+needs no workbooks and takes seconds. Candidates come from what left and arrived on the same
 agreements, never from how alike two names look: "Mental Health Minimum Data
 Set" and "Mental Health Services Data Set" are 79% alike and are different
 datasets, while "GPES Data for Pandemic Planning and Research (COVID-19)" and
@@ -187,6 +188,15 @@ Planning and Research (GDPPR)" are 62% alike and are one.
 Decisions land in `data/dataset-aliases.json`, which `extract` applies when
 grouping datasets, so a renamed dataset keeps one page and one history
 instead of splitting at the rename.
+
+A dataset's `canonical` name is not what its page is titled. It is what the
+page's address is made from, and a rename is merged onto the name it replaced,
+so the address a reader bookmarked or cited survives every later rename. The
+page is titled with the spelling the latest versions of its agreements use
+most, and lists the others as "Also recorded in the register as". A dataset
+renamed twice stays one group: a new name joins the group its old name is
+already in, and a chain left by hand is followed to its end when the file is
+read.
 
 ## NHS reorganisations (ODS)
 

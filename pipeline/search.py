@@ -21,6 +21,7 @@ from pathlib import Path
 
 from . import sources
 from .names import display_name
+from .references import slugify
 
 # The text a search looks through: what the agreements table already searched,
 # plus the latest version's purpose text. Only the latest version, since that is
@@ -158,12 +159,14 @@ def names(organisations: list[dict], datasets: list[dict], dataset_groups: list[
             ])
         return sorted(rows, key=lambda row: (bool(row[5]), -row[2], -row[4], row[0].lower()))
 
+    # By page address: a dataset page is titled with the register's current
+    # spelling, which need not be the alias file's canonical.
     variants: dict[str, list[str]] = {}
     for group in dataset_groups:
-        variants.setdefault(group["canonical"], []).extend(group.get("variants", []))
+        variants.setdefault(slugify(group["canonical"]), []).extend(group.get("variants", []))
     return {
         "organisations": entries(organisations, lambda o: o.get("known_as") or []),
-        "datasets": entries(datasets, lambda d: variants.get(d["name"], [])),
+        "datasets": entries(datasets, lambda d: [*variants.get(d["slug"], []), *d.get("known_as", [])]),
     }
 
 

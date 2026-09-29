@@ -68,6 +68,9 @@ def environment(rules: Rules | None = None) -> Environment:
     dataset_aliases = (rules or Rules.load()).dataset_aliases
     # The page a dataset name links to, whichever spelling the register used.
     env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
+    # What the page a dataset name links to is titled. `build_site` knows the
+    # pages, and replaces this with a lookup of their titles.
+    env.filters["dataset_name"] = lambda name: aliases.resolve(name, dataset_aliases)
     return env
 
 
@@ -198,6 +201,9 @@ def build(
     privacy.assign(data["agreements"] + archived)
     stats["privacy"] = privacy.counts(data["agreements"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
+    dataset_titles = {d["slug"]: d["name"] for d in data["datasets"] + archive["datasets"]}
+    slug_of = env.filters["dataset_slug"]
+    env.filters["dataset_name"] = lambda name: dataset_titles.get(slug_of(name), name)
     # Related organisations, from data/organisation-relations.json.
     related_config = relations.load()
     for slug in relations.unknown(related_config, org_slugs):
