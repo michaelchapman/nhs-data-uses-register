@@ -5,31 +5,27 @@ from __future__ import annotations
 import datetime as dt
 import json
 import shutil
+from collections import Counter
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from . import aliases
 from . import compare
-from . import lineage
 from . import relations
 from . import ods
 from . import privacy
 from . import search
 from . import sectors
 from .names import display_name, strip_code
+from .rules import Rules
 from . import sources
-from .extract import archive_views, organisation_slug, slugify
+from .model import archive_views, organisation_slug
+from .references import slugify
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Path(__file__).resolve().parent / "templates"
 ASSETS = ROOT / "assets"
-
-MONTH_NAMES = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
-]
-
 
 def format_date(value: str) -> str:
     if not value:
@@ -38,14 +34,14 @@ def format_date(value: str) -> str:
         parsed = dt.date.fromisoformat(value)
     except ValueError:
         return value
-    return f"{parsed.day} {MONTH_NAMES[parsed.month - 1]} {parsed.year}"
+    return f"{parsed.day} {sources.MONTH_NAMES[parsed.month - 1]} {parsed.year}"
 
 
 def format_month(value: str) -> str:
     if not value or len(value) < 7:
         return "—"
     year, month = value.split("-")[:2]
-    return f"{MONTH_NAMES[int(month) - 1]} {year}"
+    return f"{sources.MONTH_NAMES[int(month) - 1]} {year}"
 
 
 def format_edition(edition: str) -> str:
@@ -59,7 +55,7 @@ def paragraphs(text: str) -> list[str]:
     return [block.strip() for block in text.split("\n") if block.strip()]
 
 
-def environment() -> Environment:
+def environment(rules: Rules | None = None) -> Environment:
     env = Environment(
         loader=FileSystemLoader(TEMPLATES),
         autoescape=select_autoescape(["html"]),
@@ -76,7 +72,7 @@ def environment() -> Environment:
     env.filters["nocode"] = strip_code
     env.globals["merger_edition"] = sources.MERGER_EDITION
     env.globals["ods"] = ods.SOURCE
-    dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    dataset_aliases = (rules or Rules.load()).dataset_aliases
     # The page a dataset name links to, whichever spelling the register used.
     env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
     return env
@@ -146,20 +142,16 @@ def compute_stats(data: dict, as_of: str) -> dict:
     }
 
 
-def _sector_counts(values) -> list[tuple[str, int]]:
+def _sector_counts(values, config: dict) -> list[tuple[str, int]]:
     """`[(sector, count)]` in the order the sectors are listed, leaving out empty ones."""
-    tally: dict[str, int] = {}
-    for value in values:
-        tally[value] = tally.get(value, 0) + 1
-    order = sectors.names(sectors.load()) + [sectors.OTHER, sectors.NOT_STATED]
+    tally = Counter(values)
+    order = sectors.names(config) + [sectors.OTHER, sectors.NOT_STATED]
     return [(name, tally[name]) for name in order if name in tally]
 
 
 def _counts(values) -> list[tuple[str, int]]:
-    tally: dict[str, int] = {}
-    for value in values:
-        tally[value] = tally.get(value, 0) + 1
-    return sorted(tally.items(), key=lambda kv: (-kv[1], kv[0]))
+    """`[(value, count)]`, commonest first."""
+    return sorted(Counter(values).items(), key=lambda kv: (-kv[1], kv[0]))
 
 
 def version_diffs(
@@ -188,8 +180,10 @@ def build(
     out: Path,
     changes_history: list[dict] | None = None,
     history: dict[str, dict] | None = None,
-) -> None:
-    env = environment()
+    rules: Rules | None = None,
+) -> dict[str, dict]:
+    rules = rules or Rules.load()
+    env = environment(rules)
     prepare_output(out)
 
     stats = compute_stats(data, meta["as_of"])
@@ -197,15 +191,16 @@ def build(
     # Agreements earlier editions listed and this one does not: pages of their
     # own, and never in a count. See `facts.read_archive`.
     archived = data.get("archived", [])
-    archive = archive_views(archived, data["organisations"], data["datasets"])
+    archive = archive_views(archived, data["organisations"], data["datasets"], rules)
     org_slugs = {o["slug"] for o in data["organisations"] + archive["organisations"]}
     # Page names, so an agreement can say which page its applicant is listed under.
     org_names = {o["slug"]: o["name"] for o in data["organisations"] + archive["organisations"]}
     # Sectors for the Sector filters, from data/organisation-sectors.json.
-    for warning in sectors.assign(data["organisations"] + archive["organisations"]):
+    sector_config = sectors.load()
+    for warning in sectors.assign(data["organisations"] + archive["organisations"], sector_config):
         print(f"sectors: {warning}")
-    stats["agreement_sectors"] = _sector_counts(a["sector"] for a in data["agreements"])
-    stats["organisation_sectors"] = _sector_counts(o["sector"] for o in data["organisations"])
+    stats["agreement_sectors"] = _sector_counts((a["sector"] for a in data["agreements"]), sector_config)
+    stats["organisation_sectors"] = _sector_counts((o["sector"] for o in data["organisations"]), sector_config)
     # Confidential data and patient opt-outs, for the agreements list's filters.
     privacy.assign(data["agreements"] + archived)
     stats["privacy"] = privacy.counts(data["agreements"])
@@ -215,8 +210,8 @@ def build(
     for slug in relations.unknown(related_config, org_slugs):
         print(f"relations: no organisation page for {slug}")
     related = relations.lines(related_config)
-    organisation_aliases = aliases.load_map(aliases.ALIASES_PATH)
-    organisation_lineage = lineage.load()
+    organisation_aliases = rules.organisation_aliases
+    organisation_lineage = rules.lineage
     # The page a register name is listed on, for tables that carry only the
     # name as some edition wrote it.
     env.filters["org_slug"] = lambda name: organisation_slug(name, organisation_aliases, organisation_lineage)
@@ -268,7 +263,7 @@ def build(
     search.write_names(
         data["organisations"] + archive["organisations"],
         data["datasets"] + archive["datasets"],
-        aliases.load_groups(aliases.DATASET_ALIASES_PATH),
+        rules.dataset_groups,
         out / "search" / meta["edition"],
     )
     search_numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
@@ -308,7 +303,7 @@ def build(
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
-    dataset_aliases = aliases.load_map(aliases.DATASET_ALIASES_PATH)
+    dataset_aliases = rules.dataset_aliases
     for agreement in data["agreements"] + archived:
         render(
             "agreement.html",

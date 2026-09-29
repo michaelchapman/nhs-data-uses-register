@@ -73,10 +73,12 @@ def unknown(config: dict, slugs: set[str]) -> list[str]:
 def main() -> None:
     """Check the file against the newest edition held. Run after ingesting."""
     from . import run, sources
-    from .extract import archive_views
+    from .model import archive_views
+    from .rules import Rules
 
-    data, edition, _ = run.from_store(sources.registers()[0], None)
-    archive = archive_views(data.get("archived", []), data["organisations"], data["datasets"])
+    rules = Rules.load()
+    data, edition, _ = run.from_store(sources.registers()[0], None, rules)
+    archive = archive_views(data.get("archived", []), data["organisations"], data["datasets"], rules)
     slugs = {o["slug"] for o in data["organisations"] + archive["organisations"]}
     missing = unknown(load(), slugs)
     for slug in missing:

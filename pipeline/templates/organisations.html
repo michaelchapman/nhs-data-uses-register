@@ -12,6 +12,7 @@
     <label for="q">Search organisations</label>
     <input type="search" id="q" data-filter-text autocomplete="off" placeholder="e.g. Oxford, IQVIA, council">
   </div>
+  <div class="filter-more" id="organisation-filters" data-filter-more>
   <div class="field">
     <label for="sector">Sector</label>
     <select id="sector" data-filter-select data-key="sector" aria-describedby="sector-hint">
@@ -34,13 +35,14 @@
     <label><input type="checkbox" data-filter-flag data-key="commercial" value="yes"> Has a commercial-purpose agreement</label>
   </fieldset>
   <p class="filter-actions"><button type="button" data-filter-reset>Clear filters</button></p>
+  </div>
 </form>
 
 <p class="result-count" role="status" data-filter-count>Showing all {{ stats.organisations|commas }} organisations.</p>
 {% include "_release-scope.html" %}
 
 <div class="table-scroll">
-<table class="data-table sortable" id="organisations-table">
+<table class="data-table sortable stack" id="organisations-table">
   <caption class="visually-hidden">Organisations holding data sharing agreements</caption>
   <thead><tr>
     <th scope="col">Organisation</th><th scope="col">Type</th>
@@ -52,11 +54,11 @@
     <tr data-sector="{{ o.sector }}" data-type="{{ o.type }}" data-commercial="{{ 'yes' if o.commercial else 'no' }}"
         data-search="{{ (o.name ~ ' ' ~ o.type)|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name|org }}</a></th>
-      <td>{{ o.type or "—" }}</td>
-      <td class="num">{{ o.agreement_count|commas }}</td>
-      <td class="num">{{ o.dataset_names|length }}</td>
-      <td class="num">{{ o.files_released|commas }}</td>
-      <td class="nowrap" data-sort="{{ o.latest_end }}">{{ o.latest_end|date }}</td>
+      <td data-label="Type">{{ o.type or "—" }}</td>
+      <td class="num" data-label="Agreements">{{ o.agreement_count|commas }}</td>
+      <td class="num" data-label="Datasets">{{ o.dataset_names|length }}</td>
+      <td class="num" data-label="Files released">{{ o.files_released|commas }}</td>
+      <td class="nowrap" data-label="Latest end date" data-sort="{{ o.latest_end }}">{{ o.latest_end|date }}</td>
     </tr>
   {% endfor %}
   </tbody>

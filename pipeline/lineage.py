@@ -25,7 +25,6 @@ are told apart. See docs/organisation-names.md, "NHS reorganisations (ODS)".
 from __future__ import annotations
 
 import json
-from functools import lru_cache
 from pathlib import Path
 
 from . import aliases, ods
@@ -89,22 +88,24 @@ class Lineage:
     ):
         self.organisations = organisations
         self.alias_map = alias_map
-        self.entries = {aliases._key(e["name"]): e for e in codes}
+        self.entries = {aliases.name_key(e["name"]): e for e in codes}
         # A reviewed alias makes its names one organisation, so they share
         # whichever code one of them has, and the page keeps the name the
         # reviewer chose: "Milton Keynes City Council", where ODS still says
         # "Milton Keynes Council".
         self.chosen: dict[str, str] = {}
         for variant, canonical in alias_map.items():
-            if aliases._key(canonical) not in self.entries and variant in self.entries:
-                self.entries[aliases._key(canonical)] = self.entries[variant]
+            if aliases.name_key(canonical) not in self.entries and variant in self.entries:
+                self.entries[aliases.name_key(canonical)] = self.entries[variant]
         for canonical in set(alias_map.values()):
-            entry = self.entries.get(aliases._key(canonical))
+            entry = self.entries.get(aliases.name_key(canonical))
             if entry and not entry.get("as"):
                 self.chosen.setdefault(entry["code"], canonical)
         self.successions = {
-            aliases._key(aliases.resolve(s["from"], alias_map)): s for s in successions
+            aliases.name_key(aliases.resolve(s["from"], alias_map)): s for s in successions
         }
+        # `relation` is asked the same pairs of names thousands of times a build.
+        self._relations: dict[tuple[str, str], tuple[str, str] | None] = {}
         # ODS sometimes records a succession on one side only.
         self.later: dict[str, list[dict]] = {}
         for code, record in organisations.items():
@@ -125,15 +126,15 @@ class Lineage:
         """
         if not name:
             return None
-        return self.entries.get(aliases._key(aliases.resolve(name, self.alias_map))) or self.entries.get(
-            aliases._key(name)
+        return self.entries.get(aliases.name_key(aliases.resolve(name, self.alias_map))) or self.entries.get(
+            aliases.name_key(name)
         )
 
     def node(self, name: str) -> str | None:
         # A reviewed succession is a person's decision about this name, so it
         # comes before any code a search matched it to: the register's "HEALTH
         # & SOCIAL CARE INFORMATION CENTRE" also names an unrelated ODS record.
-        key = aliases._key(aliases.resolve(name, self.alias_map)) if name else ""
+        key = aliases.name_key(aliases.resolve(name, self.alias_map)) if name else ""
         if key in self.successions:
             return f"name:{key}"
         entry = self.entry(name)
@@ -183,9 +184,15 @@ class Lineage:
             found.append((self._node_for(link["code"], link["date"]), link["date"]))
         return found
 
-    @lru_cache(maxsize=None)
     def relation(self, old: str, new: str) -> tuple[str, str] | None:
         """`(SAME | SUCCEEDED, date)` if `new` is `old` or took over from it, else None."""
+        # Remembered on the instance: a cache on the method would hold on to
+        # every `Lineage` ever built, as each build and test builds its own.
+        if (old, new) not in self._relations:
+            self._relations[(old, new)] = self._relation(old, new)
+        return self._relations[(old, new)]
+
+    def _relation(self, old: str, new: str) -> tuple[str, str] | None:
         a, b = self.node(old), self.node(new)
         if not a or not b:
             return None
@@ -230,7 +237,7 @@ class Lineage:
                 (e["name"] for e in self.entries.values() if e["code"] == code and not e.get("as")),
                 key=lambda n: (n != n.upper(), n),
             )
-            if used and aliases._key(record["name"]) not in {aliases._key(n) for n in used}:
+            if used and aliases.name_key(record["name"]) not in {aliases.name_key(n) for n in used}:
                 return strip_code(used[0])
             return strip_code(record["name"])
         # A CCG's name is gone from ODS if its record lives on as a sub-ICB
@@ -294,10 +301,13 @@ class Lineage:
         ]
 
 
-def load(codes_path: Path | None = None, snapshot_path: Path | None = None) -> Lineage:
+def load(
+    codes_path: Path | None = None, snapshot_path: Path | None = None, alias_map: dict[str, str] | None = None
+) -> Lineage:
+    """The lineage, under `alias_map` or, when not given, the organisation aliases on file."""
     return Lineage(
         load_codes(codes_path),
         ods.load_snapshot(snapshot_path)["organisations"],
-        aliases.load_map(aliases.ALIASES_PATH),
+        aliases.load_map(aliases.ALIASES_PATH) if alias_map is None else alias_map,
         load_successions(),
     )

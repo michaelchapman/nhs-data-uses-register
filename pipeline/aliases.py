@@ -26,7 +26,7 @@ DATASET_ALIASES_PATH = DATA / "dataset-aliases.json"
 
 
 @functools.lru_cache(maxsize=200_000)
-def _key(name: str) -> str:
+def name_key(name: str) -> str:
     """A case/whitespace-insensitive lookup key.
 
     A reviewer copying a name out of `orgcheck` output should not have their
@@ -100,25 +100,30 @@ def load_map(path: Path = None) -> dict[str, str]:
     Look up with `resolve()`, not this dict directly, since its keys are
     normalised rather than exact register text.
     """
+    return map_of(load_groups(path))
+
+
+def map_of(groups: list[dict]) -> dict[str, str]:
+    """`load_map`, for alias groups already read."""
     mapping: dict[str, str] = {}
-    for group in load_groups(path):
+    for group in groups:
         canonical = group["canonical"]
         for variant in group.get("variants", []):
-            if _key(variant) != _key(canonical):
-                mapping[_key(variant)] = canonical
+            if name_key(variant) != name_key(canonical):
+                mapping[name_key(variant)] = canonical
     return mapping
 
 
 def resolve(name: str, alias_map: dict[str, str]) -> str:
     """The canonical name for `name`, or `name` unchanged if it has no alias."""
-    return alias_map.get(_key(name), name)
+    return alias_map.get(name_key(name), name)
 
 
 def is_ignored(names: list[str], ignored: list[list[str]] | None = None, path: Path = None) -> bool:
     """Whether this exact candidate (as a set of names) was already dismissed."""
     ignored = load_ignored(path) if ignored is None else ignored
-    key = frozenset(_key(n) for n in names)
-    return any(key == frozenset(_key(n) for n in entry) for entry in ignored)
+    key = frozenset(name_key(n) for n in names)
+    return any(key == frozenset(name_key(n) for n in entry) for entry in ignored)
 
 
 def add_ignored(names: list[str], path: Path = None) -> None:
@@ -144,13 +149,13 @@ def add_alias(
     """
     data = _read(path)
     groups = data["aliases"]
-    existing = next((g for g in groups if _key(g["canonical"]) == _key(canonical)), None)
+    existing = next((g for g in groups if name_key(g["canonical"]) == name_key(canonical)), None)
     if existing:
-        have = {_key(v) for v in existing.get("variants", [])} | {_key(existing["canonical"])}
+        have = {name_key(v) for v in existing.get("variants", [])} | {name_key(existing["canonical"])}
         for v in variants:
-            if _key(v) not in have:
+            if name_key(v) not in have:
                 existing.setdefault("variants", []).append(v)
-                have.add(_key(v))
+                have.add(name_key(v))
         if reason and not existing.get("reason"):
             existing["reason"] = reason
     else:

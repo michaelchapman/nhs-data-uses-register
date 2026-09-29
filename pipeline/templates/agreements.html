@@ -13,6 +13,9 @@
            placeholder="e.g. cancer, Kings College, HES">
     <p class="hint" id="q-hint">Searches the title, reference, organisation, datasets and the purpose of each agreement. Words under four letters match whole words; longer words also match the start of a word, so “pharma” finds “pharmaceutical”.</p>
   </div>
+  {# The rest fold away behind a button on a phone (assets/filter.js), where
+     they would otherwise fill two screens before the first agreement. #}
+  <div class="filter-more" id="agreement-filters" data-filter-more>
   <div class="field">
     <label for="sector">Sector</label>
     <select id="sector" data-filter-select data-key="sector" aria-describedby="sector-hint">
@@ -61,6 +64,7 @@
   <p class="filter-actions">
     <button type="button" data-filter-reset>Reset filters</button>
   </p>
+  </div>
 </form>
 
 <div class="name-matches" data-name-matches data-names="{{ meta.base_path }}/search/{{ meta.edition }}/names.json" data-base="{{ meta.base_path }}" hidden></div>
@@ -69,7 +73,7 @@
 {% include "_release-scope.html" %}
 
 <div class="table-scroll">
-<table class="data-table sortable" id="agreements-table">
+<table class="data-table sortable stack" id="agreements-table">
   <caption class="visually-hidden">Data sharing agreements in the {{ meta.edition|edition }} register</caption>
   <thead>
     <tr>
@@ -91,17 +95,19 @@
         data-commercial="{{ 'yes' if a.commercial == 'Yes' else 'no' }}"
         data-sublicensing="{{ 'yes' if a.sublicensing == 'Yes' else 'no' }}"
         data-confidentiality="{{ a.confidentiality|join(' ') }}" data-optouts="{{ a.opt_outs.state }}"
-        data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}"
-        data-search="{{ (a.title ~ ' ' ~ a.base_reference ~ ' ' ~ a.organisation ~ ' ' ~ a.dataset_names|join(' '))|lower }}">
+        {# No `data-search` text: the word index answers every search here, and
+            the 800 KB it cost served only a search the index failed to load.
+            That falls back to what the row shows. #}
+        data-active="{{ 'yes' if a.coverage_end >= meta.as_of else 'no' }}">
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title or a.base_reference }}</a>
         <span class="ref">{{ a.base_reference }}</span></th>
-      <td><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
-      <td>{{ a.organisation_type or "—" }}</td>
-      <td class="num">{{ a.dataset_names|length }}</td>
-      <td class="num">{{ a.files_released|commas }}</td>
-      <td class="nowrap" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
+      <td data-label="Organisation"><a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a></td>
+      <td data-label="Type">{{ a.organisation_type or "—" }}</td>
+      <td class="num" data-label="Datasets">{{ a.dataset_names|length }}</td>
+      <td class="num" data-label="Files">{{ a.files_released|commas }}</td>
+      <td class="nowrap" data-label="Latest term" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       {{ status_cell(a, meta.as_of) }}
-      <td>{{ a.commercial or "—" }}</td>
+      <td data-label="Commercial">{{ a.commercial or "—" }}</td>
     </tr>
   {% endfor %}
   </tbody>

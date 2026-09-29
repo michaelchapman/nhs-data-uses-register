@@ -83,6 +83,49 @@ class BuiltSite(unittest.TestCase):
             self.assertTrue((out / "assets" / "print.js").exists())
         self.assertIn('<script src="/assets/print.js" defer></script>', page)
 
+    def test_an_earlier_version_repeats_only_the_text_that_differs(self):
+        with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            data = extract(workbook_bytes())
+            (agreement,) = [a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-1-AAAAA"]
+            agreement["versions"][0]["expected_output"] = "An output only the first version promised"
+            build.build(data, site_meta(), FIRST_EDITION, out)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+        history = page[page.index('id="history"'):page.index('id="register-history"')]
+        first = history[history.index('<span class="version-ref">DARS-NIC-1-AAAAA-v1</span>'):]
+        self.assertIn("The same as v2: Objective for processing.", first)
+        self.assertIn("An output only the first version promised", first)
+        self.assertEqual(first.count('<details class="prose-block">'), 1)
+
+    def test_wide_tables_label_their_cells_for_a_phone(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            pages = {
+                "agreements-table": (out / "agreements" / "index.html").read_text(),
+                "organisations-table": (out / "organisations" / "index.html").read_text(),
+            }
+        for table_id, page in pages.items():
+            table = page[page.index(f'id="{table_id}"'):]
+            table = table[:table.index("</table>")]
+            self.assertIn("stack", page[page.rindex("<table", 0, page.index(f'id="{table_id}"')):page.index(f'id="{table_id}"')])
+            body = table[table.index("<tbody>"):]
+            cells = body.count("<td")
+            self.assertGreater(cells, 0)
+            self.assertEqual(body.count("<td") - body.count("data-label="), 0, table_id)
+
+    def test_the_agreements_filters_fold_behind_a_button_on_a_phone(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "agreements" / "index.html").read_text()
+        form = page[page.index("<form class=\"filters\""):page.index("</form>")]
+        folded = form[form.index("data-filter-more"):]
+        # The search box stays out; every other control folds.
+        self.assertNotIn('id="q"', folded)
+        for control in ('id="sector"', 'id="type"', 'id="confidentiality"', 'id="optouts"', "data-filter-reset"):
+            self.assertIn(control, folded)
+
     def test_agreements_list_opens_newest_first(self):
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
@@ -296,7 +339,7 @@ class DatasetPage(unittest.TestCase):
         self.assertIn('data-active="yes"', self.page)
         self.assertIn('<th scope="col" class="num">Files</th>', self.page)
         table = self.page[self.page.index('id="dataset-agreements"'):]
-        self.assertIn('<td class="num">5</td>', table)
+        self.assertIn('<td class="num" data-label="Files">5</td>', table)
 
 
 class ChangesPages(unittest.TestCase):
@@ -593,7 +636,7 @@ class ArchivedAgreements(unittest.TestCase):
             left = next(a for a in data["agreements"] if a["base_reference"] == "DARS-NIC-2-BBBBB")
             # The register as it would be without it: organisations and
             # datasets are derived from the agreements still listed.
-            from pipeline.extract import assemble
+            from pipeline.model import assemble
             data = assemble({a["base_reference"]: a["versions"] for a in data["agreements"] if a is not left})
             left["archived"] = {"last_edition": "january2023", "next_edition": "february2023"}
             data["archived"] = [left]

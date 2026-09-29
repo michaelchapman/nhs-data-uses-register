@@ -241,13 +241,24 @@
   {{ version_diff(diffs[version.reference]) }}
   {% endif %}
   {% if version.reference != v.reference %}
-    {% for section, text in [("Objective for processing", version.objective), ("Expected output", version.expected_output), ("Benefits reported", version.yielded_benefits)] %}
-      {% if text %}
+    {# An earlier version's text in full only where it differs from the version
+       that replaced it, listed just above: renewals mostly restate it, and
+       printing every copy made the longest pages over a megabyte. #}
+    {% set newer = loop.previtem %}
+    {% set sections = [("Objective for processing", "objective"), ("Expected output", "expected_output"), ("Benefits reported", "yielded_benefits")] %}
+    {% set same = [] %}
+    {% for section, key in sections if version[key] %}
+      {% if newer and version[key] == newer[key] %}
+      {% set _ = same.append(section) %}
+      {% else %}
       <details class="prose-block"><summary><h4>{{ section }}</h4></summary>
-      {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
+      {% for para in version[key]|paragraphs %}<p>{{ para }}</p>{% endfor %}
       </details>
       {% endif %}
     {% endfor %}
+    {% if same %}
+    <p class="hint">The same as v{{ newer.version }}: {{ same|join(", ")|capitalize }}.</p>
+    {% endif %}
   {% endif %}
 </details>
 {% endfor %}
