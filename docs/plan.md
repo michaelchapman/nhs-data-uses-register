@@ -13,20 +13,21 @@ publishes and reproducibly reformats them into pages that are easier to read,
 search, link to and cite. It is a presentation of the register, not a new
 dataset: there is no expectation that it publishes the reformatted data, so a
 proposal to add a data download starts from that rule. See
-[section 5](#5-considered-and-not-planned).
+[section 6](#6-considered-and-not-planned).
 
 Last reviewed 2026-09-29. Each item has an issue. In rough order of value:
 
 1. [Release views](#1-release-views) (#47)
-2. [Amendments on the changes page](#2-amendments-on-the-changes-page) (#48)
-3. [Checking workbooks before a re-parse](#3-checking-workbooks-before-a-re-parse) (#49)
-4. [Waiting on people](#4-waiting-on-people) (#50, #51)
-5. [Considered and not planned](#5-considered-and-not-planned)
+2. [Dataset pages](#2-dataset-pages) (#56, #57)
+3. [Amendments on the changes page](#3-amendments-on-the-changes-page) (#48)
+4. [Checking workbooks before a re-parse](#4-checking-workbooks-before-a-re-parse) (#49)
+5. [Waiting on people](#5-waiting-on-people) (#50, #51, #55)
+6. [Considered and not planned](#6-considered-and-not-planned)
 
-Ideas raised as issues and not yet scoped here: describing and merging dataset
-names (#25), a glossary of the register's terms (#27), and trends over time
-with a feed of what changed (#28). [Built](#built) keeps the reasoning of
-finished work that still decides how the site behaves.
+Ideas raised as issues and not yet scoped here: a glossary of the register's
+terms (#27), and trends over time with a feed of what changed (#28).
+[Built](#built) keeps the reasoning of finished work that still decides how
+the site behaves.
 
 ## 1. Release views
 
@@ -91,7 +92,56 @@ The store keeps each release under a `channel`, today always `"file"`, so a
 second kind of release from another source could sit beside these rather than
 be merged into them.
 
-## 2. Amendments on the changes page
+### What the release data allows
+
+Measured on 2026-09-29, from the store and the September 2026 edition.
+
+- **Count an edition's files, not the store's rows.** The store holds 145,325
+  rows for 104,872 distinct files, because a relabelled dataset's files are
+  recorded again under the new name. Read through `read_edition`, September
+  2026 reports 104,451. A register-wide count must come from one edition's view,
+  as every page does now.
+- **Recent months are complete.** 99% of files first appear in the edition
+  published the month after they were released, so an edition's last month
+  (August for the September edition) can be shown as final. A month is never
+  counted before its first edition exists.
+- **The years before 2019 are thin, and not because of departures.** September
+  2026 lists 206 files released in 2016, 541 in 2017 and 980 in 2018, then
+  7,684 in 2019; the July 2021 edition already had 206, 543 and 980. A chart
+  starting in April 2016 would read as data sharing rising eightfold in 2019.
+  Why the register's early years are sparse is a question for the DARS team
+  (below); until it is answered the chart either starts in 2019 or marks
+  2016–2018 as partial coverage.
+- **Agreements differ by orders of magnitude.** Of the 983 agreements with files,
+  the median has files in 3 months across 3 datasets, 247 in a single month; the
+  largest span 93 months and 26 datasets, and one agreement has 4,912 files. A
+  timeline has to read at both ends. Each version's `releases` already holds a
+  `months` count per dataset, so the data for an agreement timeline is in hand.
+- **Pages have room, with care.** The median agreement page is 58 KB; the largest
+  is 1.3 MB. An inline SVG row per dataset adds a few KB; a table of every month
+  would not fit the largest.
+- **Step 4 is partly built.** The agreements list's opt-outs filter already has a
+  "No files recorded" option (967 agreements), from `privacy.py`. What is left
+  is the wording rules above applied to it, and whether it becomes its own
+  filter.
+
+## 2. Dataset pages
+
+Merging renamed datasets and titling each page with the register's current
+name were built in #54 (see [Built](#dataset-names)). Two parts of #25 need
+hand-written data, and so a person to check it:
+
+- **Related datasets** (#56): successors and versions that stay separate
+  pages, such as MHMDS → MHLDDS → MHSDS and IAPT v1.5 → v2, in a
+  `data/dataset-relations.json` shaped like the organisation relations file.
+- **Descriptions** (#57): a sentence or two and a link to NHS England's page
+  for each dataset, starting with the 20 most-named, which cover 79% of
+  agreements.
+
+A release timeline on each dataset page belongs with the release views above
+(#47).
+
+## 3. Amendments on the changes page
 
 Issue #48. Every amendment now shows what changed, and register-wide edits are
 reported once. Two smaller things were proposed and not done:
@@ -103,16 +153,16 @@ reported once. Two smaller things were proposed and not done:
 - make an agreement's "Amended this month" tag link to the change on its
   timeline.
 
-## 3. Checking workbooks before a re-parse
+## 4. Checking workbooks before a re-parse
 
 Issue #49. The manifest records each ingested workbook's SHA-256. A `--verify`
 flag on `ingest` that checks the files in `data/raw/` against it would catch a
 wrong or corrupted download before a 70-minute re-parse, not during one. It
 matters only when a re-parse is needed, which is rare.
 
-## 4. Waiting on people
+## 5. Waiting on people
 
-The decisions below are tracked in #51. One more waits on a design choice
+The decisions below are tracked in #51, and the dataset names in #55. One more waits on a design choice
 rather than a person outside the project (#50): the headings inside folded
 sections, such as an agreement's purpose sections, sit in a `<summary>`, and
 some screen readers do not announce them as headings. The fix is either the
@@ -129,13 +179,20 @@ heading above the section, the sections left open, or the markup as it is.
 - **Questions for the DARS team.** Why the latest versions of the UCL (MR623)
   and University of Bristol (Learning Disabilities Mortality Review) agreements
   left the register in February 2023, when the other four agreements that lost
-  versions then were NHS England's own. And whether any test record other than
-  DARS-NIC-401994-D5Q7S reached a published workbook.
+  versions then were NHS England's own. Whether any test record other than
+  DARS-NIC-401994-D5Q7S reached a published workbook. And why the release
+  sheet lists so few files before 2019 (1,727 across 2016–2018, against 7,684
+  in 2019 alone), which decides where a chart of files released can start.
+- **Dataset names** (#55). Whether "Maternity Services Data Set" (180
+  agreements, no files recorded) and "Maternity Services Data Set (MSDS) v1.5"
+  (31) are one dataset, and "Alcohol Dependence" and "Alcohol Dependency
+  Dataset" likewise. Both pairs are in use in the same edition, so
+  `datasetcheck` cannot decide them.
 - **The ODS licence.** The site credits ODS under the Open Government Licence
   v3.0. That could not be checked against ODS's own pages from the build
   environment, which digital.nhs.uk refuses. It is worth confirming once.
 
-## 5. Considered and not planned
+## 6. Considered and not planned
 
 - **Filters on sensitivity, legal basis for provision and type of data** (#23).
   Deferred, not rejected: #23 built the two questions that mattered most,
@@ -180,6 +237,29 @@ heading above the section, the sections left open, or the markup as it is.
   650 MB, which matters more.
 
 ## Built
+
+### Dataset names
+
+Part of #25, built in #54 in September 2026. The register relabels datasets,
+and three things followed from how the site had handled it:
+
+- **Renames in two steps.** SGSS and MHCYP were each renamed twice and
+  recorded as two alias groups, and a name was resolved only one step, so the
+  January 2023 changes page showed 97 dataset removals that were a rename.
+  Every name now resolves to the end of its chain, a loop is refused, and a new
+  rename joins the group its old name is in.
+- **Titles.** An alias group's canonical name was the longest spelling, which
+  titled 15 pages with names the register had dropped. The canonical name now
+  makes only the page's address, which outlasts renames; the page is titled
+  with the spelling its agreements' latest versions use most, and lists the
+  others.
+- **Finding renames.** `datasetcheck` read every workbook from `data/raw/`,
+  which exists only where they were downloaded, and was not in the monthly
+  routine. It now reads the store in seconds, is step 4 of the routine, and
+  warns in CI.
+
+It cannot decide two names that are both in use in one edition; those go to a
+person (#55).
 
 ### Searching the purpose text
 
