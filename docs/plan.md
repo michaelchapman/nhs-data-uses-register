@@ -8,6 +8,13 @@ history. What still governs the site lives in three places: the
 [manual-updates.md](manual-updates.md), and the name rules in
 [organisation-names.md](organisation-names.md).
 
+**What the site is for.** It takes the Data Uses Registers NHS England
+publishes and reproducibly reformats them into pages that are easier to read,
+search, link to and cite. It is a presentation of the register, not a new
+dataset: there is no expectation that it publishes the reformatted data, so a
+proposal to add a data download starts from that rule. See
+[section 7](#7-considered-and-not-planned).
+
 Last reviewed 2026-09-27. In rough order of value:
 
 1. [Searching the purpose text](#1-searching-the-purpose-text)
@@ -226,6 +233,12 @@ when a re-parse is needed, which is rare.
   names, successions, status or change history. Extending them (#26) meant a
   41 MB file of purpose text. The downloads page, kept at its address but out
   of the menu, points to the workbook and to the facts store.
+- **A CSV of the site's own reading of the agreements.** Built on 2026-09-29
+  and taken out the same day: one row per agreement with the merged
+  organisation pages, sectors, status, confidential data bases and opt-outs
+  the site works out, and no purpose text. It is a reformatted dataset, which
+  the site does not set out to publish (see the top of this plan). It may be
+  revisited; the code is in the git history (`pipeline/export.py`).
 - **An amendment log for prose.** Proposed to show old and new text between
   editions. Unnecessary: the facts store keeps every edition's text, so the
   site shows prose redlines already.
