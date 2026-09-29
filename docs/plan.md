@@ -157,9 +157,8 @@ be merged into them.
 
 ## 3. Change downloads
 
-Optional. The site publishes one data file, `downloads/agreements.csv` (see
-section 7), and this is the other export that could earn a place: no single
-workbook holds the change history.
+Optional. The site publishes no data files (see section 7), and this is the one
+export that could earn a place: no single workbook holds the change history.
 Everything on the changes pages is computed at build time, so publishing it is
 cheap, and it makes the month-on-month history usable by other people's
 tooling:
@@ -221,14 +220,12 @@ when a re-parse is needed, which is rare.
   data filter's, meaning something different. If it is added, group it by
   statute and tidy the dash and quote variants first.
 
-- **CSV extracts of the register's sheets.** Published until 2026-09-27, then
-  removed. They were one edition's three sheets as CSV, which the register's
-  own workbook already provides, and carried none of what the site adds:
-  merged names, successions, status or change history. Extending them (#26)
-  meant a 41 MB file of purpose text. What replaced them is
-  `downloads/agreements.csv` (`pipeline/export.py`): one row per agreement
-  with what the site does add, and no purpose text. The downloads page, out of
-  the menu, is linked from the agreements list and the home page.
+- **CSV extracts of the register.** Published until 2026-09-27, then removed.
+  They were one edition's three sheets as CSV, which the register's own
+  workbook already provides, and carried none of what the site adds: merged
+  names, successions, status or change history. Extending them (#26) meant a
+  41 MB file of purpose text. The downloads page, kept at its address but out
+  of the menu, points to the workbook and to the facts store.
 - **An amendment log for prose.** Proposed to show old and new text between
   editions. Unnecessary: the facts store keeps every edition's text, so the
   site shows prose redlines already.
