@@ -141,6 +141,29 @@ class Extract(unittest.TestCase):
         university = next(o for o in self.data["organisations"] if o["name"] == "UNIVERSITY OF EXAMPLE")
         self.assertEqual(university["dataset_names"], [NEW_NAME])
 
+    def test_a_renamed_dataset_lists_its_other_spellings(self):
+        dataset = next(d for d in self.data["datasets"] if d["name"] == NEW_NAME)
+        self.assertEqual(dataset["known_as"], [OLD_NAME])
+
+
+class DatasetTitle(unittest.TestCase):
+    """The alias file keys a page on the name the register dropped."""
+
+    @classmethod
+    def setUpClass(cls):
+        with dataset_aliases(canonical=OLD_NAME):
+            cls.data = extract(workbook_bytes())
+        cls.dataset = next(d for d in cls.data["datasets"] if d["canonical"] == OLD_NAME)
+
+    def test_the_page_is_titled_as_the_register_writes_it_now(self):
+        # Both agreements' latest versions say NEW_NAME.
+        self.assertEqual(self.dataset["name"], NEW_NAME)
+        self.assertEqual(self.dataset["known_as"], [OLD_NAME])
+
+    def test_the_page_keeps_the_address_of_the_canonical_name(self):
+        self.assertEqual(self.dataset["slug"], slugify(OLD_NAME))
+        self.assertEqual(self.dataset["files_released"], 7)
+
 
 def _version(version, start, end):
     return {

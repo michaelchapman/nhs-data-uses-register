@@ -103,13 +103,17 @@ def workbook_bytes() -> bytes:
 
 
 @contextmanager
-def dataset_aliases():
-    """Point the alias files at temporary ones that merge the renamed dataset."""
+def dataset_aliases(canonical=NEW_NAME):
+    """Point the alias files at temporary ones that merge the renamed dataset.
+
+    `canonical=OLD_NAME` keys the page on the name the register dropped, as the
+    real alias file often does.
+    """
     with tempfile.TemporaryDirectory() as directory:
         directory = Path(directory)
         datasets = directory / "dataset-aliases.json"
         datasets.write_text(json.dumps({
-            "aliases": [{"canonical": NEW_NAME, "variants": [NEW_NAME, OLD_NAME]}],
+            "aliases": [{"canonical": canonical, "variants": [NEW_NAME, OLD_NAME]}],
             "ignored": [],
         }))
         organisations = directory / "organisation-aliases.json"

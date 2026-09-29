@@ -9,6 +9,7 @@ change to one of those files takes effect at the next build.
 from __future__ import annotations
 
 import re
+from collections import Counter
 
 from . import aliases, sources
 from .names import strip_code
@@ -306,6 +307,18 @@ def _dataset_organisations(agreements: list[dict], canonical_by_slug: dict[str, 
     return sorted(rows.values(), key=lambda r: (-r["agreements"], r["name"].lower()))
 
 
+def _latest_spellings(agreement: dict, canonical: str, alias_map: dict) -> set[str]:
+    """How the latest version naming a dataset spells it, as a set in case it
+    lists the dataset twice under two spellings."""
+    for version in reversed(agreement["versions"]):
+        found = {
+            d["name"] for d in version["datasets"] if d["name"] and aliases.resolve(d["name"], alias_map) == canonical
+        }
+        if found:
+            return found
+    return set()
+
+
 def _group_datasets(agreements: list[dict], rules: Rules) -> list[dict]:
     canonical_by_slug = _canonical_names(rules)
     # Datasets get relabelled at least as often as organisations — NHS England
@@ -320,17 +333,30 @@ def _group_datasets(agreements: list[dict], rules: Rules) -> list[dict]:
             name = aliases.resolve(raw_name, alias_map)
             entry = grouped.setdefault(
                 name,
-                {"name": name, "slug": slugify(name), "agreements": [], "attributes": {}},
+                {
+                    # The canonical name keys the page and makes its address,
+                    # which then outlasts the register's renames; `name`, what
+                    # the page is titled, is settled below.
+                    "canonical": name,
+                    "name": name,
+                    "slug": slugify(name),
+                    "agreements": [],
+                    "attributes": {},
+                    "spellings": Counter(),
+                    "known_as": set(),
+                },
             )
             # An agreement that spans a rename names both spellings, and both
             # resolve to this entry: list it once, or its files count twice.
             if (name, agreement["base_reference"]) not in listed:
                 listed.add((name, agreement["base_reference"]))
                 entry["agreements"].append(agreement)
+                entry["spellings"].update(_latest_spellings(agreement, name, alias_map))
             for version in agreement["versions"]:
                 for dataset in version["datasets"]:
                     if aliases.resolve(dataset["name"], alias_map) != name:
                         continue
+                    entry["known_as"].add(dataset["name"])
                     for key in ("type_of_data", "sensitivity", "legal_basis", "frequency"):
                         if dataset[key]:
                             # Values differ across agreements only by stray whitespace
@@ -342,6 +368,14 @@ def _group_datasets(agreements: list[dict], rules: Rules) -> list[dict]:
                             values = [v.strip() for v in value.split(";")] if key == "legal_basis" else [value]
                             entry["attributes"].setdefault(key, set()).update(v for v in values if v)
     for name, entry in grouped.items():
+        # Titled as the register writes it now, not as the alias file's
+        # canonical, which is often a spelling the register dropped years ago.
+        spellings = entry.pop("spellings")
+        entry["name"] = min(spellings, key=lambda n: (-spellings[n], n != name, n.casefold()), default=name)
+        entry["known_as"] = sorted(
+            {n for n in entry["known_as"] if aliases.name_key(n) != aliases.name_key(entry["name"])},
+            key=str.casefold,
+        )
         entry["agreement_count"] = len(entry["agreements"])
         # Counted by canonical slug, not raw name, so two aliased spellings of
         # the same organisation count once rather than twice.

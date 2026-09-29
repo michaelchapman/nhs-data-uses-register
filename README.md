@@ -170,7 +170,7 @@ pipeline/ods.py                 reads NHS organisation records from ODS into a s
 pipeline/odscheck.py            finds the ODS code for each NHS name in the register
 pipeline/lineage.py             renames and successions between NHS organisations
 pipeline/exclusions.py          leaves out published records that are not data sharing
-pipeline/datasetcheck.py        finds datasets the register has renamed
+pipeline/datasetcheck.py        finds datasets the register has renamed, from the facts store
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
 pipeline/templates/             Jinja2 templates

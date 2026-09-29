@@ -12,6 +12,9 @@
 </nav>
 
 <h1>{{ dataset.name }}</h1>
+{% if dataset.known_as %}
+<p class="hint">Also recorded in the register as: {{ dataset.known_as|join("; ") }}. The register has renamed this dataset, and this page lists the agreements under every name — see <a href="{{ meta.repo_url }}/blob/main/data/dataset-aliases.json">data/dataset-aliases.json</a> in the repository.</p>
+{% endif %}
 {% if dataset.archived %}
 <p class="notice"><strong>No longer in the register.</strong> Every agreement naming this dataset has left the register; the last was published in the {{ dataset.archived.last_edition|edition }} edition. This page shows those agreements as last published, and none is counted in this site's figures.</p>
 {% endif %}

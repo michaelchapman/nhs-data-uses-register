@@ -18,60 +18,37 @@ rather than with one that merely looks similar — the two cannot be told apart
 by spelling, since "Mental Health Minimum Data Set" and "Mental Health
 Services Data Set" are 79% alike and are different datasets.
 
-Decisions are written to `data/dataset-aliases.json`, which `extract` applies
-when grouping datasets into pages.
+Every edition is read from the committed facts store, so this needs none of
+the workbooks and takes seconds. Decisions are written to
+`data/dataset-aliases.json`, which the build applies when grouping datasets
+into pages. A rename joins the group of the name it replaced, keeping that
+page's address; the page is titled with whichever name the register uses now.
 """
 
 from __future__ import annotations
 
 import argparse
-from pathlib import Path
 
-from . import aliases, compare, orgcheck, sources
+from . import aliases, compare, facts, orgcheck, sources
 
-ROOT = Path(__file__).resolve().parent.parent
 PATH = aliases.DATASET_ALIASES_PATH
 
 
-def datasets_in_workbook(path: Path) -> dict[str, set[str]]:
-    """`{reference: dataset names}` from the Datasets sheet alone."""
-    import openpyxl
+def gather(by_edition: dict[str, dict[str, set[str]]]) -> list[orgcheck.Candidate]:
+    """Rename candidates across every consecutive pair of editions.
 
-    from .extract import read_sheet
-    from .records import clean
-
-    workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    try:
-        found: dict[str, set[str]] = {}
-        for row in read_sheet(workbook, "Datasets"):
-            reference = clean(row.get("Reference Number"))
-            name = clean(row.get("Dataset"))
-            if reference and name:
-                found.setdefault(reference, set()).add(name)
-        return found
-    finally:
-        workbook.close()
-
-
-def gather(paths: list[Path]) -> list[orgcheck.Candidate]:
-    """Rename candidates across every consecutive pair of editions."""
-    ordered = sorted(paths, key=lambda p: sources.edition_sort_key(sources.parse_edition(p.stem)))
+    `by_edition` is `{edition: {version reference: dataset names}}`, as
+    `facts.dataset_names_by_edition` reads it.
+    """
     tally: dict[tuple[str, str], dict] = {}
     previous = None
-    for path in ordered:
-        edition = sources.parse_edition(path.stem)
-        print(f"  reading {path.name} …", flush=True)
-        current = datasets_in_workbook(path)
+    for edition in sorted(by_edition, key=sources.edition_sort_key):
+        current = by_edition[edition]
         if previous is not None:
             for rename in compare.membership_renames(previous, current):
                 entry = tally.setdefault(
                     (rename["was"], rename["now"]),
-                    {
-                        "versions": 0,
-                        "editions": set(),
-                        "overlap": rename["overlap"],
-                        "now_label": rename["now"],
-                    },
+                    {"versions": 0, "editions": set(), "overlap": rename["overlap"]},
                 )
                 entry["versions"] += rename["versions"]
                 entry["editions"].add(edition)
@@ -89,13 +66,15 @@ def gather(paths: list[Path]) -> list[orgcheck.Candidate]:
                 f"{'s' if entry['versions'] != 1 else ''}"
                 f" (agreement lists {entry['overlap']:.0%} the same)",
                 [was, now],
-                canonical=now,
+                # The name replaced: its page already exists, and merging onto
+                # it keeps that page's address.
+                canonical=was,
                 # A dataset that disappeared while another appeared on every
                 # one of its agreements is the same dataset relabelled. Below
                 # total overlap something else is going on, so a person looks.
                 evidence=(
                     f"renamed in {when}: absent from the register afterwards, and "
-                    f"{entry['now_label']} appeared on the same "
+                    f"{now} appeared on the same "
                     f"{entry['versions']:,} agreement versions"
                     if entry["overlap"] >= 1.0
                     else None
@@ -113,27 +92,43 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--auto",
         action="store_true",
-        help="apply the unambiguous ones without asking (acronym, punctuation, legal form)",
+        help="merge the renames whose agreement lists match exactly, without asking",
     )
-    parser.add_argument("workbooks", nargs="*", type=Path, help="default: data/raw/*.xlsx")
+    parser.add_argument("--register", default="data-uses-register", help="register slug to check")
+    parser.add_argument(
+        "--advisory",
+        action="store_true",
+        help="print each candidate as a GitHub Actions warning and change nothing (CI runs this)",
+    )
     args = parser.parse_args(argv)
 
-    workbooks = args.workbooks or sorted((ROOT / "data" / "raw").glob("*.xlsx"))
-    if not workbooks:
+    by_edition = facts.dataset_names_by_edition(args.register)
+    if len(by_edition) < 2:
         raise SystemExit(
-            "no workbooks to compare. Put the published .xlsx files in data/raw/ "
-            "or name them on the command line; see docs/manual-updates.md."
+            f"the facts store holds {len(by_edition)} edition(s) of {args.register}; "
+            "a rename shows only between two. See docs/manual-updates.md."
         )
-    print(f"scanning {len(workbooks)} workbook(s) for dataset renames")
-    candidates = orgcheck.outstanding(gather(workbooks), path=PATH)
+    print(f"comparing {len(by_edition)} editions for dataset renames")
+    candidates = orgcheck.outstanding(gather(by_edition), path=PATH)
     print()
 
+    if args.advisory:
+        for c in candidates:
+            was, now = c.names
+            print(
+                f"::warning file={PATH.relative_to(PATH.parent.parent)},title=datasetcheck::"
+                f"{was!r} -> {now!r} looks like a rename ({c.label}). "
+                "Run python -m pipeline.datasetcheck --review."
+            )
+        print(f"{len(candidates)} outstanding.")
+        return
+
     if args.auto:
-        applied = aliases.auto_merge(
-            [(*c.names, c.evidence) for c in candidates], path=PATH
-        )
-        for entry in applied:
-            print(f"  merged  {entry['variant']!r}\n       ->  {entry['canonical']!r}  ({entry['reason']})")
+        applied = [c for c in candidates if c.evidence]
+        for c in applied:
+            was, now = c.names
+            aliases.add_alias(was, [was, now], c.evidence or "", path=PATH, source="auto")
+            print(f"  merged  {now!r}\n    onto  {aliases.resolve(was, aliases.load_map(PATH))!r}  ({c.evidence})")
         print(f"\n{len(applied)} merged automatically; {len(candidates) - len(applied)} left for review.")
         candidates = orgcheck.outstanding(candidates, path=PATH)
 

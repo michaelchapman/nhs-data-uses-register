@@ -1,5 +1,5 @@
 {
-  "_comment": "Dataset name merges, for datasets the register has relabelled — see docs/organisation-names.md and `python -m pipeline.datasetcheck`. Each group: canonical (the name shown on the dataset page) and variants (every spelling that should map to it). An entry marked \"source\": \"auto\" was added by --auto on unambiguous evidence and nobody reviewed it. `ignored` records candidates a reviewer decided were different datasets.",
+  "_comment": "Dataset name merges, for datasets the register has relabelled — see docs/organisation-names.md and `python -m pipeline.datasetcheck`. Each group: canonical (the name the dataset page's address is made from, kept so the address outlasts renames) and variants (every spelling that should map to it). The page itself is titled with whichever spelling the edition shown uses most, and lists the others. An entry marked \"source\": \"auto\" was added by --auto on unambiguous evidence and nobody reviewed it. `ignored` records candidates a reviewer decided were different datasets.",
   "aliases": [
     {
       "canonical": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
@@ -156,21 +156,13 @@
       "source": "auto"
     },
     {
-      "canonical": "COVID-19 Second Generation Surveillance System (SGSS)",
-      "variants": [
-        "COVID-19 Second Generation Surveillance System",
-        "COVID-19 Second Generation Surveillance System (SGSS)"
-      ],
-      "reason": "renamed in January 2023: absent from the register afterwards, and COVID-19 Second Generation Surveillance System (SGSS) appeared on the same 90 agreement versions",
-      "source": "auto"
-    },
-    {
       "canonical": "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
       "variants": [
         "COVID-19 SGSS First Positives (Second Generation Surveillance System)",
-        "COVID-19 Second Generation Surveillance System (SGSS)"
+        "COVID-19 Second Generation Surveillance System (SGSS)",
+        "COVID-19 Second Generation Surveillance System"
       ],
-      "reason": "renamed in April 2023: absent from the register afterwards, and COVID-19 SGSS First Positives (Second Generation Surveillance System) appeared on the same 90 agreement versions",
+      "reason": "renamed in April 2023: absent from the register afterwards, and COVID-19 SGSS First Positives (Second Generation Surveillance System) appeared on the same 90 agreement versions; renamed in January 2023: absent from the register afterwards, and COVID-19 Second Generation Surveillance System (SGSS) appeared on the same 90 agreement versions",
       "source": "auto"
     },
     {
@@ -223,18 +215,10 @@
       "canonical": "Mental Health of Children and Young People (MHCYP) Survey",
       "variants": [
         "Mental Health of Children and Young People (MHCYP)",
-        "Mental Health of Children and Young People (MHCYP) Survey"
+        "Mental Health of Children and Young People (MHCYP) Survey",
+        "Mental Health of Children and Young People"
       ],
-      "reason": "renamed in November 2025: absent from the register afterwards, and Mental Health of Children and Young People (MHCYP) Survey appeared on the same 10 agreement versions",
-      "source": "auto"
-    },
-    {
-      "canonical": "Mental Health of Children and Young People (MHCYP)",
-      "variants": [
-        "Mental Health of Children and Young People",
-        "Mental Health of Children and Young People (MHCYP)"
-      ],
-      "reason": "renamed in January 2023: absent from the register afterwards, and Mental Health of Children and Young People (MHCYP) appeared on the same 7 agreement versions",
+      "reason": "renamed in November 2025: absent from the register afterwards, and Mental Health of Children and Young People (MHCYP) Survey appeared on the same 10 agreement versions; renamed in January 2023: absent from the register afterwards, and Mental Health of Children and Young People (MHCYP) appeared on the same 7 agreement versions",
       "source": "auto"
     },
     {

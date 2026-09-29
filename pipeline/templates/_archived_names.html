@@ -3,15 +3,15 @@
 <h2 id="no-longer-listed">No longer in the register ({{ items|length|commas }})</h2>
 <p>{{ "Organisations" if kind == "organisations" else "Datasets" }} named only by agreements that have left the register. Each keeps its page, showing those agreements as last published, and none is counted in this site's figures.</p>
 <div class="table-scroll">
-<table class="data-table">
+<table class="data-table stack">
   <caption class="visually-hidden">{{ kind|capitalize }} no longer in the register</caption>
   <thead><tr><th scope="col">{{ "Organisation" if kind == "organisations" else "Dataset" }}</th><th scope="col" class="num">Agreements</th><th scope="col">Last published</th></tr></thead>
   <tbody>
   {% for item in items %}
     <tr>
       <th scope="row"><a href="{{ meta.base_path }}/{{ kind }}/{{ item.slug }}/">{{ item.name|org if kind == "organisations" else item.name }}</a></th>
-      <td class="num">{{ (item.agreement_count + item.controller_agreement_count if kind == "organisations" else item.agreement_count)|commas }}</td>
-      <td>{{ item.archived.last_edition|edition }}</td>
+      <td class="num" data-label="Agreements">{{ (item.agreement_count + item.controller_agreement_count if kind == "organisations" else item.agreement_count)|commas }}</td>
+      <td data-label="Last published">{{ item.archived.last_edition|edition }}</td>
     </tr>
   {% endfor %}
   </tbody>

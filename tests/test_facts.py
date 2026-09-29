@@ -324,6 +324,19 @@ class Store(unittest.TestCase):
         self.assertEqual(datasets_in("september2026"), {"Renamed Data Set"})
         self.assertNotIn("Renamed Data Set", datasets_in("august2026"))
 
+    def test_dataset_names_are_read_for_every_edition_as_each_published_them(self):
+        facts.append_edition(REGISTER, "september2026", self.edited(SECOND, 0, datasets=[
+            {**d, "name": "Renamed Data Set"} if d["name"] == NEW_NAME else d
+            for d in self.versions[SECOND][0]["datasets"]
+        ]))
+        facts.append_edition(REGISTER, "august2026", self.versions)
+        names = facts.dataset_names_by_edition(REGISTER)
+        self.assertEqual(list(names), ["august2026", "september2026"])
+        self.assertEqual(names["august2026"]["DARS-NIC-2-BBBBB-v1"], {NEW_NAME, "Other Data Set"})
+        self.assertEqual(names["september2026"]["DARS-NIC-2-BBBBB-v1"], {"Renamed Data Set", "Other Data Set"})
+        # Every version of every edition is there, not only the one that changed.
+        self.assertEqual(names["september2026"]["DARS-NIC-1-AAAAA-v2"], {NEW_NAME})
+
     def test_recording_the_same_releases_again_writes_nothing(self):
         facts.append_edition(REGISTER, "september2026", self.versions)
         counts = facts.append_edition(REGISTER, "september2026", copy.deepcopy(self.versions))
