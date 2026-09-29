@@ -1,2 +1,7 @@
-openpyxl>=3.1
-Jinja2>=3.1
+# Exact versions, so every build reads the workbooks and renders the pages with
+# the same code. Raise them deliberately, and check the built site is unchanged.
+openpyxl==3.1.5
+Jinja2==3.1.6
+# Required by the two above.
+et_xmlfile==2.0.0
+MarkupSafe==3.0.3

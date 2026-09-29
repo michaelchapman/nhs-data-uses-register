@@ -38,7 +38,7 @@ def name_key(name: str) -> str:
     return re.sub(r"\s+", " ", name).strip().casefold()
 
 
-def _read(path: Path = None) -> dict:
+def _read(path: Path | None = None) -> dict:
     path = path or ALIASES_PATH
     if not path.exists():
         return {"aliases": [], "ignored": []}
@@ -74,7 +74,7 @@ def _default_comment(path: Path) -> str:
     return DATASET_COMMENT if path == DATASET_ALIASES_PATH else DEFAULT_COMMENT
 
 
-def _write(data: dict, path: Path = None) -> None:
+def _write(data: dict, path: Path | None = None) -> None:
     path = path or ALIASES_PATH
     # Key order is cosmetic but stable, so diffs in the committed file stay
     # readable rather than reshuffling every time something is saved.
@@ -86,15 +86,15 @@ def _write(data: dict, path: Path = None) -> None:
     path.write_text(json.dumps(ordered, indent=2, ensure_ascii=False, sort_keys=False) + "\n")
 
 
-def load_groups(path: Path = None) -> list[dict]:
+def load_groups(path: Path | None = None) -> list[dict]:
     return _read(path)["aliases"]
 
 
-def load_ignored(path: Path = None) -> list[list[str]]:
+def load_ignored(path: Path | None = None) -> list[list[str]]:
     return _read(path)["ignored"]
 
 
-def load_map(path: Path = None) -> dict[str, str]:
+def load_map(path: Path | None = None) -> dict[str, str]:
     """`{normalised variant key: canonical name}`.
 
     Look up with `resolve()`, not this dict directly, since its keys are
@@ -119,14 +119,14 @@ def resolve(name: str, alias_map: dict[str, str]) -> str:
     return alias_map.get(name_key(name), name)
 
 
-def is_ignored(names: list[str], ignored: list[list[str]] | None = None, path: Path = None) -> bool:
+def is_ignored(names: list[str], ignored: list[list[str]] | None = None, path: Path | None = None) -> bool:
     """Whether this exact candidate (as a set of names) was already dismissed."""
     ignored = load_ignored(path) if ignored is None else ignored
     key = frozenset(name_key(n) for n in names)
     return any(key == frozenset(name_key(n) for n in entry) for entry in ignored)
 
 
-def add_ignored(names: list[str], path: Path = None) -> None:
+def add_ignored(names: list[str], path: Path | None = None) -> None:
     data = _read(path)
     if not is_ignored(names, data["ignored"]):
         data["ignored"].append(sorted(names))
@@ -137,7 +137,7 @@ def add_alias(
     canonical: str,
     variants: list[str],
     reason: str = "",
-    path: Path = None,
+    path: Path | None = None,
     source: str = "",
 ) -> None:
     """Add `variants` to the alias group for `canonical`, creating it if new.
@@ -199,9 +199,9 @@ def auto_reason(first: str, second: str) -> str | None:
 
     # "Adult Psychiatric Morbidity Survey" / "... (APMS)"
     short, long_ = sorted((first, second), key=len)
-    stripped = _bare(_TRAILING_BRACKET.sub("", long_))
-    if stripped == _bare(short) and stripped:
-        bracket = _TRAILING_BRACKET.search(long_)
+    bracket = _TRAILING_BRACKET.search(long_)
+    stripped = _bare(long_[: bracket.start()]) if bracket else ""
+    if bracket and stripped and stripped == _bare(short):
         return f"same name with {bracket.group().strip()} appended"
 
     # "NEC Software Solutions" / "NEC Software Solutions UK Limited" differ by
@@ -213,7 +213,7 @@ def auto_reason(first: str, second: str) -> str | None:
 
 
 def auto_merge(
-    groups, path: Path = None, source: str = "auto"
+    groups, path: Path | None = None, source: str = "auto"
 ) -> list[dict]:
     """Apply every pair that is safe to merge unreviewed.
 

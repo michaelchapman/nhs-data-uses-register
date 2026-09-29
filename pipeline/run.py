@@ -16,13 +16,11 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import os
-import sys
 from pathlib import Path
 
 from . import build as build_module
 from . import changes as changes_module
-from . import facts
-from . import sources
+from . import facts, sources
 from .references import version_key
 from .rules import Rules
 
@@ -106,7 +104,7 @@ def main() -> None:
     )
 
     source_url = entry.get("source_url", "")
-    ingested = entry.get("ingested") or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    ingested = entry.get("ingested") or dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
 
     # A `--workbook` build writes nothing: it is a one-off, and must not leave
     # anything behind in a directory that is committed. What changed between

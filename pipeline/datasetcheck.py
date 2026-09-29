@@ -27,10 +27,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from . import aliases
-from . import compare
-from . import orgcheck
-from . import sources
+from . import aliases, compare, orgcheck, sources
 
 ROOT = Path(__file__).resolve().parent.parent
 PATH = aliases.DATASET_ALIASES_PATH

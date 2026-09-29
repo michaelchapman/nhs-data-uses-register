@@ -1,0 +1,61 @@
+name: Check and build
+description: >
+  The checks every change goes through, and the build they end in: tests, lint,
+  type check, the site itself, and its internal links. Both workflows run this,
+  so a pull request is checked exactly as a deploy is. It makes no external
+  requests beyond installing the pinned requirements.
+
+inputs:
+  site-url:
+    description: Where the site is published, for canonical links and the sitemap.
+    default: https://healthdatauses.uk
+  base-path:
+    description: >
+      The path the site is served under. Empty for the root of a domain, as the
+      custom domain is; /<repo> for GitHub project pages.
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v6
+      with:
+        python-version: "3.12"
+        cache: pip
+        cache-dependency-path: requirements*.txt
+
+    - name: Install
+      shell: bash
+      run: pip install -r requirements-dev.txt
+
+    - name: Run tests
+      shell: bash
+      run: python -m unittest
+
+    - name: Lint
+      shell: bash
+      run: ruff check pipeline tests
+
+    - name: Type check
+      shell: bash
+      run: mypy
+
+    # Advisory: findings show as warnings on the run but never fail it.
+    - name: Check for LLM-cliché phrasing
+      shell: bash
+      run: python -m pipeline.clichecheck --advisory
+
+    - name: Build site
+      shell: bash
+      env:
+        SITE_URL: ${{ inputs.site-url }}
+        SITE_BASE_PATH: ${{ inputs.base-path }}
+      run: python -m pipeline.run
+
+    # After the build, before anything is uploaded: a page that links to a
+    # page that does not exist should stop the deploy, not reach readers.
+    - name: Check internal links
+      shell: bash
+      env:
+        SITE_BASE_PATH: ${{ inputs.base-path }}
+      run: python -m pipeline.linkcheck _site --base-path "$SITE_BASE_PATH"

@@ -43,6 +43,16 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 `pipeline.run` builds the newest edition in `data/facts/` and writes the site to
 `_site/`. It makes no network requests.
 
+The checks CI runs, with the checkers pinned in `requirements-dev.txt` and
+configured in `pyproject.toml`:
+
+```bash
+.venv/bin/pip install -r requirements-dev.txt
+.venv/bin/python -m unittest
+.venv/bin/ruff check pipeline tests
+.venv/bin/mypy
+```
+
 Useful flags:
 
 | Flag | Effect |
@@ -73,8 +83,10 @@ git add data/facts && git commit -m "Add the August 2026 edition"
 `.github/workflows/build.yml` then rebuilds and deploys on push to `main`, from
 committed data only. Because it never reaches outside the repository, it cannot
 fail the way the scheduled job did.
-`.github/workflows/ci.yml` runs the same tests, build and link check on every
-pull request, without deploying.
+`.github/workflows/ci.yml` runs the same checks on every pull request, without
+deploying: both run `.github/actions/check`, which installs the pinned
+requirements, runs the tests, lint and type check, builds the site and checks
+its links.
 
 One thing is committed: **`data/facts/<register>/`**, the text of every
 edition. Nothing derived is stored — what changed between editions, and the
@@ -122,8 +134,8 @@ be stopped and restarted.
 3. Ingest at least one edition and push it.
 4. Run the workflow (Actions → Build and deploy → Run workflow).
 
-Using a custom domain or a user page instead of a project page? Set
-`SITE_BASE_PATH` to an empty string in the workflow.
+Using a project page instead of a custom domain or a user page? Set `site-url`
+and `base-path` where `.github/workflows/build.yml` runs the check action.
 
 ## Layout
 

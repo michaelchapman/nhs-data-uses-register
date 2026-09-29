@@ -80,6 +80,8 @@ def _word(core: str, first: bool) -> str:
 
 def _token(token: str, first: bool) -> str:
     match = _TOKEN.match(token)
+    if match is None:  # every part of the pattern is optional, so it always matches
+        return token
     lead, core, trail = match["lead"], match["core"], match["trail"]
     # The first word inside a bracket starts a phrase of its own.
     first = first or any(c in lead for c in "([")

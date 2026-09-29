@@ -318,7 +318,7 @@ def find_stacked_questions(text: str) -> list[tuple[int, str]]:
     sentences = _sentences(text)
     hits = []
     run_start = None
-    for i, (s, offset) in enumerate(sentences):
+    for i, (s, _offset) in enumerate(sentences):
         if s.endswith("?"):
             if run_start is None:
                 run_start = i
@@ -343,7 +343,7 @@ def find_sentence_anaphora(text: str) -> list[tuple[int, str]]:
     sentences = _sentences(text)
     hits = []
     run_word, run_start = None, 0
-    for i, (s, offset) in enumerate(sentences):
+    for i, (s, _offset) in enumerate(sentences):
         match = re.match(r"[A-Za-z']+", s)
         first = match.group(0).lower() if match else None
         usable = first and first not in ANAPHORA_SKIP
