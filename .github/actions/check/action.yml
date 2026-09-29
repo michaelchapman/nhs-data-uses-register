@@ -45,6 +45,12 @@ runs:
       shell: bash
       run: python -m pipeline.clichecheck --advisory
 
+    # Advisory: a dataset the latest edition renamed and nobody merged yet.
+    # Reads the committed facts store, in seconds.
+    - name: Check for unmerged dataset renames
+      shell: bash
+      run: python -m pipeline.datasetcheck --advisory
+
     - name: Build site
       shell: bash
       env:

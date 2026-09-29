@@ -501,6 +501,29 @@ def read_edition(register_slug: str, edition: str, only: set[str] | None = None)
     return versions_by_base
 
 
+def dataset_names_by_edition(register_slug: str) -> dict[str, dict[str, set[str]]]:
+    """`{edition: {version reference: dataset names}}` for every stored edition.
+
+    The names as the register wrote them, for `datasetcheck` to compare
+    consecutive editions. One pass over the store: `read_edition` for each
+    edition would read every agreement file once per edition and rebuild its
+    release summaries, which the names do not need.
+    """
+    indexes = {edition: edition_index(register_slug, edition) for edition in stored_editions(register_slug)}
+    found: dict[str, dict[str, set[str]]] = {edition: {} for edition in indexes}
+    for path in sorted(agreements_dir(register_slug).glob("*.json")):
+        stored = json.loads(path.read_text(encoding="utf-8"))
+        for record in stored["versions"]:
+            for edition, index in indexes.items():
+                position = index.get(record["reference"])
+                if position is None:
+                    continue
+                names = {d["name"] for d in record["states"][position].get("datasets") or [] if d.get("name")}
+                if names:
+                    found[edition][record["reference"]] = names
+    return found
+
+
 def stored_editions(register_slug: str) -> list[str]:
     """Every edition the store holds, oldest first."""
     directory = editions_dir(register_slug)

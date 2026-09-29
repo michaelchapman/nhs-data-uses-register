@@ -58,7 +58,7 @@ Budget about two minutes a month, plus about a minute for the parse.
    starting `reviewed:`, which later runs keep. See
    [organisation-names.md](organisation-names.md#nhs-reorganisations-ods).
 
-4. **Check the sectors.** An edition can bring an organisation type the
+4. **Check the sectors and the dataset names.** An edition can bring an organisation type the
    Sector filter has not seen, which it would show as "Other":
 
    ```bash
@@ -75,10 +75,22 @@ Budget about two minutes a month, plus about a minute for the parse.
    .venv/bin/python -m pipeline.relations
    ```
 
+   And look for datasets the edition renamed. A rename left unmerged splits a
+   dataset's history across two pages and shows as an amendment on every
+   agreement naming it:
+
+   ```bash
+   .venv/bin/python -m pipeline.datasetcheck --auto   # merge the clear renames
+   .venv/bin/python -m pipeline.datasetcheck --review # decide any left
+   ```
+
+   It reads the facts store, not the workbooks, and takes a few seconds. See
+   [organisation-names.md](organisation-names.md#datasets).
+
 5. **Check the numbers look sane,** then commit and push:
 
    ```bash
-   git add data/facts data/organisation-codes.json data/ods
+   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json
    git commit -m "Add the August 2026 edition"
    git push
    ```
