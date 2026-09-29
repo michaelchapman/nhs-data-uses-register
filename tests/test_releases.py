@@ -76,7 +76,7 @@ class Chart(unittest.TestCase):
         self.assertEqual(releases._nice_top(0), (1, 1))
 
     def test_only_months_with_a_value_get_a_column(self):
-        chart = releases.chart({"2019-03": {"files": 4, "agreements": 1}}, "files", "2019-12")
+        chart = releases.chart({"2019-03": {"files": 4, "agreements": 1}}, "files", "2019-12", start="2019-01")
         [column] = chart["columns"]
         self.assertEqual((column["month"], column["value"], column["height"]), ("2019-03", 4, 100))
         self.assertAlmostEqual(column["left"], 2 / 12 * 100)
@@ -84,8 +84,13 @@ class Chart(unittest.TestCase):
         self.assertEqual(chart["latest"], {"month": "2019-12", "value": 0})
 
     def test_months_before_the_chart_starts_are_left_out(self):
-        chart = releases.chart({"2018-06": {"files": 9, "agreements": 1}}, "files", "2019-12")
+        chart = releases.chart({"2019-06": {"files": 9, "agreements": 1}}, "files", "2020-12")
         self.assertEqual(chart["columns"], [])
+        self.assertEqual(releases.CHART_START, "2020-01")
+
+    def test_an_edition_ending_before_the_chart_starts_draws_nothing(self):
+        chart = releases.chart({"2019-06": {"files": 9, "agreements": 1}}, "files", "2019-12")
+        self.assertEqual((chart["columns"], chart["peak"]), ([], None))
 
     def test_an_edition_reports_up_to_the_month_before_it(self):
         self.assertEqual(releases.last_month("2026-09-01"), "2026-08")

@@ -322,10 +322,14 @@ def build(
         peak_agreements=by_month[files_chart["peak"]["month"]]["agreements"] if files_chart["peak"] else 0,
         chart_start=releases.CHART_START,
         chart_start_year=chart_start_year,
-        early_files=sum(row["files"] for month, row in by_month.items() if month < releases.CHART_START),
-        first_chart_year_files=sum(
-            row["files"] for month, row in by_month.items() if month[:4] == str(chart_start_year)
-        ),
+        early_files=sum(row["files"] for month, row in by_month.items() if month < f"{chart_start_year - 1}-01"),
+        # The year before the charts start, when the register's records fill in.
+        ramp={
+            "first_month": f"{chart_start_year - 1}-01",
+            "first": by_month.get(f"{chart_start_year - 1}-01", {}).get("agreements", 0),
+            "last_month": f"{chart_start_year - 1}-12",
+            "last": by_month.get(f"{chart_start_year - 1}-12", {}).get("agreements", 0),
+        },
     )
     render("about.html", "about/index.html")
     render("downloads.html", "downloads/index.html")

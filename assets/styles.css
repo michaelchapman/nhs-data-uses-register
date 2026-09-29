@@ -237,7 +237,9 @@ p, li { max-width: 68ch; }
 
 /* Filters ----------------------------------------------------------------- */
 
-.filters { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: flex-end; background: var(--bg-muted); border: 1px solid var(--line); border-radius: 4px; padding: 1rem 1.25rem; margin: 1.5rem 0 1rem; }
+/* Fields line up by their tops, so the labels and the controls under them form
+   rows whether or not a field has a hint below its control. */
+.filters { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: flex-start; background: var(--bg-muted); border: 1px solid var(--line); border-radius: 4px; padding: 1rem 1.25rem; margin: 1.5rem 0 1rem; }
 /* A field, and the control in it, never grow wider than the form: a select is
    otherwise as wide as its longest option, which is wider than a phone. */
 .filters .field { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; max-width: 100%; }
@@ -251,7 +253,7 @@ p, li { max-width: 68ch; }
 .filters .checkboxes input { margin-right: 0.375rem; }
 .filters button { font: inherit; padding: 0.5rem 1rem; border: 2px solid var(--ink); background: var(--bg); color: var(--ink); border-radius: 3px; cursor: pointer; }
 .filters button:hover { background: var(--ink); color: var(--bg); }
-.filter-actions { margin: 0; }
+.filter-actions { margin: 0; align-self: flex-end; }
 /* Lays out as if it were not there, except on a phone, where assets/filter.js
    folds it behind a button. */
 .filter-more { display: contents; }

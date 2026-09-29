@@ -14,10 +14,12 @@ from collections import Counter
 from . import aliases
 from .references import slugify
 
-# The register lists few files before 2019: 1,727 across 2016-2018, then 7,684
-# in 2019 alone, already so in the earliest edition held. Why is not known, so
-# a chart starts here and the years before it are left to the table.
-CHART_START = "2019-01"
+# The register lists few files before 2019 (1,727 across 2016-2018), and its
+# coverage fills in through 2019: agreements receiving files rise from 28 in
+# January to 152 in July, where from 2020 the count has stayed between 87 and
+# 271. It was already so in the earliest edition held, and why is not known,
+# so a chart starts after it and the months before are left to the table.
+CHART_START = "2020-01"
 
 
 def month_range(start: str, end: str) -> list[str]:
@@ -213,6 +215,8 @@ def chart(by_month: dict[str, dict], key: str, end: str, start: str = CHART_STAR
     a sparse series costs a sparse page.
     """
     months = month_range(start, end)
+    if not months:
+        return {"columns": [], "ticks": [], "years": [], "latest": {"month": end, "value": 0}, "peak": None}
     values = {m: by_month[m][key] for m in months if m in by_month and by_month[m][key]}
     top, step = _nice_top(max(values.values(), default=0))
     width = 100 / len(months)
