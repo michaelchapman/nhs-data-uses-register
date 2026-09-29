@@ -103,8 +103,12 @@ def main() -> None:
     # A `--workbook` build writes nothing: it is a one-off, and must not leave
     # anything behind in a directory that is committed. What changed between
     # editions comes from the facts store, so a workbook that has not been
-    # ingested has nothing to be compared with.
+    # ingested has nothing to be compared with, and it shows none of the
+    # store's editions either: their timelines and changes pages describe a
+    # history this workbook is not part of.
     held = facts.stored_editions(register.slug)
+    if edition not in held:
+        held = []
     # Every comparison made below, kept for the ones that come round again:
     # see `changes._compare`.
     memo: dict = {}
@@ -174,7 +178,7 @@ def main() -> None:
     # An agreement's history reaches back over every edition the store holds.
     history = changes_module.history(
         register.slug, wide={entry["edition"]: entry["wide_ops"] for entry in changes_history}, memo=memo
-    )
+    ) if held else {}
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history
     )

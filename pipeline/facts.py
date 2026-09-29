@@ -523,9 +523,8 @@ def read_manifest(register_slug: str) -> list[dict]:
 def write_manifest(register_slug: str, entries: list[dict]) -> Path:
     entries = sorted(entries, key=lambda e: sources.edition_sort_key(e["edition"]))
     path = manifest_path(register_slug)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps({"register": register_slug, "editions": entries}, indent=2, sort_keys=True) + "\n"
+    _write_if_changed(
+        path, json.dumps({"register": register_slug, "editions": entries}, indent=2, sort_keys=True) + "\n"
     )
     return path
 
