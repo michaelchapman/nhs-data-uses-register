@@ -26,6 +26,9 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
+- **Files released over time** — agreements receiving files and files released
+  each month, across the register and for each dataset, and a timeline of the
+  months each agreement received files, drawn at build time without script.
 
 Pages are plain semantic HTML with no cookies, analytics or third-party
 requests. Table filtering and sorting are progressive enhancements: every row is in the
@@ -160,6 +163,7 @@ pipeline/changes.py             what changed between editions, worked out from t
 pipeline/compare.py             field-by-field comparison of two agreement versions
 pipeline/build.py               renders the site
 pipeline/search.py              the word index behind the agreements search
+pipeline/releases.py            files released by month: the build-time check, timelines and charts
 pipeline/names.py               shows a name the register wrote in capitals in ordinary case
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/privacy.py             confidential data and opt-outs, for the agreements list's filters

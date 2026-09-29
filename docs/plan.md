@@ -13,119 +13,22 @@ publishes and reproducibly reformats them into pages that are easier to read,
 search, link to and cite. It is a presentation of the register, not a new
 dataset: there is no expectation that it publishes the reformatted data, so a
 proposal to add a data download starts from that rule. See
-[section 6](#6-considered-and-not-planned).
+[section 5](#5-considered-and-not-planned).
 
 Last reviewed 2026-09-29. Each item has an issue. In rough order of value:
 
-1. [Release views](#1-release-views) (#47)
-2. [Dataset pages](#2-dataset-pages) (#56, #57)
-3. [Amendments on the changes page](#3-amendments-on-the-changes-page) (#48)
-4. [Checking workbooks before a re-parse](#4-checking-workbooks-before-a-re-parse) (#49)
-5. [Waiting on people](#5-waiting-on-people) (#50, #51, #55)
-6. [Considered and not planned](#6-considered-and-not-planned)
+1. [Dataset pages](#1-dataset-pages) (#56, #57)
+2. [Amendments on the changes page](#2-amendments-on-the-changes-page) (#48)
+3. [Checking workbooks before a re-parse](#3-checking-workbooks-before-a-re-parse) (#49)
+4. [Waiting on people](#4-waiting-on-people) (#50, #51, #55)
+5. [Considered and not planned](#5-considered-and-not-planned)
 
 Ideas raised as issues and not yet scoped here: a glossary of the register's
 terms (#27), and trends over time with a feed of what changed (#28).
 [Built](#built) keeps the reasoning of finished work that still decides how
 the site behaves.
 
-## 1. Release views
-
-Issue #47.
-
-The facts store holds every file released, 104,451 rows from April 2016, one
-per file with its month and opt-out flag. The site shows them only summarised
-by dataset. All of the following are build-time work; nothing in the store
-needs to change.
-
-To build, in this order:
-
-1. **A release check** at build time: files released per agreement, dataset
-   and month, checked against the per-dataset totals the pages show. Nothing is
-   published; the next two steps rest on it.
-2. **A release timeline on each agreement page**: files per month, by dataset.
-3. **A register-wide monthly chart** of files released.
-4. **Last, a "no files recorded" line and filter** on the agreements list. It
-   is the view most easily misread, so it waits for the wording below to be in
-   place on the other three.
-
-### What release data can and cannot say
-
-These rules hold for every release view, and the pages that exist already
-follow them.
-
-**The claim not to make.** Of 1,950 agreements in the September 2026 edition,
-983 have had files released, 651 expired with none recorded, 257 have run over
-a year with none, and 59 are too recent to tell. "Half of these agreements
-never resulted in any data being shared" is false. A release row records a
-file released externally by DARS, which is one of several ways data reaches an
-applicant. The DARS team confirmed that position in September 2026: the
-release sheet does not cover system access, such as access granted in NHS
-England's own Secure Data Environment and its predecessors.
-
-**Out of scope, and so never implied:**
-
-- access granted in NHS England's own systems;
-- onward sharing by a recipient. 91 of 1,950 agreements permit sublicensing,
-  and nothing downstream of them is recorded;
-- NHS England's internal flows from 1 February 2023, which left this register
-  at the NHS Digital merger (`sources.MERGER_EDITION`);
-- releases published in NHS England's other registers (internal uses, National
-  Back Office, NDRS, the ONS register for the Public Health Research Database,
-  COVID-19 non-DARS), and the Data Sharing Framework Contracts above individual
-  agreements.
-
-**Wording:**
-
-- "No files recorded as released under this agreement", never wording that
-  says data was not shared.
-- Every release view says it covers files released externally by DARS, and
-  links to the About page's caveat (`_release-scope.html` does this).
-- Release history runs from April 2016 and change history from July 2021. They
-  are never described as one span.
-- A sublicensing agreement's releases say onward sharing is permitted and not
-  recorded here.
-- The February 2023 departures are labelled wherever agreements leaving the
-  register are counted.
-
-The store keeps each release under a `channel`, today always `"file"`, so a
-second kind of release from another source could sit beside these rather than
-be merged into them.
-
-### What the release data allows
-
-Measured on 2026-09-29, from the store and the September 2026 edition.
-
-- **Count an edition's files, not the store's rows.** The store holds 145,325
-  rows for 104,872 distinct files, because a relabelled dataset's files are
-  recorded again under the new name. Read through `read_edition`, September
-  2026 reports 104,451. A register-wide count must come from one edition's view,
-  as every page does now.
-- **Recent months are complete.** 99% of files first appear in the edition
-  published the month after they were released, so an edition's last month
-  (August for the September edition) can be shown as final. A month is never
-  counted before its first edition exists.
-- **The years before 2019 are thin, and not because of departures.** September
-  2026 lists 206 files released in 2016, 541 in 2017 and 980 in 2018, then
-  7,684 in 2019; the July 2021 edition already had 206, 543 and 980. A chart
-  starting in April 2016 would read as data sharing rising eightfold in 2019.
-  Why the register's early years are sparse is a question for the DARS team
-  (below); until it is answered the chart either starts in 2019 or marks
-  2016–2018 as partial coverage.
-- **Agreements differ by orders of magnitude.** Of the 983 agreements with files,
-  the median has files in 3 months across 3 datasets, 247 in a single month; the
-  largest span 93 months and 26 datasets, and one agreement has 4,912 files. A
-  timeline has to read at both ends. Each version's `releases` already holds a
-  `months` count per dataset, so the data for an agreement timeline is in hand.
-- **Pages have room, with care.** The median agreement page is 58 KB; the largest
-  is 1.3 MB. An inline SVG row per dataset adds a few KB; a table of every month
-  would not fit the largest.
-- **Step 4 is partly built.** The agreements list's opt-outs filter already has a
-  "No files recorded" option (967 agreements), from `privacy.py`. What is left
-  is the wording rules above applied to it, and whether it becomes its own
-  filter.
-
-## 2. Dataset pages
+## 1. Dataset pages
 
 Merging renamed datasets and titling each page with the register's current
 name were built in #54 (see [Built](#dataset-names)). Two parts of #25 need
@@ -138,10 +41,9 @@ hand-written data, and so a person to check it:
   for each dataset, starting with the 20 most-named, which cover 79% of
   agreements.
 
-A release timeline on each dataset page belongs with the release views above
-(#47).
+Each dataset page already charts its files by month (see [Built](#release-views)).
 
-## 3. Amendments on the changes page
+## 2. Amendments on the changes page
 
 Issue #48. Every amendment now shows what changed, and register-wide edits are
 reported once. Two smaller things were proposed and not done:
@@ -153,14 +55,14 @@ reported once. Two smaller things were proposed and not done:
 - make an agreement's "Amended this month" tag link to the change on its
   timeline.
 
-## 4. Checking workbooks before a re-parse
+## 3. Checking workbooks before a re-parse
 
 Issue #49. The manifest records each ingested workbook's SHA-256. A `--verify`
 flag on `ingest` that checks the files in `data/raw/` against it would catch a
 wrong or corrupted download before a 70-minute re-parse, not during one. It
 matters only when a re-parse is needed, which is rare.
 
-## 5. Waiting on people
+## 4. Waiting on people
 
 The decisions below are tracked in #51, and the dataset names in #55. One more waits on a design choice
 rather than a person outside the project (#50): the headings inside folded
@@ -181,8 +83,11 @@ heading above the section, the sections left open, or the markup as it is.
   left the register in February 2023, when the other four agreements that lost
   versions then were NHS England's own. Whether any test record other than
   DARS-NIC-401994-D5Q7S reached a published workbook. And why the release
-  sheet lists so few files before 2019 (1,727 across 2016–2018, against 7,684
-  in 2019 alone), which decides where a chart of files released can start.
+  sheet lists so few files before 2020 (1,727 across 2016–2018, and 28
+  agreements receiving files in January 2019 against a median of 215 a month
+  since 2020), which decides where the charts of files released start. And
+  why three months since then are low: 93 agreements received files in
+  February 2022, 87 in April 2022 and 101 in June 2024.
 - **Dataset names** (#55). Whether "Maternity Services Data Set" (180
   agreements, no files recorded) and "Maternity Services Data Set (MSDS) v1.5"
   (31) are one dataset, and "Alcohol Dependence" and "Alcohol Dependency
@@ -192,7 +97,7 @@ heading above the section, the sections left open, or the markup as it is.
   v3.0. That could not be checked against ODS's own pages from the build
   environment, which digital.nhs.uk refuses. It is worth confirming once.
 
-## 6. Considered and not planned
+## 5. Considered and not planned
 
 - **Filters on sensitivity, legal basis for provision and type of data** (#23).
   Deferred, not rejected: #23 built the two questions that mattered most,
@@ -237,6 +142,105 @@ heading above the section, the sections left open, or the markup as it is.
   650 MB, which matters more.
 
 ## Built
+
+### Release views
+
+Issue #47, built in September 2026. The facts store holds every file released,
+104,451 rows from April 2016, one per file with its month and opt-out flag.
+Four views are built from them at build time (`pipeline/releases.py`), and
+nothing in the store changed:
+
+1. **A release check.** Files per agreement, dataset and month must add up to
+   the per-dataset totals the pages show, or the build stops.
+2. **A timeline on each agreement page**: a strip per dataset marking the
+   months with files, over the terms of the agreement's versions, with a
+   table of files by dataset and year.
+3. **A Files released page**, in the main menu: agreements receiving files
+   and files released each month, from January 2020, and the same two charts
+   on each dataset page. Agreements come first because files are concentrated:
+   100 of the 983 agreements with files hold 60% of them.
+4. **"No files recorded"**, the opt-outs filter's existing option, now says
+   what it does and does not mean.
+
+The charts are positioned HTML, not script, and every value is also in a
+table. What follows were the rules and measurements they were built to.
+
+#### What release data can and cannot say
+
+These rules hold for every release view.
+
+**The claim not to make.** Of 1,950 agreements in the September 2026 edition,
+983 have had files released, 651 expired with none recorded, 257 have run over
+a year with none, and 59 are too recent to tell. "Half of these agreements
+never resulted in any data being shared" is false. A release row records a
+file released externally by DARS, which is one of several ways data reaches an
+applicant. The DARS team confirmed that position in September 2026: the
+release sheet does not cover system access, such as access granted in NHS
+England's own Secure Data Environment and its predecessors.
+
+**Out of scope, and so never implied:**
+
+- access granted in NHS England's own systems;
+- onward sharing by a recipient. 91 of 1,950 agreements permit sublicensing,
+  and nothing downstream of them is recorded;
+- NHS England's internal flows from 1 February 2023, which left this register
+  at the NHS Digital merger (`sources.MERGER_EDITION`);
+- releases published in NHS England's other registers (internal uses, National
+  Back Office, NDRS, the ONS register for the Public Health Research Database,
+  COVID-19 non-DARS), and the Data Sharing Framework Contracts above individual
+  agreements.
+
+**Wording:**
+
+- "No files recorded as released under this agreement", never wording that
+  says data was not shared.
+- Every release view says it covers files released externally by DARS, and
+  links to the About page's caveat (`_release-scope.html` does this).
+- Release history runs from April 2016 and change history from July 2021. They
+  are never described as one span.
+- A sublicensing agreement's releases say onward sharing is permitted and not
+  recorded here.
+- The February 2023 departures are labelled wherever agreements leaving the
+  register are counted.
+
+The store keeps each release under a `channel`, today always `"file"`, so a
+second kind of release from another source could sit beside these rather than
+be merged into them.
+
+#### What the release data allows
+
+Measured on 2026-09-29, from the store and the September 2026 edition.
+
+- **Count an edition's files, not the store's rows.** The store holds 145,325
+  rows for 104,872 distinct files, because a relabelled dataset's files are
+  recorded again under the new name. Read through `read_edition`, September
+  2026 reports 104,451. A register-wide count must come from one edition's view,
+  as every page does now.
+- **Recent months are complete.** 99% of files first appear in the edition
+  published the month after they were released, so an edition's last month
+  (August for the September edition) can be shown as final. A month is never
+  counted before its first edition exists.
+- **The years before 2019 are thin, and not because of departures.** September
+  2026 lists 206 files released in 2016, 541 in 2017 and 980 in 2018, then
+  7,684 in 2019; the July 2021 edition already had 206, 543 and 980. A chart
+  starting in April 2016 would read as data sharing rising eightfold in 2019.
+  Coverage also fills in through 2019: agreements receiving files rise from
+  28 in January to 152 in July, where from 2020 they run at a median of 215.
+  So the charts start in January 2020 (`releases.CHART_START`) and the months
+  before are in the tables. Why the early years are sparse is a question for
+  the DARS team (below).
+- **Agreements differ by orders of magnitude.** Of the 983 agreements with files,
+  the median has files in 3 months across 3 datasets, 247 in a single month; the
+  largest span 93 months and 26 datasets, and one agreement has 4,912 files. A
+  timeline has to read at both ends. Each version's `releases` already holds a
+  `months` count per dataset, which the timeline is drawn from.
+- **Pages have room, with care.** The median agreement page is 58 KB; the largest
+  is 1.3 MB. A strip per dataset adds a few KB, and only months with files get
+  a mark; a table of every month would not fit the largest, so the table is by
+  year.
+- **Step 4 was partly built.** The agreements list's opt-outs filter already
+  had a "No files recorded" option (967 agreements), from `privacy.py`, so it
+  gained the wording above rather than a filter of its own.
 
 ### Dataset names
 

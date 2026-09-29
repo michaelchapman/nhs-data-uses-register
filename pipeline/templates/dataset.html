@@ -87,6 +87,28 @@
   {% endif %}
 </details>
 
+{% if files_chart %}
+{% from "_charts.html" import month_chart %}
+<h2 id="releases">Files released by month</h2>
+{{ month_chart(agreements_chart, "Agreements receiving files of this dataset each month", "agreement", "agreements", "dataset-agreements-chart") }}
+{{ month_chart(files_chart, "Files of this dataset released each month", "file", "files", "dataset-files-chart") }}
+<p class="hint">From {{ chart_start|month }}, as on the <a href="{{ meta.base_path }}/releases/">files released over time</a> page, which says why.{% if early_files %} {{ early_files|commas }} file{{ "s" if early_files != 1 }} released earlier {{ "are" if early_files != 1 else "is" }} in the table.{% endif %}</p>
+<details class="chart-table">
+  <summary>Files and agreements by month, as a table</summary>
+  <div class="table-scroll">
+  <table class="data-table">
+    <caption class="visually-hidden">Files of {{ dataset.name }} released, by month</caption>
+    <thead><tr><th scope="col">Month</th><th scope="col" class="num">Agreements receiving files</th><th scope="col" class="num">Files released</th></tr></thead>
+    <tbody>
+    {% for month, row in by_month|dictsort(reverse=true) %}
+      <tr><th scope="row">{{ month|month }}</th><td class="num">{{ row.agreements|commas }}</td><td class="num">{{ row.files|commas }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</details>
+{% endif %}
+
 <h2>Agreements covering this dataset</h2>
 <form class="filters" data-filter-form data-target="dataset-agreements" data-search-index="{{ meta.base_path }}/search/{{ meta.edition }}/" role="search" aria-label="Filter agreements">
   <div class="field">

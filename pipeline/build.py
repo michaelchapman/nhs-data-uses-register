@@ -10,7 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, privacy, relations, search, sectors, sources
+from . import aliases, compare, ods, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify
@@ -65,6 +65,7 @@ def environment(rules: Rules | None = None) -> Environment:
     env.filters["nocode"] = strip_code
     env.globals["merger_edition"] = sources.MERGER_EDITION
     env.globals["ods"] = ods.SOURCE
+    env.globals["release_chart_start"] = releases.CHART_START
     dataset_aliases = (rules or Rules.load()).dataset_aliases
     # The page a dataset name links to, whichever spelling the register used.
     env.filters["dataset_slug"] = lambda name: slugify(aliases.resolve(name, dataset_aliases))
@@ -200,6 +201,13 @@ def build(
     # Confidential data and patient opt-outs, for the agreements list's filters.
     privacy.assign(data["agreements"] + archived)
     stats["privacy"] = privacy.counts(data["agreements"])
+    dataset_aliases = rules.dataset_aliases
+    # Files by month, checked against the per-dataset totals every page shows
+    # before anything is drawn from them. See pipeline/releases.py.
+    releases.check(data["agreements"], data["datasets"], dataset_aliases)
+    releases.check(archived, archive["datasets"], dataset_aliases)
+    release_rows = {a["base_reference"]: releases.by_dataset(a, dataset_aliases) for a in data["agreements"] + archived}
+    latest_month = releases.last_month(meta["as_of"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
     dataset_titles = {d["slug"]: d["name"] for d in data["datasets"] + archive["datasets"]}
     slug_of = env.filters["dataset_slug"]
@@ -298,11 +306,35 @@ def build(
                 "source_url": held.get("source_url", ""),
             },
         )
+    by_month = releases.monthly(data["agreements"], dataset_aliases, rows=release_rows)
+    files_chart = releases.chart(by_month, "files", latest_month)
+    per_agreement = sorted((a["files_released"] for a in data["agreements"]), reverse=True)
+    chart_start_year = int(releases.CHART_START[:4])
+    render(
+        "releases.html",
+        "releases/index.html",
+        by_month=by_month,
+        latest_month=latest_month,
+        files_chart=files_chart,
+        agreements_chart=releases.chart(by_month, "agreements", latest_month),
+        with_files=sum(1 for n in per_agreement if n),
+        top_share=f"{sum(per_agreement[:100]) / sum(per_agreement):.0%}" if any(per_agreement) else "none",
+        peak_agreements=by_month[files_chart["peak"]["month"]]["agreements"] if files_chart["peak"] else 0,
+        chart_start=releases.CHART_START,
+        chart_start_year=chart_start_year,
+        early_files=sum(row["files"] for month, row in by_month.items() if month < f"{chart_start_year - 1}-01"),
+        # The year before the charts start, when the register's records fill in.
+        ramp={
+            "first_month": f"{chart_start_year - 1}-01",
+            "first": by_month.get(f"{chart_start_year - 1}-01", {}).get("agreements", 0),
+            "last_month": f"{chart_start_year - 1}-12",
+            "last": by_month.get(f"{chart_start_year - 1}-12", {}).get("agreements", 0),
+        },
+    )
     render("about.html", "about/index.html")
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
-    dataset_aliases = rules.dataset_aliases
     for agreement in data["agreements"] + archived:
         render(
             "agreement.html",
@@ -316,6 +348,7 @@ def build(
             dataset_slugs=dataset_slugs,
             history=(history or {}).get(agreement["base_reference"]),
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
+            timeline=releases.agreement_timeline(agreement, dataset_aliases, meta["as_of"]),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(
@@ -344,10 +377,16 @@ def build(
         render("moved.html", f"organisations/{own}/index.html", name=name, target=now, target_name=page_names[now])
 
     for dataset in data["datasets"] + archive["datasets"]:
+        dataset_months = releases.monthly(dataset["agreements"], dataset_aliases, dataset["slug"], release_rows)
         render(
             "dataset.html",
             f"datasets/{dataset['slug']}/index.html",
             dataset=dataset,
+            by_month=dataset_months,
+            files_chart=releases.chart(dataset_months, "files", latest_month) if dataset_months else None,
+            agreements_chart=releases.chart(dataset_months, "agreements", latest_month) if dataset_months else None,
+            early_files=sum(row["files"] for month, row in dataset_months.items() if month < releases.CHART_START),
+            chart_start=releases.CHART_START,
             archived=archive["by_dataset"].get(dataset["slug"], []),
             org_slugs=org_slugs,
             search_numbers=search_numbers,

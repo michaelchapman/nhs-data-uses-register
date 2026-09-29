@@ -191,6 +191,10 @@
   Patient opt-outs were applied to {{ o.applied|commas }} of the {{ o.files|commas }} files released under this agreement, across every version.
   {%- endif %} <a href="{{ meta.base_path }}/about/#opt-outs">About opt-outs</a></p>
 {% endif %}
+{% if timeline %}
+{% from "_charts.html" import timeline as release_timeline with context %}
+{{ release_timeline(timeline, dataset_slugs) }}
+{% endif %}
 {% if v.releases %}
 <p>Files released against version {{ v.version }} of this agreement, summarised by dataset.</p>
 <div class="table-scroll">
