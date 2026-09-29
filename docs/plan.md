@@ -13,17 +13,16 @@ publishes and reproducibly reformats them into pages that are easier to read,
 search, link to and cite. It is a presentation of the register, not a new
 dataset: there is no expectation that it publishes the reformatted data, so a
 proposal to add a data download starts from that rule. See
-[section 7](#7-considered-and-not-planned).
+[section 6](#6-considered-and-not-planned).
 
 Last reviewed 2026-09-27. In rough order of value:
 
 1. [Searching the purpose text](#1-searching-the-purpose-text)
 2. [Release views](#2-release-views)
-3. [Change downloads](#3-change-downloads)
-4. [Amendments on the changes page](#4-amendments-on-the-changes-page)
-5. [Checking workbooks before a re-parse](#5-checking-workbooks-before-a-re-parse)
-6. [Waiting on people](#6-waiting-on-people)
-7. [Considered and not planned](#7-considered-and-not-planned)
+3. [Amendments on the changes page](#3-amendments-on-the-changes-page)
+4. [Checking workbooks before a re-parse](#4-checking-workbooks-before-a-re-parse)
+5. [Waiting on people](#5-waiting-on-people)
+6. [Considered and not planned](#6-considered-and-not-planned)
 
 ## 1. Searching the purpose text
 
@@ -162,23 +161,7 @@ The store keeps each release under a `channel`, today always `"file"`, so a
 second kind of release from another source could sit beside these rather than
 be merged into them.
 
-## 3. Change downloads
-
-Optional. The site publishes no data files (see section 7), and this is the one
-export that could earn a place: no single workbook holds the change history.
-Everything on the changes pages is computed at build time, so publishing it is
-cheap, and it makes the month-on-month history usable by other people's
-tooling:
-
-- `downloads/changes.csv`: one row per change across every edition held, with
-  edition, previous edition, reference, base reference, organisation, kind
-  (added, amended, no longer listed, register-wide edit, renamed, succeeded),
-  the fields changed, and the agreement's URL;
-- `downloads/changes.json`: the same, with the old and new values and word
-  edits the pages show (`changes._details`), and the source of each succession
-  (ODS or reviewed).
-
-## 4. Amendments on the changes page
+## 3. Amendments on the changes page
 
 Every amendment now shows what changed, and register-wide edits are reported
 once. Two smaller things were proposed and not done:
@@ -190,14 +173,14 @@ once. Two smaller things were proposed and not done:
 - make an agreement's "Amended this month" tag link to the change on its
   timeline.
 
-## 5. Checking workbooks before a re-parse
+## 4. Checking workbooks before a re-parse
 
 The manifest records each ingested workbook's SHA-256. A `--verify` flag on
 `ingest` that checks the files in `data/raw/` against it would catch a wrong or
 corrupted download before a 70-minute re-parse, not during one. It matters only
 when a re-parse is needed, which is rare.
 
-## 6. Waiting on people
+## 5. Waiting on people
 
 - **Organisation names.** Two possible renames need someone who knows the
   companies: LA-SER Europe to Certara UK, and 2020 Delivery to The Public
@@ -216,7 +199,7 @@ when a re-parse is needed, which is rare.
   v3.0. That could not be checked against ODS's own pages from the build
   environment, which digital.nhs.uk refuses. It is worth confirming once.
 
-## 7. Considered and not planned
+## 6. Considered and not planned
 
 - **Filters on sensitivity, legal basis for provision and type of data** (#23).
   Deferred, not rejected: #23 built the two questions that mattered most,
@@ -239,6 +222,15 @@ when a re-parse is needed, which is rare.
   the site works out, and no purpose text. It is a reformatted dataset, which
   the site does not set out to publish (see the top of this plan). It may be
   revisited; the code is in the git history (`pipeline/export.py`).
+- **Change downloads.** `downloads/changes.csv`, one row per change across every
+  edition held (edition, previous edition, reference, base reference,
+  organisation, kind, the fields changed and the agreement's URL), and
+  `downloads/changes.json`, the same with the old and new values, word edits
+  and the source of each succession. No single workbook holds the change
+  history, and it is computed at build time, so publishing it would be cheap.
+  Not planned all the same: it is a reformatted dataset, which the site does
+  not set out to publish (see the top of this plan). The changes pages show
+  that history.
 - **An amendment log for prose.** Proposed to show old and new text between
   editions. Unnecessary: the facts store keeps every edition's text, so the
   site shows prose redlines already.
