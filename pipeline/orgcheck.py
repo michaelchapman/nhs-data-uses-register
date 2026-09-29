@@ -110,7 +110,9 @@ def weighted_similarity(names: list[str]) -> list[Candidate]:
 def already_resolved(names: list[str], alias_map: dict[str, str]) -> bool:
     """True once every name in the candidate already lands on the same page —
     it was merged (this run or a previous one) and doesn't need asking again."""
-    resolved = {aliases.resolve(n, alias_map) for n in names}
+    # By key: a spelling differing from the canonical only in case resolves to
+    # itself, and is already on the canonical's page.
+    resolved = {aliases.name_key(aliases.resolve(n, alias_map)) for n in names}
     return len(resolved) == 1
 
 

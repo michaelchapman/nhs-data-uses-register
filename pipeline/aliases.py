@@ -62,8 +62,10 @@ DEFAULT_COMMENT = (
 DATASET_COMMENT = (
     "Dataset name merges, for datasets the register has relabelled — see "
     "docs/organisation-names.md and `python -m pipeline.datasetcheck`. Each "
-    "group: canonical (the name shown on the dataset page) and variants "
-    "(every spelling that should map to it). An entry marked \"source\": "
+    "group: canonical (the name the dataset page's address is made from, kept "
+    "so the address outlasts renames) and variants (every spelling that should "
+    "map to it). The page itself is titled with whichever spelling the edition "
+    "shown uses most, and lists the others. An entry marked \"source\": "
     "\"auto\" was added by --auto on unambiguous evidence and nobody reviewed "
     "it. `ignored` records candidates a reviewer decided were different "
     "datasets."
@@ -104,14 +106,33 @@ def load_map(path: Path | None = None) -> dict[str, str]:
 
 
 def map_of(groups: list[dict]) -> dict[str, str]:
-    """`load_map`, for alias groups already read."""
+    """`load_map`, for alias groups already read.
+
+    A group's canonical name can be another group's variant: a dataset renamed
+    twice was recorded as two renames, "COVID-19 Second Generation Surveillance
+    System" to "... (SGSS)" in January 2023 and that to "COVID-19 SGSS First
+    Positives ..." in April. Each name maps to the end of its chain, so one
+    `resolve()` always lands on the page, and the three spellings are never
+    compared as two datasets.
+    """
     mapping: dict[str, str] = {}
     for group in groups:
         canonical = group["canonical"]
         for variant in group.get("variants", []):
             if name_key(variant) != name_key(canonical):
                 mapping[name_key(variant)] = canonical
-    return mapping
+    return {key: _end_of_chain(key, mapping) for key in mapping}
+
+
+def _end_of_chain(key: str, mapping: dict[str, str]) -> str:
+    seen = [key]
+    name = mapping[key]
+    while (following := mapping.get(name_key(name), name)) != name:
+        if name_key(name) in seen:
+            raise ValueError(f"alias loop: {' -> '.join([*seen, name_key(name)])}")
+        seen.append(name_key(name))
+        name = following
+    return name
 
 
 def resolve(name: str, alias_map: dict[str, str]) -> str:
@@ -146,9 +167,22 @@ def add_alias(
     so re-running this for the same organisation extends rather than
     duplicates it), the new variants are merged in and the reason is kept
     only if the group didn't already have one.
+
+    A name that already belongs to a group joins that group rather than
+    starting a chain: `canonical` is resolved first, and a group whose canonical
+    is one of `variants` is folded into this one.
     """
     data = _read(path)
     groups = data["aliases"]
+    canonical = resolve(canonical, map_of(groups))
+    variant_keys = {name_key(v) for v in variants} - {name_key(canonical)}
+    # Reasons of the groups folded in, kept whatever this group already says.
+    folded_reasons = []
+    for folded in [g for g in groups if name_key(g["canonical"]) in variant_keys]:
+        groups.remove(folded)
+        variants = [*variants, folded["canonical"], *folded.get("variants", [])]
+        if folded.get("reason"):
+            folded_reasons.append(folded["reason"])
     existing = next((g for g in groups if name_key(g["canonical"]) == name_key(canonical)), None)
     if existing:
         have = {name_key(v) for v in existing.get("variants", [])} | {name_key(existing["canonical"])}
@@ -158,7 +192,10 @@ def add_alias(
                 have.add(name_key(v))
         if reason and not existing.get("reason"):
             existing["reason"] = reason
+        if folded_reasons:
+            existing["reason"] = "; ".join(r for r in (existing.get("reason"), *folded_reasons) if r)
     else:
+        reason = "; ".join(r for r in (reason, *folded_reasons) if r)
         group = {"canonical": canonical, "variants": sorted(set(variants)), "reason": reason}
         if source:
             # Marks an entry nobody looked at, so it can be found, audited or
