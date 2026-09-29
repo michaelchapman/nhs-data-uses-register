@@ -63,6 +63,26 @@ class BuiltSite(unittest.TestCase):
         self.assertIn('href="/datasets/', releases)
         self.assertIn('<nav aria-label="On this page"', page)
 
+    def test_an_agreement_opens_on_its_objective(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+        purpose = page[page.index('id="purpose"'):page.index('id="datasets"')]
+        sections = purpose.split('<details class="prose-block"')[1:]
+        self.assertEqual(len(sections), 5)
+        self.assertTrue(sections[0].startswith(" data-highlight open>"))
+        self.assertIn("Objective for processing", sections[0])
+        self.assertFalse(any(" open>" in s.split(">", 1)[0] + ">" for s in sections[1:]))
+
+    def test_every_page_can_print_its_folded_sections(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+            self.assertTrue((out / "assets" / "print.js").exists())
+        self.assertIn('<script src="/assets/print.js" defer></script>', page)
+
     def test_agreements_list_opens_newest_first(self):
         with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
