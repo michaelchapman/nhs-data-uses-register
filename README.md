@@ -1,5 +1,12 @@
 # NHS Data Access Explorer
 
+[![Build and deploy](https://github.com/michaelchapman/nhs-data-uses-register/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/michaelchapman/nhs-data-uses-register/actions/workflows/build.yml)
+[![Site](https://img.shields.io/website?url=https%3A%2F%2Fhealthdatauses.uk&label=healthdatauses.uk)](https://healthdatauses.uk)
+[![Edition](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhealthdatauses.uk%2Fmeta.json&query=%24.edition_label&label=edition)](https://healthdatauses.uk/changes/)
+[![Agreements](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhealthdatauses.uk%2Fmeta.json&query=%24.stats.agreements&label=agreements)](https://healthdatauses.uk/agreements/)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
+[![Data: OGL v3.0](https://img.shields.io/badge/data-OGL%20v3.0-blue)](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+
 A static site that reformats the [NHS England Data Uses Register](https://digital.nhs.uk/services/data-access-request-service-dars/data-uses-register)
 — published monthly as a 29 MB, three-sheet spreadsheet — into pages you can
 read, search, link to and cite.

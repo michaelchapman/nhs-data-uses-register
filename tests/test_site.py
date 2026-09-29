@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -29,6 +30,16 @@ class BuiltSite(unittest.TestCase):
             build_site(out, "/repo")
             broken, _ = linkcheck.check(out, "/repo")
         self.assertEqual(dict(broken), {})
+
+    def test_meta_json_holds_what_the_readme_badges_read(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            meta = json.loads((out / "meta.json").read_text())
+        # The README's badges query `$.edition_label` and `$.stats.agreements`.
+        self.assertEqual(meta["edition"], "september2026")
+        self.assertEqual(meta["edition_label"], "September 2026")
+        self.assertIsInstance(meta["stats"]["agreements"], int)
 
     def test_renamed_dataset_links_to_the_canonical_page(self):
         # The agreement lists the old spelling; its link must still resolve.

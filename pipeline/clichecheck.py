@@ -289,17 +289,24 @@ def _line_of(text: str, offset: int) -> int:
     return text.count("\n", 0, offset) + 1
 
 
+# An image, or an image that is itself a link, as a README badge is:
+# `![alt](src)` or `[![alt](src)](href)`.
+MARKDOWN_IMAGE = re.compile(r"\[?!\[[^\]\n]*\]\([^)\n]*\)(?:\]\([^)\n]*\))?")
+
+
 def strip_markdown_code(text: str) -> str:
-    """Blank out fenced and indented code blocks and inline code spans.
+    """Blank out fenced and indented code blocks, inline code spans and images.
 
     A shell command or an ASCII file tree in a ```fence``` is not prose, but
     a naive sentence splitter reads its punctuation as sentence boundaries
     and its repeated leading tokens (`git`, four spaces of tree indent) as
-    anaphora. Blanking rather than deleting keeps line numbers accurate for
-    the findings that are left.
+    anaphora. A row of badges is not prose either, and reads the same way.
+    Blanking rather than deleting keeps line numbers accurate for the
+    findings that are left.
     """
     text = re.sub(r"```.*?```", lambda m: re.sub(r"[^\n]", " ", m.group(0)), text, flags=re.DOTALL)
     text = re.sub(r"`[^`\n]+`", lambda m: " " * len(m.group(0)), text)
+    text = MARKDOWN_IMAGE.sub(lambda m: " " * len(m.group(0)), text)
     return text
 
 

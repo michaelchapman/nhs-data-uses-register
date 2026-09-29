@@ -349,7 +349,12 @@ def build(
 
     shutil.copytree(ASSETS, out / "assets", dirs_exist_ok=True)
     (out / ".nojekyll").write_text("")
-    _write(out, "meta.json", json.dumps({**meta, "stats": stats}, indent=1))
+    # `edition_label` is the edition as a person reads it ("September 2026"),
+    # for anything that shows it without formatting it, such as the README's
+    # badge.
+    _write(out, "meta.json", json.dumps(
+        {**meta, "edition_label": sources.edition_label(meta["edition"]), "stats": stats}, indent=1
+    ))
     _write(out, "sitemap.xml", env.get_template("sitemap.xml").render(
         **context, agreements=data["agreements"] + archived,
         organisations=data["organisations"] + archive["organisations"],
