@@ -16,16 +16,16 @@
 {% include "_release-scope.html" %}
 
 <div class="table-scroll">
-<table class="data-table sortable" id="datasets-table">
+<table class="data-table sortable stack" id="datasets-table">
   <caption class="visually-hidden">Datasets released under the Data Uses Register</caption>
   <thead><tr><th scope="col">Dataset</th><th scope="col" class="num">Agreements</th><th scope="col" class="num">Organisations</th><th scope="col" class="num">Files released</th></tr></thead>
   <tbody>
   {% for d in datasets %}
-    <tr data-search="{{ d.name|lower }}">
+    <tr data-search="{{ ([d.name] + d.known_as)|join(' ')|lower }}">
       <th scope="row"><a href="{{ meta.base_path }}/datasets/{{ d.slug }}/">{{ d.name }}</a></th>
-      <td class="num">{{ d.agreement_count|commas }}</td>
-      <td class="num">{{ d.organisations|length|commas }}</td>
-      <td class="num">{{ d.files_released|commas }}</td>
+      <td class="num" data-label="Agreements">{{ d.agreement_count|commas }}</td>
+      <td class="num" data-label="Organisations">{{ d.organisations|length|commas }}</td>
+      <td class="num" data-label="Files released">{{ d.files_released|commas }}</td>
     </tr>
   {% endfor %}
   </tbody>

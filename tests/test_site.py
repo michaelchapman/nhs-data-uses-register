@@ -6,7 +6,7 @@ from pathlib import Path
 from pipeline import build, linkcheck
 from pipeline.extract import extract
 
-from .fixtures import FIRST_EDITION, OLD_NAME, dataset_aliases, site_meta, workbook_bytes
+from .fixtures import FIRST_EDITION, NEW_NAME, OLD_NAME, dataset_aliases, site_meta, workbook_bytes
 
 
 def build_site(out: Path, base_path: str = "") -> None:
@@ -49,6 +49,21 @@ class BuiltSite(unittest.TestCase):
             page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
         self.assertIn(OLD_NAME, page)
         self.assertNotIn("/datasets/maternity-services-data-set-v1-5/", page)
+
+    def test_a_dataset_page_keyed_on_a_dropped_name_is_titled_with_the_current_one(self):
+        with tempfile.TemporaryDirectory() as directory, dataset_aliases(canonical=OLD_NAME):
+            out = Path(directory)
+            build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
+            # The address is still made from the canonical name.
+            page = (out / "datasets" / "maternity-services-data-set-v1-5" / "index.html").read_text()
+            organisation = (out / "organisations" / "university-of-example" / "index.html").read_text()
+            listing = (out / "datasets" / "index.html").read_text()
+        self.assertIn(f"<h1>{NEW_NAME}</h1>", page)
+        self.assertIn(f"Also recorded in the register as: {OLD_NAME}.", page)
+        self.assertIn(f'<a href="/datasets/maternity-services-data-set-v1-5/">{NEW_NAME}</a>', organisation)
+        self.assertIn(f'<a href="/datasets/maternity-services-data-set-v1-5/">{NEW_NAME}</a>', listing)
+        # Searching the list by the old name still finds it.
+        self.assertIn(OLD_NAME.lower(), listing)
 
     def test_pages_name_their_own_address_and_section(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -115,6 +130,7 @@ class BuiltSite(unittest.TestCase):
             pages = {
                 "agreements-table": (out / "agreements" / "index.html").read_text(),
                 "organisations-table": (out / "organisations" / "index.html").read_text(),
+                "datasets-table": (out / "datasets" / "index.html").read_text(),
             }
         for table_id, page in pages.items():
             table = page[page.index(f'id="{table_id}"'):]
