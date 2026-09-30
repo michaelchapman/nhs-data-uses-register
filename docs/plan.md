@@ -13,22 +13,139 @@ publishes and reproducibly reformats them into pages that are easier to read,
 search, link to and cite. It is a presentation of the register, not a new
 dataset: there is no expectation that it publishes the reformatted data, so a
 proposal to add a data download starts from that rule. See
-[section 5](#5-considered-and-not-planned).
+[section 8](#8-considered-and-not-planned).
 
-Last reviewed 2026-09-29. Each item has an issue. In rough order of value:
+Last reviewed 2026-09-30. Each item has an issue. In rough order of value:
 
-1. [Dataset pages](#1-dataset-pages) (#56, #57)
-2. [Amendments on the changes page](#2-amendments-on-the-changes-page) (#48)
-3. [Checking workbooks before a re-parse](#3-checking-workbooks-before-a-re-parse) (#49)
-4. [Waiting on people](#4-waiting-on-people) (#50, #51, #55)
-5. [Considered and not planned](#5-considered-and-not-planned)
+1. [Where data goes next: sublicensing and cohorts](#1-where-data-goes-next-sublicensing-and-cohorts) (#60, #61)
+2. [OpenSAFELY projects](#2-opensafely-projects) (#62)
+3. [NHS England's other registers](#3-nhs-englands-other-registers) (#63)
+4. [Dataset pages](#4-dataset-pages) (#56, #57)
+5. [Amendments on the changes page](#5-amendments-on-the-changes-page) (#48)
+6. [Checking workbooks before a re-parse](#6-checking-workbooks-before-a-re-parse) (#49)
+7. [Waiting on people](#7-waiting-on-people) (#50, #51, #55)
+8. [Considered and not planned](#8-considered-and-not-planned)
 
 Ideas raised as issues and not yet scoped here: a glossary of the register's
 terms (#27), and trends over time with a feed of what changed (#28).
 [Built](#built) keeps the reasoning of finished work that still decides how
 the site behaves.
 
-## 1. Dataset pages
+Sections 1 to 3 widen the site beyond one register, to where data goes after
+DARS releases it and to the other ways NHS England gives access to it. The
+rule at the top still holds. Each source is shown as its publisher wrote it,
+on pages of its own, and is never merged into this register's counts: an
+OpenSAFELY project is not a file released, and a cohort's own register is not
+NHS England's. What the site writes itself, such as who is in a cohort, says
+where it comes from.
+
+## 1. Where data goes next: sublicensing and cohorts
+
+Issues #60 and #61. The register records only whether an agreement permits
+sublicensing, and says nothing about what is passed on. Measured on the
+September 2026 edition, from each agreement's latest version, 91 of 1,950
+agreements permit it, and they are two different things:
+
+| Group | Agreements | Confidential data basis | What they sublicense |
+| --- | ---: | --- | --- |
+| ICBs and sub-ICB locations | 51 (48 + 3) | Section 251 support, all 51 | Commissioning, invoice validation and risk stratification datasets |
+| Everyone else | 40 | Consent 17, s251 12, statutory exemption 7, none 4 | Cohorts, trusted research environments and data services |
+
+**ICBs** sublicense to the providers in their system for commissioning,
+including population health management, and a sub-licensee may not pass the
+data further. Some ICBs publish their sub-licensees (West Yorkshire does, in
+its privacy notice). There is no central list; asking DARS whether one exists
+joins the questions in [section 7](#7-waiting-on-people).
+
+**The other 40** are organisations that hold data for others to use: UK
+Biobank, Genomics England (4 agreements), Our Future Health, CPRD (under the
+MHRA), QResearch, UK LLC, ALSPAC, the Centre for Longitudinal Studies'
+cohorts, the Million Women Study, ONS (4) and UKHSA among them. Each keeps its
+own register of the uses it approves, so the useful step is to link to it,
+not to copy it.
+
+The steps, in order:
+
+1. **Split the two groups** (#60), as a page or as two options of the
+   agreements list's Sublicensing filter, each showing its confidential data
+   bases from `privacy.py`.
+2. **Link to the onward registers** (#60): a hand-maintained
+   `data/onward-registers.json`, keyed by organisation page slug, with the
+   URL of the holder's register of approved uses, what it lists and the date
+   it was checked, shown on the organisation page and on each sublicensing
+   agreement. For ICBs, which of the 42 publish a list and where. Nothing is
+   scraped or fetched at build time; a register that is machine-readable may
+   later earn a facts store of its own, as OpenSAFELY's does.
+3. **Describe the cohorts** (#61): a hand-maintained `data/cohorts.json` with
+   who is in each (how and when people were recruited, age, area, approximate
+   size), how members are covered (consent, or without it under s251 or a
+   statutory exemption), a source link, the agreements that feed it and its
+   onward register. Each cohort gets a page, linked from its agreements and
+   organisation.
+
+Two things the measurements settle about cohorts:
+
+- **Group by cohort, not by agreement.** Several cohorts hold agreements on
+  different bases: ALSPAC on consent and on s251, UK LLC on consent, s251
+  and a statutory exemption, the Millennium Cohort Study on consent and on
+  s251. The agreement text says which members each basis covers.
+- **The cohorts people cannot know they are in matter most.** Members of UK
+  Biobank or the Million Women Study signed up. Patients in CPRD or QResearch
+  are there because their GP practice contributes, and describing who that
+  covers is where the site helps a reader most.
+
+Start with the 40, then consider cohort agreements that do not permit
+sublicensing. The wording rules in
+[What release data can and cannot say](#what-release-data-can-and-cannot-say)
+hold: sublicensing permitted is not sharing done, and an onward register is
+its holder's record, not NHS England's.
+
+## 2. OpenSAFELY projects
+
+Issue #62. OpenSAFELY runs analyses inside NHS England's systems, under the
+NHS OpenSAFELY Data Analytics Service Pilot Directions, and NHS England
+approves each project. No file is released, so none of it is on the release
+sheet: it is the access in NHS England's own systems that the release rules
+name as out of scope.
+
+The Bennett Institute publishes the projects at
+`opensafely.org/approved-projects/`, 217 on 2026-09-30, with an RSS feed.
+Each has a number (POS-2026-3013, or "Project #210" for older ones), title,
+organisation, project type, start date, study lead and description, and links
+to its code and released outputs on `jobs.opensafely.org`. Projects up to
+#205 were confined to COVID-19; the 2025 Directions opened it to any topic.
+Unlike digital.nhs.uk, both sites answer requests from the build environment.
+
+- **Licence.** The site is © University of Oxford and "may be copied freely
+  for non-commercial research and study", which is not the Open Government
+  Licence. Store the facts (number, title, organisation, type, start date,
+  URL) and link out for the description, unless the Bennett Institute agrees
+  to more.
+- **A second facts store**, `data/facts/opensafely/`, ingested by hand like the
+  workbooks and never fetched at build time.
+- **Pages of their own**: a list and a page per project, not agreements, as
+  there are no versions or files.
+- **On organisation pages**, an "OpenSAFELY projects" section, matched through
+  the existing organisation aliases, with an `orgcheck`-style report of names
+  that match no page.
+
+## 3. NHS England's other registers
+
+Issue #63. NHS England publishes registers beside this one: internal uses,
+National Back Office, NDRS, the ONS register for the Public Health Research
+Database, COVID-19 non-DARS, and the Data Sharing Framework Contracts.
+`pipeline/sources.py` already lists the internal register and the framework
+contracts, disabled.
+
+Internal uses comes first. It holds the flows inside NHS England that left
+this register at the merger in February 2023 (`sources.MERGER_EDITION`), and
+so answers how NHS England uses the data itself. Every one of these is blocked
+on a person downloading a sample edition into `data/raw/`, since
+digital.nhs.uk refuses the build environment. Then, per register: read the
+layout, teach `extract.py` to read it, decide whether it fits the agreement
+model or needs pages of its own, and enable it.
+
+## 4. Dataset pages
 
 Merging renamed datasets and titling each page with the register's current
 name were built in #54 (see [Built](#dataset-names)). Two parts of #25 need
@@ -43,7 +160,7 @@ hand-written data, and so a person to check it:
 
 Each dataset page already charts its files by month (see [Built](#release-views)).
 
-## 2. Amendments on the changes page
+## 5. Amendments on the changes page
 
 Issue #48. Every amendment now shows what changed, and register-wide edits are
 reported once. Two smaller things were proposed and not done:
@@ -55,14 +172,14 @@ reported once. Two smaller things were proposed and not done:
 - make an agreement's "Amended this month" tag link to the change on its
   timeline.
 
-## 3. Checking workbooks before a re-parse
+## 6. Checking workbooks before a re-parse
 
 Issue #49. The manifest records each ingested workbook's SHA-256. A `--verify`
 flag on `ingest` that checks the files in `data/raw/` against it would catch a
 wrong or corrupted download before a 70-minute re-parse, not during one. It
 matters only when a re-parse is needed, which is rare.
 
-## 4. Waiting on people
+## 7. Waiting on people
 
 The decisions below are tracked in #51, and the dataset names in #55. One more waits on a design choice
 rather than a person outside the project (#50): the headings inside folded
@@ -88,6 +205,8 @@ heading above the section, the sections left open, or the markup as it is.
   since 2020), which decides where the charts of files released start. And
   why three months since then are low: 93 agreements received files in
   February 2022, 87 in April 2022 and 101 in June 2024.
+  And whether a list of sub-licensees exists, for ICBs or for anyone else
+  ([section 1](#1-where-data-goes-next-sublicensing-and-cohorts)).
 - **Dataset names** (#55). Whether "Maternity Services Data Set" (180
   agreements, no files recorded) and "Maternity Services Data Set (MSDS) v1.5"
   (31) are one dataset, and "Alcohol Dependence" and "Alcohol Dependency
@@ -97,7 +216,7 @@ heading above the section, the sections left open, or the markup as it is.
   v3.0. That could not be checked against ODS's own pages from the build
   environment, which digital.nhs.uk refuses. It is worth confirming once.
 
-## 5. Considered and not planned
+## 8. Considered and not planned
 
 - **Filters on sensitivity, legal basis for provision and type of data** (#23).
   Deferred, not rejected: #23 built the two questions that mattered most,
@@ -182,7 +301,8 @@ England's own Secure Data Environment and its predecessors.
 
 - access granted in NHS England's own systems;
 - onward sharing by a recipient. 91 of 1,950 agreements permit sublicensing,
-  and nothing downstream of them is recorded;
+  and nothing downstream of them is recorded here ([section 1](#1-where-data-goes-next-sublicensing-and-cohorts)
+  links to the registers that record it);
 - NHS England's internal flows from 1 February 2023, which left this register
   at the NHS Digital merger (`sources.MERGER_EDITION`);
 - releases published in NHS England's other registers (internal uses, National
