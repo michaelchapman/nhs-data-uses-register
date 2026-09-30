@@ -60,6 +60,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>Source: NHS England Data Uses Register, {{ meta.edition|edition }} edition{% if meta.retrieved %}, retrieved {{ meta.retrieved[:10]|date }}{% endif %}{% if meta.source_file %} from <a href="{{ meta.source_url }}">{{ meta.source_file }}</a>{% endif %}.</p>
+    {% block source %}{% endblock %}
     <p>Register content is published by NHS England under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Site code is open source — <a href="{{ meta.repo_url }}">view it on GitHub</a>.</p>
     <p>Site rebuilt {{ build_time }}.</p>
   </div>

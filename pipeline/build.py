@@ -10,7 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, privacy, relations, releases, search, sectors, sources
+from . import aliases, compare, ods, opensafely, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify
@@ -178,6 +178,7 @@ def build(
     changes_history: list[dict] | None = None,
     history: dict[str, dict] | None = None,
     rules: Rules | None = None,
+    opensafely_store: dict | None = None,
 ) -> dict[str, dict]:
     rules = rules or Rules.load()
     env = environment(rules)
@@ -222,6 +223,21 @@ def build(
     # The page a register name is listed on, for tables that carry only the
     # name as some edition wrote it.
     env.filters["org_slug"] = lambda name: organisation_slug(name, organisation_aliases, organisation_lineage)
+    # OpenSAFELY projects, from data/facts/opensafely/: analysis where the
+    # records are held, which the register does not record. See
+    # pipeline/opensafely.py.
+    opensafely_store = opensafely.load() if opensafely_store is None else opensafely_store
+    opensafely_projects = opensafely_store["projects"]
+    opensafely_config = opensafely.load_organisations()
+    opensafely_pages = opensafely.organisation_pages(
+        opensafely_projects, env.filters["org_slug"], org_slugs, opensafely_config
+    )
+    for slug in opensafely.unknown_pages(opensafely_config, org_slugs):
+        print(f"opensafely: no organisation page for {slug}")
+    for name in opensafely.unmatched(opensafely_projects, opensafely_pages, opensafely_config):
+        print(f"opensafely: no page decided for {name}")
+    opensafely_by_org = opensafely.by_organisation(opensafely_projects, opensafely_pages)
+    stats["opensafely_projects"] = sum(1 for p in opensafely_projects if p["listed"])
 
     # Attach change status to agreements so detail pages can flag recent activity.
     changed_refs = {
@@ -331,6 +347,15 @@ def build(
             "last": by_month.get(f"{chart_start_year - 1}-12", {}).get("agreements", 0),
         },
     )
+    render(
+        "opensafely.html",
+        "opensafely/index.html",
+        store=opensafely_store,
+        projects=opensafely_projects,
+        project_pages=opensafely_pages,
+        org_names=org_names,
+        types=Counter(p["type"] for p in opensafely_projects if p["listed"]).most_common(),
+    )
     render("about.html", "about/index.html")
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
@@ -361,6 +386,7 @@ def build(
             org_slugs=org_slugs,
             dataset_slugs=dataset_slugs,
             search_numbers=search_numbers,
+            opensafely_projects=opensafely_by_org.get(organisation["slug"], []),
         )
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of

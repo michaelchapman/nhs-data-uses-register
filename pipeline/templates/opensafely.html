@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}OpenSAFELY projects — {{ meta.site_name }}{% endblock %}
+{% block description %}The {{ stats.opensafely_projects|commas }} projects approved to analyse NHS records through OpenSAFELY, where the data is not released, with the organisations that run them.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li aria-current="page">OpenSAFELY projects</li>
+  </ol>
+</nav>
+
+<h1>OpenSAFELY projects</h1>
+<p class="lede">OpenSAFELY is a way of analysing NHS health records without copying them out of where they are stored. Researchers write code, the code is run against the records, and only aggregated results, as tables and graphs, come back. The NHS England OpenSAFELY service is funded by NHS England, which decides which projects are approved.</p>
+
+<p class="notice">No file of data is released to an OpenSAFELY project, so none of these projects is in the Data Uses Register. They are listed here from <a href="{{ store.source_url }}">OpenSAFELY's own list</a>, and are not counted in this site's figures for agreements or files released.</p>
+
+{% if projects %}
+<dl class="key-facts">
+  <div><dt>Projects listed</dt><dd>{{ stats.opensafely_projects|commas }}</dd></div>
+  <div><dt>COVID-19 projects</dt><dd>{{ projects|selectattr("listed")|selectattr("covid")|list|length|commas }}</dd></div>
+  {% for type, count in types[:3] %}
+  <div><dt>{{ type }}</dt><dd>{{ count|commas }}</dd></div>
+  {% endfor %}
+</dl>
+
+<h2>What this list shows</h2>
+<ul>
+  <li><strong>Only the facts of each project:</strong> its number, title, organisation, type and start date. What a project is doing is on its OpenSAFELY page, and its code and results are on the OpenSAFELY jobs site. The descriptions are not copied here: opensafely.org is © University of Oxford, and may be copied only for non-commercial research and study.</li>
+  <li><strong>Projects up to number 205 were limited to COVID-19,</strong> which was all the government's Directions then allowed. Directions issued in June 2025 allow research on any health topic.</li>
+  <li><strong>Start dates are given only for recent projects.</strong> OpenSAFELY's list gives none for the earlier ones.</li>
+  <li><strong>Organisations are as OpenSAFELY names them,</strong> often several to a project. Each links to this site's page for it where there is one, which also lists its OpenSAFELY projects.</li>
+</ul>
+
+<h2>Projects</h2>
+<form class="filters" data-filter-form data-target="opensafely-table" role="search" aria-label="Filter projects">
+  <div class="field">
+    <label for="q">Search projects</label>
+    <input type="search" id="q" data-filter-text autocomplete="off" placeholder="e.g. vaccine, Bristol, asthma">
+  </div>
+</form>
+<p class="result-count" role="status" data-filter-count>Showing all {{ projects|length|commas }} projects.</p>
+
+<div class="table-scroll">
+<table class="data-table sortable stack" id="opensafely-table">
+  <caption class="visually-hidden">Projects approved to use OpenSAFELY</caption>
+  <thead><tr><th scope="col">Project</th><th scope="col">Organisation</th><th scope="col">Type</th><th scope="col">Started</th><th scope="col">Code and results</th></tr></thead>
+  <tbody>
+  {% for p in projects|reverse %}
+    <tr data-search="{{ (p.number ~ ' ' ~ p.title ~ ' ' ~ p.organisation ~ ' ' ~ p.type)|lower }}">
+      <th scope="row"><a href="{{ p.page_url }}">{{ p.title }}</a>
+        <span class="ref">{{ p.number }}{% if p.covid %} · COVID-19{% endif %}{% if not p.listed %} · no longer listed{% endif %}</span></th>
+      <td data-label="Organisation">{{ p.organisation }}
+        {% if project_pages.get(p.organisation) %}<br><span class="hint">On this site: {% for slug in project_pages[p.organisation] %}<a href="{{ meta.base_path }}/organisations/{{ slug }}/">{{ org_names.get(slug, slug)|org }}</a>{{ ", " if not loop.last }}{% endfor %}</span>{% endif %}</td>
+      <td data-label="Type">{{ p.type or "—" }}</td>
+      <td class="nowrap" data-label="Started" data-sort="{{ p.start_date }}">{{ p.start_date|date if p.start_date else "—" }}</td>
+      <td data-label="Code and results">{% if p.jobs_url %}<a href="{{ p.jobs_url }}">Jobs site</a>{% else %}—{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+<p>No OpenSAFELY projects have been added to this site yet.</p>
+{% endif %}
+{% endblock %}
+{% block source %}{% if store.retrieved %}<p>OpenSAFELY projects: from <a href="{{ store.source_url }}">opensafely.org</a>, retrieved {{ store.retrieved|date }}. Project facts only; descriptions are © University of Oxford and stay on opensafely.org.</p>{% endif %}{% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

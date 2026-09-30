@@ -26,6 +26,10 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
+- **OpenSAFELY projects** — the projects approved to analyse NHS records through
+  OpenSAFELY, where no data is released, so they are not in the register. From
+  OpenSAFELY's own list, facts only, and on the pages of the organisations that
+  run them.
 - **Files released over time** — agreements receiving files and files released
   each month, across the register and for each dataset, and a timeline of the
   months each agreement received files, drawn at build time without script.
@@ -164,6 +168,7 @@ pipeline/compare.py             field-by-field comparison of two agreement versi
 pipeline/build.py               renders the site
 pipeline/search.py              the word index behind the agreements search
 pipeline/releases.py            files released by month: the build-time check, timelines and charts
+pipeline/opensafely.py          reads OpenSAFELY's project list into the facts store
 pipeline/names.py               shows a name the register wrote in capitals in ordinary case
 pipeline/orgcheck.py            finds organisation names that might be duplicates
 pipeline/privacy.py             confidential data and opt-outs, for the agreements list's filters
@@ -186,6 +191,9 @@ requirements.txt                what the build needs, pinned
 requirements-dev.txt            the checkers, pinned
 data/raw/                       downloaded workbooks (gitignored)
 data/facts/                     committed facts: every edition, and the manifest
+data/facts/opensafely/          OpenSAFELY's project list: each project's facts, not its description
+data/opensafely-organisations.json OpenSAFELY organisation names placed on organisation pages
+data/onward-registers.json      where the non-ICB sublicensing agreements' holders record onward use
 data/organisation-aliases.json  reviewed organisation-name merges
 data/dataset-aliases.json       reviewed dataset-name merges
 data/organisation-codes.json    the ODS code for each NHS name, and the evidence

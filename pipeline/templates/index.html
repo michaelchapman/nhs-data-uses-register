@@ -38,6 +38,10 @@
     <p>How many agreements received files of data each month, and how many files went out, from {{ release_chart_start|month }}.</p>
   </section>
   <section class="card">
+    <h2><a href="{{ meta.base_path }}/opensafely/">OpenSAFELY projects</a></h2>
+    <p>{{ stats.opensafely_projects|commas }} projects approved to analyse NHS records where they are held, without any data being released. They are not in the register.</p>
+  </section>
+  <section class="card">
     <h2><a href="{{ meta.base_path }}/changes/">What changed this month</a></h2>
     <p>{% if changes.comparable %}{{ changes.added|length|commas }} added and {{ changes.amended|length|commas }} amended since the {{ changes.previous_edition|edition }} edition.{% elif changes.reason == "first-edition" %}This is the earliest edition held, so there is nothing to compare it with.{% else %}This edition can't be compared with the one before it yet.{% endif %}</p>
   </section>

@@ -87,10 +87,27 @@ Budget about two minutes a month, plus about a minute for the parse.
    It reads the facts store, not the workbooks, and takes a few seconds. See
    [organisation-names.md](organisation-names.md#datasets).
 
-5. **Check the numbers look sane,** then commit and push:
+5. **Refresh the OpenSAFELY projects.** Unlike digital.nhs.uk, opensafely.org
+   answers from anywhere, so this needs no download by hand. It reads the
+   project list and every project's page, a request a second, in about five
+   minutes:
 
    ```bash
-   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json
+   .venv/bin/python -m pipeline.opensafely ingest
+   .venv/bin/python -m pipeline.opensafely check
+   ```
+
+   The check lists any organisation name OpenSAFELY uses that has not been
+   placed on an organisation page, or ruled out. Add it to
+   `data/opensafely-organisations.json`: under `pages`, every organisation it
+   names that has a page, or under `none`, with why. A project page that fails
+   to load keeps the list's facts and says so; project 99's page has answered
+   with an error since September 2026.
+
+6. **Check the numbers look sane,** then commit and push:
+
+   ```bash
+   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json data/opensafely-organisations.json
    git commit -m "Add the August 2026 edition"
    git push
    ```
@@ -100,7 +117,7 @@ Budget about two minutes a month, plus about a minute for the parse.
    change in how the register writes something down; its "what changed" page says
    which fields moved.
 
-5. GitHub Actions builds and deploys from the committed facts. It makes no
+7. GitHub Actions builds and deploys from the committed facts. It makes no
    external requests, so it cannot fail the way the old scheduled job did.
 
 To preview before pushing:

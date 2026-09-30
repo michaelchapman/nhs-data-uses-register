@@ -138,6 +138,28 @@
 
 {% with intro="Agreements naming " ~ (organisation.name|org) ~ " as applicant or data controller that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
+{% if opensafely_projects %}
+<h2 id="opensafely">OpenSAFELY projects</h2>
+<p class="hint">Projects approved to analyse NHS records through <a href="{{ meta.base_path }}/opensafely/">OpenSAFELY</a>, where no data is released. They are not agreements in the register, and are not counted above. OpenSAFELY's list names the organisation as shown.</p>
+<div class="table-scroll">
+<table class="data-table stack">
+  <caption class="visually-hidden">OpenSAFELY projects run by {{ organisation.name|org }}</caption>
+  <thead><tr><th scope="col">Project</th><th scope="col">Organisation, as OpenSAFELY names it</th><th scope="col">Type</th><th scope="col">Started</th></tr></thead>
+  <tbody>
+  {% for p in opensafely_projects|reverse %}
+    <tr>
+      <th scope="row"><a href="{{ p.page_url }}">{{ p.title }}</a>
+        <span class="ref">{{ p.number }}{% if p.covid %} · COVID-19{% endif %}{% if not p.listed %} · no longer listed{% endif %}</span></th>
+      <td data-label="Organisation">{{ p.organisation }}</td>
+      <td data-label="Type">{{ p.type or "—" }}</td>
+      <td class="nowrap" data-label="Started">{{ p.start_date|date if p.start_date else "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
 <h2>Datasets named in its agreements</h2>
 <ul class="pill-list">
   {% for name in organisation.dataset_names|map("dataset_name")|sort %}
