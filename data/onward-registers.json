@@ -1,0 +1,419 @@
+{
+ "_comment": "Where the holders of the non-ICB agreements that permit sublicensing record what happens to the data next. One entry per holder, naming its agreements by base reference. `kind` is `sub-licensees` for a list of organisations the data was passed on to, and `approved uses` for a register of projects approved to use it, usually inside the holder's own trusted research environment. Collected by hand; `opened: false` marks a page found by search that refuses requests from the build environment. Not yet shown on the site: see docs/plan.md, section 1.",
+ "checked": "2026-09-30",
+ "aggregators": [
+  {
+   "title": "Health Data Research Gateway data use register",
+   "url": "https://healthdatagateway.org/en/search?type=dur",
+   "api": "https://api.healthdatagateway.org/api/v1/dur",
+   "note": "2,580 data uses from 27 custodians on the date checked, 150 of them from the NHS England Secure Data Environment. The Gateway's terms allow downloading extracts for the reader's own use, so republishing its entries needs HDR UK's agreement."
+  },
+  {
+   "title": "UK Statistics Authority public registers",
+   "url": "https://uksa.statisticsauthority.gov.uk/digitaleconomyact-research-statistics/better-useofdata-for-research-information-for-researchers/list-of-accredited-researchers-and-research-projects-under-the-research-strand-of-the-digital-economy-act/",
+   "note": "Every research project accredited under the Digital Economy Act, as XLSX and CSV."
+  }
+ ],
+ "holders": [
+  {
+   "holder": "Genes & Health",
+   "organisation": "queen-mary-university-of-london",
+   "agreements": [
+    "DARS-NIC-338864-B3Z3J"
+   ],
+   "registers": [
+    {
+     "kind": "sub-licensees",
+     "title": "NHS England data release register",
+     "url": "https://docs.google.com/spreadsheets/d/1-J1QB-AynkGYw6CSFfL0VG2m6AkAA8OBLS0SNMwpct8/edit?usp=sharing",
+     "format": "Google Sheet, exportable as CSV",
+     "checked": "2026-09-30",
+     "note": "Each institution sublicensed, its dates, its projects and its last audit. Genes & Health says its NHS England approval requires this list. Linked from https://www.genesandhealth.org/researchers/nhs-data-register/."
+    },
+    {
+     "kind": "approved uses",
+     "title": "Approved research studies",
+     "url": "https://docs.google.com/spreadsheets/d/1BfHY7MZVA_-nvm8TlX6Erg7nz75wyVZg6IEGvjYHw84/edit?usp=sharing",
+     "format": "Google Sheet",
+     "checked": "2026-09-30",
+     "note": "Linked from https://www.genesandhealth.org/researchers/approved-research-studies/."
+    }
+   ]
+  },
+  {
+   "holder": "QResearch",
+   "organisation": "queen-mary-university-of-london",
+   "agreements": [
+    "DARS-NIC-382794-T3L3M",
+    "DARS-NIC-656839-K5V9L"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Approved research programs and projects",
+     "url": "https://www.qresearch.org/research/research-programs-and-projects/approved",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "note": "Ongoing and completed projects have pages of their own beside it."
+    }
+   ]
+  },
+  {
+   "holder": "Department of Health and Social Care: Adult Social Care Client Level Data",
+   "organisation": "department-of-health-and-social-care",
+   "agreements": [
+    "DARS-NIC-463165-H3R4K"
+   ],
+   "registers": [
+    {
+     "kind": "sub-licensees",
+     "title": "Sub-licensing agreement release register",
+     "url": "https://www.ardengemcsu.nhs.uk/media/4485/dhsc-sub-licensing-agreement-release-register-2026-09.pdf",
+     "format": "PDF",
+     "checked": "2026-09-30",
+     "note": "The local authorities DHSC sublicenses the data to, for local service planning and commissioning. Published by NHS Arden & GEM CSU, reviewed quarterly; this is the September 2026 file, linked from https://www.ardengemcsu.nhs.uk/adult-social-care-client-level-data/."
+    }
+   ]
+  },
+  {
+   "holder": "Genomics England",
+   "organisation": "genomics-england",
+   "agreements": [
+    "DARS-NIC-12784-R8W7V",
+    "DARS-NIC-733503-V0X9Q",
+    "DARS-NIC-656890-V4L0D",
+    "DARS-NIC-374190-D0N1M"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Research Registry",
+     "url": "https://research.genomicsengland.co.uk/research-registry/browse/",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "note": "Without signing in: approved projects only, with title, lead, communities and lay summary."
+    }
+   ]
+  },
+  {
+   "holder": "UK Biobank",
+   "organisation": "uk-biobank",
+   "agreements": [
+    "DARS-NIC-08472-V9S6K"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Existing projects",
+     "url": "https://www.ukbiobank.ac.uk/projects/",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "opened": false,
+     "note": "Found by search; the site refuses requests from the build environment, so not opened here."
+    }
+   ]
+  },
+  {
+   "holder": "Our Future Health",
+   "organisation": "our-future-health",
+   "agreements": [
+    "DARS-NIC-411795-X5N2V"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (105 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/86",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ],
+   "note": "Our Future Health publishes its approved studies on the Health Data Research Gateway rather than on its own site."
+  },
+  {
+   "holder": "Clinical Practice Research Datalink (CPRD), MHRA",
+   "organisation": "medicines-and-healthcare-products-regulatory-agency-mhra",
+   "agreements": [
+    "DARS-NIC-15625-T8K6L"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Approved studies using CPRD data",
+     "url": "https://www.cprd.com/protocol-list",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "opened": false,
+     "note": "Title, approval date, protocol number, lay and technical summaries and linked data requested, published three months after approval. Found by search; the site refuses requests from the build environment, so not opened here."
+    },
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (135 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/35",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "holder": "Avon Longitudinal Study of Parents and Children (ALSPAC)",
+   "organisation": "university-of-bristol",
+   "agreements": [
+    "DARS-NIC-152414-W3P6Q",
+    "DARS-NIC-789772-N6S1N"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Proposal summaries",
+     "url": "https://proposals.epi.bristol.ac.uk/?q=proposalSummaries",
+     "format": "web page, exportable as Word",
+     "checked": "2026-09-30",
+     "note": "Every proposal approved since April 2011."
+    },
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (223 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/3",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "holder": "UK Longitudinal Linkage Collaboration (UK LLC)",
+   "organisation": "university-of-bristol",
+   "agreements": [
+    "DARS-NIC-748729-Z8B3M",
+    "DARS-NIC-420229-G9H9S",
+    "DARS-NIC-420168-K4N1F"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Data Use Register",
+     "url": "https://ukllc.ac.uk/data-use-register",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "note": "Every application, including declined ones, updated monthly."
+    },
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (26 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/39",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "holder": "Centre for Longitudinal Studies (NCDS, BCS70, Next Steps, Millennium Cohort Study)",
+   "organisation": "university-college-london-ucl",
+   "agreements": [
+    "DARS-NIC-147922-T7W2F",
+    "DARS-NIC-49297-Q7G1Q",
+    "DARS-NIC-17218-B0W9X",
+    "DARS-NIC-49826-T0J7C",
+    "DARS-NIC-431565-K9V9N",
+    "DARS-NIC-51342-V1M5W",
+    "DARS-NIC-147860-0RSHN",
+    "DARS-NIC-384504-N2V5B"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Accessing the linked data",
+     "url": "https://cls.ucl.ac.uk/data-access-training/linked-data/accessing-the-linked-data/",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "opened": false,
+     "note": "CLS says it publishes approved applications for the NHS linked data; where was not confirmed. The data is supplied to researchers through the UK Data Service. Found by search; the site refuses requests from the build environment, so not opened here."
+    }
+   ]
+  },
+  {
+   "holder": "ECHILD",
+   "organisation": "university-college-london-ucl",
+   "agreements": [
+    "DARS-NIC-381972-Q5F0V"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Data access",
+     "url": "https://www.echild.ac.uk/data-access",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "note": "Links a sublicence template. Search results describe an ECHILD release register, which was not found on the site. Projects run in the ONS Secure Research Service, so they are also accredited under the Digital Economy Act and listed in the UK Statistics Authority's register (see ONS)."
+    }
+   ]
+  },
+  {
+   "holder": "Office for National Statistics",
+   "organisation": "office-for-national-statistics-ons",
+   "agreements": [
+    "DARS-NIC-420710-X0H1P",
+    "DARS-NIC-705741-K8K9G",
+    "DARS-NIC-194340-D6F3B",
+    "DARS-NIC-20951-D2K6S"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Public registers: accredited researchers and accredited projects (UK Statistics Authority)",
+     "url": "https://uksa.statisticsauthority.gov.uk/digitaleconomyact-research-statistics/better-useofdata-for-research-information-for-researchers/list-of-accredited-researchers-and-research-projects-under-the-research-strand-of-the-digital-economy-act/",
+     "format": "web page linking XLSX and CSV",
+     "checked": "2026-09-30",
+     "note": "Every project accredited under the Digital Economy Act, across every accredited processor, not only ONS. The projects file on this date was 13_08_2026_UKSA-Accredited-Research-Projects-Report.xlsx."
+    },
+    {
+     "kind": "approved uses",
+     "title": "ONS Longitudinal Study research projects supported by CeLSIUS",
+     "url": "https://www.ucl.ac.uk/population-health-sciences/sites/population_health_sciences/files/2026-06/FPHS_pdf_celsius-research-projects_20260616_na_1.pdf",
+     "format": "PDF",
+     "checked": "2026-09-30",
+     "opened": false,
+     "note": "For the ONS Longitudinal Study agreements. Found by search; the site refuses requests from the build environment, so not opened here."
+    },
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (57 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/24",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "holder": "NIHR BioResource: INTERVAL, COMPARE and STRIDES",
+   "organisation": "university-of-cambridge",
+   "agreements": [
+    "DARS-NIC-156334-711SX"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Approved data access agreements",
+     "url": "https://www.bioresource.nihr.ac.uk/using-our-bioresource/approved-data-access-agreements/",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "opened": false,
+     "note": "Whether the blood donor cohorts' uses are listed here, or only NIHR BioResource's own, is not confirmed. Found by search; the site refuses requests from the build environment, so not opened here."
+    },
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (35 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/22",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "holder": "University Hospitals Birmingham (PIONEER)",
+   "organisation": "university-hospitals-birmingham-nhs-foundation-trust",
+   "agreements": [
+    "DARS-NIC-577815-R9L1J"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Data Use Register",
+     "url": "https://researchdata.uhb.nhs.uk/data-use-register/",
+     "format": "web page",
+     "checked": "2026-09-30",
+     "note": "The trust's register of all its approved data uses, not only this agreement's. The agreement ended in November 2023."
+    }
+   ]
+  },
+  {
+   "holder": "UK Health Security Agency",
+   "organisation": "uk-health-security-agency",
+   "agreements": [
+    "DARS-NIC-343380-H5Q9K"
+   ],
+   "registers": [
+    {
+     "kind": "approved uses",
+     "title": "Health Data Research Gateway data use register (2 uses on 2026-09-30)",
+     "url": "https://healthdatagateway.org/en/data-custodian/12",
+     "format": "web page, and JSON from the Gateway's API",
+     "checked": "2026-09-30"
+    }
+   ],
+   "note": "No register of its own found. The two Gateway entries are unlikely to cover what this agreement sublicenses."
+  },
+  {
+   "holder": "National Joint Registry, HQIP",
+   "organisation": "healthcare-quality-improvement-partnership-hqip",
+   "agreements": [
+    "DARS-NIC-07289-G8J6C"
+   ],
+   "registers": [],
+   "note": "None found. HQIP describes its data access process at https://www.hqip.org.uk/national-programmes/accessing-ncapop-data/ but no register of releases was found."
+  },
+  {
+   "holder": "The Million Women Study",
+   "organisation": "university-of-oxford",
+   "agreements": [
+    "DARS-NIC-389134-S8L1C"
+   ],
+   "registers": [],
+   "note": "None found. Its data access policy is at https://www.ceu.ox.ac.uk/research/the-million-women-study/for-researchers/data-access-and-sharing (found by search; the site refuses requests from the build environment, so not opened here)."
+  },
+  {
+   "holder": "CORECT-R (UK Colorectal Cancer Intelligence Hub)",
+   "organisation": "university-of-oxford",
+   "agreements": [
+    "DARS-NIC-656885-M7T5X"
+   ],
+   "registers": [],
+   "note": "None found. Its access process is at https://www.ndph.ox.ac.uk/corectr/corect-r."
+  },
+  {
+   "holder": "RECOVERY trial",
+   "organisation": "university-of-oxford",
+   "agreements": [
+    "DARS-NIC-365354-R3M0Q"
+   ],
+   "registers": [],
+   "note": "None found."
+  },
+  {
+   "holder": "COSMOS",
+   "organisation": "imperial-college-london",
+   "agreements": [
+    "DARS-NIC-370843-R6V8T"
+   ],
+   "registers": [],
+   "note": "None found. Access is decided by the UK COSMOS Data Access Committee."
+  },
+  {
+   "holder": "Pre-hospital Research and Audit Network (PRANA)",
+   "organisation": "university-hospital-southampton-nhs-foundation-trust",
+   "agreements": [
+    "DARS-NIC-771303-G4V1M"
+   ],
+   "registers": [],
+   "note": "None found."
+  },
+  {
+   "holder": "Long-term effects of radiation from CT and cardiac fluoroscopy",
+   "organisation": "university-of-newcastle-upon-tyne",
+   "agreements": [
+    "DARS-NIC-147852-RV70L"
+   ],
+   "registers": [],
+   "note": "None found."
+  },
+  {
+   "holder": "NHS Improvement: National Consultant Information Programme",
+   "organisation": "nhs-improvement",
+   "agreements": [
+    "DARS-NIC-213403-P3R8Q"
+   ],
+   "registers": [],
+   "note": "The agreement ended in March 2023, and NHS Improvement is now part of NHS England."
+  }
+ ]
+}

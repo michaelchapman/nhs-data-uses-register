@@ -60,28 +60,104 @@ joins the questions in [section 7](#7-waiting-on-people).
 **The other 40** are organisations that hold data for others to use: UK
 Biobank, Genomics England (4 agreements), Our Future Health, CPRD (under the
 MHRA), QResearch, UK LLC, ALSPAC, the Centre for Longitudinal Studies'
-cohorts, the Million Women Study, ONS (4) and UKHSA among them. Each keeps its
-own register of the uses it approves, so the useful step is to link to it,
-not to copy it.
+cohorts, the Million Women Study, ONS (4) and UKHSA among them. Most keep
+their own register of what happens next, so the useful step is to link to
+it, not to copy it.
 
-The steps, in order:
+### What the onward registers are
 
-1. **Split the two groups** (#60), as a page or as two options of the
-   agreements list's Sublicensing filter, each showing its confidential data
-   bases from `privacy.py`.
-2. **Link to the onward registers** (#60): a hand-maintained
-   `data/onward-registers.json`, keyed by organisation page slug, with the
-   URL of the holder's register of approved uses, what it lists and the date
-   it was checked, shown on the organisation page and on each sublicensing
-   agreement. For ICBs, which of the 42 publish a list and where. Nothing is
-   scraped or fetched at build time; a register that is machine-readable may
-   later earn a facts store of its own, as OpenSAFELY's does.
-3. **Describe the cohorts** (#61): a hand-maintained `data/cohorts.json` with
-   who is in each (how and when people were recruited, age, area, approximate
-   size), how members are covered (consent, or without it under s251 or a
-   statutory exemption), a source link, the agreements that feed it and its
-   onward register. Each cohort gets a page, linked from its agreements and
-   organisation.
+Collected by hand on 2026-09-30 in `data/onward-registers.json`, one entry per
+holder, covering all 40 agreements. It is not yet shown on the site. What it
+found:
+
+- **Two different kinds of record, which must not be run together.** A
+  *sub-licensee list* names the organisations the data itself was passed on
+  to. Two holders publish one: Genes & Health (a Google Sheet of each
+  institution, its dates, its projects and its last audit) and DHSC (a PDF of
+  the local authorities it sublicenses Adult Social Care Client Level Data to,
+  published by Arden & GEM and reviewed quarterly). A register of *approved
+  uses* lists the projects allowed to analyse the data, usually inside the
+  holder's own trusted research environment, where it does not leave. Most
+  holders publish that kind: UK Biobank, Genomics England, CPRD, ALSPAC, UK
+  LLC, QResearch, NIHR BioResource, UHB, and ONS through the UK Statistics
+  Authority.
+- **A published sub-licensee list may be a condition of sublicensing.**
+  Genes & Health says its NHS England approval requires it to list every
+  institution it sublicenses in a "Data Release Register", and DHSC's
+  register reads the same way. If that is a standard condition, every one of
+  the 91 should have one. Whether it is joins the questions for DARS in
+  [section 7](#7-waiting-on-people).
+- **No register was found for 8 holders**, covering 8 agreements: the
+  National Joint Registry, the Million Women Study, CORECT-R, RECOVERY,
+  COSMOS, PRANA, the Newcastle CT radiation study, and NHS Improvement's
+  consultant programme, which ended in 2023. UKHSA has 2 entries on the
+  Gateway and nothing of its own.
+- **Formats vary**: web pages, PDFs, Google Sheets, a Word export, and
+  spreadsheets. Seven pages refuse requests from the build environment, as
+  digital.nhs.uk does, and are marked as found by search and not opened.
+
+### Two registers already bring others together
+
+- **The Health Data Research Gateway's data use register** holds 2,580 data
+  uses from 27 custodians, with a public JSON API. It follows the data use
+  register standard the UK Health Data Research Alliance published in 2022.
+  Seven of the holders above publish there: ALSPAC (223), CPRD (135), Our
+  Future Health (105, and nowhere else), ONS (57), NIHR BioResource (35), UK
+  LLC (26) and UKHSA (2). So does the **NHS England Secure Data Environment,
+  with 150 uses**: access in NHS England's own systems, which the release
+  rules name as out of scope and nothing on this site shows yet. The
+  Gateway's terms allow downloading extracts for the reader's own use, so
+  republishing its entries needs HDR UK's agreement. Linking to a custodian's
+  page and giving counts does not.
+- **The UK Statistics Authority's public registers** list every project
+  accredited under the Digital Economy Act, as XLSX and CSV, whichever
+  processor it runs in. That covers ONS's Public Health Research Database and
+  ECHILD's projects in the ONS Secure Research Service.
+
+### How to bring them together
+
+In order of cost:
+
+1. **Link** (#60). Show each sublicensing agreement's onward registers from
+   `data/onward-registers.json`, on the agreement and organisation pages,
+   saying which kind each is. It needs no permission, costs a template, and
+   says plainly where nothing was found. A check like `relations` would list
+   any reference or organisation that no longer has a page.
+2. **Ingest the sub-licensee lists.** They are what "where did the data go"
+   means, they are short, and each names organisations that can be placed on
+   this site's pages: an organisation page could then say it receives data
+   under sublicence from Genes & Health, or from DHSC. Each needs its
+   publisher's terms checked first. Genes & Health's sheet exports as CSV,
+   DHSC's is a PDF.
+3. **Ask HDR UK** whether the Gateway's data uses can be shown here, as
+   facts with a link like OpenSAFELY's. It is the one source that already
+   joins most of these registers, it has an API, and it holds the NHS England
+   SDE's uses. If it agrees, a third facts store would do more than any
+   number of hand-made links.
+4. **The UK Statistics Authority's registers** are published by a public body
+   as data files, and are likely under the Open Government Licence, which is
+   to be confirmed. They would add the Digital Economy Act projects that use
+   NHS data, such as ECHILD's.
+
+Scraping each holder's own web page is not proposed: formats differ, several
+refuse the build environment, and the Gateway and the holders' own lists
+already exist.
+
+The ICBs' sub-licensee lists are a separate exercise: 42 ICBs, some of which
+publish one (West Yorkshire does). If DARS confirms that a published list is
+a condition, the question becomes which do not.
+
+The other steps:
+
+- **Split the two groups** (#60), as a page or as two options of the
+  agreements list's Sublicensing filter, each showing its confidential data
+  bases from `privacy.py`.
+- **Describe the cohorts** (#61): a hand-maintained `data/cohorts.json` with
+  who is in each (how and when people were recruited, age, area, approximate
+  size), how members are covered (consent, or without it under s251 or a
+  statutory exemption), a source link, the agreements that feed it and its
+  onward register. Each cohort gets a page, linked from its agreements and
+  organisation.
 
 Two things the measurements settle about cohorts:
 
@@ -102,32 +178,43 @@ its holder's record, not NHS England's.
 
 ## 2. OpenSAFELY projects
 
-Issue #62. OpenSAFELY runs analyses inside NHS England's systems, under the
-NHS OpenSAFELY Data Analytics Service Pilot Directions, and NHS England
-approves each project. No file is released, so none of it is on the release
-sheet: it is the access in NHS England's own systems that the release rules
-name as out of scope.
+Issue #62. Built in September 2026, facts only. OpenSAFELY analyses NHS
+records where they are stored and returns only aggregated results, and NHS
+England decides which projects are approved. No file is released, so none of
+it is on the release sheet.
 
-The Bennett Institute publishes the projects at
-`opensafely.org/approved-projects/`, 217 on 2026-09-30, with an RSS feed.
-Each has a number (POS-2026-3013, or "Project #210" for older ones), title,
-organisation, project type, start date, study lead and description, and links
-to its code and released outputs on `jobs.opensafely.org`. Projects up to
-#205 were confined to COVID-19; the 2025 Directions opened it to any topic.
-Unlike digital.nhs.uk, both sites answer requests from the build environment.
+- **The store.** `python -m pipeline.opensafely ingest` reads OpenSAFELY's
+  project list and each project's page into
+  `data/facts/opensafely/projects.json`: number, title, organisation, type,
+  start date, whether it is a COVID-19 project, and its two addresses. It is
+  run by hand in the monthly routine (opensafely.org answers from anywhere),
+  and the build reads only the committed file. A project the list drops is
+  kept and marked as no longer listed.
+- **The licence.** opensafely.org is © University of Oxford and "may be
+  copied freely for non-commercial research and study", which is not the Open
+  Government Licence. So descriptions stay there, and study leads, named with
+  an email address, are left out. Storing more waits on the Bennett Institute.
+- **Organisations.** OpenSAFELY writes one free-text organisation per
+  project, often several joined. `data/opensafely-organisations.json` places
+  each name that the reviewed aliases do not on every organisation page it
+  names, or records why it has none; `python -m pipeline.opensafely check`
+  lists any undecided. On 2026-09-30, 213 of 219 projects link to at least one
+  organisation page, and 27 organisation pages list OpenSAFELY projects.
+- **Pages.** A list at `/opensafely/`, linked from the home page, About and
+  Files released, and a section on each organisation page. Not in the main
+  menu, and never counted as agreements or files released.
 
-- **Licence.** The site is © University of Oxford and "may be copied freely
-  for non-commercial research and study", which is not the Open Government
-  Licence. Store the facts (number, title, organisation, type, start date,
-  URL) and link out for the description, unless the Bennett Institute agrees
-  to more.
-- **A second facts store**, `data/facts/opensafely/`, ingested by hand like the
-  workbooks and never fetched at build time.
-- **Pages of their own**: a list and a page per project, not agreements, as
-  there are no versions or files.
-- **On organisation pages**, an "OpenSAFELY projects" section, matched through
-  the existing organisation aliases, with an `orgcheck`-style report of names
-  that match no page.
+What it measured: 219 projects, 202 of them COVID-19 ones. Research 134,
+service evaluation 48, audit 16. Only the 16 projects since November 2025
+give a start date, and project 99's page answers with an error, so its entry
+comes from the list alone.
+
+Left to do:
+
+- **Dates for the earlier projects.** The jobs site shows when each project
+  was created there. It is a different date from approval, so it would need
+  labelling as such.
+- **The Bennett Institute** could be asked whether descriptions may be shown.
 
 ## 3. NHS England's other registers
 
@@ -205,7 +292,9 @@ heading above the section, the sections left open, or the markup as it is.
   since 2020), which decides where the charts of files released start. And
   why three months since then are low: 93 agreements received files in
   February 2022, 87 in April 2022 and 101 in June 2024.
-  And whether a list of sub-licensees exists, for ICBs or for anyone else
+  And whether a list of sub-licensees exists, for ICBs or for anyone else,
+  and whether publishing one is a condition of every sublicensing agreement,
+  as Genes & Health says its approval requires
   ([section 1](#1-where-data-goes-next-sublicensing-and-cohorts)).
 - **Dataset names** (#55). Whether "Maternity Services Data Set" (180
   agreements, no files recorded) and "Maternity Services Data Set (MSDS) v1.5"
