@@ -142,6 +142,12 @@ p, li { max-width: 68ch; }
 
 .related { margin: 1rem 0 1.5rem; }
 .related h2 { font-size: 1.125rem; margin: 0 0 0.25rem; }
+.onward { border-left: 4px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1rem 0 0.5rem; max-width: 70ch; }
+.onward h3, .onward h4 { font-size: 1.0625rem; margin: 0 0 0.25rem; }
+.onward ul { margin: 0.25rem 0; padding-left: 1.25rem; }
+.onward li + li { margin-top: 0.5rem; }
+.onward p { margin: 0.25rem 0; }
+.onward-kind { font-weight: 600; }
 .contents { border-left: 4px solid var(--line); padding: 0.25rem 0 0.25rem 1rem; margin: 1.5rem 0; }
 .contents-title { font-size: 1rem; margin: 0 0 0.25rem; }
 .contents ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; list-style: none; margin: 0; padding: 0; }

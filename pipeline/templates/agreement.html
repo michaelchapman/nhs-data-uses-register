@@ -176,7 +176,13 @@
 <h2 id="releases">Files released</h2>
 {% include "_release-scope.html" %}
 {% if v.sublicensing == "Yes" %}
-<p class="notice">This agreement permits sublicensing: the applicant may pass data on to others. Anything passed on is not recorded in this register.</p>
+<p class="notice">This agreement permits sublicensing: the applicant may pass data on to others. Anything passed on is not recorded in this register.{% if onward %} What this site found about where it goes is <a href="#onward">below</a>.{% endif %}</p>
+{% endif %}
+{% if onward %}
+{% from "_onward.html" import onward_registers with context %}
+<h3 id="onward">Where the data goes next</h3>
+<p class="hint">Records kept by the holder, not by NHS England, found by this site on {{ onward_checked|date }}. A list of <strong>organisations the data is passed on to</strong> says where the data itself went; a register of <strong>projects approved to use the data</strong> usually covers analysis inside the holder's own secure environment, where the data stays. <a href="{{ meta.base_path }}/about/#onward">About these records</a>.</p>
+{{ onward_registers(onward, onward_checked, "h4") }}
 {% endif %}
 {% if agreement.opt_outs and agreement.opt_outs.files %}
 {% set o = agreement.opt_outs %}

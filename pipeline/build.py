@@ -10,7 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, opensafely, privacy, relations, releases, search, sectors, sources
+from . import aliases, compare, ods, onward, opensafely, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify
@@ -179,6 +179,7 @@ def build(
     history: dict[str, dict] | None = None,
     rules: Rules | None = None,
     opensafely_store: dict | None = None,
+    onward_config: dict | None = None,
 ) -> dict[str, dict]:
     rules = rules or Rules.load()
     env = environment(rules)
@@ -238,6 +239,15 @@ def build(
         print(f"opensafely: no page decided for {name}")
     opensafely_by_org = opensafely.by_organisation(opensafely_projects, opensafely_pages)
     stats["opensafely_projects"] = sum(1 for p in opensafely_projects if p["listed"])
+    # Where sublicensing holders record what happens next, from
+    # data/onward-registers.json. See pipeline/onward.py.
+    onward_config = onward.load() if onward_config is None else onward_config
+    for problem in onward.problems(onward_config, data["agreements"], org_slugs):
+        print(f"onward: {problem}")
+    onward_by_agreement = onward.by_agreement(onward_config)
+    onward_by_org = onward.by_organisation(onward_config)
+    onward_slugs = {a["base_reference"].upper(): a["slug"] for a in data["agreements"] + archived}
+    stats["onward"] = onward.counts(onward_config)
 
     # Attach change status to agreements so detail pages can flag recent activity.
     changed_refs = {
@@ -260,6 +270,8 @@ def build(
         "stats": stats,
         "changes": changes,
         "build_time": dt.datetime.now(dt.UTC).strftime("%d %B %Y"),
+        "onward_kinds": onward.KINDS,
+        "onward_checked": onward_config.get("checked", ""),
     }
 
     def render(template: str, path: str, **kwargs) -> None:
@@ -374,6 +386,7 @@ def build(
             history=(history or {}).get(agreement["base_reference"]),
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
             timeline=releases.agreement_timeline(agreement, dataset_aliases, meta["as_of"]),
+            onward=onward_by_agreement.get(agreement["base_reference"].upper()),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(
@@ -387,6 +400,8 @@ def build(
             dataset_slugs=dataset_slugs,
             search_numbers=search_numbers,
             opensafely_projects=opensafely_by_org.get(organisation["slug"], []),
+            onward=onward_by_org.get(organisation["slug"], []),
+            onward_slugs=onward_slugs,
         )
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of

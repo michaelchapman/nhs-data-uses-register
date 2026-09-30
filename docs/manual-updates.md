@@ -87,6 +87,18 @@ Budget about two minutes a month, plus about a minute for the parse.
    It reads the facts store, not the workbooks, and takes a few seconds. See
    [organisation-names.md](organisation-names.md#datasets).
 
+   Then check the records of where sublicensed data goes next:
+
+   ```bash
+   .venv/bin/python -m pipeline.onward
+   ```
+
+   It lists any agreement in `data/onward-registers.json` that has left the
+   edition or no longer permits sublicensing, and any new agreement outside
+   the ICBs that permits it and has no entry. Look for the new holder's own
+   register of approved uses or sub-licensees, and add an entry, with an
+   empty `registers` list and a note if none is found.
+
 5. **Refresh the OpenSAFELY projects.** Unlike digital.nhs.uk, opensafely.org
    answers from anywhere, so this needs no download by hand. It reads the
    project list and every project's page, a request a second, in about five
@@ -107,7 +119,7 @@ Budget about two minutes a month, plus about a minute for the parse.
 6. **Check the numbers look sane,** then commit and push:
 
    ```bash
-   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json data/opensafely-organisations.json
+   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json data/opensafely-organisations.json data/onward-registers.json
    git commit -m "Add the August 2026 edition"
    git push
    ```

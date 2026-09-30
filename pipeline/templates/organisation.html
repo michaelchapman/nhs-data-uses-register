@@ -138,6 +138,16 @@
 
 {% with intro="Agreements naming " ~ (organisation.name|org) ~ " as applicant or data controller that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
+{% if onward %}
+{% from "_onward.html" import onward_registers with context %}
+<h2 id="onward">Where the data goes next</h2>
+<p class="hint">Agreements held by {{ organisation.name|org }} permit sublicensing, which the register does not follow. These are the records of what happens to the data next that this site found on {{ onward_checked|date }}. They are kept by the holder, not by NHS England. <a href="{{ meta.base_path }}/about/#onward">About these records</a>.</p>
+{% for holder in onward %}
+{{ onward_registers(holder, onward_checked) }}
+<p class="hint">Covers {% for ref in holder.agreements %}{% set slug = onward_slugs.get(ref) %}{% if slug %}<a href="{{ meta.base_path }}/agreements/{{ slug }}/">{{ ref }}</a>{% else %}{{ ref }}{% endif %}{{ ", " if not loop.last }}{% endfor %}.</p>
+{% endfor %}
+{% endif %}
+
 {% if opensafely_projects %}
 <h2 id="opensafely">OpenSAFELY projects</h2>
 <p class="hint">Projects approved to analyse NHS records through <a href="{{ meta.base_path }}/opensafely/">OpenSAFELY</a>, where no data is released. They are not agreements in the register, and are not counted above. OpenSAFELY's list names the organisation as shown.</p>

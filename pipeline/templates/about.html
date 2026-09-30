@@ -11,6 +11,17 @@
 <p>It does <strong>not</strong> cover NHS England's internal uses of data (a separate internal register), the Data Sharing Framework Contracts that sit above individual agreements, or releases made through other routes. Links to those are on the <a href="{{ meta.source_page }}">official register page</a>.</p>
 <p id="opensafely">Nor does it cover analysis that NHS England approves without releasing any data. <a href="{{ meta.base_path }}/opensafely/">OpenSAFELY projects</a> run their code where the records are stored and take away only aggregated results. This site lists them from OpenSAFELY's own list, on a page of their own and on the pages of the organisations that run them, and never counts them as agreements or files released.</p>
 
+{% if stats.onward and stats.onward.holders %}
+<h2 id="onward">Where data goes after sublicensing</h2>
+<p>{{ stats.sublicensing|commas }} agreements permit the applicant to pass data on, which the register calls sublicensing, but it does not record what is passed on or to whom. Most of these agreements are held by integrated care boards, which pass data to the providers in their area for commissioning. The rest are held by cohort studies, research databases and data services, and most of those keep records of their own. This site links to them from each agreement and organisation page: {{ stats.onward.agreements|commas }} agreements, held by {{ stats.onward.holders|commas }} holders, collected by hand on {{ onward_checked|date }}.</p>
+<p>The records are of two kinds, which say different things:</p>
+<ul>
+  <li><strong>Organisations the data is passed on to.</strong> A list of sub-licensees says where the data itself went. {{ stats.onward.sub_licensees|commas }} holders publish one.</li>
+  <li><strong>Projects approved to use the data.</strong> Many holders run a secure environment in which approved researchers analyse the data without taking it away, and list the projects they approve. {{ stats.onward.approved_uses|commas }} holders publish a list like that.</li>
+</ul>
+<p>For {{ stats.onward.none|commas }} holders, no record was found, and their pages say so. Several holders also publish on the <a href="https://healthdatagateway.org/en/search?type=dur">Health Data Research Gateway</a>, which gathers approved uses from many organisations, and the UK Statistics Authority lists every project accredited under the Digital Economy Act. The addresses, and what each list holds, are in <a href="{{ meta.repo_url }}/blob/main/data/onward-registers.json">data/onward-registers.json</a>. A record that exists does not mean data was shared, and one that is missing does not mean it was not.</p>
+{% endif %}
+
 <h2 id="opt-out">If you don't want your data used</h2>
 <p>Most people in England can choose to stop their confidential patient information being used for research and planning, through the <a href="https://www.nhs.uk/your-nhs-data-matters/">National Data Opt-out</a>. Where the register records whether opt-outs were applied to a file release, this site shows it on the agreement page, and the <a href="{{ meta.base_path }}/agreements/">agreements list</a> can be filtered by it.</p>
 

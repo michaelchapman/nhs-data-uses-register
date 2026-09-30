@@ -1,0 +1,19 @@
+{#- Where a sublicensing holder records what happens to the data next, from
+    data/onward-registers.json. See pipeline/onward.py. -#}
+{% macro onward_registers(holder, checked, heading="h3") %}
+<div class="onward">
+  <{{ heading }}>{{ holder.holder }}</{{ heading }}>
+  {% if holder.registers %}
+  <ul>
+    {% for r in holder.registers %}
+    <li><span class="onward-kind">{{ onward_kinds[r.kind] }}:</span> <a href="{{ r.url }}">{{ r.title }}</a>
+      <span class="hint">({{ r.format }}{% if r.opened is false %}; found by search, and not opened by this site{% endif %}{% if r.source %}; listed on <a href="{{ r.source }}">the holder's site</a>{% endif %})</span>
+      {% if r.note %}<br><span class="hint">{{ r.note }}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No record of what happens to the data next was found{% if checked %} when this site checked on {{ checked|date }}{% endif %}.</p>
+  {% endif %}
+  {% if holder.note %}<p class="hint">{{ holder.note }}</p>{% endif %}
+</div>
+{% endmacro %}

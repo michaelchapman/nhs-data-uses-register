@@ -67,8 +67,8 @@ it, not to copy it.
 ### What the onward registers are
 
 Collected by hand on 2026-09-30 in `data/onward-registers.json`, one entry per
-holder, covering all 40 agreements. It is not yet shown on the site. What it
-found:
+holder, covering all 40 agreements, and shown on the site since step 1 below.
+What it found:
 
 - **Two different kinds of record, which must not be run together.** A
   *sub-licensee list* names the organisations the data itself was passed on
@@ -118,11 +118,14 @@ found:
 
 In order of cost:
 
-1. **Link** (#60). Show each sublicensing agreement's onward registers from
-   `data/onward-registers.json`, on the agreement and organisation pages,
-   saying which kind each is. It needs no permission, costs a template, and
-   says plainly where nothing was found. A check like `relations` would list
-   any reference or organisation that no longer has a page.
+1. **Link** (#60). Built in September 2026. Each of the 40 agreements has a
+   "Where the data goes next" section under its files released, listing its
+   holder's registers by kind, or saying none was found; each holder's
+   organisation page has the same, with the agreements it covers (18 pages);
+   and the About page explains the two kinds. `python -m pipeline.onward`,
+   in the monthly routine, lists any reference that has left the edition or
+   stopped permitting sublicensing, and any new non-ICB sublicensing
+   agreement with no entry. The build prints the same.
 2. **Ingest the sub-licensee lists.** They are what "where did the data go"
    means, they are short, and each names organisations that can be placed on
    this site's pages: an organisation page could then say it receives data
