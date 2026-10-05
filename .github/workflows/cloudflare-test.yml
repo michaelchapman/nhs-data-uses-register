@@ -1,0 +1,36 @@
+name: Cloudflare test deploy
+
+# Run by hand only. Publishes a copy of the site to Cloudflare Pages, at a
+# *.pages.dev address, to find out whether a network that blocks
+# healthdatauses.uk objects to its certificate chain (Let's Encrypt) or to the
+# domain itself. The copy is served under a different CA on an established
+# domain. Its canonical links still point at healthdatauses.uk, so search
+# engines treat it as a duplicate. The live site and its deploy are untouched.
+#
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN (Account > Cloudflare
+# Pages > Edit) and CLOUDFLARE_ACCOUNT_ID.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-test
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: ./.github/actions/check
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Creating the project fails harmlessly once it exists.
+          preCommands: npx wrangler pages project create healthdatauses --production-branch=main || true
+          command: pages deploy _site --project-name=healthdatauses --branch=main
