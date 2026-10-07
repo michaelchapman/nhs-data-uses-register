@@ -13,15 +13,13 @@ publishes and reproducibly reformats them into pages that are easier to read,
 search, link to and cite. It is a presentation of the register, not a new
 dataset: there is no expectation that it publishes the reformatted data, so a
 proposal to add a data download starts from that rule. See
-[section 5](#5-considered-and-not-planned).
+[section 3](#3-considered-and-not-planned).
 
-Last reviewed 2026-09-29. Each item has an issue. In rough order of value:
+Last reviewed 2026-10-07. Each item has an issue. In rough order of value:
 
 1. [Dataset pages](#1-dataset-pages) (#56, #57)
-2. [Amendments on the changes page](#2-amendments-on-the-changes-page) (#48)
-3. [Checking workbooks before a re-parse](#3-checking-workbooks-before-a-re-parse) (#49)
-4. [Waiting on people](#4-waiting-on-people) (#50, #51, #55)
-5. [Considered and not planned](#5-considered-and-not-planned)
+2. [Waiting on people](#2-waiting-on-people) (#51, #55)
+3. [Considered and not planned](#3-considered-and-not-planned)
 
 Ideas raised as issues and not yet scoped here: a glossary of the register's
 terms (#27), and trends over time with a feed of what changed (#28).
@@ -43,32 +41,9 @@ hand-written data, and so a person to check it:
 
 Each dataset page already charts its files by month (see [Built](#release-views)).
 
-## 2. Amendments on the changes page
+## 2. Waiting on people
 
-Issue #48. Every amendment now shows what changed, and register-wide edits are
-reported once. Two smaller things were proposed and not done:
-
-- lead the changes page with what an in-place amendment is: an edit NHS England
-  made to an existing record without a new version number, for which there is
-  no official changelog. That is the site's own contribution and it sits
-  second, under "Added";
-- make an agreement's "Amended this month" tag link to the change on its
-  timeline.
-
-## 3. Checking workbooks before a re-parse
-
-Issue #49. The manifest records each ingested workbook's SHA-256. A `--verify`
-flag on `ingest` that checks the files in `data/raw/` against it would catch a
-wrong or corrupted download before a 70-minute re-parse, not during one. It
-matters only when a re-parse is needed, which is rare.
-
-## 4. Waiting on people
-
-The decisions below are tracked in #51, and the dataset names in #55. One more waits on a design choice
-rather than a person outside the project (#50): the headings inside folded
-sections, such as an agreement's purpose sections, sit in a `<summary>`, and
-some screen readers do not announce them as headings. The fix is either the
-heading above the section, the sections left open, or the markup as it is.
+The decisions below are tracked in #51, and the dataset names in #55.
 
 - **Organisation names.** Two possible renames need someone who knows the
   companies: LA-SER Europe to Certara UK, and 2020 Delivery to The Public
@@ -97,7 +72,7 @@ heading above the section, the sections left open, or the markup as it is.
   v3.0. That could not be checked against ODS's own pages from the build
   environment, which digital.nhs.uk refuses. It is worth confirming once.
 
-## 5. Considered and not planned
+## 3. Considered and not planned
 
 - **Filters on sensitivity, legal basis for provision and type of data** (#23).
   Deferred, not rejected: #23 built the two questions that mattered most,
@@ -142,6 +117,28 @@ heading above the section, the sections left open, or the markup as it is.
   650 MB, which matters more.
 
 ## Built
+
+### Amendments, verifying workbooks, and folded headings
+
+Built in October 2026.
+
+- **Amendments on the changes page** (#48). The page now opens by saying what
+  an in-place amendment is: an edit NHS England makes to an existing record
+  without a new version number, with no official changelog. That is the site's
+  own contribution. An agreement's "Amended this month" tag is followed, under
+  the version's summary, by a link to the amendment in its register history.
+  The link is not on the tag itself, because a link inside a `<summary>` is a
+  control inside a control.
+- **`ingest --verify`** (#49) checks workbooks against the manifest's
+  checksums before a re-parse, and names any edition a re-parse would drop. It
+  replaces the script that was in the monthly routine.
+- **Headings outside folded sections** (#50). A `<summary>` is exposed as a
+  button, and some screen readers leave a heading inside it out of the page's
+  list of headings. The purpose sections, an earlier version's text and "Cite
+  this page" now put the heading above, and the toggle under it reads "Show"
+  or "Hide", completed for a screen reader with the section's name
+  (`_fold.html`). Printing opens every section and hides the toggles. Other
+  folded parts, such as "Show the change", have no heading and are unchanged.
 
 ### Release views
 

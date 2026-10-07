@@ -175,18 +175,16 @@ is the expensive operation the design exists to avoid, so it should be rare.
 ### Checking the local workbooks
 
 The manifest records a SHA-256 for every edition ingested, so the local set can
-be verified before a long run:
+be verified before a long run. This parses nothing and writes nothing:
 
 ```bash
-.venv/bin/python - <<'EOF'
-import hashlib, json
-from pathlib import Path
-for e in json.load(open("data/facts/data-uses-register/manifest.json"))["editions"]:
-    f = Path("data/raw") / e["source_file"]
-    got = hashlib.sha256(f.read_bytes()).hexdigest() if f.is_file() else "MISSING"
-    print(("ok  " if got == e["sha256"] else "BAD "), e["edition"], f.name)
-EOF
+.venv/bin/python -m pipeline.ingest --verify data/raw/*.xlsx
 ```
+
+It prints a line per edition: `ok` for a workbook that matches, `BAD` for one
+that does not, `new` for a workbook not yet ingested, and `MISSING` for an
+edition the manifest records with no workbook given, which a re-parse would
+drop. It exits with an error if any is `BAD` or `MISSING`.
 
 `rm -rf data/facts` deletes the manifest along with everything else, and
 re-ingesting rewrites it, but any `--source-url` you passed for an edition (the
@@ -198,6 +196,7 @@ again.
 | Command | Effect |
 | --- | --- |
 | `ingest --source-url URL` | Record a different source URL for one workbook |
+| `ingest --verify a.xlsx …` | Check workbooks against the manifest, recording nothing |
 | `run --edition june2026` | Build any edition in the store, not only the newest |
 | `run --workbook a.xlsx` | One-off build from a file, without ingesting |
 | `run --base-path /repo-name` | Serve under a subpath (GitHub project pages) |

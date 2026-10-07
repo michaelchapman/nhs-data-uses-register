@@ -126,6 +126,38 @@ class Ingest(unittest.TestCase):
             self.run_ingest("--source-url", "https://example.test/x.xlsx",
                             str(self.workbook("july2026")), str(self.workbook("august2026")))
 
+    def test_verify_passes_the_workbooks_that_were_ingested(self):
+        july, august = self.workbook("july2026"), self.workbook("august2026")
+        self.run_ingest(str(july), str(august))
+        with mock.patch("pipeline.extract.extract") as extract:
+            output = self.run_ingest("--verify", str(august), str(july))
+        extract.assert_not_called()
+        self.assertIn("ok       july2026  datausesregister_july2026.xlsx", output)
+        self.assertIn("ok       august2026", output)
+
+    def test_verify_names_a_changed_workbook_and_fails(self):
+        path = self.workbook("august2026")
+        self.run_ingest(str(path))
+        path.write_bytes(path.read_bytes()[:-10])
+        with self.assertRaises(SystemExit) as caught:
+            self.run_ingest("--verify", str(path))
+        self.assertIn("do not match the manifest", str(caught.exception))
+
+    def test_verify_fails_when_an_ingested_edition_has_no_workbook(self):
+        july, august = self.workbook("july2026"), self.workbook("august2026")
+        self.run_ingest(str(july), str(august))
+        out = io.StringIO()
+        with redirect_stdout(out), self.assertRaises(SystemExit):
+            ingest.main(["--verify", str(august)])
+        self.assertIn("MISSING  july2026  datausesregister_july2026.xlsx", out.getvalue())
+
+    def test_verify_lists_a_new_workbook_without_failing_or_recording_it(self):
+        self.run_ingest(str(self.workbook("july2026")))
+        output = self.run_ingest("--verify", str(self.raw / "datausesregister_july2026.xlsx"),
+                                 str(self.workbook("august2026")))
+        self.assertIn("new      august2026", output)
+        self.assertEqual(facts.stored_editions(REGISTER), ["july2026"])
+
 
 if __name__ == "__main__":
     unittest.main()

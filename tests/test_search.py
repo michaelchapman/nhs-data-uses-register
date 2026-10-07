@@ -115,7 +115,7 @@ class BuiltIndex(unittest.TestCase):
         # The agreement page highlights a search it was opened from.
         self.assertIn('<script src="/assets/highlight.js" defer></script>', agreement)
         self.assertIn("data-search-note hidden", agreement)
-        self.assertEqual(agreement.count('<details class="prose-block" data-highlight'), 5)
+        self.assertEqual(agreement.count('<details class="fold" data-highlight'), 5)
 
 
 

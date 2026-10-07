@@ -3,6 +3,7 @@
 {% block title %}{{ agreement.title }} — {{ agreement.organisation|org }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ agreement.organisation|org }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
 {% from "_change_details.html" import prose_diff, change_details, wide_edit %}
+{% from "_fold.html" import fold_summary %}
 {% macro version_diff(diff) %}
 <details class="diff">
   <summary>What changed from {{ diff.previous }}</summary>
@@ -135,14 +136,17 @@
   ("Benefits reported so far", v.yielded_benefits),
 ] %}
 {# The objective is what a reader came for, so it starts open; the rest fold. #}
-<details class="prose-block" data-highlight{% if loop.first and text %} open{% endif %}>
-  <summary><h3>{{ section }}</h3></summary>
+<div class="prose-block">
+<h3>{{ section }}</h3>
+<details class="fold" data-highlight{% if loop.first and text %} open{% endif %}>
+  {{ fold_summary(section|lower) }}
   {% if text %}
     {% for para in text|paragraphs %}<p>{{ para }}</p>{% endfor %}
   {% else %}
     <p class="empty">Not stated in the register.</p>
   {% endif %}
 </details>
+</div>
 {% endfor %}
 
 <h2 id="datasets">Datasets on the {{ now }} version</h2>
@@ -231,6 +235,17 @@
       <span class="tag tag-amended">Amended this month{% if status.fields %}: {{ status.fields|join(", ") }}{% endif %}</span>
     {% endif %}
   </summary>
+  {% if status and status.kind == 'amended' %}
+  {# The link sits under the summary, not on the tag: a link inside a
+     <summary> is a control inside a control. #}
+  {% set amended_here = namespace(found=false) %}
+  {% for event in (history.events if history else []) if event.edition == meta.edition %}
+    {% for item in event.amended if item.reference == version.reference %}{% set amended_here.found = true %}{% endfor %}
+  {% endfor %}
+  {% if amended_here.found %}
+  <p class="hint"><a href="#amended-{{ meta.edition }}-{{ version.reference|lower }}">See what was amended this month</a> in the register history.</p>
+  {% endif %}
+  {% endif %}
   <dl class="key-facts compact">
     <div><dt>Title</dt><dd>{{ version.title or "—" }}</dd></div>
     <div><dt>Commercial</dt><dd>{{ version.commercial or "—" }}</dd></div>
@@ -255,9 +270,12 @@
       {% if newer and version[key] == newer[key] %}
       {% set _ = same.append(section) %}
       {% else %}
-      <details class="prose-block"><summary><h4>{{ section }}</h4></summary>
+      <div class="prose-block">
+      <h4>{{ section }}</h4>
+      <details class="fold">{{ fold_summary(section|lower) }}
       {% for para in version[key]|paragraphs %}<p>{{ para }}</p>{% endfor %}
       </details>
+      </div>
       {% endif %}
     {% endfor %}
     {% if same %}
@@ -313,7 +331,7 @@
     </div>
     {% endif %}
     {% for item in event.amended %}
-    <div class="timeline-line">
+    <div class="timeline-line" id="amended-{{ event.edition }}-{{ item.reference|lower }}">
       <span class="tag tag-amended">Amended</span>
       <span class="version-ref">{{ item.reference }}</span>
       {% if item.details %}

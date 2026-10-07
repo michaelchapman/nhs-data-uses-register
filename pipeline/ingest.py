@@ -2,6 +2,7 @@
 
     python -m pipeline.ingest data/raw/datausesregister_august2026.xlsx
     python -m pipeline.ingest data/raw/*.xlsx            # backfill the archive
+    python -m pipeline.ingest --verify data/raw/*.xlsx   # check them against the manifest
 
 NHS England's WAF blocks automated downloads (see ``sources``), so workbooks are
 fetched by hand from the register page and its release archive, dropped in
@@ -34,6 +35,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--source-url",
         help="the URL this workbook came from; derived from the filename when omitted",
+    )
+    parser.add_argument(
+        "--verify",
+        action="store_true",
+        help="check the workbooks against the manifest's checksums and record nothing",
     )
     return parser.parse_args(argv)
 
@@ -147,11 +153,54 @@ def relative(path: Path) -> str:
         return str(path)
 
 
+def verify(paths: list[Path], register_override: str | None) -> bool:
+    """Check workbooks against the manifest without parsing them, before a re-parse.
+
+    A re-parse rebuilds the store from the workbooks given, so it is checked
+    here first: each workbook must be the file the manifest recorded for its
+    edition, and every edition the manifest records must have a workbook, or the
+    re-parse would drop it. A workbook for an edition not yet ingested is listed
+    as new, which is not a fault. Prints one line per edition and returns
+    whether the set is complete and intact.
+    """
+    sound = True
+    given: dict[str, set[str]] = {}
+    for path in sorted(paths, key=lambda p: sources.edition_sort_key(sources.parse_edition(p.stem))):
+        register = sources.registers(register_override)[0] if register_override else sources.register_for_filename(path.stem)
+        if register is None:
+            print(f"unknown  {path.name}: cannot tell which register this is")
+            sound = False
+            continue
+        edition = sources.parse_edition(path.stem)
+        given.setdefault(register.slug, set()).add(edition)
+        recorded = facts.manifest_entry(register.slug, edition)
+        if recorded is None:
+            print(f"new      {edition}  {path.name}: not in the manifest yet")
+            continue
+        payload = path.read_bytes()
+        if hashlib.sha256(payload).hexdigest() == recorded["sha256"]:
+            print(f"ok       {edition}  {path.name}")
+        else:
+            print(f"BAD      {edition}  {path.name}: {len(payload):,} bytes, "
+                  f"not the {recorded['bytes']:,}-byte file ingested from {recorded['source_file']}")
+            sound = False
+    for slug, editions in sorted(given.items()):
+        for entry in facts.read_manifest(slug):
+            if entry["edition"] not in editions:
+                print(f"MISSING  {entry['edition']}  {entry['source_file']}: a re-parse would drop this edition")
+                sound = False
+    return sound
+
+
 def main(argv: list[str] | None = None) -> None:
     args = parse_args(argv)
     missing = [p for p in args.workbooks if not p.is_file()]
     if missing:
         raise SystemExit("not found: " + ", ".join(str(p) for p in missing))
+    if args.verify:
+        if not verify(args.workbooks, args.register):
+            raise SystemExit("verify: the workbooks do not match the manifest")
+        return
     if args.source_url and len(args.workbooks) > 1:
         raise SystemExit("--source-url applies to a single workbook")
 

@@ -51,6 +51,7 @@
 <p>Once a second edition is added, this page will list agreements that were added, amended or withdrawn between them.</p>
 {% else %}
 <p class="lede">Comparing the {{ meta.edition|edition }} edition with {{ changes.previous_edition|edition }}.</p>
+<p>New agreements and new versions are easy to spot in the register. Edits to existing records are not: NHS England can change an agreement version in place, such as its purpose, its end date or the datasets it lists, without issuing a new version number, and it publishes no changelog of those edits. This site finds them by comparing each edition with the one before, and lists them under <a href="#amended">Amended</a>.</p>
 {% if changes.skipped %}
 <p class="notice"><strong>This covers {{ changes.skipped|length + 1 }} months, not one.</strong>
   {{ changes.skipped|map("edition")|join(" and ") }} {{ "is" if changes.skipped|length == 1 else "are" }} not held here, so whatever changed in {{ "that month" if changes.skipped|length == 1 else "those months" }} is included below, and nothing says which month it happened in.</p>
