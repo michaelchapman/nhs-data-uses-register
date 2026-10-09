@@ -18132,6 +18132,296 @@
     }
    ],
    "version": "21.2"
+  },
+  {
+   "reference": "DARS-NIC-343380-H5Q9K-v22.4",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA). \n\nNHS England will provide to UKHSA the relevant records from the data sets listed in this DSA. In addition to the data sets listed in Section 3, the following data is also disseminated to UKHSA under this DSA; NHS 111 Pathways Data – a daily extract of telephony calls data to the NHS 111 service, from 2020/21 to latest available. \n\nThis Data will contain a range of directly identifying data items, including NHS Number, Date of Birth, Postcode, Gender, and Local Patient Identifiers, which are required to enable linkage to other data sets held by UKHSA, or to enable direct contact with individuals, for example to provide them with urgent public health advice. \n\nThe Data will not be transferred to any other location. \n\nThe Data will be stored by UKHSA in on-premises servers or under contract in Microsoft Azure or Amazon Web Services-provided cloud storage.   \n\nCloud data is processed in the UK data boundary but processing may take place as determined by Microsoft and AWS in the EU data boundary.   \n\nThe Data will be accessed by authorised personnel via remote access.   \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract. \n\nFor remote access: \nRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA; \n- Access controls granting users the minimum level of access required are in place; \n- Remote access is only via secure connections (e.g., VPNs or secure protocols) to protect data; \n- Multifactor authentication (MFA) is required for remote access; \n- Device security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access; \n- All remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy. \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose). \n\nThe data will be linked to personal data that UKHSA collects either from patients and other members of the public, from the providers of health and care services, or from other organisations that support the health and care system in the UK, such as ONS. The purpose of this linkage is to increase the completeness and value of these health data sets to enable UKHSA to fulfil the health protection purposes set out in its remit. \n\nWherever possible, UKHSA processes Data required to fulfil its remit in aggregate or anonymous forms. If these types of Data are not available or not suitable for the end purpose, data sets that have been pseudonymised through the removal of direct identifiers are used. However, to fulfil many of its health protection responsibilities, UKHSA needs to process personal data in a form that directly identifies data subjects. \n\nDATA SHARING WITH THIRD PARTIES  \nThe bulk of the outputs based on the processing of the Data disseminated to UKHSA by NHS England are in the form of statistics, reports and guidance that describe the incidence, prevalence, trends, epidemiological characteristics and related information necessary to guide and support the public health actions needed to prepare for, prevent and respond to infectious diseases and other threats to public health. Outputs published on the UKHSA website or without restriction elsewhere contain aggregate data and statistics only, with small numbers suppressed in accordance with NHS England and Office for National Statistics guidance. No information that identifies individual patients is published by UKHSA.  \n\nFor some public health purposes, the Data disseminated by NHS England may be linked to other data sets controlled by UKHSA to generate reference public health data sets that are used for the surveillance and control of infectious diseases and other public health threats. Data from these linked reference data sets may be shared by UKHSA with third parties in the form of identifiable or de-personalised extracts (sub-licensing). Identifiable data is only shared with third parties that have a legal basis to process this form of data, and only the minimum necessary data is shared for the required purpose. All sharing of identifiable or de-personalised data by UKHSA is controlled under written data sharing agreements that contain appropriate data security and protection clauses, including retention and disposal clauses. UKHSA does not share any extracts of the Data disseminated by NHS England with third parties that have not been linked to other public health data sets controlled by UKHSA (and where such linkage is essential for the work to be undertaken). Any requests to access the unlinked Data, such as the unlinked hospital episodes data sets disseminated by NHS England, are referred to NHS England by UKHSA.  \n\nAny onwards transfer of Data supplied to UKHSA by NHS England (unless agreed by NHS England to be derived data) will be subject to the same legal constraints that NHS England is subject to. These include the provisions in the Care Act 2014, which stipulate that Data may only be disseminated for the purposes of providing health care or adult social care, or supporting the promotion of health. \n\nThe National Data Opt Out will be upheld by UKHSA in line with national policy: www.gov.uk/government/publications/accessing-ukhsa-protected-data/approval-standards-and-guidelines-upholding-objections-under-the-national-data-opt-out. UKHSA will publish and keep up to date a Data Access Approvals Register: www.gov.uk/government/publications/data-access-approvals-register",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "DEPARTMENT OF HEALTH AND SOCIAL CARE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Electronic Prescribing and Medicines Administration (ePMA) in Secondary Care",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 Targeted Therapeutics for UKHSA",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Civil Registrations of Death - Secondary Care Cut",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Community Services Data Set (CSDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Covid-19 UK Non-hospital Antibody Testing Results (Pillar 3)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "",
+       "name": "Diagnostic Imaging Data Set (DID)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Electronic Prescribing and Medicines Administration (ePMA) in Secondary Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "HES-ID to MPS-ID HES Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "HES-ID to MPS-ID HES Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "HES-ID to MPS-ID HES Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Maternity Services Data Set (MSDS) v1.5",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Maternity Services Data Set (MSDS) v2",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "NDRS Cancer Consolidated Data Set",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "NDRS Cancer Registrations",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "NHS 111 Online Dataset",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS plus - Admitted Patient Care (beta version)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "SUS plus - Admitted Patient Care (beta version)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Secondary Uses Service Payment By Results Spells",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-03-12",
+     "expected_benefits": "The processing of the Data supplied by NHS England enables UKHSA to achieve the mission set out in its Strategic Plan for 2023-2026, based on its statutory duties and remit, of preparing for, preventing and responding to health threats, saving lives, and protecting livelihoods. UKHSA has three overarching strategic priorities that are further supported by a commitment to improving health outcomes for groups whose health is disproportionately affected:  \n\n- prepare: UKHSA aims to ensure that the country is fully prepared for – and wherever possible can prevent – future health security hazards by establishing which threats are on the horizon; developing the right evidence, insight and tools to best protect against them; and having the right tested response plans in place to protect the population \n\n- respond: UKHSA protects people from health threats every day by delivering agile, rapid, evidence-based responses at a local, national and international level, and responding to infectious disease outbreaks, health security incidents, and ongoing health security threats \n\n- build: UKHSA continues to build and invest in the scientific, public health and operational capabilities needed to protect the country’s health now and in the future \n\nThe processing of the NHS England-supplied Data and the associated outputs support UKHSA in fulfilling its mission as follows:  \n- be ready to respond to all hazards to health: UKHSA will ensure it has the right plans, expertise, infrastructure, capabilities and countermeasures in place to prevent and mount scalable and agile responses to health security threats, including pandemics \n- improve health outcomes through vaccines: UKHSA will harness strengths across the whole vaccine pathway to facilitate innovation in the development of safe and effective vaccines, reliable procurement and increased uptake among the population, thereby reducing the burden of infectious disease \n- reduce the impact of infectious diseases and antimicrobial resistance: UKHSA will harness its science, analytical and operational expertise to minimise the impact of infectious disease, with a focus on COVID-19, antimicrobial resistance and elimination targets for blood-borne viruses and tuberculosis \n- protect health from threats in the environment: UKHSA will protect the population from the health effects of environmental, chemical, radiological and nuclear incidents of any scale by improving planning and preparedness and providing public health expertise to inform policy and response \n- improve action on health security through data and insight: UKHSA will maximise the health impact of the data it holds, the evidence it generates and the insights it draws, to be a leader in the safe and regulated handling and use of public health data, analytics and surveillance \n- develop UKHSA as a high-performing agency: UKHSA will ensure it is ready to prepare for and respond to health security challenges, at scale as required, by investing in its people and culture; partnerships and relationships; data, science and research and operational excellence",
+     "expected_output": "The outputs of the processing of the Data by UKHSA will include, but are not limited to: National and Official Statistics; epidemiological reports; data dashboards; clinical and operational guidance; and public guidance. These outputs are aimed at advising, guiding and supporting timely and effective public health action to respond to infectious diseases and other external health threats by UKHSA, the NHS, central and local government, other public and private organisations, and the general public. \n\nGuidance is generated for NHS clinicians and commissioners, government advisory groups such as the New and Emerging Respiratory Virus Threats Advisory Group (NERVTAG), scientific advisory committees such as the Joint Committee on Vaccination and Immunisation; and other bodies such as the National Institute for Health and Care Excellence (NICE) and the Care Quality Commission (CQC). \n\nExamples of the outputs generated by UKHSA on an ongoing basis that are in part based on NHS England-supplied Data, such as Emergency Care Data Set, Hospital Episode Statistics, Medicines Dispensed in Primary Care, and Secondary Uses Service, include: \n- UKHSA data dashboard: https://ukhsa-dashboard.data.gov.uk \n- Influenza surveillance reports: www.gov.uk/government/statistics/annual-flu-reports  \n- Surgical site infection surveillance reports: www.gov.uk/government/collections/surgical-site-infection-ssi-guidance-data-and-analysis \n- Sexually transmitted infections reports: www.gov.uk/government/statistics/sexually-transmitted-infections-stis-annual-data-tables  \n- Vaccination uptake reports: www.gov.uk/government/collections/vaccine-uptake  \n- Weekly syndromic surveillance reports: www.gov.uk/government/collections/syndromic-surveillance-systems-and-analyses  \n\nThese outputs only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the datasets from which the information was derived.",
+     "objective": "The UK Health Security Agency (UKHSA) is the national expert agency responsible for protecting the nation’s health, and a category 1 responder under the Civil Contingencies Act 2004. It is an executive agency of the Department of Health and Social Care (DHSC) and fulfils the statutory health protection duties of the Secretary of State for Health and Social Care as set out in Section 2A of the NHS Act 2006, as inserted by Section 11 of the Health and Social Care Act 2012, and other legislation.  \n\nUKHSA requires access to a range of NHS England-supplied Data to discharge the strategic health protection responsibilities and priorities set out in its annual remit letter from the Parliamentary Under Secretary of State for DHSC. UKHSA’s core remit is to prepare for, prevent and respond to threats from: \n\nA. infectious diseases, covering the main routes of transmission including gastrointestinal, respiratory, sexual, blood-borne, touch and vector-borne \nB. chemical, biological, radiological and nuclear hazards \nC. other environmental hazards, such as extreme weather events \nD. health hazards that arise from disasters \n \nUKHSA’s specific operational responsibilities include, but are not limited to: \n\nA, pandemic and major epidemics preparedness: leading on surveillance, diagnostics, case management and contact tracing, scientific and expert advice, emerging and high consequence infectious disease responses, and developing pathogen genomics and surveillance capabilities \nB. infectious disease threats: providing health protection services to detect and contain infectious disease outbreaks; and monitoring, preparing, planning and responding to antimicrobial resistance-related infections \nC. emergency preparedness, resilience and response: providing lead national responsibility for infectious and endemic disease incident planning and response \nD. chemical, biological, radiological and nuclear (CBRN) preparedness: preparing, planning and responding to the public health impacts of all non-infectious disease external threats and incidents, including CBRN events \nE. vaccinations, immunisations and therapeutics: assessing the epidemiological and scientific evidence base for existing or novel vaccine development and programmes; supporting the development and evaluation of vaccines and therapeutics; and reducing the impact of vaccine preventable diseases \n\nUKHSA fulfils its remit by providing scientific and public health expertise; data creation, collation, sharing and analysis expertise; and surveillance and operational response capabilities to strengthen the protection of public health across the UK.  \n\nIn addition to the responsibilities detailed in its remit letter, UKHSA processes confidential patient information without consent in support of the health protection purposes listed under Section 60 of the Health and Social Care Act 2001, as re-enacted by Section 251 of the National Health Service Act 2006, and Regulation 3 of the associated Health Service (Control of Patient Information) Regulations 2002. The health protection purposes cover by Regulation 3 are: \n\n3(1)(a) diagnosing communicable diseases and other risks to public health \n3(1)(b) recognising trends in such diseases and risks \n3(1)(c) controlling and preventing the spread of such diseases and risks \n3(1)(d) monitoring and managing: \n(i) outbreaks of communicable disease \n(ii) incidents of exposure to communicable disease \n(iii) the delivery, efficacy and safety of immunisation programmes \n(iv) adverse reactions to vaccines and medicines \n(v) risks of infection acquired from food or the environment (including water supplies) \n(vi) the giving of information to persons about the diagnosis of communicable disease and risks of acquiring such diseases \n\nTo note, approvals to process confidential patient information under Regulation 3, excepting Regulation 3(4), are not subject to advice from the Health Research Authority’s Confidentiality Advisory Group.  \n\nRegulation 7(2) of the associated Health Service (Control of Patient Information) Regulations 2002 stipulates that anyone processing confidential patient information under COPI must be a health professional or person who in the circumstances owes a duty of confidentiality which is equivalent to that which would arise if that person were a health professional \n \nSeparable from, but undertaken in support of the health protection purposes for processing NHS England-supplied Data listed above, UKHSA processes hospital episode data to generate a national reference patient ethnic group data set. The Covid-19 pandemic illustrated the importance of analysing infection rates by ethnic group to inform action to minimise ethnicity-based differences in patient treatments and outcomes. The completeness, consistency and accuracy of ethnic group recording, both in routine national health and social care data collections and the specific health protection data collections managed by UKHSA, remains variable. NHS England is progressing work to incorporate ethnic group data from primary care sources and provide this at national level to health and care sector organisations. As an interim solution while this work is underway, UKHSA is processing hospital episodes data to generate an ethnic group reference data set to use where appropriate in support of the health protection purposes specified in this DSA. The benefits of this processing are increases in the completeness of the ethnic group data used to analyse differences in infection/disease exposure rates between groups in the population, as well as inequalities in treatment levels and patient outcomes.\n\nOnly authorised UKHSA personnel including scientists, analysts, epidemiologists and other staff with a defined health protection function are eligible to request access.\n\nData may only be used for: \n- statutory public health functions undertaken by UKHSA \nhealth protection purposes specifically described and approved within:  \n- an active Data Protection Impact Assessment (DPIA) signed off by the Data Protection Officer \n- Regulation 3 approval (where Confidential Patient Information is used) granted by the UKHSA Caldicott Guardian\n\nData must not be used for: \n- any purpose not explicitly covered by an approved DPIA \n- activities without Caldicott Guardian approval where required \n- research, analysis or operational activities outside UKHSA’s statutory health protection remit \n- commercial activities or secondary uses not authorised \n- any processing where directly identifiable data is not strictly necessary \n\nUKHSA enforces a “minimum necessary access” principle, limiting full-population datasets to the smallest cohort relevant to the approved purpose.\n- Requests are approved through a structured governance process: \n- Data Protection Officer – must approve the DPIA \n- UKHSA Caldicott Guardian – required for processing involving confidential patient information \n- Senior Manager – validates necessity and purpose before any data is exported from EDAP\n\nRequests are assessed against: \n- statutory health protection necessity \n- proportionality and data minimisation \n- appropriateness of using identifiable vs pseudonymised data \n- security controls applied to the processing environment \n- adherence to DPIA and Regulation 3 requirements \n- restriction to the minimum necessary cohort \n- compliance with professional and legal obligations (UK GDPR, COPI, etc.)\n\nEnd-to-End Process for Requesting and Accessing Data \n1. Staff member identifies need linked to a statutory or health protection purpose. \n2. DPIA completed and submitted to the Data Protection Officer. \n3. Caldicott Guardian approval obtained (where confidential patient information is involved). \n4. Authorised access provisioned through EDAP with technical and procedural restrictions applied. \n5. Staff process data within EDAP under controlled conditions. \n6. Requests to export data undergo senior managerial review to validate necessity and ensure compliance. \n7. All processing and approvals are recorded and available for audit and NHS England oversight\n\nUKHSA maintain a register of all approved uses of data https://www.gov.uk/data-access-approvals-register. Please note that this register will not include disseminations of confidential patient information to third parties that is used by the recipient organisations to fulfil statutory public health duties",
+     "organisation": "UK HEALTH SECURITY AGENCY",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2026-09-22",
+     "sublicensing": "Yes",
+     "title": "D1.1 - UK Health Security Agency (UKHSA) Single Data Sharing Agreement",
+     "yielded_benefits": "The benefits of UKHSA processing the NHS England-supplied Data can be grouped under two broad headings:\n\na)    Monitoring infectious diseases and other health threats: The Data is used on a daily basis by UKHSA to support its monitoring of the numbers, trends, risk factors and health impacts of infectious diseases and other external health threats. For example, information from the Hospital Episode Statistics data set is linked to the data UKHSA already separately holds on patients with acute respiratory infection, bloodstream infections, hepatitis C, severe influenza and other infectious diseases. The purpose of this linkage is to augment these records with additional information on the frequency and reasons for hospital admissions among infected patients, the treatments they receive, and their outcomes (such as repeat admissions to hospital or death) that UKHSA would not otherwise have timely direct access to. These enhanced data sets are analysed and used to produce operational advice and surveillance reports that provide the intelligence and insights needed to reduce the health risks to individuals and populations.\n\nb)    Controlling infectious diseases and other health threats: Covid-19 and other infectious diseases present serious threats to individual and population health, both in the UK and internationally. The Data supplied by NHS England has been used by UKHSA in a range of ways to support its role in responding to these threats. An example is Covid-19 Antigen Test Results Data, which has been used by UKHSA to estimate the incidence and prevalence of the virus in the population and calculate the reproduction number at national and local levels (a measure of how quickly the infection is spreading). This intelligence has been used by UKHSA and expert groups such as the Scientific Pandemic Infections group on Modelling to inform government decisions on when and for how long to introduce restrictions on people’s movements to reduce the spread of infection. This intelligence has also been used by UKHSA and the NHS to provide advice to members of the public on the actions they need to take to protect themselves and others from infection."
+    }
+   ],
+   "version": "22.4"
   }
  ]
 }

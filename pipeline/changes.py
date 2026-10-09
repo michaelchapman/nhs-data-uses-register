@@ -35,6 +35,7 @@ from __future__ import annotations
 from collections import defaultdict
 
 from . import compare, facts, sources
+from .records import known_organisation_names, resplit_list
 from .references import base_and_version, version_key
 from .rules import Rules
 
@@ -156,7 +157,25 @@ def _labels(difference: dict) -> list[str]:
 
 
 def _states(record: dict) -> dict[str, list[dict]]:
-    return {version["reference"]: version["states"] for version in record["versions"]}
+    """Each version's stored states, with controllers split under today's rules.
+
+    A state is stored split the way its ingest split it, so a state recorded
+    before a splitting rule changed would differ from a later one in the
+    controller list alone. `facts.rehydrate` re-splits for the pages; this does
+    the same before states are compared. The Ministry of Housing, Communities
+    and Local Government, stored as two names until September 2026, was
+    otherwise reported as an amendment in October.
+    """
+    known = known_organisation_names(
+        state.get("organisation") for version in record["versions"] for state in version["states"]
+    )
+    return {
+        version["reference"]: [
+            {**state, "controllers": resplit_list(state.get("controllers") or [], known)}
+            for state in version["states"]
+        ]
+        for version in record["versions"]
+    }
 
 
 def _describe(row: dict) -> dict:

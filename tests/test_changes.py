@@ -72,6 +72,14 @@ class Changes(unittest.TestCase):
         self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
         self.assertEqual(changes.history(REGISTER)[FIRST]["events"], [])
 
+    def test_a_controller_stored_split_at_its_comma_is_not_an_amendment(self):
+        # Stored before the name was known to keep its comma, then ingested whole.
+        split = ["UNIVERSITY OF YORK", "THE MINISTRY OF HOUSING", "COMMUNITIES AND LOCAL GOVERNMENT"]
+        whole = ["UNIVERSITY OF YORK", "THE MINISTRY OF HOUSING, COMMUNITIES AND LOCAL GOVERNMENT"]
+        self.record(("july2026", self.edited(controllers=split)), ("august2026", self.edited(controllers=whole)))
+        self.assertEqual(changes.diff(REGISTER, "august2026")["amended"], [])
+        self.assertEqual(changes.history(REGISTER)[FIRST]["events"], [])
+
     def test_a_changed_controller_is_still_an_amendment(self):
         other = self.versions[FIRST][-1]["controllers"] + ["A NEW CONTROLLER LTD"]
         self.record(("july2026", self.versions), ("august2026", self.edited(controllers=other)))

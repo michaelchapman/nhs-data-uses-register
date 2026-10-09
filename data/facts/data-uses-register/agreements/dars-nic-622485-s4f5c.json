@@ -1,0 +1,71 @@
+{
+ "base_reference": "DARS-NIC-622485-S4F5C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-622485-S4F5C-v0.9",
+   "states": [
+    {
+     "activities": "​​The London School of Hygiene & Tropical Medicine will transfer data to NHS England.  The data will consist of identifying details specifically NHS Number, Date of Birth, and a unique person ID for the cohort to be linked with NHS England data.​\n\n​​NHS England will provide the relevant records from the HES, ECDS and Civil Registration datasets to LSHTM.  The Data will contain no direct identifying data items but will contain a unique person ID which can be used to link the Data with other record level data already held by the recipient.\n\n​​The Data will not be transferred to any other location​.\n\n​The Data will be stored on servers at LSHTM.\n\n​​The data will not be backed up at any other location​.\n\n​​The Data will be accessed either onsite at the premises of LSHTM or ​by authorised employees or agents of University of Oxford, University of York, Newcastle upon Tyne Hospitals NHS Trust and LSHTM via remote access.    \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.  \n\nFor remote access:  \n\n•\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA.  \n\n•\tAccess controls granting users the minimum level of access required are in place.  \n\n•\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data.  \n\n•\tMultifactor authentication (MFA) is required for remote access.  \n\n•\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access.  \n\n•\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.  \n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\n​The Data will be linked at person record level with the study data held at LSHTM .",
+     "commercial": "Yes",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "UNIVERSITY OF OXFORD"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2029-09-27",
+     "expected_benefits": "TAVI has become an important treatment option for patients with aortic stenosis who are at high-risk from surgery, and the evidence supporting its safety and effectiveness in other patient groups is increasing. TAVI is less invasive, leads to faster recovery and is associated with less morbidity than surgical aortic valve replacement.  \n \nStroke is an important, but unpredictable complication associated with TAVI, and will become an even more important concern to patients and healthcare funders as TAVI is used for younger patients at lower risk from surgery, and in greater numbers as the proportion of older people increases in the population. Indeed, TAVI patients report that maintaining independence is a more important treatment goal than preventing death, and other studies show that stroke may be regarded as a worse health-state than death by patients. TAVI-associated stroke leads to prolonged hospital stay, a reduced chance of returning to independence, and a near 6-fold increased risk of death within 30 days. Stroke increases the cost of the index hospitalisation and doubles rehospitalisation costs. Reducing the risk of stroke during TAVI has important implications for improving patient outcomes and decreasing healthcare resources. \n \nThe primary outcome data for the trial were published in March 2025 and suggest that the routine use of cerebral embolic protection (CEP) devices do not reduce stroke risk at 72 hours post-TAVI or hospital discharge (if sooner). However, we also we want to look at the impact of the CEP device on stroke and death after discharge. \n \nFurthermore, we plan to develop a risk model to understand which groups are at a higher risk of TAVI-related stroke and whether these groups might benefit from embolic protection. We need to understand whether it would be cost-effective to use embolic protection in these high-risk populations and what the cost-effectiveness threshold would be. \n \nFor patients, it is hoped that the findings will support patients who are undergoing a TAVI procedure to make evidence-informed decisions about the healthcare care they receive.",
+     "expected_output": "The expected outputs of the processing will be: \n•\tSubmissions to peer reviewed journals reporting aggregated findings on long term TAVI outcomes, stroke prevention and cost effectiveness of cerebral embolic protection at the end of the trial  \n•\tPresentation of the findings at international conferences covering post-TAVI outcomes, stroke risk and health economic evaluation \n•\tNewsletters for trial participants accessible summaries of aggregated findings via participant newsletters and study platforms to ensure transparency and participant engagement \n•\tPress/media reports to communicate key findings to a wider audience, ensuring no disclosure of identifiable data \n \nTo optimise the potential benefits, the study team plan will publish the trial results in a peer-reviewed journal and present the findings at international conferences. Mainstream media aim to be used to publicise the findings and the study team plan to engage with Heart Valve Voices, the UK's leading heart valve disease charity, to ensure that people living with heart disease are aware of the results of the trial. \n \nFollow-up for the trial was completed in December 2025. Dissemination of the outputs will occur in 2027.\n\n​​The outputs will not contain record-level data and will only contain aggregated data with small numbers suppressed as per the relevant disclosure rules for the dataset(s) from which the information was derive.\n\n​​​The outputs will be communicated to relevant recipients through the following dissemination channels: \n•\tPress/media engagement  \n​•\tPublic events  \n•\tParticipant newsletters  ​",
+     "objective": "​​The Data will be used for the purpose of ​a research and clinical trial: BHF PROTECT-TAVI (British Heart Foundation Randomised Trial of Routine Cerebral Embolic Protection in Transcatheter Aortic Valve Implantation) \n\n​The purpose of this study was to assess whether the routine use of the Sentinel Cerebral Embolic Protection (CEP) device during Transcatheter Aortic Valve Replacement (TAVI) can reduce the risk of stroke. The study will also look at the long-term health outcomes of trial participants and determine which groups are at a higher risk of TAVI-related stroke and adverse outcomes and whether these groups might benefit from cerebral embolic protection. Furthermore, an assessment will be done to determine whether it is cost-effective for the NHS to use the device particularly in high-risk groups.​",
+     "organisation": "UNIVERSITY OF OXFORD",
+     "organisation_type": "Academic",
+     "start_date": "2026-09-28",
+     "sublicensing": "No",
+     "title": "BHF PROTECT-TAVI (British Heart Foundation Randomised Trial of Routine Cerebral Embolic Protection in Transcatheter Aortic Valve Implantation)",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.9"
+  }
+ ]
+}
