@@ -1,0 +1,47 @@
+{
+ "base_reference": "DARS-NIC-808477-T8P0S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-808477-T8P0S-v0.2",
+   "states": [
+    {
+     "activities": "No data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA).\n\nNHS England will provide the relevant records from the ECDS and MHSDS datasets to the Children’s Commissioner’s Office.  The Data will contain no direct identifying data items.  \n\nThe Data will be stored on servers at the Children’s Commissioner’s Office.\n\nThe Children’s Commissioner’s Office stores Data on the Cloud provided by Microsoft Azure.\n\nDepartment for Education (DfE) - Secure hosting and infrastructure provider for the Children's Commissioner's Office, including storage, backup, maintenance and technical administration of systems used to process data supplied under this agreement.\n\nThe Data will not be transferred to any other location.\n\nThe Data will be accessed by authorised personnel via remote access.  \n\nThe Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.\n\nFor remote access:\n-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;\n-\tAccess controls granting users the minimum level of access required are in place;\n-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;\n-\tMultifactor authentication (MFA) is required for remote access;\n-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;\n-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.\n\nThe above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\nAccess is restricted to employees of Children’s Commissioner’s Office.\n\nAll personnel accessing the Data have been appropriately trained in data protection and confidentiality.\n\nThe Data will not be linked with any other data.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "CHILDREN'S COMMISSIONER'S OFFICE"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(5)(d)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Does not include the flow of confidential data",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 - s261(2)(d)",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2031-07-29",
+     "expected_benefits": "The information is required to support the Children’s Commissioner’s statutory remit to promote awareness of the views and interests of all children in England.\n\nThe findings will be used to inform policy makers around health and social care, ensuring policy for children detained under the MHA and inpatient in mental health wards is evidence based.",
+     "expected_output": "The planned outputs are:\n1. A policy report focussed on the findings and recommendations following the analysis\n2. Briefings\n3. Press releases and associated media activity\n\nThese outputs are expected to be complete by November 2026.\n\nFindings may also be shared with other public bodies in the event that public bodies have a legitimate interest and request evidence submissions.\n\nOutputs will contain no raw data and will contain only derived information in the form of aggregated statistics, tables, graphs and visualisations. All outputs will be compliant with MHSDS disclosure control rules including suppression and rounding.",
+     "objective": "The Office of the Children’s Commissioner for England (‘Children’s Commissioner’s Office’) requires data concerning children detained under the Mental Health Act.\n\nThe Children’s Commissioner’s role is to promote and protect the rights of children.  She has a particular duty towards those children with a social worker, in care, or living away from home – including those in mental health inpatient settings.  In undertaking this data collection, the Children’s Commissioner is seeking to understand the children who are most affected by inpatient stays and detentions, how many children are affected and the nature of their stays. \n\nThe data request is made under the power conferred on the Children’s Commissioner in Section 2F of the Children Act 2004 (as inserted by Section 110 of the Children and Families Act 2014):  \n(1) Any person exercising functions of a public nature must supply the Children’s Commissioner with such information in that person’s possession relating to those functions as the Commissioner may reasonably request for the purposes of the primary function or the function under section 2D.  \n(2) The information must be information which that person would, apart from subsection (1), lawfully be able to disclose to the Commissioner.\n\nThe Children’s Commissioner requires the following information:\n\n1.\tHow many children were detained under the Mental Health Act in hospital wards each of the following financial years: 2019-20, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26, 2026-2027.\n2.\tFor each child detained under the Mental Health Act:\na.\twhat section of the Mental Health Act (1983) under which child was detained on 31 March 2026\nb.\tHow long in days children were detained for up to and including 31 March 2026\nc.\tHow many times had the child been detained in the 2025-26 financial year \nd.\tAge in years on date of latest admission\ne.\tGender of the child (Male, female, non-binary, other)\nf.\tMajor ethnic group of the child\ng.\tIMD of child’s home postcode\nh.\tPrimary diagnosis of the child\ni.\tHospital region",
+     "organisation": "CHILDREN'S COMMISSIONER'S OFFICE",
+     "organisation_type": "Public Corporation",
+     "start_date": "2026-07-30",
+     "sublicensing": "No",
+     "title": "Children detained under the Mental Health Act",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.2"
+  }
+ ]
+}
