@@ -2,11 +2,15 @@
     read. `subject` says what on the register the page shows; `edition` is the
     edition it shows, which for a page no longer in the register is the last
     edition that listed it. -#}
+{% from "_fold.html" import fold_summary %}
 {% macro cite(subject, edition) %}
-<details class="prose-block cite" id="cite">
-  <summary><h2>Cite this page</h2></summary>
+<section class="prose-block cite" id="cite">
+<h2>Cite this page</h2>
+<details class="fold">
+  {{ fold_summary("the citation") }}
   <p class="cite-text" data-cite-text>NHS England ({{ edition[-4:] }}) <cite>Data Uses Register</cite>, {{ edition|edition }} edition, {{ subject }}. Read via {{ meta.site_name }} (unofficial), {{ meta.site_url }}{{ meta.base_path }}{{ page_path }} (accessed <span data-cite-date>[date]</span>).</p>
   <p class="hint">This address stays the same, but the page is rebuilt with each monthly edition, so the citation names the edition it shows. Every edition's data is kept in the <a href="{{ meta.repo_url }}/tree/main/data/facts">facts store</a>.</p>
 </details>
+</section>
 <script src="{{ meta.base_path }}/assets/cite.js" defer></script>
 {% endmacro %}

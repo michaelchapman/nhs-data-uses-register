@@ -300,8 +300,14 @@ details[open] > summary::before { transform: translateY(-40%) rotate(45deg); }
 
 .prose-block { border: 1px solid var(--line); border-radius: 4px; padding: 0.25rem 1rem; margin-bottom: 0.75rem; }
 .prose-block summary { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.prose-block summary h3 { display: inline; margin: 0; font-size: 1.0625rem; }
-.prose-block[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 0.5rem; }
+.prose-block[open] summary,
+.prose-block > details[open] > summary { border-bottom: 1px solid var(--line); margin-bottom: 0.5rem; }
+/* A folded section's heading sits above its toggle, not inside it (see
+   _fold.html), and the toggle says whether it will show or hide the text. */
+.prose-block > h2, .prose-block > h3, .prose-block > h4 { margin: 0.5rem 0 0; font-size: 1.0625rem; }
+details.fold > summary { padding-top: 0.25rem; padding-bottom: 0.25rem; color: var(--ink-muted); font-size: 0.9375rem; }
+details.fold:not([open]) .fold-hide,
+details.fold[open] .fold-show { display: none; }
 .prose-block p { white-space: pre-wrap; }
 .plain { list-style: none; padding: 0; }
 .plain li { padding: 0.25rem 0; border-bottom: 1px solid var(--line); max-width: 60ch; }
@@ -327,7 +333,7 @@ mark { background: var(--mark-bg); color: var(--mark-ink); border-radius: 2px; p
 td .tag { white-space: nowrap; }
 
 .cite { margin-top: 2.5rem; }
-.cite summary h2 { font-size: 1.125rem; margin: 0; }
+.cite > h2 { font-size: 1.125rem; }
 .cite-text { max-width: 70ch; }
 .cite-actions { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
 .cite-actions button { font: inherit; padding: 0.375rem 0.875rem; border: 2px solid var(--ink); background: var(--bg); color: var(--ink); border-radius: 3px; cursor: pointer; }
@@ -395,6 +401,8 @@ td .tag { white-space: nowrap; }
 
 @media print {
   .site-header nav, .site-search, .filters, .notice-bar { display: none; }
+  /* print.js opens every folded section, so its toggle would only say "Hide". */
+  details.fold > summary { display: none; }
   body { font-size: 11pt; }
   /* Every row, not a scrolling box's worth. */
   .table-scroll, .table-scroll:has(> .sortable) { max-height: none; overflow: visible; }

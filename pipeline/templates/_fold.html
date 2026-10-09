@@ -1,0 +1,8 @@
+{#- The toggle of a folded section whose heading sits above it, outside the
+    <details>. A <summary> is exposed as a button, and some screen readers
+    then leave a heading inside it out of the page's list of headings, which
+    is how many of their users move around a long page. The toggle reads
+    "Show" or "Hide", and `name` completes it for a screen reader. -#}
+{% macro fold_summary(name) -%}
+<summary><span class="fold-show">Show</span><span class="fold-hide">Hide</span><span class="visually-hidden"> {{ name }}</span></summary>
+{%- endmacro %}

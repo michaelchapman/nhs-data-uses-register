@@ -96,11 +96,23 @@ class BuiltSite(unittest.TestCase):
             build_site(out)
             page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
         purpose = page[page.index('id="purpose"'):page.index('id="datasets"')]
-        sections = purpose.split('<details class="prose-block"')[1:]
+        sections = purpose.split('<div class="prose-block">')[1:]
         self.assertEqual(len(sections), 5)
-        self.assertTrue(sections[0].startswith(" data-highlight open>"))
+        self.assertIn('<details class="fold" data-highlight open>', sections[0])
         self.assertIn("Objective for processing", sections[0])
-        self.assertFalse(any(" open>" in s.split(">", 1)[0] + ">" for s in sections[1:]))
+        self.assertFalse(any('data-highlight open>' in s for s in sections[1:]))
+
+    def test_a_folded_sections_heading_sits_outside_its_toggle(self):
+        # Some screen readers drop a heading inside a <summary> from the page's
+        # list of headings, so the heading goes above and the toggle names it.
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+        self.assertNotRegex(page, r"<summary>\s*<h[1-6]")
+        self.assertIn('<h3>Objective for processing</h3>', page)
+        self.assertIn('<span class="visually-hidden"> objective for processing</span></summary>', page)
+        self.assertIn("<h2>Cite this page</h2>", page)
 
     def test_every_page_can_print_its_folded_sections(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -122,7 +134,7 @@ class BuiltSite(unittest.TestCase):
         first = history[history.index('<span class="version-ref">DARS-NIC-1-AAAAA-v1</span>'):]
         self.assertIn("The same as v2: Objective for processing.", first)
         self.assertIn("An output only the first version promised", first)
-        self.assertEqual(first.count('<details class="prose-block">'), 1)
+        self.assertEqual(first.count('<div class="prose-block">'), 1)
 
     def test_wide_tables_label_their_cells_for_a_phone(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -762,3 +774,29 @@ class ChangeDetails(unittest.TestCase):
         self.assertIn("Datasets: legal basis: “<del>s261(1) and</del>” taken out", page)
         self.assertIn("across 639 agreements", page)
         self.assertIn('<span class="stat-number">1</span><span class="stat-label">register-wide edit</span>', page)
+
+    def test_an_amended_version_links_to_its_amendment_and_the_changes_page_explains_them(self):
+        item = {"reference": "DARS-NIC-1-AAAAA-v2", "fields": ["End date"],
+                "details": [{"label": "End date", "kind": "value", "before": "2030-01-01", "after": "2031-06-01"}]}
+        amended = [{**item, "base": "DARS-NIC-1-AAAAA", "title": "Maternity study", "org": "UNIVERSITY OF EXAMPLE"}]
+        changes = {**FIRST_EDITION, "comparable": True, "reason": "", "skipped": [],
+                   "previous_edition": "august2026", "amended": amended, "wide_edits": []}
+        event = {"edition": "september2026", "skipped": [], "added": [], "amended": [item],
+                 "wide": [], "reorganised": [], "removed": []}
+        history = {"DARS-NIC-1-AAAAA": {"first_edition": "august2026", "first_is_earliest": True,
+                                        "first_skipped": [], "first_versions": [], "events": [event],
+                                        "amendments": 1}}
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            with dataset_aliases():
+                build.build(extract(workbook_bytes()), site_meta(), changes, out, history=history)
+            page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+            changes_page = (out / "changes" / "index.html").read_text()
+        target = "amended-september2026-dars-nic-1-aaaaa-v2"
+        self.assertIn(f'id="{target}"', page)
+        self.assertIn(f'<a href="#{target}">See what was amended this month</a>', page)
+        summary = page[page.index("Amended this month"):]
+        self.assertLess(summary.index("</summary>"), summary.index(f'href="#{target}"'))
+        lede = changes_page[changes_page.index('class="lede"'):changes_page.index('id="added"')]
+        self.assertIn("without issuing a new version number", lede)
+        self.assertIn('<a href="#amended">Amended</a>', lede)
