@@ -30,12 +30,21 @@ def entry(**extra) -> dict:
 
 
 class Overview(unittest.TestCase):
+    def test_the_about_page_names_the_model(self):
+        with tempfile.TemporaryDirectory() as directory:
+            build_with({REFERENCE: entry(model="claude-sonnet-5-5")}, Path(directory))
+            about = (Path(directory) / "about" / "index.html").read_text()
+        self.assertIn('id="ai-overviews"', about)
+        self.assertIn("Claude Sonnet 5.5 from Anthropic", about)
+
     def test_a_current_overview_is_shown_and_flagged_as_ai_generated(self):
         with tempfile.TemporaryDirectory() as directory:
             page = build_with({REFERENCE: entry()}, Path(directory))
         self.assertIn('<h2 id="overview">Overview</h2>', page)
         self.assertIn("AI-generated summary, not part of the register.", page)
-        self.assertIn("Written by Claude Haiku 5.5 on 31 October 2026", page)
+        # The model is named on the About page, not on every agreement page.
+        self.assertNotIn("Claude Haiku 5.5", page)
+        self.assertIn("/about/#ai-overviews", page)
         self.assertIn("Leeds studies maternity care.", page)
         # It comes before the register's own text, and stays out of the
         # page's description, which search engines show without the flag.
@@ -78,19 +87,25 @@ class Checks(unittest.TestCase):
         flags = summarise.check("University of Leeds uses HES data from Scotland.", self.SOURCE)
         self.assertIn("names not in the text: Scotland", flags)
 
+    def test_spelled_out_acronyms_compounds_and_possessives_pass(self):
+        source = "Organisation: NHS Leeds ICB\nSUS data from accident and emergency, as the NIHR asked."
+        summary = "NHS Leeds Integrated Care Board's NIHR-funded team uses Secondary Uses Service A&E data."
+        self.assertEqual(summarise.check(summary, source), [])
+
     def test_a_long_overview_is_flagged(self):
         flags = summarise.check("University of Leeds " + "studies care " * 50, self.SOURCE)
         self.assertTrue(any(f.startswith("long:") for f in flags))
 
-    def test_the_request_carries_the_whole_purpose_text(self):
+    def test_the_request_carries_the_purpose_text_but_not_the_activities(self):
         agreement = {
             "base_reference": REFERENCE, "title": "T", "organisation": "O",
             "latest": {"objective": "Obj", "activities": "Act", "expected_output": "Out",
                        "expected_benefits": "Ben", "yielded_benefits": "", "datasets": [{"name": "HES"}]},
         }
         text = summarise.agreement_text(agreement)
-        for part in ("Obj", "Act", "Out", "Ben", "Datasets: HES", "## Benefits reported so far\n\nNot stated"):
+        for part in ("Obj", "Out", "Ben", "Datasets: HES", "## Benefits reported so far\n\nNot stated"):
             self.assertIn(part, text)
+        self.assertNotIn("Act", text)
         params = summarise.request_params(agreement, "claude-haiku-5-5")
         self.assertEqual(params["model"], "claude-haiku-5-5")
         self.assertEqual(params["system"], summarise.INSTRUCTIONS)

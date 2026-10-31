@@ -42,7 +42,7 @@ ROOT = Path(__file__).resolve().parent.parent
 WORK = ROOT / "_summaries"
 STATE = WORK / "batches.json"
 
-DEFAULT_MODEL = "claude-haiku-5-5"
+DEFAULT_MODEL = "claude-sonnet-5-5"
 PILOT_MODELS = ["claude-haiku-5-5", "claude-sonnet-5-5"]
 PILOT_COUNT = 40
 # Fixed, so a pilot run twice compares the same agreements.
@@ -59,7 +59,19 @@ BATCH_DISCOUNT = 0.5
 # Characters per token, for estimates only: the API counts the real tokens.
 CHARS_PER_TOKEN = 3.5
 
-MAX_WORDS = 80
+MAX_WORDS = 90
+
+# What an overview is written from. "Processing activities" is left out: it is
+# mostly standard wording on storage and security, says little about purpose,
+# and is over a quarter of the text. Long fields are cut, since their opening
+# says what the agreement is for; reported benefits are sent in full, because
+# updates are added at the end.
+SOURCE_FIELDS = [
+    ("Objective for processing", "objective", 4000),
+    ("Expected output", "expected_output", 4000),
+    ("Expected measurable benefits", "expected_benefits", 4000),
+    ("Benefits reported so far", "yielded_benefits", None),
+]
 
 INSTRUCTIONS = """\
 You write the overview shown at the top of a page about one NHS England data \
@@ -67,11 +79,16 @@ sharing agreement. The page then shows the register's own text in full. Your \
 overview helps a member of the public decide whether the agreement is what \
 they are looking for.
 
-Write two or three sentences, at most 60 words, in plain English with UK \
+Write two to four sentences, at most 75 words, in plain English with UK \
 spelling:
 1. Who is using the data and what kind of data it is.
 2. What they are using it for.
 3. If the text states one clearly, the main intended benefit.
+4. If "Benefits reported so far" describes a specific benefit that has \
+already happened, such as a published paper, a changed service or a report \
+used in a decision, say so in one sentence. Skip this if that section is \
+empty, says benefits are not yet available or not required, or only restates \
+the expected benefits.
 
 Rules:
 - Use only facts stated in the text you are given. Never add facts, numbers, \
@@ -97,8 +114,11 @@ def agreement_text(agreement: dict) -> str:
         f"Organisation type: {version.get('organisation_type') or 'Not stated'}",
         "Datasets: " + ("; ".join(datasets) or "Not stated"),
     ]
-    for heading, field in overviews.FIELDS:
-        parts.append(f"\n## {heading}\n\n{(version.get(field) or 'Not stated').strip()}")
+    for heading, field, limit in SOURCE_FIELDS:
+        text = (version.get(field) or "").strip() or "Not stated"
+        if limit and len(text) > limit:
+            text = text[:limit].rsplit(" ", 1)[0] + " [cut]"
+        parts.append(f"\n## {heading}\n\n{text}")
     return "\n".join(parts)
 
 
@@ -121,6 +141,32 @@ RELEASE_CLAIM = re.compile(
 CAPITALISED = re.compile(r"(?<![.!?]\s)(?<!^)\b[A-Z][A-Za-z0-9&'-]+\b")
 
 
+# Acronyms common in the register, and what they stand for.
+EXPANSIONS = {
+    "MRIS": "medical research information service",
+    "SUS": "secondary uses service",
+    "ICB": "integrated care board",
+    "ICBs": "integrated care boards",
+    "NHSBSA": "nhs business services authority",
+    "ONS": "office for national statistics",
+    "NIHR": "national institute for health and care research",
+    "HES": "hospital episode statistics",
+    "COPD": "chronic obstructive pulmonary disease",
+    "NHSE": "nhs england",
+    "NHS Digital": "nhs digital",
+}
+
+# The second half of compounds like "NIHR-funded", which need not be in the text.
+COMPOUND_SUFFIXES = {"funded", "based", "level", "linked", "related", "wide", "led", "identifiable", "specific"}
+
+
+def check_source(agreement: dict) -> str:
+    """What `check` compares names against: everything the page shows, including
+    the processing activities the overview was not written from."""
+    version = agreement["latest"]
+    return "\n".join([agreement_text(agreement), version.get("activities") or ""])
+
+
 def check(summary: str, source: str) -> list[str]:
     """Reasons a person should read `summary` before it is shown. Empty if none."""
     flags = []
@@ -136,7 +182,16 @@ def check(summary: str, source: str) -> list[str]:
             flags.append(f"cliché: {label} [{check_id}]")
     # Names and acronyms the source never uses may have been made up.
     lowered = source.lower()
-    unknown = sorted({w for w in CAPITALISED.findall(summary) if w.lower().strip("'") not in lowered})
+    if "accident and emergency" in lowered:
+        lowered += " a&e"
+    # An acronym the text uses may be spelled out correctly in the overview.
+    for acronym, expansion in EXPANSIONS.items():
+        if re.search(rf"\b{acronym}\b", source):
+            lowered += " " + expansion
+    unknown = sorted({w for w in CAPITALISED.findall(summary)
+                      if any(part and part not in lowered
+                             for part in re.sub(r"['’]s$", "", w).lower().strip("'").split("-")
+                             if part not in COMPOUND_SUFFIXES)})
     if unknown:
         flags.append("names not in the text: " + ", ".join(unknown))
     return flags
@@ -230,7 +285,7 @@ def store(record: dict, fetched: dict, by_reference: dict[str, dict]) -> None:
     flagged = 0
     for reference, summary in fetched["texts"].items():
         agreement = by_reference.get(reference)
-        source = agreement_text(agreement) if agreement else ""
+        source = check_source(agreement) if agreement else ""
         entry = {"hash": record["hashes"][reference], "summary": summary, "model": record["model"], "written": written}
         flags = check(summary, source)
         if flags:
@@ -266,7 +321,7 @@ def write_pilot(records: list[dict], results: dict[str, dict], by_reference: dic
         lines.append("")
         for record in records:
             summary = results[record["id"]]["texts"].get(reference, "(not written)")
-            flags = check(summary, agreement_text(agreement)) if agreement else []
+            flags = check(summary, check_source(agreement)) if agreement else []
             lines.append(f"**{overviews.MODEL_NAMES.get(record['model'], record['model'])}:** {summary}")
             if flags:
                 lines.append(f"  _Flagged: {'; '.join(flags)}_")
@@ -296,7 +351,8 @@ def cmd_estimate(args) -> None:
     agreements = needing_overviews(all_agreements(), overviews.load())
     chars = sum(len(INSTRUCTIONS) + len(agreement_text(a)) for a in agreements)
     tokens_in = chars / CHARS_PER_TOKEN
-    tokens_out = 400 * len(agreements)
+    # The October 2026 pilot averaged about 120 output tokens an overview.
+    tokens_out = 150 * len(agreements)
     print(f"{len(agreements):,} agreements need an overview: about {tokens_in / 1e6:.1f}M input tokens")
     for model in PRICES:
         print(f"  {model}: about ${cost(model, int(tokens_in), tokens_out):.2f} as a batch")
@@ -306,7 +362,7 @@ def cmd_pilot(args) -> None:
     listed = [a for a in all_agreements() if not a.get("archived")]
     listed.sort(key=lambda a: a["base_reference"])
     sample = random.Random(PILOT_SEED).sample(listed, min(args.count, len(listed)))
-    for model in PILOT_MODELS:
+    for model in args.model or PILOT_MODELS:
         submit(sample, model, "pilot")
     print("run `python -m pipeline.summarise collect --wait` to fetch them")
 
@@ -363,6 +419,8 @@ def main(argv: list[str] | None = None) -> None:
     commands.add_parser("estimate", help="estimate the cost of a full run").set_defaults(func=cmd_estimate)
     pilot = commands.add_parser("pilot", help="overviews of a sample, from both models")
     pilot.add_argument("--count", type=int, default=PILOT_COUNT)
+    pilot.add_argument("--model", action="append", choices=sorted(PRICES),
+                       help="a model to try; repeat for more (default: Haiku and Sonnet)")
     pilot.set_defaults(func=cmd_pilot)
     run = commands.add_parser("run", help="overviews of every agreement without a current one")
     run.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(PRICES))

@@ -98,7 +98,7 @@
 <section class="overview" aria-labelledby="overview">
   <h2 id="overview">Overview</h2>
   <p class="overview-flag"><strong>AI-generated summary, not part of the register.</strong>
-    Written by {{ overview.model_name }} on {{ overview.written|date }} from the register's text under <a href="#purpose">Why the data was released</a>, which is the authoritative version. It may contain mistakes.</p>
+    Written from the register's text under <a href="#purpose">Why the data was released</a>, which is the authoritative version. It may contain mistakes. <a href="{{ meta.base_path }}/about/#ai-overviews">How these summaries are written</a></p>
   <p class="overview-text">{{ overview.summary }}</p>
 </section>
 {% endif %}
