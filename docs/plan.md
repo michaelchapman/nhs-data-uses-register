@@ -127,8 +127,10 @@ that it is clearly flagged as AI-generated and not part of the register, which
 is what decides the rules below.
 
 - **Labelled before anything else.** The section reads "AI-generated summary,
-  not part of the register", names the model and the date, and points to the
-  register's text as the authoritative version. It stays out of the page's
+  not part of the register", points to the register's text as the
+  authoritative version, and links to the About page's "AI-generated
+  summaries" section, which names the model and says how overviews are
+  written and checked. It stays out of the page's
   meta description, which a search engine would show without the label, and
   out of the agreements search.
 - **Written on a maintainer's machine.** `python -m pipeline.summarise` sends

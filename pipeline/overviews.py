@@ -71,3 +71,8 @@ def current(agreement: dict, entries: dict[str, dict]) -> dict | None:
     if not entry or entry.get("flags") or entry.get("hash") != text_hash(agreement["latest"]):
         return None
     return {**entry, "model_name": MODEL_NAMES.get(entry.get("model", ""), entry.get("model", "an AI model"))}
+
+
+def models_used(entries: dict[str, dict]) -> list[str]:
+    """The names of the models that wrote the overviews, for the About page."""
+    return sorted({MODEL_NAMES.get(e.get("model", ""), e.get("model", "")) for e in entries.values() if e.get("model")})

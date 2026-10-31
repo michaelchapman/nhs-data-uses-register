@@ -331,12 +331,13 @@ def build(
             "last": by_month.get(f"{chart_start_year - 1}-12", {}).get("agreements", 0),
         },
     )
-    render("about.html", "about/index.html")
+    # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
+    # Agreement pages flag them as AI-generated; the About page names the models.
+    overview_entries = overviews.load()
+    render("about.html", "about/index.html", overview_models=overviews.models_used(overview_entries))
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
-    # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
-    overview_entries = overviews.load()
     for agreement in data["agreements"] + archived:
         render(
             "agreement.html",

@@ -30,12 +30,21 @@ def entry(**extra) -> dict:
 
 
 class Overview(unittest.TestCase):
+    def test_the_about_page_names_the_model(self):
+        with tempfile.TemporaryDirectory() as directory:
+            build_with({REFERENCE: entry(model="claude-sonnet-5-5")}, Path(directory))
+            about = (Path(directory) / "about" / "index.html").read_text()
+        self.assertIn('id="ai-overviews"', about)
+        self.assertIn("Claude Sonnet 5.5 from Anthropic", about)
+
     def test_a_current_overview_is_shown_and_flagged_as_ai_generated(self):
         with tempfile.TemporaryDirectory() as directory:
             page = build_with({REFERENCE: entry()}, Path(directory))
         self.assertIn('<h2 id="overview">Overview</h2>', page)
         self.assertIn("AI-generated summary, not part of the register.", page)
-        self.assertIn("Written by Claude Haiku 5.5 on 31 October 2026", page)
+        # The model is named on the About page, not on every agreement page.
+        self.assertNotIn("Claude Haiku 5.5", page)
+        self.assertIn("/about/#ai-overviews", page)
         self.assertIn("Leeds studies maternity care.", page)
         # It comes before the register's own text, and stays out of the
         # page's description, which search engines show without the flag.
