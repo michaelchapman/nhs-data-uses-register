@@ -87,10 +87,23 @@ Budget about two minutes a month, plus about a minute for the parse.
    It reads the facts store, not the workbooks, and takes a few seconds. See
    [organisation-names.md](organisation-names.md#datasets).
 
-5. **Check the numbers look sane,** then commit and push:
+5. **Write the overviews of changed agreements** (optional, a few pence).
+   An agreement whose text changed shows no AI overview until this runs. It
+   needs `ANTHROPIC_API_KEY` and `pip install -r requirements-summarise.txt`.
 
    ```bash
-   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json
+   .venv/bin/python -m pipeline.summarise run
+   .venv/bin/python -m pipeline.summarise collect --wait
+   ```
+
+   Read any overview it lists as flagged in `data/summaries.json`: delete its
+   `flags` if it is right, or fix the summary first. See
+   [plan.md](plan.md#ai-overviews).
+
+6. **Check the numbers look sane,** then commit and push:
+
+   ```bash
+   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json data/summaries.json
    git commit -m "Add the August 2026 edition"
    git push
    ```
@@ -100,7 +113,7 @@ Budget about two minutes a month, plus about a minute for the parse.
    change in how the register writes something down; its "what changed" page says
    which fields moved.
 
-5. GitHub Actions builds and deploys from the committed facts. It makes no
+7. GitHub Actions builds and deploys from the committed facts. It makes no
    external requests, so it cannot fail the way the old scheduled job did.
 
 To preview before pushing:

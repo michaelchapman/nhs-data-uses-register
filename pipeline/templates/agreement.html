@@ -92,6 +92,16 @@
   {% elif agreement.coverage_end %}The latest version ended on {{ agreement.coverage_end|date }}. The {{ meta.edition|edition }} register still lists the agreement, but its term has passed.
   {% else %}The register gives no end date for the latest version.{% endif %}</p>
 {% endif %}
+{% if overview %}
+{# Written by an AI model, not by NHS England, so it says so before it says
+   anything else, and stays out of the page's description and the search. #}
+<section class="overview" aria-labelledby="overview">
+  <h2 id="overview">Overview</h2>
+  <p class="overview-flag"><strong>AI-generated summary, not part of the register.</strong>
+    Written by {{ overview.model_name }} on {{ overview.written|date }} from the register's text under <a href="#purpose">Why the data was released</a>, which is the authoritative version. It may contain mistakes.</p>
+  <p class="overview-text">{{ overview.summary }}</p>
+</section>
+{% endif %}
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
   <div><dt>{{ now|capitalize }} version</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>

@@ -118,6 +118,40 @@ The decisions below are tracked in #51, and the dataset names in #55.
 
 ## Built
 
+### AI overviews
+
+Built in October 2026. An agreement page opens with two or three sentences on
+who is using the data, what data it is and what for, written by an AI model
+from the latest version's purpose text. Michael agreed to it on the condition
+that it is clearly flagged as AI-generated and not part of the register, which
+is what decides the rules below.
+
+- **Labelled before anything else.** The section reads "AI-generated summary,
+  not part of the register", names the model and the date, and points to the
+  register's text as the authoritative version. It stays out of the page's
+  meta description, which a search engine would show without the label, and
+  out of the agreements search.
+- **Written on a maintainer's machine.** `python -m pipeline.summarise` sends
+  the agreements to the Claude Batch API and stores the results in
+  `data/summaries.json`. The key never goes into CI, and the build makes no
+  API call.
+- **Never stale.** Each overview records a hash of the text it was written
+  from (`pipeline/overviews.py`). When NHS England edits the text, the hash no
+  longer matches, and the page shows no overview until the next run.
+- **Checked before it is shown.** An overview is held back, with its reasons
+  in `flags`, if it runs past 80 words, says whether data was or was not
+  released (the release views' wording rules apply), trips `clichecheck`, or
+  names something the source text never uses. A person reads it and deletes
+  the flags, or rewrites it.
+- **Cost.** Measured on the October 2026 edition: 1,984 agreements, about
+  13 million input tokens. A full run on Claude Haiku 5.5 is estimated at
+  under $1 as a batch, and on Claude Sonnet 5.5 at about $17. Each edition
+  changes the text of 30 to 120 agreements, so a month costs pennies.
+  `summarise estimate` gives the figure for whatever is outstanding.
+- **Choosing the model.** `summarise pilot` writes 40 agreements' overviews
+  from both models side by side, in `_summaries/pilot.md`, for a person to
+  compare before a full run.
+
 ### Amendments, verifying workbooks, and folded headings
 
 Built in October 2026.
