@@ -141,6 +141,32 @@ RELEASE_CLAIM = re.compile(
 CAPITALISED = re.compile(r"(?<![.!?]\s)(?<!^)\b[A-Z][A-Za-z0-9&'-]+\b")
 
 
+# Acronyms common in the register, and what they stand for.
+EXPANSIONS = {
+    "MRIS": "medical research information service",
+    "SUS": "secondary uses service",
+    "ICB": "integrated care board",
+    "ICBs": "integrated care boards",
+    "NHSBSA": "nhs business services authority",
+    "ONS": "office for national statistics",
+    "NIHR": "national institute for health and care research",
+    "HES": "hospital episode statistics",
+    "COPD": "chronic obstructive pulmonary disease",
+    "NHSE": "nhs england",
+    "NHS Digital": "nhs digital",
+}
+
+# The second half of compounds like "NIHR-funded", which need not be in the text.
+COMPOUND_SUFFIXES = {"funded", "based", "level", "linked", "related", "wide", "led", "identifiable", "specific"}
+
+
+def check_source(agreement: dict) -> str:
+    """What `check` compares names against: everything the page shows, including
+    the processing activities the overview was not written from."""
+    version = agreement["latest"]
+    return "\n".join([agreement_text(agreement), version.get("activities") or ""])
+
+
 def check(summary: str, source: str) -> list[str]:
     """Reasons a person should read `summary` before it is shown. Empty if none."""
     flags = []
@@ -156,8 +182,16 @@ def check(summary: str, source: str) -> list[str]:
             flags.append(f"cliché: {label} [{check_id}]")
     # Names and acronyms the source never uses may have been made up.
     lowered = source.lower()
+    if "accident and emergency" in lowered:
+        lowered += " a&e"
+    # An acronym the text uses may be spelled out correctly in the overview.
+    for acronym, expansion in EXPANSIONS.items():
+        if re.search(rf"\b{acronym}\b", source):
+            lowered += " " + expansion
     unknown = sorted({w for w in CAPITALISED.findall(summary)
-                      if re.sub(r"['’]s$", "", w).lower().strip("'") not in lowered})
+                      if any(part and part not in lowered
+                             for part in re.sub(r"['’]s$", "", w).lower().strip("'").split("-")
+                             if part not in COMPOUND_SUFFIXES)})
     if unknown:
         flags.append("names not in the text: " + ", ".join(unknown))
     return flags
@@ -251,7 +285,7 @@ def store(record: dict, fetched: dict, by_reference: dict[str, dict]) -> None:
     flagged = 0
     for reference, summary in fetched["texts"].items():
         agreement = by_reference.get(reference)
-        source = agreement_text(agreement) if agreement else ""
+        source = check_source(agreement) if agreement else ""
         entry = {"hash": record["hashes"][reference], "summary": summary, "model": record["model"], "written": written}
         flags = check(summary, source)
         if flags:
@@ -287,7 +321,7 @@ def write_pilot(records: list[dict], results: dict[str, dict], by_reference: dic
         lines.append("")
         for record in records:
             summary = results[record["id"]]["texts"].get(reference, "(not written)")
-            flags = check(summary, agreement_text(agreement)) if agreement else []
+            flags = check(summary, check_source(agreement)) if agreement else []
             lines.append(f"**{overviews.MODEL_NAMES.get(record['model'], record['model'])}:** {summary}")
             if flags:
                 lines.append(f"  _Flagged: {'; '.join(flags)}_")

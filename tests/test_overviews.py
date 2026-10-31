@@ -87,6 +87,11 @@ class Checks(unittest.TestCase):
         flags = summarise.check("University of Leeds uses HES data from Scotland.", self.SOURCE)
         self.assertIn("names not in the text: Scotland", flags)
 
+    def test_spelled_out_acronyms_compounds_and_possessives_pass(self):
+        source = "Organisation: NHS Leeds ICB\nSUS data from accident and emergency, as the NIHR asked."
+        summary = "NHS Leeds Integrated Care Board's NIHR-funded team uses Secondary Uses Service A&E data."
+        self.assertEqual(summarise.check(summary, source), [])
+
     def test_a_long_overview_is_flagged(self):
         flags = summarise.check("University of Leeds " + "studies care " * 50, self.SOURCE)
         self.assertTrue(any(f.startswith("long:") for f in flags))
