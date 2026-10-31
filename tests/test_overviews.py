@@ -82,15 +82,16 @@ class Checks(unittest.TestCase):
         flags = summarise.check("University of Leeds " + "studies care " * 50, self.SOURCE)
         self.assertTrue(any(f.startswith("long:") for f in flags))
 
-    def test_the_request_carries_the_whole_purpose_text(self):
+    def test_the_request_carries_the_purpose_text_but_not_the_activities(self):
         agreement = {
             "base_reference": REFERENCE, "title": "T", "organisation": "O",
             "latest": {"objective": "Obj", "activities": "Act", "expected_output": "Out",
                        "expected_benefits": "Ben", "yielded_benefits": "", "datasets": [{"name": "HES"}]},
         }
         text = summarise.agreement_text(agreement)
-        for part in ("Obj", "Act", "Out", "Ben", "Datasets: HES", "## Benefits reported so far\n\nNot stated"):
+        for part in ("Obj", "Out", "Ben", "Datasets: HES", "## Benefits reported so far\n\nNot stated"):
             self.assertIn(part, text)
+        self.assertNotIn("Act", text)
         params = summarise.request_params(agreement, "claude-haiku-5-5")
         self.assertEqual(params["model"], "claude-haiku-5-5")
         self.assertEqual(params["system"], summarise.INSTRUCTIONS)

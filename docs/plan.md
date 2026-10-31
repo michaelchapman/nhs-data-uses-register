@@ -139,18 +139,27 @@ is what decides the rules below.
   from (`pipeline/overviews.py`). When NHS England edits the text, the hash no
   longer matches, and the page shows no overview until the next run.
 - **Checked before it is shown.** An overview is held back, with its reasons
-  in `flags`, if it runs past 80 words, says whether data was or was not
+  in `flags`, if it runs past 90 words, says whether data was or was not
   released (the release views' wording rules apply), trips `clichecheck`, or
   names something the source text never uses. A person reads it and deletes
   the flags, or rewrites it.
-- **Cost.** Measured on the October 2026 edition: 1,984 agreements, about
-  13 million input tokens. A full run on Claude Haiku 5.5 is estimated at
-  under $1 as a batch, and on Claude Sonnet 5.5 at about $17. Each edition
-  changes the text of 30 to 120 agreements, so a month costs pennies.
+- **What it is written from.** The objective, expected output, expected
+  benefits and benefits reported so far. "Processing activities" is left out:
+  it is mostly standard wording on storage and security, and over a quarter
+  of the text. The first three fields are cut at 4,000 characters; reported
+  benefits are sent in full, since updates are added at the end. Where the
+  text reports a specific benefit that has already happened, the overview
+  says so in one sentence.
+- **Cost.** Measured on the October 2026 edition: 1,984 agreements. Sending
+  every field was about 13 million input tokens: under $1 on Claude Haiku
+  5.5 as a batch, about $15 on Claude Sonnet 5.5. With the fields above it
+  is about 6.7 million, and Sonnet comes to about $7-8. Each edition changes
+  the text of 30 to 120 agreements, so a month costs well under $1.
   `summarise estimate` gives the figure for whatever is outstanding.
 - **Choosing the model.** `summarise pilot` writes 40 agreements' overviews
   from both models side by side, in `_summaries/pilot.md`, for a person to
-  compare before a full run.
+  compare before a full run (`--model` picks just one). In the October 2026
+  pilot Sonnet's overviews were tighter and plainer, so it is the default.
 
 ### Amendments, verifying workbooks, and folded headings
 

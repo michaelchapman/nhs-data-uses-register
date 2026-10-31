@@ -42,7 +42,7 @@ ROOT = Path(__file__).resolve().parent.parent
 WORK = ROOT / "_summaries"
 STATE = WORK / "batches.json"
 
-DEFAULT_MODEL = "claude-haiku-5-5"
+DEFAULT_MODEL = "claude-sonnet-5-5"
 PILOT_MODELS = ["claude-haiku-5-5", "claude-sonnet-5-5"]
 PILOT_COUNT = 40
 # Fixed, so a pilot run twice compares the same agreements.
@@ -59,7 +59,19 @@ BATCH_DISCOUNT = 0.5
 # Characters per token, for estimates only: the API counts the real tokens.
 CHARS_PER_TOKEN = 3.5
 
-MAX_WORDS = 80
+MAX_WORDS = 90
+
+# What an overview is written from. "Processing activities" is left out: it is
+# mostly standard wording on storage and security, says little about purpose,
+# and is over a quarter of the text. Long fields are cut, since their opening
+# says what the agreement is for; reported benefits are sent in full, because
+# updates are added at the end.
+SOURCE_FIELDS = [
+    ("Objective for processing", "objective", 4000),
+    ("Expected output", "expected_output", 4000),
+    ("Expected measurable benefits", "expected_benefits", 4000),
+    ("Benefits reported so far", "yielded_benefits", None),
+]
 
 INSTRUCTIONS = """\
 You write the overview shown at the top of a page about one NHS England data \
@@ -67,11 +79,16 @@ sharing agreement. The page then shows the register's own text in full. Your \
 overview helps a member of the public decide whether the agreement is what \
 they are looking for.
 
-Write two or three sentences, at most 60 words, in plain English with UK \
+Write two to four sentences, at most 75 words, in plain English with UK \
 spelling:
 1. Who is using the data and what kind of data it is.
 2. What they are using it for.
 3. If the text states one clearly, the main intended benefit.
+4. If "Benefits reported so far" describes a specific benefit that has \
+already happened, such as a published paper, a changed service or a report \
+used in a decision, say so in one sentence. Skip this if that section is \
+empty, says benefits are not yet available or not required, or only restates \
+the expected benefits.
 
 Rules:
 - Use only facts stated in the text you are given. Never add facts, numbers, \
@@ -97,8 +114,11 @@ def agreement_text(agreement: dict) -> str:
         f"Organisation type: {version.get('organisation_type') or 'Not stated'}",
         "Datasets: " + ("; ".join(datasets) or "Not stated"),
     ]
-    for heading, field in overviews.FIELDS:
-        parts.append(f"\n## {heading}\n\n{(version.get(field) or 'Not stated').strip()}")
+    for heading, field, limit in SOURCE_FIELDS:
+        text = (version.get(field) or "").strip() or "Not stated"
+        if limit and len(text) > limit:
+            text = text[:limit].rsplit(" ", 1)[0] + " [cut]"
+        parts.append(f"\n## {heading}\n\n{text}")
     return "\n".join(parts)
 
 
@@ -136,7 +156,8 @@ def check(summary: str, source: str) -> list[str]:
             flags.append(f"cliché: {label} [{check_id}]")
     # Names and acronyms the source never uses may have been made up.
     lowered = source.lower()
-    unknown = sorted({w for w in CAPITALISED.findall(summary) if w.lower().strip("'") not in lowered})
+    unknown = sorted({w for w in CAPITALISED.findall(summary)
+                      if re.sub(r"['’]s$", "", w).lower().strip("'") not in lowered})
     if unknown:
         flags.append("names not in the text: " + ", ".join(unknown))
     return flags
@@ -296,7 +317,8 @@ def cmd_estimate(args) -> None:
     agreements = needing_overviews(all_agreements(), overviews.load())
     chars = sum(len(INSTRUCTIONS) + len(agreement_text(a)) for a in agreements)
     tokens_in = chars / CHARS_PER_TOKEN
-    tokens_out = 400 * len(agreements)
+    # The October 2026 pilot averaged about 120 output tokens an overview.
+    tokens_out = 150 * len(agreements)
     print(f"{len(agreements):,} agreements need an overview: about {tokens_in / 1e6:.1f}M input tokens")
     for model in PRICES:
         print(f"  {model}: about ${cost(model, int(tokens_in), tokens_out):.2f} as a batch")
@@ -306,7 +328,7 @@ def cmd_pilot(args) -> None:
     listed = [a for a in all_agreements() if not a.get("archived")]
     listed.sort(key=lambda a: a["base_reference"])
     sample = random.Random(PILOT_SEED).sample(listed, min(args.count, len(listed)))
-    for model in PILOT_MODELS:
+    for model in args.model or PILOT_MODELS:
         submit(sample, model, "pilot")
     print("run `python -m pipeline.summarise collect --wait` to fetch them")
 
@@ -363,6 +385,8 @@ def main(argv: list[str] | None = None) -> None:
     commands.add_parser("estimate", help="estimate the cost of a full run").set_defaults(func=cmd_estimate)
     pilot = commands.add_parser("pilot", help="overviews of a sample, from both models")
     pilot.add_argument("--count", type=int, default=PILOT_COUNT)
+    pilot.add_argument("--model", action="append", choices=sorted(PRICES),
+                       help="a model to try; repeat for more (default: Haiku and Sonnet)")
     pilot.set_defaults(func=cmd_pilot)
     run = commands.add_parser("run", help="overviews of every agreement without a current one")
     run.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(PRICES))
