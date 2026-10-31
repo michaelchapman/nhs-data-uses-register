@@ -124,6 +124,10 @@ select:focus-visible {
 .notice-bar { background: var(--bg-notice); border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
 .notice-bar p { margin: 0; padding: 0.75rem 0; }
 .notice { background: var(--bg-notice); border: 1px solid var(--line); border-radius: 4px; padding: 0.75rem 1rem; margin: 1rem 0; }
+/* An AI-written overview: marked off from the register's own text. */
+.overview { border: 1px dashed var(--line); border-left: 4px solid var(--ink-muted); border-radius: 4px; padding: 0.25rem 1rem 0.5rem; margin: 1.5rem 0; max-width: 72ch; }
+.overview h2 { margin-top: 0.75rem; }
+.overview-flag { color: var(--ink-muted); font-size: 0.9375rem; }
 
 /* Layout ------------------------------------------------------------------ */
 

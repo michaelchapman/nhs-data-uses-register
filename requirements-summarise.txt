@@ -1,0 +1,4 @@
+# Only for `python -m pipeline.summarise`, which writes the AI overviews on a
+# maintainer's machine. The build and CI never need it.
+-r requirements.txt
+anthropic==2.3.0

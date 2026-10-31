@@ -10,7 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, privacy, relations, releases, search, sectors, sources
+from . import aliases, compare, ods, overviews, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify
@@ -331,7 +331,10 @@ def build(
             "last": by_month.get(f"{chart_start_year - 1}-12", {}).get("agreements", 0),
         },
     )
-    render("about.html", "about/index.html")
+    # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
+    # Agreement pages flag them as AI-generated; the About page names the models.
+    overview_entries = overviews.load()
+    render("about.html", "about/index.html", overview_models=overviews.models_used(overview_entries))
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
@@ -349,6 +352,7 @@ def build(
             history=(history or {}).get(agreement["base_reference"]),
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
             timeline=releases.agreement_timeline(agreement, dataset_aliases, meta["as_of"]),
+            overview=overviews.current(agreement, overview_entries),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(

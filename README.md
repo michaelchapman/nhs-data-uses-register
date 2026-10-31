@@ -176,6 +176,8 @@ pipeline/lineage.py             renames and successions between NHS organisation
 pipeline/exclusions.py          leaves out published records that are not data sharing
 pipeline/datasetcheck.py        finds datasets the register has renamed, from the facts store
 pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own prose
+pipeline/overviews.py           the AI overviews an agreement page shows, and when it shows one
+pipeline/summarise.py           writes those overviews with the Claude Batch API (maintainer only)
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
 pipeline/templates/             Jinja2 templates
 tests/                          unit tests and a synthetic register (python -m unittest)
@@ -184,10 +186,12 @@ assets/                         CSS, and the scripts for filtering, search highl
 pyproject.toml                  ruff and mypy settings
 requirements.txt                what the build needs, pinned
 requirements-dev.txt            the checkers, pinned
+requirements-summarise.txt      what pipeline.summarise needs, pinned
 data/raw/                       downloaded workbooks (gitignored)
 data/facts/                     committed facts: every edition, and the manifest
 data/organisation-aliases.json  reviewed organisation-name merges
 data/dataset-aliases.json       reviewed dataset-name merges
+data/summaries.json             AI overviews of agreements, not part of the register
 data/organisation-codes.json    the ODS code for each NHS name, and the evidence
 data/excluded-agreements.json   published records the site leaves out, with the reason
 data/organisation-sectors.json  organisation types to sectors, and corrections
@@ -220,6 +224,10 @@ register with the same shape needs no template changes.
   recipient. See [docs/plan.md](docs/plan.md#what-release-data-can-and-cannot-say).
 - The register describes what applicants said they intended, not audited
   outcomes.
+- An agreement page can open with an overview written by an AI model from the
+  register's text. It is labelled as AI-generated and not part of the
+  register, can contain mistakes, and is kept out of the page's description
+  and the search. See [docs/plan.md](docs/plan.md#ai-overviews).
 
 ## Licence
 

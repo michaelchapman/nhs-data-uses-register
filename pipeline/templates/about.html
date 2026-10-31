@@ -30,6 +30,16 @@
   <li><strong>It publishes pages, not data files.</strong> For analysis, <a href="{{ meta.base_path }}/downloads/">get the data</a> from the register itself, or from this site's archive of every edition.</li>
 </ul>
 
+<h2 id="ai-overviews">AI-generated summaries</h2>
+<p>Some agreement pages open with a short overview, labelled as an AI-generated summary. It is not part of the register: NHS England did not write it, and the register's own text, shown in full below it, is the authoritative version.</p>
+<ul>
+  <li><strong>Who writes them.</strong> An AI model{% if overview_models %}, {{ overview_models|join(" and ") }} from Anthropic,{% endif %} writes each overview from the agreement's objective, expected outputs, expected benefits and any benefits reported so far. It is told to use only facts stated in that text, not to judge the agreement, and not to say whether data was released, which the page reports separately.</li>
+  <li><strong>Reported benefits.</strong> Where the register describes a specific benefit that has already happened, such as a published paper or a changed service, the overview mentions it.</li>
+  <li><strong>Checks.</strong> An overview is held back for a person to read if it runs long, says whether data was released, uses stock phrasing, or names something the register's text never mentions.</li>
+  <li><strong>Kept current.</strong> Each overview is tied to the text it was written from. When NHS England edits that text, the overview is removed until a new one is written.</li>
+  <li><strong>It can be wrong.</strong> Read the register's text before relying on an overview. Mistakes can be reported on <a href="{{ meta.repo_url }}/issues">GitHub</a>.</li>
+</ul>
+
 <h2>Caveats</h2>
 <ul>
   <li><strong>This is a mirror, not the source.</strong> Transformation bugs are possible. For anything consequential, check the <a href="{{ meta.source_url }}">original workbook</a>.</li>

@@ -15,3 +15,6 @@ node_modules/
 # this tracked .gitignore takes precedence over a global rule, so spell it out
 # explicitly rather than rely on everyone's machine not having one.
 !data/facts/**/*
+
+# Batch records and the pilot write-up from pipeline.summarise; data/summaries.json is committed.
+_summaries/
