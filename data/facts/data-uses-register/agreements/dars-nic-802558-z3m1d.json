@@ -1,0 +1,215 @@
+{
+ "base_reference": "DARS-NIC-802558-Z3M1D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-802558-Z3M1D-v0.4",
+   "states": [
+    {
+     "activities": "1. General Processing Activities: \n\nNo data will flow to NHS England for the purposes of this Data Sharing Agreement (DSA). \nNHS England will provide the Data to ONS.   \n\nThe Data will contain directly identifying data items which are required to link the Data at record level with data already held by the recipient.\n\nThe data is transferred to the ONS Secure Estate, where it undergoes virus scanning before being ingested into a security controlled ONS analysis environment. \n\nIdentified data are managed by a small group of security cleared, highly trained specialists. They are responsible for de-identifying, cleaning, and, where required, linking the data to other sources before relocating it to a secure area within the security controlled ONS analysis environment.\n\nONS personnel may access only the data necessary to perform their statutory functions, within a designated workspace. Access is restricted to de-identified data for most functions. Identified data may be accessed only where the relevant function cannot otherwise be performed, including, but not limited to, where necessary for assessments of data quality or survey sampling.\n\nData security for storage, management and linkage will be provided through a security controlled ONS analysis environment with the following elements of security control: \n•\tAccess to the data is restricted to individuals granted access on the basis of a justified need to access the data\n•\tControlled ingest and export of data into/out from the environment\n•\tControlled account access using unique credentials based on job role\n•\tLogged and monitored access of user activity within the environment\n•\tSecure build configuration for infrastructure\n•\tVulnerability tested infrastructure with appropriate remediation and patching\n•\tCompliance checks against security enforcing controls\n•\tArchitectural review against standards and best practice\n•\tStaff security cleared to the appropriate level based on their supervised and/or unsupervised access to sensitive data in accordance with ONS clearance policies and data access processes\n•\tEducation and awareness of environment users covering security policies and secure working practices\n•\tOperational support processes to securely manage the environment\n•\tRisk assessment to identify security risks and mitigation actions to reduce this risk\n\nAmazon Web Services (AWS) and Google Cloud Platform (GCP) provide IT hosting services to ONS and will store the data as contracted by ONS as a processor. \n\nONS will never seek to intentionally re-identify this Data.\n\n2. Processing Activities Specific to ONS Providing Access to NHS England Data to Approved/Accredited Researchers: \n\nData will only be accessed by Accredited/Approved researchers within the Secure Research Service (SRS) or a security controlled ONS analysis environment. ONS personnel will process the data within a security controlled ONS analysis environment to de-identify it and then transfer it to the SRS environment in readiness for accredited/ approved project access.\n\nAccredited/Approved researchers will only be able to access the de identified data necessary and approved for their research project.\n\nThe SRS is hosted on Crown Hosting Data Centres; they provide IT hosting services to ONS and will store the data as contracted by ONS as a processor.\n•\tAccredited/Approved researchers may access data in the SRS via ONS operated Safe Rooms or ESRC approved SafePods. \n•\tAccredited/Approved researchers may access data in the SRS through accredited Safe Rooms operated by partner institutions. \n•\tAccredited/Approved researchers may access data in the SRS via assured organisational office-based connectivity where required security standards are met. \n•\tAccredited/Approved researchers may access data in the SRS through approved organisational homeworking arrangements where secure remote access standards are satisfied.\n\n3. Processing Activities Specific to ONS Sharing NHS England Data with Devolved Administrations:\n\nWhere ONS intends to share PDS data with Devolved Administrations, the relevant data will be prepared within the security controlled ONS environment and transferred to the appropriate statistical authority using a secure file-transfer process. \n\nNHS England does not mandate a single format for the disclosure of PDS data to a Devolved Administration from ONS. Disclosures may be made in any secure file transfer format that: \n•\tcomplies with ONS security and information governance requirements; \n•\tenables clear and complete audit trails; \n•\tprovides transparency regarding the data shared and the method of transfer.",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "OFFICE FOR NATIONAL STATISTICS (ONS)"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Adult Social Care Client Level Data Set (ASCCLDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Birth Notification Data",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "COVID-19 Ethnic Category Data Set",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "COVID-19 General Practice Extraction Service (GPES) Data for Pandemic Planning and Research (GDPPR)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "COVID-19 Vaccination Status",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Community Services Data Set (CSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Diabetes Prevention Programme for ONS",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "HES-ID to MPS-ID HES Accident and Emergency",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "HES-ID to MPS-ID HES Admitted Patient Care",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "HES-ID to MPS-ID HES Outpatients",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Improving Access to Psychological Therapies (IAPT) v1.5",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Improving Access to Psychological Therapies (IAPT) v2",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Maternity Services Data Set (MSDS) v1.5",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Maternity Services Data Set (MSDS) v2",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Medicines dispensed in Primary Care (NHSBSA data)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "One-Off",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Personal Demographic Service",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Statutory exemption to flow confidential data without consent",
+       "frequency": "Ongoing",
+       "legal_basis": "Other-Data dissemination is mandated under section 45a of the Statistics and Registration Service Act (2007) as amended by the Digital Economy Act 2017",
+       "name": "Waiting List Minimum Data Set for ONS",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-10-04",
+     "expected_benefits": "Accredited official statistics (that ONS produces) are used as the population baseline for any statistics that are published on a per capita basis. The Department of Health and Social Care and their agencies specifically use both census and population statistics (branded as accredited official statistics) in the planning and provision of health and social care services and the allocation of funding. \n\n•\tImprovements to existing Official Statistics \n\n•\tDevelopment of new Official Statistics – this may involve testing to investigate whether statistics of sufficient quality can be produced, and may also involve the production of statistics badged as ‘experimental’ while further work is done to improve quality aspects such as accuracy \n\n•\tQuality assurance of Official Statistics \n\n•\tDevelopment of commentary around Official Statistics \n\n•\tReplacement of current survey questions – developing statistics from available data to directly replace the need to collect the information through survey questions \n\n•\tImproving efficiency or accuracy of sampling – for example, ensuring that a representative sample of the target population is taken when conducting a survey of the public, such that the statistics produced from the survey are the best possible reflection of reality \n\n•\tResearch and development of methodology – for example, using data to develop and test linkage methodology that is ultimately used to help produce statistics based on other data rather than the original data source",
+     "expected_output": "The expected outputs of the processing will be:\n1. \tOfficial Statistics\nThese include National Statistics (once quality standards are met) and other recognised official statistical releases.  They are normally published on the ONS website and include, but are not limited to:\n•\tAnnual birth statistics (including child and infant mortality; unexplained infant deaths)\n•\tPopulation and migration statistics, such as:\n\t-\tInternal migration (annual)\n\t-\tMid-year population estimates\n\t-\tPopulation projections (national & subnational)\n•\tMortality, morbidity and life expectancy statistics, including breakdowns by:\n\t-\tEthnicity\n\t-\tDisability\n\t-\tAge groups\n\nThese outputs are typically accompanied by statistical bulletins, commentary and data tables.\n\n2. \tExperimental Statistics\nUsed when new methods or administrative data sources are being tested before possible accreditation as official statistics. Examples include, but are not limited to:\n•\tStatistics derived from NHS England Data as part of Admin Data Census work\n•\tLinked-data studies (e.g., suicide rates among higher education students)\n•\tNew population estimation approaches using administrative data\n\nThese outputs help improve data quality, methods and future official statistical products.\n\n3. \tResearch Outputs & Analytical Articles\nThese are produced when methods, linkages, or data quality are still being developed.  Examples include, but are not limited to:\n•\tResearch updates in the Administrative Data Census project\n•\tAnalytical articles on (not an exhaustive list):\n\t-\tCoronavirus-related deaths\n\t-\tEthnic contrasts in mortality\n\t-\tLong-COVID prevalence\n•\tReports validating models such as QCOVID\n•\tEthnicity data quality comparisons across sources\n\nThese may appear as analytical articles, reports, blogs, presentations or updates for specialist audiences.\n\n4. \tMethodology & Quality Assurance Reports\nThese outputs describe how ONS develops, tests and quality-assures data linkage and statistical methods, including, but not limited to:\n•\tMethods for linking sibling/family units\n•\tAssessments of how administrative data (e.g., birth notifications, HES, PDS) can support population statistics\n•\tMethodological updates for the Administrative Data Based Population Estimates (ABPEs)\n•\tFeasibility studies for administrative data based Census characteristics\n\nThese may be internal or published, depending on maturity.\n\n5. \tDerived Datasets for Research\nONS produces de-identified, non-disclosive datasets for controlled research access, including, but not limited to:\n•\tAdministrative Based Census (ABC) dataset\n\t-\tAge, sex and LSOA only\n\t-\tBuilt from PDS, HES, ECDS, and other sources\n\t-\tMade available via Trusted Research Environments\n\nThese are not statistical publications but structured data products for approved researchers.\n\n6. \tSurvey Outputs \nONS uses PDS data to sample or boost participation in key surveys, including, but not limited to:\n•\tSurvey data outputs and reports for:\n\t-\tHealth Insight Survey (HIS) – patient experience & inequalities\n\t-\tChildren’s Crime Survey for England & Wales (CCSEW) – from 2025\n\t-\tSafety During Childhood Survey – pilot (2025) and full survey (2026)\n•\tNationally representative estimates relevant to crime, wellbeing and public health policy\n\nOutputs include national estimates, survey analysis and policy-relevant insights.\n\n7. \tTechnical Briefings & Expert Audience Reports\nThese are targeted outputs, often not publicly released, including, but not limited to:\n•\tBriefings for Scientific Advisory Group for Emergencies (SAGE), British Medical Association (BMA) Royal College of GPs (RCGP)\n•\tReports for Treasury and ICBs on programmes like the Health and Growth Accelerator\n•\tInternal quality reports on ethnicity data\n\nThey summarise analyses but do not include unpublished statistics.\n\n8. \tPresentations, Stakeholder Updates & Engagement Materials\nONS routinely communicates progress through:\n•\tPresentations at events, workshops and stakeholder meetings\n•\tUpdates to technical and general audiences\n\nThese support transparency and user engagement.",
+     "objective": "The Data will be used for the fulfilment of ONS’ statutory functions set out in the following sections of the Statistics and Registration Service Act (SRSA) 2007, including the production of official statistics, subject to the applicable procedural controls detailed in this DSA: \n\n1. Permitted Uses\n\nONS may use the Data for the purposes of the ONS’ functions set out in the following sections of the Statistics and Registration Service Act 2007: \n•\tSection 20: Production, Publishing, and providing advice on Statistics produced under S20 Official statistics  \n•\tSection 21: Compilation, Maintenance and Publishing of Retail Prices Index (RPI) [Statistical analysis]  \n•\tSection 24: Delegated Functions [Research & methodology]  \n•\tSection 25: Census, Birth registrations, etc.  \n•\tSection 26: Ancillary powers [Other statistical functions]  \n\nUses of the Data for these purposes will be subject to the following procedures:\n1.1\tPermission to request and/or be given access to the Data for the above purposes is restricted to ONS personnel only.\n\n1.2\tONS personnel identify a requirement to access a specific NHS England data asset to fulfil an ONS statutory function in response to objectives which may originate from a range of personnel, including (but not limited to) Ministers, Government Officials, Senior Directors within ONS, or through internally commissioned analytical or statistical needs.  \n\n1.3\tThe identified requirement is then allocated to the appropriate User(s), who assume(s) responsibility for progressing the task.\n\n1.4\tThe purpose for access will be documented as an Access Request, clearly defining:\na.\tthe aims and objectives of processing\nb.\twhat data will be processed\nc.\tthe relevant statutory function(s) the processing is necessary to achieve, and\nd.\tthe potential outputs that may be created from the access\n\n1.5\tFor each use, an ethical self-assessment will be undertaken.  Where indicated by the self-assessment tool, the proposal will require approval from the National Statistician’s Data Ethics Advisory Committee (NSDEC).  NSDEC’s role is to scrutinise and where necessary challenge, the ethical basis for the work as new statistics are proposed.\n\n1.6\tThe User(s) determine(s) the appropriate Workspace within the security controlled ONS analysis environment where the data asset could be accessed and analysed.\n\n1.7\tThe User(s) submits the Access Request to the relevant Workspace Owner. \n\n1.8\tThe Workspace Owner receives the request and consults key stakeholders including, Information Asset Owners (IAOs), Data Ethics Team Members and the Data Acquisition Team to assure:\na.\tthe purpose aligns with one or more of the above statutory functions\nb.\tthe proposed use of the Data is necessary and proportionate to achieve the stated aims\nc.\tthe proposed use of the Data aligns with the Workspace’s recorded purpose based on the specific area of analysis \nd.\tthe proposed use of the Data aligns with any permissions, purposes and restrictions set by NHS England\ne.\tthere is assessment and consideration of the risks and impacts of adding the data asset to the Workspace, considering existing approved assets already within that Workspace\n\n1.9\tIf all stakeholders agree the data asset is appropriate for use and can be used within the Workspace; the ONS IAO formally approves the request and inclusion of the data asset, and the Workspace Record is updated to reflect the approval. \n\n1.10\tThe Workspace Owner submits a formal request to the ONS Operational teams to add both the user(s) and the approved data asset to the Workspace. \n\n1.11\tOn receipt of the request, ONS Operational teams, through embedded security process, assess the request to ensure: \na.\tThe user holds the correct security clearance\nb.\tCorporate mandatory training on security awareness and data handling is complete, along with any additional platform training and guidance\nc.\tThe user has read, understood, and agreed to comply with platform Security Operating Procedures (SyOPs)\nd.\tAll IAO approvals are correctly recorded in the Workspace Record\n\n1.12\tThe security team ensures due process has been followed and if any compliance issues are identified, they must be remediated by the Workspace Owner within a specified deadline for the request to be approved.\n\n1.13\tThe User(s) is granted access to the Workspace within the assured, security controlled ONS analysis environment. \n\n1.14\tSecurity teams conduct regular access audits and update processes. ONS maintains comprehensive oversight mechanisms including: \na.\tFull audit logs of all user activity \nb.\tRecords of personal data processing  \nc.\tUp to date lists of approved users and their access levels \n\nThe above can be provided to NHS England on request. \n\n1.15\tAccess to the Workspace for the User(s) is revoked when it is no longer required for business purposes.  \n\n2. Uses Permitted Subject to Additional Approval from NHS England\n\nSubject to additional written authorisation from NHS England on a per purpose basis, ONS may use the Data for the purposes of the ONS’ functions set out in the following sections of the Statistics and Registration Service Act 2007: \n•\tSection 22: Statistical services \n•\tSection 53A: Onward Disclosure to Devolved Administrations \n\nUses of the Data for the purposes of Section 22: Statistical services will be subject to the following procedures:\n\n2.1\tONS will submit a written request to NHS England detailing:\na.\tthe third-party organisation(s) on whose behalf ONS intend to provide the statistical services\nb.\tconfirmation of the location of the third-party organisation(s)\nc.\tthe aims and objectives of processing\nd.\twhat data will be processed to provide the statistical service\ne.\tthe potential outputs that may be created from the processing including the recipients of the outputs\nf.\tthe expected public benefit\n\n2.2\tNHS England will consider the request and confirm in writing approval for ONS to proceed, any conditions of that approval, or that approval is not granted.\n\n2.3\tIf NHS England approval is confirmed, the process for granting access to the data for ONS users to complete the request will be as defined above for the purposes of functions 20, 21, 24, 25 and 26.\n\n3. Onward Disclosure to Devolved Administration of the UK\n\nUses of the Data for the purposes of Section 53A: Onward Disclosure to Devolved Administrations of the United Kingdom will be limited as follows:\n\n3.1\tONS may share record level data sourced from the Personal Demographics Service (PDS) dataset with NRS to ensure a higher level of accuracy for the large number of moves between Scotland and England & Wales.  The data shared will be limited to the following variables only:\na.\tGender\nb.\tDate of Birth\nc.\tNHAIS Posting\nd.\tNHAIS Posting Business Effective From Date\ne.\tPrevious Posting (from Registration Request)\nf.\tType of Registration\ng.\tReason for Removal Type\nh.\tReason for Removal Business Effective From Date\n\n3.2\tONS is permitted to share the above data items with NRS on condition that ONS ensures there are adequate controls in place to ensure that NRS:\na.\tmust not combine the data with other datasets which could potentially increase the risk of reidentification of individuals in the dataset\nb.\tmust not attempt to re-identify individuals in the dataset\nc.\tmust not onwardly share the dataset\nd.\tmust use the dataset solely for the defined purpose of the production of cross-border flows between the four countries of the United Kingdom, using the movement of people, as part of population estimates for the United Kingdom for the Population Estimates Unit, and\ne.\tmust not publish the data\n\n3.3\tONS must maintain a Data Sharing Agreement with NRS (signed by both ONS and NRS) as a means of applying the above controls.\n\n3.4\tIf ONS wishes to share any other NHS England Data with any of the Devolved Administrations, ONS must first obtain written permission from NHS England.  \n\n4. Third Party Access\n\nONS may grant third party access to the Data for the purposes of the ONS’ functions set out in the following sections of the Statistics and Registration Service Act 2007: \n•\tSection 23: Statistical research\n\nUses of the Data for the purposes of Section 23: Statistical research will be subject to the following procedures:\n\n4.1\tThere must be a legitimate requirement to use NHS England Data linked with other data, excluding data held by the researcher(s), that is not sourced from NHS England or obtained by ONS from a common source such as Civil Registration Births and Deaths data.  ONS may not grant researchers access to data that can entirely be obtained directly from NHS England.\n\n4.2\tPermission to request and/or be given access to the Data for the above purposes is restricted to: \na.\tAccredited Researchers (defined as \"an individual who has been accredited to access de-identified data for statistical and research purposes under section 64 of the Digital Economy Act 2017 and/or section 39 of the SRSA, and in accordance with the UK Statistics Authority’s ‘Research Code of Practice and Accreditation Criteria’\".)\nb.\tApproved Researchers (defined, under Section 39(5) of the SRSA, as \"for the purposes of subsection 4(i)...an individual to whom ONS has granted access, for the purposes of statistical research, to information held by it\". The prerequisites and process for becoming an approved researcher are the same as those for accredited researchers under the Digital Economy Act 2017 (DEA), as set out above. Consequently, all approved researchers are recognised as accredited researchers and vice versa.)\n\nNote: Individuals are accredited; not organisations.  It is plausible that an accredited/approved researcher may be employed by or act on behalf of a commercial organisation.  However, the individual must meet the criteria for accreditation and will not be given approval for commercial purposes which are not expected to achieve public benefit. \n\n4.3\tAn applicant must be accredited under the Digital Economy Act (DEA) via People and Project Services (PSS). Accreditation can run in parallel with project application submission. \n\n4.4\tApplicants consult the Metadata Catalogue (https://ons.metadata.works/browser/landing) to verify the dataset access conditions. This includes stipulations on safe settings and assured organisational connectivity.  \n\n4.5\tUsing the Project Accreditation Service for the Secure Research Service (PASS) online forms, the applicants complete an application specifying the project aims, methodology, data requirements, team roles, machine learning use (if applicable), and planned external dataset ingests.\n\n4.6\tThe applicant must define the roles and responsibilities of the project team, including: \na.\tProject Coordinator (mandatory) \nb.\tDeputy Coordinator (optional)\nc.\tAccredited Researchers\nd.\tOutput Reviewer\n\n4.7\tIf the application meets the minimum requirements, ONS begins a formal assessment. This assessment includes: \na.\tInitial application checks for completeness, clarity and alignment with the published accreditation criteria\nb.\tFeasibility and ethics assessment against accreditation criteria including an ethics review carried out by the Centre for Applied Data Ethics\nc.\tInformation Asset Owners (IAOs) are consulted if necessary \nd.\tThe UK Statistics Authority, acting on behalf of the Research Accreditation Panel, reviews the project and researcher for accreditation\ne.\tAdditional risk-based review (if required)\n\n4.8\tWhere a project involves higher levels of risk, further review and accreditation may be undertaken by the Research Accreditation Panel or the National Statistician’s Data Ethics Committee.  \n\nONS must request and obtain written confirmation of approval from NHS England before approving any projects accessing NHS Data and which involve:\na.\tUse of data at higher risk of reidentification, or\nb.\tUse of novel processing methods such as projects planning to use Artificial Intelligence or machine-learning models\n\n4.9\tResearchers may receive multiple rounds of questions at any time throughout the application process from feasibility, ethics, governance, or security teams.\n\n4.10\tOnce approval is in place, the project space is created and access to the data will be provided.\n\n4.11\tResearchers may also send approved data to   the Statistical Support team to be added to the project space. This should be included in the External Datasets section of the initial project application.  \n\n4.12\tA complete record of the accredited researchers and their projects will be published on the UK Statistics Authority website to ensure transparency of access to data for research.\n\n4.13\tResearchers work in the project space until the completion of their project. Once completed, access is revoked.",
+     "organisation": "OFFICE FOR NATIONAL STATISTICS (ONS)",
+     "organisation_type": "Agency/Public Body",
+     "start_date": "2026-10-05",
+     "sublicensing": "Yes",
+     "title": "Office for National Statistics: Data for Statutory Functions",
+     "yielded_benefits": "Yielded Benefits is not a requirement for new applications."
+    }
+   ],
+   "version": "0.4"
+  }
+ ]
+}

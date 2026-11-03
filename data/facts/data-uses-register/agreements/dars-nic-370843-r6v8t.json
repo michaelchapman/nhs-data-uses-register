@@ -1306,6 +1306,128 @@
     }
    ],
    "version": "7.3"
+  },
+  {
+   "reference": "DARS-NIC-370843-R6V8T-v8.2",
+   "states": [
+    {
+     "activities": "Imperial College London will transfer data to NHS England. The data will consist of identifying details (specifically NHS number, Names, Date of Birth, Gender, Address and Postcode, and a unique person ID) for the cohort to be linked with NHS England Data\n\n​​NHS England will provide the relevant records from the datasets listed in this DSA to Imperial College London. The Data will contain directly identifying Data items including Names, NHS Number, Date of Birth, Address and Postcode, Gender, and Cancer Registration numbers which are required to maintain contact with study participants and conduct specific analyses.​ \n\n​​​​The COSMOS Database Manager will separate out the names, NHS numbers and dates of birth of individuals from the Data required to complete specific analyses.  \n\n​Access to the full patient identifiable Data is limited to the database managers and participant administrator of the COSMOS study at Imperial College London.  \n\n​​All analyses will use the dataset with names, NHS numbers and full dates of birth removed. Whilst postcode and month and year of birth will be required to conduct analyses of radiofrequency exposure, there will be no requirement and no attempt to identify individuals from this information.  \n\n​The Data will be stored on servers operated by Imperial College London\n\n​​​​ The Data will be accessed onsite at the premises of Imperial College London and by authorised personnel via remote access.    \n\n​The Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.   \n\n​For remote access:   \n​-\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA;   \n​-\tAccess controls granting users the minimum level of access required are in place;   \n​-\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data;   \n​-\tMultifactor authentication (MFA) is required for remote access;   \n​-\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access;   \n​-\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this agreement) and complies with the organisation’s remote access policy.    \n\n​The above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).\n\n​​The Data will be linked at person record level with the following datasets:    \n\n​•\tSelf-reported data from questionnaires filled out voluntarily by study participants   \n​•\tMobile network operator data   \n​•\tStudy participants’ mobile phone usage data   \n​•\tUK COSMOS data on other wireless technology and environmental exposures   \n​•\tNHS England-equivalent data from Scotland, Wales and Northern Ireland   \n​•\tGP records provided directly from the participants’ GP, or via the Clinical Practice Research Datalink",
+     "commercial": "No",
+     "controller_basis": "Sole Data Controller",
+     "controllers": [
+      "IMPERIAL COLLEGE LONDON"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Cancer Registration Data",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Demographics",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Accident and Emergency (HES A and E)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Critical Care (HES Critical Care)",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "Hospital Episode Statistics Outpatients (HES OP)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cause of Death Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Cohort Event Notification Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - Flagging Current Status Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      },
+      {
+       "confidentiality": "Consent (Reasonable Expectation)",
+       "frequency": "One-Off",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+       "name": "MRIS - List Cleaning Report",
+       "sensitivity": "Sensitive",
+       "type_of_data": "Identifiable"
+      }
+     ],
+     "end_date": "2029-09-14",
+     "expected_benefits": "The outputs of the COSMOS research project are expected to benefit health protection and promotion as follows:\n\n1. Safety of mobile phones: The primary objective of the COSMOS study is to ascertain whether there is any link between long-term use of mobile phones and the long-term health of users. Where such a link is identified, it would be relevant and important to mobile phone users, health professionals, and the mobile phone industry to understand in what circumstances risks might be increased. This could help to identify specific ways (e.g. technological and/or behavioural) to reduce radiofrequency exposure levels.\n\nAlternatively, a finding of no demonstrable effect would be reassuring to the mobile phone user community and would place any current and future concerns about possible health effects into proper context based on objective evidence.\n\n2. Clarity in respect of the specific health effects of long-term use of radiofrequency technology, such as risk of cancer or other chronic health outcomes including cardiovascular disease, mental health, neurological conditions such as stroke or Parkinson’s disease, and birth outcomes .\n\nThe international COSMOS study (of which the UK COSMOS study is a partner) is uniquely placed to address these gaps in the scientific evidence. Continuing to gather the data necessary to undertake and report on the study’s analyses of mobile phone use and emerging radiofrequency technologies and health should allow the potential long-term health effects to be better understood. A key UK stakeholder in this research is the Department of Health and Social Care and UK Health Security Agency with whom the research team are in regular communication. The findings would be relevant to, and inform, UK health policy on use of mobile phones and newly emerging radiofrequency technologies.\n\n3. Provide evidence-based information for UK and international health policy on use of mobile phones and newly emerging mobile technologies, in order to protect health and promote healthy use of technology. Specifically, it is expected that the detailed research outputs on mobile phone use, and potential associated health risks will allow the UK Chief Medical Officer to review the current precautionary advice regarding mobile phone use, and if required, update this advice. The research outputs are intended to allow international organisations (World Health Organisation, International Commission on Non-Ionising Radiation Protection (ICNIRP)) to review current advice and guidelines, and revise these if necessary.\n\nThe use of the Data could:\n\n• lead to the identification or improvement of treatments or interventions, or health system design to improve health outcomes or experience.\n\n• advance understanding of regional and national trends in health and social care needs.\n\n• advance understanding of the need for, or effectiveness of, preventative health measures for particular populations.\n\n• support knowledge creation or exploratory research (and the innovations and developments that might result from that exploratory work).\n\nIt is hoped that through publication of findings in appropriate media, the findings of this research will raise awareness of the consequences of using mobile phones and also could be used in the future by policy makers and regulatory bodies to support their recommendations regarding use of mobile devices. \n\nThe results of the study will be widely disseminated to the scientific community, the public and policy makers. Specifically, results will feed in to government advice on any risks associated with the use of mobile phone technology and other sources of radiofrequency electromagnetic fields and will inform reviews of these technologies by the World Health Organisation. Press releases will be used to publicise findings to a wider audience, should the findings warrant such attention.",
+     "expected_output": "The expected outputs of the processing will be:\n\n• Regular reports of findings to the Department of Health and Social Care’s Policy Research Programme\n• Submissions to peer reviewed journals such as the Lancet, British Medical Journal, and Environmental Health Perspectives throughout the life course of the COSMOS programme\n• Presentations at international conferences such as the International Society for Environmental Epidemiology\n• Presentations at national conferences such as the UK Occupational and Environmental Epidemiology Meeting\n\nThe outputs will not contain NHS England Data and will only contain aggregated information with small numbers suppressed as appropriate in line with the relevant disclosure rules for the dataset(s) from which the information was derived.\n\nThe outputs will be communicated to relevant recipients through the following dissemination channels:\n\n• Journals\n• Public events such as the Imperial Festival or New Scientist Live public science event\n• Workshops and webinars involving the Medical Research Council (MRC) Centre for Environment and Health’s Community Advisory Board (CAB), joint with the Medical Research Council’s Health Protection Research Unit (HPRU) International Scientific Advisory Board, which comprises non-governmental organisations, politicians, press and industry representatives, and an Outreach Committee which facilitates public engagement with the research.\n• Lay executive summaries of published reports on the UK COSMOS study website\n• Participant newsletters/ emails advising of the publication of lay summaries\n• Social media\n• Posters displayed at MRC Centre and HPRU internal meetings and national and international meetings\n\nOutputs are expected to be produced and disseminated throughout 2026-2028 on a range of themes, including the relationship between mobile phone use and cardio/ cerebrovascular outcomes; reproductive health outcomes; neurodegenerative disorders; and neurological/ psychiatric disorders. Further outputs will be published on an ongoing basis as more data becomes available on the outcomes of the study participants.",
+     "objective": "​​The Data will be used for the purpose of: COSMOS: Cohort Study of mobile phone use and health  \n\n​​COSMOS is a longitudinal research study of adult mobile phone users across Europe. The UK arm of the COSMOS study (“UK COSMOS study”) is run by Imperial College London (ICL).  \n\n​​The COSMOS International Research Consortium was established to use specific scientific expertise of each partner in different areas of health research and environmental exposure science. The COSMOS International Research Consortium comprises the following partners:  \n\n​​• Department of Epidemiology & Biostatistics, School of Public Health, Imperial College London, UK  \n​​• Department of Biostatistics and Epidemiology, Institute of Cancer Epidemiology, Danish Cancer Institute, Copenhagen, Denmark  \n​​• Institute of Environmental Medicine (IMM), Karolinska Institutet, Stockholm, Sweden  \n​​• Tampere School of Public Health, University of Tampere, Finland  \n​​• Institute for Risk Assessment Sciences (IRAS), University of Utrecht, Utrecht, The Netherlands  \n​​• Section of Environment and Radiation, International Agency for Research on Cancer (IARC), Lyon, France  \n\n​​Each partner institution in the consortium are sole Controllers for the data they collect, apply for, and hold within their countries. The decisions and processes for acquiring and holding these Data in the UK are solely the responsibility of Imperial College London; other partner institutions do not share this responsibility for UK Data.  \n\n​​Decisions about joint analyses of data across centres are by agreement of the local Principal Investigators (PIs) who have the authority to withhold their data from the pooled analyses.  \n\n​​To achieve the scientific aims of the international COSMOS study, pooled analysis of data from all the participating countries is essential. This Agreement permits the processing of NHS England Data within Imperial College London with onward sharing under sublicense to COSMOS consortium members only for COSMOS research purposes. Participants were informed at the time of consenting that data obtained from them and other sources will be shared for analysis with international partner institutions \n\n​​​​​​Access is limited to;  \n\n• ​​Substantive employees of ICL  \n• ​​Students (MSc and PhD) affiliated with ICL  \n• ​Individuals holding honorary contracts under the supervision of an ICL employee \n• ​Under Sub-licence agreements- ​Substantive employees of COSMOS International Research Consortium from the following organisations   \n• ​​Department of Epidemiology & Biostatistics, School of Public Health, Imperial College London, UK  \n• ​​Department of Biostatistics and Epidemiology, Institute of Cancer Epidemiology, Danish Cancer Institute, Copenhagen, Denmark  \n• ​​Institute of Environmental Medicine (IMM), Karolinska Institutet, Stockholm, Sweden  \n• ​​Tampere School of Public Health, University of Tampere, Finland  \n• ​​Institute for Risk Assessment Sciences (IRAS), University of Utrecht, Utrecht, The Netherlands  \n• ​​Section of Environment and Radiation, International Agency for Research on Cancer (IARC), Lyon, Franc ​ \n\n​​​​Data may only be used for the COSMOS research programme, specifically to answer the following questions:   \n\n​​• To investigate whether there is any link between long-term use of mobile phones and other wireless technologies and human health  \n​​• To enable long-term prospective health monitoring of the UK COSMOS study participants via linkage to health records and mortality data, to capture chronic health outcomes as they occur.  \n​​• To provide additional information about the health status of UK COSMOS study participants prior to the baseline assessment of the cohort, via linkage to health records  \n​​• To conduct pooled prospective longitudinal epidemiological analyses of the international COSMOS cohort, incorporating pseudonymised data on the UK COSMOS cohort participants, on use of mobile phones and wireless technologies and a wide range of possible adverse health outcomes (e.g. cancers, cardiovascular disease, stroke, neurodegenerative disease, mental health disorders and birth outcomes)  \n​​• To conduct epidemiological analyses on other environmental exposures (e.g. noise, air pollution) and health outcomes  \n​​• To maintain contact with study participants throughout the course of the study ​ \n\n​The Data cannot be used: \n\n• ​​Outside the defined purpose(s) as listed above   \n• ​​For any commercial purpose   \n• ​​To identify individuals   \n• ​​By sub-licensees for any purpose other than approved COSMOS analyses   \n• ​​Onward sharing beyond approved sublicensing to COSMOS consortium members​  \n\n​​Requests for data are reviewed and approved by Imperial (COSMOS) Data Access Committee (DAC) chaired by the Principal investigator of COSMOS. ​ \n\n​All requests to use the data will proceed according to the following process:  \n\n​• Requests for data should begin with completing a data access form which will be used in the DAC meetings. Forms should include as much detail as possible including purposes for processing and the data being applied for \n​• Approved data requests will be shared with the COSMOS data managers. They will prepare the data extracts and make them available to the appropriate users within the COSMOS TRE. \n​• All users accessing COSMOS data must agree to an acceptable use and confidentiality agreement as well as undertaking recent data protection training. \n​• For external transfers, appropriate secure file transfer protocol will be agreed with the data processors and all data anonymisation will be determined before leaving the COSMOS TRE  \n​",
+     "organisation": "IMPERIAL COLLEGE LONDON",
+     "organisation_type": "Academic",
+     "start_date": "2026-09-15",
+     "sublicensing": "Yes",
+     "title": "COSMOS: Cohort Study of mobile phone use and health",
+     "yielded_benefits": "Findings from 264,574 COSMOS participants suggest that the cumulative amount of mobile phone use is not associated with the risk of developing glioma, meningioma, or acoustic neuroma as per “Feychting et al (2024) Mobile phone use and brain tumour risk - COSMOS, a prospective cohort study. Environ Int. 185:108552\n\nFurther findings and updates are expected to be published in the following years. As it is integral to the design of a long-term cohort study, such as COSMOS, to start with a ‘healthy’ population.\n\nImperial College London have to wait for sufficient cases of incident disease to accrue in the cohort before they can conduct health analyses that are sufficiently statistically powered. It is crucial that analyses are sufficiently statistically powered, to ensure that this produces reliable and robust evidence to inform policy."
+    }
+   ],
+   "version": "8.2"
   }
  ]
 }

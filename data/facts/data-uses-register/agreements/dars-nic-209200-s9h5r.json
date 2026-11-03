@@ -500,6 +500,65 @@
     }
    ],
    "version": "5.6"
+  },
+  {
+   "reference": "DARS-NIC-209200-S9H5R-v6.4",
+   "states": [
+    {
+     "activities": "​​No data will flow to NHS England for the purposes of this agreement. Participating Early Intervention in Psychosis (EIP) teams submit data into the MHSD dataset as part of routine care. An individual from Royal College of Psychiatrists working under honorary contract with NHS England will use Care Professional Team Local Identifiers to identify a cohort from the MHSD. This cohort will include Date of Birth and NHS number, which will be used to link the cohort with other NHS England data.​ No identifiable data will flow from NHS England. \n\nNHS England will provide the relevant records for the cohort from the Mental Health Services Data Set (MHSDS), Emergency Care Data Set (ECDS),  Civil Registrations of Death (CRD) and Hospital Episode Statistics Admitted Patient Care (HES APC) to the Royal College of Psychiatrists. The Data will contain no direct identifying data items. The Care Professional Team Local Identifier will identify the EIP team. This is an locally identifiable field from the MHSD that is not identifiable to the audit team at the Royal College of Psychiatrists. These identifiers may allow identification of individuals by the originating EIP provider organisations, but do not enable identification of individuals by the Royal College of Psychiatrists. \n\nAn individual working under honorary contract with NHS England processes data to identify, extract and link the relevant cohort.\n\nThe Data will not be transferred to any other location.\n\n​​Data is securely stored on servers at the Royal College of Psychiatrists and accessed only by authorised personnel. Access is controlled in accordance with organisational security policies, and all processing is conducted within secure environments. \n\n​​Participating EIP teams are also able to securely access and download patient-level data relating to their own service via a controlled file transfer mechanism (e.g. Egress secure file sharing). Access is strictly restricted such that each team can only access data relating to their own patients, based on existing identifiers. No cross-organisational access to patient-level data is permitted. \n \nAll access to outputs and downloads is subject to appropriate authentication and access controls. \n\n​​Data is backed up on cloud servers provided by Microsoft Azure.\n\n​​The Data will be accessed onsite at the premises of Royal College of Psychiatrists and via remote access.  \n\n​The Controller(s) must confirm and provide evidence upon audit by NHS England that access via any remote device complies with the data security obligations within this DSA and the Data Sharing Framework Contract.  \n\n​​For remote access:  \n\n​•\tRemote access will only be from secure locations situated within the territory of use (as further restricted elsewhere within the DSA if so done) stated within this DSA.  \n\n​•\tAccess controls granting users the minimum level of access required are in place.  \n\n​•\tRemote access is only via secure connections (e.g., VPNs or secure protocols) to protect data.  \n\n​•\tMultifactor authentication (MFA) is required for remote access.  \n\n​•\tDevice security, including up-to-date software and operating systems, antivirus software, and enabled firewalls are utilised for the remote access.  \n\n​•\tAll remote access is undertaken within the scope of the organisation’s DSPT (or other security arrangements as per this DSA) and complies with the organisation’s remote access policy.  \n\n​The above applies in addition to any condition set out elsewhere within the DSA (e.g. who may carry out processing, and for what purpose).​",
+     "commercial": "No",
+     "controller_basis": "Joint Data Controller",
+     "controllers": [
+      "HEALTHCARE QUALITY IMPROVEMENT PARTNERSHIP (HQIP)",
+      "NHS ENGLAND - X26"
+     ],
+     "datasets": [
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Civil Registrations of Death",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Emergency Care Data Set (ECDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Hospital Episode Statistics Admitted Patient Care (HES APC)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      },
+      {
+       "confidentiality": "Section 251 NHS Act 2006",
+       "frequency": "Ongoing",
+       "legal_basis": "Health and Social Care Act 2012 – s261(2)(a)",
+       "name": "Mental Health Services Data Set (MHSDS)",
+       "sensitivity": "Non-Sensitive",
+       "type_of_data": "Anonymised - ICO Code Compliant"
+      }
+     ],
+     "end_date": "2027-11-22",
+     "expected_benefits": "The transition to the use of routinely collected data for NCAP has reduced the burden on services, as teams are no longer required to collect bespoke audit data to evidence performance. This enables clinical time and resources to be focused on delivering patient care.\n\nThe use of the Mental Health Services Data Set (MHSDS) as the primary data source for the audit is also supporting improvements in the quality, completeness and consistency of national mental health data. Ongoing work by RCPsych has identified variation in data recording across services, and the audit continues to support improvements in data quality through ongoing engagement with NHS England and participating services, including the use of appropriate clinical coding standards.\n\nImproved data quality allows for a more accurate understanding of the care being delivered to people using EIP services. This enables the audit to identify variation in practice, highlight areas of good performance, and identify where improvements in care are needed.\n\nThe outputs of the audit support quality improvement activities within NHS services by providing timely and relevant information to clinical teams, service managers and commissioners. The move to more frequent data provision supports more responsive monitoring of performance and enables services to identify and address issues more quickly.\n\nAt a national level, the findings contribute to a better understanding of variation in service provision and outcomes, supporting evidence-based decision making and informing policy, service development and resource allocation.\n\nThe inclusion of linked Hospital Episode Statistics (HES) data enhances the ability of the audit to better understand patient outcomes and care pathways, providing a more comprehensive view of care across services and supporting the identification of opportunities to improve patient outcomes.\n\nNCAP aims to improve the quality of care that NHS mental health services provide to people with psychosis. This is achieved by producing high-quality, actionable audit findings that are shared with those who commission, deliver and use services.\n\nThrough dissemination and use of these findings, the audit contributes to improving the consistency, effectiveness and experience of care for people using EIP services, with the overall aim of improving clinical outcomes and patient experience.",
+     "expected_output": "Outputs, Dissemination and Use\nThe expected outputs of the processing will include:\n- NCAP Audit Reports (produced annually)\n- An online dashboard to show performance against EIP audit measures\n- Presentations at conferences and quality improvement workshops\n- A structured dataset to be utilised as a resource for approved secondary analysis and health research\n\nThe outputs will not contain NHS England data in identifiable or record-level form and will only contain aggregated information with small numbers suppressed, in line with the relevant disclosure control rules for the dataset(s) from which the information is derived.\n\nIn addition to aggregated outputs, participating EIP services are able to securely access patient-level data relating to their own service only, via controlled access mechanisms, to support local validation and quality improvement activities. No patient-level data is shared across organisations or published.\n\nOutputs will be communicated to relevant stakeholders through the following dissemination channels:\n- Peer-reviewed journals\n- Workshops focused on audit findings and quality improvement\n- Webinars\n- Public reports\n- Social media\n- Reports aimed at EIP services, which are also made publicly available via the NCAP website\n\nDissemination will target a range of audiences including healthcare providers, commissioners, policymakers, researchers and service users, with the aim of supporting improvements in service quality and patient outcomes.\n\nThe outputs will be used to support quality improvement and improve the delivery of care and treatment for people using EIP services.\n\nOutputs will be produced and disseminated on an ongoing basis.",
+     "objective": "​​The Healthcare Quality Improvement Partnership (HQIP) requires access to NHS England data for the National Clinical Audit of Psychosis (NCAP), specifically Early Intervention in Psychosis (EIP) routine data. \n\n​HQIP commissions NCAP on behalf of the National Clinical Audit and Patient Outcomes Programme (NCAPOP) and is involved in decisions about the processing of the data. \n \nPurpose of the audit: \nThe aim of NCAP is to improve the quality of care that NHS mental health services provide to people with psychosis. This is achieved through analysis of routinely collected national datasets to assess performance against NCAP standards, thus providing high quality audit data on NHS care to support those who commission, deliver and use services.",
+     "organisation": "ROYAL COLLEGE OF PSYCHIATRISTS",
+     "organisation_type": "Academic",
+     "start_date": "2026-10-23",
+     "sublicensing": "No",
+     "title": "National Clinical Audit of Psychosis (NCAP)",
+     "yielded_benefits": "The Royal College of Psychiatrists has now successfully transitioned the NCAP audit from the collection of bespoke audit data to the use of routinely collected data from the Mental Health Services Data Set (MHSDS). This transition has already delivered measurable benefits for participating services.\n\nThe use of routinely collected data has reduced the burden on clinical teams, as services are no longer required to complete additional bespoke data submissions. This has enabled services to reallocate time and resources towards delivering care to patients.\n\nThe implementation of this approach has also supported early improvements in the quality and completeness of data submitted to the MHSDS. Initial findings suggest small improvements in data recording, and ongoing engagement with NHS England and participating services continues to support progress, including the use of appropriate clinical coding standards.\n\nThe use of routine data has enabled more timely and sustainable audit processes. Audit outputs are now produced more efficiently, supporting regular reporting and enabling services to review performance and identify areas for improvement more frequently.\n\nThe audit has enhanced understanding of variation in care delivery across services. By analysing routinely collected data at scale, NCAP has been able to identify areas of good practice as well as variation in performance, supporting targeted quality improvement activity.\nThese changes have strengthened the ability of the audit to support improvements in the delivery of care and treatment for people using Early Intervention in Psychosis (EIP) services.\n\nThe transition to using routinely collected data has enabled the audit to access a more complete and comprehensive cohort than was previously available through bespoke data collection. This allows NCAP to include a larger and more representative group of patients, improving the robustness and coverage of the audit."
+    }
+   ],
+   "version": "6.4"
   }
  ]
 }
