@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Published papers — {{ meta.site_name }}{% endblock %}
+{% block description %}Published papers found to have used data released under agreements in the NHS England Data Uses Register, each listed once with the agreements it is linked to.{% endblock %}
+{% block content %}
+{# From a separate review of published papers, not from the register. It never
+   calls a paper a benefit: see `pipeline.outputs`. #}
+{% macro paper(p) -%}
+<li class="paper">
+  <a href="{{ p.url }}">{{ p.title }}</a>{% if p.year %} <span class="hint">({{ p.year }})</span>{% endif %}
+  {%- if p.basis == "found" and p.register_cited %} <span class="hint">· also cited in the register</span>{% endif %}
+  <ul class="paper-agreements">
+    {% for link in p.agreements %}{% set a = link.agreement %}
+    <li><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title }}</a> <span class="hint">{{ a.organisation|org }} · {{ a.base_reference }}{% if p.basis == "found" and link.basis == "unreadable" %} · cited by the register for this agreement, not checked{% endif %}</span></li>
+    {% endfor %}
+  </ul>
+</li>
+{%- endmacro %}
+<h1>Published papers</h1>
+<p class="lede">{{ (found|length + unreadable|length)|commas }} published papers linked to agreements in the register, each listed once with the agreements it is linked to.</p>
+<p class="papers-flag"><strong>Not part of the register.</strong>
+  These links come from a separate review of open-access papers, made against the {{ outputs_meta.register_edition|edition }} edition of the register (<a href="{{ meta.repo_url }}/commit/{{ outputs_meta.source_commit }}">{{ outputs_meta.source_commit }}</a>) and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. A listed paper shows the data was used in published work, not what difference that work made. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a></p>
+
+<nav aria-label="On this page" class="contents">
+  <h2 class="contents-title">On this page</h2>
+  <ul>
+    {% if found %}<li><a href="#found">Papers found to have used the data</a> ({{ found|length|commas }})</li>{% endif %}
+    {% if unreadable %}<li><a href="#unreadable">Cited by the register, not checked</a> ({{ unreadable|length|commas }})</li>{% endif %}
+  </ul>
+</nav>
+
+{% if found %}
+<h2 id="found">Papers found to have used the data</h2>
+<p class="hint">Newest first. Each paper is listed once, under every agreement whose data it was found to use.</p>
+<ul class="paper-list">
+  {% for p in found %}{{ paper(p) }}
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if unreadable %}
+<h2 id="unreadable">Cited by the register, not checked</h2>
+<p class="hint">Cited in the register's benefit text; the full text isn't openly available, so the review couldn't check it.</p>
+<ul class="paper-list">
+  {% for p in unreadable %}{{ paper(p) }}
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

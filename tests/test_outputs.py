@@ -30,14 +30,19 @@ def write(rows: list[dict], path: Path) -> None:
     }))
 
 
-def build_with(rows: list[dict] | None, out: Path) -> tuple[str, str]:
-    """The first agreement's page and the About page, built with `rows` as data/outputs.json."""
+def build_site(rows: list[dict] | None, out: Path) -> None:
+    """The site, built with `rows` as data/outputs.json, or with no file if None."""
     with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
         path = Path(directory) / "outputs.json"
         if rows is not None:
             write(rows, path)
         with mock.patch.object(outputs, "PATH", path):
             build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
+
+
+def build_with(rows: list[dict] | None, out: Path) -> tuple[str, str]:
+    """The first agreement's page and the About page, built with `rows` as data/outputs.json."""
+    build_site(rows, out)
     page = (out / "agreements" / REFERENCE.lower() / "index.html").read_text()
     return page, (out / "about" / "index.html").read_text()
 
@@ -79,6 +84,50 @@ class Page(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             page, _ = build_with([row(title="<script>x</script> in A&E")], Path(directory))
         self.assertIn("&lt;script&gt;x&lt;/script&gt; in A&amp;E", page)
+
+
+class PapersPage(unittest.TestCase):
+    def test_each_paper_is_listed_once_with_its_agreements(self):
+        rows = [
+            row(),
+            row(agreement=f"{REFERENCE}-v1"),
+            row(doi="10.1000/other", title="A paper the register cites", basis="unreadable", year=2020),
+            # Found under no agreement with a page: left out.
+            row(agreement="DARS-NIC-99999-ZZZZZ", doi="10.1000/orphan", title="Orphan paper"),
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            build_site(rows, Path(directory))
+            page = (Path(directory) / "papers" / "index.html").read_text()
+            home = (Path(directory) / "index.html").read_text()
+            sitemap = (Path(directory) / "sitemap.xml").read_text()
+        self.assertIn("<h1>Published papers</h1>", page)
+        self.assertEqual(page.count("https://doi.org/10.1136/bmj-2024-000001"), 1)
+        self.assertIn("Not part of the register.", page)
+        self.assertIn('id="found"', page)
+        self.assertIn('id="unreadable"', page)
+        self.assertIn(f"/agreements/{REFERENCE.lower()}/", page)
+        self.assertNotIn("Orphan paper", page)
+        self.assertIn("2 published papers", page)
+        self.assertIn('/papers/">Papers</a>', home)
+        self.assertIn("/papers/</loc>", sitemap)
+
+    def test_no_file_means_no_page_and_no_menu_item(self):
+        with tempfile.TemporaryDirectory() as directory:
+            build_site(None, Path(directory))
+            self.assertFalse((Path(directory) / "papers").exists())
+            home = (Path(directory) / "index.html").read_text()
+        self.assertNotIn("/papers/", home)
+
+    def test_found_wins_when_a_paper_has_both_reasons(self):
+        loaded = {"by_agreement": {
+            "A": [{**row(), "url": "u", "basis": "found", "register_cited": False}],
+            "B": [{**row(), "url": "u", "basis": "unreadable", "register_cited": True}],
+        }}
+        agreements = [{"base_reference": "A"}, {"base_reference": "B"}]
+        [paper] = outputs.papers(loaded, agreements)
+        self.assertEqual(paper["basis"], "found")
+        self.assertTrue(paper["register_cited"])
+        self.assertEqual([link["basis"] for link in paper["agreements"]], ["found", "unreadable"])
 
 
 class Load(unittest.TestCase):

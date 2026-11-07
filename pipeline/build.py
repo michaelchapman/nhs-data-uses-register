@@ -235,8 +235,12 @@ def build(
         }
     )
 
+    # Papers linked to agreements, from data/outputs.json; see `pipeline.outputs`.
+    # With no file there is no papers page, and the menu doesn't offer one.
+    output_links = outputs.load()
     context = {
         "meta": meta,
+        "papers_page": bool(output_links),
         # The edition being built. A historical changes page overrides `meta`
         # to show its own edition, but its list of editions still needs to know
         # which one is current.
@@ -334,14 +338,22 @@ def build(
     # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
     # Agreement pages flag them as AI-generated; the About page names the models.
     overview_entries = overviews.load()
-    # Papers linked to agreements, from data/outputs.json; see `pipeline.outputs`.
-    output_links = outputs.load()
     render(
         "about.html",
         "about/index.html",
         overview_models=overviews.models_used(overview_entries),
         output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
     )
+    if output_links:
+        all_papers = outputs.papers(output_links, data["agreements"] + archived)
+        render(
+            "papers.html",
+            "papers/index.html",
+            found=[p for p in all_papers if p["basis"] == "found"],
+            unreadable=[p for p in all_papers if p["basis"] == "unreadable"],
+            outputs_meta=output_links,
+            org_slugs=org_slugs,
+        )
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 

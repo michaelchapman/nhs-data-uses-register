@@ -129,3 +129,30 @@ def stats(outputs: dict | None, references: set[str]) -> dict | None:
         "unreadable_papers": len({r["doi"].lower() for rows in listed.values() for r in rows if r["basis"] == "unreadable"}),
         "register_edition": outputs["register_edition"],
     }
+
+
+def papers(outputs: dict | None, agreements: list[dict]) -> list[dict]:
+    """Every linked paper once, with the agreements it is linked to.
+
+    A paper the review found used one agreement's data, and that the register
+    cites for another without the review being able to read it, is listed as
+    found, and each agreement keeps its own reason. Agreements with no page
+    here are left out, and so is a paper left with none.
+    """
+    if not outputs:
+        return []
+    pages = {a["base_reference"].upper(): a for a in agreements}
+    by_doi: dict[str, dict] = {}
+    for ref, rows in outputs["by_agreement"].items():
+        agreement = pages.get(ref)
+        if not agreement:
+            continue
+        for r in rows:
+            paper = by_doi.setdefault(r["doi"].lower(), {**r, "agreements": []})
+            if r["basis"] == "found":
+                paper["basis"] = "found"
+            paper["register_cited"] = paper["register_cited"] or r["register_cited"]
+            paper["agreements"].append({"agreement": agreement, "basis": r["basis"]})
+    for paper in by_doi.values():
+        paper["agreements"].sort(key=lambda link: (link["basis"] != "found", link["agreement"]["base_reference"]))
+    return sorted(by_doi.values(), key=lambda p: (-(p["year"] or 0), p["title"].lower()))
