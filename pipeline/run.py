@@ -42,6 +42,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", type=Path, default=ROOT / "_site", help="output directory")
     parser.add_argument("--site-url", default=os.environ.get("SITE_URL", DEFAULT_SITE_URL))
     parser.add_argument("--base-path", default=os.environ.get("SITE_BASE_PATH", DEFAULT_BASE_PATH))
+    parser.add_argument("--strict", action="store_true",
+                        help="fail if the build prints a warning, as CI does")
     return parser.parse_args()
 
 
@@ -155,7 +157,7 @@ def main() -> None:
         history_entry["edition"] = held_edition
         changes_history.append(history_entry)
     meta = {
-        "site_name": "NHS Data Access Explorer",
+        "site_name": "Health Data Uses Explorer",
         "site_url": args.site_url.rstrip("/"),
         "base_path": args.base_path.rstrip("/"),
         "repo_url": REPO_URL,
@@ -179,6 +181,8 @@ def main() -> None:
     build_module.build(
         data, meta, changes, args.output, changes_history=changes_history, history=history, rules=rules
     )
+    if args.strict and build_module.WARNINGS:
+        raise SystemExit(f"{len(build_module.WARNINGS)} build warning(s); see above. Fix them, or build without --strict.")
 
 
 if __name__ == "__main__":
