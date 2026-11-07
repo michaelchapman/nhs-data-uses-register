@@ -118,7 +118,9 @@ Budget about two minutes a month, plus about a minute for the parse.
 
    Read any overview it lists as flagged in `data/summaries.json`: delete its
    `flags` if it is right, or fix the summary first. See
-   [plan.md](plan.md#ai-overviews).
+   [plan.md](plan.md#ai-overviews). Agreements found only in the earlier
+   release registers are included; their text never changes, so after their
+   first run they need nothing.
 
 6. **Check the numbers look sane,** then commit and push:
 

@@ -73,6 +73,23 @@ def current(agreement: dict, entries: dict[str, dict]) -> dict | None:
     return {**entry, "model_name": MODEL_NAMES.get(entry.get("model", ""), entry.get("model", "an AI model"))}
 
 
+def earlier_source(view: dict) -> dict:
+    """An agreement found only in the earlier release registers, in the shape
+    `current` and `pipeline.summarise` read: its latest version's text, as its
+    page shows it under "Why the data was released"."""
+    latest = view.get("latest") or {}
+    datasets = {d["dataset"] for v in view.get("versions", []) for d in v.get("datasets", [])}
+    return {
+        "base_reference": view["base_reference"],
+        "slug": view.get("slug", ""),
+        "title": "",
+        "organisation": view.get("organisation", ""),
+        "earlier": True,
+        "latest": {**(latest.get("texts") or {}), "organisation_type": view.get("organisation_type", ""),
+                   "datasets": [{"name": name} for name in sorted(datasets)]},
+    }
+
+
 def models_used(entries: dict[str, dict]) -> list[str]:
     """The names of the models that wrote the overviews, for the About page."""
     return sorted({MODEL_NAMES.get(e.get("model", ""), e.get("model", "")) for e in entries.values() if e.get("model")})

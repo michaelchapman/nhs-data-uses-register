@@ -506,13 +506,17 @@ def build(
     search_numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
     render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
            org_slugs=org_slugs, search_numbers=search_numbers, earlier_only=earlier_only, org_names=org_names)
+    # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
+    # Agreement pages flag them as AI-generated; the About page names the models.
+    overview_entries = overviews.load()
     if earlier_only:
         render("earlier-agreements.html", "agreements/earlier/index.html", agreements=earlier_only, org_slugs=org_slugs,
                org_names=org_names)
         for agreement in earlier_only:
             render("earlier-agreement.html", f"agreements/{agreement['slug']}/index.html", agreement=agreement,
                    rows=agreement["rows"], org_slugs=org_slugs, org_names=org_names,
-                   papers=outputs.for_agreement(agreement, output_links))
+                   papers=outputs.for_agreement(agreement, output_links),
+                   overview=overviews.current(overviews.earlier_source(agreement), overview_entries))
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
            archived_organisations=archive["organisations"], earlier_organisations=list(earlier_orgs.values()))
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
@@ -568,9 +572,6 @@ def build(
             "last": by_month.get(f"{chart_start_year - 1}-12", {}).get("agreements", 0),
         },
     )
-    # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
-    # Agreement pages flag them as AI-generated; the About page names the models.
-    overview_entries = overviews.load()
     render(
         "about.html",
         "about/index.html",

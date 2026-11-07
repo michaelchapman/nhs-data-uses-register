@@ -9,7 +9,7 @@ from unittest import mock
 
 import openpyxl
 
-from pipeline import build, earlier, outputs
+from pipeline import build, earlier, outputs, overviews, summarise
 from pipeline.extract import extract
 
 from .fixtures import FIRST_EDITION, dataset_aliases, site_meta, workbook_bytes
@@ -236,8 +236,13 @@ class SiteTest(unittest.TestCase):
         links.write_text(json.dumps({"register_edition": "november2026", "source_commit": "abc1234", "outputs": [
             {"agreement": "DARS-NIC-99999-ZZZZZ", "doi": "10.1000/finished", "title": "What the finished study found",
              "year": 2018, "basis": "found", "register_cited": False}]}))
+        loaded = earlier.load(cls.store.path)
+        finished = overviews.earlier_source(earlier.view(loaded["agreements"]["DARS-NIC-99999-ZZZZZ"], loaded["periods"]))
+        summaries = root / "summaries.json"
+        overviews.write({"DARS-NIC-99999-ZZZZZ": {"hash": overviews.text_hash(finished["latest"]), "summary": "Leeds ran a finished study.",
+                                                   "model": "claude-sonnet-5-5", "written": "2026-11-07"}}, summaries)
         with dataset_aliases(), mock.patch.object(earlier, "STORE", cls.store.path), mock.patch("builtins.print"), \
-                mock.patch.object(outputs, "PATH", links):
+                mock.patch.object(outputs, "PATH", links), mock.patch.object(overviews, "PATH", summaries):
             build.build(data, site_meta(), FIRST_EDITION, cls.out)
 
     @classmethod
@@ -267,6 +272,19 @@ class SiteTest(unittest.TestCase):
         self.assertIn("What the finished study found", html)
         self.assertIn("made against NHS Digital's earlier release registers", html)
         self.assertNotIn("What the finished study found", self.page("papers"))   # the papers page counts register agreements only
+
+    def test_overview_on_page_for_agreement_only_in_earlier_registers(self):
+        html = self.page("agreements/dars-nic-99999-zzzzz")
+        self.assertIn("Leeds ran a finished study.", html)
+        self.assertIn("AI-generated summary, not part of the register.", html)
+
+    def test_overview_text_for_agreement_only_in_earlier_registers(self):
+        loaded = earlier.load(self.store.path)
+        source = overviews.earlier_source(earlier.view(loaded["agreements"]["DARS-NIC-99999-ZZZZZ"], loaded["periods"]))
+        text = summarise.agreement_text(source)
+        self.assertIn("A finished study", text)
+        self.assertIn("NHS Digital's release register", text)
+        self.assertIn("Other Data Set", text)
 
     def test_dataset_page(self):
         datasets = {d["name"] for v in self.known["versions"] for d in v["datasets"]}

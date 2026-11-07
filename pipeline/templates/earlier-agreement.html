@@ -19,6 +19,15 @@
 {% if agreement.organisation_succeeded %}<p class="hint">Listed under <a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ org_names.get(agreement.organisation_slug, "")|org }}</a>, which took it over, according to NHS ODS.</p>{% endif %}
 <p class="notice"><strong>Never in the Data Uses Register.</strong> This agreement appears only in the release registers NHS Digital published before July 2021{% if agreement.last_label %}, last in {{ agreement.last_label }}{% endif %}. The registers don't say why an agreement stops appearing: most likely it ended, or no data was released under it after then. It is not counted in this site's figures.</p>
 {{ earlier_flag() }}
+{% if overview %}
+{# Written by an AI model, not by NHS Digital, so it says so first, as on other agreement pages. #}
+<section class="overview" aria-labelledby="overview">
+  <h2 id="overview">Overview</h2>
+  <p class="overview-flag"><strong>AI-generated summary, not part of the register.</strong>
+    Written from the release register's text under <a href="#purpose">Why the data was released</a>, which is the authoritative version. It may contain mistakes. <a href="{{ meta.base_path }}/about/#ai-overviews">How these summaries are written</a></p>
+  <p class="overview-text">{{ overview.summary }}</p>
+</section>
+{% endif %}
 
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
