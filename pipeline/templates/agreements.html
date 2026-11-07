@@ -69,7 +69,7 @@
 
 <div class="name-matches" data-name-matches data-names="{{ meta.base_path }}/search/{{ meta.edition }}/names.json" data-base="{{ meta.base_path }}" hidden></div>
 <p class="result-count" role="status" data-filter-count>Showing all {{ stats.agreements|commas }} agreements.</p>
-<p class="hint">Newest first, by when the latest version of each agreement started. Select a column heading to sort by it.</p>
+<p class="hint">Newest first, by when the latest version of each agreement started. "Since" is the earliest date the registers give for an agreement: its first version's start{% if earlier_only %}, or the first <a href="{{ meta.base_path }}/about/#earlier-registers">earlier release register</a> listing data released under it{% endif %}. Select a column heading to sort by it.</p>
 {% include "_release-scope.html" %}
 
 <div class="table-scroll">
@@ -82,6 +82,7 @@
       <th scope="col">Type</th>
       <th scope="col" class="num">Datasets</th>
       <th scope="col" class="num">Files</th>
+      <th scope="col">Since</th>
       <th scope="col">Latest term</th>
       <th scope="col">Status</th>
       <th scope="col">Commercial</th>
@@ -105,6 +106,7 @@
       <td data-label="Type">{{ a.organisation_type or "—" }}</td>
       <td class="num" data-label="Datasets">{{ a.dataset_names|length }}</td>
       <td class="num" data-label="Files">{{ a.files_released|commas }}</td>
+      <td class="nowrap" data-label="Since" data-sort="{{ a.since }}">{{ a.since|month }}</td>
       <td class="nowrap" data-label="Latest term" data-sort="{{ a.coverage_end }}">{{ a.latest_start|date }} to {{ a.coverage_end|date }}</td>
       {{ status_cell(a, meta.as_of) }}
       <td data-label="Commercial">{{ a.commercial or "—" }}</td>

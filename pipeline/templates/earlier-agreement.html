@@ -51,6 +51,8 @@
 </div>
 {% endfor %}
 
+{% set no_benefits = not v.texts.yielded_benefits %}{% set earlier_review = true %}{% include "_papers.html" %}
+
 <h2 id="history">Versions</h2>
 <p>{{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 }} listed, newest first. Text is shown where it differs from the version after it.</p>
 {% for version, newer in rows %}

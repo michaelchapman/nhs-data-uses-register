@@ -1,6 +1,7 @@
 import hashlib
 import io
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,7 +9,7 @@ from unittest import mock
 
 import openpyxl
 
-from pipeline import build, earlier
+from pipeline import build, earlier, outputs
 from pipeline.extract import extract
 
 from .fixtures import FIRST_EDITION, dataset_aliases, site_meta, workbook_bytes
@@ -231,7 +232,12 @@ class SiteTest(unittest.TestCase):
         })
         cls.store.ingest()
         cls.out = root / "site"
-        with dataset_aliases(), mock.patch.object(earlier, "STORE", cls.store.path), mock.patch("builtins.print"):
+        links = root / "outputs.json"
+        links.write_text(json.dumps({"register_edition": "november2026", "source_commit": "abc1234", "outputs": [
+            {"agreement": "DARS-NIC-99999-ZZZZZ", "doi": "10.1000/finished", "title": "What the finished study found",
+             "year": 2018, "basis": "found", "register_cited": False}]}))
+        with dataset_aliases(), mock.patch.object(earlier, "STORE", cls.store.path), mock.patch("builtins.print"), \
+                mock.patch.object(outputs, "PATH", links):
             build.build(data, site_meta(), FIRST_EDITION, cls.out)
 
     @classmethod
@@ -255,6 +261,13 @@ class SiteTest(unittest.TestCase):
         self.assertIn("dars-nic-99999-zzzzz", self.page("agreements/earlier"))
         self.assertIn("/agreements/dars-nic-99999-zzzzz/", (self.out / "sitemap.xml").read_text())
 
+    def test_papers_on_page_for_agreement_only_in_earlier_registers(self):
+        html = self.page("agreements/dars-nic-99999-zzzzz")
+        self.assertIn('id="papers"', html)
+        self.assertIn("What the finished study found", html)
+        self.assertIn("made against NHS Digital's earlier release registers", html)
+        self.assertNotIn("What the finished study found", self.page("papers"))   # the papers page counts register agreements only
+
     def test_dataset_page(self):
         datasets = {d["name"] for v in self.known["versions"] for d in v["datasets"]}
         self.assertIn("Other Data Set", datasets)
@@ -275,6 +288,12 @@ class SiteTest(unittest.TestCase):
         self.assertIn("/organisations/gone-away-research-ltd/", self.page("agreements/dars-nic-88888-yyyyy"))
         self.assertIn("/organisations/gone-away-research-ltd/", self.page("organisations"))
         self.assertIn("/organisations/gone-away-research-ltd/", (self.out / "sitemap.xml").read_text())
+
+    def test_agreements_list_since_counts_the_earlier_registers(self):
+        html = self.page("agreements")
+        row = html[html.index(f"/agreements/{self.known['slug']}/"):]
+        since = re.search(r'data-label="Since" data-sort="([^"]*)"', row)[1]
+        self.assertEqual(since, min(self.known["first_start"] or "9999", "2017-03-01"))
 
     def test_agreements_list_searchable(self):
         html = self.page("agreements")
