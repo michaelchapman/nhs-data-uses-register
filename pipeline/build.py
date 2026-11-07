@@ -291,7 +291,7 @@ def earlier_organisations(earlier_only: list[dict], organisation_aliases: dict, 
         entry["agreement_count"] = len(entry["agreements"])
         entry["last_listed"] = max(a["last_listed"] for a in entry["agreements"])
         entry["last_label"] = max(entry["agreements"], key=lambda a: a["last_listed"])["last_label"]
-        entry["dataset_names"] = sorted({n for a in entry["agreements"] for n in a["dataset_names"]}, key=str.casefold)
+        entry["dataset_names"] = sorted({n for a in entry["agreements"] for n in a["dataset_names"]}, key=lambda n: (n.casefold(), n))
         entry["datasets"] = sorted(
             {(d["dataset"], d["slug"]) for a in entry["agreements"] for v in a["versions"] for d in v["datasets"]},
             key=lambda pair: pair[0].casefold(),
@@ -334,7 +334,7 @@ def link_earlier_datasets(views: list[dict], spellings: dict[str, str], alias_ma
         entry["agreements"].sort(key=lambda r: (r["first_start"], r["base_reference"]))
         first = entry["agreements"][0]
         entry["first_label"] = first["first"]
-        entry["names"] = sorted(entry["names"], key=str.casefold)
+        entry["names"] = sorted(entry["names"], key=lambda n: (n.casefold(), n))
     return by_dataset
 
 
@@ -416,6 +416,14 @@ def build(
     earlier_by_base, earlier_only = earlier_views(
         earlier_store, data["agreements"] + archived, organisation_aliases, organisation_lineage
     )
+    # The earliest date any register gives for an agreement: its first
+    # version's start, or the first release register listing data released
+    # under it, whichever is earlier.
+    for agreement in data["agreements"] + archived:
+        view = earlier_by_base.get(agreement["base_reference"])
+        agreement["since"] = min(
+            [d for d in (agreement["first_start"], view["first_listed"] if view else "") if d], default=""
+        )
     taken = {a["slug"] for a in data["agreements"] + archived}
     for agreement in [a for a in earlier_only if a["slug"] in taken]:
         print(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
@@ -503,7 +511,8 @@ def build(
                org_names=org_names)
         for agreement in earlier_only:
             render("earlier-agreement.html", f"agreements/{agreement['slug']}/index.html", agreement=agreement,
-                   rows=agreement["rows"], org_slugs=org_slugs, org_names=org_names)
+                   rows=agreement["rows"], org_slugs=org_slugs, org_names=org_names,
+                   papers=outputs.for_agreement(agreement, output_links))
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
            archived_organisations=archive["organisations"], earlier_organisations=list(earlier_orgs.values()))
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])

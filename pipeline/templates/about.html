@@ -49,6 +49,7 @@
   <li><strong>What is left out.</strong> Papers the register doesn't cite that the review couldn't confirm, and protocols and analysis plans.</li>
   <li><strong>The lists are incomplete.</strong> The review reads open-access papers only, and finds about half of the papers the register itself cites. An agreement with no papers listed may still have published.</li>
   {% if output_lag %}<li><strong>Papers take time.</strong> Where the agreement's first start date is known ({{ output_lag.papers|commas }} papers), a paper typically appears {{ output_lag.median }} years after the agreement started, and half appear between {{ output_lag.low }} and {{ output_lag.high }} years after. So an agreement that started recently has had little time to publish.</li>{% endif %}
+  {% if earlier_stats %}<li><strong>Agreements only in the earlier registers.</strong> These have no titles, so the review links papers to them only where a paper quotes the agreement's reference, or an approval or trial number from the agreement's text, or where the earlier register cites the paper. Their papers are shown on their own pages, not on Published papers or in the counts above.</li>{% endif %}
   <li><strong>A listed paper is not a measured benefit.</strong> It shows the data was used in published work, not what difference that work made.</li>
 </ul>
 

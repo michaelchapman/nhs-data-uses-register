@@ -1,0 +1,48 @@
+{#- Papers the separate review linked to an agreement: agreement pages, and pages for agreements only in the earlier registers. -#}
+{% if papers %}
+{# From a separate review of published papers, not from the register, so it
+   says so first. It never calls a paper a benefit: see `pipeline.outputs`. #}
+{% macro paper(p) -%}
+<li><a href="{{ p.url }}">{{ p.title }}</a>{% if p.untitled %} <span class="hint">(title not available)</span>{% endif %}{% if p.year %} <span class="hint">({{ p.year }})</span>{% endif %}
+  {%- if p.basis == "found" and p.register_cited %} <span class="hint">· also cited in the register</span>{% endif %}
+  {#- The heading already says the rest weren't confirmed; only an unread paper needs a note. #}
+  {%- if p.basis == "unreadable" %}<br><span class="hint paper-result">Not checked: full text not openly available</span>{% endif %}</li>
+{%- endmacro %}
+{# The five newest show; a long list folds the rest, so the datasets and file
+   releases below stay in reach on an agreement with dozens of papers. #}
+{% macro paper_list(rows, name) -%}
+<ul class="paper-list">
+  {% for p in rows[:5] %}{{ paper(p) }}
+  {% endfor %}
+</ul>
+{% if rows|length > 5 %}
+<details class="fold paper-more">
+  <summary><span class="fold-show">Show {{ rows|length - 5 }} more</span><span class="fold-hide">Hide {{ rows|length - 5 }} more</span><span class="visually-hidden"> {{ name }}</span></summary>
+  <ul class="paper-list">
+    {% for p in rows[5:] %}{{ paper(p) }}
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
+{%- endmacro %}
+<section class="papers" aria-labelledby="papers">
+<h2 id="papers">Papers linked to this agreement</h2>
+<p class="papers-flag"><strong>Not part of the register.</strong>
+  These links come from a separate review of open-access papers, made against {% if earlier_review %}NHS Digital's earlier release registers{% else %}the {{ papers.register_edition|edition }} edition of the register (<a href="{{ meta.repo_url }}/commit/{{ papers.source_commit }}">{{ papers.source_commit }}</a>){% endif %} and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a>{% if not earlier_review %} · <a href="{{ meta.base_path }}/papers/">All published papers</a>{% endif %}</p>
+{% if papers.found %}
+<h3>Papers found to have used this agreement's data</h3>
+{% if no_benefits %}
+<p class="hint">The {% if earlier_review %}earlier registers report{% else %}register reports{% endif %} no benefits for this agreement. These papers were found by the review, not cited by the {% if earlier_review %}registers{% else %}register{% endif %}.</p>
+{% endif %}
+{{ paper_list(papers.found, "papers found to have used this agreement's data") }}
+{% endif %}
+{% if papers.cited %}
+<h3>Cited in the {% if earlier_review %}earlier release register{% else %}register{% endif %}, not confirmed by the review</h3>
+<p class="hint">The applicant cites these papers in the {% if earlier_review %}earlier release register's text{% else %}register's benefit text{% endif %}. The review couldn't confirm they used this agreement's data.</p>
+{{ paper_list(papers.cited, "papers cited in the register") }}
+{% endif %}
+{% if onward is defined and onward and not onward.commissioning %}
+<p class="hint">Only papers the review tied to this agreement itself are shown. Papers from projects that {{ onward.holder }} approves may be on its own lists, <a href="#onward">below</a>.</p>
+{% endif %}
+</section>
+{% endif %}
