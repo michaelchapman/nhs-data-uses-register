@@ -42,7 +42,7 @@ def register(releases: list[list], purposes: list[list] | None = None, release_s
     return buffer.getvalue()
 
 
-def release(reference, dataset="HES Admitted Patient Care", organisation="UNIVERSITY OF LEEDS", purpose=None):
+def release(reference, dataset="Other Data Set", organisation="UNIVERSITY OF LEEDS", purpose=None):
     return [organisation, dataset, "Pseudonymised", "Sensitive", "s261", purpose, "One-Off", reference, None]
 
 
@@ -91,6 +91,41 @@ class ReferenceTest(unittest.TestCase):
         self.assertEqual(earlier.period_label("2017-03-01", "2017-05-31"), "March to May 2017")
         self.assertEqual(earlier.period_label("2019-04-01", "2019-04-30"), "April 2019")
         self.assertEqual(earlier.period_label("2016-12-01", "2017-02-28"), "December 2016 to February 2017")
+
+
+class DatasetMatchTest(unittest.TestCase):
+    SPELLINGS = {
+        "Hospital Episode Statistics Admitted Patient Care (HES APC)": "hes-apc",
+        "Acute-Local Provider Flows": "acute",
+        "Diagnostic Imaging Data Set (DID)": "did",
+        "Mental Health Minimum Data Set": "mhmds",
+        "Mental Health Minimum Data Set (MHMDS)": "mhmds-2",
+    }
+
+    def match(self, name):
+        found = earlier.match_datasets([name], self.SPELLINGS)
+        return found[name]["slug"] if name in found else None
+
+    def test_exact(self):
+        self.assertEqual(self.match("Acute-Local Provider Flows"), "acute")
+
+    def test_spelling(self):
+        self.assertEqual(self.match("Diagnostic Imaging Dataset"), "did")
+        self.assertEqual(self.match("Hospital Episode Statistics Admitted Patient Care"), "hes-apc")
+
+    def test_rewrites(self):
+        self.assertEqual(self.match("Standard Monthly Extract : HES Inpatient"), "hes-apc")
+        self.assertEqual(self.match("Local Provider Data - Acute"), "acute")
+
+    def test_several_flows_or_pages_link_nowhere(self):
+        self.assertIsNone(self.match("Local Provider Data - Acute, Ambulance"))
+        # Two pages share the spelling key, so neither is chosen.
+        self.assertIsNone(self.match("Mental Health Minimum Dataset"))
+        self.assertIsNone(self.match("ONS Births"))
+
+    def test_alias_map(self):
+        found = earlier.match_datasets(["Old HES"], {"Acute": "acute"}, {"old hes": "Acute"})
+        self.assertEqual(found["Old HES"]["slug"], "acute")
 
 
 class ReadWorkbookTest(unittest.TestCase):
@@ -217,6 +252,13 @@ class SiteTest(unittest.TestCase):
         self.assertIn("A finished study", html)
         self.assertIn("dars-nic-99999-zzzzz", self.page("agreements/earlier"))
         self.assertIn("/agreements/dars-nic-99999-zzzzz/", (self.out / "sitemap.xml").read_text())
+
+    def test_dataset_page(self):
+        datasets = {d["name"] for v in self.known["versions"] for d in v["datasets"]}
+        self.assertIn("Other Data Set", datasets)
+        html = self.page("datasets/other-data-set")
+        self.assertIn('id="earlier-registers"', html)
+        self.assertIn("dars-nic-99999-zzzzz", html)
 
     def test_about_page(self):
         self.assertIn('id="earlier-registers"', self.page("about"))

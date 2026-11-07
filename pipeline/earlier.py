@@ -37,7 +37,7 @@ from pathlib import Path
 
 import openpyxl
 
-from . import sources
+from . import aliases, sources
 from .records import clean, clean_line
 from .references import slugify, version_key
 
@@ -336,6 +336,7 @@ def _version_view(version: dict, periods: dict[str, str], texts: dict[str, str])
             "form": "; ".join(sorted(row["forms"])),
             "frequency": "; ".join(sorted(row["frequencies"])),
             "first_start": held[0],
+            "last_start": held[-1],
         })
     dataset_rows.sort(key=lambda r: (r["first_start"], r["dataset"].lower()))
     return {
@@ -386,17 +387,141 @@ def view(record: dict, periods: dict[str, str], held: set[str] | None = None) ->
     }
 
 
+# --- Dataset names ------------------------------------------------------------------------------
+#
+# The earlier registers name datasets their own way: "Standard Monthly Extract :
+# HES Inpatient", "Local Provider Data - Acute". A name is linked to one of the
+# site's dataset pages only on its spelling, never on which datasets happened to
+# be released alongside it (that evidence is swamped by HES, which goes to almost
+# everyone). In order:
+#
+#   1. the name is one the Data Uses Register itself uses, so the site's own
+#      aliases already place it;
+#   2. it is the same name apart from case, punctuation, "&" for "and",
+#      "Dataset" for "Data Set", or an acronym in brackets;
+#   3. one of the rewrites below turns it into such a name.
+#
+# A name that matches more than one page, or none, is shown as written and
+# linked nowhere. `python -m pipeline.earlier datasets` lists both.
+
+DATASET_REWRITES: list[tuple[re.Pattern, str]] = [
+    # How an extract was produced, not what it holds.
+    (re.compile(r"^(standard monthly extract|bespoke extract(/linkage)?)\s*:\s*", re.IGNORECASE), ""),
+    (re.compile(r"^HES Inpatients?$", re.IGNORECASE), "Hospital Episode Statistics Admitted Patient Care"),
+    (re.compile(r"^HES A&E$", re.IGNORECASE), "Hospital Episode Statistics Accident and Emergency"),
+    (re.compile(r"^HES Outpatients?$", re.IGNORECASE), "Hospital Episode Statistics Outpatients"),
+    (re.compile(r"^HES Critical Care$", re.IGNORECASE), "Hospital Episode Statistics Critical Care"),
+    (re.compile(r"^SUS PbR APC Episodes$", re.IGNORECASE), "Secondary Uses Service Payment By Results Episodes"),
+    (re.compile(r"^SUS PbR APC Spells$", re.IGNORECASE), "Secondary Uses Service Payment By Results Spells"),
+    (re.compile(r"^SUS PbR A&E$", re.IGNORECASE), "Secondary Uses Service Payment By Results Accident & Emergency"),
+    (re.compile(r"^SUS PbR OP$", re.IGNORECASE), "Secondary Uses Service Payment By Results Outpatients"),
+    (re.compile(r"^PROMS$", re.IGNORECASE), "Patient Reported Outcome Measures"),
+    # The commissioning flows were "Local Provider Data - Acute" before they
+    # were "Acute-Local Provider Flows". A name listing several flows at once
+    # has no single page, and keeps its comma, so matches nothing.
+    (re.compile(r"^Local Provider Data - ([^,]+)$", re.IGNORECASE), r"\1-Local Provider Flows"),
+    (re.compile(r"^Primary Care-Local Provider Flows$", re.IGNORECASE), "Primary Care Services-Local Provider Flows"),
+    (re.compile(r"^Primary Care Mortality Database$", re.IGNORECASE), "Primary Care Mortality Data"),
+]
+
+
+def dataset_key(name: str) -> str:
+    """`name` with case, punctuation, bracketed acronyms and spelling variants that don't matter removed."""
+    text = re.sub(r"\([^)]*\)", " ", name.lower())
+    text = text.replace("&", " and ").replace("dataset", "data set")
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", text).split())
+
+
+def match_datasets(names, spellings: dict[str, str], alias_map: dict[str, str] | None = None) -> dict[str, dict]:
+    """`{earlier name: {"slug", "how"}}` for each name that maps to one dataset page.
+
+    `spellings` is `{every name the Data Uses Register uses: the slug of its page}`;
+    `alias_map` is the site's dataset aliases, which know names no current
+    version uses.
+    """
+    alias_map = alias_map or {}
+    pages = set(spellings.values())
+    by_key: dict[str, set[str]] = defaultdict(set)
+    for spelling, slug in spellings.items():
+        by_key[dataset_key(spelling)].add(slug)
+
+    def find(name):
+        if name in spellings:
+            return spellings[name], "the register's own name"
+        if slugify(aliases.resolve(name, alias_map)) in pages:
+            return slugify(aliases.resolve(name, alias_map)), "the register's own name"
+        slugs = by_key.get(dataset_key(name), set())
+        if len(slugs) == 1:
+            return next(iter(slugs)), "the same name, spelled differently"
+        return None, ""
+
+    matched = {}
+    for name in names:
+        slug, how = find(name)
+        if not slug:
+            rewritten = name
+            for pattern, replacement in DATASET_REWRITES:
+                rewritten = pattern.sub(replacement, rewritten).strip()
+            if rewritten != name:
+                slug, _ = find(rewritten)
+                how = f"read as {rewritten!r}"
+        if slug:
+            matched[name] = {"slug": slug, "how": how}
+    return matched
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=("ingest", "verify"))
-    parser.add_argument("folder", type=Path, help="the folder holding the workbooks")
+    parser.add_argument("command", choices=("ingest", "verify", "datasets"))
+    parser.add_argument("folder", type=Path, nargs="?", help="the folder holding the workbooks")
     args = parser.parse_args()
+    if args.command == "datasets":
+        report_datasets()
+        return
+    if args.folder is None:
+        parser.error(f"{args.command} needs the folder holding the workbooks")
     files = [row for row in listed_files() if not row.get("skip")]
     if args.command == "verify":
         _workbooks(args.folder, files)
         print(f"ok: all {len(files)} files match {FILES.name}")
         return
     ingest(args.folder)
+
+
+def report_datasets() -> None:
+    """List how each dataset name in the earlier registers is linked, and which aren't."""
+    from . import run
+    from .rules import Rules
+
+    rules = Rules.load()
+    store = load(excluded=rules.excluded)
+    if not store:
+        raise SystemExit(f"nothing ingested into {STORE}")
+    register = sources.registers("data-uses-register")[0]
+    data, _, _ = run.from_store(register, None, rules)
+    spellings = dataset_spellings(data["agreements"] + data["archived"], rules.dataset_aliases)
+    names: dict[str, int] = defaultdict(int)
+    for record in store["agreements"].values():
+        for version in record["versions"]:
+            for release in version["releases"]:
+                names[release["dataset"]] += 1
+    matched = match_datasets(names, spellings, rules.dataset_aliases)
+    for name in sorted(names, key=lambda n: -names[n]):
+        found = matched.get(name)
+        print(f"{names[name]:5d}  {name}  ->  {found['slug'] + '  (' + found['how'] + ')' if found else 'NOT LINKED'}")
+    print(f"\n{len(matched)} of {len(names)} names linked, covering "
+          f"{sum(names[n] for n in matched):,} of {sum(names.values()):,} release rows")
+
+
+def dataset_spellings(agreements: list[dict], alias_map: dict[str, str]) -> dict[str, str]:
+    """`{name: dataset page slug}` for every dataset name the given agreements use."""
+    spellings = {}
+    for agreement in agreements:
+        for version in agreement["versions"]:
+            for name in [d["name"] for d in version["datasets"]] + [r["dataset"] for r in version["releases"]]:
+                if name and name not in spellings:
+                    spellings[name] = slugify(aliases.resolve(name, alias_map))
+    return spellings
 
 
 if __name__ == "__main__":
