@@ -11,7 +11,8 @@
 {%- endmacro %}
 
 {# One version: when it was listed, the datasets released under it, and its text where it differs from `newer`'s. #}
-{% macro earlier_version(version, newer, open=false) %}
+{# `level`: the heading level of each text, one below the section the versions sit in. #}
+{% macro earlier_version(version, newer, open=false, level=4) %}
 <details class="version"{% if open %} open{% endif %}>
   <summary>
     <span class="version-ref">{{ version_label(version) }}</span>
@@ -37,7 +38,7 @@
     {% set _ = same.append(section) %}
     {% else %}
     <div class="prose-block">
-    <h4>{{ section }}</h4>
+    <h{{ level }}>{{ section }}</h{{ level }}>
     <details class="fold">{{ fold_summary(section|lower) }}
     {% for para in version.texts[key]|paragraphs %}<p>{{ para }}</p>{% endfor %}
     </details>

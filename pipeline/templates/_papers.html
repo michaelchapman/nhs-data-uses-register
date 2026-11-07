@@ -28,7 +28,7 @@
 <section class="papers" aria-labelledby="papers">
 <h2 id="papers">Papers linked to this agreement</h2>
 <p class="papers-flag"><strong>Not part of the register.</strong>
-  These links come from a separate review of open-access papers, made against {% if earlier_review %}NHS Digital's earlier release registers{% else %}the {{ papers.register_edition|edition }} edition of the register (<a href="{{ meta.repo_url }}/commit/{{ papers.source_commit }}">{{ papers.source_commit }}</a>){% endif %} and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a>{% if not earlier_review %} · <a href="{{ meta.base_path }}/papers/">All published papers</a>{% endif %}</p>
+  These links come from a separate review of open-access papers, made against {% if earlier_review %}NHS Digital's earlier release registers{% else %}the {{ papers.register_edition|edition }} edition of the register{% endif %} and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a>{% if not earlier_review %} · <a href="{{ meta.base_path }}/papers/">All published papers</a>{% endif %}</p>
 {% if papers.found %}
 <h3>Papers found to have used this agreement's data</h3>
 {% if no_benefits %}
