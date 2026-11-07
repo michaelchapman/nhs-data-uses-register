@@ -259,6 +259,16 @@ class SiteTest(unittest.TestCase):
         self.assertIn("An earlier objective", html)
         self.assertIn("March to May 2017", html)
 
+    def test_known_agreement_dates_from_its_first_listing(self):
+        # Listed receiving data in March 2017, before its first start date in
+        # the Data Uses Register, so that listing is when it dates from, as in
+        # the agreements list's "Since" column.
+        html = self.page(f"agreements/{self.known['slug']}")
+        self.assertLess("2017-03-01", self.known["first_start"])
+        self.assertIn('<dt>Since</dt><dd><a href="#earlier-registers">March to May 2017</a> <span class="hint">first listed receiving data</span>', html)
+        self.assertNotIn("<dt>Start date</dt>", html)
+        self.assertNotIn("<dt>First listed receiving data</dt>", html)
+
     def test_page_for_agreement_only_in_earlier_registers(self):
         html = self.page("agreements/dars-nic-99999-zzzzz")
         self.assertIn("Never in the Data Uses Register", html)
@@ -276,6 +286,7 @@ class SiteTest(unittest.TestCase):
     def test_overview_on_page_for_agreement_only_in_earlier_registers(self):
         html = self.page("agreements/dars-nic-99999-zzzzz")
         self.assertIn("Leeds ran a finished study.", html)
+        self.assertIn("The agreement was last listed in March to May 2017, so read the summary as what it was for", html)
         self.assertIn("AI-generated summary, not part of the register.", html)
 
     def test_overview_text_for_agreement_only_in_earlier_registers(self):

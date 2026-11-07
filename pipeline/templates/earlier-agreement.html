@@ -26,6 +26,7 @@
   <p class="overview-flag"><strong>AI-generated summary, not part of the register.</strong>
     Written from the release register's text under <a href="#purpose">Why the data was released</a>, which is the authoritative version. It may contain mistakes. <a href="{{ meta.base_path }}/about/#ai-overviews">How these summaries are written</a></p>
   <p class="overview-text">{{ overview.summary }}</p>
+  <p class="overview-flag">The agreement was last listed {{ "in " ~ agreement.last_label if agreement.last_label else "before July 2021" }}, so read the summary as what it was for, even where it speaks of the present.</p>
 </section>
 {% endif %}
 
@@ -65,7 +66,7 @@
 <h2 id="history">Versions</h2>
 <p>{{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 }} listed, newest first. Text is shown where it differs from the version after it.</p>
 {% for version, newer in rows %}
-{{ earlier_version(version, newer, open=loop.first) }}
+{{ earlier_version(version, newer, open=loop.first, level=3) }}
 {% endfor %}
 
 <p class="source-note">Source: NHS Digital release registers, {{ earlier_span }}, published under the Open Government Licence v3.0. Search those workbooks for <code>{{ agreement.base_reference|replace("DARS-", "") }}</code> to see the original rows.</p>

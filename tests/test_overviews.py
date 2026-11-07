@@ -11,7 +11,7 @@ from .fixtures import FIRST_EDITION, dataset_aliases, site_meta, workbook_bytes
 REFERENCE = "DARS-NIC-1-AAAAA"
 
 
-def build_with(entries: dict, out: Path) -> str:
+def build_with(entries: dict, out: Path, as_of: str | None = None) -> str:
     """The first agreement's page, built with `entries` as data/summaries.json."""
     with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
         path = Path(directory) / "summaries.json"
@@ -21,7 +21,7 @@ def build_with(entries: dict, out: Path) -> str:
             entry.setdefault("hash", overviews.text_hash(agreement["latest"]))
         overviews.write(entries, path)
         with mock.patch.object(overviews, "PATH", path):
-            build.build(data, site_meta(), FIRST_EDITION, out)
+            build.build(data, {**site_meta(), **({"as_of": as_of} if as_of else {})}, FIRST_EDITION, out)
     return (out / "agreements" / REFERENCE.lower() / "index.html").read_text()
 
 
@@ -51,6 +51,18 @@ class Overview(unittest.TestCase):
         self.assertLess(page.index('id="overview"'), page.index('id="purpose"'))
         head = page[: page.index("</head>")]
         self.assertNotIn("Leeds studies", head)
+
+    def test_an_expired_agreement_says_when_its_term_ended(self):
+        # Overviews are rewritten only when the text changes, so one written
+        # while an agreement ran can outlive its term.
+        with tempfile.TemporaryDirectory() as directory:
+            current = build_with({REFERENCE: entry()}, Path(directory) / "now")
+            ended = build_with({REFERENCE: entry()}, Path(directory) / "later", as_of="2031-01-01")
+        self.assertNotIn("read the summary as what it was for", current)
+        self.assertIn("The agreement's latest version ended on 1 January 2030, so read the summary as what it was for", ended)
+
+    def test_the_instructions_ask_for_wording_that_outlives_the_term(self):
+        self.assertIn('never "is using"', summarise.INSTRUCTIONS)
 
     def test_an_overview_of_older_text_is_not_shown(self):
         with tempfile.TemporaryDirectory() as directory:
