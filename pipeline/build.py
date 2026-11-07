@@ -10,7 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, overviews, privacy, relations, releases, search, sectors, sources
+from . import aliases, compare, ods, outputs, overviews, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify
@@ -235,8 +235,14 @@ def build(
         }
     )
 
+    # Papers linked to agreements, from data/outputs.json; see `pipeline.outputs`.
+    # With no file there is no papers page, and the menu doesn't offer one.
+    output_links = outputs.load()
+    all_papers = outputs.papers(output_links, data["agreements"] + archived)
+    papers_by_org = outputs.by_organisation(all_papers)
     context = {
         "meta": meta,
+        "papers_page": bool(output_links),
         # The edition being built. A historical changes page overrides `meta`
         # to show its own edition, but its list of editions still needs to know
         # which one is current.
@@ -334,7 +340,23 @@ def build(
     # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
     # Agreement pages flag them as AI-generated; the About page names the models.
     overview_entries = overviews.load()
-    render("about.html", "about/index.html", overview_models=overviews.models_used(overview_entries))
+    render(
+        "about.html",
+        "about/index.html",
+        overview_models=overviews.models_used(overview_entries),
+        output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
+    )
+    if output_links:
+        render(
+            "papers.html",
+            "papers/index.html",
+            papers=all_papers,
+            organisations=sorted(
+                papers_by_org.items(), key=lambda item: (-item[1], display_name(org_names.get(item[0], item[0])).lower())
+            ),
+            org_names=org_names,
+            outputs_meta=output_links,
+        )
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
@@ -353,6 +375,7 @@ def build(
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
             timeline=releases.agreement_timeline(agreement, dataset_aliases, meta["as_of"]),
             overview=overviews.current(agreement, overview_entries),
+            papers=outputs.for_agreement(agreement, output_links),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(
@@ -365,6 +388,7 @@ def build(
             org_slugs=org_slugs,
             dataset_slugs=dataset_slugs,
             search_numbers=search_numbers,
+            paper_count=papers_by_org.get(organisation["slug"], 0),
         )
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of

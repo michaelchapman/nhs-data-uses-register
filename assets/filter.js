@@ -131,7 +131,7 @@
     var text = form.querySelector("[data-filter-text]");
     var selects = Array.prototype.slice.call(form.querySelectorAll("[data-filter-select]"));
     var flags = Array.prototype.slice.call(form.querySelectorAll("[data-filter-flag]"));
-    var noun = (count && /\b(agreements|organisations|datasets|changes)\b/.exec(count.textContent) || [, "rows"])[1];
+    var noun = (count && /\b(agreements|organisations|datasets|changes|papers)\b/.exec(count.textContent) || [, "rows"])[1];
     var reset = form.querySelector("[data-filter-reset]");
     // "Clear filters", or "Reset filters" where a filter is on by default. A
     // form with only a search box has no button: the box clears itself.

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Published papers — {{ meta.site_name }}{% endblock %}
+{% block description %}Published papers found to have used data released under agreements in the NHS England Data Uses Register, each listed once with the agreements it is linked to.{% endblock %}
+{% block content %}
+{# From a separate review of published papers, not from the register. It never
+   calls a paper a benefit: see `pipeline.outputs`. One row per paper, so a
+   thousand of them can be searched, filtered and sorted (assets/filter.js);
+   every row is in the HTML, so the page still reads with JavaScript off. #}
+{% set found = papers|selectattr("basis", "equalto", "found")|list %}
+<h1>Published papers</h1>
+<p class="lede">{{ papers|length|commas }} published papers linked to agreements in the register, each listed once with the agreements it is linked to.</p>
+<p class="papers-flag"><strong>Not part of the register.</strong>
+  These links come from a separate review of open-access papers, made against the {{ outputs_meta.register_edition|edition }} edition of the register (<a href="{{ meta.repo_url }}/commit/{{ outputs_meta.source_commit }}">{{ outputs_meta.source_commit }}</a>) and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. A listed paper shows the data was used in published work, not what difference that work made. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a></p>
+
+<form class="filters" data-filter-form data-target="papers-table" role="search" aria-label="Filter papers">
+  <div class="field">
+    <label for="q">Search papers</label>
+    <input type="search" id="q" data-filter-text autocomplete="off" aria-describedby="q-hint" placeholder="e.g. cancer, Leeds, DARS-NIC-00574">
+    <p class="hint" id="q-hint">Searches each paper's title and year, and the title, reference and organisation of its agreements.</p>
+  </div>
+  <div class="filter-more" id="paper-filters" data-filter-more>
+  <div class="field">
+    <label for="reason">Why listed</label>
+    <select id="reason" data-filter-select data-key="reason" aria-describedby="reason-hint">
+      <option value="">Any</option>
+      <option value="found">Found to have used the data ({{ found|length|commas }})</option>
+      <option value="unreadable">Cited by the register, not checked ({{ (papers|length - found|length)|commas }})</option>
+    </select>
+    <p class="hint" id="reason-hint">"Cited by the register, not checked": cited in the register's benefit text, but the full text isn't openly available, so the review couldn't check it.</p>
+  </div>
+  <div class="field">
+    <label for="org">Organisation</label>
+    <select id="org" data-filter-select data-filter-tokens data-key="org" aria-describedby="org-hint">
+      <option value="">All organisations</option>
+      {% for slug, count in organisations %}
+      <option value="{{ slug }}">{{ org_names.get(slug, slug)|org }} ({{ count|commas }})</option>
+      {% endfor %}
+    </select>
+    <p class="hint" id="org-hint">The organisation that applied for the agreement.</p>
+  </div>
+  <div class="field">
+    <label for="year">Year</label>
+    <select id="year" data-filter-select data-key="year">
+      <option value="">Any year</option>
+      {% for year in papers|map(attribute="year")|select|unique|sort(reverse=true) %}
+      <option value="{{ year }}">{{ year }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <p class="filter-actions">
+    <button type="button" data-filter-reset>Clear filters</button>
+  </p>
+  </div>
+</form>
+
+<p class="result-count" role="status" data-filter-count>Showing all {{ papers|length|commas }} papers.</p>
+
+<div class="table-scroll">
+<table class="data-table sortable stack paper-table" id="papers-table">
+  <caption class="visually-hidden">Published papers linked to agreements, newest first</caption>
+  <thead><tr><th scope="col">Paper</th><th scope="col" class="num">Year</th><th scope="col">Agreements</th><th scope="col">Why listed</th></tr></thead>
+  <tbody>
+  {% for p in papers %}
+    <tr data-reason="{{ p.basis }}" data-org="{{ p.organisations|join(' ') }}" data-year="{{ p.year or '' }}">
+      <th scope="row"><a href="{{ p.url }}">{{ p.title }}</a>{% if p.untitled %} <span class="hint">(title not available)</span>{% endif %}</th>
+      <td class="num" data-label="Year" data-sort="{{ p.year or 0 }}">{{ p.year or "—" }}</td>
+      <td data-label="Agreements" data-sort="{{ p.agreements|length }}">
+        <ul class="paper-agreements">
+          {% for link in p.agreements %}{% set a = link.agreement %}
+          <li><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title|truncate(90) }}</a> <span class="hint">{{ a.organisation|org }} · {{ a.base_reference }}{% if p.basis == "found" and link.basis == "unreadable" %} · cited by the register for this agreement, not checked{% endif %}</span></li>
+          {% endfor %}
+        </ul>
+      </td>
+      <td data-label="Why listed">{{ "Found to have used the data" if p.basis == "found" else "Cited by the register, not checked" }}{% if p.basis == "found" and p.register_cited %}; also cited in the register{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}
