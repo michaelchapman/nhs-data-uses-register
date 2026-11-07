@@ -10,7 +10,21 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, earlier, ods, outputs, overviews, privacy, relations, releases, search, sectors, sources
+from . import (
+    aliases,
+    compare,
+    earlier,
+    ods,
+    onward,
+    outputs,
+    overviews,
+    privacy,
+    relations,
+    releases,
+    search,
+    sectors,
+    sources,
+)
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify, version_key
@@ -64,6 +78,7 @@ def environment(rules: Rules | None = None) -> Environment:
     env.filters["org"] = display_name
     env.filters["nocode"] = strip_code
     env.globals["merger_edition"] = sources.MERGER_EDITION
+    env.globals["onward_caveat"] = onward.caveat
     env.globals["ods"] = ods.SOURCE
     env.globals["release_chart_start"] = releases.CHART_START
     dataset_aliases = (rules or Rules.load()).dataset_aliases
@@ -331,6 +346,7 @@ def build(
     changes_history: list[dict] | None = None,
     history: dict[str, dict] | None = None,
     rules: Rules | None = None,
+    onward_config: dict | None = None,
 ) -> dict[str, dict]:
     rules = rules or Rules.load()
     env = environment(rules)
@@ -426,6 +442,15 @@ def build(
     org_slugs |= set(earlier_orgs)
     org_names.update({slug: entry["name"] for slug, entry in earlier_orgs.items()})
     earlier_files = earlier_store["files"] if earlier_store else []
+    # The projects and papers sublicensing holders list of their own, from
+    # data/onward-registers.json. See pipeline/onward.py.
+    onward_config = onward.load() if onward_config is None else onward_config
+    for problem in onward.problems(onward_config, data["agreements"], org_slugs):
+        print(f"onward: {problem}")
+    onward_by_agreement = onward.by_agreement(onward_config)
+    onward_by_org = onward.by_organisation(onward_config)
+    onward_slugs = {a["base_reference"].upper(): a["slug"] for a in data["agreements"] + archived}
+    stats["onward"] = onward.counts(onward_config)
     context = {
         "meta": meta,
         "papers_page": bool(output_links),
@@ -439,6 +464,8 @@ def build(
         "stats": stats,
         "changes": changes,
         "build_time": dt.datetime.now(dt.UTC).strftime("%d %B %Y"),
+        "onward_kinds": onward.KINDS,
+        "onward_checked": onward_config.get("checked", ""),
     }
 
     def render(template: str, path: str, **kwargs) -> None:
@@ -597,6 +624,7 @@ def build(
             overview=overviews.current(agreement, overview_entries),
             papers=outputs.for_agreement(agreement, output_links),
             earlier=earlier_by_base.get(agreement["base_reference"]),
+            onward=onward_by_agreement.get(agreement["base_reference"].upper()),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(
@@ -611,6 +639,8 @@ def build(
             search_numbers=search_numbers,
             paper_count=papers_by_org.get(organisation["slug"], 0),
             earlier_only=earlier_by_org.get(organisation["slug"], []),
+            onward=onward_by_org.get(organisation["slug"], []),
+            onward_slugs=onward_slugs,
         )
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of

@@ -18,7 +18,7 @@ proposal to add a data download starts from that rule. See
 Last reviewed 2026-10-07. Each item has an issue. In rough order of value:
 
 1. [Dataset pages](#1-dataset-pages) (#56, #57)
-2. [Waiting on people](#2-waiting-on-people) (#51, #55)
+2. [Waiting on people](#2-waiting-on-people) (#51, #55, #78)
 3. [Considered and not planned](#3-considered-and-not-planned)
 
 Ideas raised as issues and not yet scoped here: a glossary of the register's
@@ -43,7 +43,8 @@ Each dataset page already charts its files by month (see [Built](#release-views)
 
 ## 2. Waiting on people
 
-The decisions below are tracked in #51, and the dataset names in #55.
+The decisions below are tracked in #51, the dataset names in #55, and the
+ICB release registers in #78.
 
 - **Organisation names.** Two possible renames need someone who knows the
   companies: LA-SER Europe to Certara UK, and 2020 Delivery to The Public
@@ -68,6 +69,10 @@ The decisions below are tracked in #51, and the dataset names in #55.
   (31) are one dataset, and "Alcohol Dependence" and "Alcohol Dependency
   Dataset" likewise. Both pairs are in use in the same edition, so
   `datasetcheck` cannot decide them.
+- **ICB release registers** (#78). 21 integrated care boards have no entry
+  in `data/onward-registers.json` yet. Their sites refuse automated checks or
+  were checked only lightly, so someone needs to look for each board's
+  sub-licence release register by hand. Until then their pages show nothing.
 - **The ODS licence.** The site credits ODS under the Open Government Licence
   v3.0. That could not be checked against ODS's own pages from the build
   environment, which digital.nhs.uk refuses. It is worth confirming once.

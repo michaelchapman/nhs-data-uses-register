@@ -26,6 +26,10 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
+- **Projects and papers under sublicensing agreements** — for the agreements
+  that permit sublicensing and are held by cohorts, research databases and data
+  services, links to each holder's own release register, list of approved
+  projects and list of papers, collected by hand in `data/onward-registers.json`.
 - **Files released over time** — agreements receiving files and files released
   each month, across the register and for each dataset, and a timeline of the
   months each agreement received files, drawn at build time without script.
@@ -171,6 +175,7 @@ pipeline/search.py              the word index behind the agreements search
 pipeline/releases.py            files released by month: the build-time check, timelines and charts
 pipeline/names.py               shows a name the register wrote in capitals in ordinary case
 pipeline/orgcheck.py            finds organisation names that might be duplicates
+pipeline/onward.py              sublicensing holders' own lists of projects and papers, and its check
 pipeline/privacy.py             confidential data and opt-outs, for the agreements list's filters
 pipeline/sectors.py             groups organisations into sectors, for the Sector filters
 pipeline/relations.py           links related organisations that stay separate pages
