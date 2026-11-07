@@ -227,7 +227,10 @@ Three committed files hold it, and the build never asks ODS anything:
 
 `odscheck` assigns a code only on evidence: the code is in the name ("NHS KENT
 AND MEDWAY ICB - 91Q"); the name is exactly one ODS organisation's current
-name; or the name is a CCG's, and the register replaced it with a coded name
+name, or would be if written another way ("and" for "&", "NHS Foundation
+Trust" for "NHS Trust", "Hospitals" for "Hospital", or without a closing
+bracket such as "(WHHT)"), as long as every variant that matches points at
+the same record; or the name is a CCG's, and the register replaced it with a coded name
 whose ODS record was a CCG and became a sub-ICB location. That last case exists
 because ODS kept most CCG records on 1 July 2022 and renamed them, so their
 old names are gone from ODS. A CCG name only ever matches a CCG record: ODS

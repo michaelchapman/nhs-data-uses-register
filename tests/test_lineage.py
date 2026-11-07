@@ -274,6 +274,27 @@ class Proposing(unittest.TestCase):
         self.assertEqual((ccg["code"], ccg["as"]), ("91Q", "CCG"))
         self.assertIn("20 versions", ccg["evidence"])
 
+    def test_a_trust_that_became_a_foundation_trust_matches_its_current_name(self):
+        entries, _ = self.propose(["Oxford University Hospitals NHS Trust"], searches={
+            "Oxford University Hospitals NHS Foundation Trust": [
+                {"code": "RTH", "name": "OXFORD UNIVERSITY HOSPITALS NHS FOUNDATION TRUST", "status": "Active", "role": "RO197"}],
+        })
+        self.assertEqual(entries[0]["code"], "RTH")
+        self.assertIn("another spelling", entries[0]["evidence"])
+
+    def test_an_ampersand_matches_and(self):
+        entries, _ = self.propose(["NHS City & Hackney CCG"], searches={
+            "NHS City and Hackney CCG": [{"code": "07T", "name": "NHS CITY AND HACKNEY CCG", "status": "Inactive", "role": "RO98"}],
+        })
+        self.assertEqual((entries[0]["code"], entries[0]["as"]), ("07T", "CCG"))
+
+    def test_variants_pointing_at_two_records_match_nothing(self):
+        entries, _ = self.propose(["Example Hospital NHS Trust"], searches={
+            "Example Hospital NHS Foundation Trust": [{"code": "RA1", "name": "X", "status": "Active", "role": "RO197"}],
+            "Example Hospitals NHS Trust": [{"code": "RB2", "name": "Y", "status": "Active", "role": "RO197"}],
+        })
+        self.assertEqual(entries, [])
+
     def test_a_reviewed_entry_is_kept_and_unmatched_nhs_names_are_listed(self):
         kept = [{"name": "NHS DIGITAL", "code": "X26", "evidence": "reviewed: test"}]
         entries, for_review = self.propose(["NHS DIGITAL", "NHS SOMEWHERE TRUST", "UNIVERSITY OF EXAMPLE"], kept=kept)

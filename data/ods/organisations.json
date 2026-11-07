@@ -5655,6 +5655,41 @@
     }
    ]
   },
+  "158": {
+   "name": "CHRISTCHURCH BOROUGH COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2019-03-31",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2019-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2019-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "738",
+     "date": "2019-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "V076",
+     "date": "2013-04-01"
+    }
+   ]
+  },
   "15A": {
    "name": "NHS THAMES VALLEY ICB - 15A",
    "status": "Active",
@@ -11224,6 +11259,45 @@
     }
    ]
   },
+  "738": {
+   "name": "BCP COUNCIL",
+   "status": "Active",
+   "start": "2019-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "2019-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO40",
+     "primary": false,
+     "start": "2019-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "QVV",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "158",
+     "date": "2019-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "810",
+     "date": "2019-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "811",
+     "date": "2019-04-01"
+    }
+   ]
+  },
   "739": {
    "name": "SOMERSET WEST AND TAUNTON COUNCIL",
    "status": "Inactive",
@@ -11531,6 +11605,86 @@
     {
      "type": "predecessor",
      "code": "V074",
+     "date": "2013-04-01"
+    }
+   ]
+  },
+  "810": {
+   "name": "BOURNEMOUTH BOROUGH COUNCIL",
+   "status": "Active",
+   "start": "1997-04-01",
+   "end": "2019-03-31",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "1997-04-01",
+     "end": "2019-03-31"
+    },
+    {
+     "id": "RO40",
+     "primary": false,
+     "start": "2013-04-01",
+     "end": "2019-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "738",
+     "date": "2019-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "801",
+     "date": "1997-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "V075",
+     "date": "2013-04-01"
+    }
+   ]
+  },
+  "811": {
+   "name": "BOROUGH OF POOLE",
+   "status": "Inactive",
+   "start": "1997-04-01",
+   "end": "2019-03-31",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "1997-04-01",
+     "end": "2019-03-31"
+    },
+    {
+     "id": "RO40",
+     "primary": false,
+     "start": "2013-04-01",
+     "end": "2019-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "738",
+     "date": "2019-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "801",
+     "date": "1997-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "V079",
      "date": "2013-04-01"
     }
    ]
@@ -12227,6 +12381,23 @@
    "successors": [],
    "predecessors": []
   },
+  "8HV48": {
+   "name": "ROYAL COLLEGE OF PAEDIATRICS & CHILD HEALTH",
+   "status": "Active",
+   "start": "2011-11-28",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2011-11-28",
+     "end": ""
+    }
+   ],
+   "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
   "8HV74": {
    "name": "PICKER INSTITUTE EUROPE",
    "status": "Active",
@@ -12292,6 +12463,23 @@
     }
    ],
    "icb": "QOQ",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HY49": {
+   "name": "CLINICAL PRACTICE RESEARCH DATALINK",
+   "status": "Active",
+   "start": "2012-07-23",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2012-07-23",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
    "successors": [],
    "predecessors": []
   },
@@ -12377,6 +12565,23 @@
     }
    ],
    "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8J222": {
+   "name": "HEALTH & SAFETY EXECUTIVE",
+   "status": "Active",
+   "start": "2013-05-09",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2013-05-09",
+     "end": ""
+    }
+   ],
+   "icb": "QYG",
    "successors": [],
    "predecessors": []
   },
@@ -12666,6 +12871,23 @@
     }
    ],
    "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8JE82": {
+   "name": "ERNST & YOUNG LLP",
+   "status": "Active",
+   "start": "2015-11-13",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2015-11-13",
+     "end": ""
+    }
+   ],
+   "icb": "QKK",
    "successors": [],
    "predecessors": []
   },
@@ -14735,6 +14957,29 @@
    "successors": [],
    "predecessors": []
   },
+  "EE133910": {
+   "name": "LONDON SCHOOL OF ECONOMICS AND POLITICAL SCIENCE",
+   "status": "Active",
+   "start": "1900-01-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO221",
+     "primary": true,
+     "start": "1900-01-01",
+     "end": ""
+    },
+    {
+     "id": "RO298",
+     "primary": false,
+     "start": "1900-01-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "EE133913": {
    "name": "UNIVERSITY OF YORK",
    "status": "Active",
@@ -15962,6 +16207,29 @@
      "primary": true,
      "start": "1991-04-01",
      "end": "1994-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "Q71": {
+   "name": "NHS ENGLAND LONDON",
+   "status": "Inactive",
+   "start": "2013-03-20",
+   "end": "2020-03-31",
+   "roles": [
+    {
+     "id": "RO210",
+     "primary": true,
+     "start": "2013-03-20",
+     "end": "2020-03-31"
+    },
+    {
+     "id": "RO211",
+     "primary": false,
+     "start": "2013-03-20",
+     "end": "2020-03-31"
     }
    ],
    "icb": "",
@@ -23410,6 +23678,29 @@
    "successors": [],
    "predecessors": []
   },
+  "T1160": {
+   "name": "NATIONAL INSTITUTE FOR HEALTH AND CLINICAL EXCELLENCE",
+   "status": "Inactive",
+   "start": "2002-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO189",
+     "primary": true,
+     "start": "2002-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "X80",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
   "T1210": {
    "name": "MICROBIOLOGICAL RESEARCH AUTHORITY",
    "status": "Inactive",
@@ -24883,6 +25174,64 @@
    ],
    "predecessors": []
   },
+  "V075": {
+   "name": "BOURNEMOUTH BOROUGH COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "810",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "V076": {
+   "name": "CHRISTCHURCH BOROUGH COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "158",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
   "V077": {
    "name": "EAST DORSET DISTRICT COUNCIL",
    "status": "Inactive",
@@ -24936,6 +25285,35 @@
     {
      "type": "successor",
      "code": "259",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "V079": {
+   "name": "BOROUGH OF POOLE COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "811",
      "date": "2013-04-01"
     }
    ],
@@ -29612,6 +29990,29 @@
    "icb": "",
    "successors": [],
    "predecessors": []
+  },
+  "X80": {
+   "name": "NATIONAL INSTITUTE FOR HEALTH AND CARE EXCELLENCE",
+   "status": "Active",
+   "start": "2013-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO162",
+     "primary": true,
+     "start": "2013-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "T1160",
+     "date": "2013-04-01"
+    }
+   ]
   },
   "XDC": {
    "name": "OFFICE FOR NATIONAL STATISTICS (ONS)",

@@ -6,7 +6,9 @@
 A code is assigned only on evidence, strongest first:
 
 1. the code is in the name ("NHS KENT AND MEDWAY ICB - 91Q"), and ODS knows it;
-2. the name is exactly one ODS organisation's current name;
+2. the name is exactly one ODS organisation's current name, or written
+   another way ("&" for "and", "NHS Trust" for "NHS Foundation Trust")
+   that is exactly one organisation's current name;
 3. the name is a CCG's, and on the register it was replaced by a coded name
    whose ODS record was a CCG and is now a sub-ICB location: the same record,
    renamed on 1 July 2022, which ODS no longer holds under its old name.
@@ -107,26 +109,67 @@ def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, 
         if match and record(match[1]):
             entries[key] = {"name": name, "code": match[1], "evidence": "the code is in the name"}
             continue
-        found = {o["code"]: o for o in search(name)}
-        if len(found) > 1:
-            active = {c: o for c, o in found.items() if o["status"] == "Active"}
-            found = active if len(active) == 1 else found
-        if len(found) == 1:
-            (code, match_), = found.items()
-            if CCG_NAME.search(name) and match_["role"] != ods.CCG:
-                # Some prescribing and service records carry an old CCG's
-                # name. A CCG name belongs to a CCG record or to none.
-                continue
-            entry = {"name": name, "code": code, "evidence": "the name is this organisation's current ODS name"}
-            if match_["role"] == ods.CCG:
-                entry["as"] = "CCG"
-            entries[key] = entry
+        found = exact(name, search)
+        evidence = "the name is this organisation's current ODS name"
+        if found is None:
+            # ODS searches current names only, so a trust that has since
+            # become a foundation trust, or a name written with "&" for
+            # "and", matches nothing as written. A spelling variant counts
+            # only when every variant that matches points at one record.
+            matches = {}
+            for variant in spelling_variants(name):
+                hit = exact(variant, search)
+                if hit:
+                    matches[hit[0]] = hit
+            if len(matches) == 1:
+                (found,) = matches.values()
+                evidence = f"another spelling of this organisation's current ODS name, {found[1]['name']}"
+        if found is None:
+            continue
+        code, match_ = found
+        if CCG_NAME.search(name) and match_["role"] != ods.CCG:
+            # Some prescribing and service records carry an old CCG's
+            # name. A CCG name belongs to a CCG record or to none.
+            continue
+        entry = {"name": name, "code": code, "evidence": evidence}
+        if match_["role"] == ods.CCG:
+            entry["as"] = "CCG"
+        entries[key] = entry
 
     bridge_ccgs(entries, unique, swaps, record)
     for_review = sorted(
         name for key, name in unique.items() if key not in entries and NHS_NAME.search(name)
     )
     return list(entries.values()), for_review
+
+
+def exact(name: str, search) -> tuple[str, dict] | None:
+    """`(code, record)` for the one ODS organisation whose current name is `name`, preferring the one active record."""
+    found = {o["code"]: o for o in search(name)}
+    if len(found) > 1:
+        active = {c: o for c, o in found.items() if o["status"] == "Active"}
+        found = active if len(active) == 1 else found
+    if len(found) != 1:
+        return None
+    ((code, record),) = found.items()
+    return code, record
+
+
+def spelling_variants(name: str) -> list[str]:
+    """Other ways of writing `name` that ODS may hold: "and" for "&" (and the
+    reverse), "NHS Foundation Trust" for "NHS Trust", "Hospitals" for
+    "Hospital" (and the reverse), and the name without a closing bracket
+    such as "(WHHT)"."""
+    bases = {name, re.sub(r"\s*\([^)]*\)\s*$", "", name).strip()}
+    out: set[str] = set()
+    for base in bases:
+        for form in {base, re.sub(r"\s*&\s*", " and ", base), re.sub(r"\s+and\s+", " & ", base, flags=re.IGNORECASE)}:
+            out.add(form)
+            if re.search(r"\bNHS TRUST$", form, re.IGNORECASE):
+                out.add(re.sub(r"\bTRUST$", "Foundation Trust", form, flags=re.IGNORECASE))
+            out.add(re.sub(r"\bHOSPITAL\b", "Hospitals", form, flags=re.IGNORECASE))
+            out.add(re.sub(r"\bHOSPITALS\b", "Hospital", form, flags=re.IGNORECASE))
+    return sorted(v for v in out if v and " ".join(v.split()).casefold() != " ".join(name.split()).casefold())
 
 
 def bridge_ccgs(entries: dict, unique: dict, swaps, record) -> None:

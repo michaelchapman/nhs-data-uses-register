@@ -182,7 +182,11 @@ Organisation names in the earlier registers are looked up in ODS along with the
 register's own: `pipeline.odscheck` reads both, so the monthly
 `odscheck --apply` and `ods` keep their codes. An earlier-only agreement whose
 applicant has no page here (mostly CCGs that merged before 2021) is listed on
-the page of the first successor ODS records that has one. Unlike the editions store, this one is rewritten
+the page of the first successor ODS records that has one. An applicant with
+neither gets a page of its own (`earlier-organisation.html`), listed apart on
+the organisations index; nothing needs adding by hand.
+
+Unlike the editions store, this one is rewritten
 whole each time, so a parsing fix is just a re-run. Each text is stored once
 per agreement under a short hash, which keeps the store to about 90 MB on disk.
 

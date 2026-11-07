@@ -224,7 +224,8 @@ class SiteTest(unittest.TestCase):
         cls.store = Store(root, {
             "a.xlsx": ("2017-03-01", "2017-05-31", register(
                 [release(f"{known['base_reference']}-v0.1"), release(oldest),
-                 release("NIC-99999-ZZZZZ-v1", organisation=known["organisation"].upper())],
+                 release("NIC-99999-ZZZZZ-v1", organisation=known["organisation"].upper()),
+                 release("NIC-88888-YYYYY-v1", organisation="GONE AWAY RESEARCH LTD")],
                 [purpose(f"{known['base_reference']}-v0.1", "An earlier objective"),
                  purpose("NIC-99999-ZZZZZ-v1", "A finished study")])),
         })
@@ -265,6 +266,15 @@ class SiteTest(unittest.TestCase):
         html = self.page(f"organisations/{self.known['organisation_slug']}")
         self.assertIn("Only in the earlier registers (1)", html)
         self.assertIn("dars-nic-99999-zzzzz", html)
+
+    def test_page_for_organisation_only_in_earlier_registers(self):
+        html = self.page("organisations/gone-away-research-ltd")
+        self.assertIn("Never in the Data Uses Register", html)
+        self.assertIn("/agreements/dars-nic-88888-yyyyy/", html)
+        self.assertIn('/datasets/other-data-set/', html)
+        self.assertIn("/organisations/gone-away-research-ltd/", self.page("agreements/dars-nic-88888-yyyyy"))
+        self.assertIn("/organisations/gone-away-research-ltd/", self.page("organisations"))
+        self.assertIn("/organisations/gone-away-research-ltd/", (self.out / "sitemap.xml").read_text())
 
     def test_agreements_list_searchable(self):
         html = self.page("agreements")

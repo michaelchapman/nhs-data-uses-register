@@ -250,6 +250,40 @@ def earlier_organisation_page(name: str, slugs: set[str], organisation_aliases: 
     return "", False
 
 
+def earlier_organisations(earlier_only: list[dict], organisation_aliases: dict, organisation_lineage) -> dict[str, dict]:
+    """`{slug: organisation}` for the earlier-only agreements' applicants that have no page.
+
+    Sets each such agreement's `organisation_slug`. Spellings that differ only
+    in case or punctuation share a page, titled with the commonest.
+    """
+    found: dict[str, dict] = {}
+    for agreement in earlier_only:
+        if agreement["organisation_slug"] or not agreement["organisation"]:
+            continue
+        slug = organisation_slug(agreement["organisation"], organisation_aliases, organisation_lineage)
+        entry = found.setdefault(slug, {"slug": slug, "spellings": Counter(), "types": Counter(), "agreements": []})
+        entry["spellings"][agreement["organisation"]] += 1
+        if agreement["organisation_type"]:
+            entry["types"][agreement["organisation_type"]] += 1
+        entry["agreements"].append(agreement)
+        agreement["organisation_slug"] = slug
+    for entry in found.values():
+        spellings, types = entry.pop("spellings"), entry.pop("types")
+        entry["name"] = min(spellings, key=lambda n: (-spellings[n], n == n.upper(), n))
+        entry["known_as"] = sorted(n for n in spellings if n.casefold() != entry["name"].casefold())
+        entry["type"] = types.most_common(1)[0][0] if types else ""
+        entry["agreements"].sort(key=lambda a: (a["first_listed"], a["base_reference"]))
+        entry["agreement_count"] = len(entry["agreements"])
+        entry["last_listed"] = max(a["last_listed"] for a in entry["agreements"])
+        entry["last_label"] = max(entry["agreements"], key=lambda a: a["last_listed"])["last_label"]
+        entry["dataset_names"] = sorted({n for a in entry["agreements"] for n in a["dataset_names"]}, key=str.casefold)
+        entry["datasets"] = sorted(
+            {(d["dataset"], d["slug"]) for a in entry["agreements"] for v in a["versions"] for d in v["datasets"]},
+            key=lambda pair: pair[0].casefold(),
+        )
+    return dict(sorted(found.items(), key=lambda kv: kv[1]["name"].casefold()))
+
+
 def link_earlier_datasets(views: list[dict], spellings: dict[str, str], alias_map: dict) -> dict[str, dict]:
     """Give each dataset row in the earlier views the slug of its page, and gather them by page.
 
@@ -370,6 +404,13 @@ def build(
     for agreement in [a for a in earlier_only if a["slug"] in taken]:
         print(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
     earlier_only = [a for a in earlier_only if a["slug"] not in taken]
+    # The earlier registers' own dataset names, linked to the site's dataset pages where the name says which.
+    earlier_by_dataset = link_earlier_datasets(
+        list(earlier_by_base.values()) + earlier_only,
+        {name: slug for name, slug in earlier.dataset_spellings(data["agreements"] + archived, dataset_aliases).items()
+         if slug in dataset_slugs},
+        dataset_aliases,
+    )
     earlier_by_org: dict[str, list[dict]] = {}
     for agreement in earlier_only:
         page, succeeded = earlier_organisation_page(
@@ -378,13 +419,12 @@ def build(
         agreement["organisation_slug"], agreement["organisation_succeeded"] = page, succeeded
         if page:
             earlier_by_org.setdefault(page, []).append(agreement)
-    # The earlier registers' own dataset names, linked to the site's dataset pages where the name says which.
-    earlier_by_dataset = link_earlier_datasets(
-        list(earlier_by_base.values()) + earlier_only,
-        {name: slug for name, slug in earlier.dataset_spellings(data["agreements"] + archived, dataset_aliases).items()
-         if slug in dataset_slugs},
-        dataset_aliases,
-    )
+    # Applicants with no page here, and no successor with one, still received
+    # data, so each gets a page built from the earlier registers alone.
+    pages_before_earlier = dict(org_names)
+    earlier_orgs = earlier_organisations(earlier_only, organisation_aliases, organisation_lineage)
+    org_slugs |= set(earlier_orgs)
+    org_names.update({slug: entry["name"] for slug, entry in earlier_orgs.items()})
     earlier_files = earlier_store["files"] if earlier_store else []
     context = {
         "meta": meta,
@@ -438,7 +478,7 @@ def build(
             render("earlier-agreement.html", f"agreements/{agreement['slug']}/index.html", agreement=agreement,
                    rows=agreement["rows"], org_slugs=org_slugs, org_names=org_names)
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
-           archived_organisations=archive["organisations"])
+           archived_organisations=archive["organisations"], earlier_organisations=list(earlier_orgs.values()))
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
     # An agreement no longer listed still has its page, so a row about it links.
     changes_by_slug = {a["base_reference"]: a for a in archived + data["agreements"]}
@@ -575,7 +615,7 @@ def build(
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of
     # its own spelling; that address now forwards, so a link to it still works.
-    page_names = org_names
+    page_names = pages_before_earlier
     retired: dict[str, tuple[str, str]] = {}
     for agreement in data["agreements"] + archived:
         for version in agreement["versions"]:
@@ -585,6 +625,12 @@ def build(
                     retired.setdefault(own, (name, now))
     for own, (name, now) in sorted(retired.items()):
         render("moved.html", f"organisations/{own}/index.html", name=name, target=now, target_name=page_names[now])
+    for slug, entry in earlier_orgs.items():
+        if slug in retired:
+            print(f"earlier: {entry['name']} shares a page address with a renamed organisation; left out")
+            continue
+        render("earlier-organisation.html", f"organisations/{slug}/index.html", organisation=entry,
+               dataset_slugs=dataset_slugs)
 
     for dataset in data["datasets"] + archive["datasets"]:
         dataset_months = releases.monthly(dataset["agreements"], dataset_aliases, dataset["slug"], release_rows)
@@ -614,7 +660,7 @@ def build(
     ))
     _write(out, "sitemap.xml", env.get_template("sitemap.xml").render(
         **context, agreements=data["agreements"] + archived + earlier_only,
-        organisations=data["organisations"] + archive["organisations"],
+        organisations=data["organisations"] + archive["organisations"] + list(earlier_orgs.values()),
         datasets=data["datasets"] + archive["datasets"],
         changes_editions=[e["edition"] for e in changes_history or [] if e["edition"] != meta["edition"]],
     ))
