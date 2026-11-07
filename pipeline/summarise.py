@@ -6,6 +6,10 @@
     python -m pipeline.summarise run --limit 100   # the first 100 of them
     python -m pipeline.summarise collect --wait    # fetch finished batches
 
+Agreements found only in the earlier release registers (`pipeline.earlier`)
+have pages too, so `estimate` and `run` include them, written from the text
+their pages show.
+
 A maintainer tool, never part of the build or CI. It needs `ANTHROPIC_API_KEY`
 and the packages in requirements-summarise.txt. Batches run at half the
 normal price and usually finish within an hour; `collect` picks up any that
@@ -34,7 +38,7 @@ import re
 import time
 from pathlib import Path
 
-from . import clichecheck, overviews, sources
+from . import clichecheck, earlier, overviews, sources
 from .names import display_name
 from .run import DEFAULT_SITE_URL, from_store
 
@@ -108,7 +112,9 @@ def agreement_text(agreement: dict) -> str:
     version = agreement["latest"]
     datasets = sorted({d.get("name", "") for d in version.get("datasets") or [] if d.get("name")})
     parts = [
-        f"Title: {agreement.get('title') or version.get('title') or ''}",
+        # The earlier release registers gave no titles; they come from NHS Digital, before NHS England.
+        "Source: NHS Digital's release register, before July 2021 (no title given)" if agreement.get("earlier")
+        else f"Title: {agreement.get('title') or version.get('title') or ''}",
         # In ordinary case, as the page shows it, so the overview isn't in capitals.
         f"Organisation: {display_name(agreement.get('organisation') or version.get('organisation') or '')}",
         f"Organisation type: {version.get('organisation_type') or 'Not stated'}",
@@ -338,7 +344,21 @@ def write_pilot(records: list[dict], results: dict[str, dict], by_reference: dic
 def all_agreements() -> list[dict]:
     register = sources.registers("data-uses-register")[0]
     data, _, _ = from_store(register, None)
-    return data["agreements"] + data.get("archived", [])
+    listed = data["agreements"] + data.get("archived", [])
+    return listed + earlier_agreements({a["base_reference"].upper() for a in listed})
+
+
+def earlier_agreements(listed: set[str]) -> list[dict]:
+    """Agreements found only in NHS Digital's earlier release registers (see
+    `pipeline.earlier`), which have pages of their own and so overviews too."""
+    store = earlier.load()
+    if not store:
+        return []
+    views = [earlier.view(record, store["periods"]) for base, record in sorted(store["agreements"].items())
+             if base.upper() not in listed]
+    records = [overviews.earlier_source(view) for view in views]
+    # An agreement the registers give no purpose text for has nothing to summarise.
+    return [r for r in records if any((r["latest"].get(field) or "").strip() for _, field, _ in SOURCE_FIELDS)]
 
 
 def needing_overviews(agreements: list[dict], entries: dict[str, dict]) -> list[dict]:
