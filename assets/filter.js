@@ -216,26 +216,32 @@
     // search looks through them too, with a count of their own, so the main
     // count still means agreements in the register. Only the search applies:
     // the other filters describe agreements in the register.
-    var archivedTable = document.getElementById("archived-table");
-    var archivedCount = document.querySelector("[data-archived-count]");
+    // Agreements only in the earlier release registers are listed the same way.
+    var apart = [["archived-table", "[data-archived-count]"], ["earlier-table", "[data-earlier-count]"]]
+      .map(function (ids) {
+        return { table: document.getElementById(ids[0]), count: document.querySelector(ids[1]) };
+      })
+      .filter(function (list) { return list.table; });
     function filterArchived(value) {
-      if (!archivedTable || !text) return;
+      if (!text) return;
       var terms = searchWords(value);
-      var archivedRows = Array.prototype.slice.call(archivedTable.tBodies[0].rows);
-      var shown = 0;
-      archivedRows.forEach(function (row) {
-        var match = !terms.length || matchesAll(terms, row.dataset.search || row.textContent);
-        row.hidden = !match;
-        if (match) shown++;
+      apart.forEach(function (list) {
+        var rows = Array.prototype.slice.call(list.table.tBodies[0].rows);
+        var shown = 0;
+        rows.forEach(function (row) {
+          var match = !terms.length || matchesAll(terms, row.dataset.search || row.textContent);
+          row.hidden = !match;
+          if (match) shown++;
+        });
+        (list.table.closest(".table-scroll") || list.table).hidden = shown === 0;
+        if (list.count) {
+          list.count.hidden = !terms.length;
+          var total = rows.length;
+          list.count.textContent = shown === 0
+            ? "None of these " + total.toLocaleString("en-GB") + " matches the search."
+            : shown + " of " + total.toLocaleString("en-GB") + " match the search.";
+        }
       });
-      (archivedTable.closest(".table-scroll") || archivedTable).hidden = shown === 0;
-      if (archivedCount) {
-        archivedCount.hidden = !terms.length;
-        var total = archivedRows.length;
-        archivedCount.textContent = shown === 0
-          ? "None of these " + total.toLocaleString("en-GB") + " matches the search."
-          : shown + " of " + total.toLocaleString("en-GB") + " match the search.";
-      }
     }
 
     // Where a search here also looks up organisation and dataset names. The

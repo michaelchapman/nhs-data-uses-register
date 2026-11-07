@@ -65,5 +65,25 @@
 </table>
 </div>
 {% with items=archived_organisations, kind="organisations" %}{% include "_archived_names.html" %}{% endwith %}
+{% if earlier_organisations %}
+<h2 id="earlier">Only in the earlier registers ({{ earlier_organisations|length|commas }})</h2>
+<p>Organisations that received data under agreements listed in the release registers NHS Digital published before July 2021, and never named in the Data Uses Register. None is counted in this site's figures. <a href="{{ meta.base_path }}/about/#earlier-registers">About the earlier registers</a></p>
+<div class="table-scroll">
+<table class="data-table stack">
+  <caption class="visually-hidden">Organisations only in the earlier release registers</caption>
+  <thead><tr><th scope="col">Organisation</th><th scope="col">Type</th><th scope="col" class="num">Agreements</th><th scope="col">Last listed</th></tr></thead>
+  <tbody>
+  {% for o in earlier_organisations %}
+    <tr>
+      <th scope="row"><a href="{{ meta.base_path }}/organisations/{{ o.slug }}/">{{ o.name|org }}</a></th>
+      <td data-label="Type">{{ o.type or "—" }}</td>
+      <td class="num" data-label="Agreements">{{ o.agreement_count|commas }}</td>
+      <td data-label="Last listed" data-sort="{{ o.last_listed }}">{{ o.last_label }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

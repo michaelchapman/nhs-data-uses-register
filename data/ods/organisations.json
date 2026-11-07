@@ -6,7 +6,7 @@
   "licence": "Open Government Licence v3.0",
   "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
  },
- "fetched": "2026-11-03",
+ "fetched": "2026-11-07",
  "organisations": {
   "00C": {
    "name": "NHS DARLINGTON CCG",
@@ -3849,6 +3849,69 @@
    ],
    "predecessors": []
   },
+  "0AC": {
+   "name": "NHS SOUTH WEST COMMISSIONING SUPPORT UNIT",
+   "status": "Inactive",
+   "start": "2012-10-01",
+   "end": "2015-03-31",
+   "roles": [
+    {
+     "id": "RO213",
+     "primary": true,
+     "start": "2012-10-01",
+     "end": "2015-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "0DF",
+     "date": "2015-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "0AD": {
+   "name": "NHS CENTRAL MIDLANDS COMMISSIONING SUPPORT UNIT",
+   "status": "Active",
+   "start": "2012-10-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO213",
+     "primary": true,
+     "start": "2012-10-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "0AE": {
+   "name": "NHS CENTRAL SOUTHERN COMMISSIONING SUPPORT UNIT",
+   "status": "Active",
+   "start": "2012-10-01",
+   "end": "2015-03-31",
+   "roles": [
+    {
+     "id": "RO213",
+     "primary": true,
+     "start": "2012-10-01",
+     "end": "2015-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "0DF",
+     "date": "2015-04-01"
+    }
+   ],
+   "predecessors": []
+  },
   "0AK": {
    "name": "NHS GREATER EAST MIDLANDS COMMISSIONING SUPPORT UNIT",
    "status": "Inactive",
@@ -3933,6 +3996,29 @@
    ],
    "icb": "",
    "successors": [],
+   "predecessors": []
+  },
+  "0AW": {
+   "name": "NHS SOUTH COMMISSIONING SUPPORT UNIT",
+   "status": "Inactive",
+   "start": "2012-10-01",
+   "end": "2015-03-31",
+   "roles": [
+    {
+     "id": "RO213",
+     "primary": true,
+     "start": "2012-10-01",
+     "end": "2015-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "0DF",
+     "date": "2015-04-01"
+    }
+   ],
    "predecessors": []
   },
   "0AX": {
@@ -4033,6 +4119,39 @@
     {
      "type": "predecessor",
      "code": "0AK",
+     "date": "2015-04-01"
+    }
+   ]
+  },
+  "0DF": {
+   "name": "NHS SOUTH, CENTRAL AND WEST COMMISSIONING SUPPORT UNIT",
+   "status": "Active",
+   "start": "2014-10-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO213",
+     "primary": true,
+     "start": "2014-10-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "0AC",
+     "date": "2015-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "0AE",
+     "date": "2015-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "0AW",
      "date": "2015-04-01"
     }
    ]
@@ -5532,6 +5651,41 @@
     {
      "type": "predecessor",
      "code": "V017",
+     "date": "2013-04-01"
+    }
+   ]
+  },
+  "158": {
+   "name": "CHRISTCHURCH BOROUGH COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2019-03-31",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2019-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2019-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "738",
+     "date": "2019-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "V076",
      "date": "2013-04-01"
     }
    ]
@@ -10044,6 +10198,23 @@
     }
    ]
   },
+  "691R0": {
+   "name": "GLOUCESTERSHIRE ROYAL HOSPITAL LABORATORY",
+   "status": "Active",
+   "start": "2000-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO173",
+     "primary": true,
+     "start": "2000-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "6C4": {
    "name": "POWYS TEACHING LHB",
    "status": "Inactive",
@@ -10972,6 +11143,35 @@
     }
    ]
   },
+  "732": {
+   "name": "LONDON BOROUGH OF REDBRIDGE",
+   "status": "Active",
+   "start": "1980-01-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "1980-01-01",
+     "end": ""
+    },
+    {
+     "id": "RO223",
+     "primary": false,
+     "start": "2013-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "V152",
+     "date": "2013-04-01"
+    }
+   ]
+  },
   "733": {
    "name": "LONDON BOROUGH OF RICHMOND UPON THAMES",
    "status": "Active",
@@ -11056,6 +11256,45 @@
      "type": "predecessor",
      "code": "V157",
      "date": "2013-04-01"
+    }
+   ]
+  },
+  "738": {
+   "name": "BCP COUNCIL",
+   "status": "Active",
+   "start": "2019-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "2019-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO40",
+     "primary": false,
+     "start": "2019-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "QVV",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "158",
+     "date": "2019-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "810",
+     "date": "2019-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "811",
+     "date": "2019-04-01"
     }
    ]
   },
@@ -11366,6 +11605,86 @@
     {
      "type": "predecessor",
      "code": "V074",
+     "date": "2013-04-01"
+    }
+   ]
+  },
+  "810": {
+   "name": "BOURNEMOUTH BOROUGH COUNCIL",
+   "status": "Active",
+   "start": "1997-04-01",
+   "end": "2019-03-31",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "1997-04-01",
+     "end": "2019-03-31"
+    },
+    {
+     "id": "RO40",
+     "primary": false,
+     "start": "2013-04-01",
+     "end": "2019-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "738",
+     "date": "2019-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "801",
+     "date": "1997-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "V075",
+     "date": "2013-04-01"
+    }
+   ]
+  },
+  "811": {
+   "name": "BOROUGH OF POOLE",
+   "status": "Inactive",
+   "start": "1997-04-01",
+   "end": "2019-03-31",
+   "roles": [
+    {
+     "id": "RO141",
+     "primary": true,
+     "start": "1997-04-01",
+     "end": "2019-03-31"
+    },
+    {
+     "id": "RO40",
+     "primary": false,
+     "start": "2013-04-01",
+     "end": "2019-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "738",
+     "date": "2019-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "801",
+     "date": "1997-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "V079",
      "date": "2013-04-01"
     }
    ]
@@ -11705,6 +12024,29 @@
     }
    ]
   },
+  "8CC83": {
+   "name": "BRIGHTON & HOVE CITY COUNCIL",
+   "status": "Active",
+   "start": "1996-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "1996-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO15",
+     "primary": false,
+     "start": "1996-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "S9B9J",
+   "successors": [],
+   "predecessors": []
+  },
   "8F779": {
    "name": "WOLFSON INSTITUTE OF PREVENTIVE MEDICINE",
    "status": "Active",
@@ -11773,6 +12115,57 @@
    "successors": [],
    "predecessors": []
   },
+  "8HD37": {
+   "name": "GENERAL HEALTHCARE GROUP",
+   "status": "Active",
+   "start": "2006-07-21",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2006-07-21",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HE62": {
+   "name": "CAPITA",
+   "status": "Active",
+   "start": "2006-10-26",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2006-10-26",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HJ75": {
+   "name": "NORTHGATE INFORMATION SOLUTIONS",
+   "status": "Inactive",
+   "start": "2007-12-12",
+   "end": "2009-03-31",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2007-12-12",
+     "end": "2009-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "8HJ88": {
    "name": "CHKS LIMITED",
    "status": "Active",
@@ -11821,6 +12214,23 @@
     }
    ],
    "icb": "QK1",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HK35": {
+   "name": "INFORMATICA SYSTEMS LTD",
+   "status": "Active",
+   "start": "2008-03-06",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2008-03-06",
+     "end": ""
+    }
+   ],
+   "icb": "S1Y5D",
    "successors": [],
    "predecessors": []
   },
@@ -11954,6 +12364,57 @@
    "successors": [],
    "predecessors": []
   },
+  "8HT42": {
+   "name": "I5 HEALTH",
+   "status": "Active",
+   "start": "2011-08-11",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2011-08-11",
+     "end": ""
+    }
+   ],
+   "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HV48": {
+   "name": "ROYAL COLLEGE OF PAEDIATRICS & CHILD HEALTH",
+   "status": "Active",
+   "start": "2011-11-28",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2011-11-28",
+     "end": ""
+    }
+   ],
+   "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HV74": {
+   "name": "PICKER INSTITUTE EUROPE",
+   "status": "Active",
+   "start": "2011-12-20",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2011-12-20",
+     "end": ""
+    }
+   ],
+   "icb": "S0E4D",
+   "successors": [],
+   "predecessors": []
+  },
   "8HW14": {
    "name": "DR FOSTER LIMITED",
    "status": "Active",
@@ -11988,6 +12449,40 @@
    "successors": [],
    "predecessors": []
   },
+  "8HY10": {
+   "name": "CAPITA SURVEYS AND RESEARCH",
+   "status": "Active",
+   "start": "2012-06-25",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2012-06-25",
+     "end": ""
+    }
+   ],
+   "icb": "QOQ",
+   "successors": [],
+   "predecessors": []
+  },
+  "8HY49": {
+   "name": "CLINICAL PRACTICE RESEARCH DATALINK",
+   "status": "Active",
+   "start": "2012-07-23",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2012-07-23",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
+   "successors": [],
+   "predecessors": []
+  },
   "8J008": {
    "name": "ROYAL COLLEGE OF PHYSICIANS OF LONDON",
    "status": "Active",
@@ -11998,6 +12493,23 @@
      "id": "RO157",
      "primary": true,
      "start": "2012-09-10",
+     "end": ""
+    }
+   ],
+   "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8J042": {
+   "name": "HEALTHCARE QUALITY IMPROVEMENT PARTNERSHIP",
+   "status": "Active",
+   "start": "2012-10-19",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2012-10-19",
      "end": ""
     }
    ],
@@ -12053,6 +12565,23 @@
     }
    ],
    "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8J222": {
+   "name": "HEALTH & SAFETY EXECUTIVE",
+   "status": "Active",
+   "start": "2013-05-09",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2013-05-09",
+     "end": ""
+    }
+   ],
+   "icb": "QYG",
    "successors": [],
    "predecessors": []
   },
@@ -12124,6 +12653,23 @@
    "successors": [],
    "predecessors": []
   },
+  "8J522": {
+   "name": "FTI CONSULTING",
+   "status": "Active",
+   "start": "2014-02-11",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2014-02-11",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
+   "successors": [],
+   "predecessors": []
+  },
   "8J575": {
    "name": "DEVICE ACCESS UK LTD",
    "status": "Active",
@@ -12172,6 +12718,57 @@
     }
    ],
    "icb": "QWU",
+   "successors": [],
+   "predecessors": []
+  },
+  "8J850": {
+   "name": "BEACON CONSULTING",
+   "status": "Active",
+   "start": "2014-11-04",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2014-11-04",
+     "end": ""
+    }
+   ],
+   "icb": "S0E4D",
+   "successors": [],
+   "predecessors": []
+  },
+  "8J866": {
+   "name": "ROD GIBSON ASSOCIATES LTD",
+   "status": "Active",
+   "start": "2014-11-18",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2014-11-18",
+     "end": ""
+    }
+   ],
+   "icb": "QWE",
+   "successors": [],
+   "predecessors": []
+  },
+  "8J871": {
+   "name": "KPMG LLP",
+   "status": "Active",
+   "start": "2014-11-19",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2014-11-19",
+     "end": ""
+    }
+   ],
+   "icb": "QMF",
    "successors": [],
    "predecessors": []
   },
@@ -12274,6 +12871,23 @@
     }
    ],
    "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
+  "8JE82": {
+   "name": "ERNST & YOUNG LLP",
+   "status": "Active",
+   "start": "2015-11-13",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2015-11-13",
+     "end": ""
+    }
+   ],
+   "icb": "QKK",
    "successors": [],
    "predecessors": []
   },
@@ -12410,6 +13024,23 @@
     }
    ],
    "icb": "S0E4D",
+   "successors": [],
+   "predecessors": []
+  },
+  "8PF17": {
+   "name": "BRITISH SOCIETY OF GASTROENTEROLOGY",
+   "status": "Active",
+   "start": "2015-03-20",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO157",
+     "primary": true,
+     "start": "2015-03-20",
+     "end": ""
+    }
+   ],
+   "icb": "Z9B2Z",
    "successors": [],
    "predecessors": []
   },
@@ -14188,6 +14819,29 @@
    "successors": [],
    "predecessors": []
   },
+  "EE133883": {
+   "name": "UNIVERSITY OF KEELE",
+   "status": "Active",
+   "start": "1900-01-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO221",
+     "primary": true,
+     "start": "1900-01-01",
+     "end": ""
+    },
+    {
+     "id": "RO298",
+     "primary": false,
+     "start": "1900-01-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "EE133884": {
    "name": "ROEHAMPTON UNIVERSITY",
    "status": "Active",
@@ -14280,6 +14934,52 @@
    "successors": [],
    "predecessors": []
   },
+  "EE133904": {
+   "name": "UNIVERSITY OF LONDON",
+   "status": "Active",
+   "start": "1900-01-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO221",
+     "primary": true,
+     "start": "1900-01-01",
+     "end": ""
+    },
+    {
+     "id": "RO298",
+     "primary": false,
+     "start": "1900-01-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "EE133910": {
+   "name": "LONDON SCHOOL OF ECONOMICS AND POLITICAL SCIENCE",
+   "status": "Active",
+   "start": "1900-01-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO221",
+     "primary": true,
+     "start": "1900-01-01",
+     "end": ""
+    },
+    {
+     "id": "RO298",
+     "primary": false,
+     "start": "1900-01-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "EE133913": {
    "name": "UNIVERSITY OF YORK",
    "status": "Active",
@@ -14297,6 +14997,23 @@
      "primary": false,
      "start": "1900-01-01",
      "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "EJW": {
+   "name": "WEST MIDDLESEX UNIVERSITY HOSPITAL",
+   "status": "Inactive",
+   "start": "1991-04-01",
+   "end": "1993-03-31",
+   "roles": [
+    {
+     "id": "RO111",
+     "primary": true,
+     "start": "1991-04-01",
+     "end": "1993-03-31"
     }
    ],
    "icb": "",
@@ -14952,6 +15669,23 @@
    "successors": [],
    "predecessors": []
   },
+  "MG1": {
+   "name": "NORTH STAFFORDSHIRE HOSPITAL CENTRE UNIT",
+   "status": "Inactive",
+   "start": "1991-04-01",
+   "end": "1993-03-31",
+   "roles": [
+    {
+     "id": "RO111",
+     "primary": true,
+     "start": "1991-04-01",
+     "end": "1993-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "MH1": {
    "name": "BURTON HOSPITALS UNIT",
    "status": "Inactive",
@@ -15473,6 +16207,29 @@
      "primary": true,
      "start": "1991-04-01",
      "end": "1994-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "Q71": {
+   "name": "NHS ENGLAND LONDON",
+   "status": "Inactive",
+   "start": "2013-03-20",
+   "end": "2020-03-31",
+   "roles": [
+    {
+     "id": "RO210",
+     "primary": true,
+     "start": "2013-03-20",
+     "end": "2020-03-31"
+    },
+    {
+     "id": "RO211",
+     "primary": false,
+     "start": "2013-03-20",
+     "end": "2020-03-31"
     }
    ],
    "icb": "",
@@ -17399,6 +18156,35 @@
    ],
    "predecessors": []
   },
+  "RAS": {
+   "name": "THE HILLINGDON HOSPITALS NHS FOUNDATION TRUST",
+   "status": "Active",
+   "start": "1991-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1991-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO57",
+     "primary": false,
+     "start": "2011-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO7",
+     "primary": false,
+     "start": "1991-04-01",
+     "end": "2003-03-31"
+    }
+   ],
+   "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": []
+  },
   "RAU": {
    "name": "CENTRAL MIDDLESEX HOSPITAL NHS TRUST",
    "status": "Inactive",
@@ -18150,6 +18936,23 @@
     }
    ]
   },
+  "RE2": {
+   "name": "GATESHEAD HOSPITALS NHS TRUST",
+   "status": "Inactive",
+   "start": "1993-04-01",
+   "end": "1998-03-31",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1993-04-01",
+     "end": "1998-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "RE6": {
    "name": "CUMBRIA AMBULANCE SERVICE NHS TRUST",
    "status": "Inactive",
@@ -18519,6 +19322,41 @@
    "icb": "",
    "successors": [],
    "predecessors": []
+  },
+  "RFW": {
+   "name": "WEST MIDDLESEX UNIVERSITY HOSPITAL NHS TRUST",
+   "status": "Active",
+   "start": "1993-04-01",
+   "end": "2015-08-31",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1993-04-01",
+     "end": "2015-08-31"
+    },
+    {
+     "id": "RO7",
+     "primary": false,
+     "start": "1993-04-01",
+     "end": "2015-08-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "RQM",
+     "date": "2015-09-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "EJW",
+     "date": "1993-04-01"
+    }
+   ]
   },
   "RFZ": {
    "name": "NORTHWICK PARK AND ST MARKS NHS TRUST",
@@ -19152,6 +19990,41 @@
    "icb": "",
    "successors": [],
    "predecessors": []
+  },
+  "RJE": {
+   "name": "UNIVERSITY HOSPITALS OF NORTH MIDLANDS NHS TRUST",
+   "status": "Active",
+   "start": "1993-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1993-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO268",
+     "primary": false,
+     "start": "2018-11-14",
+     "end": ""
+    },
+    {
+     "id": "RO7",
+     "primary": false,
+     "start": "1993-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "QNC",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "MG1",
+     "date": "1993-04-01"
+    }
+   ]
   },
   "RJF": {
    "name": "BURTON HOSPITALS NHS FOUNDATION TRUST",
@@ -19822,6 +20695,23 @@
      "primary": true,
      "start": "1994-04-01",
      "end": "2006-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "RM7": {
+   "name": "GATESHEAD HEALTHCARE NHS TRUST",
+   "status": "Inactive",
+   "start": "1994-04-01",
+   "end": "1998-03-31",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1994-04-01",
+     "end": "1998-03-31"
     }
    ],
    "icb": "",
@@ -20694,6 +21584,46 @@
    "successors": [],
    "predecessors": []
   },
+  "RQM": {
+   "name": "CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST",
+   "status": "Active",
+   "start": "1994-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1994-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO57",
+     "primary": false,
+     "start": "2006-10-01",
+     "end": ""
+    },
+    {
+     "id": "RO7",
+     "primary": false,
+     "start": "1994-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "Z9B2Z",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "ENA",
+     "date": "1994-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "RFW",
+     "date": "2015-09-01"
+    }
+   ]
+  },
   "RQN": {
    "name": "HAMMERSMITH HOSPITALS NHS TRUST",
    "status": "Active",
@@ -20844,6 +21774,40 @@
      "type": "predecessor",
      "code": "RL7",
      "date": "1996-04-01"
+    }
+   ]
+  },
+  "RR7": {
+   "name": "GATESHEAD HEALTH NHS FOUNDATION TRUST",
+   "status": "Active",
+   "start": "1998-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO197",
+     "primary": true,
+     "start": "1998-04-01",
+     "end": ""
+    },
+    {
+     "id": "RO57",
+     "primary": false,
+     "start": "2005-01-01",
+     "end": ""
+    }
+   ],
+   "icb": "QHM",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "RE2",
+     "date": "1998-04-01"
+    },
+    {
+     "type": "predecessor",
+     "code": "RM7",
+     "date": "1998-04-01"
     }
    ]
   },
@@ -22714,6 +23678,46 @@
    "successors": [],
    "predecessors": []
   },
+  "T1160": {
+   "name": "NATIONAL INSTITUTE FOR HEALTH AND CLINICAL EXCELLENCE",
+   "status": "Inactive",
+   "start": "2002-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO189",
+     "primary": true,
+     "start": "2002-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "X80",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "T1210": {
+   "name": "MICROBIOLOGICAL RESEARCH AUTHORITY",
+   "status": "Inactive",
+   "start": "2002-04-01",
+   "end": "2003-03-31",
+   "roles": [
+    {
+     "id": "RO189",
+     "primary": true,
+     "start": "2002-04-01",
+     "end": "2003-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "T1230": {
    "name": "MENTAL HEALTH ACT COMMISSION",
    "status": "Inactive",
@@ -22764,6 +23768,35 @@
    "icb": "",
    "successors": [],
    "predecessors": []
+  },
+  "T1310": {
+   "name": "HEALTH PROTECTION AGENCY",
+   "status": "Active",
+   "start": "2003-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO189",
+     "primary": true,
+     "start": "2003-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "X25",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "T1210",
+     "date": "2003-04-01"
+    }
+   ]
   },
   "T1430": {
    "name": "HEALTH AND SOCIAL CARE INFORMATION CENTRE",
@@ -24141,6 +25174,64 @@
    ],
    "predecessors": []
   },
+  "V075": {
+   "name": "BOURNEMOUTH BOROUGH COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "810",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "V076": {
+   "name": "CHRISTCHURCH BOROUGH COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "158",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
   "V077": {
    "name": "EAST DORSET DISTRICT COUNCIL",
    "status": "Inactive",
@@ -24194,6 +25285,35 @@
     {
      "type": "successor",
      "code": "259",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "V079": {
+   "name": "BOROUGH OF POOLE COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "811",
      "date": "2013-04-01"
     }
    ],
@@ -25316,6 +26436,35 @@
     {
      "type": "successor",
      "code": "731",
+     "date": "2013-04-01"
+    }
+   ],
+   "predecessors": []
+  },
+  "V152": {
+   "name": "LONDON BOROUGH OF REDBRIDGE COUNCIL",
+   "status": "Inactive",
+   "start": "2004-04-01",
+   "end": "2013-03-31",
+   "roles": [
+    {
+     "id": "RO119",
+     "primary": true,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    },
+    {
+     "id": "RO34",
+     "primary": false,
+     "start": "2004-04-01",
+     "end": "2013-03-31"
+    }
+   ],
+   "icb": "",
+   "successors": [
+    {
+     "type": "successor",
+     "code": "732",
      "date": "2013-04-01"
     }
    ],
@@ -28723,6 +29872,46 @@
    "successors": [],
    "predecessors": []
   },
+  "X24": {
+   "name": "NHS ENGLAND",
+   "status": "Active",
+   "start": "2012-10-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO162",
+     "primary": true,
+     "start": "2012-10-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "X25": {
+   "name": "PUBLIC HEALTH ENGLAND",
+   "status": "Active",
+   "start": "2013-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO116",
+     "primary": true,
+     "start": "2013-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "T1310",
+     "date": "2013-04-01"
+    }
+   ]
+  },
   "X26": {
    "name": "NHS ENGLAND - X26",
    "status": "Active",
@@ -28801,6 +29990,29 @@
    "icb": "",
    "successors": [],
    "predecessors": []
+  },
+  "X80": {
+   "name": "NATIONAL INSTITUTE FOR HEALTH AND CARE EXCELLENCE",
+   "status": "Active",
+   "start": "2013-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO162",
+     "primary": true,
+     "start": "2013-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "T1160",
+     "date": "2013-04-01"
+    }
+   ]
   },
   "XDC": {
    "name": "OFFICE FOR NATIONAL STATISTICS (ONS)",
@@ -28893,6 +30105,35 @@
    "successors": [],
    "predecessors": []
   },
+  "Y04231": {
+   "name": "ST BARTHOLOMEWS HOSPITAL",
+   "status": "Inactive",
+   "start": "2013-05-01",
+   "end": "2018-04-30",
+   "roles": [
+    {
+     "id": "RO177",
+     "primary": true,
+     "start": "2013-05-01",
+     "end": "2018-04-30"
+    },
+    {
+     "id": "RO250",
+     "primary": false,
+     "start": "2016-04-20",
+     "end": "2018-04-30"
+    },
+    {
+     "id": "RO72",
+     "primary": false,
+     "start": "2014-04-15",
+     "end": "2016-04-19"
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
   "Y3E1Z": {
    "name": "OBSERVATIONAL AND PRAGMATIC RESEARCH INTERNATIONAL LIMITED",
    "status": "Active",
@@ -28926,6 +30167,46 @@
    "icb": "",
    "successors": [],
    "predecessors": []
+  },
+  "YGM28": {
+   "name": "IMS HEALTH LTD",
+   "status": "Active",
+   "start": "2006-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO92",
+     "primary": true,
+     "start": "2006-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": []
+  },
+  "YGM69": {
+   "name": "NORTHGATE INFORMATION SOLUTIONS",
+   "status": "Active",
+   "start": "2009-04-01",
+   "end": "",
+   "roles": [
+    {
+     "id": "RO92",
+     "primary": true,
+     "start": "2009-04-01",
+     "end": ""
+    }
+   ],
+   "icb": "",
+   "successors": [],
+   "predecessors": [
+    {
+     "type": "predecessor",
+     "code": "8HJ75",
+     "date": "2009-04-01"
+    }
+   ]
   },
   "YGM74": {
    "name": "HEALTH & SOCIAL CARE INFORMATION CENTRE",

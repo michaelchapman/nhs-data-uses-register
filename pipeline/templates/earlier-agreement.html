@@ -15,7 +15,8 @@
 </nav>
 
 <h1>{{ agreement.base_reference }}</h1>
-<p class="lede">{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org or "Organisation not stated" }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+<p class="lede">{% if agreement.organisation_slug in org_slugs and not agreement.organisation_succeeded %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org or "Organisation not stated" }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+{% if agreement.organisation_succeeded %}<p class="hint">Listed under <a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ org_names.get(agreement.organisation_slug, "")|org }}</a>, which took it over, according to NHS ODS.</p>{% endif %}
 <p class="notice"><strong>Never in the Data Uses Register.</strong> This agreement appears only in the release registers NHS Digital published before July 2021{% if agreement.last_label %}, last in {{ agreement.last_label }}{% endif %}. The registers don't say why an agreement stops appearing: most likely it ended, or no data was released under it after then. It is not counted in this site's figures.</p>
 {{ earlier_flag() }}
 

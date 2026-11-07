@@ -24,7 +24,7 @@
     <thead><tr><th scope="col">Data released</th><th scope="col">Form</th><th scope="col">Frequency</th><th scope="col">First listed</th><th scope="col">Last listed</th></tr></thead>
     <tbody>
     {% for d in version.datasets %}
-      <tr><th scope="row">{{ d.dataset }}</th><td>{{ d.form or "—" }}</td><td>{{ d.frequency or "—" }}</td><td>{{ d.first }}</td><td>{{ d.last }}</td></tr>
+      <tr><th scope="row">{% if d.slug %}<a href="{{ meta.base_path }}/datasets/{{ d.slug }}/">{{ d.dataset }}</a>{% else %}{{ d.dataset }}{% endif %}</th><td>{{ d.form or "—" }}</td><td>{{ d.frequency or "—" }}</td><td>{{ d.first }}</td><td>{{ d.last }}</td></tr>
     {% endfor %}
     </tbody>
   </table>

@@ -42,7 +42,7 @@ def register(releases: list[list], purposes: list[list] | None = None, release_s
     return buffer.getvalue()
 
 
-def release(reference, dataset="HES Admitted Patient Care", organisation="UNIVERSITY OF LEEDS", purpose=None):
+def release(reference, dataset="Other Data Set", organisation="UNIVERSITY OF LEEDS", purpose=None):
     return [organisation, dataset, "Pseudonymised", "Sensitive", "s261", purpose, "One-Off", reference, None]
 
 
@@ -91,6 +91,41 @@ class ReferenceTest(unittest.TestCase):
         self.assertEqual(earlier.period_label("2017-03-01", "2017-05-31"), "March to May 2017")
         self.assertEqual(earlier.period_label("2019-04-01", "2019-04-30"), "April 2019")
         self.assertEqual(earlier.period_label("2016-12-01", "2017-02-28"), "December 2016 to February 2017")
+
+
+class DatasetMatchTest(unittest.TestCase):
+    SPELLINGS = {
+        "Hospital Episode Statistics Admitted Patient Care (HES APC)": "hes-apc",
+        "Acute-Local Provider Flows": "acute",
+        "Diagnostic Imaging Data Set (DID)": "did",
+        "Mental Health Minimum Data Set": "mhmds",
+        "Mental Health Minimum Data Set (MHMDS)": "mhmds-2",
+    }
+
+    def match(self, name):
+        found = earlier.match_datasets([name], self.SPELLINGS)
+        return found[name]["slug"] if name in found else None
+
+    def test_exact(self):
+        self.assertEqual(self.match("Acute-Local Provider Flows"), "acute")
+
+    def test_spelling(self):
+        self.assertEqual(self.match("Diagnostic Imaging Dataset"), "did")
+        self.assertEqual(self.match("Hospital Episode Statistics Admitted Patient Care"), "hes-apc")
+
+    def test_rewrites(self):
+        self.assertEqual(self.match("Standard Monthly Extract : HES Inpatient"), "hes-apc")
+        self.assertEqual(self.match("Local Provider Data - Acute"), "acute")
+
+    def test_several_flows_or_pages_link_nowhere(self):
+        self.assertIsNone(self.match("Local Provider Data - Acute, Ambulance"))
+        # Two pages share the spelling key, so neither is chosen.
+        self.assertIsNone(self.match("Mental Health Minimum Dataset"))
+        self.assertIsNone(self.match("ONS Births"))
+
+    def test_alias_map(self):
+        found = earlier.match_datasets(["Old HES"], {"Acute": "acute"}, {"old hes": "Acute"})
+        self.assertEqual(found["Old HES"]["slug"], "acute")
 
 
 class ReadWorkbookTest(unittest.TestCase):
@@ -188,7 +223,9 @@ class SiteTest(unittest.TestCase):
         oldest = known["versions"][0]["reference"]
         cls.store = Store(root, {
             "a.xlsx": ("2017-03-01", "2017-05-31", register(
-                [release(f"{known['base_reference']}-v0.1"), release(oldest), release("NIC-99999-ZZZZZ-v1")],
+                [release(f"{known['base_reference']}-v0.1"), release(oldest),
+                 release("NIC-99999-ZZZZZ-v1", organisation=known["organisation"].upper()),
+                 release("NIC-88888-YYYYY-v1", organisation="GONE AWAY RESEARCH LTD")],
                 [purpose(f"{known['base_reference']}-v0.1", "An earlier objective"),
                  purpose("NIC-99999-ZZZZZ-v1", "A finished study")])),
         })
@@ -218,6 +255,32 @@ class SiteTest(unittest.TestCase):
         self.assertIn("dars-nic-99999-zzzzz", self.page("agreements/earlier"))
         self.assertIn("/agreements/dars-nic-99999-zzzzz/", (self.out / "sitemap.xml").read_text())
 
+    def test_dataset_page(self):
+        datasets = {d["name"] for v in self.known["versions"] for d in v["datasets"]}
+        self.assertIn("Other Data Set", datasets)
+        html = self.page("datasets/other-data-set")
+        self.assertIn('id="earlier-registers"', html)
+        self.assertIn("dars-nic-99999-zzzzz", html)
+
+    def test_organisation_page(self):
+        html = self.page(f"organisations/{self.known['organisation_slug']}")
+        self.assertIn("Only in the earlier registers (1)", html)
+        self.assertIn("dars-nic-99999-zzzzz", html)
+
+    def test_page_for_organisation_only_in_earlier_registers(self):
+        html = self.page("organisations/gone-away-research-ltd")
+        self.assertIn("Never in the Data Uses Register", html)
+        self.assertIn("/agreements/dars-nic-88888-yyyyy/", html)
+        self.assertIn('/datasets/other-data-set/', html)
+        self.assertIn("/organisations/gone-away-research-ltd/", self.page("agreements/dars-nic-88888-yyyyy"))
+        self.assertIn("/organisations/gone-away-research-ltd/", self.page("organisations"))
+        self.assertIn("/organisations/gone-away-research-ltd/", (self.out / "sitemap.xml").read_text())
+
+    def test_agreements_list_searchable(self):
+        html = self.page("agreements")
+        self.assertIn('id="earlier-table"', html)
+        self.assertIn('data-search="DARS-NIC-99999-ZZZZZ', html)
+
     def test_about_page(self):
         self.assertIn('id="earlier-registers"', self.page("about"))
 
@@ -233,3 +296,34 @@ class NoStoreTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SuccessorPageTest(unittest.TestCase):
+    """An earlier-only agreement of a merged CCG is listed on its successor's page."""
+
+    class Lineage:
+        def node(self, name):
+            return {"NHS OLD CCG": "ccg:01A"}.get(name)
+
+        def successors(self, node):
+            return {"ccg:01A": [("ccg:02B", "2018-04-01")], "ccg:02B": [("org:QWO", "2022-07-01")]}.get(node, [])
+
+        def identity(self, node):
+            return node
+
+        def page_name(self, identity):
+            return {"ccg:02B": "NHS Middle CCG", "org:QWO": "NHS New ICB"}[identity]
+
+        def page(self, name):
+            return None
+
+    def test_first_successor_with_a_page(self):
+        found = build.earlier_organisation_page("NHS OLD CCG", {"nhs-new-icb"}, {}, self.Lineage())
+        self.assertEqual(found, ("nhs-new-icb", True))
+
+    def test_own_page_first(self):
+        found = build.earlier_organisation_page("NHS OLD CCG", {"nhs-old-ccg", "nhs-new-icb"}, {}, self.Lineage())
+        self.assertEqual(found, ("nhs-old-ccg", False))
+
+    def test_no_page(self):
+        self.assertEqual(build.earlier_organisation_page("CTSU", {"nhs-new-icb"}, {}, self.Lineage()), ("", False))

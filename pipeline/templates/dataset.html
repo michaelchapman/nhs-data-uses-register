@@ -152,6 +152,31 @@
 </div>
 {% with intro="Agreements naming this dataset that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
+{% if earlier %}
+{% from "_earlier.html" import earlier_flag with context %}
+{% from "_fold.html" import fold_summary %}
+{% set only = earlier.agreements|selectattr("only_earlier")|list %}
+<h2 id="earlier-registers">In the earlier registers ({{ earlier.agreements|length|commas }})</h2>
+{{ earlier_flag() }}
+<p>{{ earlier.agreements|length|commas }} agreement{{ "s" if earlier.agreements|length != 1 }} received this dataset in the release registers published before July 2021, first in {{ earlier.first_label }}.{% if only %} {{ only|length|commas }} of them {{ "appears" if only|length == 1 else "appear" }} only in those registers.{% endif %}
+  They name it {% for name in earlier.names %}“{{ name }}”{% if not loop.last %}{{ " or " if loop.revindex == 2 else ", " }}{% endif %}{% endfor %}.</p>
+<details class="fold">
+  {{ fold_summary("the agreements in the earlier registers") }}
+  <div class="table-scroll">
+  <table class="data-table compact">
+    <caption class="visually-hidden">Agreements that received {{ dataset.name }} in the earlier release registers</caption>
+    <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">First listed</th><th scope="col">Last listed</th></tr></thead>
+    <tbody>
+    {% for a in earlier.agreements %}
+      <tr><th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/{% if not a.only_earlier %}#earlier-registers{% endif %}">{{ a.base_reference }}</a>{% if a.only_earlier %} <span class="hint">(earlier registers only)</span>{% endif %}</th>
+        <td>{{ a.organisation|org or "—" }}</td><td>{{ a.first }}</td><td>{{ a.last }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</details>
+{% endif %}
+
 {% from "_cite.html" import cite with context %}
 {{ cite("agreements naming " ~ dataset.name, dataset.archived.last_edition if dataset.archived else meta.edition) }}
 {% endblock %}

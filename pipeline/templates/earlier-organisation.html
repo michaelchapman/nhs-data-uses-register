@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "_earlier.html" import earlier_flag with context %}
+{% block title %}{{ organisation.name|org }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ organisation.name|org }} received data under {{ organisation.agreement_count }} agreement{{ "s" if organisation.agreement_count != 1 }} listed in NHS Digital's release registers before July 2021.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li><a href="{{ meta.base_path }}/organisations/">Organisations</a></li>
+    <li aria-current="page">{{ organisation.name|org }}</li>
+  </ol>
+</nav>
+<h1>{{ organisation.name|org }}</h1>
+<p class="lede">{{ organisation.type or "Organisation type not stated" }}</p>
+{% if organisation.known_as %}<p class="hint">Also written {% for name in organisation.known_as %}“{{ name }}”{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+<p class="notice"><strong>Never in the Data Uses Register.</strong> {{ organisation.name|org }} received data under {{ organisation.agreement_count }} agreement{{ "s" if organisation.agreement_count != 1 }} listed in the release registers NHS Digital published before July 2021, last in {{ organisation.last_label }}. None is counted in this site's figures.</p>
+{{ earlier_flag() }}
+
+<h2>Agreements</h2>
+<div class="table-scroll">
+<table class="data-table">
+  <caption class="visually-hidden">Agreements of {{ organisation.name|org }} in the earlier release registers</caption>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Latest version</th><th scope="col">First listed</th><th scope="col">Last listed</th><th scope="col" class="num">Datasets</th></tr></thead>
+  <tbody>
+  {% for a in organisation.agreements %}
+    <tr><th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.base_reference }}</a></th>
+      <td>{{ "v" ~ a.latest.version if a.latest.version else "—" }}</td>
+      <td>{{ a.first_label or "—" }}</td><td>{{ a.last_label or "—" }}</td><td class="num">{{ a.dataset_names|length }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% if organisation.datasets %}
+<h2>Data released</h2>
+<ul class="pill-list">
+  {% for name, slug in organisation.datasets %}
+  <li>{% if slug in dataset_slugs %}<a href="{{ meta.base_path }}/datasets/{{ slug }}/">{{ name }}</a>{% else %}{{ name }}{% endif %}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

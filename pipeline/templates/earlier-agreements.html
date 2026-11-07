@@ -21,7 +21,7 @@
   {% for a in agreements %}
     <tr>
       <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.base_reference }}</a></th>
-      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org or "—" }}{% endif %}</td>
+      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% if a.organisation_succeeded %} <span class="hint">(now {{ org_names.get(a.organisation_slug, "")|org }})</span>{% endif %}{% else %}{{ a.organisation|org or "—" }}{% endif %}</td>
       <td>{{ "v" ~ a.latest.version if a.latest.version else "—" }}</td>
       <td data-sort="{{ a.first_listed }}">{{ a.first_label or "—" }}</td>
       <td data-sort="{{ a.last_listed }}">{{ a.last_label or "—" }}</td>
