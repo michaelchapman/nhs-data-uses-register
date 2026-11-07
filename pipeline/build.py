@@ -10,7 +10,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, overviews, privacy, relations, releases, search, sectors, sources
+from . import aliases, compare, ods, outputs, overviews, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
 from .references import slugify
@@ -334,7 +334,14 @@ def build(
     # AI-written overviews, from data/summaries.json; see `pipeline.overviews`.
     # Agreement pages flag them as AI-generated; the About page names the models.
     overview_entries = overviews.load()
-    render("about.html", "about/index.html", overview_models=overviews.models_used(overview_entries))
+    # Papers linked to agreements, from data/outputs.json; see `pipeline.outputs`.
+    output_links = outputs.load()
+    render(
+        "about.html",
+        "about/index.html",
+        overview_models=overviews.models_used(overview_entries),
+        output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
+    )
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
 
@@ -353,6 +360,7 @@ def build(
             diffs=version_diffs(agreement, dataset_aliases, organisation_aliases, organisation_lineage),
             timeline=releases.agreement_timeline(agreement, dataset_aliases, meta["as_of"]),
             overview=overviews.current(agreement, overview_entries),
+            papers=outputs.for_agreement(agreement, output_links),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(

@@ -1,0 +1,113 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+from unittest import mock
+
+from pipeline import build, outputs
+from pipeline.extract import extract
+
+from .fixtures import FIRST_EDITION, dataset_aliases, site_meta, workbook_bytes
+
+REFERENCE = "DARS-NIC-1-AAAAA"
+
+
+def row(**extra) -> dict:
+    return {
+        "agreement": f"{REFERENCE}-v2",
+        "doi": "10.1136/bmj-2024-000001",
+        "title": "Maternity outcomes in England",
+        "year": 2024,
+        "basis": "found",
+        "register_cited": False,
+        **extra,
+    }
+
+
+def write(rows: list[dict], path: Path) -> None:
+    path.write_text(json.dumps({
+        "register_edition": "november2026", "source_commit": "c65350e", "exported": "2026-11-07", "outputs": rows,
+    }))
+
+
+def build_with(rows: list[dict] | None, out: Path) -> tuple[str, str]:
+    """The first agreement's page and the About page, built with `rows` as data/outputs.json."""
+    with dataset_aliases(), tempfile.TemporaryDirectory() as directory:
+        path = Path(directory) / "outputs.json"
+        if rows is not None:
+            write(rows, path)
+        with mock.patch.object(outputs, "PATH", path):
+            build.build(extract(workbook_bytes()), site_meta(), FIRST_EDITION, out)
+    page = (out / "agreements" / REFERENCE.lower() / "index.html").read_text()
+    return page, (out / "about" / "index.html").read_text()
+
+
+class Page(unittest.TestCase):
+    def test_found_papers_are_listed_and_flagged_as_not_the_register(self):
+        with tempfile.TemporaryDirectory() as directory:
+            page, about = build_with([row()], Path(directory))
+        self.assertIn('<h2 id="papers">Papers linked to this agreement</h2>', page)
+        self.assertIn("Not part of the register.", page)
+        self.assertIn("Papers found to have used this agreement's data", page)
+        self.assertIn('<a href="https://doi.org/10.1136/bmj-2024-000001">Maternity outcomes in England</a>', page)
+        self.assertIn("November 2026 edition", page)
+        self.assertIn("/commit/c65350e", page)
+        self.assertIn('href="#papers"', page)
+        self.assertNotIn("benefit of", page.lower())
+        # The fixture's register reports no benefits, so the page says the
+        # papers come from the review.
+        self.assertIn("These papers were found by the review, not cited by the register.", page)
+        self.assertLess(page.index('id="purpose"'), page.index('id="papers"'))
+        self.assertLess(page.index('id="papers"'), page.index('id="datasets"'))
+        self.assertIn('id="papers"', about)
+        self.assertIn("1 agreement pages", about)
+
+    def test_unreadable_register_citations_say_why(self):
+        with tempfile.TemporaryDirectory() as directory:
+            page, _ = build_with([row(basis="unreadable")], Path(directory))
+        self.assertIn("Cited by the register, not checked", page)
+        self.assertIn("the full text isn't openly available, so the review couldn't check it.", page)
+        self.assertNotIn("Papers found to have used", page)
+
+    def test_no_file_means_no_section(self):
+        with tempfile.TemporaryDirectory() as directory:
+            page, about = build_with(None, Path(directory))
+        self.assertNotIn('id="papers"', page)
+        self.assertNotIn('id="papers"', about)
+
+    def test_titles_are_escaped(self):
+        with tempfile.TemporaryDirectory() as directory:
+            page, _ = build_with([row(title="<script>x</script> in A&E")], Path(directory))
+        self.assertIn("&lt;script&gt;x&lt;/script&gt; in A&amp;E", page)
+
+
+class Load(unittest.TestCase):
+    def load(self, rows: list[dict]) -> dict | None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "outputs.json"
+            write(rows, path)
+            return outputs.load(path)
+
+    def test_an_undecided_basis_stops_the_build(self):
+        for basis in ("probable", "rejected", "protocol", None):
+            with self.subTest(basis=basis), self.assertRaises(outputs.OutputsError):
+                self.load([row(basis=basis)])
+
+    def test_a_bad_doi_stops_the_build(self):
+        with self.assertRaises(outputs.OutputsError):
+            self.load([row(doi="not a doi")])
+
+    def test_doi_urls_are_normalised_and_versions_grouped(self):
+        loaded = self.load([row(doi="https://doi.org/10.1000/abc"), row(agreement=f"{REFERENCE}-v1", doi="10.1000/ABC")])
+        self.assertEqual([r["url"] for r in loaded["by_agreement"][REFERENCE]], ["https://doi.org/10.1000/abc"])
+
+    def test_only_known_fields_are_kept(self):
+        loaded = self.load([row(quote="A long passage from the paper.")])
+        self.assertNotIn("quote", loaded["by_agreement"][REFERENCE][0])
+
+    def test_missing_file_is_none(self):
+        self.assertIsNone(outputs.load(Path("/nonexistent/outputs.json")))
+
+
+if __name__ == "__main__":
+    unittest.main()
