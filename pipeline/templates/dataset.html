@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_feed.html" import feed_link with context %}
 {% block title %}{{ dataset.name }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ dataset.agreement_count }} agreements with {{ dataset.organisations|length }} organisations name {{ dataset.name }} in the NHS England Data Uses Register.{% endblock %}
 {% block content %}
@@ -26,6 +27,7 @@
   <div><dt>Files released</dt><dd>{{ dataset.files_released|commas }}</dd></div>
   {% if paper_count %}<div><dt>Papers from agreements naming it</dt><dd><a href="{{ meta.base_path }}/papers/?dataset={{ dataset.slug }}">{{ paper_count|commas }}</a> <span class="hint">not all of which used this dataset</span></dd></div>{% endif %}
 </dl>
+{{ feed_link(feed_url, "agreements naming this dataset") }}
 {% include "_release-scope.html" %}
 
 {% set labels = [

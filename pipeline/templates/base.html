@@ -6,7 +6,8 @@
 <title>{% block title %}{{ meta.site_name }}{% endblock %}</title>
 <meta name="description" content="{% block description %}A readable, searchable view of the NHS England Data Uses Register: the organisations that hold data sharing agreements with NHS England, what for, and which datasets those agreements cover.{% endblock %}">
 {% if page_path %}
-{% block canonical %}<link rel="canonical" href="{{ meta.site_url }}{{ meta.base_path }}{{ page_path }}">
+{% if feed_url %}<link rel="alternate" type="application/atom+xml" title="Changes: {{ self.title()|striptags }}" href="{{ feed_url }}">
+{% endif %}{% block canonical %}<link rel="canonical" href="{{ meta.site_url }}{{ meta.base_path }}{{ page_path }}">
 {% endblock %}
 <meta property="og:url" content="{{ meta.site_url }}{{ meta.base_path }}{{ page_path }}">
 {% endif %}

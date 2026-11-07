@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_feed.html" import feed_link with context %}
 {% block title %}What changed — {{ meta.site_name }}{% endblock %}
 {% block description %}Agreements added, amended and removed between editions of the NHS England Data Uses Register.{% endblock %}
 {% from "_change_details.html" import change_details, wide_edit %}
@@ -27,6 +28,7 @@
 {% endmacro %}
 {% block content %}
 <h1>What changed</h1>
+{{ feed_link(feed_url, "the register") }}
 
 {# The editions either side of this one that have a page of their own: the
    earliest edition held has nothing before it to compare with, so no page. #}

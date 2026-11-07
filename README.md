@@ -26,6 +26,10 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
+- **Atom feeds of what changed** — one for the register at
+  `/changes/feed.xml`, and one on each organisation's and dataset's page, so
+  a feed reader can follow them. Dated by edition, so a rebuild writes the
+  same feeds.
 - **Projects and papers under sublicensing agreements** — for the agreements
   that permit sublicensing and are held by cohorts, research databases and data
   services, links to each holder's own release register, list of approved

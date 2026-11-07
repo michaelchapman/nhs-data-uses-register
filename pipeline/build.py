@@ -14,6 +14,7 @@ from . import (
     aliases,
     compare,
     earlier,
+    feeds,
     ods,
     onward,
     outputs,
@@ -533,7 +534,13 @@ def build(
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
     # An agreement no longer listed still has its page, so a row about it links.
     changes_by_slug = {a["base_reference"]: a for a in archived + data["agreements"]}
-    render("changes.html", "changes/index.html", by_slug=changes_by_slug, org_slugs=org_slugs)
+    # Atom feeds of the same changes: one for the register, and one for each
+    # organisation and dataset an agreement that changed names. See `pipeline.feeds`.
+    feed_entries = feeds.page_entries(changes_history or [], changes_by_slug, meta)
+    site_feed = f"{meta['base_path']}/changes/feed.xml" if changes_history else ""
+    if changes_history:
+        _write(out, "changes/feed.xml", feeds.site_feed(meta, changes_history))
+    render("changes.html", "changes/index.html", by_slug=changes_by_slug, org_slugs=org_slugs, feed_url=site_feed)
     # A same-shaped page for every earlier edition pair, so "what changed" isn't
     # limited to the current edition — the facts store holds every edition
     # ingested, so each can have its own page.
@@ -586,6 +593,7 @@ def build(
     render(
         "about.html",
         "about/index.html",
+        site_feed=site_feed,
         overview_models=overviews.models_used(overview_entries),
         output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
         output_lag=outputs.lag(all_papers),
@@ -662,7 +670,13 @@ def build(
             earlier_only=earlier_by_org.get(organisation["slug"], []),
             onward=onward_by_org.get(organisation["slug"], []),
             onward_slugs=onward_slugs,
+            feed_url=f"{meta['base_path']}/organisations/{organisation['slug']}/feed.xml"
+            if organisation["slug"] in feed_entries["organisations"] else "",
         )
+        if organisation["slug"] in feed_entries["organisations"]:
+            _write(out, f"organisations/{organisation['slug']}/feed.xml", feeds.page_feed(
+                meta, "organisations", organisation["slug"], display_name(organisation["name"]),
+                feed_entries["organisations"][organisation["slug"]]))
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of
     # its own spelling; that address now forwards, so a link to it still works.
@@ -699,7 +713,12 @@ def build(
             search_numbers=search_numbers,
             paper_count=papers_by_dataset.get(dataset["slug"], 0),
             earlier=earlier_by_dataset.get(dataset["slug"]),
+            feed_url=f"{meta['base_path']}/datasets/{dataset['slug']}/feed.xml"
+            if dataset["slug"] in feed_entries["datasets"] else "",
         )
+        if dataset["slug"] in feed_entries["datasets"]:
+            _write(out, f"datasets/{dataset['slug']}/feed.xml", feeds.page_feed(
+                meta, "datasets", dataset["slug"], dataset["name"], feed_entries["datasets"][dataset["slug"]]))
 
     shutil.copytree(ASSETS, out / "assets", dirs_exist_ok=True)
     (out / ".nojekyll").write_text("")

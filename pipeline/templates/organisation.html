@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_feed.html" import feed_link with context %}
 {% block title %}{{ organisation.name|org }} — {{ meta.site_name }}{% endblock %}
 {% block description %}{{ organisation.name|org }} holds {{ organisation.agreement_count }} data sharing agreements with NHS England covering {{ organisation.dataset_names|length }} datasets.{% endblock %}
 {% block content %}
@@ -64,6 +65,7 @@
   <div><dt>Latest agreement end date</dt><dd>{{ organisation.latest_end|date }}</dd></div>
   {% endif %}
 </dl>
+{{ feed_link(feed_url, "this organisation's agreements") }}
 {% if organisation.sector_reason %}
 <p class="hint">Sector set by hand: {{ organisation.sector_reason }} See <a href="{{ meta.repo_url }}/blob/main/data/organisation-sectors.json">data/organisation-sectors.json</a> in the repository.</p>
 {% endif %}

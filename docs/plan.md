@@ -38,6 +38,11 @@ and the site keeps no analytics, so who uses it is unknown. An Atom
 feed of each edition's changes, one per organisation and dataset, built at
 build time like every other page, answers the first. A link inviting people
 to say how they use the site answers the second without tracking anyone.
+
+The feeds are built (`pipeline/feeds.py`, November 2026): `/changes/feed.xml`
+with an entry per edition, and `feed.xml` on every organisation and dataset
+page an agreement that changed names, with an entry per change. The feedback
+link waits for a decision on where replies go.
 [Built](#built) keeps the reasoning of finished work that still decides how
 the site behaves.
 
