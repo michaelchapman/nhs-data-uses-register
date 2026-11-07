@@ -137,6 +137,16 @@
 </div>
 {% endif %}
 
+{% if onward %}
+{% from "_onward.html" import onward_registers with context %}
+<h2 id="onward">Projects and papers under its sublicensing agreements</h2>
+<p class="hint">Agreements held by {{ organisation.name|org }} permit sublicensing, and NHS England's register doesn't list the projects that use the data under them. These are the holder's own lists, found by this site on {{ onward_checked|date }}. <a href="{{ meta.base_path }}/about/#onward">About these lists</a></p>
+{% for holder in onward %}
+{{ onward_registers(holder, onward_checked) }}
+<p class="hint">Covers {% for ref in holder.agreements %}{% set slug = onward_slugs.get(ref.upper()) %}{% if slug %}<a href="{{ meta.base_path }}/agreements/{{ slug }}/">{{ ref }}</a>{% else %}{{ ref }}{% endif %}{{ ", " if not loop.last }}{% endfor %}.</p>
+{% endfor %}
+{% endif %}
+
 {% with intro="Agreements naming " ~ (organisation.name|org) ~ " as applicant or data controller that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
 <h2>Datasets named in its agreements</h2>

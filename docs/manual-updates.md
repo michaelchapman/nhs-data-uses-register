@@ -87,6 +87,19 @@ Budget about two minutes a month, plus about a minute for the parse.
    It reads the facts store, not the workbooks, and takes a few seconds. See
    [organisation-names.md](organisation-names.md#datasets).
 
+   Then check the holders' lists of projects and papers under sublicensing
+   agreements:
+
+   ```bash
+   .venv/bin/python -m pipeline.onward
+   ```
+
+   It lists any agreement in `data/onward-registers.json` that has left the
+   edition or no longer permits sublicensing, and any new agreement outside
+   the ICBs that permits it and has no entry. Look for the new holder's own
+   release register, list of approved projects and list of papers, and add an
+   entry, with an empty `registers` list and a note if none is found.
+
 5. **Write the overviews of changed agreements** (optional, a few pence).
    An agreement whose text changed shows no AI overview until this runs. It
    needs `ANTHROPIC_API_KEY` and `pip install -r requirements-summarise.txt`.
@@ -103,7 +116,7 @@ Budget about two minutes a month, plus about a minute for the parse.
 6. **Check the numbers look sane,** then commit and push:
 
    ```bash
-   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json data/summaries.json
+   git add data/facts data/organisation-codes.json data/ods data/dataset-aliases.json data/summaries.json data/onward-registers.json
    git commit -m "Add the August 2026 edition"
    git push
    ```

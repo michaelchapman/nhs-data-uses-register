@@ -122,6 +122,7 @@
     {% if show_controllers %}<li><a href="#controllers">Data controllers</a></li>{% endif %}
     <li><a href="#purpose">Why the data was released</a></li>
     {% if papers %}<li><a href="#papers">Papers linked to this agreement</a></li>{% endif %}
+    {% if onward %}<li><a href="#onward">Projects and papers under this agreement</a></li>{% endif %}
     <li><a href="#datasets">Datasets</a></li>
     <li><a href="#releases">Files released</a></li>
     <li><a href="#history">Version history</a></li>
@@ -205,6 +206,20 @@
 <p class="hint">The applicant cites these papers in the register's benefit text. The review couldn't confirm they used this agreement's data.</p>
 {{ paper_list(papers.cited, "papers cited in the register") }}
 {% endif %}
+{% if onward %}
+<p class="hint">Only papers the review tied to this agreement itself are shown. Papers from projects that {{ onward.holder }} approves may be on its own lists, <a href="#onward">below</a>.</p>
+{% endif %}
+</section>
+{% endif %}
+
+{% if onward %}
+{# The holder's own lists, from data/onward-registers.json: see pipeline/onward.py. #}
+{% from "_onward.html" import onward_registers with context %}
+<section class="onward-section" aria-labelledby="onward">
+<h2 id="onward">Projects and papers under this agreement</h2>
+<p class="papers-flag"><strong>Not part of the register.</strong>
+  This agreement permits sublicensing, and NHS England's register doesn't list the projects that use the data under it. {% if onward.registers %}The holder keeps its own lists. This site found these on {{ onward_checked|date }}.{% else %}Holders often keep their own lists.{% endif %} <a href="{{ meta.base_path }}/about/#onward">About these lists</a></p>
+{{ onward_registers(onward, onward_checked) }}
 </section>
 {% endif %}
 
@@ -239,7 +254,7 @@
 <h2 id="releases">Files released</h2>
 {% include "_release-scope.html" %}
 {% if v.sublicensing == "Yes" %}
-<p class="notice">This agreement permits sublicensing: the applicant may pass data on to others. Anything passed on is not recorded in this register.</p>
+<p class="notice">This agreement permits sublicensing: the applicant may pass data on to others. Anything passed on is not recorded in this register.{% if onward %} The holder's own lists of projects and papers are <a href="#onward">above</a>.{% endif %}</p>
 {% endif %}
 {% if agreement.opt_outs and agreement.opt_outs.files %}
 {% set o = agreement.opt_outs %}
