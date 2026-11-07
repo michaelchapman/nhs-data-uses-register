@@ -67,12 +67,17 @@ class Page(unittest.TestCase):
         self.assertIn('id="papers"', about)
         self.assertIn("1 agreement pages", about)
 
-    def test_unreadable_register_citations_say_why(self):
+    def test_register_cited_papers_say_what_the_review_found(self):
+        rows = [row(doi=f"10.1000/{basis}", title=f"Paper {basis}", basis=basis) for basis in outputs.RESULTS]
         with tempfile.TemporaryDirectory() as directory:
-            page, _ = build_with([row(basis="unreadable")], Path(directory))
-        self.assertIn("Cited by the register, not checked", page)
-        self.assertIn("the full text isn't openly available, so the review couldn't check it.", page)
+            page, about = build_with(rows, Path(directory))
+        self.assertIn("Cited in the register, not confirmed by the review", page)
+        text = page.replace("&#39;", "'")
+        self.assertEqual(text.count("Not checked: full text not openly available"), 1)
+        for word in ("another study", "names no NHS England data", "rejected"):
+            self.assertNotIn(word, text[text.index('id="papers"'):text.index('id="datasets"')])
         self.assertNotIn("Papers found to have used", page)
+        self.assertIn("4 more papers", about)
 
     def test_no_file_means_no_section(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -104,7 +109,7 @@ class PapersPage(unittest.TestCase):
         self.assertEqual(page.count("https://doi.org/10.1136/bmj-2024-000001"), 1)
         self.assertIn("Not part of the register.", page)
         self.assertEqual(page.count('data-reason="found"'), 1)
-        self.assertEqual(page.count('data-reason="unreadable"'), 1)
+        self.assertEqual(page.count('data-reason="cited"'), 1)
         self.assertIn('id="papers-table"', page)
         self.assertIn("filter.js", page)
         self.assertIn(f"/agreements/{REFERENCE.lower()}/", page)
@@ -139,8 +144,8 @@ class PapersPage(unittest.TestCase):
 
     def test_found_wins_when_a_paper_has_both_reasons(self):
         loaded = {"by_agreement": {
-            "A": [{**row(), "id": "x", "url": "u", "basis": "found", "register_cited": False}],
-            "B": [{**row(), "id": "x", "url": "u", "basis": "unreadable", "register_cited": True}],
+            "A": [{**row(), "id": "x", "url": "u", "basis": "found", "result": "", "register_cited": False}],
+            "B": [{**row(), "id": "x", "url": "u", "basis": "unreadable", "result": "r", "register_cited": True}],
         }}
         agreements = [{"base_reference": "A", "organisation_slug": "a"}, {"base_reference": "B", "organisation_slug": "b"}]
         [paper] = outputs.papers(loaded, agreements)
