@@ -1,9 +1,10 @@
 name: Check and build
 description: >
   The checks every change goes through, and the build they end in: tests, lint,
-  type check, the site itself, and its internal links. Both workflows run this,
+  type check, the site itself, its internal links, whether its figures agree
+  across pages, and the search in a browser. Both workflows run this,
   so a pull request is checked exactly as a deploy is. It makes no external
-  requests beyond installing the pinned requirements.
+  requests beyond installing the pinned requirements and a browser.
 
 inputs:
   site-url:
@@ -56,7 +57,9 @@ runs:
       env:
         SITE_URL: ${{ inputs.site-url }}
         SITE_BASE_PATH: ${{ inputs.base-path }}
-      run: python -m pipeline.run
+      # --strict: a warning, such as a hand-kept file naming a page that
+      # doesn't exist, fails the build rather than scrolling past.
+      run: python -m pipeline.run --strict
 
     # After the build, before anything is uploaded: a page that links to a
     # page that does not exist should stop the deploy, not reach readers.
@@ -65,3 +68,26 @@ runs:
       env:
         SITE_BASE_PATH: ${{ inputs.base-path }}
       run: python -m pipeline.linkcheck _site --base-path "$SITE_BASE_PATH"
+
+    # The same figure stated two ways (an agreement's files in the list and on
+    # its page, the count in term on the home page and in the list) stops the
+    # deploy too.
+    - name: Check figures agree across pages
+      shell: bash
+      env:
+        SITE_BASE_PATH: ${{ inputs.base-path }}
+      run: python -m pipeline.sitecheck _site --base-path "$SITE_BASE_PATH"
+
+    # The search runs in the browser (assets/filter.js), so it is tested there.
+    - name: Install a browser for the search tests
+      if: inputs.base-path == ''
+      shell: bash
+      run: |
+        pip install -r requirements-browser.txt
+        python -m playwright install --with-deps chromium
+
+    # The tests serve _site from its root, as the custom domain does.
+    - name: Test the search in a browser
+      if: inputs.base-path == ''
+      shell: bash
+      run: python -m unittest discover -s tests/browser

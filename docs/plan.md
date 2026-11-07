@@ -13,16 +13,31 @@ publishes and reproducibly reformats them into pages that are easier to read,
 search, link to and cite. It is a presentation of the register, not a new
 dataset: there is no expectation that it publishes the reformatted data, so a
 proposal to add a data download starts from that rule. See
-[section 3](#3-considered-and-not-planned).
+[section 3](#3-considered-and-not-planned). The one exception is
+information the register's own files don't hold: `papers/papers.csv`, the
+papers linked to agreements, stays (Michael, 2026-11-07).
 
-Last reviewed 2026-10-07. Each item has an issue. In rough order of value:
+**Its name** is Health Data Uses Explorer, matching healthdatauses.uk. It was
+NHS Data Access Explorer until November 2026; the NHS name implied an
+affiliation the "Unofficial" banner denies.
 
-1. [Dataset pages](#1-dataset-pages) (#56, #57)
-2. [Waiting on people](#2-waiting-on-people) (#51, #55, #78)
-3. [Considered and not planned](#3-considered-and-not-planned)
+Last reviewed 2026-11-07, after a critical review of the site and both
+repositories. Each item has an issue. In rough order of value:
 
-Ideas raised as issues and not yet scoped here: a glossary of the register's
-terms (#27), and trends over time with a feed of what changed (#28).
+1. [Following changes](#following-changes): a feed of what changed and a
+   feedback link (#28)
+2. [Dataset pages](#1-dataset-pages) (#56, #57)
+3. A glossary of the register's terms (#27)
+4. [Waiting on people](#2-waiting-on-people) (#51, #55, #78)
+5. [Considered and not planned](#3-considered-and-not-planned)
+
+## Following changes
+
+Nobody can follow an organisation or a dataset without coming back to check,
+and the site keeps no analytics, so who uses it is unknown. An Atom
+feed of each edition's changes, one per organisation and dataset, built at
+build time like every other page, answers the first. A link inviting people
+to say how they use the site answers the second without tracking anyone.
 [Built](#built) keeps the reasoning of finished work that still decides how
 the site behaves.
 
@@ -122,6 +137,38 @@ ICB release registers in #78.
   650 MB, which matters more.
 
 ## Built
+
+### Checks that pages agree (November 2026)
+
+The site now joins six layers: the register, its change history, NHS
+Digital's earlier release registers, papers, sublicensing registers and AI
+overviews. A review in November 2026 found them contradicting each other on
+some pages, so CI now checks the built site as well as the code:
+`pipeline/sitecheck.py` fails when a figure (an agreement's files or status,
+the count in term, the agreements with papers) differs between pages,
+`tests/browser/` tests the search in a browser, and `run --strict` fails on
+any build warning. What the review fixed:
+
+- **Overviews outlive terms.** An overview is rewritten only when the text
+  changes, so one written while an agreement ran reads as if it still does.
+  The instructions now ask for wording that stays true afterwards, and pages
+  for ended agreements say when the term ended under the overview.
+- **One "Since" date.** An agreement page's start date now matches the
+  agreements list: the earlier of its first version's start and the first
+  earlier release register listing data released under it.
+- **Searches that a filter hides.** The agreements list opens on agreements
+  in term, so a search for an expired one found nothing and suggested
+  shorter words. It now says how many matches the filters hide, with a
+  button to show them.
+
+### Papers, earlier registers and sublicensing (November 2026)
+
+Each is described in the README and on the About page, which say how it is
+built and what it cannot show: papers linked to agreements from a separate
+review (`data/outputs.json`, `pipeline/outputs.py`), NHS Digital's release
+registers from 2015 to June 2021 (`pipeline/earlier.py`), and the projects
+and papers sublicensing holders list (`data/onward-registers.json`,
+`pipeline/onward.py`).
 
 ### AI overviews
 

@@ -338,6 +338,16 @@ def link_earlier_datasets(views: list[dict], spellings: dict[str, str], alias_ma
     return by_dataset
 
 
+# Problems a build notices but can still build past, such as a hand-kept file
+# naming a page that doesn't exist. `run --strict`, as CI runs it, fails on any.
+WARNINGS: list[str] = []
+
+
+def warn(message: str) -> None:
+    WARNINGS.append(message)
+    print(message)
+
+
 def build(
     data: dict,
     meta: dict,
@@ -348,6 +358,7 @@ def build(
     rules: Rules | None = None,
     onward_config: dict | None = None,
 ) -> dict[str, dict]:
+    WARNINGS.clear()
     rules = rules or Rules.load()
     env = environment(rules)
     prepare_output(out)
@@ -364,7 +375,7 @@ def build(
     # Sectors for the Sector filters, from data/organisation-sectors.json.
     sector_config = sectors.load()
     for warning in sectors.assign(data["organisations"] + archive["organisations"], sector_config):
-        print(f"sectors: {warning}")
+        warn(f"sectors: {warning}")
     stats["agreement_sectors"] = _sector_counts((a["sector"] for a in data["agreements"]), sector_config)
     stats["organisation_sectors"] = _sector_counts((o["sector"] for o in data["organisations"]), sector_config)
     # Confidential data and patient opt-outs, for the agreements list's filters.
@@ -384,7 +395,7 @@ def build(
     # Related organisations, from data/organisation-relations.json.
     related_config = relations.load()
     for slug in relations.unknown(related_config, org_slugs):
-        print(f"relations: no organisation page for {slug}")
+        warn(f"relations: no organisation page for {slug}")
     related = relations.lines(related_config)
     organisation_aliases = rules.organisation_aliases
     organisation_lineage = rules.lineage
@@ -426,7 +437,7 @@ def build(
         )
     taken = {a["slug"] for a in data["agreements"] + archived}
     for agreement in [a for a in earlier_only if a["slug"] in taken]:
-        print(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
+        warn(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
     earlier_only = [a for a in earlier_only if a["slug"] not in taken]
     # The earlier registers' own dataset names, linked to the site's dataset pages where the name says which.
     earlier_by_dataset = link_earlier_datasets(
@@ -454,7 +465,7 @@ def build(
     # data/onward-registers.json. See pipeline/onward.py.
     onward_config = onward.load() if onward_config is None else onward_config
     for problem in onward.problems(onward_config, data["agreements"], org_slugs):
-        print(f"onward: {problem}")
+        warn(f"onward: {problem}")
     onward_by_agreement = onward.by_agreement(onward_config)
     onward_by_org = onward.by_organisation(onward_config)
     onward_slugs = {a["base_reference"].upper(): a["slug"] for a in data["agreements"] + archived}
@@ -667,7 +678,7 @@ def build(
         render("moved.html", f"organisations/{own}/index.html", name=name, target=now, target_name=page_names[now])
     for slug, entry in earlier_orgs.items():
         if slug in retired:
-            print(f"earlier: {entry['name']} shares a page address with a renamed organisation; left out")
+            warn(f"earlier: {entry['name']} shares a page address with a renamed organisation; left out")
             continue
         render("earlier-organisation.html", f"organisations/{slug}/index.html", organisation=entry,
                dataset_slugs=dataset_slugs)
