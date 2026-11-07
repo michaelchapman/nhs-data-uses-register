@@ -1,0 +1,801 @@
+{
+ "base_reference": "DARS-NIC-09901-F6V6M",
+ "versions": [
+  {
+   "reference": "DARS-NIC-09901-F6V6M",
+   "version": "",
+   "organisation": "Bracknell Forest Borough Council",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "7ce6dc51043b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v0.3",
+   "version": "0.3",
+   "organisation": "Bracknell Forest Borough Council",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "5437b8628fc8",
+     "activities": "eb52e6f5bd7d",
+     "expected_output": "6b186831ad29",
+     "expected_benefits": "3ca29bf6282e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 5
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v1.4",
+   "version": "1.4",
+   "organisation": "BRACKNELL FOREST BOROUGH COUNCIL",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01",
+    "2016-12-01",
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01"
+     ],
+     "objective": "204d011b8395",
+     "activities": "a8c21f6b2d74",
+     "expected_output": "55397aa61be4",
+     "expected_benefits": "f4cd0850a0c1"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01"
+     ],
+     "rows": 13
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-Health and Social Care Act 2012 s261 5(d)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-Health and Social Care Act 2012 s261 5(d)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-Health and Social Care Act 2012 s261 5(d) - .the disclosure is made to any person in circumstances where it is necessary or expedient for the person to have the information for the purpose of exercising functions of that person conferred under or by",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v2.3",
+   "version": "2.3",
+   "organisation": "BRACKNELL FOREST BOROUGH COUNCIL",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01",
+    "2017-06-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "objective": "e1abd4f4e06f",
+     "activities": "7fb24f21f536",
+     "expected_output": "10f9d7ec0761",
+     "expected_benefits": "e854350a72f6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 13
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 13
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 13
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v3.3",
+   "version": "3.3",
+   "organisation": "Bracknell Forest Borough Council",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01",
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "e1abd4f4e06f",
+     "activities": "b3046f40f23e",
+     "expected_output": "10f9d7ec0761",
+     "expected_benefits": "e854350a72f6"
+    },
+    {
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01"
+     ],
+     "objective": "e1abd4f4e06f",
+     "activities": "b3046f40f23e",
+     "expected_output": "10f9d7ec0761",
+     "expected_benefits": "e854350a72f6",
+     "yielded_benefits": "8fe0a6881bea"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01"
+     ],
+     "rows": 26
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01"
+     ],
+     "rows": 26
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01"
+     ],
+     "rows": 13
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01"
+     ],
+     "rows": 27
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v4.2",
+   "version": "4.2",
+   "organisation": "Bracknell Forest Borough Council",
+   "organisation_type": "Local Authority",
+   "listed": [
+    "2019-04-01",
+    "2019-05-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2019-11-01",
+    "2019-12-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "objective": "e1abd4f4e06f",
+     "activities": "b3046f40f23e",
+     "expected_output": "92502c015ba7",
+     "expected_benefits": "e854350a72f6",
+     "yielded_benefits": "5d4734296d1e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 28
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 28
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 28
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v5.2",
+   "version": "5.2",
+   "organisation": "BRACKNELL FOREST COUNCIL",
+   "organisation_type": "Local Authority",
+   "listed": [
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01"
+     ],
+     "objective": "e1abd4f4e06f",
+     "activities": "b3046f40f23e",
+     "expected_output": "92502c015ba7",
+     "expected_benefits": "e854350a72f6",
+     "yielded_benefits": "5708b12dbba2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01"
+     ],
+     "rows": 26
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01"
+     ],
+     "rows": 13
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01"
+     ],
+     "rows": 26
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-02-01",
+      "2021-03-01"
+     ],
+     "rows": 11
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-09901-F6V6M-v6.5",
+   "version": "6.5",
+   "organisation": "BRACKNELL FOREST COUNCIL",
+   "organisation_type": "Local Authority",
+   "listed": [
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "df5206ea2637",
+     "activities": "f6ded49726c2",
+     "expected_output": "92502c015ba7",
+     "expected_benefits": "e854350a72f6",
+     "yielded_benefits": "37f1982e8ff5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 8
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "10f9d7ec0761": "The results of the analyses of the data will be used by the Local Authority to support the discharge of its statutory duties in relation to public health, and wider public health responsibilities. Outputs will include (but not be limited to) the routine and ad hoc production of: \n\na) Joint Strategic Needs Assessments; \nb) Joint Health and Wellbeing Strategies; \nc) the annual report of the Director of Public Health; \nd) reports commissioned by the Health and Wellbeing Board; \ne) public health and wider Local Authority health and wellbeing commissioning strategies and plans; \nf) public health advice to NHS commissioners; \ng) responses to licensing applications and other statutory Local Authority functions requiring public health input; \nh) local health profiles; \ni) health impact assessments and equity audits; \nj) health needs assessments, such as the Pharmaceutical Needs Assessment; \nk) responses to internal and external requests for information and intelligence on the health and wellbeing of the population.\n\nThe specific content of and target dates for these outputs will be for the Local Authority to determine, although it is required to comply with national guidance published by the Department of Health, Public Health England and others as appropriate, for example, on the timetable for publishing refreshed JSNAs. \n\nAll outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+  "204d011b8395": "The data provided by the Pseudonymised HES Extract Service will be used by the Local Authorities in fulfillment of its public health function, specifically to support and improve: \n\n1. the local responsiveness, targeting and value for money of commissioned public health services; \n2. the statutory ‘core offer’ public health advice and support provided to local NHS commissioners; \n3. the local specificity and relevance of the Joint Strategic Needs Assessments and Health and Wellbeing Strategies produced in collaboration with NHS and voluntary sector partners on the Health and Wellbeing Board; \n4. the local focus, responsiveness and timeliness of health impact assessments; and, among other benefits\n5. the capability of the local public health intelligence service to undertake comparative longitudinal analyses of patterns of and variations in: \na. the incidence and prevalence of disease and risks to public health; \nb. demand for and access to treatment and preventative care services; \nc. variations in health outcomes between groups in the population; \nd. the level of integration between local health and care services; and \ne. the local associations between causal risk factors and health status and outcomes. \n\nThe main statutory duties and wider public health responsibilities supporting these processing objectives are as follows:\n\n1. Statutory public health duties that the data will be used to support\n\na) Duty to improve public health: Analyses of the data will be used to support the duty of the Local Authority under Section 12 of the Health and Social Care Act 2012 to take appropriate steps to improve the health of the population, for example by providing information and advice, services and facilities, and incentives and assistance to encourage and enable people to lead healthier lives; \nb) Duty to support Health and Wellbeing Boards: Analyses of the data will be used to support the duty of the Local Authority and the Clinical Commissioning Group (CCG)-led Health and Wellbeing Board under Section 194 of the 2012 Act to improve health and wellbeing, reduce health inequalities, and promote the integration of health and care services; the data will also be used to support the statutory duty of Health and Wellbeing Boards under Section 206 of the 2012 Act to undertake Pharmaceutical Needs Assessments; \nc) Duty to produce Joint Strategic Needs Assessments (JSNAs) and Joint Health and Wellbeing Strategies (JHWBs): Analyses of the data will be used to support the duty of the Local Authority under Sections 192 and 193 of the 2012 Act to consult on and publish JSNAs and JHWSs that assess the current and future health and wellbeing needs of the local population; \nd) Duty to commission specific public health services: Analyses of the data will be used to support the Local Authority to discharge its duty under the Local Authorities Regulations 2013 to plan and provide NHS Health Check assessments, the National Child Measurement Programme, and open access sexual health services; \ne) Duty to provide public health advice to NHS commissioners: Analyses of the data will be used by Local Authorities to discharge its duty under the 2013 Regulations to provide a public health advice service to NHS commissioners; \nf) Duty to publish an annual public health report: Analyses of the data will be used by Directors of Public Health to support their duty to prepare and publish an annual report on the health of the local population under Section 31 the 2012 Act; \ng) Duty to provide a public health response to licensing applications: Analyses of the data will be used by the Director of Public Health to support their duty under Section 30 of the 2012 Act to provide the Local Authority’s public health response (as the responsible authority under the Licensing Act 2003) to licensing applications. \n\n2. Wider public health responsibilities supported by analysis of the data\n\na) Health impact assessments and equity audits: Analyses of the data will be used to assess the potential impacts on health and the wider social economic and environmental determinants of health of Local Authority strategic plans, policies and services; \nb) Local health profiles: Analyses of the data will be used to support the production of locally-commissioned health profiles to improve understand of the health priorities of local areas and guide strategic commissioning plans by focusing, for example, on: \ni. bespoke local geographies (based on the non-standard aggregation of LSOAs); \nii. specific demographic, geographic, ethnic and socio-economic groups in the population; \niii. inequalities in health status, access to treatment and treatment outcomes; \nc) Surveillance of trends in health status and health outcomes: Analyses of the data will be used for the longitudinal monitoring of trends in the incidence, prevalence, treatment and outcomes for a wide range of diseases and other risks to public health; \nd) Responsive and timely local health intelligence service: Analyses of the data will be used to respond to ad hoc internal and external requests for information and intelligence on the health status and outcomes of the local population generated and received by the Director of Public Health and their team. \n\nThese lists of the statutory duties and wider public health responsibilities of the Local Authority are not exhaustive but set the broad parameters for how the data will be used by the Local Authority to help improve and protect public health, and reduce health inequalities. All such use would be in fulfillment of the public health function of the Local Authority.\n\nNo sensitive data is requested under this application. The data provided would include derived demographic and geographic fields, the standard non-sensitive HES diagnostic and operative fields, and a common (across all Local Authorities) pseudoHESID to enable admissions to be linked over time.",
+  "37f1982e8ff5": "Feb 2021\nThe local authority now have a data warehouse containing HES Accident and Emergency and Admitted Patient Care data. The HES data has been decoded using look-up tables and the NHS Data Dictionary. This allows the data to be aggregated by a range of different geographies and key demographics in order to understand the health of the local population. The aim is for a timely annual refresh of the data in order to provide responsive local data analysis. \n\nDuring 2020/21, a great deal of analytical time has been spent on the response to the covid-19 pandemic. However, the HES data has been utilized for a number of reports that have enabled local public health teams to ask for more detailed analyses for hospital admission activity and has helped to inform a number of different public health projects. . Examples include a deep-dive in to alcohol related admissions in Bracknell Forest with an emphasis on alcohol-related cancers in females. Other examples include:\n- Analysis of admissions for the top ten cause of admissions\n- Analysis of patterns in self-harm admissions\n- Admissions of falls\n- Admissions for mental health conditions",
+  "3ca29bf6282e": "Access to the data will enable the Local Authority to undertake locally-focused and locally-responsive analyses of health status and health outcomes. For example, the data will be used to produce analyses of health inequalities for non-standard geographies and for specific social or ethnic groups in the local population to help ensure that the health challenges facing the local population – particularly the most disadvantaged – have been identified and responded to appropriately by the Local Authority and its partners.\nIt is recognised that in fulfilling its public health duties using HES data, the Local Authority will deliver significant benefits.  The Local Authority therefore commits in any renewal request to providing additional detail on benefits that relate to their local use of the data.",
+  "5437b8628fc8": "The data provided by the Pseudonymised HES Extract Service will be used by the Local Authorities in fulfillment of its public health function, specifically to support and improve: \n1.\tthe local responsiveness, targeting and value for money of commissioned public health services; \n2.\tthe statutory ‘core offer’ public health advice and support provided to local NHS commissioners; \n3.\tthe local specificity and relevance of the Joint Strategic Needs Assessments and Health and Wellbeing Strategies produced in collaboration with NHS and voluntary sector partners on the  Health and Wellbeing Board; \n4.\tthe local focus, responsiveness and timeliness of health impact assessments; and, among other benefits\n5.\tthe capability of the local public health intelligence service to undertake comparative longitudinal analyses of patterns of and variations in: \na)\tthe incidence and prevalence of disease and risks to public health; \nb)\tdemand for and access to treatment and preventative care services; \nc)\tvariations in health outcomes between groups in the population; \nd)\tthe level of integration between local health and care services; and \ne)\tthe local associations between causal risk factors and health status and outcomes. \nThe main statutory duties and wider public health responsibilities supporting these processing objectives are as follows:\n1.\tStatutory public health duties that the data will be used to support\n\na)\tDuty to improve public health: Analyses of the data will be used to support the duty of the Local Authority under Section 12 of the Health and Social Care Act 2012 to take appropriate steps to improve the health of the population, for example by providing information and advice, services and facilities, and incentives and assistance to encourage and enable people to lead healthier lives; \nb)\tDuty to support Health and Wellbeing Boards: Analyses of the data will be used to support the duty of the Local Authority and the Clinical Commissioning Group (CCG)-led Health and Wellbeing Board under Section 194 of the 2012 Act to improve health and wellbeing, reduce health inequalities, and promote the integration of health and care services; the data will also be used to support the statutory duty of Health and Wellbeing Boards under Section 206 of the 2012 Act to undertake Pharmaceutical Needs Assessments; \nc)\tDuty to produce Joint Strategic Needs Assessments (JSNAs) and Joint Health and Wellbeing Strategies (JHWBs): Analyses of the data will be used to support the duty of the Local Authority under Sections 192 and 193 of the 2012 Act to consult on and publish JSNAs and JHWSs that assess the current and future health and wellbeing needs of the local population; \nd)\tDuty to commission specific public health services: Analyses of the data will be used to support the Local Authority to discharge its duty under the Local Authorities Regulations 2013 to plan and provide NHS Health Check assessments, the National Child Measurement Programme, and open access sexual health services; \ne)\tDuty to provide public health advice to NHS commissioners: Analyses of the data will be used by Local Authorities to discharge its duty under the 2013 Regulations to provide a public health advice service to NHS commissioners; \nf)\tDuty to publish an annual public health report: Analyses of the data  will be used by Directors of Public Health to support their duty to prepare and publish an annual report on the health of the local population under Section 31 the 2012 Act; \ng)\tDuty to provide a public health response to licensing applications: Analyses of the data will be used by the Director of Public Health to support their duty under Section 30 of the 2012 Act to provide the Local Authority’s public health response (as the responsible authority under the Licensing Act 2003) to licensing applications. \n\n2.\tWider public health responsibilities supported by analysis of the data\n\na)\tHealth impact assessments and equity audits: Analyses of the data will be used to assess the potential impacts on health and the wider social economic and environmental determinants of health of Local Authority strategic plans, policies and services; \nb)\tLocal health profiles: Analyses of the data will be used to support the production of locally-commissioned health profiles to improve understand of the health priorities of local areas and guide strategic commissioning plans by focusing, for example, on: \ni.\tbespoke local geographies (based on the non-standard aggregation of LSOAs); \nii.\tspecific demographic, geographic, ethnic and socio-economic groups in the population; \niii.\tinequalities in health status, access to treatment and treatment outcomes; \nc)\tSurveillance of trends in health status and health outcomes: Analyses of the data will be used for the longitudinal monitoring of trends in the incidence, prevalence, treatment and outcomes for a wide range of diseases and other risks to public health; \nd)\tResponsive and timely local health intelligence service: Analyses of the data will be used to respond to ad hoc internal and external requests for information and intelligence on the health status and outcomes of the local population generated and received by the Director of Public Health and their team. \nThese lists of the statutory duties and wider public health responsibilities of the Local Authority are not exhaustive but set the broad parameters for how the data will be used by the Local Authority to help improve and protect public health, and reduce health inequalities. All such use would be in fulfillment of the public health function of the Local Authority.\nNo sensitive data is requested under this application. The data provided would include derived demographic and geographic fields, the standard non-sensitive HES diagnostic and operative fields, and a common (across all Local Authorities) pseudoHESID to enable admissions to be linked over time.",
+  "55397aa61be4": "The results of the analyses of the data will be used by the Local Authority to support the discharge of its statutory duties in relation to public health, and wider public health responsibilities. Outputs will include (but not be limited to) the routine and ad hoc production of: \n\na) Joint Strategic Needs Assessments; \nb) Joint Health and Wellbeing Strategies; \nc) the annual report of the Director of Public Health; \nd) reports commissioned by the Health and Wellbeing Board; \ne) public health and wider Local Authority health and wellbeing commissioning strategies and plans; \nf) public health advice to NHS commissioners; \ng) responses to licensing applications and other statutory Local Authority functions requiring public health input; \nh) local health profiles; \ni) health impact assessments and equity audits; and, among other outputs\nj) responses to internal and external requests for information and intelligence on the health and wellbeing of the population.\n\nThe specific content of and target dates for these outputs will be for the Local Authority to determine, although it is required to comply with national guidance published by the Department of Health, Public Health England and others as appropriate, for example, on the timetable for publishing refreshed JSNAs. \n\nAll outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+  "5708b12dbba2": "The local authority now have a data warehouse containing HES Accident and Emergency and Admitted Patient Care data. The HES data has been decoded using look-up tables and the NHS Data Dictionary. This allows the data to be aggregated by a range of different geographies and key demographics in order to understand the health of the local population. The aim is for a timely annual refresh of the data in order to provide responsive local data analysis. \n\nDuring 2019/20, a suite of reports and key measures were developed for the HES data warehouse. This has enabled local public health teams to ask for more detailed analyses for hospital admission activity and has helped to inform a number of different public health projects. Examples include:\n- Analysis of admissions for the top ten cause of admissions\n- Analysis of patterns in self-harm admissions\n- Admissions of falls\n- Admissions for mental health conditions\n- Detailed analysis of admissions for key conditions (cancer, circulatory disease, respiratory disease) at a sub-LA level to enhance local JSNA sections.\n- Informing local School Health Profiles and provide lower-level data on hospital admissions by school catchment area",
+  "5d4734296d1e": "The local authority now have a data warehouse containing HES Accident and Emergency and Admitted Patient Care data. The HES data has been decoded using look-up tables and the NHS Data Dictionary. This allows the data to be aggregated by a range of different geographies and key demographics in order to understand the health of the local population. The aim is for a timely annual refresh of the data in order to provide responsive local data analysis. \n\nDuring 2018/19, a suite of reports and key measures were developed for the HES data warehouse. This has enabled local public health teams to ask for more detailed analyses for hospital admission activity and has helped to inform a number of different public health projects. Examples include:\n- Analysis of alcohol-related and alcohol-specific admissions to inform the Berkshire West Alcohol Working Group and the development of appropriate local interventions. This included using the PHOF and LAPE indicator definitions to provide lower-level geographical breakdowns and a more detailed look at the demography of this patient cohort.\n- Analysis of hospital admissions due to injuries from falls to support a cross-Berkshire bid for a new Falls Service. This included a focus on people who were also diagnosed with a UTI at the point of their hospital admission to identify possible patterns.\n- Summary of admissions for mental health conditions to inform Slough Wellbeing Board's campaign on mental health awareness.\n- Summary of admissions for people who have 'no-fixed-abode' to support Slough's Homelessness Needs Assessment.\n- Detailed analysis of admissions for key conditions (cancer, circulatory disease, respiratory disease) at a sub-LA level to enhance local JSNA sections.\n- Currently using HES data to inform local School Health Profiles and provide lower-level data on hospital admissions by school catchment area",
+  "6b186831ad29": "The results of the analyses of the data will be used by the Local Authority to support the discharge of its statutory duties in relation to public health, and wider public health responsibilities.  Outputs will  include (but not be limited to) the routine and ad hoc production of: \na)\tJoint Strategic Needs Assessments; \nb)\tJoint Health and Wellbeing Strategies; \nc)\tthe annual report of the Director of Public Health; \nd)\treports commissioned by the Health and Wellbeing Board; \ne)\tpublic health and wider Local Authority health and wellbeing commissioning strategies and plans; \nf)\tpublic health advice to NHS commissioners; \ng)\tresponses to licensing applications and other statutory Local Authority functions requiring public health input; \nh)\tlocal health profiles; \ni)\thealth impact assessments and equity audits; and, among other outputs\nj)\tresponses to internal and external requests for information and intelligence on the health and wellbeing of the population.\nThe specific content of and target dates for these outputs will be for the Local Authority to determine, although it is required to comply with national guidance published by the Department of Health, Public Health England and others as appropriate, for example, on the timetable for publishing refreshed JSNAs. \nAll outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+  "7ce6dc51043b": "The data provided by the Pseudonymised HES Extract Service will be used by the Local Authorities in fulfillment of its public health function, specifically to support and improve: \n\n1. the local responsiveness, targeting and value for money of commissioned public health services; \n2. the statutory ‘core offer’ public health advice and support provided to local NHS commissioners; \n3. the local specificity and relevance of the Joint Strategic Needs Assessments and Health and Wellbeing Strategies produced in collaboration with NHS and voluntary sector partners on the Health and Wellbeing Board; \n4. the local focus, responsiveness and timeliness of health impact assessments; and, among other benefits\n5. the capability of the local public health intelligence service to undertake comparative longitudinal analyses of patterns of and variations in: \na. the incidence and prevalence of disease and risks to public health; \nb. demand for and access to treatment and preventative care services; \nc. variations in health outcomes between groups in the population; \nd. the level of integration between local health and care services; and \ne. the local associations between causal risk factors and health status and outcomes. \n\nThe main statutory duties and wider public health responsibilities supporting these processing objectives are as follows:\n\n1. Statutory public health duties that the data will be used to support\n\na) Duty to improve public health: Analyses of the data will be used to support the duty of the Local Authority under Section 12 of the Health and Social Care Act 2012 to take appropriate steps to improve the health of the population, for example by providing information and advice, services and facilities, and incentives and assistance to encourage and enable people to lead healthier lives; \nb) Duty to support Health and Wellbeing Boards: Analyses of the data will be used to support the duty of the Local Authority and the Clinical Commissioning Group (CCG)-led Health and Wellbeing Board under Section 194 of the 2012 Act to improve health and wellbeing, reduce health inequalities, and promote the integration of health and care services; the data will also be used to support the statutory duty of Health and Wellbeing Boards under Section 206 of the 2012 Act to undertake Pharmaceutical Needs Assessments; \nc) Duty to produce Joint Strategic Needs Assessments (JSNAs) and Joint Health and Wellbeing Strategies (JHWBs): Analyses of the data will be used to support the duty of the Local Authority under Sections 192 and 193 of the 2012 Act to consult on and publish JSNAs and JHWSs that assess the current and future health and wellbeing needs of the local population; \nd) Duty to commission specific public health services: Analyses of the data will be used to support the Local Authority to discharge its duty under the Local Authorities Regulations 2013 to plan and provide NHS Health Check assessments, the National Child Measurement Programme, and open access sexual health services; \ne) Duty to provide public health advice to NHS commissioners: Analyses of the data will be used by Local Authorities to discharge its duty under the 2013 Regulations to provide a public health advice service to NHS commissioners; \nf) Duty to publish an annual public health report: Analyses of the data will be used by Directors of Public Health to support their duty to prepare and publish an annual report on the health of the local population under Section 31 the 2012 Act; \ng) Duty to provide a public health response to licensing applications: Analyses of the data will be used by the Director of Public Health to support their duty under Section 30 of the 2012 Act to provide the Local Authority’s public health response (as the responsible authority under the Licensing Act 2003) to licensing applications. \n\n2. Wider public health responsibilities supported by analysis of the data\n\na) Health impact assessments and equity audits: Analyses of the data will be used to assess the potential impacts on health and the wider social economic and environmental determinants of health of Local Authority strategic plans, policies and services; \nb) Local health profiles: Analyses of the data will be used to support the production of locally-commissioned health profiles to improve understand of the health priorities of local areas and guide strategic commissioning plans by focusing, for example, on: \ni. bespoke local geographies (based on the non-standard aggregation of LSOAs); \nii. specific demographic, geographic, ethnic and socio-economic groups in the population; \niii. inequalities in health status, access to treatment and treatment outcomes; \nc) Surveillance of trends in health status and health outcomes: Analyses of the data will be used for the longitudinal monitoring of trends in the incidence, prevalence, treatment and outcomes for a wide range of diseases and other risks to public health; \nd) Responsive and timely local health intelligence service: Analyses of the data will be used to respond to ad hoc internal and external requests for information and intelligence on the health status and outcomes of the local population generated and received by the Director of Public Health and their team. \n\nThese lists of the statutory duties and wider public health responsibilities of the Local Authority are not exhaustive but set the broad parameters for how the data will be used by the Local Authority to help improve and protect public health, and reduce health inequalities. All such use would be in fulfillment of the public health function of the Local Authority.\n\nNo sensitive data is requested under this application. The data provided would include derived demographic and geographic fields, the standard non-sensitive HES diagnostic and operative fields, and a common (across all Local Authorities) pseudoHESID to enable admissions to be linked over time. \n\nProcessing ActivitiesThe Pseudonymised HES Extract Service will enable the Local Authority to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of its statutory duties in relation to health, and wider public health responsibilities. Access to the data is provided to the Local Authority only, and will only be used for the health purposes outlined above. The data will only be processed by Local Authority employees in fulfillment of their public health function, and will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority. The Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: 1. Analyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. 2. Analyses of hospital admission rates: The data will also be used, for example, to produce comparative and longitudinal hospital admission rates among children and young people, particularly for injury and self-harm, to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. Conditions of supply and controls on use The Director of Public Health will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to the HSCIC for ensuring that the data supplied is only used in fulfillment of the approved public health purposes as set out in this application. The Local Authority confirms that the Director of Public Health is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive. In addition to those outlined elsewhere within this application, the Local Authorities will: 1. only use the HES data for the purposes as outlined in this agreement; 2. comply with the requirements of the HSCIC Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; 3. not attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; 4. not transfer and disseminate record-level HES data to anyone outside the Local Authority; 5. not publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and 6. comply with the guidelines set out in the HES Analysis Guide; 7. implement role-based control access to manage access to the HES data within the Local Authority. Data retention A maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted eg. the 2004/05 data year will be deleted once the final complete 2014/15 data year has been received. The Local Authority will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to HSCIC. The historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to: a) recognise and monitor trends in disease incidence and prevalence and other risks to public health; b) recognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; c) recognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and d) recognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes for the purpose of informing the planning, commissioning and provision of effective health and care services at a local level. \nThe Pseudonymised HES Extract Service will enable the Local Authority to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of its statutory duties in relation to health, and wider public health responsibilities. \n\nAccess to the data is provided to the Local Authority only, and will only be used for the health purposes outlined above. The data will only be processed by Local Authority employees in fulfillment of their public health function, and will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority.\n\nThe Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: \n\n1. Analyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. \n\n2. Analyses of hospital admission rates: The data will also be used, for example, to produce comparative and longitudinal hospital admission rates among children and young people, particularly for injury and self-harm, to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. \n\nConditions of supply and controls on use\n\nThe Director of Public Health will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to the HSCIC for ensuring that the data supplied is only used in fulfillment of the approved public health purposes as set out in this application. The Local Authority confirms that the Director of Public Health is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive.\n\nIn addition to those outlined elsewhere within this application, the Local Authorities will:\n\n1. only use the HES data for the purposes as outlined in this agreement; \n2. comply with the requirements of the HSCIC Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; \n3. not attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; \n4. not transfer and disseminate record-level HES data to anyone outside the Local Authority; \n5. not publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and\n6. comply with the guidelines set out in the HES Analysis Guide;\n7. implement role-based control access to manage access to the HES data within the Local Authority. \n\nData retention\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted eg. the 2004/05 data year will be deleted once the final complete 2014/15 data year has been received. The Local Authority will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to HSCIC.\n\nThe historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to:\n\na) recognise and monitor trends in disease incidence and prevalence and other risks to public health; \nb) recognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; \nc) recognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and\nd) recognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes\nfor the purpose of informing the planning, commissioning and provision of effective health and care services at a local level. \n\nExpected OutputThe results of the analyses of the data will be used by the Local Authority to support the discharge of its statutory duties in relation to public health, and wider public health responsibilities. Outputs will include (but not be limited to) the routine and ad hoc production of: a) Joint Strategic Needs Assessments; b) Joint Health and Wellbeing Strategies; c) the annual report of the Director of Public Health; d) reports commissioned by the Health and Wellbeing Board; e) public health and wider Local Authority health and wellbeing commissioning strategies and plans; f) public health advice to NHS commissioners; g) responses to licensing applications and other statutory Local Authority functions requiring public health input; h) local health profiles; i) health impact assessments and equity audits; and, among other outputs j) responses to internal and external requests for information and intelligence on the health and wellbeing of the population. The specific content of and target dates for these outputs will be for the Local Authority to determine, although it is required to comply with national guidance published by the Department of Health, Public Health England and others as appropriate, for example, on the timetable for publishing refreshed JSNAs. All outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide. \nThe results of the analyses of the data will be used by the Local Authority to support the discharge of its statutory duties in relation to public health, and wider public health responsibilities. Outputs will include (but not be limited to) the routine and ad hoc production of: \n\na) Joint Strategic Needs Assessments; \nb) Joint Health and Wellbeing Strategies; \nc) the annual report of the Director of Public Health; \nd) reports commissioned by the Health and Wellbeing Board; \ne) public health and wider Local Authority health and wellbeing commissioning strategies and plans; \nf) public health advice to NHS commissioners; \ng) responses to licensing applications and other statutory Local Authority functions requiring public health input; \nh) local health profiles; \ni) health impact assessments and equity audits; and, among other outputs\nj) responses to internal and external requests for information and intelligence on the health and wellbeing of the population.\n\nThe specific content of and target dates for these outputs will be for the Local Authority to determine, although it is required to comply with national guidance published by the Department of Health, Public Health England and others as appropriate, for example, on the timetable for publishing refreshed JSNAs. \n\nAll outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide. \n\nExpected Measurable BenefitsAccess to the data will enable the Local Authority to undertake locally-focused and locally-responsive analyses of health status and health outcomes. For example, the data will be used to produce analyses of health inequalities for non-standard geographies and for specific social or ethnic groups in the local population to help ensure that the health challenges facing the local population – particularly the most disadvantaged – have been identified and responded to appropriately by the Local Authority and its partners. It is recognised that in fulfilling its public health duties using HES data, the Local Authority will deliver significant benefits. The Local Authority therefore commits in any renewal request to providing additional detail on benefits that relate to their local use of the data. \nAccess to the data will enable the Local Authority to undertake locally-focused and locally-responsive analyses of health status and health outcomes. For example, the data will be used to produce analyses of health inequalities for non-standard geographies and for specific social or ethnic groups in the local population to help ensure that the health challenges facing the local population – particularly the most disadvantaged – have been identified and responded to appropriately by the Local Authority and its partners.\n\nIt is recognised that in fulfilling its public health duties using HES data, the Local Authority will deliver significant benefits. The Local Authority therefore commits in any renewal request to providing additional detail on benefits that relate to their local use of the data.",
+  "7fb24f21f536": "Bracknell Forest Council hosts a shared Public Health Team, as part of a joint agreement with the five other local authorities in Berkshire (Reading Borough Council, Slough Borough Council, West Berkshire Council, Royal Borough of Windsor & Maidenhead and Wokingham Borough Council). The Team includes the Director of Public Health, who has statutory responsibility for public health leadership across Berkshire, as well as a shared Informatics function. The data access agreement between NHS Digital and Bracknell Forest Council for the pseudonymised HES Extract Service will enable the local authorities to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of the statutory duties in relation to health, and wider public health responsibilities. \n\nPseudonymised HES data is provided to Bracknell Forest Council only, who act as the data controller and data processor for this access agreement. The data will only be processed by Local Authority employees in fulfilment of their public health function and only for the health purposes outline above. In addition, aggregated data with small numbers suppressed will also be made available to the other five Berkshire local authorities for the fulfilment of their public health functions and only for the health purposes outline above. Record-level data will not be shared with the other local authorities and all outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n \n\nData will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority. \n\nThe Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: \n\n1. Analyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. \n\n2. Analyses of hospital admission rates: Data will also be used to produce comparative and longitudinal hospital admission rates. An example of this would be for injury and self-harm in children and young people to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. \n\nConditions of supply and controls on use\n\nIn addition to those outlined elsewhere within this application, the Local Authority will:\n\n1. only use the HES data for the purposes as outlined in this agreement; \n2. comply with the requirements of NHS Digital Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; \n3. not attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; \n4. not transfer and disseminate record-level HES data to anyone outside the Local Authority; \n5. not publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and\n6. comply with the guidelines set out in the HES Analysis Guide;\n7. ensure role-based control access is in place to manage access to the HES data within the Local Authority. \n\nThe Director of Public Health will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to NHS Digital for ensuring that the data supplied is only used in fulfilment of the approved public health purposes as set out in this application. The Local Authority confirms that the Director of Public Health is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive.\n\nData retention\n\nA maximum of seven years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted. Bracknell Forest use a disk based backup system where the daily backup files are over written. The retention period for the database and application servers is three calendar months. The Local Authority will securely destroy the earliest year of data and complete a data destruction certificate to NHS Digital once deletion has occurred. This will confirm the date the last backup will be destroyed, ensuring no data has been kept longer than the agreed ten year maximum. \n\nBracknell Forest Council have opted to use Section 8.4 Data Removal from Live Systems, from the HSCIC Destruction and Disposal of Sensitive Data, Good Practice Guidelines as the destruction model.\n\nThe historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to:\n\na) recognise and monitor trends in disease incidence and prevalence and other risks to public health; \nb) recognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; \nc) recognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and\nd) recognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes for the purpose of informing the planning, commissioning and provision of effective health and care services at a local level.",
+  "8fe0a6881bea": "The local authority now have a data warehouse containing HES Accident and Emergency and Admitted Patient Care data. The HES data has been decoded using look-up tables and the NHS Data Dictionary. This allows the data to be aggregated by a range of different geographies and by arrange of key demographics in order to understand the health of the local population. The aim is for a timely annual refresh of the data in order to provide responsive local data analysis. Now that the data warehouse is nearing completion, analysis of the data to meet the needs of local public health teams will begin throughout 2018/19. An initial report of the AAE data has been shared with Public Health Consultants and was met with enthusiasm. The report was also able to provide the consultants with an understanding of what is contained in the data, and demonstrate the potential uses of the data.",
+  "92502c015ba7": "The results of the analyses of the data will be used by the Local Authority to support the discharge of its statutory duties in relation to public health, and wider public health responsibilities. Outputs will include (but not be limited to) the routine and ad hoc production of: \n\na) Joint Strategic Needs Assessments; \nb) Joint Health and Wellbeing Strategies; \nc) the annual report of the Director of Public Health; \nd) reports commissioned by the Health and Wellbeing Board; \ne) public health and wider Local Authority health and wellbeing commissioning strategies and plans; \nf) public health advice to local CCGs, STPs and ICSs;\ng) responses to licensing applications and other statutory Local Authority functions requiring public health input; \nh) local health profiles; \ni) health impact assessments and equity audits; \nj) health needs assessments, such as the Pharmaceutical Needs Assessment; \nk) responses to internal and external requests for information and intelligence on the health and wellbeing of the population.\n\nThe specific content of and target dates for these outputs will be for the Local Authority to determine, although it is required to comply with national guidance published by the Department of Health, Public Health England and others as appropriate, for example, on the timetable for publishing refreshed JSNAs. \n\nAll outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.",
+  "a8c21f6b2d74": "The Pseudonymised HES Extract Service will enable the Local Authority to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of its statutory duties in relation to health, and wider public health responsibilities. \n\nAccess to the data is provided to the Local Authority only, and will only be used for the health purposes outlined above. The data will only be processed by Local Authority employees in fulfillment of their public health function, and will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority.\n\nThe Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: \n\n1. Analyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. \n\n2. Analyses of hospital admission rates: The data will also be used, for example, to produce comparative and longitudinal hospital admission rates among children and young people, particularly for injury and self-harm, to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. \n\nConditions of supply and controls on use\n\nIn addition to those outlined elsewhere within this application, the Local Authorities will:\n\n1. only use the HES data for the purposes as outlined in this agreement; \n2. comply with the requirements of the HSCIC Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; \n3. not attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; \n4. not transfer and disseminate record-level HES data to anyone outside the Local Authority; \n5. not publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and\n6. comply with the guidelines set out in the HES Analysis Guide;\n7. implement role-based control access to manage access to the HES data within the Local Authority. \n\nThe Director of Public Health will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to the HSCIC for ensuring that the data supplied is only used in fulfillment of the approved public health purposes as set out in this application. The Local Authority confirms that the Director of Public Health is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive.\n\nData retention\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted eg. the 2004/05 data year will be deleted once the final complete 2014/15 data year has been received. The Local Authority will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to HSCIC.\n\nThe historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to:\n\na) recognise and monitor trends in disease incidence and prevalence and other risks to public health; \nb) recognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; \nc) recognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and\nd) recognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes\n\nfor the purpose of informing the planning, commissioning and provision of effective health and care services at a local level.",
+  "b3046f40f23e": "Bracknell Forest Council hosts a shared Public Health Team, as part of a joint agreement with the five other local authorities in Berkshire (Reading Borough Council, Slough Borough Council, West Berkshire Council, Royal Borough of Windsor & Maidenhead and Wokingham Borough Council). The Team includes the Director of Public Health, who has statutory responsibility for public health leadership across Berkshire, as well as a shared Informatics function. The data access agreement between NHS Digital and Bracknell Forest Council for the pseudonymised HES Extract Service will enable the local authorities to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of the statutory duties in relation to health, and wider public health responsibilities. \n\nPseudonymised HES data is provided to Bracknell Forest Council only, who act as the data controller and data processor for this access agreement. The data will only be processed by Local Authority employees in fulfilment of their public health function and only for the health purposes outline above. In addition, aggregated data with small numbers suppressed will also be made available to the other five Berkshire local authorities for the fulfilment of their public health functions and only for the health purposes outline above. Record-level data will not be shared with the other local authorities and all outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n \n\nData will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority. \n\nThe Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: \n\n1. Analyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. \n\n2. Analyses of hospital admission rates: Data will also be used to produce comparative and longitudinal hospital admission rates. An example of this would be for injury and self-harm in children and young people to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. \n\nConditions of supply and controls on use\n\nIn addition to those outlined elsewhere within this application, the Local Authority will:\n\n1. only use the HES data for the purposes as outlined in this agreement; \n2. comply with the requirements of NHS Digital Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; \n3. not attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; \n4. not transfer and disseminate record-level HES data to anyone outside the Local Authority; \n5. not publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and\n6. comply with the guidelines set out in the HES Analysis Guide;\n7. ensure role-based control access is in place to manage access to the HES data within the Local Authority. \n\nThe Borough Solicitor will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to NHS Digital for ensuring that the data supplied is only used in fulfilment of the approved public health purposes as set out in this application. The Local Authority confirms that the Borough Solicitor is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive.\n\nData retention\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted (i.e. at any point in time only ten historic years of data plus the current year may be held). The Local Authority will securely destroy the earliest year of data and complete a data destruction certificate to NHS Digital once deletion has occurred. This will confirm the date the last backup will be destroyed, ensuring no data has been kept longer than the agreed ten year maximum. \n\nBracknell Forest Council have opted to use Section 8.4 Data Removal from Live Systems, from the NHS Digital Destruction and Disposal of Sensitive Data, Good Practice Guidelines as the destruction model.\n\nThe historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to:\n\na) recognise and monitor trends in disease incidence and prevalence and other risks to public health; \nb) recognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; \nc) recognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and\nd) recognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes for the purpose of informing the planning, commissioning and provision of effective health and care services at a local level.",
+  "df5206ea2637": "The data provided by the pseudonymised HES Extract will be used to fulfil the public health function of Bracknell Forest County Council, specifically to support and improve: \n\n1. the local responsiveness, targeting and value for money of commissioned public health services; \n2. the statutory ‘core offer’ public health advice and support provided to local NHS commissioners; \n3. the local specificity and relevance of the Joint Strategic Needs Assessments and Health and Wellbeing Strategies produced in collaboration with NHS and voluntary sector partners on the Health and Wellbeing Board; \n4. the local focus, responsiveness and timeliness of health impact assessments; \n5. the capability of the local public health intelligence service to undertake comparative longitudinal analyses of patterns and variations in: \na. the incidence and prevalence of disease and risks to public health; \nb. demand for and access to treatment and preventative care services; \nc. variations in health outcomes between groups in the population; \nd. the level of integration between local health and care services; and \ne. the local associations between causal risk factors and health status and outcomes. \n\nThe main statutory duties and wider public health responsibilities supporting these processing objectives are as follows:\n\n1. Statutory public health duties that the data will be used to support\n\na) Duty to improve public health: Analyses of the data will be used to support the duty of the local authorities under Section 12 of the Health and Social Care Act 2012 to take appropriate steps to improve the health of the population, for example by providing information and advice, services and facilities, and incentives and assistance to encourage and enable people to lead healthier lives; \nb) Duty to support Health and Wellbeing Boards: Analyses of the data will be used to support the duty of the local authorities and Clinical Commissioning Group (CCG)-led Health and Wellbeing Board under Section 194 of the 2012 Act to improve health and wellbeing, reduce health inequalities, and promote the integration of health and care services. The data will also be used to support the statutory duty of Health and Wellbeing Boards under Section 206 of the 2012 Act to undertake Pharmaceutical Needs Assessments; \n\nc) Duty to produce Joint Strategic Needs Assessments (JSNAs) and Joint Health and Wellbeing Strategies (JHWBs): Analyses of the data will be used to support the duty of the Local Authority under Sections 192 and 193 of the 2012 Act to consult on and publish JSNAs and JHWSs that assess the current and future health and wellbeing needs of the local population; \n\nd) Duty to commission specific public health services: Analyses of the data will be used to support the Local Authority to discharge its duty under the Local Authorities Regulations 2013 to plan and provide NHS Health Check assessments, the National Child Measurement Programme and open access sexual health services; \n\ne) Duty to provide public health advice to NHS commissioners: Analyses of the data will be used by Local Authorities to discharge its duty under the 2013 Regulations to provide a public health advice service to NHS commissioners; \n\nf) Duty to publish an annual public health report: Analyses of the data will be used by Directors of Public Health to support their duty to prepare and publish an annual report on the health of the local population under Section 31 the 2012 Act; \n\ng) Public Health responses on behalf of the Local Authority to licensing applications and other statutory Local Authority functions requiring public health input: Analyses of the data will be used by the Director of Public Health to support their duty under Part 3 of the National Health Services Act 2006 (as amended by Section 30 of the Health and Social Care Act 2012) to provide the Local Authority’s public health response (as the responsible authority under the Licensing Act 2003, as amended by the Health and Social Care Act 2012 Schedule 5 – Part 1) to licensing applications.\n\n2. Wider public health responsibilities supported by analysis of the data\n\na) Health impact assessments and equity audits: Analyses of the data will be used to assess the potential impacts on health and the wider social economic and environmental determinants of health of Local Authority strategic plans, policies and services; \n\nb) Local health profiles: Analyses of the data will be used to support the production of locally-commissioned health profiles to improve understand of the health priorities of local areas and guide strategic commissioning plans by focusing, for example, on: \ni. bespoke local geographies (based on the non-standard aggregation of LSOAs); \nii. specific demographic, geographic, ethnic and socio-economic groups in the population; \niii. inequalities in health status, access to treatment and treatment outcomes; \n\nc) Surveillance of trends in health status and health outcomes: Analyses of the data will be used for the longitudinal monitoring of trends in the incidence, prevalence, treatment and outcomes for a wide range of diseases and other risks to public health; \n\nd) Responsive and timely local health intelligence service: Analyses of the data will be used to respond to ad hoc internal and external requests for information and intelligence on the health status and outcomes of the local population generated and received by the Director of Public Health and their team. \n\nThese lists of the statutory duties and wider public health responsibilities of local authorities are not exhaustive but set the broad parameters for how the data will be used by the Local Authority to help improve and protect public health, and reduce health inequalities. All such use would be in fulfilment of the public health function of the local authorities.\n\nNo sensitive data is requested under this application. The data provided would include derived demographic and geographic fields, the standard non-sensitive HES diagnostic and operative fields, and a common (across all Local Authorities) pseudoHESID to enable admissions to be linked over time.",
+  "e1abd4f4e06f": "The data provided by the pseudonymised HES Extract will be used to fulfil the public health function of the six Berkshire local authorities, specifically to support and improve: \n\n1. the local responsiveness, targeting and value for money of commissioned public health services; \n2. the statutory ‘core offer’ public health advice and support provided to local NHS commissioners; \n3. the local specificity and relevance of the Joint Strategic Needs Assessments and Health and Wellbeing Strategies produced in collaboration with NHS and voluntary sector partners on the Health and Wellbeing Board; \n4. the local focus, responsiveness and timeliness of health impact assessments; \n5. the capability of the local public health intelligence service to undertake comparative longitudinal analyses of patterns and variations in: \na. the incidence and prevalence of disease and risks to public health; \nb. demand for and access to treatment and preventative care services; \nc. variations in health outcomes between groups in the population; \nd. the level of integration between local health and care services; and \ne. the local associations between causal risk factors and health status and outcomes. \n\nThe main statutory duties and wider public health responsibilities supporting these processing objectives are as follows:\n\n1. Statutory public health duties that the data will be used to support\n\na) Duty to improve public health: Analyses of the data will be used to support the duty of the local authorities under Section 12 of the Health and Social Care Act 2012 to take appropriate steps to improve the health of the population, for example by providing information and advice, services and facilities, and incentives and assistance to encourage and enable people to lead healthier lives; \nb) Duty to support Health and Wellbeing Boards: Analyses of the data will be used to support the duty of the local authorities and Clinical Commissioning Group (CCG)-led Health and Wellbeing Board under Section 194 of the 2012 Act to improve health and wellbeing, reduce health inequalities, and promote the integration of health and care services. The data will also be used to support the statutory duty of Health and Wellbeing Boards under Section 206 of the 2012 Act to undertake Pharmaceutical Needs Assessments; \n\nc) Duty to produce Joint Strategic Needs Assessments (JSNAs) and Joint Health and Wellbeing Strategies (JHWBs): Analyses of the data will be used to support the duty of the Local Authority under Sections 192 and 193 of the 2012 Act to consult on and publish JSNAs and JHWSs that assess the current and future health and wellbeing needs of the local population; \n\nd) Duty to commission specific public health services: Analyses of the data will be used to support the Local Authority to discharge its duty under the Local Authorities Regulations 2013 to plan and provide NHS Health Check assessments, the National Child Measurement Programme and open access sexual health services; \n\ne) Duty to provide public health advice to NHS commissioners: Analyses of the data will be used by Local Authorities to discharge its duty under the 2013 Regulations to provide a public health advice service to NHS commissioners; \n\nf) Duty to publish an annual public health report: Analyses of the data will be used by Directors of Public Health to support their duty to prepare and publish an annual report on the health of the local population under Section 31 the 2012 Act; \n\ng) Public Health responses on behalf of the Local Authority to licensing applications and other statutory Local Authority functions requiring public health input: Analyses of the data will be used by the Director of Public Health to support their duty under Part 3 of the National Health Services Act 2006 (as amended by Section 30 of the Health and Social Care Act 2012) to provide the Local Authority’s public health response (as the responsible authority under the Licensing Act 2003, as amended by the Health and Social Care Act 2012 Schedule 5 – Part 1) to licensing applications.\n\n2. Wider public health responsibilities supported by analysis of the data\n\na) Health impact assessments and equity audits: Analyses of the data will be used to assess the potential impacts on health and the wider social economic and environmental determinants of health of Local Authority strategic plans, policies and services; \n\nb) Local health profiles: Analyses of the data will be used to support the production of locally-commissioned health profiles to improve understand of the health priorities of local areas and guide strategic commissioning plans by focusing, for example, on: \ni. bespoke local geographies (based on the non-standard aggregation of LSOAs); \nii. specific demographic, geographic, ethnic and socio-economic groups in the population; \niii. inequalities in health status, access to treatment and treatment outcomes; \n\nc) Surveillance of trends in health status and health outcomes: Analyses of the data will be used for the longitudinal monitoring of trends in the incidence, prevalence, treatment and outcomes for a wide range of diseases and other risks to public health; \n\nd) Responsive and timely local health intelligence service: Analyses of the data will be used to respond to ad hoc internal and external requests for information and intelligence on the health status and outcomes of the local population generated and received by the Director of Public Health and their team. \n\nThese lists of the statutory duties and wider public health responsibilities of local authorities are not exhaustive but set the broad parameters for how the data will be used by the Local Authority to help improve and protect public health, and reduce health inequalities. All such use would be in fulfilment of the public health function of the local authorities.\n\nNo sensitive data is requested under this application. The data provided would include derived demographic and geographic fields, the standard non-sensitive HES diagnostic and operative fields, and a common (across all Local Authorities) pseudoHESID to enable admissions to be linked over time.",
+  "e854350a72f6": "Access to the data will enable the Local Authority to undertake locally-focused and locally-responsive analyses of health status and health outcomes. For example, the data will be used to produce analyses of health inequalities for non-standard geographies and for specific social or ethnic groups in the local population to help ensure that the health challenges facing the local population – particularly the most disadvantaged – have been identified and responded to appropriately by the Local Authority and its partners.\n\nIt is recognised that in fulfilling its public health duties using HES data, the Local Authority will deliver significant benefits. The Local Authority therefore commits in any renewal request to providing additional detail on benefits that relate to their local use of the data once implemented.",
+  "eb52e6f5bd7d": "The Pseudonymised HES Extract Service will enable the Local Authority to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of its statutory duties in relation to health, and wider public health responsibilities. \nAccess to the data is provided to the Local Authority only, and will only be used for the health purposes outlined above.  The data will only be processed by Local Authority employees in fulfillment of their public health function, and will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority.\nThe Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: \n1.\tAnalyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. \n\n2.\tAnalyses of hospital admission rates: The data will also be used, for example, to produce comparative and longitudinal hospital admission rates among children and young people, particularly for injury and self-harm, to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. \nConditions of supply and controls on use\nThe Director of Public Health will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to the HSCIC for ensuring that the data supplied is only used in fulfillment of the approved public health purposes as set out in this application.  The Local Authority confirms that the Director of Public Health is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive.\nIn addition to those outlined elsewhere within this application, the Local Authorities will:\n1.\tonly use the HES data for the purposes as outlined in this agreement; \n2.\tcomply with the requirements of the HSCIC Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; \n3.\tnot attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; \n4.\tnot transfer and disseminate record-level HES data to anyone outside the Local Authority; \n5.\tnot publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and\n6.\tcomply with the guidelines set out in the HES Analysis Guide;\n7.\timplement role-based control access to manage access to the HES data within the Local Authority. \nData retention\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted eg. the 2004/05 data year will be deleted once the final complete 2014/15 data year has been received. The Local Authority will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to HSCIC.\nThe historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to:\na)\trecognise and monitor trends in disease incidence and prevalence and other risks to public health; \nb)\trecognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; \nc)\trecognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and\nd)\trecognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes\nfor the purpose of informing the planning, commissioning and provision of effective health and care services at a local level.",
+  "f4cd0850a0c1": "Access to the data will enable the Local Authority to undertake locally-focused and locally-responsive analyses of health status and health outcomes. For example, the data will be used to produce analyses of health inequalities for non-standard geographies and for specific social or ethnic groups in the local population to help ensure that the health challenges facing the local population – particularly the most disadvantaged – have been identified and responded to appropriately by the Local Authority and its partners.\n\nIt is recognised that in fulfilling its public health duties using HES data, the Local Authority will deliver significant benefits. The Local Authority therefore commits in any renewal request to providing additional detail on benefits that relate to their local use of the data.",
+  "f6ded49726c2": "Bracknell Forest Council hosts a shared Public Health Team, as part of a joint agreement with the five other local authorities in Berkshire (Reading Borough Council, Slough Borough Council, West Berkshire Council, Royal Borough of Windsor & Maidenhead and Wokingham Borough Council). The Team includes the Director of Public Health, who has statutory responsibility for public health leadership across Berkshire, as well as a shared Informatics function. The data access agreement between NHS Digital and Bracknell Forest Council for the pseudonymised HES Extract Service will enable the local authorities to undertake a wide range of locally-determined and locally-specific analyses to support the effective and efficient discharge of the statutory duties in relation to health, and wider public health responsibilities. \n\nPseudonymised HES data is provided to Bracknell Forest Council only, who act as the data controller and data processor for this access agreement. The data will only be processed by Local Authority employees in fulfilment of their public health function and only for the health purposes outline above. In addition, aggregated data with small numbers suppressed will also be made available to the other five Berkshire local authorities for the fulfilment of their public health functions and only for the health purposes outline above. Record-level data will not be shared with the other local authorities and all outputs will be of aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n \nData will not be transferred or otherwise made available to any third party, including Commissioning Support Units, Data Services for Commissioners Regional Offices, any organisation for the purposes of health research, or any Business Intelligence company providing analysis and intelligence services (whether under formal contract or not) to / or on behalf of the Local Authority. \n\nThe Local Authority will use the data to produce a range of quantitative measures (counts, crude and standardised rates and ratios) that will form the basis for a range of statistical analyses of the fields contained in the supplied data. Typical uses will include: \n\n1. Analyses of disease incidence, prevalence and trends: The age, sex, LSOA, ethnic group, Indices of Deprivation and diagnosis fields typically will be used to produce directly standardised coronary heart disease admission rates for the Local Authority, and for appropriate benchmark and comparator areas. Confidence intervals will then be produced for these rates, and the rates analysed using statistical process control methods, to determine whether there are any significant variations in the prevalence of heart disease with the Local Authority. The data will also be used to analyse changes over time in the prevalence of heart disease. The results of these analyses will then be used to inform the production of local health profiles, JSNAs and JHWSs; support the ‘core offer’ public health advice provided by the Director of Public Health to NHS commissioners; and advise any enquiries into health inequalities requested by the Health and Wellbeing Board. \n\n2. Analyses of hospital admission rates: Data will also be used to produce comparative and longitudinal hospital admission rates. An example of this would be for injury and self-harm in children and young people to support the overarching responsibility of the Local Authority to safeguard and promote the health and welfare of all children and young people under the 1989 and 2004 Children Acts. Statistics based on these analyses will be used by the Director of Public Health to advise the Director of Children’s Services and Lead Member for Children’s Services, and inform and guide the provision of safeguarding services by the Local Authority. \n\nConditions of supply and controls on use\n\nIn addition to those outlined elsewhere within this application, the Local Authority will:\n\n1. only use the HES data for the purposes as outlined in this agreement; \n2. comply with the requirements of NHS Digital Code of Practice on Confidential Information, the Caldicott Principles and other relevant statutory requirements and guidance to protect confidentiality; \n3. not attempt any record-level linkage of HES data with other data sets held by the Local Authority, or attempt to identify any individuals from the HES data; \n4. not transfer and disseminate record-level HES data to anyone outside the Local Authority; \n5. not publish the results of any analyses of the HES data unless safely de-identified in line with the anonymisation standard; and\n6. comply with the guidelines set out in the HES Analysis Guide;\n7. ensure role-based control access is in place to manage access to the HES data within the Local Authority. \n\nThe Borough Solicitor will be the Information Asset Owner for the HES data and be responsible on behalf of the Local Authority to NHS Digital for ensuring that the data supplied is only used in fulfilment of the approved public health purposes as set out in this application. The Local Authority confirms that the Borough Solicitor is a contracted employee to the permanent role within the Local Authority, accountable to the Chief Executive.\n\nData retention\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted (i.e. at any point in time only ten historic years of data plus the current year may be held). The Local Authority will securely destroy the earliest year of data and complete a data destruction certificate to NHS Digital once deletion has occurred. This will confirm the date the last backup will be destroyed, ensuring no data has been kept longer than the agreed ten year maximum. \n\nBracknell Forest Council have opted to use Section 8.4 Data Removal from Live Systems, from the NHS Digital Destruction and Disposal of Sensitive Data, Good Practice Guidelines as the destruction model.\n\nThe historic data will be used by the Local Authority in fulfilment of its public health function, and specifically to:\n\na) recognise and monitor trends in disease incidence and prevalence and other risks to public health; \nb) recognise and monitor trends in treatment patterns, particularly hospital readmissions, and outcomes; \nc) recognise and monitor trends in access to treatment and care between demographic, geographic, ethnic and socio-economic groups in the population; and\nd) recognise and monitor trends in the association between the wider social, economic and environmental determinants of health and health outcomes for the purpose of informing the planning, commissioning and provision of effective health and care services at a local level."
+ }
+}

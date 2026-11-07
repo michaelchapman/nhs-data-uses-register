@@ -1,0 +1,130 @@
+{
+ "base_reference": "DARS-NIC-326033-G1P7Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-326033-G1P7Q",
+   "version": "",
+   "organisation": "University of Manchester",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "07256fd49ada"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(ECC -05(g)/2011) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-326033-G1P7Q-v1.3",
+   "version": "1.3",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "d86ee04eac2f",
+     "activities": "fc882724afef",
+     "expected_output": "df0a77fb6354",
+     "expected_benefits": "25b9708029c5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-326033-G1P7Q-v2.2",
+   "version": "2.2",
+   "organisation": "THE UNIVERSITY OF MANCHESTER",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "d86ee04eac2f",
+     "activities": "fc882724afef",
+     "expected_output": "df0a77fb6354",
+     "expected_benefits": "25b9708029c5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "07256fd49ada": "Objective for processing:\nThe Trauma Audit and Research Network (TARN) is a non-commercial organisation affiliated with the University of Manchester and funded by membership fees from participant trusts.  TARN is the mandated organisation for the audit of trauma care in England, as set out in and endorsed by Standard ISB 1606.  \nTARN holds Europe's largest database of traumatic injury, with hospitals  within participating trusts entering details of relevant cases into TARN’s online system.  Any trusts receiving trauma patients are participants.\nThe aim of TARN is to support service improvement by providing analytical feedback to trusts, in reports such as the major trauma dashboards. TARN is the means by which funding mechanisms such as Best Practice Tariff operate. The TARN site hosts the Best Practice Tariff report, which major trauma centres use to report to commissioners and receive payment.  To ensure that analyses are as accurate as possible, TARN needs to ensure that its dataset is as complete as possible. \nTARN requires HES data in order to measure completeness of submission to the TARN database for individual trusts and hospitals.  Results are fed back to the trusts in privately circulated reports and information on completeness is also displayed on TARN’s website.  HES data helps TARN to help trusts ensure that all cases that are eligible for payment are submitted and can be reported on.\n\nProcessing activities:  \nTARN requires HES data from the HSCIC for patients with at least one ICD-10 code relating to traumatic injury.  Any patients included in this extract will be potentially eligible for the TARN audit, which is concerned only with traumatically injured patients but TARN does not audit all traumatically injured patients.  TARN further processes the received data to create a reduced cohort that correlates with TARN inclusion criteria.  Records would be linked to hospitals and trusts using Organisation Data Service (ODS) codes.  The purpose of this is to derive a number of TARN-eligible cases for each participating hospital and trust.  This is then used to assist hospitals with case identification and to measure completeness of data.\nThe HES data is linked to the TARN database by NHS number.  The HES data is filtered by ICD-10 codes in order to identify patients that are potentially eligible for the TARN audit. TARN then notifies trusts of potentially eligible cases that were not reported.  This is achieved through the provision of lists of patients (containing NHS number, Arrival date, Age, Length of stay in hospital, Discharge destination, first 5 ICD-10 codes) sent privately to the hospital that provided the treatment.  Only data relevant to the specific hospital is sent to each hospital and no provider will receive data about individuals for whom they did not provide treatment.  The data sent is derived from the HES data supplied by the HSCIC but is data already held by the trusts to which they are sent as the HES data originated from the trusts in the first place.\nSpecific outputs expected, including target date:  \nTARN’s outputs relevant to this application are:\n•\tData completeness measures at site and trust level which are published on the TARN website and are accessible to the public.  The number of TARN cases for a given time period is expressed as a percentage of the denominator derived from the processed HES data.  The site is updated three times a year, in March, July and November.  See the Performance Comparison section at https://www.tarn.ac.uk/Content.aspx?ca=15 for details.\n•\tData completeness measures at site level which are published in the Major Trauma Dashboard.  This is circulated privately to Major Trauma Centres in February, May, August and November.  These contain no identifiable or record level personal data.\n•\tPatient lists sent privately to sites requesting assistance with case identification.  TARN sends hospitals lists of patients identified as TARN eligible from HES data for comparison with lists produced by local systems and procedures.  These contain identifiable data as detailed above.\nExpected measurable benefits to health and/or social care including target date: \nThe ultimate aim of TARN is to improve patient care.  TARN carries out a number of planned and ad hoc analyses for hospitals and trusts to highlight good performance and areas where performance could be improved.  A key element of TARN’s work is analysing rates of survival to identify hospitals with excess deaths, based on injury and demographic profiling. \nThis work is dependent on the quality/accuracy of information emanating from the trusts so the use of HES data to monitor and improve completion rates contributes towards this overall aim.  Using HES data to calculate data completeness assists in determining whether apparent poor performance is related to poor data collection, or whether other issues exist that need to be examined further.\nUsing the HES data allows TARN to derive a denominator of expected cases, which in turn allows TARN to identify which sites may be missing patients. TARN can then work with those sites on case identification.\nAn additional benefit of improving case identification is Best Practice Tariff, where Major Trauma Centres receive payment for meeting national standards on a patient by patient basis.",
+  "25b9708029c5": "The ultimate aim of TARN is to improve patient care.  TARN carries out a number of planned and ad hoc analyses for hospitals and trusts to highlight good performance and areas where performance could be improved.  A key element of TARN’s work is analysing rates of survival to identify hospitals with excess deaths, based on injury and demographic profiling. \n\nThis work is dependent on the quality/accuracy of information emanating from the trusts so the use of HES data to monitor and improve completion rates contributes towards this overall aim.  Using HES data to calculate data completeness assists in determining whether apparent poor performance is related to poor data collection, or whether other issues exist that need to be examined further.\n\nUsing the HES data allows TARN to derive a denominator of expected cases, which in turn allows TARN to identify which sites may be missing patients. TARN can then work with those sites on case identification.\n\nAn additional benefit of improving case identification is Best Practice Tariff, where Major Trauma Centres receive payment for meeting national standards on a patient by patient basis.\n\nThe notification to trusts of potentially eligible patients that were not reported by the provision of patient lists linked to the TARN dataset using NHS number has resulted in significant improvements in data completeness. Improvements ranged from 5 to 50% with an average improvement of roughly 20%.",
+  "d86ee04eac2f": "The Trauma Audit and Research Network (TARN) is a non-commercial organisation affiliated with the University of Manchester and funded by membership fees from participant trusts.  TARN is the mandated organisation for the audit of trauma care in England, as set out in and endorsed by Standard ISB 1606.  \n\nTARN holds Europe's largest database of traumatic injury, with hospitals within participating trusts entering details of relevant cases into TARN’s online system.  Any trusts receiving trauma patients are participants.\n\nThe aim of TARN is to support service improvement by providing analytical feedback to trusts, in reports such as the major trauma dashboards. TARN is the means by which funding mechanisms such as Best Practice Tariff operate. The TARN site hosts the Best Practice Tariff report, which major trauma centres use to report to commissioners and receive payment.  To ensure that analyses are as accurate as possible, TARN needs to ensure that its dataset is as complete as possible. \n\nTARN requires HES data in order to measure completeness of submission to the TARN database for individual trusts and hospitals.  Trusts are fed back results for their individual trust and information on completeness for all trusts is also displayed on TARN’s website.  HES data helps TARN to help trusts ensure that all cases that are eligible for payment are submitted and can be reported on.",
+  "df0a77fb6354": "TARN’s outputs relevant to this application are:\n\n• Data completeness measures at site and trust level which are published on the TARN website and are accessible to the public.  The number of TARN cases for a given time period is expressed as a percentage of the denominator derived from the processed HES data.  The site is updated three times a year, in March, July and November.  See the Performance Comparison section at https://www.tarn.ac.uk/Content.aspx?ca=15 for details.\n• Data completeness measures at site level which are published in the Major Trauma Dashboard.  Circulated securely and confidentially to Major Trauma Centres in February, May, August and November. \n• Data completeness measures at site level which are published in the Trauma Unit Major Trauma Dashboard. Circulated securely and confidentially to Trauma Units in February, May, September and November.\n• Data completeness measures at site and trust level which are published in the TARN clinical reports. Circulated securely and confidentially to TARN member hospitals in March, July and November.\n\nData completeness measures contain no identifiable or record level personal data.  All published data is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\n• Patient lists sent securely and confidentially to sites for assistance with case identification.  TARN sends hospitals lists of patients identified as TARN eligible from HES data for comparison with lists produced by local systems and procedures.  These contain identifiable data as detailed above.",
+  "fc882724afef": "TARN requires HES data from NHS Digital for patients with at least one ICD-10 code relating to traumatic injury. Any of these patients are potentially eligible for the TARN audit, which is concerned only with traumatically injured patients. TARN does not audit all traumatically injured patients: TARN further processes the received data to create a reduced cohort that correlates with TARN inclusion criteria. Records would be linked to hospitals and trusts using Organisation Data Service (ODS) codes. The purpose of this is to derive a number of TARN-eligible cases for each participating hospital and trust. This is then used to assist hospitals with case identification and to measure completeness of data.\n\nTARN requires 2 different copies of the HES data:\n1. A pseudonymised version containing no identifiable information from which no data will be removed because of Type 2 patient objections.\n2. An identifiable version containing NHS Number for all eligible patients and excluding data for all patients who registered Type 2 patient objections;\n\nBoth datasets will be filtered by ICD-10 codes to identify cases that appear to be eligible for the TARN audit. The pseudonymised dataset containing all potentially eligible episodes will be used to determine the total number of eligible cases used in data completeness (case ascertainment) calculations. The identifiable dataset containing NHS number will be used to notify trusts of potentially eligible cases that were not reported by linking to the TARN database using NHS number. This is achieved through the provision of lists of patients (containing NHS number, arrival date, age, length of stay in hospital, discharge destination and the first 5 ICD-10 codes) sent securely and confidentially to the hospital that provided the treatment. Only data relevant to the specific hospital is sent to each hospital and no provider will receive data about individuals for whom they did not provide treatment. The data sent is derived from the HES data supplied by NHS Digital but is data already held by the trusts to which they are sent as the HES data originated from the trusts in the first place.\n\nData will only be processed as described above and access will be restricted to substantive employees of the University of Manchester and the hospitals that provided the treatment with which data may be shared. No data will be sent to other organisations other than to hospitals about the patients they have treated.\n\nThe HES data that TARN currently holds will be destroyed as it potentially contains identifiable information about patients who have opted out. Each year TARN will request the latest available year of final HES data and destroy the oldest year of data that TARN have if older than 3 years to ensure that TARN never holds more than 3 years at any one time."
+ }
+}

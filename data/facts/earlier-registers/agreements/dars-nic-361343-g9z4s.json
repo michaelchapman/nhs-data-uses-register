@@ -1,0 +1,71 @@
+{
+ "base_reference": "DARS-NIC-361343-G9Z4S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-361343-G9Z4S",
+   "version": "",
+   "organisation": "Genomics England",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "488dbecc0ad1"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "488dbecc0ad1": "Objective for processing:  \nThe aim is to create a new genomic medicine service for the NHS – transforming the way people are cared for. Patients may be offered a diagnosis where there wasn’t one before. In time, there is the potential of new and more effective treatments.  \nThe project will also enable new medical research. Combining genomic sequence data with medical records is a ground-breaking resource. Researchers will study how best to use genomics in healthcare and how best to interpret the data to help patients. The causes, diagnosis and treatment of disease will also be investigated.  Genomics England also aim to kick-start a UK genomics industry. This is currently the largest national sequencing project of its kind in the world.  \nGenomics England seeking to obtain information from participants’ medical records that span their entire lifetime. The DNA sequence, and information from patients’ health records and any other information given to the Project will be collected and stored securely by the Project as a resource for use by approved researchers for future scientific and medical purposes during the life and after the death of participants. \nDiagnoses arising from the sequencing and analysis of the participants’ DNA are already being fed back to Participants now and for many they are receiving a diagnosis for the first time.   \nGenomic England’s legacy will be a genomics service ready for adoption by the NHS, high ethical standards and public support for genomics, new medicines, treatments and diagnostics and a country which hosts the world’s leading genomic companies. It is a bold ambition with benefits for all.\nProcessing activities: \nThere are three principle stages of processing:\n1.\tData acquisition, cleansing, quality verification, linkage and de-identification\n2.\tIdentification of participant cohorts that meet research scope parameters\n3.\tData analysis for research using de-identified data\n\nThe first stage focuses on the acquisition of data and quality verification to ensure it is complete, accurate and complies well with NHS data dictionary and other data standards that apply.  The data is provided over a period of time (related to the treatment of participants) and associated with their longitudinal data from other NHS sources. \n\nThe intention over the course of the Project is to link this data with other data, such as primary, secondary, social and participant provided data.  For this application the request is limited to HES Data.  \nThe richness of the high quality data sets are crucial to the success of the 100,000 Genome Project in delivering value to the NHS.  The evaluation of whole genome sequencing (WGS) data in the context of rich and extended phenotypes derived from electronic health records, such as blood pressure, cholesterol, glucose, and pharmacogenomics, adds significant value.\n\n The richness of the Project dataset will allow us to move beyond the primary phenotype of the rare disease, cancer or infectious disease that led to the patient’s enrolment to evaluate the WGS in the context of other continuous traits, diseases and response to therapy.   \n As soon as the data completeness and quality has been confirmed the data is de-identified as all subsequent processing can be performed without direct identifiers.  This de-identification is a key facet of the 100,000 Genomes Project.    \n\nThe second stage is focused on the confirmation and approval of valid research scope and selecting a de-identified cohort of participants that fulfil the focus of the research request.  The Researchers will BE members of a Genomics England Clinical Interpretation Partnership (GECiP) or a GENE Consortia.\nGECiP.  The overall aim of the Genomics England Clinical Interpretation Partnership (GeCIP) is to create a thriving, sustainable environment for researchers and clinical (NHS) disease experts.   The activities of GeCIP will inform NHS feedback to clinicians and the multidisciplinary teams by providing enhanced data interpretation, additional information on pathogenicity of variants, and functional characterisation.  \n\nGENE Consortia.  Genomics England are running an Industry trial during the calendar year 2015. 12 pharma, biotech and diagnostics companies have committed to invest monetary and FTE resources to understand how best to realise the value from working with Genomics England, our Bioinformatics Platform Partners and the wider NHS.  \n\nAcross the 100,000 Genome Project Genomics England will be at the forefront of Lifescience Programmes in the UK and Worldwide.  For example Gene discovery in the 100,000 Genomes Project will create significant opportunities for scientific innovation and place particular emphasis upon national and international collaborations.    Where possible, Genomics will work with key international programmes including Development Disorders (DDD) and Orphanet, and complement the work of the International Rare Diseases Consortium (IRDC).\n\nAll research requests will be assessed to ensure they are included in the approved use purposes set out in the Genomics England Protocol and that it complies with the boundaries of the research group (Genomics England Clinical Interpretation Partnership or GENE consortia).  Each research request will be for a sub-set of the de-identified data, with the specific data requirements specified in the request.  The researchers also declare any data they wish to bring into the environment and any tools they wish to use for analysis.\n\nThe third stage is the research analysis of the de-identified approved data sets in the virtual data centre environments.  Researchers perform all the analysis and processing within the environments hosted by Genomics England, they do not extract de-identified data.  Researchers will use pre-declared data and tools to perform their analysis.  If researchers want to extract any anonymised results data, they must first put any such results in a secure folder for anonymisation verification before it can be extracted.\nA simplified view of the Genomics England Data Flow is shown below.  Note the de-identified export boundaries into the Genomics England Core Research Repositary.\nSpecific outputs expected, including target date: \nAll outputs from research environments will be anonymised.  The outputs will relate to the purposes described above for each of the research areas.  Proof of concept outputs will be produced during the summer of 2015, with a move to researcher created outputs during the Autumn of 2015 onwards.  The specific outputs are defined by the research groups and then verified for being anonymous when an extract is requested.\nExpected measurable benefits to health and/or social care including target date: \nThe overall benefits realisation for the project are established by the Department of Health (DoH).  Each individual research study will have their own specific aims and benefits that underpin the DoH benefits.  The 10 key benefits have been drafted as:\n1.\tIt is anticipated that many of the circa 20,000 patients with rare diseases who provide their genomes for sequencing as part of the Project will receive a formal diagnosis for the first time. \n2.\tThe speed of processing the data from Whole Genome Sequences should be greatly increased with an associated acceleration of diagnosis – something that previously has taken years to identify, under the Project this should be possible in a few months. \n3.\tIt is hoped that Genomic diagnosis as a result of the Project will enable clinicians to make cancer treatment more personalised by determining how effective treatments like Herceptin or radiotherapy are likely to be. This will improve the effectiveness of treatments and may provide financial savings.\n4.\tAlthough not all patients involved in the Project will benefit from a significant improvement in their own condition, for most the benefit will be in knowing that they will be helping people like them in the future. \n5.\tThe Project has already identified issues with the current approach for collecting DNA from cancer tumours. A current study within the Project is looking at identifying optimum methods for collecting DNA from cancer tumours.  This is something which previously that has been incredibly difficult to do at scale and which is essential for high quality Whole Genome Sequencing. \n7.\tAs a result of the high standards of ethical practice and transparency underpinning the Project, the case will be made for collecting genomic data, linking it the phenotypic data and sharing it in a controlled way with academics, researchers and industry.  \n8.\tThe creation of NHS Genomic Medicine Centers will allow engagement and feedback to patients with rare diseases and cancer from the Project and will provide the infrastructure to bring about transformational change in the NHS so that it continues to deliver world-leading healthcare in the future\n8.\tAs a result of the Project, the NHS and Public Health workforce will benefit from additional education in genomic medicine, including 550 places for an MSc in Genomics Medicine over the next 3 years, increased capacity in the scientific workforce, and a legacy of education and training in genomics for the future workforce.\n9.\tThe secure dataset of genomic and clinical data which is created as a result of the Project will enable clinicians, researchers and industry to discover new variants with a view to creating new diagnostics and treatments. \n10.\tThe Project will kick-start the development of the UK industry in Whole Genome Sequencing.  The global genomics market was valued at an estimated £7.6 billion in 2013 and is expected to reach over £13 billion by 2018."
+ }
+}

@@ -1,0 +1,193 @@
+{
+ "base_reference": "DARS-NIC-147805-HDHWM",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147805-HDHWM",
+   "version": "",
+   "organisation": "University Of Birmingham",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "77a9d88da5dd"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-sensitive",
+     "legal_basis": "The Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-sensitive",
+     "legal_basis": "The Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147805-HDHWM-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01",
+    "2017-09-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01",
+      "2017-09-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "ba13d0898e7b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147805-HDHWM-v1.6",
+   "version": "1.6",
+   "organisation": "University of Birmingham",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-04-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2020-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-04-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2020-03-01"
+     ],
+     "objective": "663dcd796252",
+     "activities": "09aa6baa2a51",
+     "expected_output": "2edc2994c184",
+     "expected_benefits": "3cd128d93fee",
+     "yielded_benefits": "87ddb009d043"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-04-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-04-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "09aa6baa2a51": "The flow of data to NHS Digital was historical and has now ceased. This historical data comprised names and dates of birth of employees in the electricity supply industry. The data at the University of Birmingham were pseudonymised in 2013 and all information on names, addresses, postcodes, National Insurance (NI) numbers, and NHS numbers were destroyed and replaced with a unique identifier that NHS Digital uses to identify study members in its own files. NHS Digital supplies individual record data containing the pseudonymised unique identifier (and no other identifier), dates of death and ICD codes for causes of death, dates of cancer registrations and ICD codes for site and type of cancer.\n\nData will only be accessed by individuals within the Institute of Applied Health Research who have authorisation from NHS Digital to access the data for the purposes described, all of whom are substantive employees of the University of Birmingham.\n\nData supplied by NHS Digital will not be linked to any data other than pseudonymised individual level study data containing details on dates of birth (month and year only) and work histories (dates of employment and job titles).  There will be no attempt to re-identify individuals from the data. The data will not be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nData is required for such a long time because cancer and neurodegenerative disorders can have very long intervals between exposure to a risk factor and the final clinical presentation of disease.  National data is required because the study has been set up as a national study of all employees with some employment in the electricity supply industry in the period 1973-82. This national coverage provides maximum statistical power and provides findings that have national application. The study would be weakened with only regional subsets of data and the findings would be less credible. Given the potential impact of the findings on national policy for exposure to EMF it is essential to minimise uncertainty.\n\nIt would not be appropriate to filter the outputs for specific conditions because occupational exposures in this industry have the potential for a wide variety of possible harms.  The study maintains the original data collected from employer records on dates of birth (month and year only) and dates of employment because these form an integral part of the analysis of the data, both in the statistical adjustment of age effects and the development of exposure histories.\n\nThe data requested from NHS Digital will be downloaded to a University of Birmingham computer, saving it in a restricted area of the University server that is only accessible to specified members of the research team. Data within this area of the server will be backed up internally (not on to tape), so that data can be fully deleted within two weeks of a deletion request from NHS Digital. All data will be processed and stored at the University of Birmingham.\n\nOn receiving the NHS Digital datasets, data on the pseudonymised id, dates of death, causes of death, dates of cancer registrations and site and type of cancer will be transferred to a ‘new follow-up’ spreadsheet, and saved into the same restricted area of the University server as the master study file.  The main study file contains information on the pseudonymised ID, dates of birth (month and year only), work histories and death and cancer registration data supplied previously by NHS Digital (and its forerunners).  \n\nDeath data are transferred from the new follow-up file into the main study file if a matching pseudonymised ID is found and if there are no death data already present in the master file for that ID. If death data are already present in the master file, new and old data are reviewed to establish whether this is just a case of duplicate data or whether there is a genuine clash of data (death details for two separate individuals have become confused). In the very few instances of genuine clashes of data, assistance of NHS Digital staff will be sought.  Cancer registration data are transferred from the new follow-up file into the main study file if a matching pseudo ID is found. A separate program seeks evidence of duplicate entries. For any cases where it is not possible to resolve discrepancies between data in the main study file and new data from NHS Digital, the new data will be destroyed.  \n\nAnalyses of individual level data are used to calculate standardised mortality ratios (SMRs) for different causes of death, using national mortality rates as a basis of comparison. These SMRs are adjusted for age, sex and calendar year. Analyses of individual level data are used to calculate standardised registration ratios (SRRs) for different sites of cancer death, using national registration (incidence) rates as a basis of comparison. These SRRs are also adjusted for age, sex and calendar year.  Estimates of cumulative occupational exposure to magnetic fields have also been calculated for each study member and, in separate analyses, Poisson regression is used to calculate relative risks for cumulative exposure categories, using risks in the lowest exposure group as a baseline or reference category. Such analyses seek evidence of dose-response effects i.e. does the risk of a disease increases with increasing exposure.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThere will be no data linkage undertaken with NHS Digital data provided under this agreement that is not already noted in the agreement.",
+  "2edc2994c184": "The following outputs have been produced and published in high quality peer-reviewed journals.\n\n1.    Harrington JM, McBride DI, Sorahan T, Paddle GM, van Tongeren M.          \n    \tOccupational exposure to magnetic fields in relation to mortality from brain cancer among electricity and transmission workers. \n        Occup Environ Med 1997;54:7-13.\n\n2.\tHarrington JM, Nichols L, Sorahan T, van Tongeren M.\n        Leukaemia mortality in relation to magnetic field exposure: findings from a study of United Kingdom electricity generation and transmission workers,\n        1973-97.\n        Occup Environ Med 2001;58:307-314.\n\n3.\tSorahan T, Nichols L, van Tongeren M, Harrington JM.  \n        Occupational exposure to magnetic fields relative to mortality from brain tumours: updated and revised findings from a study of United Kingdom \n        electricity generation and transmission workers, 1973-97. \n        Occup Environ Med 2001;58:626-630.\n\n4.\tSorahan T, Nichols L.  \n        Mortality from cardiovascular disease in relation to magnetic field exposure: findings from a study of UK electricity generation and transmission workers,\n       1973-1997. \n       Am J Ind Med 2004;45:93-102.\n\n5.   Nichols L, Sorahan T.  \n      Mortality of UK electricity generation and transmission workers, 1973-2002.  \n      Occup Med 2005;55:541-548.\n\n6.    Sorahan T, Kheifets L.  \n       Mortality from Alzheimer’s, motor neurone and Parkinson’s disease in relation to magnetic field exposure: findings from the study of UK electricity\n       generation and transmission workers, 1973-2004. \n       Occup Environ Med 2007;64:820-826.\n\n7.    Sorahan T. \n       Cancer incidence in UK electricity generation and transmission workers, 1973-2008.  \n       Occup Med 2012;62:496-505.\n\n8.   Sorahan T. \n      Magnetic fields and brain tumour risks in UK electricity supply workers.\n      Occup Med 2014;64:157-165.\n\n9.  Sorahan T. \n       Magnetic fields and leukaemia risks in UK electricity supply workers. \n       Occup Med 2014;64:150-156.\n\n10.  Sorahan T, Mohammed N. \n       Neurodegenerative disease risks and magnetic field exposures in UK electricity supply workers.   \n       Occup Med 2014;64:454-460.\n\nWork is currently on-going to produce an update of Paper 7 and will include an additional seven years of cancer registration data.  The paper will be entitled “Cancer incidence in UK electricity generation and transmission workers, 1973-2015”, and will be offered in the first instance to the medical journal Occupational Medicine. The publication is planned to appear before the end of 2019. If it were not to be accepted by that journal it will be offered to the International Journal of Environmental Research and Public Health (IJERPH). The paper will be published in Open Access format to enable study participants and the general public to read the study findings without charge; funding for Open Access publication has been provided by the Study Sponsor. \n\nAll outputs will only contain data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.  \n\nA simplified version of the findings will be made available both on the website of the Energy Networks Association (ENA) and in pensioner magazines for former employees of the electricity supply industry. The Press Office of the University of Birmingham will provide a media release for the updated cancer incidence paper.  The study will also engage with the academic research community by presenting pre-publication results at the 13th UK +  Ireland Conference on Occupational and Environmental Epidemiology (date and venue still to be announced).\n\nAn analysis of neurodegenerative disease risks and magnetic field exposure was published in 2014 (paper 10) and analysed health outcome data for the period 1973-2010 (Sorahan T, Mohammed N, Neurodegenerative disease and magnetic field exposure in UK electricity supply workers. Occ Med 2014;64:454-460 doi:10.1093/occcmed/kqu105). The study found no convincing evidence that magnetic fields were involved in risks of these diseases. But in the light of the recent positive findings from Holland between magnetic field exposure and ALS risks (Koeman et al, Occup Env Med, 2017 doi 10:1136/oemed-2016-103780) the UK study needs to be re-analysed for this topic, when further follow up has been added providing meaningful additional data. Funding has yet to be requested for this proposal.",
+  "3cd128d93fee": "Most of the expected measurable benefits from this study will be felt by more recent employees in the industry. This is because the study is looking for late effects of exposures that have already happened. Measurable benefits can only come from improved working conditions experienced by later generations of workers. There were previous excess cancer risks in female employees for nasal cancer and cancer of the small intestine (paper 7). These findings were not matched by similar excesses in male employees, but if a similar excess for either site of cancer were to be found in the updated analysis, this would be a strong indication that a real risk is present for women in this industry, and the UK HSE would have to consider what action was appropriate to take.  \n\nEarlier work in this study also indicated that the workforce had suffered an occupational excess of mesothelioma without any matching excess of lung cancer. Probably the most important current use of the study is to assist the HSE and the EU authorities in their on-going work to set appropriate exposure levels for magnetic fields. The study will also assist academic study into the investigation of health effects of magnetic field exposure.  If the recent positive Dutch findings for exposure to magnetic fields and development of motor neuron disease (MND) (Koemen et al, Occup Env Med 2017 doi:10:1136/oemed-2016-103780) turn out to be true this would have a major impact on modern life. \n\nAll reports from this study of electricity supply industry will be sent to 1).The Director of the IARC Monographs Programme, International Agency for Research on Cancer, 2). The Chief Statistician, UK  Health and Safety Executive (HSE), 3). The Chair of the HSE’s Workplace Health Exposure Committee (WHEC), and 4). the Scientific Secretary of the EU Scientific Committee on Occupational Exposure Limits (SCOEL).  Magnetic field exposure is subject to EU directives and the world literature on magnetic fields and health outcomes will be the subject of future reviews,",
+  "663dcd796252": "The study was instigated by the Central Electricity Generating Board (CEGB) of England and Wales in 1975, in an attempt to discover whether any of its employees have suffered long-term health effects from occupational exposures received in the course of employment in the electricity supply industry. Financial support, administrative support and technical support have been provided to the study by the successor companies of the CEGB which came into being after the privatisation in 1990. Financial support has been obtained for some time from the Northmere Trust, a fund set up at the time of privatisation to enable studies to be carried out into possible long-term health effects of exposure to electric and magnetic fields. Administrative support has been provided in the past by the Human Resources departments of the successor companies to update work histories of study subjects. Such updates will not be possible in the future because the study was pseudonymised in 2013. Technical support has been provided in the past by the successor companies such that exposure to magnetic fields has been estimated for each power station, for each calendar year of operation and for each department. This represents one of the most extensive job-exposure-matrices (JEM) ever created, and was only possible because of in-house scientific expertise. The only organisation that will have access to the record level data being requested from NHS Digital is the Institute of Applied Health Research at the University of Birmingham.\n\nThe University of Birmingham was approached to undertake this work by the Energy Networks Association (ENA) a Trade Association whose members include the successor companies of the CEGB. The University of Birmingham has a track record in the identification, quantification and control of occupational health risks. \n\nThe general aim of the work is to monitor the long-term health experience of workers in the electricity supply industry, using mortality and cancer registration data in order to identify unrecognised health hazards in that industry. The study also has a specific aim which is to identify and quantify any health effects from exposure to extremely low frequency electric and magnetic fields (ELF-EMF) and the study is, currently, probably the single most important source of information in the UK on this topic. The study continues to provide ever more extensive information as to whether exposure to magnetic fields is a risk factor for leukaemia, brain tumours or neurodegenerative disorders (Alzheimer’s disease, Parkinson’s disease and motor neuron disease).\n\nThe study is long-running and follow-up data on deaths and cancer registrations have been supplied by NHS Digital and its forerunners for many decades. For the last twenty years the focus of the study has been possible health effects from magnetic field exposure. Membership of the cohort is fixed and there will be no new study participants. The study wishes to continue to receive follow-up data on deaths and cancer registrations in order to increase the number of cases of disease available for analysis and to have data on any disease that might have a long interval between exposure and appearance of disease (long latency).  Follow-up data (deaths and cancer registrations) continue to be required to enable a full investigation of possible long-term effects of occupational exposures to be carried out for the electricity supply industry.",
+  "77a9d88da5dd": "The study aims to examine mortality within a large (84,000) cohort of employees of the Electricity Supply industry who have a broad span of experience of work in different environments (coal-and-oil-fired power stations, nuclear power stations, laboratories, offices etc). The study was originally established to look at respiratory disease (eg lung cancer, mesothelioma etc) in relation to particular job categories or groups of categories. Currently, however, the study is being used to investigate possible health risks of exposure to electromagnetic fields because of public and employee interest in the subject. (A case-control study of brain cancer deaths in the cohort is currently being undertaken by the Institute of Occupational Health at Birmingham University, but it is anticipated that other diseases such as lukaemia, male and female breast cancer and, possibly, Alzheimer's Disease will also be investigated). The population is one of the largest cohorts currently under study worldwide and with follow-up into the distan future will provide information for case-control and other studies of high sttistical power.",
+  "87ddb009d043": "The worldwide literature on exposure to magnetic fields and cancer risks was last evaluated by a Working Group from the International Agency for Research on Cancer (IARC) in 2003, and published as Volume 80 of the Monographs programme (Vol 80: Non-ionising radiation, part 1, Static and extremely low frequency (ELF) electric and magnetic fields). The Working Group concluded that ELF electric and magnetic fields were possibly carcinogenic to children (Group 2B carcinogen) based on findings for childhood leukaemia, but that there was inadequate evidence of carcinogenicity in adults. Papers 1, 2 and 3 from the UK study were included in this evaluation; later papers were published after the IARC evaluation. But papers 5, 7, 8 and 9 will be evaluated when the topic of cancer risks and electric and magnetic field exposure is next evaluated by IARC.\n\nAn International Workshop on neurodegenerative disease risks and magnetic field exposure was organised recently by the German Federal Office for Radiation Protection. It was held in Munich in December 2017. Findings from paper 10 were included in a meta analysis presented at the meeting by Dr Leeka Kheifets.  Conclusions from the Workshop that received general approval were that there was enough evidence to both continue and improve the studies on neurodegenerative diseases and magnetic field exposure.",
+  "ba13d0898e7b": "The data supplied to University of Birmingham will be used only for the approved medical research project - MR470 - Electricity Supply Industry (ESI) Mortality Study"
+ }
+}

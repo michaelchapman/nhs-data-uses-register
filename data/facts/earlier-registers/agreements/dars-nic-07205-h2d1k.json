@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-07205-H2D1K",
+ "versions": [
+  {
+   "reference": "DARS-NIC-07205-H2D1K-v0.4",
+   "version": "0.4",
+   "organisation": "BARTS HEALTH NHS TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "1b8a006ca8ca",
+     "activities": "126909c99352",
+     "expected_output": "e4403f4360f7",
+     "expected_benefits": "408517b43e24"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "126909c99352": "Barts NHS Trust to provide a cohort of patients through to the HSCIC where the HSCIC will provide back patient status from the ONS Mortality database matching only to those persons who are in the originally supplied cohort.",
+  "1b8a006ca8ca": "1.\tTo establish whether women who should have been recalled for breast screening and were not, have died from breast cancer, possibly resulting from inappropriate ceasing of screening.\n2.\tTo establish whether any women who are recorded as having died are in fact still alive and not being offered breast screening and are at risk of an undetected cancer progressing.\n\nFollowing the identification of an SUI in 2011 relating to the incorrect removal (‘inappropriate ‘ceasing’) of a woman from the breast screening programme by the Central and East London Breast Screening Service (CELBSS) it was agreed that an audit should be undertaken of all women with a ‘ceased’ status for breast screening within the Central and East London Breast Screening Service and related Exeter databases.  The total number of women in the audit was 2299. That audit has been completed, with the exception of those women recorded as being deceased, a number of whom were ceased from the programme before their death.  \n\n1019 were recorded as deceased by the breast screening programme.  Barts are seeking more information on that cohort, to confirm they have deceased and whether they died of breast cancer.  Barts will provide the complete details of those women to HSCIC.\n\nOnce Central East London Breast Screening Service receive the data set from HSCIC, it will pseudonymised (Pseudo-ID, fact and cause of death) and pass it to PHAST to produce a dataset specifying those who died, those who died of breast cancer and those still alive.\nPHAST is a not-for-profit consultancy and they have identified a clinician and an analyst who have honorary contracts with Barts Health and will only view anonymised data within the location specified in this agreement.\n\nOnce Central East London Breast Screening Service has completed the audit the data will be disposed of appropriately.\n\nThe legal basis for the data in the cohort is covered under direct care pathway due to the clinical relationship that Barts have with the patients.",
+  "408517b43e24": "The avoidance of harm to women who should have been offered breast screening, but remain outside the programme.  These women could be offered screening as soon as they are identified with the data provided.\nEstablishing whether significant harm resulted from the incorrect removal from the programme, such that women had an undetected cancer which killed them.  Not only is this important information for the service, patient’s families have a right to know.\nThere will be no commercial benefits from this work.  It is not research and will not be published in a scientific journal.",
+  "e4403f4360f7": "Barts will receive from PHAST a database that will include pseudo ids and the categories the patients fall into. For those patient still alive, the data will be re-identified to ensure screening is taking place.\nGiven the time that has elapsed seeking these data, the sooner the better to minimise the chance of continuing harm to patients."
+ }
+}

@@ -163,6 +163,31 @@ it is slotted in by its date.
 The archive from July 2021 to September 2026 took 71 minutes to parse from
 scratch and is about 42 MB packed in git.
 
+## The earlier release registers (2015 to June 2021)
+
+Before the Data Uses Register began in July 2021, NHS Digital published a
+*release register*: quarterly from 2014, then monthly from January 2019. Its
+layout is different (a `DataReleases` sheet with one row per release, and from
+April 2016 a `PurposeStatements` sheet), and it has no titles, dates or
+controllers, so it is kept apart from the monthly editions. `pipeline/earlier.py`
+reads it; agreement pages show it under "Earlier registers", and agreements
+that only it lists get pages of their own, listed at `/agreements/earlier/`.
+
+The set is closed, so this is a one-off, not part of the monthly routine. The
+49 files are listed, with the period each covers and its SHA-256, in
+`data/earlier-registers.json`; the six from 2014 to June 2015 carry no
+agreement references and are listed with a reason to skip them. To re-parse,
+put the workbooks in `data/raw/earlier/` (gitignored, never committed) and run:
+
+```bash
+.venv/bin/python -m pipeline.earlier verify data/raw/earlier/   # check them, writing nothing
+.venv/bin/python -m pipeline.earlier ingest data/raw/earlier/   # rewrite data/facts/earlier-registers/
+```
+
+It takes about 15 seconds. Unlike the editions store, this one is rewritten
+whole each time, so a parsing fix is just a re-run. Each text is stored once
+per agreement under a short hash, which keeps the store to about 90 MB on disk.
+
 ## Changing what the site says without re-parsing
 
 The facts store holds what each workbook said, and nothing derived from it. That

@@ -53,6 +53,19 @@
 </ul>
 
 {% endif %}
+{% if earlier_stats %}
+<h2 id="earlier-registers">The earlier release registers</h2>
+<p>Before the Data Uses Register began in July 2021, NHS Digital published a release register: quarterly from 2014, then monthly from January 2019. This site holds the {{ earlier_periods }} published from {{ earlier_span }}, and shows what they say about each agreement in an "Earlier registers" section of its page.</p>
+<ul>
+  <li><strong>What they record.</strong> Each row is data released in the period, named by the agreement's reference and version. From April 2016 a second sheet gives each version's purpose, and from May 2018 the benefits it reported. There are no titles, terms or data controllers.</li>
+  <li><strong>What a listing means.</strong> A version appears only in periods when data was released under it. So "first listed" is when data was first released under the agreement in the registers held, not when the agreement was signed, and an agreement missing from a register may still have been in force.</li>
+  <li><strong>What they add.</strong> {{ earlier_stats.agreements|commas }} agreements on this site appear in them. For {{ earlier_stats.with_versions|commas }}, they hold {{ earlier_stats.versions|commas }} earlier versions that no Data Uses Register edition lists. A further {{ earlier_stats.only|commas }} agreements appear only in the earlier registers, and are <a href="{{ meta.base_path }}/agreements/earlier/">listed separately</a>. None of those is counted in this site's figures.</li>
+  {% if earlier_stats.skipped %}<li><strong>What is left out.</strong> The {{ earlier_stats.skipped|length }} registers from {{ earlier_stats.skipped[0].period_start[:4] }} to June 2015 name the organisation and the dataset but no agreement reference, so their rows can't be matched to agreements reliably. They are not used.</li>{% endif %}
+  <li><strong>Names are as the registers wrote them.</strong> Organisation names are matched to this site's organisation pages by spelling, and datasets are shown under the registers' own names, which differ from the Data Uses Register's.</li>
+</ul>
+<p>The list of files used, with the period each covers, is in <a href="{{ meta.repo_url }}/blob/main/data/earlier-registers.json">data/earlier-registers.json</a>.</p>
+
+{% endif %}
 {% if stats.onward and stats.onward.holders %}
 <h2 id="onward">Projects and papers under sublicensing agreements</h2>
 <p>{{ stats.sublicensing|commas }} agreements permit the applicant to pass data on, which the register calls sublicensing. The register records that it is allowed, but not what is passed on, to whom, or what it is used for. Most of these agreements are held by integrated care boards, which pass data to the councils and providers in their area for commissioning. The rest are held by cohort studies, research databases and data services, and most of those publish lists of their own. This site links to them from each agreement and organisation page: {{ stats.onward.agreements|commas }} agreements, held by {{ stats.onward.holders|commas }} holders, collected by hand and last checked on {{ onward_checked|date }}.</p>

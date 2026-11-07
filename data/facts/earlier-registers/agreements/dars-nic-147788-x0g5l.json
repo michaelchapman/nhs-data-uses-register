@@ -1,0 +1,194 @@
+{
+ "base_reference": "DARS-NIC-147788-X0G5L",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147788-X0G5L",
+   "version": "",
+   "organisation": "Royal Derby Hospitals",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "f09cd0d25586"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "4385bf090807"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "1ebee31f8c85"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data and Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147788-X0G5L-v0.0",
+   "version": "0.0",
+   "organisation": "Royal Derby Hospitals",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "83361b50bdf2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147788-X0G5L-v1.7",
+   "version": "1.7",
+   "organisation": "DERBY TEACHING HOSPITALS NHS FOUNDATION TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "objective": "e63823c8eb74",
+     "activities": "15191b20fec3",
+     "expected_output": "315f57478f69",
+     "expected_benefits": "e8d8cbcc4f39"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "15191b20fec3": "The RRID study cohort is available to HSCIC already (same cohort as MR1176 / NIC-147788-X0G5L) and will be used to trace against HES.\nOnce data is supplied from HSCIC to Derby, it will be used in analysis of cardiovascular events and acute kidney injury in the study cohort.\nThe data will be stored on a password-secured hard drive, and will be accessed only by those directly involved in the study.",
+  "1ebee31f8c85": "Most people with Chronic Kidney Disease are looked after in primary care, including those with moderate kidney disease (stage 3). Prevalence of CKD Stage 3 may be approximately 4.5% of the population, therefore a significant proportion of the general population. There is a need to develop a comprehensive description of patients with CKD stage 3, assess their management needs and develop scoring systems to predict risk with respect to renal and cardiovascular outcomes. The aims of the study are:To define the risk of kidney function decline in a cohort of patients with chronic kidney disease (CKD) stage  3.To define the risk of cardiovascular disease in a cohort of patients with chronic kidney disease (CKD) stage 3.",
+  "315f57478f69": "The HES data requested will provide information about cardiovascular events and acute kidney injury in the study period. Analysis of these data will be published in peer reviewed, scientific journals, and will be included in a PhD thesis. Completion of the PhD thesis and publication of the majority of results should be complete by the end of 2018.\n\nThroughout 2016 and 2017 the Trust intend to present data at nephrology conferences both nationally and internationally. Conferences to be presented at include:\n- British Renal Society and Renal Association (Nationally)\n- American Society of Nephrology, International Society of Nephrology, European Renal Association (Internationally)\n\nData from the study will also be conveyed to local General Practitioners through local meetings throughout 2016.\n\nBaseline and first year follow-up data from the study has already been published in the scientific literature and presented at international conferences (See below). The main aims of the study are to investigate the predictors of progressive renal disease in CKD 3 patients, and to evaluate the risk of cardiovascular events in this population. The aim is to publish articles on cardiovascular outcome and risk prediction in this cohort. HES data regarding acute kidney injury will also allow analysis of risks of chronic kidney disease progression.\n\nSelected Previous RRID Study Publications\n1.\tTaal MW, Thurston V, McIntyre NJ, Fluck RJ, McIntyre CW. Impact of Vitamin D Status on the Relative Increase in Fibroblast Growth Factor 23 and Parathyroid Hormone in Chronic Kidney Disease. Kidney Int; published online 15 Jan 2014.\n2.\tFraser SD, Roderick PJ, McIntyre NJ, Harris S, McIntyre CW, Fluck RJ, Taal MW. Suboptimal blood pressure control in chronic kidney disease stage 3: baseline data from a cohort study in primary care. BMC Fam Pract. 2013 Jun 24;14:88.\n3.\tMcIntyre NJ, Fluck RJ, McIntyre CW, Fakis A, Taal MW. Determinants of arterial stiffness in chronic kidney disease stage 3. PLoS One. 2013;8(1):e55444\n4.\tFraser SD, Roderick PJ, McIntyre NJ, Harris S, McIntyre CW, Fluck RJ, Taal MW. Socio-economic disparities in the distribution of cardiovascular risk in chronic kidney disease stage 3. Nephron Clin Pract. 2012;122(1-2):58-65.\n5.\tMcIntyre NJ, Fluck R, McIntyre C, Taal M. Treatment needs and diagnosis awareness in primary care patients with chronic kidney disease. Br J Gen Pract. 2012 Apr;62(597):e227-32.\n6.\tEvans PD, McIntyre NJ, Fluck RJ, McIntyre CW, Taal MW. Anthropomorphic measurements that include central fat distribution are more closely related with key risk factors than BMI in CKD stage 3. PLoS One. 2012;7(4):e34699.\n7.\tMcIntyre NJ, Fluck RJ, McIntyre CW, Taal MW. Skin autofluorescence and the association with renal and cardiovascular risk factors in chronic kidney disease stage 3. Clin J Am Soc Nephrol. 2011 Oct;6(10):2356-63.\n8.\tMcIntyre NJ, Fluck RJ, McIntyre CW, Taal MW. Risk profile in chronic kidney disease stage 3: older versus younger patients. Nephron Clin Pract. 2011;119(4):c269-76.\n\nRecent RRID Study Conference Presentations (attended by representative from NICE)\n\nAmerican Society of Nephrology November 2015, Poster Presentations\nProgression of Chronic Kidney Disease Stage 3 over 5 years in a Prospective Primary Care Cohort Study\nA Shardlow, NJ McIntyre, R Fluck, CW McIntyre and MW Taal. \n\nChange in Skin Autofluorescence Over One Year Predicts Mortality at Five Years in a Prospective Cohort of People with Chronic Kidney Disease\nA Shardlow, NJ McIntyre, R Fluck, CW McIntyre and MW Taal. \n\nBritish Renal Society June 2015, Oral Presentation\nOne Year Incidence of Mortality and Progression in Older vs. Younger People with Chronic Kidney Disease Stage 3 in Primary Care\nA Shardlow, NJ McIntyre, R Fluck, CW McIntyre and MW Taal.",
+  "4385bf090807": "DEFINING THE RISK OF KIDNEY FUNCTION DECLINE AND CARDIOVASCULAR DISEASE AMONG PATIENTS WITH CHRONIC KIDNEY DISEASE STAGE 3: THE RENAL RISK IN DERBY (R2ID) STUDY\n\nMost people with Chronic Kidney Disease are looked after in primary care, including those with moderate kidney disease (stage 3). Prevalence of CKD Stage 3 may be approximately 4.5% of the population, therefore a significant proportion of the general population. There is a need to develop a comprehensive description of patients with CKD stage 3, assess their management needs and develop scoring systems to predict risk with respect to renal and cardiovascular outcomes. The aims of the study are:\n1.\tTo define the risk of kidney function decline in a cohort of patients with chronic kidney disease (CKD) stage  3.\n2.\tTo define the risk of cardiovascular disease in a cohort of patients with chronic kidney disease (CKD) stage 3.\n\nData access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC.",
+  "83361b50bdf2": "Defining the risk of kidney function decline and cardiovascular disease among patients with chronic kidney disease stage 3: The renal risk in Derby (R2ID) Study -\n\nMost people with Chronic Kidney Disease are looked after in primary care, including those with moderate kidney disease (stage 3). Prevalence of CKD Stage 3 may be approximately 4.5% of population, therefore a significant proportion of the general population. There is a need to develop a comprehensive description of patients with CKD stage 3, assess their management needs and develop scoring systems to predict risk with respect to renal and cardiovascular outcomes.\n\nThe aims of the study are:\n\n1. To define the risk of kidney function decline in a cohort of patients with chronic kidney disease (CKD) stage 3.\n\n2. To decline the risk of cardiovascular disease in a cohort of patients with chronic kidney disease (CKD) stage 3.",
+  "e63823c8eb74": "The Renal Risk in Derby (RRID) study is a cohort study looking at a population with chronic kidney disease recruited from primary care. The applicant aims to use the data to provide insight into the renal and cardiovascular outcomes in the study group. Specifically, the data requested here will provide the applicant with accurate information regarding the incidence of acute kidney injury and cardiovascular events in the study cohort. This information will provide insight into the association between acute kidney injury and chronic kidney disease progression. Finally, the applicant will be able to assess the impact of chronic kidney disease on the incidence of cardiovascular events in the study cohort.\n\nQuestions that data requested will be used to address\n1.\tWhat is the incidence of cardiovascular events in people with Chronic Kidney Diseases (CKD) stage 3 in primary care?\n2.\tCan novel markers of cardiovascular risk (e.g. Cystatin C and Skin Autofluorescence) be used in predicting cardiovascular risk in people with CKD stage 3?\n3.\tDoes acute kidney injury impact upon chronic kidney disease progression?\n4.\tDo cardiovascular events impact upon chronic kidney disease progression?",
+  "e8d8cbcc4f39": "The Renal Risk in Derby Study aims to improve knowledge and understanding about disease progression and management of chronic kidney disease stage 3 in primary care. Studies have estimated the prevalence of CKD in the general population to be up to 10 %. The majority of these people are managed in primary care. The information provided by this research pertains to a large population of people, mostly managed in primary care. As such, it is hoped that results from this study will inform future national guidance (specifically, National Institute of Health and Care Excellence CKD guidance) in the management of Chronic Kidney Disease in Primary care , directly benefiting the patients",
+  "f09cd0d25586": "DEFINING THE RISK OF KIDNEY FUNCTION DECLINE AND CARDIOVASCULAR DISEASE AMONG PATIENTS WITH CHRONIC KIDNEY DISEASE STAGE 3: THE RENAL RISK IN DERBY (R2ID) STUDY Most people with Chronic Kidney Disease are looked after in primary care, including those with moderate kidney disease (stage 3). Prevalence of CKD Stage 3 may be approximately 4.5% of the population, therefore a significant proportion of the general population. There is a need to develop a comprehensive description of patients with CKD stage 3, assess their management needs and develop scoring systems to predict risk with respect to renal and cardiovascular outcomes. The aims of the study are: 1. To define the risk of kidney function decline in a cohort of patients with chronic kidney disease (CKD) stage 3. 2. To define the risk of cardiovascular disease in a cohort of patients with chronic kidney disease (CKD) stage 3. Data access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC."
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "base_reference": "DARS-NIC-344986-Y3R8M",
+ "versions": [
+  {
+   "reference": "DARS-NIC-344986-Y3R8M",
+   "version": "",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "3b310d2447a3"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES ONS Mortality",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for the release of ONS Mortality data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3b310d2447a3": "Objective for processing: \nThis is a patient safety study.  Recent research indicates that metal-on-metal (MOM) hip prostheses may be at risk of cardiac dysfunction, however the studies are small and non-matched.\n\nPatients are currently monitored with serum cobalt and chromium levels measured intermittently and analysed in reference laboratories.  Cobalt and chromium toxicity (e.g. occupational) has been associated with systemic symptoms and therefore there is concern that with high circulating metal ion levels patients will develop systemic symptoms, including heart failure.  Some patients with high metal ion levels and symptoms or pseudotumours are having their MOM hips removed and replaced with non-MOM prostheses.  There is currently no large-scale data available to assess whether there is a genuine risk of heart failure in patients with MOM hips and high circulating levels of metal ions, therefore we do not know whether patients should be screened for cardiac problems, or whether patients with these hip implants should be concerned.\n\nLinkage of the NJR data to other datasets (National Heart Failure Audit data, CPRD GOLD primary care data, Hospital Episode Statistics data, and ONS mortality data) will offer a wider perspective of  the incidence of heart failure diagnoses, mortality and prescriptions of heart failure medications across the population and in different settings (including within the primary care setting).\n\nThe Principal Investigator of a study from a group in Australia has found increased rates of prescription of heart failure medications in patients with MOM hips as compared to those with conventional hip replacements, using primary care data.  The results from this study are expected to be published in 2015.\n   \nData linkages\nAlthough the National Heart Failure Audit contains the most detailed dataset of heart failure admissions, it was only started in 2007 with mandatory participation only since 2011.  UCL therefore plan to also independently link the NJR to HES data and primary care data (both coding and prescribing) from Clinical Practice Research Datalink (CPRD), in order to try to capture primary and secondary care data on heart failure.\n\nProcessing activities: \nData will be linked at the HSCIC and then sent (pseudonymised for HES, identifiable for ONS) to the investigators for analysis.  Comparisons will be made between patients with MOM hips and a matched cohort of subjects with non-MOM hips.  Endpoints from these data linkages will be heart failure admissions (NJR+HES), diagnosis of heart failure (NJR+HES and NJR+CPRD GOLD), heart failure medication prescriptions (NJR+HES and NJR+CPRD GOLD data), and mortality from heart failure (NJR+ONS mortality).  All NJR data will be sent to investigators (with only NJR identifier).\n\nSpecific outputs expected, including target date(s): \nOutputs will only contain anonymised (aggregated with small numbers suppressed) data. \n\nUCL are required to report the results to the MHRA within 6 months of the data linkage being performed.  UCL should be able to determine whether heart failure is more common in those with MOM than non-MOM hips – specifically:\n\n1.  Heart failure admissions are more common in patients with MOM hips than non-MOM hips\n\n2.  Diagnosis of heart failure is more common in patients with MOM hips than non-MOM hips (both in hospital and primary care settings)\n\n3.  Prescriptions of heart failure medications are more common in patients with MOM than non-MOM hips (both in hospital and primary care settings)\n\n4.  Mortality from heart failure is more common in patients with MOM than non-MOM hips\n\nOther non cardiovascular endpoint data should be analysed within 12 months (including endocrine and neurological events, hearing loss and blindness).\n\nThe results are planned for internal peer review within the research committees of NICOR, NJR and CPRD and to the MHRA Expert Advisory Group (EAG) on MOM Hips prior to wider dissemination.\n\nResults will be published in peer reviewed journals – UCL would be targeting general medical journals in the first instance because this message should be of interest to the wider medical community including general practitioners, cardiologists and orthopaedic surgeons. The primary journals for submission would be the British Medical Journal (BMJ), Lancet or New England Journal of Medicine.  Data will be presented both nationally and internationally at cardiology and orthopaedic conferences.  The results will be of wide interest because when the initial small study from Australia is published suggesting a possible link, there will be considerable pressure on orthopaedic and cardiac services.  Publication of the first paper assessing the link between MOM hips and heart failure is intended for early 2016.\n\nPatient & Public\n\nBecause of regulatory and patient safety issues with MOM hips, the MHRA are sponsoring this study and NHS England (both the Deputy Director of NHS England and the National Clinical Director for Musculoskeletal Services) have been involved.  The results will be the foundation of advice given to patients with MOM hips from the MHRA.\n\nBoth the President and the CEO of the British Orthopaedic Association (BOA) have been involved in this application and are keen that the results of this study are disseminated widely to patient groups (particularly the BOA Patient Liaison Group).  The nature of the dissemination will depend on the outcomes of the research.\n\nFurther local disseminations are anticipated.  Outputs are to be fed into monthly meetings of patient and clinician groups at the London Implant Retrieval Centre, and a newsletter sent to patients at the London Implant Retrieval Centre.  In addition, there are Cardiovascular PPI sessions held at the Hatter Institute, UCL – these are advertised both on the UCLH Trust website and specific invitations sent to relevant cardiovascular patient groups and are generally well attended.\n\nExpected measurable benefits to health and/or social care, including target date(s): \nThis is a patient safety study, to identify if patients are at risk as a result of MOM hip prostheses.\n\nAs above, UCL will present the findings within 6 months to the MHRA.  The MHRA are responsible for disseminating information to the public - the nature of the impact of the results of this study will clearly depend on the findings.  Should a link be established, the MHRA will be responsible for publishing guidance concerning how best to screen and advise patients with MOM hips (to supplement the current guidance). All patients will be traceable via the NJR.  The MHRA guidance has historically been implemented around the world to enable a consensus approach to be adopted.  In addition to the circa 53,000 patients with MOM hips in the NJR, there are believed to potentially be in excess of a million patients around the world with MOM hips.\n\nShould no link be established, the MHRA will also be responsible for publishing advice and reassurance to patients who may be distressed or concerned by the findings from other smaller studies from elsewhere.\n\nWhether the findings are positive or negative, patients will undoubtedly be concerned by the publication from other studies (due in 2015) of a possible association between MOM hip implants and heart failure.    The UK is in a unique position whereby National data collection is rigorous both in terms of specialised datasets (NJR and NHFA) and across different clinical settings (hospital and primary care).  This study has the ability to answer this question, thereby potentially preventing unnecessary patient concern"
+ }
+}

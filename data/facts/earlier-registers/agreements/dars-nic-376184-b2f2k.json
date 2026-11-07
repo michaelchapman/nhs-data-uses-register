@@ -1,0 +1,49 @@
+{
+ "base_reference": "DARS-NIC-376184-B2F2K",
+ "versions": [
+  {
+   "reference": "DARS-NIC-376184-B2F2K",
+   "version": "",
+   "organisation": "University of York",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "b506b4044e1d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES ONS Mortality",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "b506b4044e1d": "Objective for processing: The objective is to assess the impact of hospital admission survival rates on emergency re-admission rates.\nCurrent Department of Health policy penalises hospitals financially if the number of emergency admissions exceeds the number in the baseline year.  This policy ignores the possibility that, as some hospitals become better at keeping sicker patients alive, part of the increase in emergency re-admissions can be attributed to sicker patients surviving their initial admission and then requiring a subsequent re-admission. In poorer quality hospitals, these sicker patients might not survive the initial admission and hence will not require re-admission.  Thus part of the growth in re-admissions might be indicative of improved care quality, and it is not obvious that hospitals should be penalised for this.  The Health Foundation has funded this project to illuminate this issue. \nThe data will be used to support research into the causes of the observed upward trend in the utilisation of hospital services via emergency admissions and, in particular, to investigate whether improved patient survival rates have contributed to this increase.  \nFunder:\n•\tThe Health Foundation.\nThe project will use only the following data: A bespoke extract from HES APC 1998/99 - 2011/12; ONS Mortality 01/01/2000 – 2011/12 (Date of Death only).\nThe project will only use data of patients who died outside of hospital between 01/01/2000 and 31/03/2012 and hold a care record in the period from 1998/99 to 2011/12.\nThe HES data is required for two years before the ONS data because the customer will only be studying those patients without an emergency admission in the two years before the start of the customer’s analysis period.  So although the customer’s analysis period will commence in 2000, the customer will need to know whether a patient was admitted in 1998 or 1999 to determine whether they are eligible for inclusion in the analysis.\n\nProcessing activities: The statistical software package 'Stata' will be used to read into memory the HES data associated with the sample.  Stata will then 'look' at the ONS deaths data and attach the date of death (where\nknown) to each record in the sample.  With the full dataset in memory, a command file will be run that will estimate the regression models.\n\nThe ONS mortality data will be used to link a patient's date of death to the HES record.  This will enable a control for the influence of length of survival out of hospital on the relationship between readmission and in-hospital mortality.\nThe data will be used to undertake statistical and econometric analyses of the link between patient survival at an initial admission and the number of subsequent emergency re-admissions. This will include the estimation of a Heckman sample selection model with a probit model for the probability of surviving the initial admission (selection equation) and an OLS model for the count of subsequent emergency re-admissions (outcome equation).\nAll analysis files will be stored in a project-specific folder and will not be linked to other analysis files stored in other project folders.\nOnly the individual named in this application and therefore hold a valid Sections 39(4)(i) & Section39(5) SRSA 2007 legal basis will have access to this data.  Only the Department of Economics and Related Studies, Alcuin College will access the data requested in this application and its use will be explicitly for the purpose of this project only.\nNo other individuals will have access to the patient level data.\nNo commercialisation will occur as a result of this project.\n\nSpecific outputs expected, including target date(s): The outputs will consist of: \n•\ta final report for The Health Foundation and findings shared with the Department of Health within 1 year of receipt of data; \n•\tpeer reviewed papers in academic journals (either health economics, health policy or medical journals depending on the findings), and \n•\tNHS conference presentations within 1 year of receipt of the data.\nAll products will be available free of charge and will be available to the public.\nAll outputs generated will be aggregated and will follow the HES analysis guide and ONS guidelines on disclosure control.\n\nExpected measurable benefits to health and/or social care, including target date(s): The outcomes of this project will influence Department of Health policy towards emergency admissions and the financial penalties imposed on hospitals for large numbers of admissions.  The overall aim is to encourage and reward good performance by hospitals resulting in increased funding to hospitals achieving good performance that can be used to further improve patient care."
+ }
+}

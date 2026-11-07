@@ -1,0 +1,60 @@
+{
+ "base_reference": "DARS-NIC-371031-B8K6D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-371031-B8K6D",
+   "version": "",
+   "organisation": "University of York",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "e20862d0d821"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "e20862d0d821": "Objective for processing:  \nClinicians from Leeds Children’s Hospital report that there appears to be an increase in the number of children with neurological conditions being seen in hospital and A&E departments however there is currently no published data which can accurately quantify this within England. \nThe current financial restrictions on services require that accurate data is required to plan any changes to services can be made. Health inequalities is an important issue within the NHS and further information on any evidence of inequalities by age, ethnic group or deprivation status are required in order to ensure equality of access to services. The  questions for this project are listed below:\ni)\tWhat is the burden of paediatric neurology diagnoses in the inpatient population in England?\nii)\tWhat are the trends in number of patients, number of admissions to hospital, length of hospital stay and  number of A and E attendances in children with paediatric neurological conditions?\niii)\tIs there any evidence of inequality in hospital or A&E use in children from ethnic minority groups or areas of high deprivation?\nTo answer these questions, a bespoke extract of HES Admitted Patient Care, Outpatient and Accident & Emergency data is being requested. The following methodology has been used to determine what information is required for the project; \n1.\tIdentify all children with Neurology Diagnosis using ICD-10 coding framework\nAn ICD-10 coding framework has been developed by the consultant Paediatric Neurologist to reflect the diagnoses cared for by paediatric neurology teams. To capture those children without a firm diagnosis all children who were cared for by a consultant with a main specialty in Paediatric Neurology or treatment specialty in Paediatric Neurology or Paediatric Neurodisability will also be included. \n2.\tStudy Population\nThe study population will include all children and young people aged 0-19 years at the point of treatment with neurological diagnoses within the years 2003/04-2014/15. All other Inpatient, outpatient or A&E attendance HES data for all the individuals identified will be requested. This will allow hospital attendances for complications related to their neurological conditions to be identified.\n\nProcessing activities:\nAll data storage/access/processing and analyses will be undertaken in the University of York and no non-aggregate data will be provided to third parties. All outputs will be at aggregate level with small numbers suppressed in line with HES analysis guide.\n1.\tRequest Data\nPseudonymised data from the Inpatient Hospital Episodes Statistics (HES), Outpatient and A&E HES will be extracted by the Health and Social Care Information Centre.  This dataset which will include all hospital records for the study population.  Data for every hospital admission for patients (aged 0-19 years) who have ever had any of the ICD 10 codes assigned and episodes relating to treatment by specialist Paediatric Neurologist consultants listed above will be requested.\n2.\tData Analysis\nThe start age recorded at the first hospital episode in each year will be used to assign the age category for each individual. Age will be categorised into five groups: less than 1 year, 1 to 5 years, 6 to 10 years, 11 to 15 years and 16 to 19 years. \nGender will be coded as male, female or not known. Individuals with more than one recorded gender will be assigned the most commonly recorded gender.  Ethnicity is reported by census groups in the HES data. Individuals with more than one ethnicity will be assigned the most commonly reported ethnicity unless the most common ethnicity is ‘not known’. This will ensure that the same code for an individual’s ethnicity will be assigned to all episodes (i.e. if coded white in 2001/02 data and 2002/03 but not known in 2003/04, they would be counted as white in all years). \nFor statistical analysis the diagnoses will be categorised into sub- groups based on the main neurology diagnoses\nEach individual will be assigned a local authority and government office region based on the lower super output area (LSOA) of residence. These assignments will be done per year and if an individual moved address within that year the first local authority/GOR reported that year will be used. This will allow the individual to be assigned new geographical area over the time period but not within a year.\nAn index of multiple deprivation score will be assigned to each individual based on the LSOA of residence.\nHES data will be used to analyse the following areas:\n•\tPrevalence (This will answer question i)\n\nPopulation data from the Census will be used as the denominator for prevalence calculations. Prevalence and 95% confidence intervals will be calculated for the total number of children and young people with a neurology diagnosis for each year, for each age group, for each diagnostic sub group, ethnic group and deprivation category. \n\n•\tThe number of hospital admissions and trends over time (This will answer\n•\t question ii)\n\nThe number of hospital admissions, outpatient attendances and A&E visits for each individual, per year will be calculated and an assessment of trends over time will be undertaken. \n\nThe HES data provides detail on individual ‘finished consultant episodes’ (FCEs). An FCE is not the same as a hospital admission; one hospital admission can comprise one or more FCEs if a patient is cared for by more than one consultant during their admission (NHS Information Centre, 2011). The Length of hospital stay will be assessed by constructing, continuous inpatient spells (CIPSs) for each patient, each CIPS representing each unique admission for every patient. A detailed description of the algorithm used to create the CIPS is given in the user guide by the National Centre for Health Outcomes Development (2009).\n\nEach hospital admission will be coded as planned or unplanned.\n\n•\tEvidence of inequalities (This will answer question iii).\n\nAny variation in number of hospital admissions, length of stay and A&E admissions will be assessed over time, by ethnic group, socioeconomic status and by geographic region (government office region).\nThe results of the above analyses will be summarised in tables and figures and presented as a conference presentation, an academic paper and a final report for the Leeds Children’s Hospital.\nAll individuals with access to the data are employees of the University of York.\n\nSpecific outputs expected, including target date: \nA final summary report of the results will be produced for the Leeds Children’s Hospital; target date August 2017.\nThe study results will be prepared to present at an appropriate national or international clinical conference e.g. British Paediatric Neurology Association or the European Neurology Society Congress; target date December 2016.\nThis study results will be compiled for an academic publication in a peer review clinical journal e.g. Archives of Disease in Childhood or Developmental Medicine and Child Neurology; target date August 2017.\nThe conference and journal outputs will be available to clinicians, academics and members of the public who may attend these conferences. These outputs will also be made available to download from the University of York’s website, specifically under the Department of Health Sciences area. \nEmail alerts to highlight key outputs from the study will be coordinated through professional networks (British Paediatric Neurology Association and the RCPCH) and third sector organisations which the applicants are linked in to.  Alerts will be send to a list of contacts which has been compiled from the applicant’s previous work with these clinical and academic networks. \nThe final report will be disseminated to specialist commissioners and acute hospital trusts which will give them accurate data on the number of children requiring paediatric neurology services. Service planning can only be undertaken effectively when the number of patients who require a specific service is available. The report will be disseminated via presentations directly emailing the report directly to key contacts within these organisations\nAll outputs will be at aggregate level with small numbers suppressed in line with HES analysis guide.\n\nExpected measurable benefits to health and/or social care including target date: \nProvision of the outputs of this project (final report and presentations) will assist specialist commissioners and acute hospital trusts to improve service planning and resource allocation for paediatric neurology services within the NHS. \nThe study will provide details of the number of patients requiring specialist services and help to identify where further specialist services are required. For example, data showing that children from a particular geographical area are using A&E services more often than other areas will allow specialist commissioners to ensure that appropriate resources are allocated to service this need. It may be possible to meet these needs in a variety of ways for example investing in a specialist nurse practitioner or an advice line for parents with the aim to reduce A&E attendances.\nThe results of the analyses of trends over time will allow commissioners and acute hospital trusts to assess if the needs for specialist paediatric neurology services (both hospital and community) has grown over the last 10 years and therefore whether further resources need to be added to keep up with the demand. \nThe benefits of this project should start to be evident from August 2017 following the provision of the final summary report."
+ }
+}

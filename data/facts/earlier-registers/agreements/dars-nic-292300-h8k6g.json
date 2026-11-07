@@ -1,0 +1,60 @@
+{
+ "base_reference": "DARS-NIC-292300-H8K6G",
+ "versions": [
+  {
+   "reference": "DARS-NIC-292300-H8K6G",
+   "version": "",
+   "organisation": "MedeAnalytics International Limited",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "1c769bc83627"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "1c769bc83627": "Objective for processing: The objective is to provide MedeAnalytics customers with national comparators for a range of quality and performance metrics that are derived within the MedeAnalytics system from HES data, as well as customers’ own data and other (non patient identifiable) sources such as national prescribing aggregate data. The record level HES data is not linked with any other data – only the aggregated outputs / indicators are linked by organisation within the MedeAnalytics system. MedeAnalytics provides an online service to NHS professionals including commissioners and providers accepting their data, storing it in the central repository, then providing online analytics and reporting services. Use cases supported by the MedeAnalytics system include commissioning activities, operational and financial activities, comparators and indicators, case identification, data quality validation, and direct patient care support. By linking together data sets from a variety of sources, a rich set of data can be made available to support better operational, clinical and financial practices, better use of services and resources, and ultimately better patient outcomes. Processing activities: MedeAnalytics processes the HES data and provides access to anonymised reports and indicator dashboards to NHS and Social Care stakeholders, including GPs, Clinical Commissioning Groups, Acute hospitals and other secondary care organisations, community and mental health providers. HES data is accepted into MedeAnalytics’ secure, FTP service (which is accessible from an N3 connection). On landing, initial data quality checks are undertaken (eg: to ensure that the correct number of records have been received, that it is not a duplicate transmission). Upon successful download of data, the ETL (Extract, Transform and Load) process is run against the data to receive, normalise and upload the Data into MedeAnalytics' central databases. ETL processing includes the following: • Extract (data receipt/collection, cleanse, parse and pre-processing) • Transform (aggregation, normalise, apply business rules) • Load (OLAP cube processing and database load) • Data integrity and reconciliation (pre and post ETL) • Performance tuning (DB indexing and data cache) • Trending archive and meta data repository and file back-up management • Production testing and QA During Transformation processing, algorithms are run to create derived data from the data stream. Derived fields are stored alongside the original data as additional fields that allow different levels of obfuscation based upon Roles Based Access Controls (RBAC). The retention period is the current NHS year plus two previous years for historical comparisons. At the end of the retention period, MedeAnalytics removes expired data and can provide appropriate destruction certificates. MedeAnalytics can confirm that it has complied with all previous data deletion requests. Specific outputs expected, including target date: The MedeAnalytics system provides information to a range of NHS and Social Care staff (including commissioners, administrators and medics, with responsibilities for operational, financial and clinical activities). The MedeAnalytics system produces graphs, charts, reports and dashboards specifically geared to the needs of each user. The data items that users are able to access depend on each individual user's rights and the multi-dimensional role to which they are assigned. Our Roles Based Access Controls are extensive, taking into account: - Source – the original source of the data, and any rules governing its provision - Consent – explicit and implied - Role – each individual user's ID and role settings - Activity – the activity that retrieved data will be used to support - Purpose – the reason the data was provided in the first place What a user sees depends on all the above factors, and can restrict output to fully anonymised, aggregate data. In relation to HES data, the controls within the MedeAnalytics system restricts data access to anonymised aggregate data and indicators. The outputs derived from HES data allow comparisons between the customer’s organisation and others nationally for a range of performance metrics such as lengths of stay etc. These National comparators are used by NHS organisations to improve the quality of care delivered by comparing their performance as set out by a specific range of care quality and performance measures, detailed activity and cost reports. The comparators are also used in Service redesign and Health Needs Assessment (identifying underlying disease prevalence within the local population compared with the national picture). Outputs from the system are used by clinical, financial and operational staff, across all levels including management, and are frequently used in board papers. Live access to our system (primarily thorough mobile devices) is used during board meetings to support operational decisions and answer live questions. Expected measurable benefits to health and/or social care including target date: The benefits of having the national comparators derived from the HES data available within our system are realised through the additional information they provide to support decision making by commissioners and providers in a range of activities: Provide access to comprehensive supporting information that commissioning organisations such as Clinical Commissioning Groups use to: • ensure that the services they commission are: o delivering high quality and safe care for individual patients; o deliver the best outcomes for their patients o designed to cater for and meet the needs of the population they are responsible for; • monitor condition prevalence within the population • identify health inequalities and work with local organisations and agencies to remove them Provide access to comprehensive supporting information that care providers such as Acute Trusts use to: • ensure that the services they provide are of high quality, efficient and effective; • plan and re-engineer services to meet the changing requirements and developments in technology; Direct measurement of the benefits associated with an enabling system such as this is challenging, however, proxies can be provided through use metrics (number of individual users and frequency of use) as well as examples of decisions made by customers in the management and delivery of their services that have been supported by reports / information from the Mede tool. Is the purpose of this application in anyway commercial?  Yes – MedeAnalytics is an independent commercial company working in the UK exclusively with health and social care organisations. However, MedeAnalytics does not sell data; rather it provides tools and services to enable users to access and link nationally available data from a variety of sources, including local sources, SUS and HES data. All customers of the service are NHS and Social Care organisations including commissioners, providers (including independent sector providers) national bodies. No record level data is provided to any third party."
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "base_reference": "DARS-NIC-59545-S2W0Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-59545-S2W0Q",
+   "version": "",
+   "organisation": "NHS AIREDALE, WHARFEDALE AND CRAVEN CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01",
+    "2017-03-01",
+    "2017-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "6538cf1478a1",
+     "activities": "22d17659f872",
+     "expected_output": "a66918a60234",
+     "expected_benefits": "a40be965224b"
+    },
+    {
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "objective": "8dd480d97756",
+     "activities": "56328ebf042d",
+     "expected_output": "a66918a60234",
+     "expected_benefits": "2304c7dfc511"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Local Provider Data - Acute, Ambulance, Community, Emergency Care, Mental Health, Other not elsewhere classified, Public Health & Screening services",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Local Provider Data - Acute",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Local Provider Data - Ambulance",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Local Provider Data - Community",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Local Provider Data - Emergency Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Local Provider Data - Mental Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Local Provider Data - Other not elsewhere classified",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Local Provider Data - Public Health & Screening services",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "SUS Accident & Emergency data",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "SUS Admitted Patient Care data",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "SUS Outpatient data",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "22d17659f872": "1. North of England Data Services for Commissioners Regional Office (DSCRO) obtains a flow of identifiable SUS data for the CCG from the SUS Repository. \n2. North of England DSCRO also obtains identifiable local provider data for the CCG directly from Providers (as per Data Services for Commissioners Directions 2015).\n3. Data quality management and pseudonymisation of data is completed by the DSCRO.\n4. The DSCRO then securely transfers the following to North of England CSU:\na. The SUS data identifiable at the level of postcode. \nb. The Local Provider data identifiable at the level of postcode.\n5. North of England CSU land the data only. The CSU then securely pass the identifiable SUS data and the identifiable Local Flow data to PI Limited. The data will be destroyed by the CSU once this has occurred..\n6. PI Limited link the data and produce online reports using the PI Limited data analysis tool.\n7. The CCG is able to securely login via Role Based Access Controls to view Pseudonymised data for only those CCGs listed within the Data Sharing Agreement. \n8. The Vanguard Evaluation Team is able to securely login via Role Based Access Controls to view identifiable data for only those CCGs listed within the Data Sharing Agreement. \n9. Pseudonymised outputs is then passed from The Vanguard Evaluation Team to the CCGs. The Vanguard Evaluation Team also supply aggregate reports with small number suppression to members of the Vanguard Partnership.\n10. Patient level data will not be shared outside of the CCGs and will only be shared within the CCGs on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. Access is limited to those administrative staff with authorised user accounts used for identification and authentication. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place.",
+  "2304c7dfc511": "1) Supporting and improving outcomes of integrated workings and the delivery of health and care as set out in the Better Care Fund (BCF) and the Airedale and Partners Vanguard, including the aforementioned CCGs.\n2) Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n3) Health economic modeling using\na. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nb. Analysis of outcome measures for different treatments, accounting for the full patient pathway.\nc. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows \n4) Commissioning cycle support for grouping and re-costing previous activity.\n5) Enable monitoring of:\na. Trust and Vanguard outcome indicators.\nb. Non – Financial validations of activity.\nc. Successful delivery of integrated care within the Vanguard.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\n6) Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.      \n7) To support STP management information needs, particularly about service modelling, costs and impact of change",
+  "56328ebf042d": "CCGs using North England CSU \n1. North England Data Services for Commissioners Regional Office (DSCRO) obtains a flow of identifiable SUS data for the CCG from the SUS Repository. \n2. North England DSCRO also obtains identifiable local provider data for the CCG directly from Providers (as per Data Services for Commissioners Directions 2015).\n3. Data quality management and pseudonymisation of data is completed by the DSCRO.\n4. The DSCRO then securely transfers the following to North of England CSU:\na. The SUS data identifiable at the level of postcode. \nb. The Local Provider data identifiable at the level of postcode.\n5. North of England CSU land the data only. The CSU then securely pass the identifiable SUS data and the identifiable Local Flow data to PI Limited. The data will be destroyed by the CSU once this has occurred. \n6. PI Limited link the data and produce online reports using the PI Limited data analysis tool.\n7. The CCG is able to securely login via Role Based Access Controls to view Pseudonymised data for only those CCGs listed within the Data Sharing Agreement. \n8. The Vanguard Evaluation Team is able to securely login via Role Based Access Controls to view identifiable data for only those CCGs listed within the Data Sharing Agreement. \n9. Pseudonymised outputs is then passed from The Vanguard Evaluation Team to the CCGs. The Vanguard Evaluation Team also supply aggregate reports with small number suppression to members of the Vanguard Partnership.\n10. Patient level data will not be shared outside of the CCGs and will only be shared within the CCGs on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. Access is limited to those administrative staff with authorised user accounts used for identification and authentication. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place. \n\nCentral Midlands DSCRO will apply Type 2 objections before any identifiable data leaves the DSCRO.\nCCGs using Midlands and Lancashire CSU \n1. Central Midlands Data Services for Commissioners Regional Office (DSCRO) obtains a flow of identifiable SUS data for the CCG from the SUS Repository. \n2. Central Midlands DSCRO also obtains identifiable local provider data for the CCG directly from Providers (as per Data Services for Commissioners Directions 2015).\n3. Data quality management and pseudonymisation of data is completed by the DSCRO.\n4. The DSCRO then securely transfers the following to Midlands and Lancashire CSU:\na. The SUS data identifiable at the level of postcode. \nb. The Local Provider data identifiable at the level of postcode.\n5. Midlands and Lancashire CSU land the data only. The CSU then securely pass the identifiable SUS data and the identifiable Local Flow data to PI Limited. The data will be destroyed by the CSU once this has occurred..\n6. PI Limited link the data and produce online reports using the PI Limited data analysis tool.\n7. The CCG is able to securely login via Role Based Access Controls to view Pseudonymised data for only those CCGs listed within the Data Sharing Agreement. \n8. The Vanguard Evaluation Team is able to securely login via Role Based Access Controls to view identifiable data for only those CCGs listed within the Data Sharing Agreement. \n9. Pseudonymised outputs is then passed from The Vanguard Evaluation Team to the CCGs. The Vanguard Evaluation Team also supply aggregate reports with small number suppression to members of the Vanguard Partnership.\n10. Patient level data will not be shared outside of the CCGs and will only be shared within the CCGs on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. Access is limited to those administrative staff with authorised user accounts used for identification and authentication. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place.",
+  "6538cf1478a1": "SUS and Local Provider Data - New agreement for NHS Airedale Foundation Trust and their Vanguard partners, including the CCGs identified in this application to use pseudonymised data to provide Health and care tools that will support the Trust, their CCG partners, and Vanguard partners in improving integrated working and the delivery of integrated health and care in order to improve outcomes in ways such as those set out in the Better Care Fund (BCF) and to support the Vanguard integrated working. \nThe Vanguard Partnership is made of the following:\n- Bradford City CCG\n- Bradford Districts CCG\n- Airedale, Wharfedale and Craven CCG \n- East Lancashire CCG\n- Yorkshire Ambulance Service\n- North West Ambulance Service\n- Airedale Hub\n- East Lancashire Medical Services\nThe Airedale Partner’s Vanguard objective is to enhance the quality of life and end of life experience of thousands of nursing and care home residents living in Bradford, Airedale, Wharfedale, Craven and East Lancashire.\nBy using enabling technologies, such as telemedicine, the Gold Line and Intermediate Care Hub, nursing and care home residents and their carers are already benefitting from being able to access expert advice and support remotely 24/7.\nThe enhanced care model provides links to social care to complete a falls prevention assessment of the layout of the patient’s room, and a multidisciplinary team including carers, nurses, therapists, social care and the voluntary sector works in partnership to deliver care and support, promoting independence and improving quality of life.\nThe purpose of this DARS application is to support the commissioning activity of the four vanguard CCGs in relation to the Airedale Telemedicine Service as follows:\n• Integrating care from secondary, primary and community services with independent sector residential and nursing home services including monitoring outcomes and experience.\n• Informing the commissioning of the right services for care home residents which includes those in the same care home but who are registered with GPs who belong to different CCGs.\n• Underpinning and informing service planning and monitoring on geographic bases requiring postcodes to understand the impact on specific homes whose residents have specific care needs.\n• Targeting support for residents in specific care homes who are at high risk of becoming seriously ill requiring unplanned and emergency care requiring evidential data from several sources linked together.\n• Ensuring appropriate clinical service delivery in care homes through evidential data indicating sufficient and appropriate utilisation of services.",
+  "8dd480d97756": "New agreement for NHS Airedale Foundation Trust and their Vanguard partners, including the CCGs identified in this application to use pseudonymised data to provide Health and care tools that will support the Trust, their CCG partners, and Vanguard partners in improving integrated working and the delivery of integrated health and care in order to improve outcomes in ways such as those set out in the Better Care Fund (BCF) and to support the Vanguard integrated working. \nThe Vanguard Partnership is made of the following:\n- Bradford City CCG\n- Bradford Districts CCG\n- Airedale, Wharfedale and Craven CCG \n- East Lancashire CCG\n- Yorkshire Ambulance Service\n- North West Ambulance Service\n- Airedale Hub\n- East Lancashire Medical Services\nThe Airedale Partner’s Vanguard objective is to enhance the quality of life and end of life experience of thousands of nursing and care home residents living in Bradford, Airedale, Wharfedale, Craven and East Lancashire.\nBy using enabling technologies, such as telemedicine, the Gold Line and Intermediate Care Hub, nursing and care home residents and their carers are already benefitting from being able to access expert advice and support remotely 24/7.\nThrough the Vanguard programme, partners intend to go further and develop a more proactive health and social care enabling model focusing on optimising residents’ individual capabilities and building new clinical models of care. This model will be enabled through technology and an extended use of telemedicine, providing a single point of access to all aspects of specialist health and care advice.\nThe enhanced care model provides links to social care to complete a falls prevention assessment of the layout of the patient’s room, and a multidisciplinary team including carers, nurses, therapists, social care and the voluntary sector works in partnership to deliver care and support, promoting independence and improving quality of life.\nThe purpose of this DARS application is to support the commissioning activity of the four vanguard CCGs in relation to the Airedale Telemedicine Service as follows:\n• Integrating care from secondary, primary and community services with independent sector residential and nursing home services including monitoring outcomes and experience.\n• Informing the commissioning of the right services for care home residents which includes those in the same care home but who are registered with GPs who belong to different CCGs.\n• Underpinning and informing service planning and monitoring on geographic bases requiring postcodes to understand the impact on specific homes whose residents have specific care needs.\n• Targeting support for residents in specific care homes who are at high risk of becoming seriously ill requiring unplanned and emergency care requiring evidential data from several sources linked together.\n• Ensuring appropriate clinical service delivery in care homes through evidential data indicating sufficient and appropriate utilisation of services.",
+  "a40be965224b": "1) Supporting and improving outcomes of integrated workings and the delivery of health and care as set out in the Better Care Fund (BCF) and the Airedale and Partners Vanguard, including the aforementioned CCGs.\n2) Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n3) Health economic modelling using\na. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nb. Analysis of outcome measures for different treatments, accounting for the full patient pathway.\nc. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows \n4) Commissioning cycle support for grouping and re-costing previous activity.\n5) Enable monitoring of:\na. Trust and Vanguard outcome indicators.\nb. Non – Financial validations of activity.\nc. Successful delivery of integrated care within the Vanguard.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\n6) Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.      \n7) To support STP management information needs, particularly about service modelling, costs and impact of change",
+  "a66918a60234": "1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD. \ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \nl. Reablement\nm. Emergency admissions analysis\nn. Reduction of stay and transfer of care delays\n\n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of acute / community / mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. Identify base lines to measure future new services\n9. Production of aggregate reports with small number suppression for Trust, Vanguard and other Health Business Intelligence\n10. Production of project /programme level dashboards\n11. Monitoring of Acute/Residential and other health quality matrix\n12. Patient population profiling"
+ }
+}

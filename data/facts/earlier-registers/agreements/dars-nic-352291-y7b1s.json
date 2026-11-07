@@ -1,0 +1,73 @@
+{
+ "base_reference": "DARS-NIC-352291-Y7B1S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-352291-Y7B1S",
+   "version": "",
+   "organisation": "University of Leeds",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "objective": "6dd257ebcace"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "6dd257ebcace": "Objective for processing: To complete a research study (with research ethics approval ref:13/YH/0204) into the risk of colorectal (and other) cancers following bariatric surgery. As the worldwide prevalence of obesity rises the number of individuals undergoing bariatric (or obesity) surgery is also increasing. The association of obesity with increased risk of several malignancies, including colorectal cancer is well understood. But the effect of bariatric surgery on long-term colorectal cancer risk is not well characterised. Although counter-intuitive, evidence suggests that colorectal cancer risk may actually increase after bariatric surgery despite the weight loss it induces. The available evidence is derived, however, from relatively small populations and further work is required to understand the relationship in full. This study aims, therefore, to investigate on a national basis (England) whether bariatric surgery is associated with an increased risk of colorectal cancer. Given the growing numbers of individuals undergoing bariatric surgery the results have major implications for the obese population and the NHS. Processing activities: To generate a population-based dataset of all bariatric surgery undertaken in the NHS linked to cancer registry data to obtain information about any subsequent cancers these individuals develop. In addition, as a control dataset, all individuals who have an in-patient stay in hospital due to obesity will be identified and again linked to cancer registry data to investigate the incidence rate of cancer in this population. These data will then be used to investigate whether incidence of colorectal cancer in the bariatric surgery population is high. Use of the data Information about all those undergoing bariatric surgery or in-hospital due to obesity will be derived from HES. Cancer incidence will be derived from the linked ONS cancer registration data. Mortality information will also be linked to these data to enable the incidence by person year of colorectal cancer (and other obesity related cancers) to be compared across the bariatric surgery and control arms Detailed specification of the dataset The data extract required is based on in-patient HES data from the HSCIC linked to cancer registration and mortality data from ONS. From the inpatient HES data the applicant requires episodes of all individuals who have undergone bariatric surgery or had a hospital attendance as a result of obesity over the study period. The linked cancer registry and mortality data will then be used to determine which of this population subsequently developed a cancer and the time the individual survived. Cancer incidence rates will then be compared between those who did and did not undergo bariatric surgery. If an individual had both a diagnosis of obesity and a bariatric surgical procedure recorded in HES information about the episode in which bariatric surgery was performed should take priority. If individuals had multiple episodes related to bariatric surgery/obesity the first that occurred should be used, To this population, information from the cancer registration dataset should be linked and information about any cancers diagnosed in the month before the admission date of the relevant HES episode or any time after recorded. The cancer registration fields required are; site of tumour (four digit ICD10 code) date of diagnosis All the work described above will be undertaken in by the HSCIC. They will then use these fields to generate an entirely pseudonymised dataset for the research team. The required intervals in days will be calculated (e.g. time from bariatric surgery to cancer occurrence and or death). All potentially identifying variables (e.g. dates of attendance at hospital, date of death, date of diagnosis etc) will then be stripped from the dataset. An entirely pseudonymised dataset will then be provided to the research team. This dataset is specified in detail in the accompanying document entitled ‘Bariatric Surgery & Colorectal Cancer Risk: Project Data Specification’. All outputs will be aggregated and anonymised in line with the HES analysis guide, and will not be used for any commercial purpose. Specific outputs expected, including target date: Research will be published in peer-reviewed journals relevant to cancer and bariatric surgery. Previous work in this area has been published annals of surgery. The applicant will also seek to present it at relevant conferences – for example the National Cancer Intelligence Conference or the National Cancer Research Institute Conference. The applicant will also feed the results of the work back to the bariatric surgery support group (WLSinfo) who they have involved in the project and who are extremely interested in its results. The support group has a website through which the results of the study could be highlighted. Analysis of the data will be completed by the end of March 2016, with the results being submitted for publication and peer-review. Expected measurable benefits to health and/or social care including target date: The work will determine whether the risk of colorectal cancer is elevated following bariatric surgery. If there is strong correlation then this information is vital to inform the follow-up of all individuals undergoing such procedure. Knowledge that their risk of bowel cancer is increased will ensure that they can be appropriately monitored so any cancers that arise can be identified at the earliest possible stage when they will have the best prognosis. It will also be important to inform those who are deciding whether to undergo weightloss surgery of all risks (and their magnitude) associated with the procedure."
+ }
+}

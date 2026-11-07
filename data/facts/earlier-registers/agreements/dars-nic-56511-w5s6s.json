@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-56511-W5S6S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-56511-W5S6S",
+   "version": "",
+   "organisation": "NHS BRADFORD CITY CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "a1730709cdae",
+     "activities": "80923a9dffd9",
+     "expected_output": "27395a92a9a9",
+     "expected_benefits": "5ae69b9f02a6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "27395a92a9a9": "1. Addressing poor data quality issues \n2. Production of reports for business intelligence\n3. Budget reporting\n4. Validation of invoices for non-contracted events",
+  "5ae69b9f02a6": "1. Financial validation of activity \n2. CCG Budget control\n3. Commissioning and performance management\n4. Meeting commissioning objectives without compromising patient confidentiality \n5. The avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care",
+  "80923a9dffd9": "North of England  DSCRO (part of NHS Digital) will apply Type 2 objections (from 14th October 2016 onwards) before any identifiable data leaves the DSCRO.\n1. SUS Data is obtained from the SUS Repository to North of England DSCRO. \n2. North of England DSCRO pushes a one-way data flow of SUS data into the Controlled Environment for Finance (CEfF) in the North of England CSU.\n3. The CSU carry out the following processing activities within the CEfF for invoice validation purposes: \na. Checking the individual is registered to a particular Clinical Commissioning Group (CCG) and associated with an invoice from the national SUS data flow to validate the corresponding record in the backing data flow\nb. Once the backing information is received, this will be checked against national NHS and local commissioning policies as well as being checked against system access and reports provided by NHS Digital to confirm the payments are:\ni. In line with Payment by Results tariffs\nii. are in relation to a patient registered with a CCG GP or resident within the CCG area.\niii. The health care provided should be paid by the CCG in line with CCG guidance. \n4. The CCG are notified that the invoice has been validated and can be paid. Any discrepancies or non-validated invoices are investigated and resolved between the CSU CEfF team and the provider meaning that no identifiable data needs to be sent to the CCG. The CCG only receives notification to pay and management reporting detailing the total quantum of invoices received pending, processed etc.",
+  "a1730709cdae": "As an approved Controlled Environment for Finance (CEfF), the data processor receives SUS data identifiable at the level of NHS number according to S.251 CAG 7-07(a) and (c)/2013, to undertake invoice validation on behalf of the CCG. NHS number is only used to confirm the accuracy of backing-data sets and will not be shared outside of the CEfF. The CCG are advised by the CSU whether payment for invoices can be made or not.\n\nNo record level data will be linked other than as specifically detailed within this application/agreement. Data will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from the NHS Digital will not be national data, but only that data relating to the specific locality of interest of the applicant."
+ }
+}

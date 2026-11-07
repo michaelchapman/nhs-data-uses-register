@@ -1,0 +1,60 @@
+{
+ "base_reference": "DARS-NIC-392904-Y8N1Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-392904-Y8N1Y",
+   "version": "",
+   "organisation": "Beacon Consulting",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "756d933f1e60"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "756d933f1e60": "Objective for processing:  \nMeditrends ltd works with NHS suppliers in the pharmaceutical and medical device industries. The analyses we provide enables clients to plan their activities by helping them to anticipate demand for products and services by providing insights into disease epidemiology, treatment pathways and outcomes. Meditrends ltd help their clients to understand how their products and services may impact on the cost and clinical burden of disease, for example when preparing submissions to NICE.\nMeditrends ltd also maintain a free website, meditrends.co.uk, which allows healthcare professionals and patients to look at national – level analyses for diseases and operations. Meditrends ltd believe that this has the potential to improve patient awareness and education, and intend to use the requested data to update and enhance this website.\nPotentially identifiable data will not be released to clients. All data contained in client materials involving sub-national analyses will be aggregated to prevent any individual patient being identified in accordance with the guidance on handling potentially identifiable data issued by HSCIC, including suppression of cells containing small numbers.\n\nProcessing activities:\nOnce downloaded, encrypted data is transferred to a stand - alone PC with no connection to the local network or to the internet. Raw data is then decrypted and imported into a SQL Server database. Processing of episode-level data is only carried out on this machine.\nPotentially identifiable data will not be released to clients. All data contained in client materials involving sub-national analyses will be aggregated to prevent any individual patient being identified in accordance with the guidance on handling potentially identifiable data issued by HSCIC, including suppression of cells containing small numbers.\n\nSpecific outputs expected, including target date:\nAs an infomediary, Meditrends ltd responds to clients’ requests for analyses of HES data, whose scopes and timescales are, by their nature, unpredictable. Outputs typically include spreadsheet models, presentations and documents.\nThe Meditrends website will be updated as new data becomes available.\n \nExpected measurable benefits to health and/or social care including target date:\nMeditrends ltd has been working as an infomediary with HES data for over seven years to support their clients in the healthcare industry, mainly pharmaceutical and device manufacturers. Meditrends ltd believe it is to the benefit of patients, the NHS and the wider economy that these companies are able to introduce new and innovative treatments to the NHS as effectively as possible.  Specifically, the projects that Meditrends undertakes for clients aid in:\n• Demonstrating the economic impact of new technologies on the NHS\nWork undertaken by Meditrends ltd has contributed to budget impact tools that allow clients introducing new technologies to show the national and local impact of their adoption on the NHS. Without realistic estimates of budget impact, supported by the real world data that HES provides, local NHS adoption of new technologies may be limited or slowed to the detriment of patients.\n• Understanding the potential usage of new technologies\nMeditrends ltd work often involves advising clients on the potential usage of new technologies in terms of patient numbers, and the geographic distribution of patients and treating physicians. Meditrends ltd clients use this information to address areas of high unmet clinical need, for example by focusing their educational and clinical resources in those regions where the clinical burden is highest. Without this information these efforts would be more poorly targeted resulting in poor awareness of new technologies and wasted costs (which are eventually borne by the NHS).\n• Developing innovative service offerings\nClients use Meditrends ltd analyses to develop offerings to patients, physicians and NHS organisations that support the uptake of their products. These offerings may take the form of specialist nurse support, arranging and funding delivery of medicines, arranging physician or nurse training and assisting in the development of referral pathways. Without the analysis based on HES data that Meditrends ltd provides some of these offerings may not occur or would be poorly implemented to the detriment of the patients that benefit directly or indirectly."
+ }
+}

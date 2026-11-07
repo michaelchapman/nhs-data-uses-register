@@ -1,0 +1,718 @@
+{
+ "base_reference": "DARS-NIC-396095-H1P1D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-396095-H1P1D-v0.2",
+   "version": "0.2",
+   "organisation": "NHS Liverpool CCG",
+   "organisation_type": "Clinical Commissioning Group (CCG)",
+   "listed": [
+    "2021-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-02-01"
+     ],
+     "objective": "81396245620a",
+     "activities": "61a8e18fed89",
+     "expected_output": "1ee8be98a685",
+     "expected_benefits": "886b0bfd21e0"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Births",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "National Cancer Waiting Times Monitoring DataSet (CWT)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "National Diabetes Audit",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Shielded Patient List",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-396095-H1P1D-v1.2",
+   "version": "1.2",
+   "organisation": "NHS LIVERPOOL CCG",
+   "organisation_type": "Clinical Commissioning Group (CCG)",
+   "listed": [
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "49f383d1ba72",
+     "activities": "61a8e18fed89",
+     "expected_output": "1ee8be98a685",
+     "expected_benefits": "886b0bfd21e0"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Civil Registration - Births",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "National Cancer Waiting Times Monitoring DataSet (CWT)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "National Diabetes Audit",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Shielded Patient List",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Maternity Services Data Set v1.5",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "1ee8be98a685": "COVID National & Sitrep\nThis report shows COVID cases, mortality and admissions.  It compares trends \nover time and compares rates by different geographies and providers.\n\nCOVID Out of Hospital Capacity & Demand\nThis report shows capacity and demand for hospital, ready for discharge,\ncare homes, domiciliary care, mental health and community providers.\n\nCOVID Testing Report\nThis report shows numbers, rates, positivity rates of those testing positive.\nAlso homes, schools and organisations that have had an outbreak against\nThe national definitions.\n\nCOVID in Hospital Demand Prediction Tool (Manchester Model)\nThis report provides predicting short term, in hospital COVID bed occupancy\nsplit by core and ICU beds.\n\nEnhanced case Finder\nThis report enables the ability to identify vulnerable cohorts of the\npopulation including those advised to shield, with the functionality to drill\ndown to identify patients for targeting of direct care.\n\nCOVID Epidemiology\nThis report shows stratified cases, suspected cases, mortality and people\nreceiving tests by characteristics including age, condition, deprivation and BAME,\nand over time.",
+  "49f383d1ba72": "The overarching purpose for this agreement is to support a set of COVID related population health analytics designed to inform both population level planning for COVID recovery and to support the targeting of direct care to vulnerable populations across the Cheshire & Merseyside Sustainable Transformation Partnership (C&MSTP).\n\nData released will only be shared with those parties listed and will only be used for COVID-19 purposes as laid out in this agreement.  Any non-COVID-19 purpose and any other COVID-19 purpose, except as set out in this agreement, is excluded.\n\nAlthough CMSTP is made up of over 450 organisations (including more than 350 GP practices) for the purposes of this Data Sharing Agreements it has been determined that the 8 Clinical Commissioning Groups and 8 Local Authorities are the Joint Data Controllers.  These organisations form the membership of the Data Access and Asset Group within the STP and so for the purpose of this agreement are deemed to be Joint Data Controllers.\n\nThe COVID related population health analytics will be achieved via analysis of the data requested in this agreement and the data sets listed in the Processing Activities section producing pseudonymised data for place-based local intelligence services.  The proposal is to make a set of person level pseudonymised data available to the local placed based intelligence teams that being the CCG and Local Authorities. This will enable them to support the local system including the COVID recovery cells, public health teams, Hospital and Out of Hospital cells across the Cheshire and Merseyside patch as well as local with COVID planning, which includes support to General Practice and PCN’s in intelligence required.\n\nA further example of analysis is a set of automated dashboards in the areas of COVID sit rep reporting, Capacity and Demand, Epidemiology, and Population Stratification. \n\nThese dashboards are required for:\n\nDashboard 1: COVID sit rep reporting: this suite of reports will show the daily situation of COVID in Cheshire and Mersey to aid the monitoring and management of outbreaks and incidents including cases, mortality, hospital admissions, testing and outbreaks. It’s audience is system wide including local Recovery Cells and Hospital and Out of Hospital cells, all designated by government to locally manage the pandemic. It will enable them to have the same up to date information on the spread and challenges in the pandemic so they can make informed population management decisions. \n\nDashboard 2 Capacity and Demand: This dashboard will assist in monitoring and managing demand across acute, community, mental health and local authority services in as near real time as possible, including the ability to understand if there are possible surges or subsequent ‘waves’ emerging by recognising changing trends. It will enable understanding of whether there is enough capacity to meet that demand and allow the Cells and STO described above to take informed actions to control and prevent the spread of COVID. This dashboard is targeted at those user groups that are responsible for planning system capacity including Cheshire and Merseyside region, sub regional teams i.e. North Mersey, individual CCG’s and Primary Care Networks.\n\nDashboard 3 Epidemiology: This dashboard will enable monitoring and recognition of trends in mortality and incidence over time at differing levels of geography. It will also provide insight in terms of demographic and health characteristics of individuals most affected by COVID. It will enable identification of geographical outbreaks or ‘hot spots’ of emerging infection. This dashboard is aimed at Public Health departments; The Out of Hospital and Acute Recovery Cells at Cheshire and Mersey Region that are responsible for planning and those responsible for planning a COVID response with PCN’s. \n\nDashboard 4 Population Stratification: This Dashboard enables GP practices to monitor and manage outbreaks and assist in controlling and preventing the spread of COVID by identifying individuals with certain characteristics that will be vulnerable to adverse outcomes as a result of COVID and target services/interventions appropriately to control and prevent the spread of COVID. (This is not the same as risk stratification in general practice that is most commonly used for stratifying the risk of unplanned admission to acute care) \n\nThe outputs of Dashboard 4 may also be used for Direct Care Purposes. \n\nThe 9 CCGs involved in this agreement also have an existing agreement for commissioning purposes (NIC-140059)",
+  "61a8e18fed89": "PROCESSING CONDITIONS:\nData must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role and the tasks that they are required to undertake.\n\nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. \n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nThe Recipients will take all required security measures to protect the disseminated data and they will not generate copies of their cuts of the disseminated data unless this is strictly necessary. Where this is necessary, the Recipients will keep a log of all copies of the disseminated data and who is controlling them and ensure these are updated and destroyed securely.\n\nONWARD SHARING:\nPatient level data will not be shared outside of the Data Controllers / Data Processors unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n\nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSEGREGATION:\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nAUDIT\nAll access to data is auditable by NHS Digital in accordance with the Data Sharing Framework Contract and NHS Digital terms.\n\nUnder the Local Audit and Accountability Act 2014, section 35, Secretary of State has power to audit all data that has flowed, including under COPI.\n\nDATA MINIMISATION:\nData Minimisation in relation to the data sets listed within the application are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n•\tPatients who are normally registered and/or resident within the CCG regions (including historical activity where the patient was previously registered or resident in another commissioner).\nand/or\n•\tPatients treated by a provider where the CCG are the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this is only for commissioning and relates to both national and local flows.\nand/or\n•\tActivity identified by the provider and recorded as such within national systems (such as SUS+) as for the attention of the CCG - this is only for commissioning and relates to both national and local flows.\n\nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\na.\tAcute\nb.\tAmbulance\nc.\tCommunity\nd.\tDemand for Service\ne.\tDiagnostic Service\nf.\tEmergency Care\ng.\tExperience, Quality and Outcomes\nh.\tMental Health\ni.\tOther Not Elsewhere Classified\nj.\tPopulation Data\nk.\tPrimary Care Services\nl.\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tMaternity Services Data Set (MSDS)\n7.\tImproving Access to Psychological Therapy (IAPT)\n8.\tChild and Young People Health Service (CYPHS)\n9.\tCommunity Services Data Set (CSDS)\n10.\tDiagnostic Imaging Data Set (DIDS)\n11.\tNational Cancer Waiting Times Monitoring Data Set (CWT)\n12.\tCivil Registries Data (CRD) (Births)\n13.\tCivil Registries Data (CRD) (Deaths)\n14.\tNational Diabetes Audit (NDA)\n15.\tPatient Reported Outcome Measures (PROMs)\n16.   Shielded Patient List (SPL)\n\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\n\nData Processor 1 – Graphnet Health Ltd\n1.         SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), Diagnostic Imaging data (DIDS), National Cancer Waiting Times Monitoring Data Set (CWT), Civil Registries Data (CRD) (Births and Deaths), National Diabetes Audit (NDA) Patient Reported Outcome Measures (PROMs) and Shielded Patient List (SPL) data only is pseudonymised using the Nottingham Open Pseudonymiser tool in the DSCRO with a specific SALT key for this project. The pseudonymised data is then securely transferred to Arden and GEM Commissioning Support Unit.\n2.      Arden and GEM Commissioning Support unit add derived fields by using existing data and then transfer the data to Graphnet Health Ltd\n3.     Graphnet Health Ltd also receive data directly from providers (see points i - v for details)\n4.     Graphnet Health Ltd link data and provide analysis\n5.     Allowed linkage is between the data sets contained within point 1 and 3.\n6.     Graphnet Health Ltd then pass the processed, pseudonymised and linked data to the Data Controllers. \n7.     Patient level data will not be shared outside of the Data Controllers / Data Processors unless it is for the purpose of direct care and will only be shared within on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set. \n\nData From Providers\ni.    Graphnet Health Ltd receives the following identifiable datasets directly from providers:\nAcute HL7\nMental Health\nCommunity\nPrimary Care\nAmbulance 111\nAmbulance 999\nSDRA Spine\nSocial Care\nPathology\nNPEX\nTesting Data\nii.    The identifiable data is landed in a segregated section of Graphnet Health Ltd with strict access controls\niii.    The data is pseudonymised using the Nottingham Open Pseudonymiser tool and SALT key specific for this project that has been shared via the DSCRO\niv.    The pseudonymised data is then sent to Graphnet Healthcare Ltd main system for linkage to other datasets\nv.    The identifiable data is then deleted from the segregated area\n\nFor clarity, the reidentification of individuals for GP Direct Care purposes is carried out by the DSCRO.",
+  "81396245620a": "The overarching purpose for this agreement is to support a set of COVID related population health analytics designed to inform both population level planning for COVID recovery and to support the targeting of direct care to vulnerable populations across the Cheshire & Merseyside Sustainable Transformation Partnership (C&MSTP).\n\nData released will only be shared with those parties listed and will only be used for COVID-19 purposes as laid out in this agreement.  Any non-COVID-19 purpose and any other COVID-19 purpose, except as set out in this agreement, is excluded.\n\nAlthough CMSTP is made up of over 450 organisations (including more than 350 GP practices) for the purposes of this Data Sharing Agreements it has been determined that the 8 Clinical Commissioning Groups and 8 Local Authorities are the Joint Data Controllers.  These organisations form the membership of the Data Access and Asset Group within the STP and so for the purpose of this agreement are deemed to be Joint Data Controllers.\n\nThe COVID related population health analytics will be achieved via analysis of the data requested in this agreement and the data sets listed in the Processing Activities section producing pseudonymised data for place-based local intelligence services.  The proposal is to make a set of person level pseudonymised data available to the local placed based intelligence teams that being the CCG and Local Authorities. This will enable them to support the local system including the COVID recovery cells, public health teams, Hospital and Out of Hospital cells across the Cheshire and Merseyside patch as well as local with COVID planning, which includes support to General Practice and PCN’s in intelligence required.\n\nA further example of analysis is a set of automated dashboards in the areas of COVID sit rep reporting, Capacity and Demand, Epidemiology, and Population Stratification. \n\nThese dashboards are required for:\n\nDashboard 1: COVID sit rep reporting: this suite of reports will show the daily situation of COVID in Cheshire and Mersey to aid the monitoring and management of outbreaks and incidents including cases, mortality, hospital admissions, testing and outbreaks. It’s audience is system wide including local Recovery Cells and Hospital and Out of Hospital cells, all designated by government to locally manage the pandemic. It will enable them to have the same up to date information on the spread and challenges in the pandemic so they can make informed population management decisions. \n\nDashboard 2 Capacity and Demand: This dashboard will assist in monitoring and managing demand across acute, community, mental health and local authority services in as near real time as possible, including the ability to understand if there are possible surges or subsequent ‘waves’ emerging by recognising changing trends. It will enable understanding of whether there is enough capacity to meet that demand and allow the Cells and STO described above to take informed actions to control and prevent the spread of COVID. This dashboard is targeted at those user groups that are responsible for planning system capacity including Cheshire and Merseyside region, sub regional teams i.e. North Mersey, individual CCG’s and Primary Care Networks.\n\nDashboard 3 Epidemiology: This dashboard will enable monitoring and recognition of trends in mortality and incidence over time at differing levels of geography. It will also provide insight in terms of demographic and health characteristics of individuals most affected by COVID. It will enable identification of geographical outbreaks or ‘hot spots’ of emerging infection. This dashboard is aimed at Public Health departments; The Out of Hospital and Acute Recovery Cells at Cheshire and Mersey Region that are responsible for planning and those responsible for planning a COVID response with PCN’s. \n\nDashboard 4 Population Stratification: This Dashboard enables GP practices to monitor and manage outbreaks and assist in controlling and preventing the spread of COVID by identifying individuals with certain characteristics that will be vulnerable to adverse outcomes as a result of COVID and target services/interventions appropriately to control and prevent the spread of COVID. (This is not the same as risk stratification in general practice that is most commonly used for stratifying the risk of unplanned admission to acute care) \n\nThe outputs of Dashboard 4 may also be used for Direct Care Purposes. \n\nThe 9 CCGs involved in this agreement also have a an existing agreement for commissioning purposes (NIC-140059)",
+  "886b0bfd21e0": "Benefits at Cheshire and Mersey Region, CCG and Local Authority level\n\nThe Cheshire and Merseyside Health Care partnership (C&M HCP) is made up of nine local authority areas (or “places”). The C&M HCP is responsible for planning enough system capacity to respond to any surges in demand due the COVID pandemic, whilst also reintroducing planned care capacity cross both acute, community and mental health providers. Demand and capacity reports will enable the C&M HCP and the nine places (eg Cheshire East, Liverpool, Warrington etc) to be sighted on system demand and respond with capacity accordingly. \n\n•\tImplementation of the system will allow the production of bespoke real-time dashboards to present data in easy to understand visual displays that can then prompt further detailed analysis depending on issues highlighted as being of concern across Cheshire & Merseyside.\nAvailable once data flows.\n\n•\tC&M Covid dashboards including cases rates, testing rates and system metrics such as hospital admissions and local mortality rates will enable local health care systems within the C&M footprint to understand the current Covid situation and respond with appropriate policy.\nAvailable within 3-6 months.\n\n•\tAn epidemiology dashboard will allow place-based decision makers to identify the population characteristics of people presenting for tests, cases and mortality to better understand the nature of the pandemic and identify if there are particular cohorts that are consuming testing at a greater rate than others to help manage testing capacity.\nAvailable within 3-6 months.\n\n•\tA specific testing dashboard will help place-based decision makers to identify geographical Covid hot spots and drill down to identify patterns and/or vulnerable cohorts for management. This may allow more targeted intervention at place-based or more local geographies.\nAvailable within 3-6 months.\n\n•\tReal-time detailed capacity and demand reporting across all sectors including hospital and out of hospital services will enable accurate reporting as stipulated in NHS England (NHSE) phase three planning guidance and it is hoped allow place-based decision makers to better manage demand and capacity.\nAvailable within 3-6 months.\n\n•\tThe system will provide the data to enable the C&M HCP and place-based NHS organisations to follow the NHSE planning guidance which includes the following:\n\n“Restore NHS services inclusively, so that they are used by those in greatest need. This will be guided by new, core performance monitoring of service use and outcomes among those from the most deprived neighbourhoods and from Black and Asian communities, by 31 October 2020.\n\nEnsure datasets are complete and timely, to underpin an understanding of and response to inequalities. All NHS organisations should proactively review and ensure the completeness of patient ethnicity data by no later than 31 December 2020, with general practice prioritising those groups at significant risk of COVID-19 from 1 September 2020. \n\nCollaborate locally in planning and delivering action to address health inequalities, including incorporating in plans for restoring critical services by 21 September; better listening to communities and strengthening local accountability; deepening partnerships with local authorities and the voluntary and community sector; and maintaining a continual focus on implementation of these actions, resources and impact, including a full report by 31 March 2021.”\n\nhttps://www.england.nhs.uk/publication/implementing-phase-3-of-the-nhs-response-to-the-covid-19-pandemic/\n\nWhat are the benefits for GP Practices and Primary Care Networks (PCNs)?\n\n•\tIdentification of vulnerable groups will give Practices and PCNs a better understanding of vulnerable populations and their needs. It is hoped that services can then be planned and targeted more appropriately. \nAvailable within 3-6 months.\n\n•\tAnalysis of the characteristics of people affected by COVID in their populations and identification of local hotspots may allow targeted interventions based on specific risk factors, for example local shielding advice, patient remote monitoring and specific treatment interventions (such as early use of steroids in selected patients in community). This may lead to reduced morbidity and mortality and so better patient outcomes. \nAvailable within 3-6 months.\n\nWhat are the benefits for patients?\n\n•\tIt is hoped that the detailed data analysis will enable more effective targeted support and/or interventions from services that are available, to at risk individuals.\nAvailable within 3-6 months.\n\n•\tLocal commissioners may identify service delivery gaps that could be addressed locally by re-organising current service provision or by commissioning additional service provision.\nAvailable within 3-6 months.\n\n•\tIt is hoped the above will result in improved patient well-being and a reduction in morbidity and mortality associated with Covid infection. \nAvailable over the course of the pandemic, may be seen within 3-6 months."
+ }
+}

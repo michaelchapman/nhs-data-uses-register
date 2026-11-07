@@ -1,0 +1,190 @@
+{
+ "base_reference": "DARS-NIC-147833-FGBLJ",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147833-FGBLJ",
+   "version": "",
+   "organisation": "Western General Hospital",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "5e0e3594c460"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "59a7695d6974"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "ba237ef8d4bb"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147833-FGBLJ-v0.0",
+   "version": "0.0",
+   "organisation": "WESTERN GENERAL HOSPITAL",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "389da9b3bc69",
+     "activities": "c32096e0d2eb",
+     "expected_output": "cc69f3241fa3",
+     "expected_benefits": "5000f68209e8"
+    },
+    {
+     "periods": [
+      "2016-09-01",
+      "2016-12-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "3517e2531f97",
+     "activities": "c32096e0d2eb",
+     "expected_output": "cc69f3241fa3",
+     "expected_benefits": "5000f68209e8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3517e2531f97": "This study started in 2000. Ethics approval was obtained at that time and the patient consent forms fullfilled the criteria for consent. The consent forms were updated in 2005 to comply with current regulations and to include specific permission to \"obtain information held by the NHS and records maintained by the General Register /Office\".",
+  "389da9b3bc69": "The data supplied by the NHS IC to Institute of Cancer Research will be used only for the approved Medical Research Project identified above.",
+  "5000f68209e8": "Before closure all names and geographical identifiers of patients are made\nanonymous - only the trial identifier links the patient to the paper questionnaires. \nWhen the database is closed it is archived in a secure directory where only the statistician has access, burned on CDs - this is the data that is presented in the analysis. The CDs are labelled and stored in the fireproof safe.Access to this data is controlled by defining the roles of various users and their access levels.Data entry is done using a Visual FoxPro front-end with password access limited to only members of the trial support group.",
+  "59a7695d6974": "The data supplied by NHS IC to the Department of Clinical Neurosciences will be used only for the approved Medical Research Project identified above.",
+  "5e0e3594c460": "Background Data from over 5,000 patients are now available from trial of thrombolysis for patients with acute ischaemic stroke.  A systematic review of these trials suggest that thrombolysis is a very promising for patients who can be treated within 6 hours of stroke onset, but the balance of the risk remains unclear. Aim Establish the balance of risk and benefit more precisely for thrombolytic therapy with rt-PA, especially among patients who do not exactly meet the current license criteria. Assess which categories of patients are most likely to benefit (by investigating; the interaction between stroke severity, early brain imaging appearances and other clinical features;and, to obtain better estimates of the duration of the 'therapeutic time window.",
+  "ba237ef8d4bb": "Background Data from over 5,00 patients are now available from trial of thrombolysis for patients with acute ischaemic stroke.  A systematic review of these trials suggest that thrombolysis is a very promising for patients who can be treated within 6 hours of stroke onset, but the balance of the risk remains unclear. Aim Establish the balance of risk and benefit more precisely for thrombolytic therapy with rt-PA, especially among patients who do not exactly meet the current license criteria. Assess which categories of patients are most likely to benefit (by investigating; the interaction between stroke severity, early brain imaging appearances and other clinical features;and, to obtain better estimates of the duration of the 'therapeutic time window.",
+  "c32096e0d2eb": "Electronic data is stored using a secure, password protected SQL Server. Access to this data is controlled by defining the roles of various users and their access levels. This is backed up nightly and tapes are stored in a fireproof safe on-site. Off-site backup is done nightly by central\nuniversity. Data entry is done using a Visual FoxPro front-end with password access\nlimited to only members of the trial support group. Any data entered using a web browser is password protected, is collected using an encrypted web server and is stored in SQL Server.",
+  "cc69f3241fa3": "The primary outcome in this study is death and dependency. Patients are followed up at six months, eighteen months and annually thereafter until the end of the study."
+ }
+}

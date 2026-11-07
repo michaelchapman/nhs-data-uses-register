@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "_earlier.html" import earlier_flag with context %}
+{% block title %}Agreements only in the earlier registers — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ agreements|length|commas }} data sharing agreements listed in NHS Digital's release registers before July 2021 that never appeared in the Data Uses Register.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li><a href="{{ meta.base_path }}/agreements/">Agreements</a></li>
+    <li aria-current="page">Earlier registers only</li>
+  </ol>
+</nav>
+<h1>Agreements only in the earlier registers</h1>
+<p class="lede">{{ agreements|length|commas }} agreements received data between {{ earlier_span }} but were never in the Data Uses Register, which began in July 2021. None is counted in this site's figures.</p>
+{{ earlier_flag() }}
+<div class="table-scroll">
+<table class="data-table" id="earlier-table">
+  <caption class="visually-hidden">Agreements only in the earlier release registers</caption>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Latest version</th><th scope="col">First listed</th><th scope="col">Last listed</th><th scope="col" class="num">Datasets</th></tr></thead>
+  <tbody>
+  {% for a in agreements %}
+    <tr>
+      <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.base_reference }}</a></th>
+      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org or "—" }}{% endif %}</td>
+      <td>{{ "v" ~ a.latest.version if a.latest.version else "—" }}</td>
+      <td data-sort="{{ a.first_listed }}">{{ a.first_label or "—" }}</td>
+      <td data-sort="{{ a.last_listed }}">{{ a.last_label or "—" }}</td>
+      <td class="num">{{ a.dataset_names|length }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,117 @@
+{
+ "base_reference": "DARS-NIC-148120-0Q51J",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148120-0Q51J",
+   "version": "",
+   "organisation": "Kings College Medical School",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "65554523a18f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 ((ECC 6-06(f)/2009)) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148120-0Q51J-v0.0",
+   "version": "0.0",
+   "organisation": "KINGS COLLEGE MEDICAL SCHOOL",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "objective": "ec44714f2084"
+    },
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "ec44714f2084",
+     "activities": "d0354ad7bf9f",
+     "expected_output": "d0354ad7bf9f",
+     "expected_benefits": "d0354ad7bf9f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "65554523a18f": "To determine overall outcome in terms of mortality and early entry into care of all babies and children (up to 5 years of age) identified with sickle cell disease (HbSS, HbSC, HbS beta thalassaemia, Hb S/D Punjab; HbS/Oarab) and overall access to timely informed choice in preceding screening history for parents.",
+  "d0354ad7bf9f": "To be completed by applicant",
+  "ec44714f2084": "To determine overall outcome in terms of mortality and early entry into care of all babies and children (up to 5 years of age) identified with sickle cell disease (HbSS, HbSC, HbS, beta thalassaemia, Hb S/D Punjab, HbS/OArab) and overall access to timely informed choice in preceding screening history for parents."
+ }
+}

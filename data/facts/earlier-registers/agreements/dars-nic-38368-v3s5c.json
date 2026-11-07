@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-38368-V3S5C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-38368-V3S5C-v0.4",
+   "version": "0.4",
+   "organisation": "COMPETITION & MARKETS AUTHORITY",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "7ab0c161e9ca",
+     "activities": "ff790da2a700",
+     "expected_output": "4ee10185fdd5",
+     "expected_benefits": "67767af6c8dd"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "4ee10185fdd5": "CMA aims to complete the research programme within a year of initiation.  In the event that this does not prove possible, CMA would apply to extend its access to the data. \n\nThe details of CMA’s research (including statistical result tables, graphs and maps) will take the form of working papers to be shared inside CMA’s organisation, aggregating small numbers in line with HSCIC policy where these are shared outside of the case team.\n\nCMA’s overall findings will be compiled into academic articles for journal and conference submission, and in research papers which CMA will disseminate within and outside the organisation. The reason for publishing CMA’s findings is to ensure that CMA’s findings are open to critical scrutiny and to preserve transparency of CMA’s work. In all cases of publication, CMA will aggregate the results and suppress small numbers in line with HES Analysis Guide to ensure that patient anonymity is not compromised.",
+  "67767af6c8dd": "Research literature suggests competition between healthcare providers strengthens incentives for hospitals to innovate, therefore maintaining and improving standards of quality. CMA hopes to build on this body of literature. Through developing and refining CMA’s methodology, and gaining a deeper understanding about patient choice, this will allow the CMA to assess the effects of mergers involving NHS Foundation Trusts with greater sophistication. This will help to maintain quality standards in the NHS, ultimately increasing patient welfare and reducing mortality rates.",
+  "7ab0c161e9ca": "The Competition and Markets Authority (CMA) is required, under the Enterprise Act (EA02), to monitor, investigate and decide whether mergers may be expected to give rise to a substantial lessening of competition within any markets(s) in the UK for goods or services.  If the CMA concludes that there is an anti-competitive outcome, it must decide whether action should be taken to remedy, mitigate, or prevent the identified substantial lessening of competition and/or any adverse effect which may be expected to result from the substantial lessening of competition. The Health and Social Care Act 2012 (HSCA12) confirms this duty with respect to the merger of NHS Foundation Trusts.\n\nIn order to gain a deeper understanding about patient choice, which will allow the CMA to assess the effects of mergers involving NHS Foundation Trusts with greater sophistication, the CMA is undertaking a research programme with the following broad themes: \n(a) Theme A: Patient responses to changes in the structure of local health economies, significant local health events, and / or provider failings. \n(b) Theme B: The extent to which choice is exercised at various nodes along the patient pathway and the implications of this for merger assessment. \n\nThe following information explains CMA’s research plans under each of these themes.\n\nTheme A: \n\nUnderstanding how patients respond to events that may change the quality of a provider is central to CMA’s work to make the healthcare market work for consumers.\n\nCMA intends to conduct an analysis to test how patients respond to events impacting upon the quality of healthcare providers. This analysis will allow CMA to assess the performance of CMA’s existing simple choice models (which are generally used to predict future patient flows) against the choices of patients actually observed in cases where an event has incentivised or forced patients to go elsewhere. This will mean that CMA can make more precise decisions in CMA’s legally mandated reviews in the healthcare sector.\n\nConducting an event analysis will also help CMA to predict better which patients are more likely to choose a different hospital if there is a decrease in quality at their previously chosen. This would be informative of:\n(i) The extent to which patient choice is responsive to changes in quality in any given area, and so provide an indicator as to the extent of the scope of current competition in a given local area;\n(ii) The specialties which would be most affected by any given merger.\n\nTheme B: \n\nWhilst patient choice is only formally exercised at the outpatient level, some GPs/patients who anticipate that they will need to be admitted as part of their care may also consider the quality of inpatient and day-case services as part of their initial choice of provider. \n\nCMA seeks to understand more fully how patient choice with respect to outpatient and admitted patient factors works in practice. Specifically, CMA plans to model patient choice factors specific to each treatment setting and factors common across all treatment settings using regression analysis. This will allow CMA to understand the extent to which competition for admitted patients can drive up quality of services, quantify this extent and understand the circumstances in which this effect is largest. This will inform CMA’s judgement in individual merger assessments whether a particular merger may harm patient welfare, or whether the benefits outweigh the costs.\n\nCMA further plans to test its existing models of patient choice for admitted patients against the results of such analysis. Using data with a wide scope will allow CMA to develop a robust understanding of its reliability across the range of specialties and provider types which are relevant to CMA’s statutory duties. It will also help CMA tailor the model to develop more accurate results, if CMA finds that there is scope for improvement, or suggest areas where future research is needed.",
+  "ff790da2a700": "The CMA considers the following data as necessary in performance of the CMA research programme objectives:\n\no\tPatient episode level data with no small number suppression, to use procedure and diagnosis information to cross-check specialty coding, and to reassign episode information where CMA finds coding inconsistencies. This is necessary for the research to analyse robustly common treatments across providers (in essence, to ensure the CMA are comparing like with like). CMA also requires episode level data to re-compute HRG codes and provider revenues based on such reallocation. \n\no\tPseudonymised data in order to identify cases where patients have multiple episodes of treatment as part of their care pathway, which if unidentified could lead to duplicates in the analysis.\n\no\tUsing national data (as opposed to local/regional data) would enable CMA to:\n(a) In relation to Theme A, have access to a sufficiently large cross section of events within different subcategories, for example: mergers, quality decreases, temporary closures, refurbishments etc). This will allow CMA to conduct robust analysis which is not constrained by sample size and which does not mix together different effects. It will also allow CMA to test whether patient responses vary across different categories of events. CMA will be able to draw out factors which are predictive of larger or smaller responses, and apply these to future local assessments. \n(b) In relation to Theme B, capture a sufficient number of data points to ascertain which specialties generally contain patients which are more likely to respond to quality changes. Given that some specialties contain very low numbers of patients, having a large sample size is important. This will help CMA inform the appropriate starting temperature on each specialty in any given local assessment\n\no\tCMA will need data covering 3 years (2012/13 – 2014/15) in order to test the stability of patient/GP choices following events in the health economy using the time dimension, and to increase the sample size in low-volume specialties and thus smooth out unrepresentative figures.\n\nCMA will combine the HES data with other publically available information in order to test the impact of specific factors and to adequately control for factors which might otherwise bias CMA’s results. CMA plans to match the following publically available data with the postcodes in HES data:\n(a) ODS characteristics for GP practices, Branch Surgeries, NHS Trusts and Trust Sites. \n(b) ONS postcode lookup information including rural/urban indicators and coordinates (for GP practices and care providers), in order to calculate approximations of travel distances, and to control for the impact of rurality on these\n(c) ONS population density measures by GP practice and provider postcode to control for the impact of rurality on willingness to travel\n(d) ONS Health deprivation and income distribution measures by GP practice and provider postcode to control for unequal distributions of health and wealth\n(e) Hospital Estates and Facilities Statistics data by hospital to control for characteristics of each hospital\n(f) Hospital performance data from the CQC, NHS choices and My NHS BETA to test the relationship between quality of hospitals and key variables of interest\n(g) Data from the GP patient survey, NHS choices and My NHS BETA by GP practice to control for characteristics and the quality of each GP practice \n(h) Data from the HSCIC, Monitor, NHS Improvement and the Department of Health in relation to provider tariffs.\n\nUnder both of the aforementioned themes, CMA will use regression analysis to produce statistical result tables. CMA will also produce graphs, maps and tables to summarise key features of the data and to make CMA’s research more accessible.  Outputs will only contain data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess to data will be restricted to authorised substantive CMA employees from the Data Access Team within the Corporate Services Department and will only be used for the fulfilment of the project’s objectives as described above."
+ }
+}

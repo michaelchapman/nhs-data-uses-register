@@ -1,0 +1,184 @@
+{
+ "base_reference": "DARS-NIC-330126-N1W7H",
+ "versions": [
+  {
+   "reference": "DARS-NIC-330126-N1W7H",
+   "version": "",
+   "organisation": "Methods Insight Analytics",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "objective": "45238bd0dd34"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes, PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR OP",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR APC Episodes, PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR OP",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR OP",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR APC Episodes",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "45238bd0dd34": "Objective for processing:  \nThe data will be used to support existing work with NHS partners such as National Right care for the Commissioning Board and other projects Methods Analytics are commissioned for through G-Cloud. The data is also used for Stethoscope - a quality variation tool which provides national benchmarking of HES based indicators.\nMethods Analytics will also be using the data to help provide insight to commissioners and providers through tools and dashboards that will allow users to explore indicators of quality/safety and Patient Experience in their organisations. Users will be provided with indicators showing national benchmarking and statistical techniques are applied to the data to show variation and difference in services (for example against 2 and 3 Standard Deviations from national mean).\nAbsolutely no raw data will be shared outside of the Methods Analytics team.\n\nSpecifically the uses of data are :-\n\n1) The data is used for Stethoscope  - a quality variation tool which provides national benchmarking of HES based indicators that is made available free to the public at an organisation roll up level and more granular information is available to subscribing NHS organisations: CCGs, providers and NHS England.\n2) It is also used for bespoke tools and reports for individual NHS clients, CSUs and professional bodies. The majority of these reports contains data items from Stethoscope but reported as dashboards for individual organisations, they also contain bespoke metrics generated from HES data.\n3) The National Surgical Commissioning Centre is hosted by the Royal College of Surgeons of England and is part of the NHS England Rightcare programme. Methods created and hosts dashboards and an explorer tool developed with the surgical associations working group under a NICE accredited methodology. These tools show activity rates and simple outcomes for CCG populations and care providers using HES/SUS PbR data. These tools are free to the public.\n4) The primary requirement for the consultant code is to support a project for the specialist surgical societies to develop and intelligence tool for their members to access measures and metrics about their own performance which will be accessible via the member’s portal (therefore password protected). Section Access will be implemented so that consultants can only see their own data.\n5) Consultant code will also provide a further level of drilldown in the Stethoscope product to provide Trusts to explore and understand the variation in care between their own consultants across Method Analytics’ indicator set. Access to the tool is provided securely to named subscribers only, with individual surgeon’s able to compare themselves to a national cohort of surgeons. Access controls will restrict an individual Trust can only see data for their own employees.\n\nProcessing activities: \nFor all purposes the data is made available to Methods Analytics through HSCIC secure ftp after which It is automatically imported into our SQL data warehouse. \n1)         HES/SUS PbR Data is processed into indicators and displayed in a Ruby on Rails web tool and Qlikview 11 dashboard (the original data is not connected to any outputs).\n2)         HES/SUS PbR Data is processed into indicators and counts and then visualisations are built in MS Office. Final reports including any suppressed numbers are rendered as Adobe .PDF documents and do not contain any HES data, only aggregated views of the data.\n3)         HES/SUS PbR Data is processed into indicators and displayed in a Qlikview 11 dashboard (the original data is not connected to the output) which users can access via a unique login via a secure website.\n4)         HES/SUS PbR Data is processed into indicators and displayed in a Qlikview 11 dashboard (the original data is not connected to the output)\n5)         As per 1\n\nSpecific outputs expected, including target date: \nOutputs for the data will be as follows and are related back to the 5 purposes\nStethoscope – Live tool developed as Ruby on Rails bespoke web tool combined with Qlikview 11 dashboards) https://stethoscope.methods.co.uk. (1,5)\nSpecialist society  dashboards – In development and going live Dec 14, dashboard developed in Qlikview 11 (1,4)\nAd hoc reports – Created using MS Office Suite, Excel 2013 and Word 2013 and rendered as .PDF format for final reports on highly aggregate data (1,2)\nRoyal College of Surgeons – Live tool developed in Qlikview 11 called the “Procedures Explorer Tool” (http://rcs.methods.co.uk/pet.html)  (2)\nPET Tool and non-NHS organisations\nThe PET tool was developed in partnership with the Royal College of Surgeons to support the work of the National Surgical Commissioning Centre http://www.rcseng.ac.uk/healthcare-bodies/nscc. They developed commissioning guides for CCGs on specific interventions which all have NICE accreditation. As part of this work, we developed the PET tool to allow commissioners to access data to support the guidelines. RCS has made the guidelines publically available and also the data tools in line with the requirements of the governments transparency agenda. Therefore there are no ‘customers’ as the tool is available to all. All data in the tool are high level outcomes with appropriate suppression rules applied when necessary.\nThe majority of outputs will be aggregated and displayed as rates or proportions. Where this is not the case, and activity in numbers is required, Methods Analytics will ensure strict data governance surrounding identifying individuals by suppressing values less than 5 and ensuring another field is suppressed to prevent back calculations where it not appropriate for a user to see that data, although small numbers may be displayed to a Trust or CCG user who is treating or paying for a small cohort of patients.\n\nExpected measurable benefits to health and/or social care including target date: \nBenefits relating to each of the 5 purpose statements is listed below:\n\n1)         The production of indicators from HES/SUS PbR data allows providers and commissioners to understand the variation in the quality of healthcare for their organisation. Surgeons can start to identify quality information about their activity and work to improve treatment. Directors and managers are better informed to make the right decisions to improve patient care and safeguard their patients against harm. Commissioners are able to understand the quality of care delivered for the activity they are purchasing and make strategic decisions based on evidence so that better and more affordable NHS services can be delivered. The use of this information will allow improvements in the quality of care offered to the public.\n2)         Methods Analytics work with Trusts and CCG’s to provide ad hoc reporting matching their requirements, using HES/SUS PbR data as appropriate to derive insight into a specific topic or issue. A real life example is a review of urgent care within an NHS Trust; we used HES data to build a picture of issues around urgent care including where patients are flowing from, how referral patterns are changing over time and conversion rates. Projects include a large amount of clinical engagement to ensure that data in the reports is used in the best way possible to make changes to services that benefit patients in any organisation working with Methods Analytics. The Analytics team includes clinicians and consultants to provide the right expertise when discussing any insight with our NHS clients.\n3)         Methods worked with the Royal College of surgeons to produce a tool to explore intervention data in line with new commissioning guidance written by the college. RCS worked to provide national commissioning guidance around pathways via the National Surgical Commissioning Centre. The commissioning Guides are approved by the National Institution for Clinical Excellence and will be used by commissioners across England and the data tools will allow decision makers to improve services for patients and monitor those improvements\n4)         Methods Analytics are providing members of the specialist society with the means to explore surgical outcomes for their activity to understand length of stay, readmission rates, reoperation rates and some specific outcomes for surgery. By allowing surgeons to see how their quality of care varies from other surgeons performing the same operations they can work to improve the levels of care they are able to offer and improve the safety for patients they are operating on, in order to get a full understanding it is important they are able to identify themselves in the tool. Surgeons can also use the data could also be used for revalidation purposes therefore ensuring patient safety by providing evidence a surgeon is up to date and fit for practice.\n5)         Methods Analytics would like to increase the benefits and scope of Stethoscope so that providers with the appropriate access rights can identify their own activity in relation to any of the HES/SUS PbR based quality measures. At the moment, users can see the variation in quality through pseudoanonimysed consultant identifiers. By allowing Trusts to identify their own surgeons it would allow them to have conversations with clinical staff and make real differences to patient care and safety. Methods Analytics would like to work with HSCIC to realise this benefit while providing appropriate access controls that protect data accordingly."
+ }
+}

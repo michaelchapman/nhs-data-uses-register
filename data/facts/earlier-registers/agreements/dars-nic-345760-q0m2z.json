@@ -1,0 +1,51 @@
+{
+ "base_reference": "DARS-NIC-345760-Q0M2Z",
+ "versions": [
+  {
+   "reference": "DARS-NIC-345760-Q0M2Z",
+   "version": "",
+   "organisation": "University of Manchester",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "objective": "166e697dee1f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Section 251 (ECC 7-05(b)/2011 ) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(ECC 7-05(b)/2011 ) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "166e697dee1f": "Objective for processing:\nTo examine the socio-demographic, criminological and clinical characteristics and clinical care of people\nwith schizophrenia who commit homicide compared with control cases with schizophrenia who do not commit homicide.\nThe data will be used as control data, using age and gender to match against existing National Confidential Inquiry into Suicide and Homicide (NCISH) data on patients who have a diagnosis of schizophrenia or delusional disorder and who have perpetrated a homicide. The Consultant Psychiatrist responsible for the care of each matched control patient will receive a questionnaire to complete asking for details of the control patient’s care in order for comparisons to be made. The Consultant Psychiatrist will receive the Local Patient ID, NHS Number, date of birth of the patient & the episode end date so that they are able to identify the patient. This information is on a separate letter headed sheet of paper & when the questionnaire is returned to NCISH it only contains the applicant’s uniquely assigned identifier.\n\nThe project forms part of the NCISH study and is a PhD project. The NCISH deemed that the study was large enough to form a PhD project for one of their researchers and a researcher expressed a willingness to coordinate the project.\nThe data requested covers England and Wales. The applicant explored the possibility of gaining the same data for Scottish Patients from National Services Scotland (NSS), and due to the cohort size it was stipulated that NSS would prepare the control cohort. The cost unfortunately was not within the NCISH budget constraints and the applicant had many concerns outsourcing the data collection, including researcher reliability, processing and ensuring a positive response rate. As such, the study has not been carried out in Scotland. \n\nProcessing activities:\nThe HES data provided by HSCIC is solely for men aged 17 and 90 with a specific main specialty in the HES record. The data provided is assigned to control status. Each patient HSCIC send is assigned a unique id by the University of Manchester and a prepared data programme is used to randomly select the controls for each case. The controls are matched to cases on age at the time of the case’s offence. The ratio of control to cases is 5:1.\nThe consultant code and provider code are then used to identify the consultant psychiatrist/mental health provider who were responsible for the care of the patient. A questionnaire is then sent to the consultant psychiatrist/mental health provider who were responsible for the care of the patient. The questionnaire asks for demographic details, criminal history, clinical history and clinical care. This data will be entered into the study data. All data on the database is fully anonymised with only the applicant’s assigned unique identifier present. A covering letter is sent to the consultant psychiatrist containing the Local ID, NHS Number and Date of Birth of the patient. These identifiers are necessary for the mental health provider to identify the patient, particularly as many trusts have merged over the period of the dataset and local identifiers have altered. This data is not entered onto the database. The questionnaire is not returned with this data. The questionnaire data is anonymous.\n\nWhilst Local Patient Id is requested, that field is only used by the local Trust to reidentify an individual – in effect providing data back to the submitting NHS organisation.\n\nOnce work has been completed and the questionnaire sent out, the identifiable data received from the HSCIC does not need to be retained and will be securely destroyed.\n\nSpecific outputs expected, including target date:\nThe findings of the study will be published in peer reviewed medical journals. In the first instance the applicant will target internationally leading academic mental health journals, such as JAMA Psychiatry, the American Journal of Psychiatry, the British Journal of Psychiatry, the Journal of Clinical Psychiatry, and Psychological Medicine. More specialised journals like Schizophrenia Research and the Journal of Interpersonal Violence will also be considered.\nThe articles will be of interest to clinicians both nationally and internationally. This is due to the fact that population-based evidence in the published literature for the determinants of homicide risk in people diagnosed with serious mental illnesses is very thin on the ground. This universal rarity of outcome means that most published homicide reports consider individual cases or 'case series'; i.e. a series of individual cases. From such reports something can be learned about the characteristics of homicide perpetrators and their victims, but they are very limited because they do not inform policymakers about risk factors for homicide. The study that will enable the applicant to identify and quantify risk factors for homicide using the statistically efficient nested case-control study design. There are virtually no such published studies in the literature pertaining to homicide risk, and the hope is that the study will fill a major gap in current subject evidence.\nFurther, any findings on risk may inform national policies in schizophrenia care. The target for data collection is 31.03.2016 and publication will follow this. Any published data will be aggregated and anonymised data with small numbers suppressed in line with the HES analysis guide. No record level data will be published, made available to any third party, or used for any purpose other than that outlined within this application.\nTo date the data has been entered into an SPSS database ready for analysis. There has not been any output as yet as the sample is not yet of a large enough size to guarantee a satisfactory level of statistical power. The applicant has retained the original HES data as, due to the nature of historic data, they have had to re-match controls to cases. This is for various reasons and examples include:\n- a consultant code no longer being identifiable on the GMC website\n- a provider code no longer being identifiable due to a merge between providers\n- a patient not fulfilling the eligibility criteria to be included in the study (questionnaire data indicating that the patient did not have a diagnosis of schizophrenia; questionnaire indicating that the patient had previously perpetrated a homicide)\n- the consultant not being able to gain access to patient case notes due to them having being destroyed or unavailable.\nDue to the rare nature of homicide and the subsequent small sample size (sample size of approximately 150 cases) any increases to this amount can prove extremely valuable in achieving the desired outputs. To boost statistical power, and to enable the applicant to generate more precise relative risk estimates (to be derived as exposure odds ratios in the case-control design), the decision was taken to sample as many as 5 controls for achieve case. Typically, in a questionnaire-based case-control study, only 2 or 3 controls per case are sampled because of the amount of extra work required to collect data pertaining to the control subjects. With a projected sample size of n=150 cases and n=750 controls, it is anticipated that this will provide sufficient power (for most of the explanatory variables that the applicant will examine as potential risk factors. However, the more cases that can be provided to the applicant, they more they can ascertain and match to controls which will enrich the data and provide more detailed results.The estimated target date for these outputs is March 2017.\n\nExpected measurable benefits to health and/or social care including target date:\n\nThis study is a vitally important research project and a ground-breaking study of homicide. In order to understand risk factors associated with homicide perpetration in psychiatric patients, it is essential the applicant collect equivalent, complete, and high quality information on a random sample of controls who have not perpetrated homicide. The information on the control patients will enable the applicant to calculate relative risks and identify the factors that are associated with an elevated risk of homicide in patients with a diagnosis of schizophrenia.\nThis research will inform current practice to help clinicians working within NHS Trusts to identify which behaviors exhibited by their patients may indicate escalating violence risk. A knowledge of the characteristics exhibited prior to a homicide will enable clinicians to target these factors and use their powers under the Mental Health Act where necessary, ultimately reducing the number of homicides perpetrated by patients with schizophrenia.\nThe knowledge of the key areas of risk will also help to target mental health care and focus the budget upon the highest areas of concern."
+ }
+}

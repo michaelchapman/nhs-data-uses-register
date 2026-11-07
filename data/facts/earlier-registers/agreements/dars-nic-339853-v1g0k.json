@@ -1,0 +1,167 @@
+{
+ "base_reference": "DARS-NIC-339853-V1G0K",
+ "versions": [
+  {
+   "reference": "DARS-NIC-339853-V1G0K",
+   "version": "",
+   "organisation": "Monitor",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "objective": "5d4f742d1ee8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : SUS PbR A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes, PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR OP",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR APC Episodes, PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR OP",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR Readmissions",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR APC Episodes",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : SUS PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "5d4f742d1ee8": "Objective for processing: Under the Health & Social Care Act, Monitor is taking on new responsibilities. Monitor uses this data to fulfill its role under the Health and Social Care Act: • Licensing providers: Monitor will license providers of NHS services in England. • Regulating prices for NHS-funded care: Monitor will take on responsibility for pricing, working together with the NHS Commissioning Board. • Integrated care: Monitor will have a duty to consider how it can enable or facilitate the delivery of integrated care for patients where this would improve quality of care or improve efficiency. • Preventing anti-competitive behaviour: Under the Act Monitor's role will focus on making sure that any competition in the health sector is fair and that it operates in the best interests of patients. • Supporting the continuity of services: Monitor will support commissioners to ensure that patients could continue to access the care that they need if a healthcare provider fails. Access to detailed hospital activity information describing all aspects of healthcare over a number of years is essential for these functions to operate effectively, for example, assessing activity in a health economy to identify anti-competitive behaviours, by comparing referral rates or activity volumes, or considering how a failing Provider’s activity may be re-directed to other hospitals or services, or modelling new Tariffs according to life-years-of-care to investigate the effects of potential Tariff changes on the health economy, or to check, validate and analyse the national priced / PbR activity for a provider, looking at both the activity and price applied. Processing activities: Monitor uses the data for analysis across all our business Directorates. Data is accessed by authorised users in the business teams as data reports, aggregated summaries or within analysis tools. Data is processed through the development of SQL scripts to produce the required outputs and the development of SSIS packages to group data. Further processing is conducted in analytic and statistical applications using Tableau, STATA, Excel and SAS among others. Monitor needs to be able to share HES and SUS PbR data with NHS England for the purpose of developing the National Tariff. Sharing HES and SUS PbR data with NHS England will help facilitate the development of the national tariff for FY 2016/17 and subsequent years. Monitor will share HES and SUS PbR data that have gone through a cleansing process including impact assessments and these findings will be used to determine the financial effects of on the healthcare sector. Using this information Monitor and NHS England will also conduct their own impact assessments. The two sets of records are then used to determine and agree the National Tariff. NHS England is currently receiving these data under licensing arrangements direct from the HSCIC. Both Monitor and NHS England have been mandated to produce the National Tariff under the 2012 Act. In developing the tariff, HES, ODS, IMD, OPCS, ICD10, SUS PbR among others, will be analysed in combination with Casemix data supplied by HSCIC under DSA NIC-345510-Z5G7X. Monitor may outsource some of the work required in the analysing the data to subcontracted individuals who will be members of staff working with Monitor staff. Their working arrangements will be the same as employed staff. Furthermore they will be trained in Information Governance and will have to sign up to Data Protection/Confidentiality for both Monitor and their agents. Subcontracted individuals will have access to data internally and in accordance with strict governance principles. Specific outputs expected, including target date: Data at its most granular level (without identifiers and sensitive items) is needed because the data will need to be queried, aggregated and combined in many different ways to support the variety of business queries that each of the above functions will generate; requesting ad-hoc extracts / tabulations from the HSCIC for each specific case will be ineffective and hugely inefficient. Monitor will also use the data to produce bespoke analysis in direct support of its duties as outlined within the objectives above. Such analysis will be aggregate, with small numbers suppressed, or take the form of indicators. Monitor will make bespoke extracts available to it’s analytic staff in order to produce these analyses. Monitor will not supply record level data to any third party and will not disseminate data, or any subset of the data, to any third party not included in this agreement. The data will not form part of any tool, product or analytical output which is made available on a commercial basis. Outputs that do form part of its core functions are: • Reports on total tariff and activity by provider and commissioning body; • Referral patterns from GP practices to trusts; • Investigating the effects of potential tariff changes on the health economy: o Changes to marginal rates or to HRG definitions o Modelling variations of specialist top up definition, o Modelling life-years-of-care to, • Reporting activity by variable aggregations, the types of reports are: o Attended/ did not attend, o Consultant speciality, o Patient demographics, o Length of stay, o Geographic analysis to understand catchment areas and access to services, o Readmission rates, o Deriving ambulatory care sensitive condition flags, o Outpatient first attendance to follow up ratios. • The total national price quantum of a provider organisation; • The value of the nationally priced income for a particular service (if a Trust were to apply for a top-up to a nationally priced service under a local modification); • The types of activity the provider provides for its Local Health Economy; • The activity and Casemix by site; • Any non-compliance or enforcement issues as a result of the way activity has been treated or charged, in line with the 2014/15 National Tariff Payment System. Aggregated and summarised data as well as the results of the analysis will ultimately be made public. Monitor will only publish analytical anonymised data. Results of the analysis may be shared with colleagues at HSCIC, Department of Health and NHS England to inform future policy development. Monitor will not disseminate data, or any subset of the data, to any third party not included in this agreement. Monitor will hold the Intellectual Property Rights in the production of the National Tariff and any derivative works from it. Expected measurable benefits to health and/or social care including target date: Following the Francis Report into Mid Staffordshire Foundation Trust, Monitor is acutely aware of the need to use data much more effectively to fulfil its regulatory responsibilities, and will therefore use detailed record-level data in different combinations of indicators and metrics to form a better contextual view of Provider performance and delivery to ensure that organisations are meeting the terms of the license"
+ }
+}

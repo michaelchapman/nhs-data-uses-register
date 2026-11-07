@@ -33,6 +33,11 @@ From one edition of the register (~5,500 agreement versions):
 - **Files released over time** — agreements receiving files and files released
   each month, across the register and for each dataset, and a timeline of the
   months each agreement received files, drawn at build time without script.
+- **History from before the register** — NHS Digital's release registers from
+  July 2015 to June 2021 add earlier versions, their purpose and benefits text,
+  and when data was first released, to the agreements they name; the 629
+  agreements only they list get pages of their own. See
+  [manual-updates.md](docs/manual-updates.md#the-earlier-release-registers-2015-to-june-2021).
 
 Pages are plain semantic HTML with no cookies, analytics or third-party
 requests. Table filtering and sorting are progressive enhancements: every row is in the

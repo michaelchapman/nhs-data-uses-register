@@ -1,0 +1,346 @@
+{
+ "base_reference": "DARS-NIC-393510-D6H1D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-393510-D6H1D-v1.11",
+   "version": "1.11",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "8f7227e423a2",
+     "activities": "67acc33b581d",
+     "expected_output": "6b2ad43cbd2c",
+     "expected_benefits": "e20c458e336c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-393510-D6H1D-v2.2",
+   "version": "2.2",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01"
+     ],
+     "objective": "8f7227e423a2",
+     "activities": "67acc33b581d",
+     "expected_output": "6b2ad43cbd2c",
+     "expected_benefits": "e20c458e336c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-393510-D6H1D-v5.5",
+   "version": "5.5",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-03-01",
+    "2020-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "objective": "a9504193efee",
+     "activities": "12369da36339",
+     "expected_output": "7f48a75d819b",
+     "expected_benefits": "5196c246a8b3",
+     "yielded_benefits": "2ea519bb3957"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-03-01",
+      "2020-12-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-393510-D6H1D-v6.11",
+   "version": "6.11",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "Academic",
+   "listed": [
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "e2b053a3e3d5",
+     "activities": "c6afc2049f2b",
+     "expected_output": "97c5849d53e8",
+     "expected_benefits": "26bac39ca7a0",
+     "yielded_benefits": "712b99dc8aaf"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "12369da36339": "Only individuals, working under appropriate supervision on behalf of data controller/processor within this agreement, who are subject to the same policies, procedures and sanctions as substantive employees will have access to the data and only for the purposes described in this agreement.\n\nThe data will not be shared with third parties and only used within University College London. Data disseminated under this application can only be used for different purposes after those different purposes have been approved by NHS Digital under separate applications and a live DSA is in place.\n\nUCL have no requirement nor will attempt to re-identify the supplied data.\n\nNo data is transferred in to NHS Digital as part of this agreement.\n\nThe data requested will be kept in UCLs Data Safe Haven (IDHS). A file transfer mechanism enables information to be transferred into the Safe Haven simply and securely. \n\nIDHS uses Dual Factor Authentication to access and handle data transferred into the IDHS service. This ensures that only the named applicants will have access to the data from IDHS. Removing data from the Data Safe Haven is only allowed for the Principle Investigator. \n\nData processing steps:\nWhen the pseudonymised HES and civil registration deaths data extract is available from NHS Digital, a nominated researcher will download the data and immediately transfer it into the UCL data safe haven. Once in the data safe haven, researchers based at the Institute of Child Health and Farr Institute of Health Informatics London (the researchers are all substantive employees of UCL, apart from one PHD student) will be able to access the data in the safe haven. \nThe IDHS safe haven operates as a walled space and researchers are not able to connect to the internet or export data from it.\n\nThe research team will develop cohorts based on the data extract suitable to answer the research questions in the specified aims. Researchers will analyse the data on the UCL data safe haven. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "26bac39ca7a0": "The research carried out by UCL directly influences DHSC policy makers, service providers, healthcare professionals and the general public. This directly benefits the health of children and the healthcare provided to children in the here and now and this is key to reducing future burden on the NHS.\n\nThe measurable benefits to the health service will be in improving the understanding of longitudinal patterns of emergency health care use overall and which groups (e.g. with chronic conditions) are most at risk. The study will provide new knowledge about long-term outcomes across the child life course and into adulthood. \n\nSpecifically, 1) assessing the use of hospital service and relevant outcomes, including mortality before and after transition from paediatric to adult health care for young people with chronic conditions and mental health problems,\n2) assessing variation in readmission rates by hospital and determine to what extend this variation is due to case mix (based on the full longitudinal hospitalisation record), organisational factors or changes over time.\n3) comparing outcomes for vulnerable mothers (e.g. those with a past history of adversity-related injury admissions) and children.\n\nThe research will extend this type of preventive thinking to a range of population subgroups within the child and young adult age range. The benefits to the service will be in improving the understanding of longitudinal patterns of emergency health care use overall and which groups (e.g. with chronic conditions) are most at risk. The study will provide new knowledge about long-term outcomes across the child life course and into adulthood. The results may be used to inform NHS services through, for example, targeting of preventive care strategies, evaluation of the quality of care, and development of services and policy to support follow up of risk groups. UCL will also engage with NIHR Collaboration for Leadership in Applied Health Research and Care (CLAHRC) about implementation of the research into practical services within UCL Partners. \n \nUCL have a focus on vulnerable children and families, and use admission data, combined with their indicators for chronic conditions and antenatal information and birth characteristics to explore use of health services for vulnerable mothers and children. All papers are reviewed and commented on by DHSC and findings fed back to DHSC policy makers as well as more widely, for example, through presentations to young people groups (through the National Children’s Bureau), to the NHS (e.g. through CLAHRC), and through trusts to clinicians (e.g. through seminars and CPRU symposia involving patient groups, policy makers and clinicians).\n\nThe results may be used to inform NHS services through, for example, targeting of preventive care strategies or community health services during pregnancy to support vulnerable mothers and children, evaluation of the quality of care, and development of services and policy to support follow up of risk groups who can be recognised by hospital services (e.g. those with underlying chronic conditions, or indicators of adversity). \n\nAMENDMENT REQUEST\n\nThe researchers will build on existing measurable benefits by being able to compare outcomes for mothers with the ability to ascertain contact with mental health services.\n\nIt is also hoped that UCL will be able to establish risk factors for COVID19 infection in different groups of children, which UCL can produce through the linkage between HES, civil registration and birth notification data with Pillar 2 and SGSS datasets, will be extremely important information for parents who are considering whether to send their children back to school. UCL’s results will inform DHSC and RCPCH information campaigns for parents.\n\nAdditional benefits include:\n\nThe maternity services dataset and birth registration and notifications data \nUsing additional data recorded on birth registrations and notifications, and information collected from maternity services will allow UCL to improve the quality of the data, perform more nationally representative analyses and compare outcomes between regions. It will also allow UCL to assess the effects of risk factors such as maternal smoking and contact with antenatal services which currently cannot be taken into account in analyses. \n\nThe mental health services dataset (MHSD) \nThe MHSD will allow UCL to assess the longitudinal trajectories of children admitted for mental health-related problems such as adversity-related injuries in more details, as well as identify a wider group of children with chronic conditions. \n\nCommunity Services Dataset (CSDS) \nThe CSDS will hopefully allow UCL to determine variation in the use of community health services and how this is related to patient and area-level characteristics",
+  "2ea519bb3957": "Benefits from the data already received include:\n\nThe data has shown an increase in adversity-related injury rates (defined as self-inflicted or related to drug/alcohol use or violence) in teenagers in England. The increases may indicate an increasing problem, particularly in females and for intentional self-injury in males aged 15-19 years. UCL aim to extend this research to determine how early preventive interventions in community services (schools, family, and primary care) can affect presentations to hospital. \n\nResearch has also included work on mortality in vulnerable mothers with opioid use during pregnancy, which found that mothers with opioid use were 11 times more likely to die during the 10 years after childbirth.  UCL also explored time to next live birth for vulnerable mothers, finding that women with records indicating vulnerability, such as mental health problems, age <20 years or high parity (defined as the number of pregnancies reaching viable gestational age (including live births and stillbirths), will have a next child faster than the other women.   \n\nResults have been fed back to the Department of Health and will inform the next years of the CPRU programme.",
+  "5196c246a8b3": "The research carried out by UCL directly influences DoH policy makers, service providers, healthcare professionals and the general public. This directly benefits the health of children and the healthcare provided to children in the here and now and this is key to reducing future burden on the NHS.\n\nThe measurable benefits to the health service will be in improving the understanding of longitudinal patterns of emergency health care use overall and which groups (e.g. with chronic conditions) are most at risk. The study will provide new knowledge about long-term outcomes across the child life course and into adulthood. Specifically, \n1) assessing the use of hospital service and relevant outcomes, including mortality before and after transition from paediatric to adult health care for young people with chronic conditions, \n2) assessing variation in readmission rates by hospital and determine to what extend this variation is due to case mix (based on the full longitudinal hospitalisation record), organisational factors or changes over time. \n3) comparing outcomes for vulnerable mothers (e.g. those with a past history of adversity-related injury admissions) and children. \n\nThe research (using the new data) will extend this type of preventive thinking to a range of population subgroups within the child and young adult age range. The benefits to the service will be in improving the understanding of longitudinal patterns of emergency health care use overall and which groups (e.g. with chronic conditions) are most at risk. The study will provide new knowledge about long-term outcomes across the child life course and into adulthood. The results may be used to inform NHS services through, for example, targeting of preventive care strategies, evaluation of the quality of care, and development of services and policy to support follow up of risk groups. UCL will also engage with NIHR Collaboration for Leadership in Applied Health Research and Care (CLAHRC) about implementation of the research into practical services within UCL Partners. \n\nUCL have a focus on vulnerable children and families, and use admission data, combined with their indicators for chronic conditions and birth characteristics to explore use of health services for vulnerable mothers and children.  All papers are reviewed and commented on by DoH and findings fed back to DoH policy makers as well as more widely, for example, through presentations to young people groups (through the National Children’s Bureau), to the NHS (e.g. through CLAHRC), and through trusts to clinicians (e.g. through seminars and CPRU symposia involving patient groups, policy makers and clinicians).\n\nThe results may be used to inform NHS services through, for example, targeting of preventive care strategies during pregnancy to support vulnerable mothers and children, evaluation of the quality of care, and development of services and policy to support follow up of risk groups who can be recognised by hospital services (eg those with underlying chronic conditions, or indicators of adversity).\n\nRecently UCL’s research has been published in JAMA Pediatrics, showing a continued increase in adversity-related injury rates (defined as self-inflicted or related to drug/alcohol use or violence) in teenagers in England.",
+  "67acc33b581d": "Only individuals, working under appropriate supervision on behalf of data controller(s) / processor(s) within this agreement, who are subject to the same policies, procedures and sanctions as substantive employees will have access to the data and only for the purposes described in this agreement.\n\nONS mortality data will be processed according to the standard Office for National Statistics terms and conditions.\n\nThe data will not be shared with third parties or linked to any other datasets.\n\nUCL have no requirement nor will attempt to re-identify the supplied data.\n\nThe data requested will be kept in UCLs Data Safe Haven (IDHS). It has been certified to the ISO27001 information security standard and conforms to the NHS Information Governance Toolkit. A file transfer mechanism enables information to be transferred into the Safe Haven simply and securely. \n\nIDHS uses Dual Factor Authentication to access and handle data transferred into the IDHS service. This ensures that only the named applicants will have access to the data from IDHS. Removing data from the Data Safe Haven is only allowed for the PI. \n\nData flows\nWhen the data extract is available from NHS Digital, a nominated researcher will download the data and immediately transfer it into the UCL data safe haven. Once in the data safe haven, researchers based at the Institute of Child Health and Farr Institute of Health Informatics London (the researchers are all substantive employees of UCL apart from one PHD student) will be able to access the data in the safe haven. The IDHS safe haven operates as a walled space and researchers are not able to connect to the internet or export data from it. \n\nAll outputs will be in aggregate form only with small numbers suppressed in line with the HES analysis guide.",
+  "6b2ad43cbd2c": "The programme of research in this application informs policy and practice and all proposals and outputs are seen and approved by the Department of Health (DoH). Through UCLs Children’s Policy Research Unit (CPRU) there will be regular engagement with the DoH about the projects during development and outputs, and DoH will review outputs to give feedback. All analyses undertaken as part of this programme of research for the policy research unit aim to provide evidence to inform health care professionals, service providers, policy makers, and service users about children’s health and how services meet their needs.\n\nOther outputs include presentations to service providers through meetings with the RCPCH (Royal College of Paediatricians), the North London Collaborations for Leadership in Applied Research and Care (CLARHC) and through the academic health sciences network (AHSN).  The findings will also be presented to clinicians at clinical practice meetings including but not limited to the Royal College of Paediatrics and Child Health in 2017 and 2018. This engagement is occurring with the direct goal of changing practice in the health care field. \n\nThe findings will also be published in peer reviewed journals and policy briefings for the DoH. The projects in this application are expected to finish by December 2018. \n\nSpecifically, the research will inform DoH policy makers, service providers and practitioners about patient and service factors associated with emergency use of secondary care and long-term adverse outcomes through the child life course and into adulthood. The research programme will engage with DoH policy makers, practitioners and public during the research, to refine questions and applications of findings, and during the dissemination phase. In this way, UCL will ensure that the study is relevant to NHS systems and UCLwill endeavour to feedback results to the NHS. \n\nThe mechanisms for engagement and dissemination with NHS systems and the public are as follows: \n\na) UCL has well-established mechanisms for patient and public involvement through CPRU. This is facilitated by the National Children’s Bureau (NCB) Research Centre. \n\nb) The study is conducted as part of a programme of research for the Policy Research Unit (CPRU) for Children, Young People and Families, funded by the Department of Health Policy Research Programme. CPRU aims to improve the health of children, young people and families by undertaking research to provide evidence for health policy and practice. The CPRU program requires regular engagement with policy makers at the Department of Health. \n\nc) The project team at the Great Ormond Street Institute of Child Health contribute to the Academic Health Science Network at UCL Partners AHSN theme on Integrated children and young people’s programme which aims to implement research findings into practice. Engagement is also through the CLARHC, hosted by UCL Partners.\n\nThe papers resulting from these studies will be published in peer-reviewed journals (such as the Lancet, Archives of Disease in Childhood, PLoS Medicine, BMJ Open) and presented at scientific conferences (such as the, International Population Data Linkage Conference, International Society for the Prevention of Child Abuse and Neglect, Royal College of Paediatrics and Child Health annual conference, and Informatics for Health conference). UCL aim to present the work at scientific conferences during 2017 and use feedback provided at these meetings to write up papers to be submitted for publication in late 2017 and 2018.",
+  "712b99dc8aaf": "Benefits from the data already received include:\n\nUCL’s research has been published in the Journal of the American Medical Association (JAMA) Pediatrics, showing a continued increase in adversity-related injury rates (defined as self-inflicted or related to drug/alcohol use or violence) in teenagers in England. The increases may indicate an increasing problem, particularly in females and for intentional self-injury in males aged 15-19 years. UCL aim to extend this research to determine how early preventive interventions in community services (schools, family, and primary care) can affect presentations to hospital.\n\nAdditionally, UCL have had research on children in paediatric critical care accepted for publication in Archives of Diseases in Childhood, showing that the rate of paediatric admissions with indicators of high dependency care increased at a faster rate in hospitals without a dedicated PICU between 2008 and 2016. This finding raises questions about the availability of resources to meet growing demands in the treatment of children with complex long-term conditions. \n\nThis research work has also been presented at several conferences with papers submitted for publication. This includes work on mortality in vulnerable mothers with opioid use during pregnancy, which found that mothers with opioid use were 11 times more likely to die during the 10 years after childbirth. UCL also explored time to next live birth for vulnerable mothers, finding that women with records indicating vulnerability, such as mental health problems, age <20 years or high parity (defined as the number of pregnancies reaching viable gestational age (including live births and stillbirths), will have a next child faster than the other women. Additionally, UCL presented work on cumulative exposure to child maltreatment or neglect for children in their first five years of life as recorded in hospital records.\n\nThese results have been fed back to the Department of Health and will inform the next years of the CPRU programme.",
+  "7f48a75d819b": "The programme of research in this application informs policy and practice and all proposals and outputs are seen and approved by the Department of Health (DoH). Through UCL's Children and Families Policy Research Unit (CPRU) there will be regular engagement with the DoH about the projects during development and outputs, and DoH will review outputs to give feedback. All analyses undertaken as part of this programme of research for the policy research unit aim to provide evidence to inform health care professionals, service providers, policy makers, and service users about children’s health and how services meet their needs.\n\nOther outputs include presentations to service providers through meetings with the RCPCH (Royal College of Paediatricians and Child Health), the North London Collaborations for Leadership in Applied Research and Care (CLAHRC) and through the academic health sciences network (AHSN).  The findings will also be presented to clinicians at clinical practice meetings including but not limited to the Royal College of Paediatrics and Child Health in 2019 and 2020. This engagement is occurring with the direct goal of changing practice in the health care field. \n\nThe findings will also be published in peer reviewed journals and policy briefings for the DoH. The projects in this application are expected to finish by early 2022. \n\nSpecifically, the research will inform DoH policy makers, service providers and practitioners about patient and service factors associated with emergency use of secondary care and long-term adverse outcomes through the child life course and into adulthood. The research programme will engage with DoH policy makers, practitioners and public during the research, to refine questions and applications of findings, and during the dissemination phase. In this way, UCL will ensure that the study is relevant to NHS systems and UCL will endeavour to feedback results to the NHS. \n\nThe mechanisms for engagement and dissemination with NHS systems and the public are as follows: \n\na) UCL has well-established mechanisms for patient and public involvement through CPRU. This is facilitated by the National Children’s Bureau (NCB) Research Centre. \n\nb) The study is conducted as part of a programme of research for the Children and Families Policy Research Unit (CPRU), funded by the Department of Health Policy Research Programme. CPRU aims to improve the health of children, young people and families by undertaking research to provide evidence for health policy and practice. The CPRU program requires regular engagement with policy makers at the Department of Health. \n\nc) The project team at the Great Ormond Street Institute of Child Health contribute to the Academic Health Science Network at UCL Partners AHSN theme on Integrated children and young people’s programme which aims to implement research findings into practice. Engagement is also through the CLAHRC, hosted by UCL Partners.\n\nThe papers resulting from these studies will be published in peer-reviewed journals (such as the Lancet, Archives of Disease in Childhood, PLoS Medicine, BMJ Open) and presented at scientific conferences (such as the, International Population Data Linkage Conference, International Society for the Prevention of Child Abuse and Neglect, Royal College of Paediatrics and Child Health annual conference, and Informatics for Health conference). UCL aim to present the work at scientific conferences and use feedback provided at these meetings to write up papers to be submitted for publication between 2020 - 2022.\n\nAll outputs will be in aggregate form only with small numbers suppressed in line with the HES analysis guide.",
+  "8f7227e423a2": "The data is requested for a programme of research within the healthcare provision theme of the Policy Research Unit for Children, Young People and Families, within University College London (UCL) funded by the Department of Health (DoH). The objectives of the research are: \n\na) To determine variation in use of secondary care services by children and young people over time and their transition to adult services. UCL will analyse variation by patient characteristics (e.g. age, gender, GP registration), and by area/unit level area characteristics such as trust, practice characteristics such as QOF scores, and area indicators for deprivation. \n\nb) To determine risk factors for emergency use of secondary care and risk factors for recurrent use (e.g. according to individual patient characteristics such as age, chronic conditions, deprivation, sex), past use (e.g. frequency and type of past contact such as A&E or admissions). UCL will also examine NHS trust and area factors associated with secondary care use. Where possible, UCL will use birth cohort analyses, based on postnatal admissions of children linked to maternity to maternal risk factors (e.g.: maternal age) and birth factors (e.g.: birth weight, prolonged stay in neonatal intensive care), to investigate associations with risk of emergency use of secondary care and other outcomes, including mortality. \n\nc) UCL will conduct prognostic analyses for children and young people based on diagnosis and procedure codes to identify risk factors for emergency hospital care and for subsequent long-term adverse outcomes into adulthood (e.g.: further emergency admissions or death). \n\nd) UCL would also like to request all ONS death records for deaths registered in England from 1st January 1998 until as late as possible, for all persons who died aged 0-55; in other words, both records that link to HES as well as those that do not link to HES. UCL need all deaths in order to assess the degree of misclassification of outcome (alive/dead) due to linkage errors between ONS and HES datasets. It is crucial that UCL get the age at death on the ONS records in order to do this. Full dates of death is required to be able to estimate age of death in days for the work on infant mortality (for instance, to be able to distinguish between first week from later neonatal deaths and from postneonatal deaths), as well as for the work on cause specific mortality where UCL classify deaths based on admissions within a certain number of days from death. Additionally, having date of death available enables UCL to determine delay in death registration for data validation.\n\nWhat will be done with the data? \nUCL will use longitudinal HES data, linked to ONS death records, to construct cohorts for a number of patient subgroups defined by age, sex, and clinical characteristics, to address the questions above. All analyses will be done within the safe haven. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "97c5849d53e8": "Through UCL's Children and Families Policy Research Unit (CPRU) there will be regular engagement with the Department of Health and Social Care (DHSC) about the CPRU projects during development and outputs, and DoH will review outputs to give feedback. All analyses undertaken as part of this programme of research for the policy research unit aim to provide evidence to inform health care professionals, service providers, policy makers, and service users about children’s health and how services meet their needs.\n\nOther outputs include presentations to service providers through meetings with the RCPCH (Royal College of Paediatricians and Child Health), the North London Collaborations for Leadership in Applied Research and Care (CLAHRC), and through the Academic Health Sciences Network (AHSN). Updates will also be provided to the Parliamentary Office of Science and Technology. The findings will also be presented to clinicians at clinical practice meetings including but not limited to the Royal College of Paediatrics and Child Health in April/May 2021-2022. This engagement is occurring with the direct goal of changing practice in the health care field.\n\nThe findings will also be published in peer reviewed journals (for details see end of section 5c) and policy briefings for the DHSC. The projects in this application are expected to finish by early 2023.\n\nSpecifically, the research will inform DHSC policy makers, service providers and practitioners about patient and service factors associated with emergency use of secondary care and long-term adverse outcomes through the child life course and into adulthood.  The research programme will engage with DHSC policy makers, practitioners and public during the research, to refine questions and applications of findings, and during the dissemination phase. In this way, UCL will ensure that the study is relevant to NHS systems and UCL will endeavour to feedback results to the NHS.\n\nThe mechanisms for engagement and dissemination with NHS systems and the public are as follows:\n\na) UCL has well-established mechanisms for patient and public involvement. This is facilitated by the National Children’s Bureau (NCB) Research Centre and other networks.\n\nb) The study is conducted as part of a programme of research for the Children and Families Policy Research Unit (CPRU), funded by the Department of Health Policy Research Programme. CPRU aims to improve the health of children, young people and families by undertaking research to provide evidence for health policy and practice. The CPRU program requires regular engagement with policy makers at the Department of Health.\n\nc) The project team at the Great Ormond Street Institute of Child Health contribute to the Academic Health Science Network at UCL Partners AHSN theme on Integrated children and young people’s programme, which aims to implement research findings into practice. Engagement is also through the CLAHRC, hosted by UCL Partners.\n\nThe papers resulting from these studies will be published in peer-reviewed journals (such as the Lancet, Archives of Disease in Childhood, PLoS Medicine, BMJ Open, Clinical Infectious Diseases and Eurosurveillance) and presented at scientific conferences (such as the, International Population Data Linkage Conference, International Society for the Prevention of Child Abuse and Neglect, Royal College of Paediatrics and Child Health annual conference, European Society for Paediatric Infectious Diseases Annual Scientific Meeting, and Informatics for Health conference). UCL aim to present the work at scientific conferences and use feedback provided at these meetings to write up papers to be submitted for publication between 2020 - 2023.\n\nAll outputs will be in aggregate form only with small numbers suppressed in line with the HES analysis guide.\n\nUCL have discussed the research objectives with parents of children with learning disability and complex needs from the Great Ormond Street Hospital Biomedical Research Centre Parents and Carers’ Group (PCAG) in Nov 2019. PCAG have advised UCL to focus on the transition from paediatric to adult care, as this is a time when co-ordination of care often breaks down. Following these discussions, UCL have revised their research questions and carried out a study looking at changes in hospital admission rates during transition.  UCL shared their findings with the group in Dec 2020 (online) and one parent joined the team as a research advisor (and will be co-author on the paper).\n\nIn November 2019 UCL discussed using linked administrative health data, such as HES data, for child health research with the parent advisory group of the National Children’s Bureau. \n\nUCL have also done continued work with the National Children’s Bureau Young Research Advisors group. UCL have previously presented some of their research findings to them, and they helped UCL translate their findings into short animated videos, accessible for children and young people.",
+  "a9504193efee": "The data is requested for a programme of research within the healthcare provision theme of the Policy Research Unit for Children, Young People and Families (CPRU), within University College London (UCL) funded by the Department of Health (DoH). \n\nCPRU is one of 15 NIHR Policy Research Units formed to undertake research to inform decision-making by government and arms-length bodies. CPRU works closely with the Department of Health and Social Care to determine priorities and provide evidence directly to the Secretary of State for Health, government departments and arms-length bodies, such as NHS England and Public Health England. The prime contract for CPRU is between UCL and the Secretary of State, as such all research projects are agreed with DHSC before commencement. \n\nThe legal basis for processing personal data for this purpose data at UCL falls under Article 6(1)(e) of the General Data Protection Regulations (GDPR), i.e. “a task carried out in the public interest”. It also falls under Article 9(2)(j), “processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes”.  It is in the public interest because the research influences DoH policy makers, service providers, healthcare professionals and the general public. This directly benefits the health of children and the healthcare provided to children in the here and now and this is key to reducing future burden on the NHS.\n\nFor this programme of research, UCL are the sole Data Controller who also process data. \n\nThe objectives of the research are: \n\na) To determine variation in use of secondary care services by children and young people over time and their transition to adult services. UCL will analyse variation by patient characteristics (e.g. age, gender, GP registration), and by area/unit level area characteristics such as trust, practice characteristics such as Quality Outcomes Framework (QOF) scores, and area indicators for deprivation. \n\nb) To determine risk factors for emergency use of secondary care and risk factors for recurrent use (e.g. according to individual patient characteristics such as age, chronic conditions, deprivation, sex), past use (e.g. frequency and type of past contact such as A&E or admissions). UCL will also examine NHS trust and area factors associated with secondary care use. Where possible, UCL will use birth cohort analyses, based on postnatal admissions of children linked to maternity to maternal risk factors (e.g.: maternal age) and birth factors (e.g.: birth weight, prolonged stay in neonatal intensive care), to investigate associations with risk of emergency use of secondary care and other outcomes, including mortality. \n\nc) UCL will conduct prognostic analyses for children and young people based on diagnosis and procedure codes to identify risk factors for emergency hospital care and for subsequent long-term adverse outcomes into adulthood (e.g.: further emergency admissions or death). \n\nd) UCL would also like to request all mortality records for deaths registered in England from 1st January 1998 until as late as possible, for all persons who died aged 0-55; in other words, both records that link to HES as well as those that do not link to HES. UCL need all deaths in order to assess the degree of misclassification of outcome (alive/dead) due to linkage errors between mortality and HES datasets. It is crucial that UCL get the age at death on the mortality records in order to do this. Full dates of death is required to be able to estimate age of death in days for the work on infant mortality (for instance, to be able to distinguish between first week from later neonatal deaths and from postneonatal deaths), as well as for the work on cause specific mortality where UCL classify deaths based on admissions within a certain number of days from death. Additionally, having date of death available enables UCL to determine delay in death registration for data validation.\n\nWhat will be done with the data? \nUCL will use the requested longitudinal HES data, linked to mortality records, to construct cohorts for a number of patient subgroups defined by age, sex, and clinical characteristics, to achieve the aims identified above. Using these cohorts, UCL will follow patients over time to assess whether they experience the outcomes of interest, and whether these vary in the different subgroups.  All analyses will be done within the safe haven. \n\nThe data disseminated under this agreement is for hospital activity in England only.  This may include Scottish or Welsh residents data if they have accessed an English hospital.",
+  "c6afc2049f2b": "Only individuals, working under appropriate supervision on behalf of data controller/processor within this agreement, who are subject to the same policies, procedures and sanctions as substantive employees will have access to the data and only for the purposes described in this agreement.\n\nThe data will not be shared with third parties and only used within University College London. Data disseminated under this application will also be used to assist with other studies within UCL, which will have all been approved by NHS Digital under separate applications and a live Data Sharing Agreement will be in place.\n\nUCL have no requirement nor will attempt to re-identify the supplied data.\n\nNo data is transferred in to NHS Digital as part of this agreement.\n\nThe data requested will be kept in UCLs Data Safe Haven (DSH). A file transfer mechanism enables information to be transferred into the Safe Haven simply and securely.\n\nThe UCL DSH uses Dual Factor Authentication to access and handle data transferred into the DSH service. This ensures that only the named applicants will have access to the data from DSH. Removing data from the Data Safe Haven is only allowed for the Principle Investigator.\n\nData processing steps:\nWhen the pseudonymised data extract is available from NHS Digital, a nominated researcher will download the data and immediately transfer it into the UCL data safe haven. Once in the data safe haven, researchers based at the Institute of Child Health and Institute of Health Informatics London (the researchers are all substantive employees of UCL or PhD students) will be able to access the data in the safe haven. The data safe haven operates as a walled space and researchers are not able to connect to the internet or export data from it. \n\nUCL will link all datasets to one another using the HES-IDs. Linkage between datasets will allow research on the full patient trajectory and the interface between different services.  \n\nAll those involved in the processing of the data are substantive employees of UCL, or students on UCL MSc and doctorate courses under the supervision of UCL substantive employees.  The work undertaken by the students is only for the purpose stated in this Purpose section.\n\nAll UCL students are expected to undertake annual training on handling highly confidential information. All Trainees and students register for and complete NHS Digital’s Data Security Awareness (NHSD) course provided by e-Learning for Health. The course covers data security awareness, the law, threats to data security, breaches and incidents, and the General Data Protection Regulation. \n\nAll students working on this study are students from UCL. All students working on the study will undertake the NHS Digital’s Data Security Awareness course provided by e-Learning for Health. UCL has a specific data protection and information security policy, which applies to all staff and students when processing personal data on behalf of UCL. All UCL students working on the study are bound by this policy, and that they will face potential sanctions in the event of a breach of the policy.\n\nAll students sign up to the UCL's Academic Manual. The Student Academic Misconduct section of the 2019-2020 manual Section 9.1, item 3 states \"All instances of Research Misconduct whether by taught students, research students or members of staff will be investigated under UCL’s Procedure for Investigating and Resolving Allegations of Misconduct in Academic Research\".’\n\nThe research team will develop cohorts based on the data extract suitable to answer the research questions in the specified aims. Researchers will analyse the data on the UCL data safe haven. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to the data). \n\nAMENDMENT REQUEST\n\nThe new data requested will undergo the same data processing as the data already held as outlined.",
+  "e20c458e336c": "The research carried out by UCL directly influences DoH policy makers, service providers, healthcare professionals and the general public. This directly benefits the health of children and the healthcare provided to children in the here and now and this is key to reducing future burden on the NHS.\n\nBenefits from the data already received include:\n\nFor example, UCLs  research recently published in The Lancet, showed similarly increased risks of death over the 10 years after hospital discharge for adolescents hospitalised for self-harm as for those hospitalised for drug or alcohol misuse or violence. The results have led to recommendations for similar psychosocial interventions to be considered for both groups, not just those admitted for self-harm and to include preventive strategies for drug and alcohol misuse, which accounts for just as many deaths in the 10 years after hospital discharge as does suicide. UCLs research will extend this type of preventive thinking to a range of population subgroups within the child and young adult age range and allow follow up to determine long-term, and potentially preventable outcomes. \n\nAdditionally, UCLs research on readmissions has shown that for children and young people these occur predominantly in patients with underlying long-term conditions. When looking specifically at 30-day readmissions (emergency readmissions within 30 days of a previous discharge, which are subject to the readmission rule) UCL found that about half of readmissions were for a problem different from the reason for the first emergency admission. This further suggests that readmissions in children and young people are due to complexity of cases rather than hospital failings, and urge a review of the current policy of not reimbursing hospitals for care provided for 30-day readmissions. UCL have also shown that chronic conditions underlie the sharp increase in admissions across the transition from paediatric to adult services which has important implications for specialist care.  \n\nThe measurable benefits to the health service will be in improving the understanding of longitudinal patterns of emergency health care use overall and which groups (e.g. with chronic conditions) are most at risk. The study will provide new knowledge about long-term outcomes across the child life course and into adulthood. Specifically, \n1) assessing the use of hospital service and relevant outcomes, including mortality before and after transition from paediatric to adult health care for young people with chronic conditions, \n2) assessing variation in readmission rates by hospital and determine to what extend this variation is due to case mix (based on the full longitudinal hospitalisation record), organisational factors or changes over time. \n3) comparing outcomes for vulnerable mothers (e.g. those with a past history of adversity-related injury admissions) and children. \n\nThe research (using the new data) will extend this type of preventive thinking to a range of population subgroups within the child and young adult age range. The benefits to the service will be in improving the understanding of longitudinal patterns of emergency health care use overall and which groups (e.g. with chronic conditions) are most at risk. The study will provide new knowledge about long-term outcomes across the child life course and into adulthood. The results may be used to inform NHS services through, for example, targeting of preventive care strategies, evaluation of the quality of care, and development of services and policy to support follow up of risk groups. UCL will also engage with CLARHC about implementation of the research into practical services within UCL Partners. \n\nFinally, UCL have a focus on vulnerable children and families, and use admission data, combined with their indicators for chronic conditions and birth characteristics to explore use of health services for vulnerable mothers and children.  All papers are reviewed and commented on by DoH and findings fed back to DoH policy makers as well as more widely, for example, through presentations to young people groups (through the National Children’s Bureau), to the NHS (e.g. through the Child and YoCLARHC), and through trusts to clinicians (e.g. through seminars and CPRU symposia involving patient groups, policy makers and clinicians).\n\nThe results may be used to inform NHS services through, for example, targeting of preventive care strategies during pregnancy to support vulnerable mothers and children, evaluation of the quality of care, and development of services and policy to support follow up of risk groups who can be recognised by hospital services (eg those with underlying chronic conditions, or indicators of adversity).\n\nAll of the CPRU current and past research can be found on the CPRU website (https://www.ucl.ac.uk/cpru).",
+  "e2b053a3e3d5": "The data is requested for a programme of research relevant to the aims of the of the National Institute of Health Research Children and Families Policy Research Unit (CPRU), within University College London (UCL). \n\nCPRU is one of 15 NIHR Policy Research Units formed to undertake research to inform decision-making by government and arms-length bodies. CPRU works closely with the Department of Health and Social Care to determine priorities and provide evidence directly to the Secretary of State for Health, government departments and arms-length bodies, such as NHS England and Public Health England. \n\nThe legal basis for processing personal data for this purpose data at UCL falls under Article 6(1)(e) of the General Data Protection Regulations (GDPR), i.e. “a task carried out in the public interest”. It also falls under Article 9(2)(j), “processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes”.\n\nIt is in the public interest because the research influences Department of Health policy makers, service providers, healthcare professionals and the general public. This directly benefits the health of children and the healthcare provided to children in the here and now and this is key to reducing future burden on the NHS.\n\nFor this programme of research, UCL are the sole Data Controller who also process data.\n\nThe objectives of the research are:\n\na) To determine variation in use of secondary care services by children and young people over time and their transition to adult services. UCL will analyse variation by patient characteristics (e.g. age, gender, General Practice (GP) registration), and by area/unit level area characteristics such as trust, practice characteristics such as Quality Outcomes Framework (QOF) scores, and area indicators for deprivation.\n\nb) To determine risk factors for emergency use of secondary care and risk factors for recurrent use (e.g. according to individual patient characteristics such as age, chronic and mental health conditions, deprivation, sex), past use (e.g. frequency and type of past contact such as Accident & Emergency (A&E), community health services, or admissions). UCL will also examine NHS trust and area factors associated with secondary care use. Where possible, UCL will use birth cohort analyses, based on postnatal admissions of children linked to maternity to maternal risk factors (e.g.: maternal age and mental health problems, engagement with community health services) and birth factors (e.g.: birth weight, prolonged stay in neonatal intensive care), to investigate associations with risk of emergency use of secondary care and other outcomes, including mortality. These analyses require the linkage to birth notification an birth registration data to ensure complete recording of key risk factors including birth weight and gestational age (see further detail below) .\n\nc) UCL will conduct prognostic analyses for children and young people based on diagnosis and procedure codes to identify risk factors for emergency hospital care and for subsequent long-term adverse outcomes into adulthood (e.g.: further emergency admissions or death).\n\nd) UCL would also like to request all mortality records for deaths registered in England from 1st January 1998 until as late as possible, for all persons who died aged 0-55; in other words, both records that link to Hospital Episode Statistics (HES) as well as those that do not link to HES. UCL need all deaths in order to assess the degree of misclassification of outcome (alive/dead) due to linkage errors between mortality and HES datasets. It is crucial that UCL get the age at death on the mortality records in order to do this. Full dates of death is required to be able to estimate age of death in days for the work on infant mortality (for instance, to be able to distinguish between first week from later neonatal deaths and from postneonatal deaths), as well as for the work on cause specific mortality where UCL classify deaths based on admissions within a certain number of days from death. \n\nAdditionally, having date of death available enables UCL to determine delay in death registration for data validation.\n\nAlong with the outcomes for children and young people, UCL wish to examine health of their mothers.  UCL are required to fully understand the health outcomes for children and young people and to do this, it is also important to look at the health of the mothers.  UCL request data for people up to age 56 years in order to capture the health of all mothers before and after the time of giving birth.  Up to age 56 has been chosen as it is believed the most likely upper age limit for a mother giving birth will be around aged 50 and this will allow 5 years follow up.  It is not possible to minimise the data to women only due to technical capabilities and the potential for confusion within the data.\n\nAMENDMENT REQUEST\nIn this amendment, UCL are requesting additional access to the Community Services Dataset, Maternity Services Dataset, Mental Health Services Dataset (and predecessors), civil registrations (birth registrations), birth notifications, COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2) and Public Health England Second Generation Surveillance System (SGSS) data to build upon the existing work and aims of the research project. \n\nThese additional datasets are being requested to build on UCLs existing programme of work. The objectives of the work of CPRU UCL will remain the same, but the additional datasets will allow UCL to explore healthcare service use in more detail, including healthcare that occurs in the community, antenatal service use and engagement with mental health services. Additionally, this will allow for broader and more inclusive definitions of long-term conditions and vulnerability in children and young people. Additionally, as a response to the COVID19 crisis, UCL have added an objective to examine the risk of confirmed COVID19 infection according to demographic, clinical and ethnic risk groups in children. \n\nThis additional objective is as follows:\n\nUCL will estimate the risk of confirmed COVID19 infection in children according to factors including age, gender, shielding status (of the children and young people), prematurity and ethnic group. UCL will also examine the impact of physical distancing measures and school closures on the epidemiology of other respiratory infections (as available in SGSS). This requires linkage to Public Health England SGSS data and COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2) data on COVID19 test results as well as test results. UCL are requesting dates of sample collection, date of test, virus tested for, and test results for all children and young people aged <25 years old to be linked to the other requested datasets for the period January 2020 to the latest date available.\n\nUCL will use ICD-10 codes from previous hospital contacts within HES to identify children and young people who are likely to be on the shielding list.  As some of the research objectives centre around children with long-term conditions, UCL will use shielding status to identify those within that group at increased risk of covid-19 infection\n\nThe maternity services dataset and birth registration and notifications data will allow UCL to use data that are more complete in compared to UCL’s existing birth cohort studies as outlined under objective b.  As shown in research UCL published using just HES data alone, 1 in 3 hospitals have poor recording of delivery data, including variables that are vital risk factors for epidemiological studies such as gestational age and birth weight. \n\nThe mental health services dataset (MHSD) will allow UCL to assess mental health conditions in children more comprehensively. In current analyses, UCL have included mental health conditions as part of the chronic conditions for objectives b and c. However, the majority of care for children with mental health conditions happens outside of hospital, meaning it is only possible to pick up the most severe case using only HES inpatient diagnostic codes. \n\nUCL request the community services dataset (CSDS) to assess a wider range of risk factors for adverse outcomes in children, as defined under objective c. The CSDS will allow UCL to add important information such as vaccination uptake and health visiting. \n\nUCL request results from COVID19 tests from the COVID-19 UK Non-hospital Antigen Testing Results (Pillar 2) (covering the NHS test, trace isolate programme and performed by commercial partners) and results from tests for COVID19 and other respiratory viral infections from the SGSS datasets. This will allow UCL to examine risk factors for confirmed COVID19 infection in children according to key risk factors including ethnic group, age, clinical risk group and sex."
+ }
+}

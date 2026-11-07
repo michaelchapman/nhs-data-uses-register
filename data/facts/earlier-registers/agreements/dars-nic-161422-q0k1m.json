@@ -1,0 +1,418 @@
+{
+ "base_reference": "DARS-NIC-161422-Q0K1M",
+ "versions": [
+  {
+   "reference": "DARS-NIC-161422-Q0K1M-v0.9",
+   "version": "0.9",
+   "organisation": "Royal Liverpool University Hospital",
+   "organisation_type": "",
+   "listed": [
+    "2018-05-25",
+    "2018-10-01",
+    "2019-02-01",
+    "2019-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-02-01",
+      "2019-07-01"
+     ],
+     "objective": "f5e0ba048ff3",
+     "activities": "a1f6a18fa5bb",
+     "expected_output": "ca9c86a85078",
+     "expected_benefits": "ce8b2e346161"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01",
+      "2019-02-01",
+      "2019-07-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-02-01",
+      "2019-07-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-02-01",
+      "2019-07-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-161422-Q0K1M-v2.2",
+   "version": "2.2",
+   "organisation": "Royal Liverpool University Hospital",
+   "organisation_type": "Hospital",
+   "listed": [
+    "2019-11-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-11-01"
+     ],
+     "objective": "4e68db6b73a2",
+     "activities": "b9cc2b060798",
+     "expected_output": "6a960b3f4ecd",
+     "expected_benefits": "31e81a75e0da",
+     "yielded_benefits": "8d77a8e2219e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 5
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-161422-Q0K1M-v3.2",
+   "version": "3.2",
+   "organisation": "Royal Liverpool University Hospital",
+   "organisation_type": "Hospital",
+   "listed": [
+    "2019-12-01",
+    "2020-02-01",
+    "2020-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-12-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "objective": "4e68db6b73a2",
+     "activities": "b9cc2b060798",
+     "expected_output": "6a960b3f4ecd",
+     "expected_benefits": "31e81a75e0da",
+     "yielded_benefits": "8d77a8e2219e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-02-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-161422-Q0K1M-v4.3",
+   "version": "4.3",
+   "organisation": "Royal Liverpool University Hospital",
+   "organisation_type": "Hospital",
+   "listed": [
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01",
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "28b031a37da2",
+     "activities": "52aa7d18737e",
+     "expected_output": "4033426d617d",
+     "expected_benefits": "c2f0d03d1c99",
+     "yielded_benefits": "481c240d9353"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 23
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-12-01",
+      "2021-01-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-01-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-01-01",
+      "2021-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-01-01",
+      "2021-06-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-06-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-01-01",
+      "2021-06-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-06-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "28b031a37da2": "The Liverpool University Hospitals NHS Foundation Trust and the University of Liverpool require Hospital Episodes Statistics (HES), Diagnostic Imaging Dataset (DID) and HES/Civil Registry linked mortality data for use in a study titled “A Risk-adjusted and Anatomically Stratified Cohort Comparison Study of Open Surgery, Endovascular Techniques and Medical Management for Juxtarenal Aortic Aneurysms: The UK COMPlex AneurySm Study (UK-COMPASS).” The UK-COMPASS project is being funded by the National Institute for Health Research - Health Technology Assessment (NIHR-HTA). The Chief Investigator of the NIHR-HTA funded UK-COMPASS project is a consultant surgeon substantively employed by The Liverpool University Hospitals NHS Foundation Trust.\n\nThe Liverpool University Hospitals NHS Foundation Trust and the University of Liverpool are joint data controllers, and also process the data for the purposes described in this agreement.\n\nThe roles of organisations involved currently or previously with this research are as follows:\no Only individuals from The Liverpool University Hospitals NHS Foundation Trust and the University of Liverpool make decisions in respect of how and why the data are processed.\no Individuals from various external organisations who are named as co-investigators in the study Protocol v3 have, at the request of The Liverpool University Hospitals NHS Foundation Trust, contributed to the design of the study by providing advice on aspects of the methodology given they have relevant subject matter expertise as statisticians. \no The University of Liverpool and the Liverpool University Hospital NHS Foundation Trust are not obliged to undertake any processing recommended by these individuals but will act on their advice given their subject matter expertise.\no The Trial Steering Committee (TSC) consists of independent and non-independent members. The TSC Chair reports back to the funder, the NIHR.\no The Trial Steering Committee performs an advisory function to the The Liverpool University Hospitals NHS Foundation Trust for the purpose of this study and is not responsible for determining how or why the NHS Digital data are processed. \n\nThe lawful basis of processing this data is in accordance with General Data Protection Regulation point 6(1)e (‘public task’), whereby processing is necessary for the performance of a task in the public interest: the data being processed is inclusive of the entire population undergoing complex aneurysm repair over a specified inclusion period. Conclusions drawn from the analysis of this processed data will benefit future populations through potential adjustment in national treatment strategies to improve survival.  The processing of special category data under this data application (specifically with regards to health data) is also covered by GDPR Article 9(2)(j) as it is being performed for research purposes, the legal basis being further supported by Section 2 of Part 1 of Schedule 1 of the DPA 2018.\n\nThe aim of the study is to answer the question identified by NIHR-HTA Commissioning Board: What are the clinical and cost-effectiveness of strategies for the management of juxtarenal abdominal aortic aneurysm, including fenestrated endovascular repair?\n\nAbdominal aortic aneurysm (AAA) is a common condition where the aorta, the largest artery, begins to bulge abnormally. Usually this expands over years and can eventually burst, causing fatal internal bleeding. When an emergency life-saving operation is possible, they have a high failure rate. A planned AAA repair operation prevents a burst aneurysm. \n\nAAAs vary in complexity. Juxtarenal AAAs are more complex because they are close to the arteries that supply the kidneys. There are different methods of managing such complex aneurysms and doctors are unsure which is better. The open surgical repair is a durable but large operation involving slow recovery and higher operative death rates compared to alternative methods, of which Fenestrated Endovascular Aneurysm Repair (FEVAR) is the most established. In some patients with juxtarenal aneurysms, doctors are judiciously using standard endovascular repair (Off-label EVAR), a technique originally intended for use in less complex aneurysms. Endovascular methods cause less of a strain leading to faster recovery and fewer operative deaths but are less durable requiring further procedures in the years after.\n\nSome patients who are not fit enough to withstand open repair may be able to have endovascular repairs. In some patients no operation may be in their best interest. This study aims to examine how these different treatments compare in terms of clinical benefit and utilisation of NHS resources.\n\nThe study intends to analyse the outcomes of all patients aged 25 - 100 years, who had undergone juxtarenal aneurysm treatment in England between November 2017 and October 2019 by assessing 5 years of follow-up data. This study is non-interventional.\n\nThis Agreement permits the UK COMPASS team to receive HES and DIDS data including the NHS number and date of birth of all patients undergoing AAA repair in England over a 2 year period between Nov 2017 and October 2019.\n\nThe study relies on linkage with a dataset from the National Vascular Registry (NVR), a national clinical audit commissioned by the Health Quality Improvement Partnership (HQIP).   Now that a separate Data Sharing Agreement has been secured with HQIP to share NVR data, further data from NHS Digital is requested under this Agreement to allow the study to achieve its previously described aims. In order to facilitate linkage to NVR data, NHS Digital will act as a data processor on behalf of the data controllers to receive and link NVR data. \n\nIt was previously requested that NHS Digital provide HES Accident and Emergency/Emergency Care Data Set, Admitted Patient Care, Outpatients and Critical Care episodes data every 6 months to cover 5 years of follow up for each patient identified from the initial cohort 1st November 2017/18 to 31st October 2019. Under this Agreement the Liverpool University Hospital NHS Foundation Trusts requests access to mortality data and DIDS data for the same cohort of patients during follow up. This is crucial in being able to address the primary research question of comparing clinical effectiveness between different treatment options.\n\nThe UK COMPASS team plan to examine patients’ scans and utilise data that is routinely collected by the NHS. The HES A&E/ECDS, Critical Care, APC and OP data sets will allow researchers to capture the entire patient journey from pre-operative imaging to treatment, in-patient care and subsequent follow up. \n\nThe UK-COMPASS team requires access to the APC data set as this identifies the operation that the patient has had and subsequent management whilst an in-patient. This data set provides information that will be necessary to carry out a rigorous clinical and cost-effectiveness analysis. \n\nThe OP data set has also been reviewed and data points from this will allow researchers to see what subsequently happens to patients during their follow up period.  This data set will mainly guide the clinical effectiveness evaluation by identifying treatment failures and the subsequent management of these.\n\nThis will ensure a complete analysis of clinical effectiveness of the different treatment modalities that patients undergo. \n\nAll data received from NHS Digital and from NVR (via NHS Digital acting as a trusted third party) will be pseudonymised.\n\nFor all data sets, the UK-COMPASS team has limited the data fields requested to only those that are the minimum required to allow researchers to undertake the analysis relevant to the purpose described. The research team has had input from clinicians as well as a health economist in reviewing the data sets and data fields required. The follow up period has been limited to 5 years after treatment as this should be sufficient to observe any differences between treatment groups in the medium term.  Significant deviations and “catch up” phenomena of the survival curves of different treatment strategies have been demonstrated consistently by trials comparing treatments for non-complex aneurysms within 5 years of follow-up. Data from the entirety of England will be analysed to gain a national perspective as comparisons to date have been limited to single institutions. \n\nAvailable data will be analysed to compare the safety and effectiveness of different treatments, and to see if a particular treatment is better suited for particular features so patients can be offered bespoke treatment strategies. There are no other alternative datasets that can provide this data. The data requested will be the minimum required to carry out analysis for the purpose of this research.\n\nThe UK-COMPASS team currently have a Data Sharing Agreement (DSA) in place with Healthcare Quality Improvement Partnership (HQIP) for the use of National Vascular Registry (NVR) data. The NVR collects data that is inputted by clinicians following repair of a AAA. This data reflects physiological, anatomical and technical variables.\n\nThis work will be undertaken by the UK-COMPASS team based at the Royal Liverpool University Hospital (part of the Liverpool University Hospital NHS Foundation Trust) with additional support from Liverpool Clinical Trials Unit, University of Liverpool. Only employees of the Liverpool University Hospital NHS Foundation Trust and the University of Liverpool will have access to the data disseminated by NHS Digital and, for the avoidance of doubt, this excludes any other collaborators named within the protocol.\n\nThe study has been designed based on the need to analyse routinely collected data from NHS Digital and the NVR. A randomised controlled trial is not possible to address the aim as there is no position of equipoise on current treatments for juxtarenal AAA. Currently there is a wide variation in practice across vascular surgical units that treat patients with this condition.\n\nUnder this Agreement, Liverpool University Hospital NHS Foundation Trust will receive the following:\n\n1) New data in 'Extract #1': \nExtract #1 refers to the identification of a study cohort by ICD operation code meeting the inclusion dates Nov 2017-Oct 2019. The Liverpool University Hospital NHS Foundation Trust previously received this data in full but the research team have since been informed through various sources in the vascular community (both individual expert and the UK National Vascular Registry team) that there are 3 ICD codes used to record aneurysm repair that had not previously been included.  These are L19.9, L28.2 and Y26.3. The Liverpool University Hospital NHS Foundation Trust requires Extract #1 data based on these three additional codes . This would enable appropriate analysis of the population in keeping with the overall aims of the study.\n\n2) New data in 'Extract #2' (DID): \nExtract #2 refers to the follow-up data over 5 years relating to outcomes after aneurysm repair. It will permit comparisons between different methods of repair. It will only be requested for the subset of patients identified from the screening population in Extract #1 (those with a complex aortic neck on imaging). The Liverpool University Hospital NHS Foundation Trust require imaging data (DID dataset) for Extract #2 to acquire information regarding imaging during the follow up period. This is crucial information for patients who have undergone AAA repair as they are often enrolled onto a surveillance imaging programme post operatively with different intensities across the different modes of repair. This information will enable the acquisition of post operative imaging results and allow analysis for imaging based complications. This is crucial for clinical and cost effectiveness analyses as per the overall aims of the study.\n\n3) New data in Extract #2 (Mortality): \nExtract #2 refers to the follow-up data over 5 years relating to outcomes after aneurysm repair. It will permit comparisons between different methods of repair. It will only be requested for the subset of patients identified from the screening population in Extract #1. The Liverpool University Hospital NHS Foundation Trust require mortality data (only requiring date of death truncated to month and year, and cause of death). This will permit survival analyses between treatment types for both all cause mortality and aneurysm related mortality. The acquisition of mortality data was an original aim of the study but the initial DARS application timing coincided with a merger of HES/ONS that was not yet complete. It was therefore decided to apply for mortality data later. It has now reached the point at which the research team requires this data.\n\nThis Agreement also adds the University of Liverpool as a joint data controller.  Under previous Agreements the University of Liverpool had only been listed as a data processor. Individuals that are substantively employed by the University of Liverpool play a central role in deciding how the data should be processed. In order to adhere to the GDPR based definition of ‘Data Controller’ and ‘Data Processor’, both organisations should be listed as joint data controllers.",
+  "31e81a75e0da": "UK-COMPASS will address the clinical and cost-effectiveness of strategies used in the treatment of juxtarenal abdominal aortic aneurysms. Current clinical practice and commissioning would benefit greatly from evidence on how different treatment strategies for juxtarenal aneurysms compare: this is the remit of the NIHR HTA programme commissioned research call 15/153. \n\nUK-COMPASS expect 4000 patients to undergo a repair of an abdominal aortic aneurysm each year and of these 1000 will be considered to be juxtarenal aortic aneurysms.\n\nIt is hoped that healthcare users would benefit in terms of improved quality of care in the form of improved survival rates and post-operative quality of life. By undertaking this research, a comprehensive overview of current practice in the management of complex AAA will be established. The outcomes following initial management will then be followed up for a further 5 years. At present there is a wide variation in practice amongst hospitals treating this condition; UK-COMPASS will provide answers as to what is the best way of treating complex AAAs. This will ensure that the right patients are having the most appropriate management under the care of the clinicians with the greatest expertise.\n\nThe findings of UK-COMPASS will allow Commissioners to reallocate funding to ensure the most clinical and cost-effective strategies are utilised thereby improving care. It is envisaged that this will be in the form of a smaller number of more experienced centres that can provide the best outcomes being commissioned to undertake these operations in the future.\n\nThe UK-COMPASS team expect this study to impact on 1000 patients per year undergoing a complex AAA repair.",
+  "4033426d617d": "This work will lead to peer-reviewed publications in high impact factor journals that will guide clinicians on the treatment of patients with complex AAAs (British Journal of Surgery, Journal of Vascular Surgery, Circulation and the European Journal of Vascular Surgery), treatment guidelines (NICE), commissioning priorities and patient information material.\n\nThe UK-COMPASS team aims to begin publishing academic papers within the first 2 years of the project based on anatomical observations made on the CT scans reviewed. \n\nAnalysis of the data will be fed back to commissioners, this will shape future UK wide policy on the management of resources when considering funding the treatment of complex aortic aneurysm surgery.\n\nThe UK-COMPASS team have been and will continue to report back to their funder, the NIHR, on a 6 monthly basis.\n\nMPhil and PhD students will be enrolled as part of the UK-COMPASS study team to contribute to the retrospective data reviews (outlined above) and the work they undertake will contribute to them achieving MPhil and PhDs from the University of Liverpool.  For avoidance of doubt, no additional uses of the data, beyond the purpose outlined in this Agreement, will be permitted.\n\nA simplified version of the findings will be disseminated to charities, patient groups of interest and be published on the LCTU website with versions available on the Vascular Society of Great Britain and Ireland Website as well as the British Society of Endovascular Therapists websites. \n\nAll outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide. \n\nInterim findings will be publicised in the annual scientific meeting of the Vascular Society of Great Britain and Ireland, with a final dissemination will take place in 2025.",
+  "481c240d9353": "Thus far no yielded benefits have been achieved. The UK COMPASS team are still in the early stages of analysis and require further data to proceed.",
+  "4e68db6b73a2": "The Royal Liverpool and Broadgreen University Hospitals NHS Trust requires Hospital Episodes Statistics (HES) and Diagnostic Imaging Dataset (DID) for use in a study titled “A Risk-adjusted and Anatomically Stratified Cohort Comparison Study of Open Surgery, Endovascular Techniques and Medical Management for Juxtarenal Aortic Aneurysms: The UK COMPlex AneurySm Study (UK-COMPASS).” The UK-COMPASS project is being funded by the National Institute for Health Research - Health Technology Assessment (NIHR-HTA). The Chief Investigator of the NIHR-HTA funded UK-COMPASS project is a consultant surgeon employed by Royal Liverpool and Broadgreen University Hospitals NHS Trust. \n\nThe Royal Liverpool and Broadgreen University Hospitals NHS Trust is the sole data controller and also processes the data for this study.  Statisticians from the University of Liverpool will also be processing the data.\n\nThe roles of organisations involved currently or previously with this research are as follows:\no\tOnly individuals from the Royal Liverpool and Broadgreen University Hospitals NHS Trust make decisions in respect of how and why the data are processed.\no\tIndividuals from the University of Liverpool and other individuals from various external organisations who are named as co-investigators in the study Protocol v3 have, at the request of RLBUHT, contributed to the design of the study by providing advice on aspects of the methodology given they have relevant subject matter expertise as statisticians. \no\tRLBUHT is not obliged to undertake any processing recommended by these individuals but obviously will act on their advice given their subject matter expertise.\no\tOngoing decisions on the processing of data from NHS Digital are taken by the Trial Management Group which comprises of 3 individuals substantively employed by RLBUHT and a Trials Coordinator employed by the University of Liverpool.  The Trials Coordinator does not make decisions in respect of NHS Digital data.  The Trials Coordinator provides advice on recruitment of patients to the ‘Quality of Life’ aspect of the UK COMPASS study to complete questionnaires in order to provide data to the trial and this is a completely separate activity to any processing of NHS Digital data. \no\tThe Trial Steering Committee (TSC) consists of independent and non-independent members. The TSC Chair reports back to the funder, the NIHR.\no\tThe Trial Steering Committee performs an advisory function to the RLBUHT for the purpose of this study and is not responsible for determining how or why the NHS Digital data are processed. \n\nAccessing this data is in accordance with General Data Protection Regulation point 6(1)e in that it is necessary to carry out this research in order to address the research aims. This data application is also covered by GDPR Article 9(2)(j) as it is necessary for public interest in order to ensure that future patients receive the optimal treatment for complex aortic aneurysms.\n\nThe aim of the study is to answer the question identified by NIHR-HTA Commissioning Board: What are the clinical and cost-effectiveness of strategies for the management of juxtarenal abdominal aortic aneurysm, including fenestrated endovascular repair?\n\nAbdominal aortic aneurysm (AAA) is a common condition where the aorta, the largest artery, begins to bulge abnormally. Usually this expands over years and can eventually burst, causing fatal internal bleeding. When an emergency life-saving operation is possible, they have a high failure rate. A planned AAA repair operation prevents a burst aneurysm. \n\nAAAs vary in complexity. Juxtarenal AAAs are more complex because they are close to the arteries that supply the kidneys. There are different methods of managing such complex aneurysms and doctors are unsure which is better. The open surgical repair is a durable but large operation involving slow recovery and higher operative death rates compared to alternative methods, of which Fenestrated Endovascular Aneurysm Repair (FEVAR) is the most established. In some patients with juxtarenal aneurysms, doctors are judiciously using standard endovascular repair (Off-label EVAR), a technique originally intended for use in less complex aneurysms. Endovascular methods cause less of a strain leading to faster recovery and fewer operative deaths but are less durable requiring further procedures in the years after.\n\nSome patients who are not fit enough to withstand open repair may be able to have endovascular repairs. In some patients no operation may be in their best interest. This study aims to examine how these different treatments compare in terms of clinical benefit and utilisation of NHS resources.\n\nThe study intends to analyse the outcomes of all patients aged 25 - 100 years, undergoing juxtarenal aneurysm treatment in England without altering their treatment, during a period of 2 years and collect 5 years follow-up data.    \n\nThe Royal Liverpool and Broadgreen University Hospitals NHS Trust have an Agreement with NHS Digital to provide the UK COMPASS team HES and DIDS data including the NHS number and date of birth of all patients undergoing AAA repair in England over a 2 year period until 2019/20. \n\nThe study relies on linkage with a dataset from the NVR. Now that a separate Data Sharing Agreement has been secured with HQIP to share NVR data, further data from NHS Digital is requested in this Agreement to allow the study to achieve their previously described aims. In order to facilitate linkage to NVR data, NHS Digital will act as a data processor on behalf of the Royal Liverpool and Broadgreen University Hospitals NHS Trust to receive and link NVR data. \n\nThe Royal Liverpool and Broadgreen University Hospitals NHS Trust are now requesting NHS Digital provide HES Accident and Emergency/Emergency Care DataSet, Admitted Patient Care, Outpatients and Critical Care episodes data every 6 months to cover 5 years of follow up for each patient identified from the initial cohort 1st November 2017/18 to 31st October 2019. \n\nThe UK COMPASS team plan to examine patients’ scans and utilise data that is routinely collected by the NHS. The HES A&E/ECDS, Critical Care, APC and OP data sets will allow researchers to capture the entire patient journey from pre-operative imaging to treatment, in-patient care and subsequent follow up. \n\nUK-COMPASS require access to the APC data set as this identifies the operation that the patient has had and subsequent management whilst an in-patient. This data set provides information that will be necessary to carry out a rigorous clinical and cost-effectiveness analysis. \n\nThe OP data set has also been reviewed and data points from this will allow researchers to see what subsequently happens to patients during their follow up period. This data set will mainly guide the clinical effectiveness evaluation by identifying treatment failures and the subsequent management of these.\n\nThis will ensure a complete analysis of clinical effectiveness of the different treatment modalities that patients undergo. \n\nAll data received from NHS Digital and NVR via NHS Digital (acting as a trusted third party) will be pseudonymised.\n\nFor all data sets, UK-COMPASS have limited the data fields requested to only those that are the minimum required to allow researchers to undertake the analysis relevant to the purpose described. The research team has had input from clinicians as well as a health economist in reviewing the data sets and data fields required.\n\nAvailable data will be analysed to compare the safety and effectiveness of different treatments, and to see if a particular treatment is better suited for particular features so patients can be offered bespoke treatment strategies. There are no other alternative datasets that can provide this data. The data requested will be the minimum required to carry out analysis for the purpose of this research.\n\nThe UK-COMPASS team currently have a Data Sharing Agreement (DSA) in place with Healthcare Quality Improvement Partnership (HQIP) for the use of National Vascular Registry (NVR) data. The NVR collects data that is inputted by clinicians following repair of a AAA. This data reflects physiological, anatomical and technical variables.\n\nThis work will be undertaken by the UK-COMPASS team based at the Royal Liverpool University Hospital (part of the Royal University and Broadgreen University Hospitals NHS Trust) with additional support from Liverpool Clinical Trials Unit, University of Liverpool. Only the Royal Liverpool and Broadgreen University Hospital NHS Trust and the University of Liverpool will have access to the data disseminated by NHS Digital and, for the avoidance of doubt, this excludes any other collaborators named within the protocol.\n\nThe study has been designed based on the need to analyse routinely collected data from NHS Digital and the NVR. A randomised controlled trial is not possible to address the aim as there is no position of equipoise on current treatments for juxtarenal AAA. Currently there is a wide variation in practice across vascular surgical units that treat patients with this condition.\n\nThe study is not aware of any moral or ethical issues raised by the proposed dissemination of NHS Digital data to the Royal, Liverpool and Broadgreen University Hospitals NHS Trust nor the dissemination of the aggregated study results to the wider public. The study is unaware of any risk of potential harm to the public by the dissemination.",
+  "52aa7d18737e": "The study will screen all patients in England who have undergone a procedure for an abdominal aneurysm of any sort identified from HES data between the 1st November 2017 and the 31st October 2019. This will be a retrospective data review after the procedure has taken place and will be completed every 2 months during the study period to identify all new cases.\n\nStep 1:\nThe initial data set was comprised of HES and linked DIDs data and was retrieved from NHS Digital every 2 months (Extract #1).   It includes all patients who are at least 1 month post discharge from hospital and will include data on the 6 months prior to and up to 1 month after the procedure date. The initial data set was transferred directly from NHS Digital to the UK-COMPASS Team based at the Royal Liverpool University Hospital. The data collected at this point was the patient identifying NHS number and date of birth and is kept on a secure server in a locked room in the NHS Picture Archiving and Communications System (PACS) office of the Royal Liverpool University Hospital.\n\nStep 2:\nThe study is only concerned with patients who are treated for a complex juxtarenal abdominal aortic aneurysm. Therefore, all patients undergoing AAA repair need to be screened and ineligible patients removed. In order to select the eligible patients, the researchers review all the corresponding CT scans of patients identified in Step 1. This is done via the PACS system. PACS are digital systems for managing radiological information which are routinely used by clinical staff to review radiological images and reports every day, in every hospital. PACS contains not only radiological images to be simply viewed as they are, but also ‘raw data’ of CT scans (called DICOM data) that are essential for 3-dimensional image analysis using dedicated workstations. DIDs data are needed and are processed by the UK-COMPASS team in order to identify CT imaging on patients who have undergone complex AAA repairs.\n\nStep 3:\nAt the point of retrieving each scan, the UK-COMPASS PACS team replace all patient identifiable data on the scans with a Study Serial Number and archive them securely within PACS system. The Study Serial Number is linked to the Pseudonymised HES ID.\n\nAt this point, all patient identifiable data are deleted and neither the scans nor the study data contain any patient identifiable information. There will be no requirement nor attempt to re-identify individuals. \n\nStep 4:\nThe UK-COMPASS clinical study team at the Royal Liverpool University Hospital then review all the scans and select patients who are eligible for the study. \n\nAnatomical measurements done on scans are entered into the master data set that will accumulate further study data in next steps. All non-eligible patients are then deleted from the study database and their scans will are also deleted. \n\nOver the duration of the project it is estimated that 4000 patients per year will be received in the initial dataset and of these an estimated 1000 per year will be eligible for inclusion.\n\nDIDs are needed and processed by the UK-COMPASS team in order to identify CT imaging on patients who have undergone complex AAA repairs.  Selected HES codes are relevant to the screening review.\n\nStep 5:\nFollowing identification of patients with complex AAA, their pseudonymised HES ID will be sent back to NHS Digital for linkage with data from the National Vascular Registry (NVR). A data sharing agreement is already in place with HQIP to access NVR data based on the data flow described here. \n\nNHS Digital will not send any data to HQIP. \n\nThe NVR, based at The Royal College of Surgeons, will securely transfer a data file containing all patients who have undergone AAA repair to NHS Digital. This will contain the patient identifying NHS number and Date of Birth and the fields relating to anatomy, physiology, operative strategy and clinical course post-operatively. NHS Digital will act as a trusted third party and link this data with the patients pseudonymised HES ID. \n\nStep 6:\nNHS Digital will link HES Accident and Emergency/Emergency Care Data Set, Admitted Patient Care, Outpatients and Critical Care episodes data to the data extract received from NVR every 6 months using the pseudonymised HES ID. NHS Digital will remove the identifying information and send the pseudonymised data back to the UK-COMPASS team at the Royal Liverpool University Hospital. The UK-COMPASS team will complete 6 monthly follow up health and cost analysis, showing the clinical course of patients undergoing complex AAA repair and their subsequent follow up as an out-patient. \n\nThis data will be linked every 6 months following the initial aneurysm repair and patients will be followed up for a total of 5 years.\n\nProcessing of the data provided by NHS Digital will only be carried out by individuals who are substantive employees of either the Liverpool University Hospital NHS Foundation Trust or the University of Liverpool, all of whom have been appropriately trained in data protection and confidentiality.\n\nThere will be no requirement nor attempt to reidentify individuals from the pseudonymised data.\n\nThe master database data for UK-COMPASS will be stored offline on a local secure server kept within in a locked room in LCTU.\n  \nAll organisations party to this Agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nNo data will be shared with third parties.  The findings will be shared with clinicians but these will not include any record level data regarding their patients.  All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "6a960b3f4ecd": "This work will lead to peer-reviewed publications in high impact factor journals that will guide clinicians on the treatment of patients with complex AAAs (British Journal of Surgery, Journal of Vascular Surgery, Circulation and the European Journal of Vascular Surgery), treatment guidelines (NICE), commissioning priorities and patient information material.\n\nThe UK-COMPASS team aims to begin publishing academic papers within the first 2 years of the project based on anatomical observations made on the CT scans reviewed. \n\nAnalysis of the data will be fed back to commissioners, this will shape future UK wide policy on the management of resources when considering funding the treatment of complex aortic aneurysm surgery.\n\nThe UK-COMPASS team have been and will continue to report back to their funder, the NIHR, on a 6 monthly basis.\n\nMPhil and PhD students will be enrolled as part of the UK-COMPASS study team to contribute to the retrospective data reviews (outlined above) and the work they undertake will contribute to them achieving MPhil and PhDs from the University of Liverpool.  For avoidance of doubt, no additional uses of the data, beyond the purpose outlined in this Agreement, will be permitted.\n\nA simplified version of the findings will be disseminated to charities, patient groups of interest and be published on the LCTU website with versions available on the Vascular Society of Great Britain and Ireland Website as well as the British Society of Endovascular Therapists websites. \n\nAll outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide. \n\nInterim findings will be published annually and a final dissemination will take place in 2025.",
+  "8d77a8e2219e": "Thus far no yielded benefits have been achieved. The UK COMPASS team are still in the early stages of analysis and require further data from this application to proceed.",
+  "a1f6a18fa5bb": "The study will screen all patients nationally who have undergone a procedure for an abdominal aneurysm of any sort identified from HES data between November 2017 and October 2019. This will be a retrospective data review after the procedure has taken place and will be completed every 2 months during the study period to identify all new cases. \n\nStep 1:\nThe initial data set will comprise of HES and linked DID data and will be retrieved from  NHS Digital every 2 months.  It will include all patients who are at least 1 month post discharge from hospital and will include data on the 6 months prior to and up to 1 month after the procedure date. The initial data set will be transferred directly from NHS Digital to the UK-COMPASS Team at the Royal Liverpool University Hospital. The data collected at this point will be the NHS number and date of birth and will be kept on a secure server in a locked room in the NHS Picture Archiving and Communications System (PACS) office of the Royal Liverpool University Hospital. \n\nStep 2:\nThe study is only concerned with patients who are treated for a complex juxtarenal abdominal aortic aneurysm. Therefore, all patients undergoing AAA repair need to be screened and ineligible patients removed. In order to select the eligible patients, the researchers will review all the corresponding CT scans of patients identified in Step 1. This will be done via the PACS system. PACS are digital systems for managing radiological information which are routinely used by clinical staff to review radiological images and reports every day, in every hospital. PACS contains not only radiological images to be simply viewed as they are, but also ‘raw data’ of CT scans (called DICOM data) that are essential for 3-dimensional image analysis using dedicated workstations. DIDs data are needed and will be processed by the UK-COMPASS team in order to identify CT imaging on patients who have undergone complex AAA repairs.\n\nStep 3:\nAt the point of retrieving each scan, the UK-COMPASS PACS team will replace all patient identifiable data on the scans with a Study Serial Number and archive them securely within PACS system. The Study Serial Number will be linked to Pseudonymised HES ID.\nAt this point, all patient identifiable data are deleted and neither the scans nor the study data will contain any patient identifiable information. The maximum duration the patient identifiable data will be held before pseudonymisation is 10 weeks. \n\nStep 4:\nThe UK-COMPASS clinical study team at the Royal Liverpool University Hospital will then review all the scans and select patients who are eligible for the study. \nAnatomical measurements done on scans will be entered into the master data set that will accumulate further study data in next steps. All non-eligible patients will then be deleted from the study database and their scans will also be deleted. \nOver the duration of the project it is estimated that 4000 patients per year will be received in the initial dataset and of these an estimated 1000 per year will be eligible for inclusion.\n\nDIDs are needed and will be processed by the UK-COMPASS team in order to identify CT imaging on patients who have undergone complex AAA repairs.  Selected HES codes of relevant to the screening review.\n\nThe master database data for UK-COMPASS will be stored offline on a local secure server kept within in a locked room in LCTU.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nNo data will be shared with third parties.  The findings will be shared with clinicians but these will not include any record level data regarding their patients.  All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n  \nThe Data will only be used for the purposes described in this Agreement.",
+  "b9cc2b060798": "The study will screen all patients in England who have undergone a procedure for an abdominal aneurysm of any sort identified from HES data between the 1st November 2017 and the 31st October 2019. This will be a retrospective data review after the procedure has taken place and will be completed every 2 months during the study period to identify all new cases.\n\nStep 1:\nThe initial data set is comprised of HES and linked DIDs data and will be retrieved from NHS Digital every 2 months.  It includes all patients who are at least 1 month post discharge from hospital and will include data on the 6 months prior to and up to 1 month after the procedure date. The initial data set was transferred directly from NHS Digital to the UK-COMPASS Team at the Royal Liverpool University Hospital. The data collected at this point was the patient identifying NHS number and date of birth and is kept on a secure server in a locked room in the NHS Picture Archiving and Communications System (PACS) office of the Royal Liverpool University Hospital.\n\nStep 2:\nThe study is only concerned with patients who are treated for a complex juxtarenal abdominal aortic aneurysm. Therefore, all patients undergoing AAA repair need to be screened and ineligible patients removed. In order to select the eligible patients, the researchers review all the corresponding CT scans of patients identified in Step 1. This is done via the PACS system. PACS are digital systems for managing radiological information which are routinely used by clinical staff to review radiological images and reports every day, in every hospital. PACS contains not only radiological images to be simply viewed as they are, but also ‘raw data’ of CT scans (called DICOM data) that are essential for 3-dimensional image analysis using dedicated workstations. DIDs data are needed and are processed by the UK-COMPASS team in order to identify CT imaging on patients who have undergone complex AAA repairs.\n\nStep 3:\nAt the point of retrieving each scan, the UK-COMPASS PACS team replace all patient identifiable data on the scans with a Study Serial Number and archive them securely within PACS system. The Study Serial Number is linked to the Pseudonymised HES ID.\n\nAt this point, all patient identifiable data are deleted and neither the scans nor the study data contain any patient identifiable information. There will be no requirement or attempt to re-identify individuals. \n\nStep 4:\nThe UK-COMPASS clinical study team at the Royal Liverpool University Hospital then review all the scans and select patients who are eligible for the study. \n\nAnatomical measurements done on scans are entered into the master data set that will accumulate further study data in next steps. All non-eligible patients are then deleted from the study database and their scans will are also deleted. \n\nOver the duration of the project it is estimated that 4000 patients per year will be received in the initial dataset and of these an estimated 1000 per year will be eligible for inclusion.\nDIDs are needed and processed by the UK-COMPASS team in order to identify CT imaging on patients who have undergone complex AAA repairs.  Selected HES codes are relevant to the screening review.\n\nStep 5:\nFollowing identification of patients with complex AAA, their pseudonymised HES ID will be sent back to NHS Digital for linkage with data from the National Vascular Registry (NVR). A data sharing agreement is already in place with HQIP to access NVR data based on the data flow described here. \n\nNHS Digital will not be sending data to HQIP. \n\nThe NVR, based at The Royal College of Surgeons, will securely transfer a data file containing all patients who have undergone AAA repair to NHS Digital. This will contain the patient identifying NHS number and Date of Birth and the fields relating to anatomy, physiology, operative strategy and clinical course post-operatively. NHS Digital will act as a trusted third party and link this data with the patients pseudonymised HES ID. \n\nStep 6:\nNHS Digital will link HES Accident and Emergency/Emergency Care Data Set, Admitted Patient Care, Outpatients and Critical Care episodes data to the data extract received from NVR every 6 months using the pseudonymised HES ID. NHS Digital will remove the identifying information and send the pseudonymised data back to the UK-COMPASS team at the Royal Liverpool University Hospital. The UK-COMPASS team will complete 6 monthly follow up health and cost analysis, showing the clinical course of patients undergoing complex AAA repair and their subsequent follow up as an out-patient. \n\nThis data will be linked every 6 months following the initial aneurysm repair and patients will be followed up for a total of 5 years.\n\nThere will be no requirement nor attempt to reidentify individuals from the pseudonymised data.\n\nThe master database data for UK-COMPASS will be stored offline on a local secure server kept within in a locked room in LCTU.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract - i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nNo data will be shared with third parties.  The findings will be shared with clinicians but these will not include any record level data regarding their patients.  All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nThe Data will only be used for the purposes described in this Agreement.",
+  "c2f0d03d1c99": "UK-COMPASS will address the clinical and cost-effectiveness of strategies used in the treatment of juxtarenal abdominal aortic aneurysms. Current clinical practice and commissioning would benefit greatly from evidence on how different treatment strategies for juxtarenal aneurysms compare: this is the remit of the NIHR HTA programme commissioned research call 15/153. \n\nUK-COMPASS expect 4000 patients to undergo a repair of an abdominal aortic aneurysm each year and of these 1000 will be considered to be juxtarenal aortic aneurysms.\n\nIt is hoped that healthcare users would benefit in terms of improved quality of care in the form of improved survival rates and post-operative quality of life. By undertaking this research, a comprehensive overview of current practice in the management of complex AAA will be established. The outcomes following initial management will then be followed up for a further 5 years. At present there is a wide variation in practice amongst hospitals treating this condition; UK-COMPASS will provide answers as to what is the best way of treating complex AAAs. This will ensure that the right patients are having the most appropriate management under the care of the clinicians with the greatest expertise.\n\nThe findings of UK-COMPASS will allow Commissioners to reallocate funding to ensure the most clinical and cost-effective strategies are utilised thereby improving care. It is envisaged that this will be in the form of a smaller number of more experienced centres that can provide the best outcomes being commissioned to undertake these operations in the future.\n\nThe UK-COMPASS team expect this study to impact on 1000 patients per year undergoing a complex AAA repair.\n\nMPhil and PhD students will be enrolled as part of the UK-COMPASS study team to contribute to the retrospective data reviews (outlined above) and the work they undertake will contribute to them achieving MPhil and PhDs from the University of Liverpool.",
+  "ca9c86a85078": "This work will lead to peer-reviewed publications in high impact factor journals that will guide clinicians on the treatment of patients with complex AAAs (British Journal of Surgery, Journal of Vascular Surgery, Circulation and the European Journal of Vascular Surgery), treatment guidelines (NICE), commissioning priorities and patient information material.\n\nThe UK-COMPASS team aims to begin publishing academic papers within the first year of the project based on anatomical observations made on the CT scans reviewed. Commissioning guidelines will be produced over the ensuing 7 years.\n\nThe UK-COMPASS team will also report back to the NIHR on a 6 monthly basis.\n\nMD and PhD students will be enrolled as part of the UK-COMPASS study team to contribute to the retrospective data reviews (outlined above) and the work they undertake will contribute to them achieving MDs and PhDs from the University of Liverpool.  For avoidance of doubt, no additional uses of the data will be permitted.\n\nA simplified version of the findings will be disseminated to charities, patient groups of interest and be published on the website. \n\nAll outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide. \n\nInterim findings will be published annually and a final dissemination will take place in 2025.",
+  "ce8b2e346161": "UK-COMPASS will address the clinical and cost-effectiveness of strategies used in the treatment of juxtarenal abdominal aortic aneurysms. Current clinical practice and commissioning would benefit greatly from evidence on how different treatment strategies for juxtarenal aneurysms compare: this is the remit of the NIHR HTA programme commissioned research call 15/153. \n\nUK-COMPASS expect 4000 patients to undergo a repair of an abdominal aortic aneurysm each year and of these 1000 will be considered to be juxtarenal aortic aneurysms.\n\nHealthcare users can expect to benefit in terms of improved quality of care in the form of improved survival rates and post-operative quality of life. By undertaking this research, a comprehensive overview of current practice in the management of complex AAA will be established. The outcomes following initial management will then be followed up for a further 5 years. At present there is a wide variation in practice amongst hospitals treating this condition; UK-COMPASS will provide answers as to what is the best way of treating complex AAAs. This will ensure that the right patients are having the most appropriate management under the care of the clinicians with the greatest expertise.\n\nThe findings of UK-COMPASS will allow Commissioners to reallocate funding to ensure the most clinical and cost-effective strategies are utilised thereby improving care. It is envisaged that this will be in the form of a smaller number of more experienced centres that can provide the best outcomes being commissioned to undertake these operations in the future.\n\nThe UK-COMPASS team expect this study to impact on 1000 patients per year undergoing a complex AAA repair.",
+  "f5e0ba048ff3": "The Royal Liverpool and Broadgreen University Hospitals NHS Trust requires Hospital Episodes Statistics (HES) and Diagnostic Imaging Dataset (DID) data for use in a study titled “A Risk-adjusted and Anatomically Stratified Cohort Comparison Study of Open Surgery, Endovascular Techniques and Medical Management for Juxtarenal Aortic Aneurysms: The UK COMPlex AneurySm Study (UK-COMPASS).” The UK-COMPASS project is being funded by the National Institute for Health Research - Health Technology Assessment (NIHR-HTA). The Chief Investigator of the NIHR-HTA funded UK-COMPASS project is a consultant surgeon employed by Royal Liverpool and Broadgreen University Hospitals NHS Trust.\n\nThe aim of the study is to answer the research question identified by NIHR-HTA Commissioning Board: What are the clinical and cost-effectiveness of strategies for the management of juxtarenal abdominal aortic aneurysm, including fenestrated endovascular repair? \n\nAbdominal aortic aneurysm (AAA) is a common condition where the aorta, the largest artery, begins to bulge abnormally. Usually this expands over years and can eventually burst, causing fatal internal bleeding. When an emergency life-saving operation is possible, they have a high failure rate. A planned AAA repair operation prevents a burst aneurysm. \n\nAAAs vary in complexity. Juxtarenal AAAs are more complex because they are close to the arteries that supply the kidneys. There are different methods of managing such complex aneurysms and doctors are unsure which is better. The open surgical repair is a durable but large operation involving slow recovery and higher operative death rates compared to alternative methods, of which Fenestrated Endovascular Aneurysm Repair (FEVAR) is the most established. In some patients with juxtarenal aneurysms, doctors are judiciously using standard endovascular repair (Off-label EVAR), a technique originally intended for use in less complex aneurysms. Endovascular methods cause less of a strain leading to faster recovery and fewer operative deaths but are less durable requiring further procedures in the years after.\n\nSome patients who are not fit enough to withstand open repair may be able to have endovascular repairs. In some patients no operation may be in their best interest. This study aims to examine how these different treatments compare in terms of clinical benefit and utilisation of NHS resources.\n\nThe study intends to analyse the outcomes of all patients aged 25 - 100 years, undergoing juxtarenal aneurysm treatment in England without altering their treatment, during a period of 2 years and collect 5 years follow-up data (this would be subject to a further application to NHS Digital). \n\nThe UK-COMPASS team plan to examine patients’ scans and utilise data that is routinely collected by the NHS. Available data will be analysed to compare the safety and effectiveness of different treatments, and to see if a particular treatment is better suited for particular features so patients can be offered bespoke treatment strategies.\n \nThis work will be undertaken by the UK-COMPASS team based at the Royal Liverpool University Hospital (part of the Royal University and Broadgreen University Hospitals NHS Trust) with additional support from Liverpool Clinical Trials Unit, University of Liverpool. Only the Royal Liverpool and Broadgreen University Hospital NHS Trust and the University of Liverpool will have access to the data disseminated by NHS Digital and, for the avoidance of doubt, this excludes any other collaborators named within the protocol."
+ }
+}

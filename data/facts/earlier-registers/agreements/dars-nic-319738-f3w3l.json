@@ -1,0 +1,88 @@
+{
+ "base_reference": "DARS-NIC-319738-F3W3L",
+ "versions": [
+  {
+   "reference": "DARS-NIC-319738-F3W3L-v0.2",
+   "version": "0.2",
+   "organisation": "University Hospitals Bristol NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "01c7ec92dc19",
+     "activities": "74a37e4ff2b9",
+     "expected_output": "90b6793d1bb0",
+     "expected_benefits": "f6493ef57cff"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "01c7ec92dc19": "The aim of the study is to evaluate the feasibility of setting up a UK multicentre registry to document cardiac magnetic resonance imaging (CMR) use in patients who present to the hospital with a suspected heart attack and activate the primary percutaneous intervention (PPCI) pathway (index admission).  Patients were recruited from 4 centres (2 with and 2 without CMR) and data was collected on basic demography, clinical characteristics on presentation, peri-procedural (PPCI) characteristics, biochemistry and imaging reports (echocardiography and CMR imaging) by linking local NHS databases.  The Trust wish to link their database with HES /ONS mortality data to:\n\n\tRecord subsequent inpatient, accident and emergency, critical care, outpatient activity and mortality in the year following the index PPCI admission.  The data will be used to describe the patient cohort by centre;\n\tIdentify co-morbidity in the patient cohort using diagnosis codes in the record of the index admission and diagnosis codes in records in the year preceding the index admission;\n\tEvaluate resource use for the health economic analysis.\nOne of the objectives of the feasibility study is to define a “proxy” primary outcome (which will be used in the registry) that represents a definitive change in patient management, conditional on having had CMR, that will be credible to cardiologists and other stakeholders as a measure of the “value added” by doing CMR.  The treatment/process outcomes that represent a definitive change in management for various patient subgroups have been defined using formal consensus methods.  The Trust will use HES data to:\n\t“Operationalise” the treatment/process outcomes by capturing the HES components that reflect these outcomes (e.g. CMR can differentiate an ischaemic from a non-ischaemic diagnosis in patients with unobstructed coronary arteries on angiography.  HES data will reflect new diagnoses, other procedures/tests that patients will have as a result of a new diagnosis, and changes in the frequency of inpatient, outpatient and A&E episodes related to cardiac events.  This will allow the Trust to compare patients with/without CMR with respect to changes in clinical management that would be expected to reduce risk of adverse cardiovascular events).\nWritten informed consent from every patient in this study is in place, giving access to their electronic information held on local NHS databases and information held by the HSCIC.  \n\nThe data will not be used for commercial purposes or for direct marketing, and will not be provided in record level form to any third party. The data will solely be used for the purpose of the study outlined above.",
+  "74a37e4ff2b9": "The University Hospitals Bristol NHS Foundation Trust will supply identifiable data to the HSCIC (NHS Number, Date of Birth and Postcode).  Each patient’s record will have a unique study ID.  The HSCIC will link the data and extract the relevant HES data for all records from 13/05/2012 and the HES/ONS data from 13/05/2013 onwards. The HSCIC would supply pseudonymised data back to the University Hospitals Bristol NHS Foundation Trust containing the unique study ID that the University Hospitals Bristol NHS Foundation Trust can use to reidentify the cohort in order to link with the data already collected on each participant using local NHS databases (basic demography; clinical characteristics on presentation (index admission); peri- and post-procedural (primary percutaneous coronary intervention) characteristics; biochemistry (index admission); imaging tests (echocardiography and cardiac magnetic resonance imaging (CMR) reports); medications on discharge).  Data have been collected on an NHS server (HES data will be added to this database).   The “look up” table for the unique participant identifier will remain on the NHS server.  Standard operating procedures for database use, data validation and data cleaning will be available and regularly maintained.  Data will not be accessible by a third party organisation or across multiple locations within the University of Bristol Hospitals NHS Foundation Trust.  \nThe data will be used to establish proof of principle of two key objectives: to characterise patients’ co-morbidity; and to apply the “proxy” primary outcome developed through formal consensus to the patient cohort by querying hospital activities in the year following the index procedure.  Since this study is a feasibility study the Trust will not estimate a particular exposure effect.",
+  "90b6793d1bb0": "Report to funder (National Institute for Health Research (NIHR) Health Services & Delivery Programme (HS&DR).  \nPaper describing feasibility study cohort.\nPaper describing the “operationalisation” of the process/treatment outcome defined as representing important changes in patient management using HES data.\nPaper on health economics.\nAll reports and papers due once analysis of data has been completed. \n\nResults of the study will be disseminated at appropriate conferences (e.g. MRC Clinical Trials Methodology Conference; Health Services Research Network Symposium, Society of Social Medicine Annual Scientific Meeting).  The results will also be published in peer reviewed scientific journals; it is anticipated that the majority of these will be ‘open access’. A wide audience is anticipated, since the target conferences and journals cover a range of subjects including epidemiology, the medical and health needs of society, the provision and organization of health services and the prevention of disease.  The full study report will be published in the NIHR Health Services and Research Journal, which is open access.\nAll outputs will contain aggregate data only (there will be no record level data) with small numbers supressed in line with HES analysis guide).  The research will determine whether setting up a registry using routine data collection is feasible and inform the design of a prospective multicentre registry.  \n\nA registry set up on the basis of this feasibility study will provide information on prognostic value of CMR, highlight specific groups of STEMI patients likely to benefit from CMR, and highlight inequality of access to CMR across the UK, all of which have the potential to improve the health of patients who activate the PPCI pathway.  The Trust is unclear at this stage whether this registry will be set up because it depends on the outcome of the feasibility study.  The Trust will not proceed with the next phase (setting up the registry) if they find that this is not feasible to set up such a registry using routine data linkage.",
+  "f6493ef57cff": "The benefits to health and social care are twofold:\n1)\tBenefits of the feasibility study to health and social care (basis of the current application for HES data).  \nThe following benefits are anticipated: \na.\tIf feasible, the registry will be rolled out nationally and the Trust will be in a position to answer the question about the effectiveness of cardiac MRI in the study population; \nb.\tThe feasibility study (and the composite outcome that will be defined using HES data) will also inform the commissioning of future research to address other research questions likely to improve NHS care and thus to benefit patients. These benefits will be realised when the Trust disseminate their findings and the report to the funder. \n2)\tBenefits of the registry to health and social care (if the feasibility study determines that it is possible and worthwhile to set up the registry).  Please note that the use of HES data for the registry will be subject to a separate application.  The following benefits of the registry are anticipated:\na.\tIt will provide evidence of the benefit of using CMR in this patient population (patients who have had a heart attack and patients who present with a suspected heart attack but are found not to have had one) or specific subgroups of it;\nb.\tIt will highlight inequality of access to CMR across the UK;\nc.\tIt will inform the practice of all the cardiologists who participate in the study;\nd.\tThe results from the registry can be used to improve the organisation and delivery of cardiac MRI services to this group of patients across the UK."
+ }
+}

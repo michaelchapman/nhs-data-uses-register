@@ -1,0 +1,512 @@
+{
+ "base_reference": "DARS-NIC-321968-S4Q6L",
+ "versions": [
+  {
+   "reference": "DARS-NIC-321968-S4Q6L",
+   "version": "",
+   "organisation": "University of Cambridge",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "8c3da08a3919"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Section 251 (CAG 9-08(e)/2014) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Section 251 (CAG 9-08(e)/2014) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-321968-S4Q6L-v1.5",
+   "version": "1.5",
+   "organisation": "UNIVERSITY OF CAMBRIDGE",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01",
+    "2016-12-01",
+    "2017-03-01",
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "2acad83a1784",
+     "activities": "ab6ebd19a46e",
+     "expected_output": "97f590bd37b0",
+     "expected_benefits": "404ea7e196fb"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 19
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 14
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-321968-S4Q6L-v2.21",
+   "version": "2.21",
+   "organisation": "University of Cambridge",
+   "organisation_type": "",
+   "listed": [
+    "2018-05-25",
+    "2018-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "objective": "a96b1bd03f64",
+     "activities": "c25c4b3b6d70",
+     "expected_output": "1e5f0ab02381",
+     "expected_benefits": "2e15a93ad8a8",
+     "yielded_benefits": "7a885e00eff2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 26
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 30
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-321968-S4Q6L-v3.11",
+   "version": "3.11",
+   "organisation": "University of Cambridge",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-01-01",
+    "2019-03-01",
+    "2019-04-01",
+    "2019-05-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2019-11-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-01-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01"
+     ],
+     "objective": "c9be27eda562",
+     "activities": "ba8628dfd466",
+     "expected_output": "1e5f0ab02381",
+     "expected_benefits": "2e15a93ad8a8",
+     "yielded_benefits": "7a885e00eff2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-01-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01"
+     ],
+     "rows": 55
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-01-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01"
+     ],
+     "rows": 45
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01",
+      "2020-05-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-321968-S4Q6L-v4.12",
+   "version": "4.12",
+   "organisation": "University of Cambridge",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01",
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "c9be27eda562",
+     "activities": "ba8628dfd466",
+     "expected_output": "1e5f0ab02381",
+     "expected_benefits": "2e15a93ad8a8",
+     "yielded_benefits": "7a885e00eff2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "1e5f0ab02381": "Any output shared outside the University of Cambridge will contain data only where it is aggregated with small numbers suppressed in line with the NHS Digital requirements.\n\nOutputs for participants and the public:\nEqually important is the dissemination of results outside the research community. The University of Cambridge communicate the results to the research participants newsletters. A list of recent newsletters can be found on the study website at http://www.srl.cam.ac.uk/epic/newsletter_archive.shtml.\nInformation is also disseminated to the general public via printed and digital media. Examples of research results communicated to the public can be found at http://www.srl.cam.ac.uk/epic/news.shtml\n\nThe University of Cambridge also actively promote participant involvement in this research. The University of Cambridge set up an advisory panel in 2010 to act as a consultation group to advise us on the research. The EPIC-Norfolk Participant Advisory Panel (EPAP) has been involved in all aspects of the research project from designing health questionnaires, writing of lay summaries, participant information, dissemination of results and providing a lay perspective on potential projects being considered for the future. Further information on EPAP can be found at http://www.srl.cam.ac.uk/epic/participant_panel.shtml\n\nThe University of Cambridge also shares results from this study via extensive public engagement activities including regular Science Festival events and lectures to the general public and charitable groups.\n\nOutputs for the research/scientific community:\nThe University of Cambridge communicates research findings to members of the scientific community through publication in a broad range (both specialist and more general, scientific and medical based) national and international peer-reviewed journals and at national and international conferences. \n\nThere have been over 1400 peer reviewed scientific publications from this study, with a number of findings making it into news. There are too many publications to list, but can be found at the website at http://www.srl.cam.ac.uk/epic/publications.shtml with news articles found at http://www.srl.cam.ac.uk/epic/news.shtml.  \n\nSome specific recent publications using HES and mortality data as outputs:\n - Predicting admissions and time spent in hospital over a decade in a population-based record linkage study: the EPIC-Norfolk cohort (Luben R, Hayat S, Wareham N, et al, BMJ Open 2016)\n- Fatigue is associated with excess mortality in the general population: results from the EPIC-Norfolk study (Basu etal., BMC Medicine2016)\n- Accuracy of death certification and hospital record linkage for identification of incident stroke (Sinha, S., Myint, P.K., Luben, R.N. et al. BMC Med Res Methodol 2008)\n\nOutputs for collaborating researchers:\n\nAs part of this collaboration, NHS Digital data (including mortality)  may be shared with the other centres but data to be shared will contain data from NHS Digital only where it is aggregated with small numbers suppressed in line with the NHS Digital requirements. \n\nThe aggregated data are only shared by the University of Cambridge with other collaborators from recognised academic and research institutions on receiving a formal data request. Prior to the release of any data, the management committee of the EPIC-Norfolk study scrutinises the scientific rationale and extent of the data request, reducing it if necessary in order to provide the minimal dataset for release. No identifiable data is shared with collaborating researchers. Datasets are checked by the University of Cambridge EPIC-Norfolk research informatics team before release.",
+  "2acad83a1784": "The European Prospective Investigation into Cancer (EPIC) was established to examine the relationship between lifestyle, in particular, diet and physical activity, biological factors and health outcomes.  Though EPIC is an international ten country collaboration, co-ordinated by the International Agency for Research into Cancer in Lyon, which is part of World Health Organisation, such that  collaborating partners agreed a core protocol for the collection and standardisation of data throughout EPIC, each individual cohort is able to develop specialist areas for investigation.  As part of this collaboration, data may be shared with the nine other centres but strictly in anonymised aggregated format. Anonymised data is also shared with other collaborators from recognised academic and research institutions.  No identifiable data from HSCIC is processed or stored at any other site or location other than at the Department of Public Health and Primary Care University of Cambridge School of Clinical Medicine, Cambridge.\n\nThis application relates to the Norfolk component of EPIC (EPIC-Norfolk) and the follow-up on approximately 25,000 men and women aged 40-79 resident in Norfolk at the time of recruitment. \n\nThe scientific and public health strength of the population cohort is that through routine record linkage, the University of Cambridge are able to follow up the whole cohort who originally participated for health outcomes. Access to data only for the subset that, more than 20 years later are able to provide new signed informed consent will bias the follow up hugely, and make subsequent follow up and results impossible to interpret. The substantial investment of effort by participants over two decades in contributing to this research and increasingly valuable information from long term follow up of the whole population will be lost.\n\nNon-fatal disease is an important area of the research and access to linked HES data is essential to analyse this.  Many diseases cannot be studied using mortality data alone as the diseases do not cause a death and may only occasionally appear on death certificates.  These would include diabetes, eye diseases such as glaucoma, bone diseases such as osteoporosis, frailty and sarcopenia, inflammatory bowel diseases and dementia.  Hospital usage is another important area for future research.",
+  "2e15a93ad8a8": "This is a long term study involving a huge amount of data and EPIC has a well-characterised cohort that has been shown to be comparable to the general UK population.  EPIC hopes to continue to add to this rich database and further characterise the longitudinal trajectory of the population as it ages and examine determinants of healthy ageing as well as chronic disease.  Funding is secured until December 2018, with a view to extend beyond this date and the University of Cambridge anticipates adding to the knowledge to improvements in preventing chronic disease and maintaining good health in later life within the next 5 years. Progress updates from recent benefits reported are given below.\n\nPrevention depends on the understanding of causes. A much better understanding of the biological mechanisms underlying disease and health are needed; how these are influenced by the environment and what the potential population impact might be.  Having this knowledge will help address a number of issues, one being health disparities in society.  EPIC-Norfolk is an ideal platform to gather information on the characteristics of groups of individuals of society (such as those with no qualifications, lower socio-economic status, women etc.) who may be at increased risk of disproportionately affected by certain conditions or diseases or use of hospital services. With over 25 years of detailed information collected on this well-characterised cohort, EPIC-Norfolk has the strength to identify risk factors that define certain groups at risk, which would be difficult in smaller studies and trials.\n\nThere is increasing evidence for common pathophysiological pathways including glucose metabolism, inflammation, hormonal profile (thyroid and sex hormones) for ageing related conditions. In an increasingly ageing population, there needs to be a better understanding of outcomes relevant to older populations, not only in terms of death but also functional health and quality of life. This research benefits society as it provides the evidence base that can then be used by policy makers for the benefit of society, in particular on how best to prevent or postpone disability and maintain independence in later life.  The EPIC-Norfolk researchers are not directly involved in making or changing policy,  however they  contribute through the process of publishing in peer reviewed journals and engaging with public health organisation such as Public Health England, Department of Health and World Health Organisation. Concrete examples of such engagement is given below in the section of 'Yielded benefits to date'. \n\nExamples of publications that could be of benefit to society through health and social care policies:\n\n1/ Data from EPIC-Norfolk has also shown that women living in the most deprived areas are over 60% more likely to have anxiety as women living in richer areas. However, whether men lived in poorer or richer areas made very little difference to their anxiety levels.  Anxiety disorders affect a substantial number of people and can lead to poor health outcomes and risk of suicide (BMJ Open 2017).  The EPIC results can be used to inform future mental health policy more directly to take into account the circumstances and communities that people live in and that the impact of the surrounding is different for women than for men. In terms of benefit to society, allowing a more directed approach is particularly valuable at a time when resources within social care and the NHS are stretched. \n\n2/  ‘Epigenetic Signatures of Cigarette Smoking’  (Journal, Circulation. Cardiovascular Genetics, 2016).  This paper reported on the differentially methylated DNA sites in smokers in genes associated with smoking-related traits present in cancers, pulmonary function, inflammatory diseases, and heart disease, that were not present in non-smokers.  Researchers reported that these changes in methylation persisted many years after smoking cessation. This data could lead to new opportunities for future effective treatment of current and former smokers.  These results can also be used to  inform future personalised risk reduction strategies and targeted therapies for major smoking associated diseases such as coronary heart disease and cancer.",
+  "404ea7e196fb": "The University of Cambridge has already contributed substantially to clinical and health policy guidelines as detailed above.   The University of Cambridge anticipates adding to the knowledge to improvements in preventing chronic disease and maintaining good health in later life in the next 5 years. \n\nThis is a long term study involving a huge amount of data and EPIC has a well-characterised cohort that has been shown to be comparable to the general UK population.  EPIC hopes to continue to add to this rich database and further characterise the longitudinal trajectory of the population as it ages and examine determinants of healthy ageing as well as chronic disease.  \n\nPrevention depends on understanding of causes. We need a much better understanding of the biological mechanisms underlying disease and health; how these are influenced by the environment and what the potential population impact might be. There is increasing evidence for common pathophysiological pathways including glucose metabolism, inflammation, hormonal profile (thyroid and sex hormones) for ageing related conditions. In addition to chronic disease, we need to have a much better understanding of outcomes relevant to older populations such as functional health and quality of life. EPIC-Norfolk is a large long term prospective study that allows this approach.\n\nPrevious results from the EPIC study have informed Department of Health public health initiatives (2010 ‘Small Change, Big Difference’ campaign), NICE and other clinical and public health policies and guidelines.  Findings are also shared through extensive public engagement activities including regular Science Festival events and lectures to general public and charitable groups.",
+  "7a885e00eff2": "Understanding what the study can do to improve health and prevent disease and disability in ageing populations will have benefits for society and the general public nationally and internationally. Results have already and will continue to contribute to health and clinical policy. Clarification of the mechanisms underlying diseases will enable us to understand pathophysiological processes to support better prevention and treatment, understanding the risk profile for diseases will enable more targeted screening and prevention programmes and understanding and quantifying specific behaviours that influence functional health and healthy ageing will enable us to improve the health experience and quality of life in populations as they age. \n\nUniversity of Cambridge (EPIC-Norfolk Investigators) have contributed to national and international (e.g. WHO) clinical and public health guideline panels, Department of Health initiatives, and invited to provide evidence to Select Committees on health issues in the Houses of Parliament. \n\nResults from this study have informed Department of Health public health initiatives, NICE and other clinical and public health policies and guidelines.  \n\nExamples include: \nResearch from EPIC-Norfolk quantifying the association between four health behaviours (not smoking, modest alcohol intake, physical activity and consumption of 5 servings of fruit and vegetable intake) were associated with a 14 year difference in life expectancy. This directly influenced the Department of Health \"Small change big difference\" national public health campaign launched from Downing Street, underpinned regional initiatives to promote health behaviour change and has been taken up in national guidance. \n\nEPIC findings have been reported to meetings contributing European policies on ageing (invited presentations to the European Commission DG Health on Frailty in Old Age 2013) http://ec.europa.eu/dgs/health_consumer/dyna/enews/enews.cfm?al_id=1365\n\nResults from EPIC have contributed to clinical guidelines on screening for osteoporosis using heel ultrasound measures, a low cost and safe feasible assessment ( Lewiecki EM et al, Official Positions for FRAX Bone Mineral Density and FRAX simplification from Joint Official Positions Development Conference of the International Society for Clinical Densitometry and International Osteoporosis Foundation on FRAX. J Clin Densitom. 2011 Jul-Sep;14(3):226-36).\n\nResults from EPIC have also contributed to clinical guidelines on the use of glycated haemoglobin in the diagnosis of diabetes. (RydenL et al, ESC Guidelines on diabetes, prediabetes and cardiovascular diseases in collaboration with the EASD- Summary. Eur Heart J 2013;34: 3035; Anderson T et al. 2012 update of the Canadian Cardiovascular Society guidelines for the diagnosis and treatment of dyslipidaemia for the prevention of cardiovascular disease in the adult. Can J Cardiol 2013;29:151-167.\n\nIn addition general findings from EPIC-Norfolk have informed publications from charities (e.g. Cancer Research UK, British Heart Foundation, Stroke Association, AgeUK) on disease prevention and maintenance of health.\n\nAccording to the Chief Executive of Public Health England (PHE), “Type 2 diabetes is one of the biggest health challenges of our time.” Data from EPIC-Norfolk was used in a large study to show the link between sugar-sweetened beverages and the risk of Type 2 Diabetes. Based on these results, University of Cambridge researchers have engaged with national and international policymakers and media to help shape the way that policy and decision-makers and the public understand and act upon these issues.Researchers have contributed to discussions on sugar reduction that were part of PHE’s Sugar Reduction: Responding to the Challenge document; and provided expert input and reviewed the Parliamentary Office on Science and Technology POSTNote on Sugar and Health. \nThis research was covered  by the BBC's 'One Show' ( attracting an audience of over four million viewers),  explaining the health impacts of sugary drinks.\n\nThe EPIC-Norfolk researchers recognise the importance of engagement with media, the general public and policymakers, tailoring the message according to the target audience. \n\nThe EPIC-Norfolk research team also recognises the value  of public engagement and have made this an integral part of its research agenda.  The primary objective is to raise awareness and inform the general public (all age ranges) on the high-quality research data collected by the EPIC-Norfolk researchers team relating to diet, lifestyle choices, ageing and health and also to promote awareness of healthy living. The secondary objective is to make science more accessible and better understood in society. A list of public events including activities designed for younger individuals presented at the Cambridge Science Festival for the past few years can be found at http://www.srl.cam.ac.uk/epic/publicevents.shtml.",
+  "8c3da08a3919": "Objective for processing:  \nThe European Prospective Investigation into Cancer (EPIC) was established to examine the relationship between lifestyle, in particular, diet and physical activity, biological factors and health outcomes.  Though EPIC is an international ten country collaboration, co-ordinated by the International Agency for Research into Cancer in Lyon, which is part of World Health Organisation, such that  collaborating partners agreed a core protocol for the collection and standardisation of data throughout EPIC, each individual cohort is able to develop specialist areas for investigation.  As part of this collaboration, data may be shared with the nine other centres but strictly in anonymised aggregated format.  No identifiable data is processed or stored at any other site or location other than at the Department of Public Health and Primary Care University of Cambridge School of Clinical Medicine, Cambridge.\nThis application relates to the Norfolk component of EPIC (EPIC-Norfolk) and the follow-up on approximately 25,000 men and women aged 40-79 resident in Norfolk at the time of recruitment.\nThe scientific and public health strength of the population cohort is that through routine record linkage, the University of Cambridge are able to follow up the whole cohort who originally participated for health outcomes. Access to data only for the subset that, more than 20 years later are able to provide new signed informed consent will bias the follow up hugely, and make subsequent follow up and results impossible to interpret. The substantial investment of effort by participants over two decades in contributing to this research and increasingly valuable information from long term follow up of the whole population will be lost.\nNon-fatal disease is an important area of the research and access to linked HES data is essential to analyse this.  Many diseases cannot be studied using mortality data alone as the diseases do not cause a death and may only occasionally appear on death certificates.  These would include diabetes, eye diseases such as glaucoma, bone diseases such as osteoporosis, frailty and sarcopenia, inflammatory bowel diseases and dementia.  Hospital usage is another important area for future research.\n\nProcessing activities: \nWith the permission of the GPs, all patients on their registers born between 01/01/1918 and 31/12/1957 were invited to join EPIC.  Those who consented were asked to provide information via questionnaires and undertake health checks. All participants attending the baseline health examination provided signed informed consent at inception of the study agreeing to provide lifestyle and health data and biological samples for this study and access to medical records. Participants provided signed informed consent again for subsequent attendance at follow up examinations in 1997-2005, in 2006-2011 and 2012-present. At each point the University of Cambridge have updated the consent process to be in line with the current guidelines. This included permission for access to medical records. The study has also received approval from the Norfolk and Norwich Ethics committee of each phase as well as clarification of previous permissions to be in line with current standards.\nAll participants in the study have to date been followed up through routine data linkage for mortality with death certification by cause, and cancer incidence through cancer registration and linkage with hospital records, GP records and other disease registers. This has allowed for the follow up for a large range of health outcomes that are relevant to an ageing population. The data has been subjected to ongoing analysis to determine links between dietary and lifestyle factors and health outcomes.\nLinkage strengthens the study by allowing the follow up of participants who drop out of the study due to health reasons or death. It also allows the validation of self-reported conditions such as Parkinson's disease or stroke.  Access to death data provides information on mortality but is also used for administrative purposes to prevent inappropriately mailing to participants who have died.  \nEvents identified through record linkage will be documented and linked with data collected from individuals on lifestyle so that the University of Cambridge can assess associations between lifestyle and subsequent health outcomes.\nThe University of Cambridge combines mortality data and Hospital Episode Statistics data to define outcomes for fatal and non-fatal incident diseases.  For example, the University of Cambridge can define an outcome of heart disease using the same range of ICD 10 codes applied to both fatal events from death certificates and non-fatal events from hospital admissions.\n\nSpecific outputs expected, including target date:\nThere have been over 1300 peer reviewed scientific publications from this study, with a number of findings making it into news. There are too many publications to list, but can be found at the website at http://www.srl.cam.ac.uk/epic/publications.shtml with news articles found at http://www.srl.cam.ac.uk/epic/news.shtml.  \nResults from this study have informed Department of Health public health initiatives (2010 ‘Small Change, Big Difference’ campaign), NICE and other clinical and public health policies and guidelines.  The University of Cambridge also shares results from this study via extensive public engagement activities including regular Science Festival events and lectures to general public and charitable groups.\nAs well as continuing to analyse the data collected so far and publish on the health outcomes covered to date, the University of Cambridge have more recently collected objective data on cognition and hope to gather data on Dementia outcomes.  Over 600,000 people in the UK suffer from dementia, costing over £17 billion a year. Dementia is such an important health issue, that the Prime Minister, David Cameron launched a challenge on Dementia on 26 March 2012 in order to speed up the progress in prevention and treatment. The MRC Dementias Platform UK (DPUK), a multi-million pound initiative that was developed and led by the Medical Research Council as part of the activity to meet this challenge. The EPIC-Norfolk study is a partner of DPUK and with the data collected to date and in the follow up planned for 2015-2018, will make  EPIC-Norfolk a hugely powerful study of Dementia. \nThe University of Cambridge also plans to use the linkage data to investigate the healthier individuals in the cohort to be able to inform policies on healthy and successful ageing. \nEPIC-Norfolk is an ongoing longitudinal study.  The University of Cambridge received HES data locally between 1999 and 2009.  Outcome measures defined using the HES data were used in many publications over this period but it is essential for the study to have up to date events for a number of reasons;\n•\tFirstly, the statistical power of the analyses depend on the number of known events.  Less common outcomes can only be studied with sufficiently long follow-up and event numbers.  \n•\tSecondly, EPIC-Norfolk has made multiple approaches to the cohort.  Each approach is a new baseline and for more recent approaches, such as the ongoing \"Fourth Health Check\" the study had no information on non-fatal events since the collection started after 2009.  The previous approach, the \"Third Health Check\" has only very limited non-fatal events having finished in 2011.  \n•\tThirdly, journals are unwilling to accept publications where the outcomes presented are too old since the missing information may effect the results and their interpretation.\n\nOutputs will contain only aggregate level data with small numbers suppressed in line with the HES analysis guide.\n\nThe University of Cambridge communicate our research findings to members of the scientific community through publication in a broad range (both specialist and more general, scientific and medical based) national and international peer-reviewed journals and at national and international conferences. Please find below selected conferences and a list of some the journals that EPIC-Norfolk (plus the international EPIC study or consortia using EPIC-Norfolk data) have published in.\nEqually important is the dissemination of results outside the research community. The University of Cambridge communicate our results to our research participants via an annual newsletter. A list of recent newsletters can be found on our website at http://www.srl.cam.ac.uk/epic/newsletter_archive.shtml.\nThe EPIC-Norfolk research team also recognises the value and importance of public engagement and have made this an integral part of our research agenda.  The primary objective is to inform the general public (all age ranges) on high quality research data collected by the EPIC-Norfolk researchers team relating to diet, lifestyle choices, ageing and health and also to promote awareness of healthy living. The secondary objective is to make science more accessible and better understood in society. A list of public events including activities designed for younger individuals presented at the Cambridge Science Festival for the past few years can be found at http://www.srl.cam.ac.uk/epic/publicevents.shtml. \nIn 2015, the EPIC-Norfolk researchers developed (and continue to manage) a web based system where other researchers taking part in the  Cambridge festival could contribute their activities to  be catalogued that could then be borrowed by schools  and local community group setting.  Information on this ‘library’ can be found at http://www.sciencefestival.cam.ac.uk/resources\n\nContinued in the notes.",
+  "97f590bd37b0": "There have been over 1300 peer reviewed scientific publications from this study, with a number of findings making it into news. There are too many publications to list, but can be found at the website at http://www.srl.cam.ac.uk/epic/publications.shtml with news articles found at http://www.srl.cam.ac.uk/epic/news.shtml.  \n\nResults from this study have informed Department of Health public health initiatives (2010 ‘Small Change, Big Difference’ campaign), NICE and other clinical and public health policies and guidelines.  The University of Cambridge also shares results from this study via extensive public engagement activities including regular Science Festival events and lectures to general public and charitable groups.\n\nAs well as continuing to analyse the data collected so far and publish on the health outcomes covered to date, the University of Cambridge have more recently collected objective data on cognition and hope to gather data on Dementia outcomes.  Over 600,000 people in the UK suffer from dementia, costing over £17 billion a year. Dementia is such an important health issue, that the Prime Minister, David Cameron launched a challenge on Dementia on 26 March 2012 in order to speed up the progress in prevention and treatment. The MRC Dementias Platform UK (DPUK), a multi-million pound initiative that was developed and led by the Medical Research Council as part of the activity to meet this challenge. The EPIC-Norfolk study is a partner of DPUK and with the data collected to date and in the follow up planned for 2015-2018, will make  EPIC-Norfolk a hugely powerful study of Dementia. \n\nThe University of Cambridge also plans to use the linkage data to investigate the healthier individuals in the cohort to be able to inform policies on healthy and successful ageing. \n\nEPIC-Norfolk is an ongoing longitudinal study.  The University of Cambridge received last HES update in 2015.  The study continues to use outcome measures from HES data in publications and it is essential for the study to have up to date events for a number of reasons;\n•\tFirstly, the statistical power of the analyses depend on the number of known events.  Less common outcomes can only be studied with sufficiently long follow-up and event numbers.  \n•\tSecondly, EPIC-Norfolk has made multiple approaches to the cohort.  Each approach is a new baseline and is necessary to have non-fatal events   \n•\tThirdly, journals are unwilling to accept publications where the outcomes presented are too old since the missing information may effect the results and their interpretation.\n\nOutputs will contain only aggregate level data with small numbers suppressed in line with the HES analysis guide.\n\nThe University of Cambridge communicate research findings to members of the scientific community through publication in a broad range (both specialist and more general, scientific and medical based) national and international peer-reviewed journals and at national and international conferences. Please find below selected conferences and a list of some the journals that EPIC-Norfolk (plus the international EPIC study or consortia using EPIC-Norfolk data) have published in.\n\nEqually important is the dissemination of results outside the research community. The University of Cambridge communicate the results to the research participants via an annual newsletter. A list of recent newsletters can be found on our website at http://www.srl.cam.ac.uk/epic/newsletter_archive.shtml.\n\nThe EPIC-Norfolk research team also recognises the value and importance of public engagement and have made this an integral part of its research agenda.  The primary objective is to inform the general public (all age ranges) on high quality research data collected by the EPIC-Norfolk researchers team relating to diet, lifestyle choices, ageing and health and also to promote awareness of healthy living. The secondary objective is to make science more accessible and better understood in society. A list of public events including activities designed for younger individuals presented at the Cambridge Science Festival for the past few years can be found at http://www.srl.cam.ac.uk/epic/publicevents.shtml. \nIn 2015, the EPIC-Norfolk researchers developed (and continue to manage) a web based system where other researchers taking part in the  Cambridge festival could contribute their activities to  be catalogued that could then be borrowed by schools  and local community group setting.  Information on this ‘library’ can be found at http://www.sciencefestival.cam.ac.uk/resources\n\nThe University of Cambridge also actively promote participant involvement in this research. The University of Cambridge set up an advisory panel in 2010 to act as a consultation group to advise us on the research. The EPIC-Norfolk Participant Advisory Panel (EPAP) has been involved in all aspects of the research project from designing health questionnaires, writing of lay summaries, participant information, dissemination of results and providing a lay perspective on potential projects being considered for the future. The panel met three times in 2015, details of the meetings can be found at http://www.srl.cam.ac.uk/epic/participant_panel_archive_2015.html. Further information on EPAP can be found at http://www.srl.cam.ac.uk/epic/participant_panel.html \n\nThe University of Cambridge held a public meeting to celebrate 20 years of EPIC-Norfolk research in 2013 . Details of this meeting and the posters presentations can be found at http://www.srl.cam.ac.uk/epic/20yr_meeting.shtml\n\nRecent Selected Conferences where EPIC data has been presented\n7-9 December 2015  nutrition society winter conference.\nOral presentation: \"Total (food and supplement) n-3 PUFA intake is associated with lower Coronary Heart Disease mortality, independently of fish intake\".\n\nMarch 2015\nAmerican Heart Association Scientific sessions Lifestyle and Epidemiology\nScience Festival Cambridge  \nInstitute of Child Health London \nGP Forum Norfolk\n\nMay 2015\nInternational society for Atherosclerosis Scientific symposium\n\nAugust 2015\nEuropean Society of Cardiology\n\nSeptember 2015\nEuropean Association for the Study of Diabetes \nNordic Epidemiology Conference\n\nOctober 2015\nSingapore/Cambridge Scientific symposium\n\nNovember 2015\nNetherlands Symposium on dietary saturated fats\nCambridge Denmark Symposium\n\n2015\nAmerican Heart Association Scientific Sessions on  Epidemiology and Lifestyle March 2015 Baltimore USA\nPlenary invited Lecture on Optimizing Cardiovascular Health: examples from the EPIC-Norfolk study\n\n17th International Symposium on Atherosclerosis May 2015 Amsterdam\nInvited lectures on \n•\tEpidemiology and prevention of Cardiovascular disease\n•\tCardiovascular disease risk prediction\nBoth presenting EPIC-Norfolk data \n\nInternational Society of Cardiovascular Disease Epidemiology and Prevention, seminar Fiji June 2015\nCardiovascular disease Epidemiology and Prevention examples from EPIC-Norfolk\n\nCancer Research UK Researchers Scientific sessions Leeds July 2015\nPopulation Research on Cancer aetiology and prevention:  examples from the EPIC Norfolk study\n\nCambridge Science Festival March 12 2015 Cambridge \nVitamin D and health –findings from EPIC-Norfolk \n\nUniversity College London Institute of child Health March 2015 London\nAgeing and lifecourse   - data from EPIC-Norfolk\nPoster presentation at the Nutrition Society's Summer Meeting in July 2015\n\n2014\nOslo University     Department of Medicine \nObesity and genetics – EPIC Norfolk findings\n\nKarolinska Institute  Stockholm  April 2014\nIs Ageing modifiable:  findings from EPIC-Norfolk\n\nCambridgeScience and Policy  June 2014\nWork shop on ageing – data from  EPIC-Norfolk\nARVO – Association of Research into Vision and Ophthalmology (also presented 2011, 2012, 2013)\nAmerican association of Ophthalmologists (also presented in 2012, and 2013) \nNutrition Society meetings (also presented in 2007, 2011, 2013,)\nCardiovascular Research Trust (2014)\n\n2013 and before\nRoyal College of Ophthalmologists 2013\nFaculty of Public Health annual conference 2012\nVision 2020 UK in 2012\nOral presentation at ICDAM 2006 in Copenhagen\nInternational Conference of Dietary and Activity Methods (2012 and 2006)\n\nHundreds of manuscripts on EPIC data have been published in journals.  The most common journals in which manuscripts have been published are (number indicates number of manuscripts per journal):\n       \n         109 Int J Cancer\n        80 Cancer Epidemiol Biomarkers Prev\n        72 Am J Clin Nutr\n        61 Eur J Clin Nutr\n        50 Public Health Nutr\n        36 Int J Epidemiol\n        36 Br J Nutr\n        36 Am J Epidemiol\n        30 PLoS One\n        29 Nat Genet\n        26 Diabetologia\n        24 Cancer Causes Control\n        23 Br J Cancer\n        21 Hum Mol Genet\n        21 Eur J Epidemiol\n        20 Carcinogenesis\n        19 J Natl Cancer Inst\n\nThere have been many more publications in many other journals.",
+  "a96b1bd03f64": "The European Prospective Investigation into Cancer (EPIC) is a long-standing research project that was established to examine the relationship between lifestyle, in particular, diet and physical activity, biological factors and health outcomes.  EPIC is an international ten country collaboration, coordinated by the International Agency for Research into Cancer in Lyon, which is part of World Health Organisation, such that collaborating partners agreed on a core protocol for the collection and standardisation of data throughout EPIC. However, each individual cohort has also developed specialist areas for investigation.  This agreement relates to the Norfolk component of EPIC (EPIC-Norfolk) and the follow-up on approximately 30, 000 men and women aged 40-79 resident in Norfolk at the time of recruitment. Data provided by NHS Digital will not be shared with collaborating partners or any other organisation that is not listed in this agreement except as aggregated data with small numbers supressed (in line with the HES analysis guide).\n\nThe scientific and public health strength of the population cohort is that through routine record linkage, the researchers of University of Cambridge are able to follow up the whole cohort who originally participated for health outcomes. Access to data only for the subset that, almost 25 years later are able to provide new signed informed consent will bias the follow up hugely, and make subsequent follow up and results impossible to interpret. The substantial investment of effort by participants over nearly 2.5 decades in contributing to this research and increasingly valuable information from long-term follow-up of the whole population will be lost. S.251 approval was therefore obtained because reconsenting would reduce participation rates. Also, non-fatal disease is an important area of the research and access to linked HES data is essential to analyse.  Many diseases cannot be studied using mortality data alone as the diseases do not cause a death and may only occasionally appear on death certificates.  These would include diabetes, eye diseases such as glaucoma, bone diseases such as osteoporosis, frailty and sarcopenia, inflammatory bowel diseases and dementia.  Hospital usage is another important area for future research.\n\nEPIC-Norfolk is a flagging study and data from NHS Digital is restricted to the 30,445 EPIC-Norfolk participants recruited at inception of the study. All participants in the study have to date been followed up through routine data linkage for mortality with death certification by cause, and cancer incidence through cancer registration and linkage with hospital records, GP records and other disease registers. This has allowed for the follow-up for a large range of health outcomes that are relevant to an ageing population. The data has been subjected to ongoing analysis to determine links between dietary and lifestyle factors and health outcomes.\n\nLinkage strengthens the study by allowing the follow-up of participants who drop out of the study due to health reasons or death. It also allows the validation of self-reported conditions such as Parkinson's disease, dementia and stroke.  Access to death data provides information on mortality but is also used for administrative purposes to prevent inappropriately mailing to participants who have died and thus avoiding unnecessary distress to family members.  Events identified through record linkage will be documented and linked with data collected from individuals on lifestyle so that the University of Cambridge can assess associations between lifestyle and subsequent health outcomes.\n\nThe University of Cambridge has combined mortality data and Hospital Episode Statistics data to define outcomes for fatal and non-fatal incident diseases.  For example, the University of Cambridge can define an outcome of heart disease using the same range of ICD 10 codes applied to both fatal events from death certificates and non-fatal events from hospital admissions. Data from NHS Digital is processed by a restricted number of trained staff within the EPIC-Norfolk team, Cambridge School of Clinical Medicine, Cambridge. Data is not accessed outside the UK. On-going updates of data are necessary for the accurate follow-up of participants.\n\nOver 600,000 people in the UK suffer from dementia, costing over £17 billion a year. Dementia is an extremely important health issue. Figures released by the Office of National Statistics showed dementia replacing ischaemic heart diseases as the leading cause of death registered in England and Wales in 2015. Several studies have shown the increased risk of mortality not only with dementia but also cognitive impairment.  However, in an ageing population, understanding the influence of poor cognitive performance on mortality and health endpoints is also important in terms of advising on public health as this is likely to affect far more individuals than those with impaired cognition. With the data collected over the past 2.5 decades, EPIC will be able to examine associations of a range of lifestyle factors and dementia outcomes and mortality. EPIC-Norfolk study is a partner of Dementia Platform UK (DPUK) to further develop understanding of predictors of dementia outcomes.  From the latest 2016 updates from NHS Digital, 2 manuscripts are currently in progress 1/ Investigating Cognitive Performance as a Predictor of Mortality in EPIC-Norfolk and 2/ Hospital use in the last year of life. The data analysis for both these papers were done by researchers with substantive contracts and approved users under the DSA. However even in these cases, the NHS Digital data used were in aggregated format, with small numbers supressed.\n\nThis agreement relates to data already held and additional HES years and the Mental Health Minimum Dataset (MHMDS) that have not been requested previously. The MHMDS is extremely important for dementia case ascertainment as dementia diagnoses cannot be adequately captured from the HES data. Having the MHMDS will give better and more accurate estimates of dementia numbers. Currently, dementia diagnoses are significantly underestimated with the data available to this study. Having the accurate figures is necessary for current work examining predictors of dementia outcomes. Again data provided by NHS Digital will only be shared with collaborating partners (including DPUK), as aggregated data with small numbers supressed (in line with the relevant guidance).\n\nThere are a number of scientific reasons as to why the earlier HES data is important. This data will allow validation of the self-report from the earliest point of the study allowing the identification of pre-existing conditions. Information on existing disease can also be used in the analysis to account for reverse causality and confounding. Furthermore, HES data gives national coverage of health whereas previously, when the study obtained health outcomes locally, this was only from local healthcare providers. Thus participants receiving medical care or a diagnosis elsewhere would not always be included in available records. Currently, information is missing on individuals who may have had treatment or diagnoses in other hospitals outside Norfolk. The information is not always available from GP practices. Having access to earlier HES years will provide information that is currently missing.  Missing data can have serious impact on research, resulting in biased estimates, reduce statistical power and weaken findings that would be difficult to publish.\nEPIC-Norfolk is an ongoing longitudinal study.  The University of Cambridge received last HES update in 2016.  The study continues to use outcome measures from HES data in publications and it is essential for the study to have up to date events for a number of reasons;\n• Firstly, the statistical power of the analyses depends on the number of known events.  Less common outcomes can only be studied with sufficiently long follow-up and event numbers.  \n• Secondly, EPIC-Norfolk has made multiple approaches to the cohort.  Each approach is a new baseline and is necessary to have non-fatal events   \n• Thirdly, journals are unwilling to accept publications where the outcomes presented are too old since the missing information may affect the results and their interpretation.",
+  "ab6ebd19a46e": "With the permission of the GPs, all patients on their registers born between 01/01/1918 and 31/12/1957 were invited to join EPIC.  Those who consented were asked to provide information via questionnaires and undertake health checks. All participants attending the baseline health examination provided signed informed consent at inception of the study agreeing to provide lifestyle and health data and biological samples for this study and access to medical records. Participants provided signed informed consent again for subsequent attendance at follow up examinations in 1997-2005, in 2006-2011 and 2012-present. At each point the University of Cambridge have updated the consent process to be in line with the current guidelines. This included permission for access to medical records. The study has also received approval from the Norfolk and Norwich Ethics committee of each phase as well as clarification of previous permissions to be in line with current standards.\n\nEPIC-Norfolk is a flagging study and data form HSCIC (and previously ONS) is restricted to the EPIC-Norfolk participants. All participants in the study have to date been followed up through routine data linkage for mortality with death certification by cause, and cancer incidence through cancer registration and linkage with hospital records, GP records and other disease registers. This has allowed for the follow up for a large range of health outcomes that are relevant to an ageing population. The data has been subjected to ongoing analysis to determine links between dietary and lifestyle factors and health outcomes.\n\nAll participants in the study have to date been followed up through routine data linkage for mortality with death certification by cause, and cancer incidence through cancer registration and linkage with hospital records, GP records and other disease registers.  This has allowed for the follow up for a large range of health outcomes that are relevant to an ageing population.  The data has been subjected to ongoing analysis to determine links between dietary and lifestyle factors and health outcomes.\n\nLinkage strengthens the study by allowing the follow up of participants who drop out of the study due to health reasons or death. It also allows the validation of self-reported conditions such as Parkinson's disease, dementia  or stroke.  Access to death data provides information on mortality but is also used for administrative purposes to prevent inappropriately mailing to participants who have died.  \n\nEvents identified through record linkage will be documented and linked with data collected from individuals on lifestyle so that the University of Cambridge can assess associations between lifestyle and subsequent health outcomes.\n\nThe University of Cambridge combines mortality data and Hospital Episode Statistics data to define outcomes for fatal and non-fatal incident diseases.  For example, the University of Cambridge can define an outcome of heart disease using the same range of ICD 10 codes applied to both fatal events from death certificates and non-fatal events from hospital admissions.\n\nData from HSCIC is processed by a EPIC-Norfolk team within the Department of Public Health and Primary Care University of Cambridge School of Clinical Medicine, Cambridge. Data is not accessed outside the UK. On-going updates of data are necessary for the accurate follow up of participants.",
+  "ba8628dfd466": "Data from NHS-Digital are downloaded by the data manager and placed at the University of Cambridge School of Clinical Medicine Secure Data Handling Area assigned for the EPIC-Norfolk study.  One or more members of the informatics team all of whom are substantive employees of the University of Cambridge examine the file and run a set of programs using statistical software developed internally to make the data suitable for further use.  Several further programs run by members of the informatics team are then used to aggregate and reshape the data in order that it is suitable for the purpose of analysis.  \n\nData provided by NHS Digital is linked to other data collected which is detailed in the objectives for processing.  \n\nData provided by NHS Digital will not be linked further than those data linkages permitted under this application. \n\nAccess to data is provided under role based access controls. Data that are  provided to researchers (collaborators) and students, who are not are substantive employees of University of Cambridge, are aggregated with small numbers suppressed (as per the relevant guidelines).  \n\nAll outputs will be restricted to aggregate data with small numbers supressed in line with the HES Analysis Guide and relevant Mental Health suppression rules. \n\nMental Health Minimum Data Set:\nDisclosure control rules (valid until superseded by disclosure controls published by NHS Digital):\nFor data from the Mental Health (MHSDS, MHLDDS, MHMDS) data sets, and any Mental Health data linked to HES or SUS, the following disclosure control rules must be applied:\n•           National-level figures only may be presented unrounded, without small number suppression\n•           Suppress all numbers between 0 and 5\n•           Round all other numbers to the nearest 5\n•           Percentages can be calculated based on unrounded values, but need to be rounded to the nearest integer in any outputs \n•           In addition for Learning Disability data in Mental Health (MHSDS, MHLDDS, MHMDS), the England-level data also must apply the suppression of all numbers between 0 and 5, and rounding of other numbers to the nearest 5.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe data from NHS Digital will not be used for any other purpose other than that outlined in this Agreement.\n\nPersonal identifiable data that is used to identify and contact participants (which are never used for data analysis by researchers) are safeguarded in line with current legislation and guidelines that are in line with NHS organisations. These data are kept separate from the data that are used for analysis.\n\nThe death notification data will only be used to highlight those participants that have passed away to avoid writing to these individuals (or any other contact) thus avoiding potential distress to their families. \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "c25c4b3b6d70": "Data from NHS-Digital are downloaded by the data manager and placed at the University of Cambridge School of Clinical Medicine Secure Data Handling Area assigned for the EPIC-Norfolk study.  One or more members of the informatics team all of whom are substantive employees of the University of Cambridge examine the file and run a set of programs using statistical software developed internally to make the data suitable for further use.  Several further programs run by members of the informatics team are then used to aggregate and reshape the data in order that it is suitable for the purpose of analysis.  \n\nData provided by NHS Digital is linked to other data collected which is detailed in the objectives for processing.  \n\nData provided by NHS Digital will not be linked further than those data linkages permitted under this application. \n\nAccess to data is provided under role based access controls. Data that are  provided to researchers (collaborators) and students, who are not are substantive employees of University of Cambridge, are aggregated with small numbers suppressed (as per the relevant guidelines).  \n\nAll outputs will be restricted to aggregate data with small numbers supressed in line with the HES Analysis Guide and relevant Mental Health suppression rules. \n\nMental Health Minimum Data Set:\nDisclosure control rules (valid until superseded by disclosure controls published by NHS Digital):\nFor data from the Mental Health (MHSDS, MHLDDS, MHMDS) data sets, and any Mental Health data linked to HES or SUS, the following disclosure control rules must be applied:\n•           National-level figures only may be presented unrounded, without small number suppression\n•           Suppress all numbers between 0 and 5\n•           Round all other numbers to the nearest 5\n•           Percentages can be calculated based on unrounded values, but need to be rounded to the nearest integer in any outputs \n•           In addition for Learning Disability data in Mental Health (MHSDS, MHLDDS, MHMDS), the England-level data also must apply the suppression of all numbers between 0 and 5, and rounding of other numbers to the nearest 5.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe data from NHS Digital will not be used for any other purpose other than that outlined in this Agreement.\n\nPersonal identifiable data that is used to identify and contact participants (which are never used for data analysis by researchers) are safeguarded in line with current legislation and guidelines that are in line with NHS organisations. These data are kept separate from the data that are used for analysis.\n\nThe death notification data will only be used to highlight those participants that have passed away to avoid writing to these individuals (or any other contact) thus avoiding potential distress to their families.",
+  "c9be27eda562": "The European Prospective Investigation into Cancer (EPIC) is a long-standing research project that was established to examine the relationship between lifestyle, in particular, diet and physical activity, biological factors and health outcomes.  EPIC is an international ten country collaboration, coordinated by the International Agency for Research into Cancer in Lyon, which is part of World Health Organisation, such that collaborating partners agreed on a core protocol for the collection and standardisation of data throughout EPIC. However, each individual cohort has also developed specialist areas for investigation.  This agreement relates to the Norfolk component of EPIC (EPIC-Norfolk) and the follow-up on approximately 30, 000 men and women aged 40-79 resident in Norfolk at the time of recruitment. Data provided by NHS Digital will not be shared with collaborating partners or any other organisation that is not listed in this agreement except as aggregated data with small numbers suppressed (in line with the HES analysis guide).\n\nThe scientific and public health strength of the population cohort is that through routine record linkage, the researchers of University of Cambridge are able to follow up the whole cohort who originally participated for health outcomes. Access to data only for the subset that, almost 25 years later are able to provide new signed informed consent will bias the follow up hugely, and make subsequent follow up and results impossible to interpret. The substantial investment of effort by participants over nearly 2.5 decades in contributing to this research and increasingly valuable information from long-term follow-up of the whole population will be lost. S.251 approval was therefore obtained because reconsenting would reduce participation rates. Also, non-fatal disease is an important area of the research and access to linked HES data is essential to analyse.  Many diseases cannot be studied using mortality data alone as the diseases do not cause a death and may only occasionally appear on death certificates.  These would include diabetes, eye diseases such as glaucoma, bone diseases such as osteoporosis, frailty and sarcopenia, inflammatory bowel diseases and dementia.  Hospital usage is another important area for future research.\n\nEPIC-Norfolk is a flagging study and data from NHS Digital is restricted to the 30,445 EPIC-Norfolk participants recruited at inception of the study. All participants in the study have to date been followed up through routine data linkage for mortality with death certification by cause, and cancer incidence through cancer registration and linkage with hospital records, GP records and other disease registers. This has allowed for the follow-up for a large range of health outcomes that are relevant to an ageing population. The data has been subjected to ongoing analysis to determine links between dietary and lifestyle factors and health outcomes.\n\nLinkage strengthens the study by allowing the follow-up of participants who drop out of the study due to health reasons or death. It also allows the validation of self-reported conditions such as Parkinson's disease, dementia and stroke.  Access to death data provides information on mortality but is also used for administrative purposes to prevent inappropriately mailing to participants who have died and thus avoiding unnecessary distress to family members.  Events identified through record linkage will be documented and linked with data collected from individuals on lifestyle so that the University of Cambridge can assess associations between lifestyle and subsequent health outcomes.\n\nThe University of Cambridge has combined mortality data and Hospital Episode Statistics data to define outcomes for fatal and non-fatal incident diseases.  For example, the University of Cambridge can define an outcome of heart disease using the same range of ICD 10 codes applied to both fatal events from death certificates and non-fatal events from hospital admissions. Data from NHS Digital is processed by a restricted number of trained staff within the EPIC-Norfolk team, Cambridge School of Clinical Medicine, Cambridge. Data is not accessed outside the UK. On-going updates of data are necessary for the accurate follow-up of participants.\n\nOver 600,000 people in the UK suffer from dementia, costing over £17 billion a year. Dementia is an extremely important health issue. Figures released by the Office of National Statistics showed dementia replacing ischaemic heart diseases as the leading cause of death registered in England and Wales in 2015. Several studies have shown the increased risk of mortality not only with dementia but also cognitive impairment.  However, in an ageing population, understanding the influence of poor cognitive performance on mortality and health endpoints is also important in terms of advising on public health as this is likely to affect far more individuals than those with impaired cognition. With the data collected over the past 2.5 decades, EPIC will be able to examine associations of a range of lifestyle factors and dementia outcomes and mortality. EPIC-Norfolk study is a partner of Dementia Platform UK (DPUK) to further develop understanding of predictors of dementia outcomes.  From the latest 2016 updates from NHS Digital, 2 manuscripts are currently in progress 1/ Investigating Cognitive Performance as a Predictor of Mortality in EPIC-Norfolk and 2/ Hospital use in the last year of life. The data analysis for both these papers were done by researchers with substantive contracts and approved users under the DSA. However even in these cases, the NHS Digital data used were in aggregated format, with small numbers supressed.\n\nThis agreement relates to data already held and additional HES year, the Mental Health Minimum Dataset (MHMDS), and Mental Health and Learning Disabilities Data Set (MHLDDS) that have not been requested previously. The MHMDS is extremely important for dementia case ascertainment as dementia diagnoses cannot be adequately captured from the HES data. Having the MHMDS will give better and more accurate estimates of dementia numbers. Currently, dementia diagnoses are significantly underestimated with the data available to this study. Having the accurate figures is necessary for current work examining predictors of dementia outcomes. Again data provided by NHS Digital will only be shared with collaborating partners (including DPUK), as aggregated data with small numbers supressed (in line with the relevant guidance).\n\nThere are a number of scientific reasons as to why the earlier HES data is important. This data will allow validation of the self-report from the earliest point of the study allowing the identification of pre-existing conditions. Information on existing disease can also be used in the analysis to account for reverse causality and confounding. Furthermore, HES data gives national coverage of health whereas previously, when the study obtained health outcomes locally, this was only from local healthcare providers. Thus participants receiving medical care or a diagnosis elsewhere would not always be included in available records. Currently, information is missing on individuals who may have had treatment or diagnoses in other hospitals outside Norfolk. The information is not always available from GP practices. Having access to earlier HES years will provide information that is currently missing.  Missing data can have serious impact on research, resulting in biased estimates, reduce statistical power and weaken findings that would be difficult to publish.\nEPIC-Norfolk is an ongoing longitudinal study.  The University of Cambridge received last HES update in 2016.  The study continues to use outcome measures from HES data in publications and it is essential for the study to have up to date events for a number of reasons;\n\n• Firstly, the statistical power of the analyses depends on the number of known events.  Less common outcomes can only be studied with sufficiently long follow-up and event numbers.  \n• Secondly, EPIC-Norfolk has made multiple approaches to the cohort.  Each approach is a new baseline and is necessary to have non-fatal events   \n• Thirdly, journals are unwilling to accept publications where the outcomes presented are too old since the missing information may affect the results and their interpretation. \n\nIn this amendment. we have requested additionally, the Mental Health Services Data (MHSDS) and Mental Health and Learning Disabilities Data Set (MHLDDS) which we were unaware of at the time of the original application. This dataset contains the latest figures for dementia cases that are not held with the Mental Health Minimum Dataset (MHMDS). It is extremely important to maximise on numbers and have the longest follow-up time from the cognitive measures taken between 2004-2011 for accurate analysis of the data. Combining the figures from MHMDS, MHSDS and MHLDDS  will give better and more accurate estimates of dementia numbers.  We are also requesting additional HES years that have become available since the original application, again, this is to provide the most recent updates on health outcomes to allow accurate data analysis for publications for the reasons given above."
+ }
+}

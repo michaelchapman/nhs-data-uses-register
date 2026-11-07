@@ -1,0 +1,94 @@
+{
+ "base_reference": "DARS-NIC-25945-T8Q0Z",
+ "versions": [
+  {
+   "reference": "DARS-NIC-25945-T8Q0Z-v3.3",
+   "version": "3.3",
+   "organisation": "QUEEN MARY UNIVERSITY OF LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "objective": "a27cfbb48387",
+     "activities": "b24dc66c75ba",
+     "expected_output": "842538db7c55",
+     "expected_benefits": "cf1a2df97992"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "842538db7c55": "Data outputs produced will not contain any patient identifiable data or be shared with any third party organisation. The only outputs produced will be publications for research purposes using aggregated data with small number suppression in line with the HES Analysis Guide.\n\nAt this point in time, QMUL cannot comment on the name of journal or conferences as it will depend on the result. Possible journals include PLOS Medicine, Gastroenterology or Gut. The conferences would be Digestive Disease Week and/or United European Gastroenterology Week. It is not yet possible to give a time frame as the length of time to obtain the data has already extended longer than anticipated but once data has been received QMUL expect processing to be completed in around 4-6 months.",
+  "a27cfbb48387": "The BEST2 study was set up to investigate the safety and performance of the Cytosponge™ test for diagnosing Barrett's Oesophagus (BE) over three years. It is a case-control study, participants (1344 men/women aged 18-60 years) are either patients with known BE (860) or controls individuals' with reflux or indigestion (dyspepsia) symptoms referred for endoscopy (484).  All participants swallowed a Cytosponge™ device prior to endoscopy, which is processed for a number of different biomarkers. Results are then compared with endoscopy findings. After the first year of study all cases completed Cytosponge™ and endoscopy procedures. The BEST2 study would like to follow-up participants using HES information in order to collect long-term efficacy and safety data. \n\nThe main objective is to assess the reproducibility and efficiency of the Cytosponge™ procedure and results to determine the risk of cancer progression, and to compare with endoscopic biopsies, for potential use in the NHS or other health care setting. The Cytosponge™ test showed a specificity of 92% and a sensitivity of around 80% which increases with segment length and is not compromised in the presence of dysplasia. The Cytosponge™-TFF3 test could be used to diagnose patients who would otherwise be referred to endoscopy to rule out BE and therefore be a more systematic screening test for use in primary care. \n\nFollow up of all participants is needed to continue monitoring the presence of dysplasia and any risks of cancer progression. Currently guidelines recommend endoscopic screening for BE in individuals with multiple risk factors. However, the cost advantages associated with the Cytosponge™-TFF3 test means screenings could be offered to a larger number, thereby improving the potential to correctly identify a greater amount of newly diagnosed BE cases.\nThe BEST2 study trial site (Cambridge) propose to provide the identifiable data to HSCIC, for all participants that have consented to this, for linkage. HSCIC will return the linked data set with any patient identifiable information (NHS number, names etc) that Cambridge previously sent to the HSCIC along with requested data sets. Identifiable data is requested so that Cambridge can update any new information on the cohort in order to contact participants. Cambridge will not contact the patients directly but will inform the participants GP who in turn will discuss with the participant. Cambridge will then send a patient level pseudonymised version of this data set to QMUL for further processing linked using a unique study ID.\n\nData linkage will improve the quality and integrity of data already collected. All clinical data received, will be stored in a distinctly separate database to the patient identifiable data.\nThe data will not be used for any purpose other than to meet objectives as stated in the trial protocol & will not be shared with any third party organisation. Any information which is used for publication in peer reviewed journals will be anonymised (i.e. aggregated data) & not presented at the individual level.",
+  "b24dc66c75ba": "The data will be processed jointly by Cambridge university and the data controller QMUL. Cambridge university will send the cohort data to the HSCIC for data linkage. Once returned from the HSCIC Cambridge will integrate the data into their database updating any new patient information. Then the identifiable information received from the HSCIC will be removed by Cambridge and this anonymised data set will be sent (via secure encrypted data transfer) to QMUL linked via a unique identifier.\n\nQMUL will use this data to link baseline Cytosponge™ findings to disease progression. The following outcomes will be monitored; Barrett’s oseophagus, Barrett’s high grade dysplasia, adenocarcinoma of the oesophagus, squamous cell carcinoma of the oesophagus and oesophageal cancer.\n\nAll data received at the QMUL Centre for Cancer Prevention, (CCP), are stored electronically on an Oracle database (Oracle 11g). The system is self-contained within the Barts Cancer Research Centre (QMUL) network, within the Queen Mary University of London (QMUL) network, but firewalled off from the rest of the network, in addition to external connections.",
+  "cf1a2df97992": "The BEST2 study recruited 1344 men and women within the UK with either known Barrett's Oesophagus (cases) or individuals with reflux or indigestion symptoms referred for endoscopy (controls). All participants were screened with the Cytosponge™ device to test its potential in determining the risk of cancer progression (in conjunction with biomarkers of risk). The results were then compared to routine endoscopy findings. The study objectives are as follows:\n\nPrimary objectives\nQMUL are interested in obtaining the data from these patients to link the biomarker work performed on the samples collected and the risk of progression to cancer.\nPerformance and safety characteristics of the Cytosponge™ test\nEffectiveness of the Cytosponge™ for diagnosing BE compared with endoscopy, including specificity (from controls) and sensitivity (from cases)\nFor patients with BE, the ability of Cytosponge™ biomarkers to risk stratify patients, according to their future cancer risk in comparison with the dysplasia grade obtained from endoscopic biopsies.\n\nSecondary objectives\nDifferential sensitivity of screening BE with dysplasia (low and high grade) compared to non-dysplastic BE.\nDetermine the reproducibility of the Cytosponge™ result by repeated testing in a subset of individuals \nLogistics of high-throughput sample processing and automated analysis of Cytosponge™ specimens for use in routine NHS or other health care settings.\nSurplus material will be used for testing emerging biomarkers.\nAnalysis of NHS records will help measure long term effectiveness of the Cytosponge biomarkers to risk stratify patients. In addition to identifying its efficacy in an NHS setting as an alternative to endoscopies. The potential benefits of this research include reducing the use of invasive procedures for patients and by providing evidence for policy decision makers for the use of a safe, minimally invasive, cheaper, and easily administered method to diagnose and screen for this condition\n\nA target date has not yet been assessed due to the unknown level of data expected to be received as processing time cannot be estimated yet."
+ }
+}

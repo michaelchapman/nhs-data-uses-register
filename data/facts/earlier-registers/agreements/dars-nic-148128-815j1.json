@@ -1,0 +1,104 @@
+{
+ "base_reference": "DARS-NIC-148128-815J1",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148128-815J1",
+   "version": "",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "objective": "77dccc86cd9f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "The Health and Social Care Act 2012 is in place for the flow of identifiable data to and from the HSCIC. Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "The Health and Social Care Act 2012 is in place for the flow of identifiable data to and from the HSCIC. Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "The Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148128-815J1-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "d3be5b62c0c8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "77dccc86cd9f": "To maintain confidential paediatric and obstetric registers for the national surveillance of HIV and AIDS.  To monitor and assess and to provide obstetricians and paediatricians with up to date data on HIV/AIDS epidemic in women and children, and with information on the major issues of treatment and prevention. By flagging study members changes in treatment practice and the Long term sequelae of fetal/childhood exposure to antiretrovial therapy will be monitored.",
+  "d3be5b62c0c8": "The data supplied by the NHS IC to UCL Institute of Child Health will be used only for the approved Medical Research Project, National Mother and Child Cohort."
+ }
+}

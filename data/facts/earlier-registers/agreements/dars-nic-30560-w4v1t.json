@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-30560-W4V1T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-30560-W4V1T-v0.5",
+   "version": "0.5",
+   "organisation": "University of Bristol",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "b931a2ba6458",
+     "activities": "6a01bd766553",
+     "expected_output": "3b9b03634019",
+     "expected_benefits": "8b0672d0a6fb"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 14
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3b9b03634019": "1)\tFinal report to the NIHR HTA which will contain a chapter including a comparison of the use and cost of hospital care among participants in the DRIFT trial.  It is anticipated that the final report based on the HES data will be submitted in Autumn 2016.\n\n2)\tPeer reviewed article reporting on the cost effectiveness of the DRIFT procedure in a high impact medical journal.  Target date late 2016.\n\n3)\tResults of the DRIFT school age trial will be presented at the European Academy of Paediatric Societies, Geneva October 2016.  \n\n4)\tThe University of Bristol will notify the NICE interventional procedure advisory committee of its findings so that they can update the NICE guidance, should the evidence support this.\n\nAll outputs will include only aggregate data with small numbers suppressed in line with the HES Analysis Guide.  No record level data will be shared with any third parties.",
+  "6a01bd766553": "1. The DRIFT project team at University Hospitals Bristol (UHB) will prepare a file containing the DRIFT study participant ID and patient identifiers (NHS number, date of birth and postcode at birth) to allow linkage to HSCIC data.  Parents have provided informed consent for hospital episode statistics to be used in this research project. This file will be securely transferred to the HSCIC.\n\n2. The HSCIC will use the identifiers to link to non-sensitive HES data on hospital admissions since birth.  The HSCIC will prepare a file containing the DRIFT study participant ID linked to HES Pseudo ID (where a match has been found) and HES data. This file will be securely transferred to the DRIFT project team at the University of Bristol under the provisions of the Health & Social Care Act 2012.\n\n3. All data analysis will be performed by the DRIFT project team at the School of Social Medicine, University of Bristol   (UOB-SSCM) according to its System Level Security Policy (SLSP) for HES data.\n\n4. Upon receiving the data from the HSCIC, UOB-SSCM will store it on its secure server located at Canynge Hall, Bristol.   The data can only be accessed by authorized personnel with user accounts on UOB-networked computers.  The network can be accessed remotely but all processing is logically on the server based at Canynge Hall and no data is removed from that server. Data will only be accessed by substantive employees of University of Bristol.\n\n5. The data will be used to compare the use of hospital care between children who received the DRIFT procedure and those who received standard care. The pseudonymised data supplied by the HSCIC will not be reidentified nor linked with the UHB’s identifiable data or any other data.",
+  "8b0672d0a6fb": "Infants born prematurely are at high risk of brain injury and major disabilities/neurodevelopmental impairments later in life. Bleeding into the ventricles of the brain is one of the most common consequences of being born very early and has a very high rate of serious disability such as cerebral palsy and learning difficulties. Drainage, irrigation and fibrinolytic therapy (DRIFT) was developed as a method of washing out the ventricles to clear the effects of the bleeding.  The DRIFT randomised trial was conducted in 2003-2006 among 74 premature babies (with parental consent) with bleeding into the ventricles. Babies were randomly allocated to get either DRIFT or standard therapy.  When neurodevelopment was assessed by “blinded” observers at 2 years, severe disability or death was significantly reduced in the DRIFT group. There was a large reduction in severe learning difficulties from 59% to 31% in the DRIFT group compared to the control group.  However longer term follow up at school age is needed as cognitive testing at 2 years is limited and can be difficult in children with motor impairment.\n\nIn its current guidance to the NHS, NICE currently does not recommend drainage, irrigation and fibrinolytic therapy (DRIFT) because there is insufficient evidence.  If the DRIFT school age follow up study demonstrates that DRIFT is effective for children and cost-effective for the NHS, NICE will update its recommendations.  If so, measurable health benefits among thousands of premature infants with bleeding into the ventricles of the brain treated with DRIFT would be expected from 2017 onwards.  Expected benefits range from saving babies' lives to improving lives (e.g. by enabling children to attend ordinary schools rather than specialised schools).\n\nResults will also be relayed to the patient group via newsletters and will be shared with relevant charities such as Bliss.",
+  "b931a2ba6458": "Between 2003 and 2006 the DRIFT study recruited premature infants with post-haemorrhagic ventricular dilatation. Infants were randomised to receive a novel treatment (drainage, irrigation and fibrinolytic therapy [DRIFT]) or standard therapy which consisted of lumbar punctures and if needed a ventricular reservoir to drain cerebrospinal fluid.  Initial results (at age 2) were promising.\n\nIn 2014, the NIHR Health Technology Assessment programme funded the DRIFT research team (based at University Hospitals Bristol and the University of Bristol) to conduct long term follow up of children at school age (i.e. 9 to 11 years). The aims of this long term follow up were to:\n\n1) To compare cognitive function, visual function, sensorimotor ability and emotional wellbeing, between the two treatment groups in the DRIFT trial at school age.\n2) To quantify functional status and use of community and specialist health and educational services.\n3) To estimate the economic cost and outcomes of the DRIFT intervention by age 11, and model long-term costs and outcomes.\n4) To quantify degree of ventricular dilatation and neurosurgical sequelae in the two treatment groups by clinical neuroimaging.\n\nAs part of aim 3, the University of Bristol requests data from HSCIC on hospital care received by DRIFT participants since birth. The specific requirement is for Hospital Episode Statistics (HES) data on the subset of DRIFT participants who were born in England and whose parents have provided consent for us to access routinely collected health data.\n\nThe analysis of HES data is taking place solely at the University of Bristol.  The data will not be made available to any third party. Without these data from the HSCIC it would not be possible to judge whether the initial cost of the DRIFT procedure results in subsequent savings to the NHS through reduced hospital care during the first 11 years of life.  If the initial costs of DRIFT are justified by NHS savings and improved health outcomes for children, this procedure will become used widely across the NHS."
+ }
+}

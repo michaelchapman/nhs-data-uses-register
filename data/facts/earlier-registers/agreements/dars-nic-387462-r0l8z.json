@@ -1,0 +1,77 @@
+{
+ "base_reference": "DARS-NIC-387462-R0L8Z",
+ "versions": [
+  {
+   "reference": "DARS-NIC-387462-R0L8Z-v1.3",
+   "version": "1.3",
+   "organisation": "CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "60216b3391ac",
+     "activities": "86c4cbc264a6",
+     "expected_output": "df0f6e162618",
+     "expected_benefits": "69559c9794b0"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "60216b3391ac": "The National Neonatal Research database (NNRD) is a source of information that utilises routinely collected NHS electronic clinical data for academic research, with the aim of supporting neonatal services and improve healthcare delivery and health outcomes for babies admitted to neonatal units. The NNRD has been created through the collaborative efforts of neonatal services across the country to be a national resource. The NNRD is maintained and managed at the Neonatal Data Analysis Unit (NDAU), an independent academic unit based at the Chelsea and Westminster Hospital NHS Foundation Trust (CWHFT) campus on behalf of Imperial College London.\n\nBirth records are an important resource for perinatal/neonatal research. Electronic health records offer potential to reduce the cost and complexity of data acquisition, and the demand placed on participants when information on long-term outcomes is sought. As such data from the NNRD, Hospital Episode Statistics (HES) and Office for National Statistics (ONS) mortality data is used in combination for research analysis.\n\nThe purpose of the project is to examine mortality, resource utilisation, re-admission rates and secondary care activity\nfollowing discharge from a neonatal unit over several years, for a cohort of infants born between 1st April 2006 and 31st\nMarch 2015 and followed up as far into childhood as made possible by the data.\n\nLinkage between a cohort of infants, created by linking NNRD to HES records, and HES/ONS Mortality to build a longitudinal cohort provides great utility, including opportunity to study the impact of early exposures and interventions on deaths and later health outcomes in specific groups of newborn infants. Linkage if performed locally by the NDAU at the Foundation Trust, as the developmental work involved in creating and refining the probabilistic linkage technique between the datasets (in instances where deterministic linkage has not succeeded) is part of the on going research and development of the database.\n\nLinkage to Office of National Statistics (ONS) mortality records will allow NDAU to identify any deaths among the infants in the cohort during their first years of life, including out-of-hospital deaths. Diagnostic information recorded in individual birth records and any subsequent hospital admission records from HES will be used to identify health conditions and surgeries associated with each hospital admission. Diagnostic information recorded in ONS mortality will be used to identify cause of deaths. The data will be analysed descriptively obtaining frequencies and percentages, and inferentially to determine associations and risk estimates.",
+  "69559c9794b0": "The results will fill a gap in knowledge about which groups of babies are at higher risk of admission to hospital, what\nconditions they present with and how many babies die in the early childhood.\n\nResults will enable health professionals to focus preventive care towards babies most at risk of hospital admissions and\ndeath. For example, by producing information about the peak age at which some respiratory infections occur, it may be\npossible to target vaccines better.\n\nThe study will enable babies admitted to all neonatal units in the country of which premature birth is one group to be\nmonitored after their discharge from hospital. This work will allow better estimates of long term health problems in infants\nadmitted to neonatal units for clinical studies evaluating new health interventions and facilitate population surveillance.\nProspective parents will receive better information about the magnitude and nature of health problems in childhood\nfollowing discharge from neonatal units.\n\nResearch findings published to date have shown which babies are at increased risk of bronchiolitis, a common respiratory condition [Murray J et al. Risk factors for hospital admission with RSV bronchiolitis in England: a population-based birth cohort study. PLoS One 2014;9:e89186].\n\nUsing the data previously received, the customer has presented preliminary results on early, late and postneonatal mortality\nrate; hospital admission rate after discharge from neonatal units; and, potential risk factors for hospital admission of infants\nborn less than 32 weeks of gestation age and admitted to neonatal units. These results reinforce the current literature and\nhighlight the importance of a systematic follow-up in primary or secondary care to reduce mortality and hospital admissions\nin this vulnerable group of infants.",
+  "86c4cbc264a6": "NDAU will link records from the cohort of infants admitted to neonatal units to subsequent hospital admission records using NHS Number, Date of Birth, Postcode and Gender as well as where possible the gestational age at birth and birth weight. HES ID will be used as an unique personal identifier. Once the linkage has occurred, the identifiers will be stripped out and the pseudonymised variant used instead, though the Date of Death is retained.\n\nWith data previously received, the NDAU linked individual records from the NNRD to HES Admitted Patient Care,\nOutpatient, and ONS Mortality records to build a birth cohort of infants admitted to neonatal units from 1 January 2010 to 31 December 2010 as part of a feasibility pilot and to begin producing results. The NNRD database at the time only\ncontained identifiers from this period, though received HES identifiers from 1st April 2006.\n\nNow that the NNRD database has been fully populated with data from this period, the NDAU can create a longitudinal\ndatabase using the birth cohort from 1st April 2006 to the 31st March 2015, linking this to HES Admitted Patient Care,\nCritical Care, Outpatient and ONS mortality data. For this cohort the HES data will be restricted to only those episodes for patients who have a birth or delivery record in HES Admitted Patient Care.  The approximate cohort size is 620,000 across the 9 years of data.\n\nThe updated dataset from HES and ONS Mortality will enable the tracking of all contacts with the health care system, as well as all death events for the cohort following discharge from neonatal unit through time. The longitudinal database that is created will be used for further analyses on mortality and morbidity in each year of life for the cohort of infants described above.\n\nNo data will be used for commercial purposes, and any outputs will have small numbers suppressed in line with the HES\nanalysis guide.",
+  "df0f6e162618": "With the data already received, NDAU has written a methodological paper on the record linkage between NNRD and HES currently in phase of submission in Health Services Research. Analysis has begun on mortality and morbidity in the first year of life for the cohort previously described. Results will be finalised into scientific papers and submitted for publication in the next quarter.\n\nPreliminary results have been presented at the Neonatal Society meetings and the Society for Academic Primary Care.\nLinking electronic records to create a birth cohort of infants admitted to neonatal units in England.\n\nNeonatal Society Autumn meeting 2014, London, UK\n(http://www.neonatalsociety.ac.uk/meetings/2014_autumn_abstracts.pdf); One-year mortality of very preterm infants\nadmitted to neonatal units in England. Neonatal Society Spring meeting 2015, London, UK\n(http://www.neonatalsociety.ac.uk/meetings/2015_spring_abstracts.pdf);\n\nFrequency and risk factors for hospital readmission of very preterm infants to age one year, 44th Annual Conference of the Society for Academic Primary Care, July 2015, Oxford, UK (https://sapc.conferenceservices.\nnet/reports/template/onetextabstract.xml? xsl=template/onetextabstract.xsl&conferenceID=3890&abstractID=855380)].\n\nThe NDAU will continue to update the longitudinal birth cohort already created and that will be used to examine secondary care activity following discharge from a neonatal unit, over several years.\n\nThe NDAU will proceed with the following further investigations:\n\n1) Mortality from birth, examining survival of infants born less than 32 weeks gestations up until 5 years of age \"Survival\ninto early childhood of infants born prematurely and admitted to neonatal care\"\n\n2) Annual total hospital admission rate, examining the frequency of hospitalisation of infants born less than 32 weeks\ngestation up until 5 years of age including care cost calculation \"Hospitalisation rates intro early childhood of infants born prematurely and admitted to neonatal care\"\n\n3) Rates of hospital admission for morbidities in early childhood, examining morbidity outcomes of infants born less than 32 weeks gestations who survive up until 5 years of age \"Epidemiology of early childhood morbidities of infants born prematurely and admitted to neonatal care\",\"Disabilities in early childhood of infants born prematurely and admitted to neonatal care\"\n\nThe results will be shared through healthcare outlets and will include:\n- Presentations at healthcare conferences/meetings (e.g. Neonatal Society Meeting, Royal College of Paediatrics and Child Health Conference, etc.);\n- Publication in peer review journals (e.g. Pediatrics, Archives of Diseases in Childhood)\n- Programme grant reports and reports published on the study website (www.imperial.ac.uk/imperial)."
+ }
+}

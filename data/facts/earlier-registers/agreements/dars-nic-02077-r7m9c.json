@@ -1,0 +1,75 @@
+{
+ "base_reference": "DARS-NIC-02077-R7M9C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-02077-R7M9C",
+   "version": "",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "b9475149df70"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Section 251 (CAG-5-03(PR3)/2013) is in place for the flow of identifiable data to and from the HSCIC and Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-02077-R7M9C-v0.0",
+   "version": "0.0",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "9f2e937c86c2",
+     "activities": "6ffb9b849b45",
+     "expected_output": "c06dbcedd30a",
+     "expected_benefits": "84c455cd3918"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "6ffb9b849b45": "Cox proportional hazard models would be used to assess whether bronchiectatic scores of 2 or less were associated with less mortality than scores of 3 or more. Similarly, for emphysema, Imperial College would test whether scores above a median of 15.6% were associated with increased mortality. Data will be visualized with Kaplan-Meier plots; and co-variants included in the cox proportional hazard model might include disease severity and smoking history. \nImperial College also would like to know whether a rising trends in airway inflammation is associated with early mortality. The inflammatory markers Imperial College wish to examine are fibrinogen, sputum interleukin-8 and interleukin-6 and C-reactive protein. Imperial College also has extensive historical data on FEV1 and exacerbations, and wish to find out whether lung function decline or exacerbation frequency predicts mortality.  Imperial College will examine whether these longitudinal trends are related to survival using cox-proportional hazards and joint models. Joint models investigate how a marker that is repeatedly measure in time is associated with a time to an event of interest, such as death.\nImperial College London will submit their Cohort to HSCIC containing full names, date of birth, address, gender and postcode together with a study ID against each patient.  The HSCIC provide ONS Mortality Data back to Imperial College London containing study ID, cause of death and date of death.",
+  "84c455cd3918": "The results will help physicians to estimate a COPD patient’s life-span. This will be useful in guiding therapeutic intervention and explaining to patients the need to modify behaviour and life-style.\nThe study is academic research only and is in no way commercial.",
+  "9f2e937c86c2": "The aim is:\n(a) to examine whether measures of emphysema/bronchiestasis collected in 2003/2004 predict mortality\n(b) to see whether longitudinal changes in airway inflammation, lung function decline and exacerbation frequency predict mortality\nPreviously, it has been shown that frequent exacerbations of COPD are associated with increased mortality but the mechanisms remain to be elucidated. Frequent exacerbations are associated with greater emphysema and bronchiectasis (airway wall thickening). Imperial College’s initial objective is to examine whether indices of emphysema and bronchiectasis previous acquired by CT scanning predict mortality. The data was collected in 2003/2004 on 54 patients. Imperial Colleges were one of the first groups to CT scan COPD patients and therefore this would have one of the longest follow-up periods available.",
+  "b9475149df70": "The aim is: (a) to examine whether measures of emphysema/bronchiestasis collected in 2003/2004 predict mortality (b) to see whether longitudinal changes in airway inflammation, lung function decline and exacerbation frequency predict mortality",
+  "c06dbcedd30a": "The results of this study will be published in general and respiratory journals and they will be presented and discussed at national and international meetings such as the British Thoracic Society, European Respiratory Society and American Thoracic Society. The results will be also disseminated at other educational meetings on COPD and respiratory medicine. The results may also be submitted to NICE for the next COPD guideline update"
+ }
+}

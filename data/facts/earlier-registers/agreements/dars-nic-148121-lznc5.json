@@ -1,0 +1,186 @@
+{
+ "base_reference": "DARS-NIC-148121-LZNC5",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148121-LZNC5",
+   "version": "",
+   "organisation": "University Of Birmingham",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "objective": "af79366edfea"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "241b3ecd9c92"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148121-LZNC5-v0.1",
+   "version": "0.1",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2017-03-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2017-03-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-05-25"
+     ],
+     "objective": "5a894b798930"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2017-03-01",
+      "2017-12-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2017-03-01",
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "241b3ecd9c92": "The data supplied by the NHS IC to University of Birmingham will be used only for the approved Medical Research Project identified above.",
+  "5a894b798930": "The data supplied by the NHS IC to University of Birmingham will be used only for the approved Medical Research Project MR792.",
+  "af79366edfea": "Determination of prevalence and risk factors for poor outcomes of SLE: damage and deathHypotheses to be tested: (a) different types of damage are related to different types of disease activity (but not necessarily in the same system) measured by the BILAG index, elevated anti-dsDNA antibodies, increased complement turnover, and certain autoantibody profiles(b) damage is not related to disease duration(c) steroids (especially high daily doses but not intravenous methylprednisolone pulses) are associated with many but not all types of damage)(d) patients with more damage are at increased risk of death (e) cytotoxic agents are not associated with increased damage except premature gonadal failure(f) malignancy is not associated with drug therapy but is more common in SLE patients than expected and does contribute to causes of death"
+ }
+}

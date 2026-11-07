@@ -1,0 +1,318 @@
+{
+ "base_reference": "DARS-NIC-388486-D9M5N",
+ "versions": [
+  {
+   "reference": "DARS-NIC-388486-D9M5N-v0.1",
+   "version": "0.1",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-12-01"
+     ],
+     "objective": "f435a16100c4",
+     "activities": "b1f3bb5a29af",
+     "expected_output": "e8f082b15c49",
+     "expected_benefits": "592eb90395e1"
+    },
+    {
+     "periods": [
+      "2016-09-01"
+     ]
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-388486-D9M5N-v1.6",
+   "version": "1.6",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "objective": "24c8261df505",
+     "activities": "21e93483411a",
+     "expected_output": "b4a4c06f7666",
+     "expected_benefits": "11c49570f61b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-388486-D9M5N-v2.7",
+   "version": "2.7",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "24c8261df505",
+     "activities": "7235f5eee25e",
+     "expected_output": "c530b853eb25",
+     "expected_benefits": "11c49570f61b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-388486-D9M5N-v3.7",
+   "version": "3.7",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-03-01",
+    "2019-07-01",
+    "2020-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-03-01",
+      "2019-07-01",
+      "2020-03-01"
+     ],
+     "objective": "03c7484fa35c",
+     "activities": "61824973e8ac",
+     "expected_output": "06d13d59b2d9",
+     "expected_benefits": "2fdf4b7ab010",
+     "yielded_benefits": "d94fa1a1cf96"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01",
+      "2019-07-01",
+      "2020-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-388486-D9M5N-v4.2",
+   "version": "4.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2021-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-03-01"
+     ],
+     "objective": "03c7484fa35c",
+     "activities": "61824973e8ac",
+     "expected_output": "06d13d59b2d9",
+     "expected_benefits": "2fdf4b7ab010",
+     "yielded_benefits": "d94fa1a1cf96"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "03c7484fa35c": "The University of Oxford requires HES, mortality and cancer registration data for the purpose of the 3C study.\n\nDespite improvements in short-term outcomes in kidney transplantation (e.g. acute rejection rates) there has been no improvement in long-term outcomes (e.g. transplant survival at 5 – 20 years after transplantation). One reason for this is that drugs (in particular, calcineurin inhibitors or “CNIs”) used to prevent rejection in fact damage the transplant in the long-term and are major reasons for its ultimate failure. The 3C Study is a randomized trial investigating two strategies that may allow the use of CNIs to be minimised or removed completely. Nearly all kidney transplant trials to date have been both too small and in particular too short-term to detect any clinically meaningful treatment effects in outcomes that matter to patients i.e. long-term function and survival of the transplant. The 3C study therefore aims to study a large enough group of patients for long enough to detect such treatment effects. The 3C Study began in 2010 and will continue follow-up until 2025 at the earliest.\n    \nThe University of Oxford has determined that there are no moral or ethical issues from dissemination of data for this purpose and the legal basis for processing personal data from NHS Digital is the performance of research in the public interest. Participants also gave consent for their personal data to be collected via linkage with NHS registries (including NHS Digital, or the Health and Social Care Information Centre as it was at the time of consent) which addresses the duty of confidence.\n\nThere is minimal risk to the public in processing these data for this purpose. All data will be processed in secure environments and the use of identifying data items will be kept to a minimum (only used to ensure that the linkage between individuals and their data is correct). This research is in the public interest as it will lead to improved understanding of treatments used in kidney transplantation which could lead to improvements in care for the public.\n\nIn order to detect the long-term effects of the study treatments cost-effectively, the Clinical Trial Service Unit (CTSU) at University of Oxford prospectively planned to flag all participants with available NHS registries (specifically NHS Digital, the UK Transplant Registry and the UK Renal Registry) to capture information on relevant outcomes. The outcomes that are covered by the registries include cause-specific mortality and site-specific cancer and data on hospitalisation (which includes infections which are a particularly important outcome for kidney transplant recipients). \n\nData from NHS Digital will be combined with data from other sources (directly from participants via postal questionnaires; and from the UK Transplant Registry and UK Renal Registry) to provide a comprehensive assessment of relevant outcomes of kidney transplantation (e.g. transplant and patient survival). These data will be updated annually.\n\nThe 3C Study recruited 852 patients scheduled to undergo kidney transplantation between 2010 and 2013. They were randomized between different treatments at the time of transplantation and then again 6 months later.\n\nThe CTSU requires information from NHS Digital on: \n(i) cause-specific mortality; \n(ii) site-specific cancer; and\n(iii) hospital episodes.\n\nThese outcomes are key outcomes after kidney transplantation and it would not be possible to properly assess the effects of treatment without such information.\n\nAs participants were randomized at an individual level, individual patient level data is required. Linkage between the 3C Study dataset and NHS Digital has already been completed under a previous iteration of this Agreement and, therefore, no further identifying data items are requested from NHS Digital as data can be re-identified and linked using the participant ID.\n\nLong-term outcomes are the particular interest of the 3C Study (unlike other trials which often focus on short-term outcomes).\n\nThe geographical spread is determined by the location of the participants in the trial who were recruited from 18 of the 23 adult kidney transplant centres in the UK (including Scotland, Wales and England). There is no alternative method to collect these data which will be as comprehensive (and therefore minimise bias in the randomized comparisons). Similar data is being requested from Scottish and Welsh registries for participants recruited in those devolved nations.\n\nThe sole Data Controller and Data Processor is the University of Oxford. As stated above, participants were recruited at 18 NHS trusts (transplant centres), but those trusts are not involved in any way with the processing of these data. \n\nFunders/commissioners of kidney transplantation in the UK are not involved in the processing of these data (although they will be interested in the outputs).\n\nThe CTSU also intends to compare the data received from NHS Digital with that collected from other sources of more traditional follow-up (e.g., participant questionnaires). This will provide useful information on how such registry-based follow-up could be used in future trials in transplantation and kidney disease more generally. This may provide a significant opportunity to streamline such trials.",
+  "06d13d59b2d9": "The results of the 3C Study have been published in general and renal/transplant journals. The early results were published in The Lancet July 2014 and the first results using these data were also published in a high-impact medical journal, including American Journal of Transplantation. In addition, they have been presented at national and international meetings such as the British Transplantation Society, the Renal Association. Also in the European Society of Transplantation in September 2017, the American Transplant Congress and the Transplantation Society in July 2014. All outputs will contain only data that is aggregated with small numbers supressed in line with the HES Analysis Guide. \n\nThe outputs will also be shared with all appropriate bodies such as NICE and the Cochrane Centre who will inform policy.\n\nThe University of Oxford will send a plain English summary of the results to all surviving participants (and publish the same on the University website) at the time of any publication of the relevant output. The University of Oxford will ensure the results are available in open-access format so anyone with an interest can access the outputs.\n\nThe commercial sponsors provided funding for the trial and will receive copies of any outputs prior to their public dissemination. They have the right to comment on these outputs, but they cannot require or mandate any changes. For the avoidance of doubt, the principal investigators (all employed by the university) have the final decision regarding any outputs.\n\nThe 3C Study has already published two major papers using previous data from NHS Digital and other registries. The results from the next period of the DSA would lead to a further presentation and publication in 2019.",
+  "11c49570f61b": "The results of analyses based on the data received from NHS Digital would be considered by guidelines writers and agencies such as NICE when updating recommendations for the care of transplant recipients. They would be unique in the field of kidney transplantation in that they would provide unbiased, randomised assessment of the long-term effects of different immunosuppression strategies. They are highly likely to affect the management of future patients receiving kidney transplants.\n\nFuture Benefits\n\nOnce the outputs from this study are publicly available they will be included in systematic reviews of immunosuppression in kidney transplantation, including those conducted by organisations such as the National Institute for Health and Care Excellent (NICE). Such reviews would consider the outputs from this trial along with those from other trials in the same area and make clinical practice recommendations based on the totality of the evidence.\n\nNICE have recently published guidance on this topic and therefore it will be automatically reviewed in the next few years. The 3C study have not engaged directly with NICE but expect that the outputs from the trial will be considered when the topic area is updated.\n\nThe benefits will depend crucially on the results of the analyses. The published outputs have indicated that alemtuzumab-based induction therapy reduces the risk of rejection compared to current standard treatment with no early complications. This has led some kidney transplant units to adopt alemtuzumab as their standard of care, whereas others are waiting for the longer-term results (and NICE appraisal) to decide whether to change. The avoidance of rejection is of benefit to patients as rejection may reduce the longevity of the transplant. It is also costly so strategies to reduce rejection can save money.\n\nIf analysis of long-term outcomes (which requires linkage with NHS Digital) shows that one or other of the treatments being tested in the 3C Study improves transplant survival this would be a substantial benefit to patients (who experience longer and better quality of life with a functioning transplant compared to being on dialysis), providers (because it is substantially less-expensive to care for patients with a functioning transplant than patients on dialysis) and the wider public (because if transplants last longer then the demand for re-transplantation will fall and thus reduce pressure on the waiting list).",
+  "21e93483411a": "The 3C study includes 800 patients aged over 18 years who were listed for kidney transplantation.\n\nParticipants were recruited around the time of transplantation when informed consent was sought (see attached consent form which includes long-term follow-up through NHS registries) and they were randomised into the study prior to receiving their transplant. They have then been followed-up alongside their routine clinical care for one year with study clinic visits. In addition, data will be collected on adverse events they have experienced, current medication, laboratory results, quality of life and healthcare usage through annual mailed questionnaires.\n\nThe approved study protocol also specifies that all participants will be “flagged” with NHS registries such as the Medical Research Information Service and Hospital Episode Statistics. CTSU would seek information on cause-specific mortality, cancer diagnoses and hospital admissions on an annual basis. Any relevant information supplied may be verified with the participant’s managing doctors and then used in the study analyses.\n\nIn addition, information on mortality would be used to prevent the coordinating centre from contacting any participant known to be dead.\n\nThe study has already provided a list of participant identifiers along with a unique study participant ID number to NHS Digital. The flow of information back from NHS Digital can therefore be anonymised.\n\nUpdate\n\nData is only accessed by substantive employees of the university within the Clinical Trial Service Unit, Nuffield Department of Population Health, the University of Oxford.\n\nThe data provided by NHS Digital is reviewed by clinicians using bespoke programs. Events of interest that are identified are then entered into the study database using a separate program which records the details of interest (namely, nature, date and outcome of event). The analysis is then run on the study database.\n\nData will be processed in line with ONS terms and conditions",
+  "24c8261df505": "Despite improvements in short-term outcomes in kidney transplantation (e.g. acute rejection rates) there has been no improvement in long-term outcomes (e.g. transplant survival at 5 – 20 years after transplantation). One reason for this is that drugs (in particular, calcineurin inhibitors or “CNIs”) used to prevent rejection in fact damage the transplant in the long-term and are major reasons for its ultimate failure. The 3C Study is investigating two strategies that may allow the use of CNIs to be minimised or removed completely. Nearly all kidney transplant trials to date have been both too small and in particular too short-term to detect any clinically meaningful treatment effects in outcomes that matter to patients i.e. long-term function and survival of the transplant. The 3C study therefore aims to study a large enough group of patients for long enough to detect such treatment effects.\n\nIn order to detect the long-term effects of the study treatments cost-effectively, the Clinical Trial Service Unit at University of Oxford (CTSU) prospectively planned to flag all participants with available NHS registries (including ONS and HES) to capture information on relevant outcomes. The outcomes that are covered by the registries relevant to this, and previous, applications include cause-specific mortality, site-specific cancer and hospitalisation (which includes infections which are a particularly important outcome for kidney transplant recipients).\n\nThe 3C Study is investigating two possible strategies that could improve the lifespan of kidney transplants: firstly, is Campath-based induction treatment superior to standard basiliximab-based treatment; secondly, is sirolimus-based maintenance treatment superior to standard tacrolimusbased treatment. Although the primary outcomes of the study are relatively short-term, there is considerable scientific interest in the long-term (i.e. 5 – 20 year) outcomes from this study. In particular, there is uncertainty about the safety of such treatments with malignancy being one complication of transplantation that often occurs late.\n\nThe data from NHS Digital (formerly known as Health and Social Care Information Centre) will therefore be crucial to the ability of the trial to provide uniquely reliable information on the short- and long-term effects of different immunosuppression strategies in kidney transplantation.",
+  "2fdf4b7ab010": "Benefits of dissemination:\nThe benefits of providing these data are that they will make an essential contribution to the long-term follow-up of the 3C Study participants. This will allow reliable, unbiased assessment of the medium to long term effects of the study interventions, in particular on mortality and cancer. The data will support this research project which is unique in its field because of its size and longevity of complete follow-up.\n\nOnce the outputs from this study are publicly available they will be included in systematic reviews of immunosuppression in kidney transplantation, including those conducted by organisations such as the National Institute for Health and Care Excellent (NICE). Such reviews would consider the outputs from this trial along with those from other trials in the same area and make clinical practice recommendations based on the totality of the evidence.\n\nNICE have recently published guidance on this topic and therefore it will be automatically reviewed in the next few years. The 3C study have not engaged directly with NICE but expect that the outputs from the trial will be considered when the topic area is updated.\n\nThe benefits will depend crucially on the results of the analyses. The published outputs have indicated that alemtuzumab-based induction therapy reduces the risk of rejection compared to current standard treatment with no early complications. This has led some kidney transplant units to adopt alemtuzumab as their standard of care, whereas others are waiting for the longer-term results (and NICE appraisal) to decide whether to change. The avoidance of rejection is of benefit to patients as rejection may reduce the longevity of the transplant. It is also costly so strategies to reduce rejection can save money.\n\nIf analysis of long-term outcomes (which requires linkage with NHS Digital) shows that one or other of the treatments being tested in the 3C Study improves transplant survival this would be a substantial benefit to patients (who experience longer and better quality of life with a functioning transplant compared to being on dialysis), providers (because it is substantially less-expensive to care for patients with a functioning transplant than patients on dialysis) and the wider public (because if transplants last longer then the demand for re-transplantation will fall and thus reduce pressure on the waiting list).",
+  "592eb90395e1": "The results of analyses based on the data received from HSCIC would be considered by guidelines writers and agencies such as NICE when updating recommendations for the care of transplant recipients. They would be unique in the field of kidney transplantation in that they would provide unbiased, randomised assessment of the long-term effects of different immunosuppression strategies. They are highly likely to affect the management of future patients receiving kidney transplants.",
+  "61824973e8ac": "Under the previous iteration of this Agreement, NHS Digital supplied HES data from 2010/11 to 2015/16 and linked mortality data for patients for patients who have received a kidney transplant and the long-term survival rate following the procedure. \n\nUnder this Agreement, a further 3 years of Civil Registration Data (2019, 2020 and 2021) will be supplied.\n\nLinkage between the 3C Study cohort and NHS Digital has already been completed, so there is no need for identifiers to be shared between the study and NHS Digital under this Agreement. NHS Digital will send sensitive personal data to University of Oxford (the data controller). Once data is received from NHS Digital it will be linked to the participants' identifying details within the study database and subsequently incorporated into the analyses. All analyses are undertaken using only a pseudonymised subset of the study database containing no identifying details such as names, dates of birth, etc..\n\nThe University of Oxford is the sole data processor and data will not be sent to other organisations. The data (cause-specific mortality and site-specific cancer) will be reviewed and compared with information already held in the study database (e.g. from participants via questionnaires). If a new event is identified, it will be created within the 3C Study database which is subsequently used for analysis.\n\nData will only be processed by substantive employees of the University of Oxford who have annual Information Security training and confidentiality clauses within their employment contracts. The raw data from NHS Digital will only be accessed by individuals involved in preparing it for review and then clinicians who will conduct the review of the data. It will be held in an encrypted form on secure servers which are physically secure and only accessible by authorised individuals. Data is only stored in servers owned and housed by the University of Oxford. \n\nAll organisations party to this Agreement must comply with the Data Sharing Agreement Contract requirements, including those regarding the use (and purpose of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThere will be no data linkage undertaken with NHS Digital data provided under this Agreement that is not already noted in the Agreement.\n\nData will only be accessed and processed by substantive employees of University of Oxford and will not be accessed or processed by any other third parties not mentioned in this Agreement.",
+  "7235f5eee25e": "The 3C study includes 800 patients aged over 18 years who were listed for kidney transplantation.\n\nParticipants were recruited around the time of transplantation when informed consent was sought and they were randomised into the study prior to receiving their transplant. They have then been followed-up alongside their routine clinical care for one year with study clinic visits. In addition, data will be collected on adverse events they have experienced, current medication, laboratory results, quality of life and healthcare usage through annual mailed questionnaires.\n\nThe approved study protocol also specifies that all participants will be “flagged” with NHS registries such as the Medical Research Information Service and Hospital Episode Statistics. CTSU would seek information on cause-specific mortality, cancer diagnoses and hospital admissions on an annual basis. Any relevant information supplied may be verified with the participant’s managing doctors and then used in the study analyses.\n\nIn addition, information on mortality would be used to prevent the coordinating centre from contacting any participant known to be dead.\n\nThe study has already provided a list of participant identifiers along with a unique study participant ID number to NHS Digital. The flow of information back from NHS Digital can therefore be anonymised.\n\nData is only accessed by substantive employees of the university within the Clinical Trial Service Unit, Nuffield Department of Population Health, the University of Oxford.\n\nThe data provided by NHS Digital is reviewed by clinicians using bespoke programs. Events of interest that are identified are then entered into the study database using a separate program which records the details of interest (namely, nature, date and outcome of event). The analysis is then run on the study database.\n\nData will be processed in line with ONS terms and conditions",
+  "b1f3bb5a29af": "The 3C study includes 800 patients aged over 18 years who were listed for kidney transplantation.\nParticipants were recruited around the time of transplantation when informed consent was sought and they were randomised into the study prior to receiving their transplant. They have then been followed-up alongside their routine clinical care for one year with case report forms being completed at 1, 3, 6, 9 and 12 months after transplantation. \nData will be collected on adverse events they have experienced, current medication, laboratory results, quality of life and healthcare usage. After this time, the coordinating centre (at CTSU, University of Oxford) will write to surviving participants annually to collect relevant information about relevant adverse events, quality of life and healthcare usage.\nThe approved study protocol also specifies that all participants will be “flagged” with NHS registries such as the Medical Research Information Service, Hospital Episode Statistics and UK Renal Registry. CTSU would seek information on cause-specific mortality, cancer diagnoses and hospital admissions on a regular basis. \nAny relevant information supplied may be verified with the participant’s managing doctors and then used in the study analyses.\nIn addition, information on mortality would be used to prevent the coordinating centre from contacting any participant known to be dead.",
+  "b4a4c06f7666": "Outputs to date\n\nThe 3C Study has already had one publication in the Lancet (Volume 384, No. 9955, p1684–1690, 8 November 2014). The data requested here would be used to generate presentations at international medical conferences and subsequent publications in high-impact medical journals. \n\nFuture Outputs\n\nAnother publication is in preparation (and an abstract has been accepted for presentation at an international conference). The University of Oxford hope to publish a further output in a major medical journal later this year. Further outputs will follow in later years.\n\nThe long-term follow-up is also likely to be of substantial interest and would be presented and published in the future. For example, the protocol-specified 5 year follow-up will be conducted in 2017/18, but later analyses will also be of substantial interest.\n\nParticipants will be followed (where possible) for their lifetime and beyond the period of questionnaire-based follow-up. The outputs from this trial will not be limited to the assessments specified in the protocol.\n\nThe results of the 3C Study will be published in general and renal/transplant journals. The early results were published in The Lancet and the first results using these data will also be published in a high-impact medical journal. In addition, they will be presented at national and international meetings such as the British Transplantation Society, the Renal Association, the European Society of Transplantation, the American Transplant Congress and the Transplantation Society. The outputs will also be shared with all appropriate bodies such as NICE and the Cochrane Centre.\n\nThe University of Oxford will send a plain English summary of the results to all surviving participants (and publish the same on the University website) at the time of any publication of the relevant output. The University of Oxford will ensure the results are available in open-access format so anyone with an interest can access the outputs.\n\nAll outputs will contain only data that is aggregated with small numbers supressed in line with the HES Analysis Guide.\n\nThe commercial sponsors provided funding for the trial and will receive copies of any outputs prior to their public dissemination. They have the right to comment on these outputs but they cannot require or mandate any changes. For the avoidance of doubt, the principal investigators (all employed by the university) have the final decision regarding any outputs.",
+  "c530b853eb25": "Outputs to date\n\nThe 3C Study has already had one publication in the Lancet (Volume 384, No. 9955, p1684–1690, 8 November 2014) and a later output has recently been published in the American Journal of Transplantation (Article DOI: 10.1111/ajt.14619).\n\nFuture Outputs\n\nThe University of Oxford hope to publish a further output in a major medical journal later this year. Further outputs will follow in later years.\n\nThe long-term follow-up is also likely to be of substantial interest and would be presented and published in the future. For example, the protocol-specified 5 year follow-up will be conducted in 2018, but later analyses will also be of substantial interest.\n\nParticipants will be followed (where possible) for their lifetime and beyond the period of questionnaire-based follow-up. The outputs from this trial will not be limited to the assessments specified in the protocol.\n\nThe results of the 3C Study will be published in general and renal/transplant journals. The early results were published in The Lancet and the first results using these data will also be published in a high-impact medical journal. In addition, they will be presented at national and international meetings such as the British Transplantation Society, the Renal Association, the European Society of Transplantation, the American Transplant Congress and the Transplantation Society. The outputs will also be shared with all appropriate bodies such as NICE and the Cochrane Centre.\n\nThe University of Oxford will send a plain English summary of the results to all surviving participants (and publish the same on the University website) at the time of any publication of the relevant output. The University of Oxford will ensure the results are available in open-access format so anyone with an interest can access the outputs.\n\nAll outputs will contain only data that is aggregated with small numbers supressed in line with the HES Analysis Guide.\n\nThe commercial sponsors provided funding for the trial and will receive copies of any outputs prior to their public dissemination. They have the right to comment on these outputs but they cannot require or mandate any changes. For the avoidance of doubt, the principal investigators (all employed by the university) have the final decision regarding any outputs.",
+  "d94fa1a1cf96": "Two major publications have informed practice nationally and internationally. In particular, the first Lancet publication has increased the use of alemtuzumab (one of the tested interventions) nationally.",
+  "e8f082b15c49": "The 3C Study has already had one publication in the Lancet (http://dx.doi.org/10.1016/S0140-6736(14)61095-3). The data requested here would be used first in a submission to an international transplantation conference in 2016 with publication in a high-impact medical journal at around the same time. \nThe long-term follow-up is also likely to be of substantial interest and would be presented and published in the future. For example, the protocol-specified 5 year follow-up will be conducted in 2017/18, but later analyses will also be of substantial interest.\nThe results of the 3C Study will be published in general and renal/transplant journals. The early results were published in The Lancet and the first results using these data will also be published there. In addition, they will be presented at national and international meetings such as the British Transplantation Society, the Renal Association, the European Society of Transplantation, the American Transplant Congress and the Transplantation Society. The outputs will also be shared with all appropriate bodies such as NICE and the Cochrane Centre.",
+  "f435a16100c4": "Despite improvements in short-term outcomes in kidney transplantation (e.g. acute rejection rates) there has been no improvement in long-term outcomes (e.g. transplant survival at 5 – 20 years after transplantation). One reason for this is that drugs (in particular, calcineurin inhibitors or “CNIs”) used to prevent rejection in fact damage the transplant in the long-term and are major reasons for its ultimate failure. The 3C Study is investigating two strategies that may allow the use of CNIs to be minimised or removed completely. Nearly all kidney transplant trials to date have been both too small and in particular too short-term to detect any clinically meaningful treatment effects in outcomes that matter to patients i.e. long-term function and survival of the transplant. The 3C study therefore aims to study a large enough group of patients for long enough to detect such treatment effects.\n\nThe 3C Study is investigating two possible strategies that could improve the lifespan of kidney transplants: firstly, is Campath-based induction treatment superior to standard basiliximab-based treatment; secondly, is sirolimus-based maintenance treatment superior to standard tacrolimusbased treatment. Although the primary outcomes of the study are relatively short-term, there is considerable scientific interest in the long-term (i.e. 5 – 20 year) outcomes from this study. In particular, there is uncertainty about the safety of such treatments with malignancy being one complication of transplantation that often occurs late."
+ }
+}

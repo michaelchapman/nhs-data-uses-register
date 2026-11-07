@@ -1,0 +1,101 @@
+{
+ "base_reference": "DARS-NIC-147947-CGW0Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147947-CGW0Y",
+   "version": "",
+   "organisation": "The Dudley Group NHS Foundation Trust (Russells Hall Hospital)",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "857f2e3f8471"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147947-CGW0Y-v0.0",
+   "version": "0.0",
+   "organisation": "THE DUDLEY GROUP NHS FOUNDATION TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01",
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "objective": "26eafc01f98c",
+     "activities": "edad2b7fe13c",
+     "expected_output": "fd2b0829983f",
+     "expected_benefits": "dc301d2b0828"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "26eafc01f98c": "Cardiovascular disease (CVD) is the commonest cause of death in patients with rheumatoid arthritis (RA)  accounting for up to 55% of all deaths. Standardised mortality ratios range from 1.13 to 5.25 for cardiovascular death in RA. The excess CVD is thought to be due to premature development of ischaemic heart disease,  secondary to accelerated atherosclerosis.  This is supported by studies showing an excess of deaths due to coronary heart disease (CHD) . Recent research from our group has identified twice the prevalence of CHD in RA patients compared to matched controls, with  CHD occurring on average 10 years earlier in the RA patients and showed also that RA patients who suffered an acute coronary syndrome have a worse outcome than non RA patients.  The underlying mechanisms for the high prevalence of CHD in RA are  not currently  fully understood and  the evidence that cardiovascular disease is the main contributor is still indirect.  The use of inception cohorts, such as the Framingham Study, have helped develop models that predict the likelihood of developing CHD in the future in the general population, based on particular risk factors (e.g. age, sex, smoking, blood pressure etc.).  Epidemiological research in RA suggests that such models underestimate CHD risk in patients with rheumatoid arthritis, probably because other factors may be equally or more important.  Such factors may include demographic details; social and quality of life factors (e.g. socioeconomic status, disability, quality of life measurements);  the extent of inflammation measured clinically;  drugs used for the treatment of RA;  pre-existing cardiovascular disease; as well as novel risk factors (such as hyperhomocysteinaemia, blood clotting mechanisms, insulin resistance) or newly described genetic factors.  There is currently no prospective study trying to identify RA-specific CHD risk factors, and this is the main objective of the current proposal.",
+  "857f2e3f8471": "What factors can predict the  development of, and death from,  cardiovascular disease, specifically in patients with rheumatoid arthritis.",
+  "dc301d2b0828": "certificate.The information that you provide us with will identify patients that have died from cardiovascular disease and thus will enable us to evaluate the predictors of cardiovascular disease in patients with RA.",
+  "edad2b7fe13c": "Consecutive patients with an established diagnosis of rheumatoid arthritis (meeting retrospective application of the 1987 ACR classification criteria) will be recruited from routine rheumatology out-patient clinics at the Dudley Group of Hospitals. Consenting patients will be asked to complete 2 questionnaires:  the Euorquol-5 and the Health Assessment Questionnaire (HAQ). The investigator will record details: Name, Address (with postcode), Sex, Date of Birth, Unit number, NHS number, Ethnic group. Details will also be recorded about their arthritis, other past medical history and relevent other details such as smoking history and Blood pressure. The patients will have an ECG which will be reviewed and coded using the Minnesota code.  The ECG will be stored with the rest of the patient's documents and a copy  will be kept in the patient case notes. Patients will be asked to attend a research clinic in the next two  weeks to have fasting blood samples carried out. \nCardiovascular death is a primary outcome measure in this study. Due to the length of the study and population movement we wish to register each patient recruited into the study with the ONS. On the event of the death of a participating patient we wish to be notified of the cause of death, or sent a copy of the death certificate.The information that you provide us with will identify patients that have died from cardiovascular disease and thus will enable us to evaluate the predictors of cardiovascular disease in patients with RA.",
+  "fd2b0829983f": "The information that you provide us with will identify patients that have died from cardiovascular disease and thus will enable us to evaluate the predictors of cardiovascular disease in patients with RA. \nCHD risk in patients with rheumatoid arthritis, probably because other factors may be equally or more important.  Such factors may include demographic details; social and quality of life factors (e.g. socioeconomic status, disability, quality of life measurements);  the extent of inflammation measured clinically;  drugs used for the treatment of RA;  pre-existing cardiovascular disease; as well as novel risk factors (such as hyperhomocysteinaemia, blood clotting mechanisms, insulin resistance) or newly described genetic factors.  There is currently no prospective study trying to identify RA-specific CHD risk factors, and this is the main objective of the current proposal."
+ }
+}

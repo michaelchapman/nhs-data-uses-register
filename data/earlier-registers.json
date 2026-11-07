@@ -1,0 +1,354 @@
+{
+ "_comment": "NHS Digital's release registers published before the Data Uses Register began in July 2021. The period each covers comes from its filename (the title sheets are images), recorded here because the filenames follow no one pattern. pipeline.earlier ingests the files listed without a skip reason; see docs/manual-updates.md.",
+ "files": [
+  {
+   "file": "data_releases_register_-_2014-01-01_to_2014-03-31.xlsx",
+   "period_start": "2014-01-01",
+   "period_end": "2014-03-31",
+   "sha256": "6e07e929786fd33ab72d73416ed30e7a774101ccf81bebfa3b23fdd0c24bf141",
+   "bytes": 136022,
+   "skip": "carries no agreement reference numbers, so its rows can't be matched to agreements"
+  },
+  {
+   "file": "data_releases_register_-_01-04-2014_to_30-06-2014_-_final.xlsx",
+   "period_start": "2014-04-01",
+   "period_end": "2014-06-30",
+   "sha256": "4496d082aaf4bb4359c22cc0bf8ccdac63bbf3946cf46c860cf61a277e2bca16",
+   "bytes": 100418,
+   "skip": "carries no agreement reference numbers, so its rows can't be matched to agreements"
+  },
+  {
+   "file": "data_releases_register_-_01-07-2014_to_30-09-2014_-_ver1.xlsx",
+   "period_start": "2014-07-01",
+   "period_end": "2014-09-30",
+   "sha256": "bdec0324db19375de3b4312eb0f4906a023f2d32d5288edfcf698f658ba53c05",
+   "bytes": 91493,
+   "skip": "carries no agreement reference numbers, so its rows can't be matched to agreements"
+  },
+  {
+   "file": "releaseregisteroctdec14.xlsx",
+   "period_start": "2014-10-01",
+   "period_end": "2014-12-31",
+   "sha256": "28136e0b7ee2b658f0c5cb6ee4104d7df5ced30dd1ee519af7c3b6bd40385088",
+   "bytes": 160288,
+   "skip": "carries no agreement reference numbers, so its rows can't be matched to agreements"
+  },
+  {
+   "file": "releaseregisterjanmay15.xlsx",
+   "period_start": "2015-01-01",
+   "period_end": "2015-05-31",
+   "sha256": "b3a6eec22082d6f60ea3d20509a7a4612b06694016c48189ddc53e86de03c446",
+   "bytes": 230088,
+   "skip": "carries no agreement reference numbers, so its rows can't be matched to agreements"
+  },
+  {
+   "file": "releaseregister201506.xlsx",
+   "period_start": "2015-06-01",
+   "period_end": "2015-06-30",
+   "sha256": "7188ba30d9a2e3847ea908790a1bb81d622a078378f1feedcbd388ce741e8913",
+   "bytes": 161996,
+   "skip": "carries no agreement reference numbers, so its rows can't be matched to agreements"
+  },
+  {
+   "file": "releaseregister20150701_20150930_v03.xlsx",
+   "period_start": "2015-07-01",
+   "period_end": "2015-09-30",
+   "sha256": "9beded78a6ea6ae9887caee0ebfc4d36153688a7da159528b89ca625bf8fc423",
+   "bytes": 303049
+  },
+  {
+   "file": "releaseregister20151001_20151231_v03.xlsx",
+   "period_start": "2015-10-01",
+   "period_end": "2015-12-31",
+   "sha256": "f6e67690367b37747e674a892cae9f75e508d9578c5966a25e955ba3ef51999a",
+   "bytes": 370949
+  },
+  {
+   "file": "data_release_register__01_jan_-_31_march_20161.xlsx",
+   "period_start": "2016-01-01",
+   "period_end": "2016-03-31",
+   "sha256": "2a93cd3d5848679a89188155551e32f2122db356bce3ba789bb7b0d4fdd60bcd",
+   "bytes": 405362
+  },
+  {
+   "file": "data_release_register__april_-_august_2016.xlsx",
+   "period_start": "2016-04-01",
+   "period_end": "2016-08-31",
+   "sha256": "0e882a5353be9b5b117216e816a4c33393445ea1e0cc91013799590c7b9e8725",
+   "bytes": 728673
+  },
+  {
+   "file": "data_release_register__september_-_november_2016.xlsx",
+   "period_start": "2016-09-01",
+   "period_end": "2016-11-30",
+   "sha256": "85db04b30750b67e775cd5c522db9b4ae040c58eb8d9b8ab271232e192205690",
+   "bytes": 729307
+  },
+  {
+   "file": "release_register__december_16_-_february_17.xlsx",
+   "period_start": "2016-12-01",
+   "period_end": "2017-02-28",
+   "sha256": "ee6332574484d70658767ad3c8e230c5bbeaca36bd6ce26cec93fac17f2e7b33",
+   "bytes": 1196580
+  },
+  {
+   "file": "release_register__march_-_may_20171.xlsx",
+   "period_start": "2017-03-01",
+   "period_end": "2017-05-31",
+   "sha256": "e53d34660338d364060e413a3596816991551721e3dc9495a92fb0f51fff316e",
+   "bytes": 1229036
+  },
+  {
+   "file": "releaseregister20170601_20170831_v02.xlsx",
+   "period_start": "2017-06-01",
+   "period_end": "2017-08-31",
+   "sha256": "bcb11d3c07fb0d244861de10bf29b4a1cded1e513220ebb8e47270b0f963d692",
+   "bytes": 1173863
+  },
+  {
+   "file": "releaseregister20170901_20171130_v02.xlsx",
+   "period_start": "2017-09-01",
+   "period_end": "2017-11-30",
+   "sha256": "b1d4ce940d84e8265ebc344d6fb20b03dea1e320b374076cf87ad463f9e2820e",
+   "bytes": 1757705
+  },
+  {
+   "file": "releaseregister20171201_20180228.xlsx",
+   "period_start": "2017-12-01",
+   "period_end": "2018-02-28",
+   "sha256": "eceb94ba64bf92dd22e05d068bab7c76b76d5a260d6670e181fada6f12016a90",
+   "bytes": 1446622
+  },
+  {
+   "file": "releaseregister20180301_20180524.xlsx",
+   "period_start": "2018-03-01",
+   "period_end": "2018-05-24",
+   "sha256": "fd4e93e76313fb848dfea16374be2b3e729a300721fa959fdc206f2457eedb36",
+   "bytes": 1743725
+  },
+  {
+   "file": "releaseregister25may-30sep18.xlsx",
+   "period_start": "2018-05-25",
+   "period_end": "2018-09-30",
+   "sha256": "62f0d92b0736cacb7ef7a86f44738bd56956fe9dc59f727d01fef1c468f087e2",
+   "bytes": 1865995
+  },
+  {
+   "file": "releaseregisteroct-dec18.xlsx",
+   "period_start": "2018-10-01",
+   "period_end": "2018-12-31",
+   "sha256": "7fe6c785c4a6706de024a9892a78ad857653f5acb832b9614ef20ea9b070ab07",
+   "bytes": 2431955
+  },
+  {
+   "file": "releaseregister20190101_20190131.xlsx",
+   "period_start": "2019-01-01",
+   "period_end": "2019-01-31",
+   "sha256": "0d42023d9128a350e80b64ddefdca0ae456f2d347806edd0c8c39feaf2d635ae",
+   "bytes": 2127560
+  },
+  {
+   "file": "releaseregister20190201_20190228.xlsx",
+   "period_start": "2019-02-01",
+   "period_end": "2019-02-28",
+   "sha256": "d38372fc981324fa8982902eb78ebd8a64d8776d790f83c0ba81e7e62e3d1145",
+   "bytes": 2140841
+  },
+  {
+   "file": "releaseregister20190301_20190331.xlsx",
+   "period_start": "2019-03-01",
+   "period_end": "2019-03-31",
+   "sha256": "c7dd6c4717b3b34942cdab194a9f5cd3249a1918fa51c916137f19910186dfc0",
+   "bytes": 2426363
+  },
+  {
+   "file": "release-register_20190401_20190430.xlsx",
+   "period_start": "2019-04-01",
+   "period_end": "2019-04-30",
+   "sha256": "094bf0156360cc3df52acf7d8b99c231316dbb58612fc45b1b2e2f56fe948f79",
+   "bytes": 2386054
+  },
+  {
+   "file": "releaseregister20190501_20190531.xlsx",
+   "period_start": "2019-05-01",
+   "period_end": "2019-05-31",
+   "sha256": "a910fe3defe678a383874944b93d9f755f7bb0fa2c5a9fdfa346d8200d16181c",
+   "bytes": 1703017
+  },
+  {
+   "file": "releaseregister20190601_20190630.xlsx",
+   "period_start": "2019-06-01",
+   "period_end": "2019-06-30",
+   "sha256": "78e4f3474203ad13521776a70f4abd360bbdf7bfce7fa0c9ebaba47e1a95aebf",
+   "bytes": 1851320
+  },
+  {
+   "file": "releaseregister20190701_20190731.xlsx",
+   "period_start": "2019-07-01",
+   "period_end": "2019-07-31",
+   "sha256": "284becad1af7262133df363c1fd26451b0a69eae2cb46fc55f5f2dd16f3209d5",
+   "bytes": 1920155
+  },
+  {
+   "file": "releaseregister20190801_20190831.xlsx",
+   "period_start": "2019-08-01",
+   "period_end": "2019-08-31",
+   "sha256": "13628d5c06ba93ddcac6ed4a588d91258ce7dca8e3a019e168218036b960954b",
+   "bytes": 1859444
+  },
+  {
+   "file": "ReleaseRegister20190901_20190930.xlsx",
+   "period_start": "2019-09-01",
+   "period_end": "2019-09-30",
+   "sha256": "c5f90006ea1f668bac42efe5967479a383eb4aea39868e402c6588fb5cdf81b0",
+   "bytes": 2064889
+  },
+  {
+   "file": "releaseregister20191001_20191031.xlsx",
+   "period_start": "2019-10-01",
+   "period_end": "2019-10-31",
+   "sha256": "8406e389f8090e3e9ac598b185b1e722d5c111fd267165e23a7675148a2b4a1e",
+   "bytes": 2149255
+  },
+  {
+   "file": "releaseregister20191101_20191130.xlsx",
+   "period_start": "2019-11-01",
+   "period_end": "2019-11-30",
+   "sha256": "aacdbb9ba68de3177c8f68aa35b8d49f21e58df59145ee293a1c1af9eb2063f7",
+   "bytes": 2021467
+  },
+  {
+   "file": "releaseregister20191201_20191231.xlsx",
+   "period_start": "2019-12-01",
+   "period_end": "2019-12-31",
+   "sha256": "4ae45b503c581e54ac2078019e1c94a32cc285ea060689116c3a9fc28d349f6a",
+   "bytes": 2006239
+  },
+  {
+   "file": "releaseregister_20200101_20200131.xlsx",
+   "period_start": "2020-01-01",
+   "period_end": "2020-01-31",
+   "sha256": "bb03403a058ff9ac8f047df8814ab71d62d51e91fcf48d94d603174958772543",
+   "bytes": 2239498
+  },
+  {
+   "file": "releaseregister_20200201_20200229.xlsx",
+   "period_start": "2020-02-01",
+   "period_end": "2020-02-29",
+   "sha256": "305c843a9ca24b8c31bfaa2c86722ba0fdf612f4f42e1f2b1022dda735705efd",
+   "bytes": 2006567
+  },
+  {
+   "file": "ReleaseRegister_20200301_20200331.xlsx",
+   "period_start": "2020-03-01",
+   "period_end": "2020-03-31",
+   "sha256": "989ccd80673454559e524796c05d7842929ac524768bb316c56d685572bd5996",
+   "bytes": 2421377
+  },
+  {
+   "file": "releaseregister_20200401_20200430.xlsx",
+   "period_start": "2020-04-01",
+   "period_end": "2020-04-30",
+   "sha256": "b8fbf2232aa4aa5f028c04de9a03a5c85107a7213be64373ea6e9c6db9393a13",
+   "bytes": 2221510
+  },
+  {
+   "file": "releaseregister_20200501_20200531.xlsx",
+   "period_start": "2020-05-01",
+   "period_end": "2020-05-31",
+   "sha256": "09269851185ccb857ad9118df8d5039c9e0fb43eccd4dedf32dca4a5b150fe5b",
+   "bytes": 2229608
+  },
+  {
+   "file": "releaseregister_20200601_20200630.xlsx",
+   "period_start": "2020-06-01",
+   "period_end": "2020-06-30",
+   "sha256": "08c76077d32440715c59d5826b362bf6e5952fd359305a4aa78da9030eeeb318",
+   "bytes": 2435421
+  },
+  {
+   "file": "releaseregister_20200701_20200731.xlsx",
+   "period_start": "2020-07-01",
+   "period_end": "2020-07-31",
+   "sha256": "5b2c9cb299ededddab84e91cb89b99b7332927d63e4a18f3f16ad9515e0ec106",
+   "bytes": 2541687
+  },
+  {
+   "file": "releaseregister_20200801_20200831.xlsx",
+   "period_start": "2020-08-01",
+   "period_end": "2020-08-31",
+   "sha256": "20513a7848f48b6b87f4797631cfbcdb4db881d42d9b05384b94cd3e5bffd369",
+   "bytes": 2338445
+  },
+  {
+   "file": "releaseregister_20200901_20200930.xlsx",
+   "period_start": "2020-09-01",
+   "period_end": "2020-09-30",
+   "sha256": "f44b9ad1ab33e072984be0644cec1c4d6131d06b0171d42f04c3a3236b91f530",
+   "bytes": 2777304
+  },
+  {
+   "file": "register-of-approved-data-releases-october-2020.xlsx",
+   "period_start": "2020-10-01",
+   "period_end": "2020-10-31",
+   "sha256": "036fd44e962f921d960fbc14815dff9a790ebe80162cb253af0ae39fca746b4e",
+   "bytes": 2866730
+  },
+  {
+   "file": "releaseregister_20201101_20201130.xlsx",
+   "period_start": "2020-11-01",
+   "period_end": "2020-11-30",
+   "sha256": "6975075645af604a6530a36abe7ff7b9629a61764e289e33717dff9cb9ca46e4",
+   "bytes": 2594058
+  },
+  {
+   "file": "releaseregister_20201201_20201231.xlsx",
+   "period_start": "2020-12-01",
+   "period_end": "2020-12-31",
+   "sha256": "47f7682d703dc6439febb18e53784fa3f04de518e3fb97ceabc26b186609a458",
+   "bytes": 3081149
+  },
+  {
+   "file": "releaseregister_20210101_20210131.xlsx",
+   "period_start": "2021-01-01",
+   "period_end": "2021-01-31",
+   "sha256": "3375f1a9a6edb86e9ec6a3cd2cadf9fbc3357a2022a5a327dfc361e000bbc088",
+   "bytes": 2772038
+  },
+  {
+   "file": "ReleaseRegister_20210201_20210228_Updated.xlsx",
+   "period_start": "2021-02-01",
+   "period_end": "2021-02-28",
+   "sha256": "d56952a1bcb2c14edee25df3dc3d32059faf35cb72a217bfd8ee075cbd60ff8b",
+   "bytes": 2892997
+  },
+  {
+   "file": "ReleaseRegister_20210301_20210331_Updated.xlsx",
+   "period_start": "2021-03-01",
+   "period_end": "2021-03-31",
+   "sha256": "14e641460dcfa96f8e28480d0aebf64ed1b0826b030ab2e0140c02f26de02916",
+   "bytes": 3220737
+  },
+  {
+   "file": "ReleaseRegister_20210401_20210430_Updated.xlsx",
+   "period_start": "2021-04-01",
+   "period_end": "2021-04-30",
+   "sha256": "b49278f2b5e81cf4ca523ba984ca36f60288423595d430969c7c9317a0e33e10",
+   "bytes": 2847903
+  },
+  {
+   "file": "ReleaseRegister_20210501_20210531.xlsx",
+   "period_start": "2021-05-01",
+   "period_end": "2021-05-31",
+   "sha256": "c244017157b5c5ad7ed2c688b1b7e9c4e92e7c065997c28d4a43c5ba979ffd8e",
+   "bytes": 2809414
+  },
+  {
+   "file": "ReleaseRegister_20210601_20210630.xlsx",
+   "period_start": "2021-06-01",
+   "period_end": "2021-06-30",
+   "sha256": "15c4ce88a6a15524ccc1b7925b2de12e2818544fa178faca1f2293bfd354d1d0",
+   "bytes": 3196156
+  }
+ ]
+}

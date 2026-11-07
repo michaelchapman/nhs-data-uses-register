@@ -1,0 +1,83 @@
+{
+ "base_reference": "DARS-NIC-384524-C7M2Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-384524-C7M2Q-v1.2",
+   "version": "1.2",
+   "organisation": "Manchester University NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01",
+    "2017-09-01",
+    "2018-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01",
+      "2017-09-01",
+      "2018-10-01"
+     ],
+     "objective": "9d248cae6b5b",
+     "activities": "6738cbc4a4e3",
+     "expected_output": "a9349b002dbc",
+     "expected_benefits": "bfc806fbf4b1"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2017-09-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2017-09-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "6738cbc4a4e3": "UHSM receive extracts of HES data filtered to specific diagnosis codes indicating burn injury, plastic surgery and care for severe dermatological skin loss conditions.  UHSM further processes the received data to create a reduced cohort that correlates with NBR inclusion criteria.  This process of reduction requires analysis that could not be automated by the HSCIC.\n\nUHSM then uses the reduced HES data to verify the accuracy of the NBR data as a representation of burn injury admissions for acute care, for rehabilitation and for late reconstruction.  The HES data is compared to data in the NBR and forms the basis of completeness and quality checks.  The HES data will not be linked to NBR data or added into the NBR database.\n\nComparison of the workload volumes in the HES data is made against NBR database outputs to ensure that the overall activity numbers and bed days are within acceptable limits. \n\nOnce the NBR data is within acceptable limits the capacity analysis for each service and geographical area is then carried out strictly in the NBR data to support the commissioning plans for the entirety of burn care in successive commissioning rounds. To clarify, the HES data will not be used for this analysis.\n\nAccess to the patient level HES data is restricted to only authorised UHSM employees with involvement with the NBR database who need to access the data for the purposes outlined in this application.    \n\nIn addition to comparison of workload volumes, HES data will only be used to answer any challenges that may arise from NHS England or from a care provider.  In such scenarios, UHSM may conduct further analyses of the HES data to produce comparisons with NBR data at lower levels.  For example, UHSM may produce figures to show numerical differences between the volumes of records supplied by a provider and those derived from HES broken down to age or length of stay in order to highlight where shortfalls or excesses are occurring.  All outputs comprise of aggregated data with small numbers suppressed in line with the HES Analysis Guide.  UHSM only provides such services in response to challenges raised by NHS bodies.\n\nUHSM may undertake analyses of the NBR database using HES data for validation purposes in response to specific queries from NHS England.  In such activities, HES data is used only for validation purposes and outputs will contain at most, aggregated data with small numbers suppressed in line with the HES Analysis Guide for the purpose of comparison with statistics derived from analysis of the NBR database.",
+  "9d248cae6b5b": "NHS England has established a Clinical Reference Group (CRG) for burn care services.  The CRG includes representatives for areas across England – specifically: North East, Greater Manchester, Cheshire and Mersey, Yorkshire and The Humber, West Midlands, East Midlands, East of England, London NW, London NE, London S, South West, Wessex, Thames Valley and the South East Coast.  Specialist burn care services include all burn care delivered by Burn Centres, Burn Units and Burn Facilities delivered as part of a provider network.\n\nAs a member of the CRG, University Hospital of South Manchester (UHSM) has been commissioned by NHS England to ensure that burn service capacity is adequate for demand across the NHS and specialised services are placed as required in different parts of the country.  UHSM is responsible for maintaining the National Burn Registry (NBR) database which is a clinical database containing patient identifiable data on all hospital admissions due to (or including) burns and of the patient treatment and care for each episode.  Care providers across England and Wales have an obligation to provide data on burn injuries and the course of treatment given.\n\nUHSM use HES data to ensure that the data received from the burn care centres is accurate within agreed thresholds and falls within the scope of data that is required.\n\nThe scope of the service includes all acute care, rehabilitation and reconstruction.  For this reason, UHSM requires HES data that includes plastic surgery codes (160) as well as burn care codes as care is often coded under the specialty rather than burn care (161). It also includes care for severe dermatological skin loss conditions which is why these conditions are included.\n\nHES Critical Care data is required as this will show the level of care patients will have received and is within the scope of level of data that burn centres are required to submit to include on the National Burn Registry database.  Critical Care is required to ensure that burn care centres are submitting the relevant data to UHSM.  It will also allow capacity changes that are expected by NHS England to be necessary in paediatric critical burn care to be modelled.\n\nUHSM currently holds HES data from 2002/03-2010/11.  This data has previously been used by UHSM to assess the work of the National Burn Care Group, including the designation as specialised services.  Further changes to the provider service profile after 2010 need to be assessed using more recent data which will also allow a volume validation against the NBR database.  On receipt of new HES data, UHSM will compare the two in order to identify and assess changes to care providers’ service profiles (e.g. age breakdown, length of stay, etc.).  Due to changes in the profile the 2002/03-2010/11 data can be compared with the more recent data both for the HES dataset and the Burns registry after processing.  Once satisfied that the data requested is correctly assigned to the relevant fields UHSM will destroy the 2002/03-2010/11 data.  Data destruction will be completed according to HSCIC guidelines.  The data will be destroyed by March 2017 at the latest. \n\nUHSM’s role is to ensure that the NBR is an accurate and complete reflection of burns data.  Where discrepancies are identified, UHSM notifies the provider and CRG and monitors to ensure corrective action is taken.  Providers may challenge or query UHSM’s findings.  UHSM may then support providers in identifying the reasons for discrepancies.  In doing this, UHSM might provide aggregated figures highlighting specific areas of discrepancy (e.g. age breakdown, length of stay, etc.).  Outputs may compare volumes of episodes in HES and the NBR for specific providers but no record level HES data is shared with third parties and the aim is to identify categories rather than individual episodes.  Any outputs would contain aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nUHSM may also receive challenges or queries from NHS England.  UHSM will respond to queries using the NBR database but may require HES data to validate findings.  In such instances, the outputs will be reports on volumes, potentially categorised by profile (i.e. age breakdown, length of stay, etc.) and no record level HES data will be shared with any third party.\n\nUHSM needs to retain the HES data for use in such activities for a rolling period of up to 2 years so that UHSM may run additional completion and quality checks within the timeframe.",
+  "a9349b002dbc": "The outputs of using the HES data are:\n\n1.\tAnalysis/verification of accuracy and completeness of data in the NBR database.  This is undertaken annually.\n\n2.\tWhere discrepancies between the NBR and HES data exceed agreed thresholds, UHSM reports to NHS England via the CRG details of provider(s) responsible for the discrepancies in order for the provider(s) to resubmit data to the NBR with the relevant fields.  Should UHSM need to raise discrepancy issues with NHS England than it is simply to point out any numeric mismatches between the HES data analysis and analysis of the NBR database.  The two data sources will never entirely match but if the levels of discrepancy exceed agreed thresholds then it is only the simple raw numbers as a tabulated comparison that will be presented to the CRG and NHS England commissioners.  It will be at a very simple level because CRG and NHS England only wish to be assured that the NBR database is an accurate reflection of activity and can thus be relied on.  Analysis of the HES data is the only form of validation available.\n\n3.\tStatistical outputs for use in supporting care providers in analysing causes of discrepancies in order to improve completeness of reporting and accuracy of the NBR database.  This is undertaken as required on a rolling annual basis.\n\n4.\tStatistical outputs to be used in responses to specific queries by NHS England.  This is undertaken as required.  As an example, NHS England intends to undertake specific pieces of work regarding severe paediatric burn injury and providing a highly specialised service for complex skin failure for adults and children.  UHSM will be involved in undertaking capacity on demand analysis for these processes using the NBR database with HES validation as required.  UHSM expects it will take 6-12 months to complete initial analysis and follow up queries/challenges from NHS England.\n\nFollowing the data completeness checks with the HES data, UHSM reports the results of the analyses of the NBR to the burn care CRG.  These results form the basis of the CRG’s recommendations to NHS England concerning service provision to fit in with their strategy for burn care 2014 to 2019.  The analysis will identify mismatches between capacity to deal with burns and demand for such services at a national level in addition to geographical areas of mismatch of demand and capacity.\n\nThe NBR outputs are sent directly to CRG only.  These are reported to the CRG in their quarterly meetings and put in the annual report and used as the basis of their recommendations to NHS England.  CRG’s outputs will be available to the public, free of charge.",
+  "bfc806fbf4b1": "The National Burn Registry is used to determine and report the following;\n•\tThe extent of specialised burn services compliance with their Service Specification.  This is delivered annually and due in April.\n•\tQuantification of the demand and capacity trends for burn care 2003-2015 to inform the commissioning of service in line with the burn care CRG Strategy 2015-19.  This is delivered annually and due in September.\n\nThese are beneficial to healthcare as CRG use them to make informed recommendations to NHS England in order to ensure that resources are used effectively throughout England and Wales.  The intention is to design a sustainable series of burn services throughout the NHS to support safe and appropriate care for this unpredictable emergency workload by use statistical process control (SPC) techniques to look at long term data to compensate for the variation in demand and evaluate the capacity requirements both geographically and at differing levels of provision. The results will enable the distribution of funding to each Trust to ensure that burn service capacity meets the demand across the NHS and specialised services in burn care are placed as required in different parts of the country.  Using the HES data will ensure that the calculations are correct for each specific centre and that the results are as accurate as possible.  The value of the HES data is in making sure the NBR data is complete/accurate and improving the quality of data collection.  These benefits support the wider benefits to health care achieved by using the NBR data. \n\nBenefits achieved using the HES data previously supplied have included the recognition of the need for the development of additional Burn facilities in the South East of England and Midlands.  \n\nSee: http://www.londonhp.nhs.uk/publications/london-and-south-east-england-specialised-burns-project/."
+ }
+}

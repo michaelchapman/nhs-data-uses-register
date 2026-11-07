@@ -1,0 +1,169 @@
+{
+ "base_reference": "DARS-NIC-148035-41S3L",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148035-41S3L",
+   "version": "",
+   "organisation": "University of York",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "f63bd204fcd7"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "f2dd5bcec130"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "a78f66ec5d88"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (PIAG 1-05(h)/2007) is in place for the flow of identifiable data to and from the HSCIC.Approval for ONS Mortality data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (PIAG 1-05(h)/2007) is in place for the flow of identifiable data to and from the HSCIC.Approval for ONS Mortality data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (PIAG 1-05(h)/2007) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (PIAG 1-05(h)/2007) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (PIAG 1-05(h)/2007) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148035-41S3L-v0.1",
+   "version": "0.1",
+   "organisation": "University of York",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "5de2827d7d32",
+     "activities": "574e8c29ce8c",
+     "expected_output": "125f9a3aa32a",
+     "expected_benefits": "c267c1b3f7ba"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "125f9a3aa32a": "10.0\tTransfer of Data between the NHS IC and the Department of Health Sciences\nSeebohm Rowntree Buliding University of York\n\n•\tThe Data is categorised as Restricted and will be treated by the NHS IC in accordance with NHS IC protocols for the transfer and use of NHS Restricted Data.\n\nElectronic or disk\n•\tBefore transfer the NHS IC will encrypt the data using the required standard of  '256-bit AES encryption' compatible with the receiving organisations systems with a password length of at least 12 characters which must include numbers, letters and symbols, and should be a mix of upper and lower case characters.\n•\tThe Data will be sent via secure electronic file to a Permitted User at the Department of Health Sciences Seebohm Rowntree Buliding University of York \n•\tThe password will be provided to the Permitted User at the Department of Health Sciences Seebohm Rowntree Buliding University of York taking responsibility for arrangements under this Agreement via telephone or e-mail. \n•\tThe named person must not share the Data or password with any other person at any time.\n•\tBefore transfer of data to the NHS IC the Department of Health Sciences Seebohm Rowntree Buliding University of York will encrypt the data using the required standard of '256-bit AES encryption' compatible with NHS IC systems.\n•\t\n\nPaper\n•\tThe NHS IC will arrange for secure courier of the data to Department of Health Sciences Seebohm Rowntree Buliding University of York \n•\tPackages containing patient data are addressed specifically to the principal contact\n•\tAll packages are double-wrapped\n•\tAll packages are despatched by recorded delivery for which the recipient's signature is required\n•\tProgress of delivery up to point of receipt will be tracked on-line using a unique tracking number\n\n11.0\tStorage of Data \n\nRefer to the System Level Security Policy. This policy has been approved for this project by the DH Security Officer in conjunction with the application, NIGB and DMsG  approval given for this project, detailed in section 4 of this agreement. Data Storage was covered in the policy.",
+  "574e8c29ce8c": "No contact will be made with any individual(s) that could be identified from the information supplied, except as specified in the protocol and associated letters agreed between the Department of Health Sciences Seebohm Rowntree Buliding University of York and the NHS IC.\n\nUse of these Datasets are for the sole purpose set out above.  The Data must not be shared with any other organisation or named individual not explicitly referred to within this agreement.  If the information referred to herein is subject to an FOI or other request to share the Data, then agreement from the NHS IC must be sought before undertaking this.\n \nThe Dataset must not be shared with any third party in the format in which it is provided to you by the NHS IC. \n\nInformation tools derived from this Dataset will not be provided to any organisations without the specific consent of the NHS IC.\n\nAny publications derived from this Data by any party must be subject to ONS confidentiality guidance on the release of Health Statistics:\n\nhttp://www.ons.gov.uk/about/consultations/closed-consultations/disclosure-review-for-health-statistics---consultation-on-guidance/",
+  "5de2827d7d32": "To examine the survival of YHHN patients in relation to their presenting diagnostics, prognostics and treatment.  The YHHN is a unique population based inclusive register, and the findings will have implications for the country as a whole.  \n\nData access will be restricted to the research team mentioned in section 7 of this agreement. Any amendments will be notified to the NHS IC.",
+  "a78f66ec5d88": "YHHN, an inclusive register of patients newly diagnosed with a haematological malignancy whilst resident in the former Strategic Health Authorities of West Yorkshire and North & East Yorkshire and Northern Lincolnshire, was established on 1st September, 2004.  With a population of just under 4 million, around 2000 people are newly diagnosed with a haematological malignancy in the region each year. These patients are diagnosed by a central diagnostic laboratory, the Haematological Malignancy Diagnostic Service (HMDS) (www.hmds.org.uk ) based at St James's Hospital, Leeds.  HMDS is part of the Clinical Haematology Network which covers the 14 hospitals (6 multi-disciplinary teams) within the Network region.   This partnership is further enhanced by formal links with the Epidemiology & Genetics Unit (EGU) based at the University of York (www.egu.york.ac.uk).  This collaborative group is ideally placed not only to inform local clinicians and local audit, but also has the potential to be developed as a resource for high quality population-based clinical research – the findings from which are likely to have implications across the country as a whole.                \nAim: - To examine the survival of YHHN patients in relation to their presenting diagnostics, prognostics and treatment.  The YHHN is a unique population based inclusive register, and the findings will have implications for the country as a whole.",
+  "c267c1b3f7ba": "With over 50 different sub-types and many pre-cursor conditions, haematological malignancies\ncomprise a heterogeneous group of cancers with widely differing treatments and prognoses \nranging from relatively indolent through to more aggressive forms.   YHHN, an inclusive register of \npatients newly diagnosed with a haematological malignancy whilst resident in the former Strategic \nHealth Authorities of West Yorkshire and North & East Yorkshire and Northern Lincolnshire, was \nestablished on 1st September, 2004.  With a population of just under 4 million, around 2000 \npeople are newly diagnosed with a haematological malignancy in the region each year. These \npatients are diagnosed by a central diagnostic laboratory, the Haematological Malignancy \nDiagnostic Service (HMDS) (www.hmds.org.uk ) based at St James's Hospital, Leeds.  HMDS is \npart of the Clinical Haematology Network which covers the 14 hospitals (6 multi-disciplinary \nteams) within the Network region.   This partnership is further enhanced by formal links with the \nEpidemiology & Genetics Unit (EGU) based at the University of York (www.egu.york.ac.uk).  This \ncollaborative group is ideally placed not only to inform local clinicians and local audit, but also has \nthe potential to be developed as a resource for high quality population-based clinical research – \nthe findings from which are likely to have implications across the country as a whole.",
+  "f2dd5bcec130": "Yorkshire and Humberside Haematology Network (YHHN)\n\nTo examine the survival of YHHN patients in relation to their presenting diagnostics, prognostics and treatment.  The YHHN is a unique population based inclusive register, and the findings will have implications for the country as a whole.  \n\nData access will be restricted to the research team mentioned in section 7 of this agreement. Any amendments will be notified to the NHS IC.",
+  "f63bd204fcd7": "Yorkshire and Humberside Haematology Network (YHHN) To examine the survival of YHHN patients in relation to their presenting diagnostics, prognostics and treatment. The YHHN is a unique population based inclusive register, and the findings will have implications for the country as a whole. Data access will be restricted to the research team mentioned in section 7 of this agreement. Any amendments will be notified to the NHS IC."
+ }
+}

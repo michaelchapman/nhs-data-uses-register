@@ -1,0 +1,82 @@
+{
+ "base_reference": "DARS-NIC-352381-P0L2S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-352381-P0L2S",
+   "version": "",
+   "organisation": "Royal Brompton and Harefield NHS Trust",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "eb4bb3f59743"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES ONS Mortality",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "eb4bb3f59743": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC: \nObjective for processing: \nPatients with congenital diseases and patients with pulmonary hypertension represent an increasing population with high resource utilization. Despite ongoing research and improvements in care, morbidity and mortality remain considerable. Little information is, however, available on specific causes of morbidity and mortality in this heterogeneous group of patients. The customer intends to perform analyses of the HSCIC data in order to provide insight into the specific causes of morbidity and mortality. \nThe Adult Congenital Heart Disease and the National Pulmonary Hypertension Centre at the Royal Brompton Hospital are the leading research institutions in this area in UK. The Centre has published experience in performing big data analyses and the expertise to evaluate the data both from the medical and epidemiological point of view. Recent analysis performed in the Centre revealed that a high proportion of patients is lost to follow-up or has large gaps during the follow-up and these patients, according to the dataset, may be at increased risk of death. The information on morbidity and mortality retrieved from the dataset does not provide the whole picture. Analysis of HSCIC data will provide a comprehensive and unbiased overview.\n\nProcessing activities: \nData will be downloaded using the secure electronic method provided by HSCIC. \nThe data will be processed using R package for statistical computing. Dr Kempny has published experience of analyses with R package, including big data assessment. Datasets will be loaded into the R package and subjects with the conditions of interest will be identified. The pattern of hospitalizations, types and frequency of procedures performed and comorbidities will be assessed and afterwards reported using standard exploratory statistic methods. Results will be used for benchmarking on high-level aggregate, assessing trends and comparing to data published in other European countries. The customer will also assess trends following publication of clinical guidelines. In order to provide comprehensive overview complete data on hospitalizations, procedures and mortality for patients with congenital defects, is needed. The reason for requesting nationwide data is the low prevalence of the groups assessed, like for example patients with Scimitar Syndrome, patients with atrioventricular septal defect and coexistence of Down syndrome or patients with DiGeorge Syndrome with or without congenital cardiac abnormalities. Over the last years both the European and British Society of Cardiology introduced guidelines advising how to treat these patients. Many recommendations in guidelines are, however, based on experts’ consensus and not on trials. In the current era of Evidence Based Medicine better quality recommendations are needed which need to be based on prospective or retrospective studies. \nSignificant changes of outcome, as for example drop of mortality or morbidity in patients following publication of guidelines, would suggest both that the strategy advised in guidelines is effective. For similar analysis for patients with endocarditis please see http://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2814%2962007-9/fulltext . In order to perform time-series analysis data collected over a long period of time are required. \nData will only be used for service evaluation purposes and will not be used for any commercial purpose.\n\nSpecific outputs expected, including target date(s): \nThe analyses and interpretation are of great interest for health professionals, including doctors and clinical nurse specialists. \nThe results will be presented to the target audience before publication on national and international conferences, such as the British Heart Foundation, the European Society of Cardiology Congress and the Congress of the American Heart Association. Results of the analyses will be then published in the leading peer-reviewed journals, including Circulation, Heart and International Journal of Cardiology and depending on the results, also BMJ or Lancet. Once published they can be found in major databases, including PubMed and the Web of Science, and downloaded. \nThe analyses will be performed in 2015 and publication of manuscripts early in 2016 and 2017. Data will be required, thus, only for one year in order to perform the analyses. \nAll outputs will be at an aggregated and anonymised level, and no record level data will be passed to any third party.\n\nExpected measurable benefits to health and/or social care, including target date(s): \nPatients with congenital diseases and patients with pulmonary hypertension are very diverse groups of patients. Due to the relatively low prevalence of these diseases, single centre institution data provide only little insight into the disease specific life expectancy, hospitalization rate and comorbidities. Analysis of HSCIC data will provide data on disease specific morbidity, mortality and causes of death. Time series analysis will provide an overview on changes of morbidity and mortality following publications of specific guidelines. \nFor example, in patients with congenital heart defects (CHD) decisions when to operate on are based on guidelines issued by the European Society of Cardiology. Most of the recommendations in CHD guidelines of ESC are based on opinion of European experts and not on studies. In the current era of Evidence Based Medicine this is not appropriate, as data from retrospective or prospective studies are needed to define good quality recommendations. As the patients’ groups are very small and costs of trials very high, in most cases there will be in the future no prospective studies to answer important clinical questions. The data provided by HSCIC will shade light on both the adherence to ESC guidelines and on the impact of the changes resulting from guidelines on patients’ outcomes. \nPatients with persistent foramen ovale (PFO) are a good example. Approximately 20% of the general population has a small connection between their collecting chambers in their hearts, called a PFO. Current data suggest that only in a small group of patients PFO may cause stroke. It seems that in the majority of patients with stroke at a young age, PFO is just a bystander and closing it with a keyhole procedure does not reduce the risk of future stroke. The trials are inconclusive, though, and there is not a clear consensus in the medical community in regard to the need for PFO closure in young patients with stroke. ESC and English guidelines introduced 5-10 years ago recommend not closing the PFO in the majority of patients with stroke. Analysis of the number of patients with PFO and stroke and the number of PFO closures on the national level would provide an overview on the influence of guidelines on the clinical practice. Recent, non-UK studies report significant drop of PFO closure procedures since the publication of guidelines but there are no comprehensive data on the implementation of guidelines in UK. This type of analysis would be a benchmark of the UK system. In case of no significant drop of PFO closures a call for stronger adherence to guidelines, by intensifying doctors’ training, would be needed. \nThe change of rate of PFO closures over the years will be compared to the rate of recurrent strokes in young patients with PFO. If there was a significant increase in stroke recurrence following the implementations of guidelines, it would suggest that PFO closure is in this setting beneficial for patients. If there was no significant change of stroke recurrence in these patients, despite the drop of PFO occlusions, it would suggest that PFO closure does not reduce the risk of recurrent stroke, which is very important information for the medical community and patients. \nAnother example are woman with congenital heart defects. They are at a significantly higher risk of developing complications during pregnancy, need for hospitalisations, pre-term delivery and death. When deciding for pregnancy they require detailed counselling about their individual risk of mortality and morbidity. Congenital defects are rare and as there is no reliable information about the rate of complications during pregnancy, though. Based on the information provided by HSCIC it will be possible to provide this valuable information to patients and their doctors. Recent ESC guidelines strongly advise against pregnancy in women with certain conditions, like Eisenmenger syndrome, due to high maternal mortality (>40%). The HSCIC dataset will enable assessing implementation of guidelines. If there were no drop in the incidence of pregnancies in patients with Eisenmenger syndrome, it would be a call for action to increase awareness among doctors and patients. \nAnother aspect in pregnancy among women with congenital defects is the significant increase in complications with increasing mother’s age. Studies reporting this relationship are, however, small and do not provide information on specific group of patients. The HSCIC data will enable assessment of relationship of mothers’ age with the rate of complications in pregnancy. This is important information with direct impact on clinical practice. If there is a sharp increase in the rate of pregnancy complications, for example after the 30th year of live, patients should be informed about it and advised to start families at a younger age. \nThe results of analyses will be available as publications directly to clinicians and patients but will influence also the guidelines. Clinical guidelines for doctors are written every several years by experts. Expert responsible for writing a specific chapter in a guideline performs a literature search for most recent publications in his area. These experts, irrespectively of writing guidelines, are also aware of publications published in the leading journals in their area of interest. The publications resulting from analyses performed on HSCIC data will be read by these experts and will influence the clinical guidelines."
+ }
+}

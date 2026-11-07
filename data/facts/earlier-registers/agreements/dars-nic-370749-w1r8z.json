@@ -1,0 +1,77 @@
+{
+ "base_reference": "DARS-NIC-370749-W1R8Z",
+ "versions": [
+  {
+   "reference": "DARS-NIC-370749-W1R8Z-v1.4",
+   "version": "1.4",
+   "organisation": "NHS ENGLAND",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01"
+     ],
+     "objective": "33f00deae4e8",
+     "activities": "97239d3ac63c",
+     "expected_output": "2e0b8d4674bb",
+     "expected_benefits": "b67e2239fd67"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : SUS PbR A&E",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Spells",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR OP",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "2e0b8d4674bb": "The outputs were predicted average need related expenditure per head for health care services for each age/gender group for each GP practice in England, and at CCG level for specialised services. \n\nThe outputs were the coefficients from the regression model, and also these multiplied by the values of the explanatory variables for each patient, the products of which are then aggregated to give average need per head by age/gender group by GP practice and for specialised services by CCG.\n\nThe coefficients from the regression models were published in NHS England’s technical guide to allocations. The predicted average need per head by age/gender group by GP practice were published in the technical guide. The average need per head was suppressed in the publication where they apply to small numbers in line with the HES analysis guide.\n\nThese will be equivalent to the previous research by Nuffield Trust published in the Excel file C Need per head (General and Acute), worksheets GP practice Need Values and Nuffield Model Variables, at:\nhttp://www.england.nhs.uk/2014/03/27/allocations-tech-guide/\n\nThe values of the explanatory variables or record level data were not published.\n\nThe data are requested for retention for five years to allow NHS England to respond to queries on the allocations, and re-model for future changes in CCG responsibilities arising with co-commissioning.\n\nThe further analysis NHS England want to perform in 2017/18 is to investigate a query they have had from a CCG regarding their needs weighting from the model. This will involve looking at some of the inputs to the model from that geographical area and comparing them to other areas. This will be done through access to the secure connection to the data stored in the NHS Digital facility. NHS England is not permitted to transfer any of the data out of the NHS Digital facility, nor is it permitted to attempt to do so. The outputs will be qualitative descriptions of what have been found when comparing the CCG’s input data with other areas.\n\nThis will allow NHS England to understand whether any mistakes were made in the calculation of the formula and therefore whether the formula may need to be refined to ensure that allocations are as fair as possible in relation to need; or whether there were some local data issues that skewed the output for that particular CCG; or whether in fact there is no issue at all. \n\nNHS England need to be able to confirm that resources have been allocated in accordance with the objectives of providing equal opportunity of access to healthcare for equal need, and addressing health inequalities. Without being able to re-look at the original data used for current allocations NHS England cannot be confident that allocations have been carried out in the most equitable and efficient manner possible, and cannot make changes to improve the process in future. In addition, in an extreme scenario, should NHS England find any significant mistakes in the outputs then certain CCGs could theoretically be eligible for compensation which would have a direct impact on patient care.\n\nThe predicted need per head was used to calculate CCG target funding allocations, by combining with population sizes and other components of the target formula which were not calculated from this requested data set.",
+  "33f00deae4e8": "The efficient and equitable allocation of funding to support different services, geographies and patient groups is a fundamental underpinning to the operation of the health service.  Without this, the opportunity for patients to access healthcare in line with need would be unequal, and the ability to address inequalities in health would be undermined.\n\nThe approach to achieving the efficient and equitable allocation of resources has two key steps: first, understanding the current distribution of resources and estimating the relative target distribution; the second is that which would deliver the most efficient and equitable distribution of resources based on the relative need for healthcare services between geographical areas and patient groups. The data that is the subject of this application would be used to develop the target allocation shares for Clinical Commissioning Groups (CCGs) of the national budget for England.\n\nThe target formula used for allocation of resources for CCGs was developed by the Nuffield Trust (see www.nuffieldtrust.org.uk/our-work/projects/person-based-resource-allocation-pbra) and is the most robust resource allocation methodology we have ever used. Its strength comes from building organisational allocations up from individual level estimates of need for health services, which can exploit interacting information about each patient’s age, gender, area of residence and hospital recorded diagnosis information.  These individual level estimates can then be built up in to organisational level estimates; the estimates for individuals themselves are not reliable and are not used (nor published).\nThe Nuffield work was updated for two reasons.  First, the original modelling is based on information that is several years old (2007-08 to 2009-10) and we would want to update this to ensure it remains robust.  Second the development of commissioning and a more place-based approach is driving a reconsideration of where the boundaries are between different commissioning streams.  If the responsibilities of Clinical Commissioning Groups change, the relative distribution of resources that is most efficient will also change. In particular NHS England need to consider how the target allocation would need to change if significant elements of the directly commissioned specialised services became part of CCGs’ funding responsibilities.\n\nIn summary, therefore, the objective is to estimate the relative need for healthcare services for each CCG’s population and for specialised services at CCG level, based upon modelling the use of healthcare services and diagnoses data. \n\nTo confirm, the data will only be used for the development of a formula for target funding allocations for each Clinical Commissioning Group and for specialised services currently commissioned by NHS England and to then follow up on queries submitted following publication.",
+  "97239d3ac63c": "The requested data and linkage will be used to create a record for each individual in England. The record will include for four years their admitted care, outpatient care, A&E attendances and critical care, or alternatively that they have received no hospital care. The record will also include diagnostic information from SUS PBR.\n\nThis data set will be held solely by NHS Digital on their IT systems. Access to the data will be via secure virtual access using tokens and individual login details on NHS England computers. \n\nData will be accessed by a limited number of authorised individuals from NHS England who are all substantive employees.  \n\nProcessing took the form of statistical modelling of individual patient record level data. The modelling had annual estimated expenditure for each patient as the dependent variable and the patient’s age, diagnoses, and characteristics of the local area where the patient resides as the explanatory variables. The characteristics of the local area where the patient resides are publicly available data from e.g. the 2011 Population Census.\n\nOther data was linked to the data set, but only organisational level data (eg: QOF) or reference data (eg: organisational name against an organization code).  No additional record level data was linked to the dataset.\n\nThe only data from this work taken away to NHS England’s premises was\na) the coefficients from the regression modelling and diagnostic test results of the robustness of the modelling;\nb) the estimated need per head by age-gender group by GP practice;\nc) the estimated proportion of need per head by age-gender group by CCG by groups of specialised services (for changes in CCGs’ responsibilities);  \nd) aggregate level descriptive data eg the number of people receiving treatment not registered with a GP.\n\nNo record level data was taken away from the HSCIC Secure Data facility, and thus only aggregate or organisation level statistical information will be published.\n\nThe results of the analysis performed on this data are published here: https://www.england.nhs.uk/2016/04/allocations-tech-guide-16-17/\nThe work has allowed the publication of 5 years of allocations to CCGs.\n\nAll persons accessing the data are substantive employees of NHS England.",
+  "b67e2239fd67": "An updated and improved formula has allowed more equitable funding of CCGs across England and thereby supported more equitable access by patients to NHS health care services.\n\nThe benefits of equitable allocations are difficult to quantify, but the size of the budget being allocated (over £65bn) is sufficiently large that a small marginal improvement would have significant absolute benefits.\n\nA recent longitudinal study by Barr et al (www.bmj.com/content/348/bmj.g3231.reprint) has provided the clearest evidence so far of the impact of additional resources on health status, demonstrating a link between a reduction in deaths amenable to healthcare and increased investment.  This demonstrates that an effective distribution of resources in line with need should, if followed by appropriate commissioning, be expected to deliver improvements in healthcare outcomes for individuals."
+ }
+}

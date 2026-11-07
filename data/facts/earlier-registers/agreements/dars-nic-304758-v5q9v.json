@@ -1,0 +1,71 @@
+{
+ "base_reference": "DARS-NIC-304758-V5Q9V",
+ "versions": [
+  {
+   "reference": "DARS-NIC-304758-V5Q9V",
+   "version": "",
+   "organisation": "University of Nottingham",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "c60d872622ec"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "c60d872622ec": "Objective for processing: The HES data are requested to link to the existing QResearch database so that it can be used for bona fide medical research. The HES patient level data linked to QResearch is only accessed by academics employed by University of Nottingham on site at the University of Nottingham. However the researchers involved in given project (contributing to the research question, design, interpretation and writing of the paper for publication but not handling the data) may be employed by other UK universities. The QResearch database consists of the coded pseudonymised electronic health records from primary care patients registered with approximately 900 general practices spread throughout the UK. The database is widely used for medical research into the causes of disease, its natural history, treatment and outcomes. QResearch was started in 2003 and will continue for the foreseeable future. In addition to coded data from the GP electronic record, the QResearch database also contains the linked cause of death derived from the death certificate data and cancer registration data supplied by the Office of National Statistics following approval by Trent MREC and Secretary of State for Health. The data linkages for QResearch were extended in 2011 to include additional health information from secondary care including HES. The additional HES linked data enables researchers to analyse additional information on patient characteristics, treatment and outcomes which will improve the epidemiological analyses of studies since the data will be more complete. Without the data linkage, for example, research studies may under-estimate the risk and benefits associated with interventions such as prescribed medicines. The QResearch database linked to HES data is used for research to develop and validate risk prediction algorithms such as QRISK2. QRISK2 is a risk prediction algorithm which calculates an individual’s risk of a heart attack or stroke taking account of their individual risk factors such as age, sex, ethnicity, clinical values and diagnoses. The research describing the derivation and validation of QRISK2 has been published in the BMJ (2008). The software implementing QRISK2 is available as open and closed source software. QRISK2 is recommended by NICE as the risk score for use in its guidance on lipid modification (2014). It is also recommended for use in the NHS Health Check. Research undertaken using the extended database continues to be processed using the existing arrangements with respect to scientific review and annual reports to Trent MREC. Research has to be peer reviewed, original, hypothesis driven or hypothesis testing, intended for publication in an academic peer reviewed journal. All research undertaken using the QResearch database and linked data are subject to independent peer review and the results of all research are published. Processing activities: The HES data is linked to the QResearch database at individual patient level using a pseudonymised version of the NHS number which has been supplied in both GP data and the HES data. No strong patient identifiers are received by QResearch as the data is pseudonymised-at-source and at HSCIC. Year of birth is rounded to date of birth The resulting data are then used for undertaking primary research. The linked HES-GP data are not accessible by third party organisations or across multiple locations within the same organisation. The linked HES data is only be processed on site on secure servers at the University of Nottingham. Only approved research staff with substantive contracts with the University of Nottingham access the linked HES data. No individual level data will be shared outside the University of Nottingham or supplied to any third party. Specific outputs expected, including target date: The outputs are research papers which are published in peer reviewer academic scientific journals and presented at academic conferences. The results tables within the papers will only contain statistical information with cell counts of > 5, being suppressed in line with the ICO code on anonymisation. No indicators are produced which show performance of an organisation – indeed the identity of the GP practices contributing to QResearch are not shared with any third party. Expected measurable benefits to health and/or social care including target date: The results of research undertaken continues to result in new knowledge and understanding regarding disease epidemiology, health inequalities, drug safety, methods of identifying patients at high risk of serious illnesses. Every year new research is published in high impact international research journals such as the British Medical Journal and the British Journal of General Practice. The research is ongoing with target dates for individual projects rather than one overall target date. A complete list of research papers using QResearch database is published at http://www.qresearch.org/SitePages/publications.aspx Research arising for the QResearch database including the linked data has been used to inform national policy. For example, research findings have been included in NICE guidelines on fragility fracture, diabetes, suspected cancer and lipid modification. Research findings have informed the NHS Health Checks programme and Department of Health guidelines on health checks. Examples of ongoing research include assessment of the safety of antidepressant drugs and novel anticoagulants; investigation of potential links between diabetes drugs and cancer; quantification of the risk of thrombosis associated with various types of the oral contraceptive pill. Commercial Considerations The data are requested to link to the existing QResearch database so that it can be used for bona fide medical research by academics employed by UK universities. QResearch is a not-for-profit collaboration between the University of Nottingham and Egton Medical Information Systems (EMIS). Researchers are charged for access to the data to undertake research projects in order to help cover some of the running costs. All subsequent research outputs from QResearch are made publically and freely available. Risk prediction algorithms derived from QResearch linked data such as QRISK2 are published as free open source software and also licensed as closed source software for organisations unable to use the open source. HES data will never be used for direct or indirect marking purposes."
+ }
+}

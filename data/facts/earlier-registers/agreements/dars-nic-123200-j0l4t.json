@@ -1,0 +1,114 @@
+{
+ "base_reference": "DARS-NIC-123200-J0L4T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-123200-J0L4T-v0.13",
+   "version": "0.13",
+   "organisation": "London School of Hygiene and Tropical Medicine",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01",
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "objective": "25a2830c4864",
+     "activities": "5083bf5dcc9b",
+     "expected_output": "62ff4dbb7ceb",
+     "expected_benefits": "5ee995228124"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "25a2830c4864": "The Chief Investigator for this feasibility study is from the London School of Hygiene & Tropical Medicine, and instigated this with support from interested collaborators in Queen Mary University of London and University College London. This is a feasibility study for a larger trial. The question the main trial will address is whether vitamin D supplementation reduces morbidity and increases lifespan in men and women aged 65 to 84 in response to a growing literature base suggesting that such trials are required. The International Agency for Research on Cancer (IARC) Working Group on vitamin D and cancer, of which the chief investigator was a member, reviewed the epidemiological evidence on vitamin D and cancer and concluded that the evidence was strong for colorectal cancer but inconclusive for other individual cancers (IARC Working Group on Vitamin D, 2008). Their report concluded: “The only way to further address the cause-effect issue is to organise new randomized trials to evaluate the impact of vitamin D on all-cause mortality and on the incidence and mortality from common conditions including cancer. These trials should make sure that key parameters of vitamin D status (e.g., serum 25-hydroxyvitamin D levels before and in trial) can be assessed.”  \n\nMany people in the UK do not receive enough sun exposure to achieve a satisfactory vitamin D blood level. Epidemiological evidence suggests that people with low vitamin D levels are at increased risk for several diseases, including heart disease, various infections and some types of cancer. However, similar epidemiological evidence of benefit for various other vitamins was disproved when randomized trials were conducted. LSHTM is therefore planning a large (n=20,000) trial to evaluate the effect of vitamin D supplementation on mortality and morbidity among older members of the general population. For the primary endpoint of overall mortality in the main trial the necessity of placebo control is not clear. This feasibility study, which is funded by the Government’s Health Technology Assessment agency, will compare a placebo controlled trial in 10 GP practices against an open randomised trial in 10 practices, randomising 800 people aged 65-84 double blind to monthly placebo versus monthly vitamin D for 2 years, and 800 to no treatment versus 2 years of monthly vitamin D.\n\nOne of the research objectives is to establish the feasibility of flagging for lifelong follow-up through national registers for death and cancer registration, and tracing through the Hospital Episodes Statistics database (HES) for hospital admissions and diagnoses. Comparing hospital admissions, cancer registrations and deaths between participants who have and have not taken vitamin D will answer the question of whether high-dose vitamin D supplementation might help to prolong life and reduce various diseases.\n\nThe other primary objectives of the trial are to determine the recruitment rate and the compliance rate (the proportion adhering to allocated treatment over 2 years) in practices with placebo control, and in practices with open control. The institution shall also determine contamination rates in those allocated to placebo and those allocated to open control (ie self-administration of >400 IU vitamin D per day or equivalent). IMP adherence and use of additional vitamin D supplements were studied both by self-report and from blood levels of 25(OH) vitamin D at entry and at 2 years.  \n\nThe outcomes of this feasability study will assist with a decision as to the study design of the main trial by providing unbiased data on adverse events in each treatment arm. This will be compared to the (potentially) biased real-time collection of adverse events during the trial to see whether an open allocation trial (where people know which treatment they’ve been allocated to) is more biased in this regard than a blinded design (where patients either receive treatment or placebo). This in turn will help us to present a reasoned argument for the study design that should be adopted in the main trial.",
+  "5083bf5dcc9b": "Data from all 1615 patients randomised to the trial will be included for the statistical analysis. LSHTM will supply each participant's unique Study ID, NHS number, date of birth and post code to NHS Digital for the purpose of following each participant's health status (mortality, cancer registration data and hospital admissions) on the basis of informed patient consent to permit the receipt, processing and release of data by NHS Digital. The participant's Study ID, NHS number, date of birth and postcode will be linked to medical records held by NHS Digital on cancer registrations (provided by NHS Digital on behalf of Public Health England), deaths (sourced from civil registration data and provided by NHS Digital on behalf of the Office for National Statistics) and the Hospital Episodes Statistics database on hospital admissions. This linked data will then flow to LSHTM, and the trial statistician will analyse the mortality, cancer registration and hospital admissions data by treatment allocation & baseline blood serum vitamin D level to assess how vitamin D deficiency and treatment with vitamin D might affect these outcomes. \n\nThe main analyses will be the matched pair comparison of recruitment and overall compliance rates between placebo control and open control designs. Details of additional vitamin D supplement use will be recorded at entry, and retrospectively at the 2 year final visit. Failure to report taking at least 19 doses of allocated IMP or to attend the 2 year final visit are included in the definition of noncompliance, so there will be no missing data for the main analyses. Change in blood level of 25(OH) vitamin D from entry to exit will be analysed in relation to self reported compliance. The effect of treatment on serum 25(OH)D both overall by allocated treatment, and in compliant participants, will also be analysed in relation to the pre treatment 25(OH)D level. Other principal outcome data from this trial will include deaths, cancer cases and hospital admissions from major causes during and after the trial. This is the reason for requesting the mortality, cancer registration and HES data from NHS Digital. The data from a year preceding the beginning of the trial are required to provide baseline rates for deaths, cancer cases and hospital admissions. Deaths, cancer registration rates and hospital admission rates for major disease categories will be estimated by treatment allocation group (vitamin D versus no treatment) and baseline serum vitamin D level (blood samples were taken at entry to the trial).\n\nThe data will be used to assist the LSHTM making a decision as to the study design of the main trial by providing unbiased data on adverse events in each treatment arm. This can then be compared to the (potentially) biased real-time collection of adverse events during the trial to see whether an open allocation trial (where people know which treatment they’ve been allocated to) is more biased in this regard than a blinded design (where patients either receive treatment or placebo). This in turn will help the LSHTM to present a reasoned argument for the study design that should be adopted in the main trial.\n\nData containing personal identifiers will be transferred to and from NHS Digital using the secure data transfer portal. This data will be stored on the secure server at LSHTM which can be accessed only by the LSHTM study team using a unique network password. No-one else outside of the LSHTM study team will have access to any of the NHS Digital data from this application.\n\nThe data will only be viewed, accessed and analysed by direct substantive employees of the London School of Hygiene & Tropical Medicine (LSHTM). There are two collaborators in this study – University College London and Queen Mary University of London, they do not have access to the data.\n\nAll processing of ONS data will be in line with ONS standard conditions. The data will not be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide apart from the date of death which is converted from age at death down to the granularity of weeks to ensure sufficient anonymisation as described.",
+  "5ee995228124": "There is a growing consensus that most people in the UK do not receive enough sun exposure to achieve a satisfactory vitamin D blood level, and that current recommendations on the optimal daily dose of vitamin D should be increased. Eighty percent of men and 87% of women aged over 65 years living independently in the UK have blood levels of 25hydroxyvitamin D (25(OH)D the measure of vitamin D status) below the recommended concentration for optimal health (75 nmol/l or 30 ng/ml). Epidemiological evidence suggests that people with low blood levels may be at increased risk for several diseases, including heart disease, various infections and some cancers. However, similar epidemiological evidence of overall benefit for various other vitamins was disproved when randomized trials were conducted, and no adequately powered trial has tested vitamin D in doses that are high enough to achieve blood 25 (OH)D concentration > 75 nmol/l. Although the majority of observational studies report associations between vitamin D deficiency and susceptibility to a range of pathologies, some studies are null, and a few report opposite associations. A large randomized trial is therefore required to assess whether vitamin D supplementation can decrease the risk of various diseases and increase longevity. The importance of a clinical trial of oral supplementation of vitamin D is emphasized by the finding that in practice it is difficult for the majority of UK residents to obtain optimal vitamin D from sunlight or diet. If self administered vitamin D supplementation were shown to confer substantial health benefits it would be routinely recommended and widely adopted. This would also provide a rationale for a national policy of vitamin D supplementation for the general population, a review of the relative risks and benefits of sun exposure, and a revision of existing policy on vitamin D fortification of foods. If no benefit or unforeseen disadvantages are shown this will also be a valuable contribution to knowledge. The target audience for such findings would be the Department of Health and National Institute for Health Research.\n\nAn important public health priority is therefore to demonstrate the feasibility of a large randomized trial of prolonged vitamin D supplementation in older people, and to show that this will increase serum 25(OH)D to >=75 nmol/l in the majority of subjects. The main trial for which this is the feasibility study will be a randomized trial with 20,000 participants followed for 10 years. A trial of that size is needed to detect the 7% reduction that vitamin D supplementation might plausibly achieve in total mortality in healthy adults aged over 65. As well as demonstrating an expected increase in circulating 25hydroxyvitamin D levels, the feasibility study will provide estimates of cost and establish the study design and procedures required for the main trial. \n\nFeedback from patients and GP practice nurses was encouraging for the feasibility study. A number of sites reported that there was a strong interest among the study population and indeed, overall trial response rates were nearly double the protocol target. The final number of patients randomised was 1615 (vs protocol target of 1600) and the overall response rate was 17.2% (9,406 invited, 1615 randomised) compared with the protocol target of 9%. The final study analyses are currently underway, but interim estimates of participant compliance demonstrated excellent compliance at 3, 6 and 9 months, with 97.3%, 96.7% and 95.9% respectively taking all 3 monthly doses of trial medication. The draft report containing all study results is scheduled for Spring 2018.",
+  "62ff4dbb7ceb": "The results of this feasibility study will be reported in peer reviewed scientific journals with accompanying conference presentations and submissions to regulatory authorities. The first NIHR draft report was submitted in Autumn 2017 to the peer-reviewed Health Technology Assessment journal. It will be several months before this draft version of the NIHR report is finalised, pending referees' comments. During this period, the institution will also target the scientific medical community by submitting a report to the peer-reviewed British Medical Journal. \n\nIn addition, further funding will be sought for a larger “main” trial (for which this is a feasibility study), involving up to 20,000 participants across 200+ GP practices in the United Kingdom. NIHR have indicated that they would like to see the results of several similar large scale international vitamin D trials, due in the next few years, before they will consider funding a similar large scale study in the UK."
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "base_reference": "DARS-NIC-148230-KHMHH",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148230-KHMHH",
+   "version": "",
+   "organisation": "Heart and Lung Institute Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "objective": "02a428bc3a06"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "03a55c3f6e46"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148230-KHMHH-v0.0",
+   "version": "0.0",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "bfe5cd771d37"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "02a428bc3a06": "Background 400 have been recruited after a new diagnosis of heart failure is made and followed up for six months.  The study will assess reasons for death or admission to hospital and the psychological impact of  condition on patients.  Aim 1. To describe the mortality and hospitalisation rate in the early period after diagnosis of heart failure in a UK population.2. to describe the mode of death(ie whether patient die suddenly or from progressive intractable heart failure, etc)  in the early period after diagnosis of heart failure in a UK population.3. To describe the psychological impact of a on diagnosis of heart failure and how perceptions change over the short term.",
+  "03a55c3f6e46": "The data supplied by the NHS IC to National Heart & Lung Institute will be used only for the approved Medical Research Project identified above.",
+  "bfe5cd771d37": "The data supplied will be used only for the approved medical research project - MR1009 - High Risk Period for Patients with Heart Failure: A Population-Based Study"
+ }
+}

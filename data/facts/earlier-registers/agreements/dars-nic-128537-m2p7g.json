@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-128537-M2P7G",
+ "versions": [
+  {
+   "reference": "DARS-NIC-128537-M2P7G-v0.7",
+   "version": "0.7",
+   "organisation": "ROYAL COLLEGE OF PHYSICIANS OF LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "356fdaf9860b",
+     "activities": "9651834e8530",
+     "expected_output": "d967161d30ae",
+     "expected_benefits": "9226abc50b45"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "356fdaf9860b": "The Fracture Liaison Service Database (FLS-DB) is a clinically led, web-based quality improvement initiative commissioned by the Healthcare Quality Improvement Partnership (HQIP) and managed by the Royal College of Physicians (RCP).  This is an ongoing initiative being delivered as part of a national clinical audit programme - currently commissioned until 31/03/2021.\n\nThere are an estimated half a million fragility fractures in the UK each year – more than three times the annual number of strokes. Fragility fractures are a major clinical event for patients, their families and carers. The direct health cost of these fractures are estimated at £4.3 billion every year. With an ageing population, absolute numbers of hip fractures are projected to increase by 65% in the next 20 years. National Institute for Health and Care Excellence (NICE)-approved medications significantly reduce the risk of the next fracture by 20–70% (depending upon fracture site). This is a substantial reduction in risk.  \n\nThe overall aims of the FLS-DB are to improve the quality of care for patients who present to Fracture Liaison Services with a fragility fracture by measuring adherence to evidence based standards of care in the area of falls and fracture prevention. Fracture Liaison Services (FLSs) aim to reduce the risk of subsequent fractures by systematically identifying, treating and referring to appropriate services all eligible patients aged 50 and over who have suffered a fragility fracture. The FLS is a proven approach, recommended by the Department of Health, to targeting these high risk groups and improving secondary fracture prevention.\n\nOne of the specific FLS-DBs contract deliverables is to produce CCG level reports. Currently over 50 FLS in England and Wales submit data to the FLS-DB. However, over 100 trusts and local health boards (LHBs) and centres in England and Wales do not participate in submitting date to the FLS-DB. The vast majority of trusts and LHBs that do not provide data do not have a commissioned FLS. Additionally, the study's held data shows that there is often no relationship between a commissioned FLSs reported annual costs and their estimated fragility fracture caseloads. There have been no CCG level reports produced previously as a result of FLS-DBs.\n\nThe study will submit their cohort (men and women aged 50 years and over with a fragility fracture) for list cleaning to obtain the GP practice code. Patient data will then be linked to a CCG. This will allow creation of a CCG summary report which includes key performance indicators data  at CCG level.  This will highlight where CCGs have gaps in resourcing for existing FLSs and highlight clear areas for improvement.",
+  "9226abc50b45": "The overall aims of the FLS-DB is to improve the quality of care for patients who present at fracture liaison services with a fragility fracture by measuring adherence to evidence based standards of care in the area of falls and fracture prevention.\n\nThe estimated number of avoidable fractures every year is in the thousands. Any fragility fracture approximately doubles the risk of another fracture (ie a secondary fracture). If more patients were treated after a fragility fracture, many of these fractures could be avoided. All eligible patients receiving effective secondary fracture prevention would provide a real benefit to people in the UK, with almost 54,000 fractures prevented in the first 5 years.\n\nPreventing fragility fractures is an important quality target area for reducing local variation and improving the population’s health. Fragility fractures are a major clinical event for patients, their families and carers. The direct health cost of these fractures are estimated at £4.3 billion every year. Preventing falls and fragility fractures and the resulting hospital have been shown to be both clinically and cost effective and will result in substantial cost savings for health and social care services.  \n\nA Fracture Liaison Service is a way for CCGs to reduce the number and cost of unplanned admissions and to make a significant reduction in morbidity and mortality for older people.  Effective Fracture Liaison Services have been shown to reduce refracture rates.",
+  "9651834e8530": "In a previous experience of linking data from this source 98.37% records matched using only NHS number and Date of birth. Therefore, the only identifiable information Crown Informatics will send  is NHS Number and Date of Birth.  \n\nCrown Informatics will send these identifiers and a study ID to NHS Digital. NHS Digital will link the data and provide Crown Informatics with a list cleaning file which contains NHS Number, Date of Birth and GP Practice code. Crown Informatics will receive this data from NHS Digital and link this with the non-identifiable patient data in the FLS-DB. Crown Informatics will convert GP practice to CCG code.  Crown Informatics will send the study ID and CCG code to the University of Oxford and Royal College of Physicians. University of Oxford and Royal College of Physicians will analyse the data to summarise the FLS-DB's key performance indicators at CCG level.\n\nThere will be no requirement nor attempt to re-identify individuals from the data.\n\nAll individuals with access to record level data are substantive employees of Crown Informatics, Royal College of Physicians or University of Oxford. All outputs will be aggregated with small numbers suppressed in line with the HES analysis guide. No record level data falling under this agreement will be shared with any third-party.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "d967161d30ae": "Data provided by NHS Digital will be used to produce the FLS-DB CCG Summary Reports. Using the GP practice code allows for data to be grouped at CCG Level. The CCG summary Reports will contain CCG level data for 11 Key Performance indicators for Fracture Liaison Services. Previously this information has only be available at national and Fracture Liaison Services level. The summaries will be distributed to all CCGs in England. The summaries will be used to inform commissioning priorities by highlighting areas where Fracture Liaison Services are not commissioned sufficiently for the local population need.\n\nThe expected target date for these reports to be published is March 2018."
+ }
+}

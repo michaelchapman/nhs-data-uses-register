@@ -1,0 +1,88 @@
+{
+ "base_reference": "DARS-NIC-21860-S1S4J",
+ "versions": [
+  {
+   "reference": "DARS-NIC-21860-S1S4J",
+   "version": "",
+   "organisation": "NHS NORTH LINCOLNSHIRE CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "c6aa2a397488",
+     "activities": "66993767a03b",
+     "expected_output": "0c274bd641b9",
+     "expected_benefits": "011c52fa7a5b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Children and Young People's Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "011c52fa7a5b": "1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, Integrated Care and pathways.\na. Analysis to support full business cases. \nb. Development of business models.\nc. Monitoring In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against 18 weeks wait targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.",
+  "0c274bd641b9": "As a result of the aforementioned processing activities, eMBED will provide a number of outputs which are securely provided to the CCGs in the appropriate format at pseudonymised level.\nWhere datasets have been linked, the CCG will receive the outputs of analysis instead of the direct data, however it may also be necessary to provide linked data at row level to CCGs (pseudonymised record level data).\neMBED will provide aggregated reports only with small number suppression to CCG’s stakeholders e.g. GP practices, Local Authorities. Where such data is provided there are safeguards in place to ensure that the receiving organisation has recognised the required safety controls required, i.e. signed agreements from the receiving organisation regarding compliance with data protection and the agreed use of the data.\neMBED will flow outputs, mostly in the form of reports to the CCG stakeholders. CCGs may also provide their stakeholders with the anonymised outputs. The anonymisation will be achieved by aggregating records and using small number suppression in line with HES analysis guidance. \neMBED provides a range of Business Intelligence functions and outputs as specified by the CCG. These outputs can be presented in a variety of different ways to a variety of different users, from highly aggregated graphical “dashboards” to very low-level tabular analysis, and everything in between with the opportunity to drill-down into the detail. Provision of aggregated reports only with small number suppression data to CCG stakeholders allows for analysis at an appropriate level, revealing potentially useful but previously unrecognised commissioning insights/trends whilst mitigating against the risk of re-identification of individuals\n1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports including high flyers.  \nThe PCU produces a number of reports which provide a summary (not patient level data) which are shared back to the CCG, the following are a list of these: \nIAPT Dataset\n\nMandated national contract KPIs:\nCompletion of IAPT Minimum Data Set outcome data\nIAPT Access Times – 6 & 18 wk (finished treatment)\n\nLocal CCG and NHSE information and KPIs:\nNumber of Referrals\nNumber Entering Treatment\nMonthly Prevalence rate\nNumber completing treatment\nNumber moving to recovery\nNumber not at caseness\nMonthly Recovery rate\nReliable Improvement rate\nIAPT Access Times – 6 & 18 wk (entering treatment)\nWaiting times for treatment and those still waiting\nClearance times\n\nLocal CCG monitoring:\nAppointments, cancellations and DNA rate analysis\nData Quality\nReferral rates and activity by GP Practice and Age band\n\nMental Health Dataset\n\nMandated national contract KPIs :\nCompletion of valid NHS number field \nCompletion of Ethnic coding\nUnder 16 bed days on Adult wards (Never event)\n\nLocal CCG and NHSE information and KPIs:\nGatekeeping admissions\n7 day follow-up hospital discharges\nEIP access rates\nEating disorders\n\nLocal CCG monitoring:\nReferral rates by GP Practice and Age band\nCPA monitoring inc settled accommodation and employment\nCPA reviews within 12 months, step up/down etc\nBed days, admissions and discharges\nDelayed discharges\nDetentions\nLD/ MH/CAMHS ward stays\nBed locality (distance out of area)\nContacts and DNA rates\nCluster monitoring and red rules\nData quality\n\nThe PCU will also share aggregated reports only with small number suppression back to the provider. \nThe PCU shares aggregated reports only with small number suppression outputs with NHS England for national reporting and to support any issues that need rising in relation to data quality.",
+  "66993767a03b": "1. North of England Data Services for Commissioners Regional Office (DSCRO) and Yorkshire Data Services for Commissioners Regional Office (DSCRO) obtain a flow of data identifiable at the level of NHS number for Mental Health (MHSDS, MHMDS, and MHLDDS), Maternity (MSDS), Improving Access to Psychological Therapies (IAPT), Child and Young People’s Health (CYPHS) and Diagnostic Imaging (DIDS) for commissioning purposes.\n2. Data quality management, minimisation and pseudonymisation of data is completed by North of England and Yorkshire DSCRO and the pseudonymised data is then passed securely to North of England CSU. \n3. North of England CSU then securely transfer the processed, pseudonymised and linked data to eMBED.\n4. eMBED receives the data from North of England CSU and carries out further data processing, addition of derived fields, linkage to other data sets and analysis. Linked data would include the following to give a rich and broad clinical journey allowing improved care planning, patient care and commissioning:\n• Mental Health (MHSDS, MHLDDS, MHMDS) with IAPT\n• Mental Health (MHSDS, MHLDDS, MHMDS) with SUS\n• Improving Access to Psychological Therapies (IAPT) with SUS\n• Diagnostic Imaging Dataset (DIDs) with SUS\n• Maternity (MSDS) with SUS\n• Children and Young People’s Health Services (CYPHS) with SUS\n5. Aggregation of required data for CCG management use is completed by eMBED or the CCG as instructed by the CCG.\n6. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared.",
+  "c6aa2a397488": "To use pseudonymised data for the following datasets to provide intelligence to support commissioning of health services:\n• Mental Health Minimum Data Set (MHMDS)\n• Mental Health Learning Disability Data Set (MHLDDS)\n• Mental Health Services Data Set (MHSDS)\n• Improving Access to Psychological Therapy (IAPT)\n• Children and Young People’s Health (CYPHS)\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets."
+ }
+}

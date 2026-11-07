@@ -1,0 +1,234 @@
+{
+ "base_reference": "DARS-NIC-382794-T3L3M",
+ "versions": [
+  {
+   "reference": "DARS-NIC-382794-T3L3M-v0.2",
+   "version": "0.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-06-01"
+     ],
+     "objective": "8ff5d8c1e298",
+     "activities": "45cba6a19990",
+     "expected_output": "dc3467838aaf",
+     "expected_benefits": "325c35e06550"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS plus - Admitted Patient Care (beta version)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-382794-T3L3M-v2.5",
+   "version": "2.5",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01"
+     ],
+     "objective": "bdef1fb50145",
+     "activities": "514650ce1aad",
+     "expected_output": "6d4c36a325fc",
+     "expected_benefits": "9e95aaf35b21",
+     "yielded_benefits": "e597c9510ece"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS plus - Admitted Patient Care (beta version)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "COVID-19 Hospitalization in England Surveillance System",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "COVID-19 Second Generation Surveillance System",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-382794-T3L3M-v3.1",
+   "version": "3.1",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2021-03-01",
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "b8e0e5e8a511",
+     "activities": "514650ce1aad",
+     "expected_output": "6d4c36a325fc",
+     "expected_benefits": "9e95aaf35b21",
+     "yielded_benefits": "e597c9510ece"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "COVID-19 Hospitalization in England Surveillance System",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "COVID-19 Second Generation Surveillance System",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "COVID-19 Vaccination Adverse Reactions",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "COVID-19 Vaccination Status",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "SUS plus - Admitted Patient Care (beta version)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 - s261 - 'Other dissemination of information'",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 12
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "325c35e06550": "The aim is to provide useful knowledge that patients, GPs and intensive care doctors can use to reduce the risk of severe COVID-19 infection within this pandemic.\n\nSpecifically it will help research to understand whether drugs commonly taken for chronic conditions such as hypertension or diabetes may exacerbate or reduce the severity of COVID-19 disease. It is hoped this study will be able to identify alternative drugs for patients with chronic conditions, as well as possible drugs to treat COVID-19; and recognise high-risk patients in primary care.\n\nAround 14 percent of the adult population in England take anti-hypertensive medications, and around five percent receive medication to treat diabetes. The prevalence increases with age, making usage particularly common in those at risk of for severe COVID-19 infections. In many cases drugs from a different class could be used instead. If these drugs are increasing the risk of severe infection, they represent one of the few modifiable risk factors for severe COVID-19 infection. Medical and research communities need rapid large-scale accumulation of data on the outcomes of patients who develop COVID-19 infection whilst taking these drugs to allow appropriate risk assessment and clinical decision making for these patient groups. Other drugs in common use in primary care patients are believed to have anti-viral activity to COVID-19, such as hydroxychloroquine, used in rheumatoid arthritis, and lopinavir-ritonavir, used in the treatment of HIV. \n\nThere are also immune-suppressive therapies that may either increase the risk of severe illness by preventing the body’s response to infection, or attenuate the hyperinflammation syndrome associated with COVID-19 disease, so preventing severe disease. \n\nThe incidence of severe disease in patient groups taking these medications urgently needs to be established to guide both their management and investigation of COVID-19 treatment strategies.\n\nICNARC is already providing up-to-date information on the admission characteristics and outcomes of all patients with severe COVID-19 infection treated on an ICU in England, Wales and Northern Ireland.",
+  "45cba6a19990": "EMIS and TPP process the GP data from the original data controllers (GP practices) and sends it to the University of Oxford. EMIS and TPP are not able to access or process any GP data once it is located at the University of Oxford. \n\nEMIS and TPP are neither a data processor nor a data controller for the data provided by NHS Digital under this Agreement. EMIS and TPP are not able to access the HES data under any circumstances.  EMIS and TPP have given permission for the GP data it supplies to be linked with the data from NHS Digital for purposes determined by the Principal Investigator at the University of Oxford.\n\nBefore providing data to the University of Oxford, NHS Digital use the Open Pseudonymiser tool to pseudonymise the HES data. NHS Digital retains the salt key for this pseudonymisation, meaning that the University of Oxford are unable to re-identify the data but as described below they are able to link with GP data that was pseudonymised using the same Open Pseudonymiser tool. The University of Oxford will not be provided with a copy of the pseudonymisation salt key. \n\nNHS Digital provide the pseudonymised data to the University of Oxford which is then linked to the QResearch database at individual patient level using a pseudonymised version of the NHS number which has been supplied in both GP data and the SUS data. The data linkage is undertaken by an employee of the University of Oxford. No data items which would identify the data subjects are received by QResearch as the data is pseudonymised-at-source and at NHS Digital. Date of birth is rounded to year of birth before receipt by the University of Oxford. No other data linkage is permitted without further amendment to the data sharing agreement with NHS Digital. There is no requirement to re-identify individuals from the data and no attempts will ever be made to do this.\n\nThe resulting data are then used for undertaking primary research relating to COVID-19. The linked data are only accessed by approved research staff with substantive contracts employed by University of Oxford or its data processors. In order to support the urgent COVID-19 risk stratification work, a small number of employees from the University of Cambridge, University College London, London School of Hygiene and Tropical Medicine, and University of Liverpool may act as additional data processors. These organisations' staff will remotely access the data stored by the University of Oxford and will not store any additional copies of the data. These organisations will not have responsibility for determining the purpose for which, or the manner in which data will be processed, and they are only permitted to process data for the purpose of supporting this urgent COVID-19 risk stratification work. Data is only processed on site on secure servers at the University of Oxford. No individual level data will be shared or stored outside the University of Oxford or supplied to any third party not named in this data sharing agreement.  \n\nThe data processor Dancing House Consulting undertakes IT consultancy on behalf of the data controller, including administration of data backups, database administration, and secure destruction of data. Dancing House Consulting do not undertake data linkage or analysis of the data. \n\nAll outputs are restricted to aggregate data with small numbers suppressed in line with the HES Analysis Guide.\n\nRegular reviews against the ICO code on anonymisation (2012) will be undertaken to ensure that the data remain anonymised and all appropriate controls are in place to minimise any risk of re-identification.  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "514650ce1aad": "EMIS and TPP process the GP data from the original data controllers (GP practices) and sends it to the University of Oxford. EMIS and TPP are not able to access or process any GP data once it is located at the University of Oxford. \n\nEMIS and TPP are neither a data processor nor a data controller for the data provided by NHS Digital under this Agreement. EMIS and TPP are not able to access the HES data under any circumstances.  EMIS and TPP have given permission for the GP data it supplies to be linked with the data from NHS Digital for purposes determined by the Principal Investigator at the University of Oxford.\n\nBefore providing data to the University of Oxford, NHS Digital use the Open Pseudonymiser tool to pseudonymise the HES data at source. NHS Digital retains the salt key for this pseudonymisation, meaning that the University of Oxford are unable to re-identify the data but as described below they are able to link with GP data that was pseudonymised using the same Open Pseudonymiser tool. The University of Oxford will not be provided with a copy of the pseudonymisation salt key. \n\nNHS Digital provide the pseudonymised-at-source data to the University of Oxford which is then linked to the QResearch database at individual patient level using a pseudonymised version of the NHS number which has been supplied in both GP data and the SUS data. The data linkage is undertaken by an employee of the University of Oxford. The GP data is linked to other health care data such as  hospital admissions and attendances, mortality,  ICNARC, COVID-19 data, cancer data and occupational data from ONS. No data items which would identify the data subjects are received by QResearch as the data is pseudonymised-at-source and at NHS Digital. Date of birth is rounded to year of birth before receipt by the University of Oxford . \n\nThere is no requirement to re-identify individuals from the data and no attempts will ever be made to do this.\n\nThe resulting data are then used for undertaking primary research relating to COVID-19. The linked data are only accessed by approved research staff with substantive or honorary contracts employed by University of Oxford or its data processors. In order to support the urgent COVID-19 risk stratification work, a small number of employees from the University of Cambridge, University of Leicester, University College London, Kings College London, Guys and St Thomas's Trust, ICNARC, NHSBT, London School of Hygiene and Tropical Medicine, and University of Liverpool may act as additional data processors. These organisations' staff will remotely access the data stored by the University of Oxford and will not store any additional copies of the data.  These staff will undertake data processing tasks data manipulation, cleaning, data analysis to address urgent COVID research questions as determined solely by Oxford. These organisations will not have responsibility for determining the purpose for which, or the manner in which data will be processed, and they are only permitted to process data for the purpose of supportin urgent COVID-19 research. Data is only processed on site on secure servers at the University of Oxford. Data may be processed by individuals not employed by organisations listed as data processors and this will be under an honorary contract with oxford and this covers all legal responsibilities. No individual level data will be shared or stored outside the University of Oxford or supplied to any third party not named in this data sharing agreement.  \n\nThe data processor Dancing House Consulting undertakes IT consultancy on behalf of the data controller, including administration of data backups, database administration, and secure destruction of data. Dancing House Consulting do not undertake analysis of the data. \n\nAll outputs are restricted to aggregate data with small numbers suppressed in line with the HES Analysis Guide.\n\nRegular reviews will be undertaken to ensure that all appropriate controls are in place to minimise any risk of re-identification.  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "6d4c36a325fc": "The outputs include a risk prediction tool (QCovid) to identify those at high risk of severe outcomes from COVID-19, research reports,  research papers which are published in peer reviewer academic scientific journals and presented at academic conferences. All research is published in academic journals with a link from the QResearch website on an ongoing basis. The publications are accompanied by with press releases from the relevant organisations and highlighted on social media. \n\nResults are also shared with policy makers and NICE guideline committees on a regular basis via their stakeholder consultations in order to support development of relevant guidelines. \n\nResults are also regularly shared with patient participants on the QResearch Advisory Board and PPI representatives on individual research projects. \n\nThe results tables within the papers will only contain statistical information with cell counts of > 5.  Outputs will only contain aggregate level data with small numbers suppressed in line with the HES analysis guide.\n\nNo indicators are produced which show performance of an organisation – indeed the identity of the GP practices contributing to QResearch are not shared with any third party.",
+  "8ff5d8c1e298": "This agreement specifically relates to QResearch's urgent piece of COVID-19 work commissioned by the New and Emerging Respiratory Virus Threats Advisory Group (NERVTAG) to prepare a COVID-19 risk stratification tool. To support this work, NHS Digital will provide a one-off release of the latest available SUS+ Admitted Patient Care (APC) and mortality data. This one-off release of data will be used to support the urgent risk stratification work, and not for any additional purpose. In addition to this, the University of Oxford and its data processors are permitted to use the HES and mortality data released under DARS-NIC-240279-Y2V2N and DARS-NIC-375354-G8V1H to support this urgent COVID-19 risk stratification work while those two data sharing agreements remain active.\n\nQResearch is a database of linked medical records that has been used and continues to be used by a variety of research projects undertaken by UK universities, from reviewing the safety of antidepressant medicines to studying factors to predict variations in survival rates for cancer patients. The QResearch database consists of the coded pseudonymised electronic health records from primary care patients registered with approximately 1,500 general practices spread throughout the UK. \n\nQResearch was originally a not for profit collaboration originally between the University of Nottingham and Egton Medical Information Systems (EMIS) but the University of Nottingham’s roles and responsibilities have since been transferred to the University of Oxford. Strategic decisions about the GP data are taken by a Management Board representing the interests of EMIS and the University of Oxford. The University of Oxford is the sole data controller for the datasets which are linked to QResearch (deaths, cancer and hospital data) and the single point of access to the data.\n\nThe patient level data linked to QResearch is only accessed by academics employed by University of Oxford or its data processors as named in this data sharing agreement. In all cases, data can only be accessed on site at the University of Oxford. However, the researchers involved in a given project (contributing to the research question, design, interpretation and writing of the paper for publication but not handling the data) may be employed by other UK universities.  The NHS Digital data stay on site at the University of Oxford and are only handled by University of Oxford and its data processors. The University of Oxford may have a collaborator at another university on the project team advising on clinical aspects or interpretation of findings, but they will not receive any data. Data will not be used for any solely commercial purposes and all applications for the use of HES and/or mortality linked data are subject to a governance process explained in the Processing Activities section.\n\nOnly University of Oxford staff and the named data processors will have access to SUS and Civil Registration - Deaths record level data. External researchers will only have access to tabular outputs that are aggregate with small numbers suppressed in line with the HES Analysis Guide. Record level data are not shared with researchers outside of the University of Oxford. \n\nResearch undertaken using the extended database continues to be processed using the existing arrangements with respect to scientific review and annual reports to Trent MREC.  Research has to be peer reviewed, original, hypothesis driven or hypothesis testing, intended for publication in an academic peer reviewed journal. All research undertaken using the QResearch database and linked data are subject to independent peer review and the results of all research are published.",
+  "9e95aaf35b21": "The aim is to provide useful knowledge that patients, GPs and intensive care doctors can use to identify patients at high risk of severe outcomes from COVID-19 and reduce the risk of severe COVID-19 infection within this pandemic assess the uptake safety and effectiveness of the COVID-19 vaccine.\n\nIn addition will help research to understand whether drugs commonly taken for chronic conditions such as hypertension or diabetes may exacerbate or reduce the severity of COVID-19 disease. It is hoped this study will be able to identify alternative drugs for patients with chronic conditions, as well as possible drugs to treat COVID-19; and recognise high-risk patients in primary care.\n\nAround 14 percent of the adult population in England take anti-hypertensive medications, and around five percent receive medication to treat diabetes. The prevalence increases with age, making usage particularly common in those at risk of for severe COVID-19 infections. In many cases drugs from a different class could be used instead. If these drugs are increasing the risk of severe infection, they represent one of the few modifiable risk factors for severe COVID-19 infection. Medical and research communities need rapid large-scale accumulation of data on the outcomes of patients who develop COVID-19 infection whilst taking these drugs to allow appropriate risk assessment and clinical decision making for these patient groups. Other drugs in common use in primary care patients are believed to have anti-viral activity to COVID-19, such as hydroxychloroquine, used in rheumatoid arthritis, and lopinavir-ritonavir, used in the treatment of HIV. \n\nThere are also immune-suppressive therapies that may either increase the risk of severe illness by preventing the body’s response to infection, or attenuate the hyperinflammation syndrome associated with COVID-19 disease, so preventing severe disease. \n\nThe incidence of severe disease in patient groups taking these medications urgently needs to be established to guide both their management and investigation of COVID-19 treatment strategies.\n\nICNARC is already providing up-to-date information on the admission characteristics and outcomes of all patients with severe COVID-19 infection treated on an ICU in England, Wales and Northern Ireland.",
+  "b8e0e5e8a511": "This agreement specifically relates to QResearch's urgent COVID-19 research projects\nto support the current pandemic for example \n(a) development and maintenance of a COVID-19 risk stratification tool commissioned by the CMO via  New and Emerging Respiratory Virus Threats Advisory Group (NERVTAG) and funded by NIHR \n(b) assessment of risk factors and outcomes of patients associated with admission to intensive care funded by the Wellcome Trust \n(c) assessment of the safety, uptake and assessment of the COVID-19 vaccinations funded by HDRUK and \n(d) research to improve understanding of the associations between ethnicity and risk of poor outcomes from COVID-19 funded by the MRC\ne) other urgent COVID research in response to the emerging pandemic which needs to be undertaken rapidly in the national interest.\n\nTo support this work, NHS Digital will provide a monthly release of the latest available COVID-19 Vaccination Adverse Reactions, COVID-19 Vaccination Status, covid-19 pilar 2; civil registration deaths; covid-19 hospitalisation in England surveillance system and covid-19 SGSS and HES data This monthly release of data will be used to support urgent COVID research, and not for any additional purpose. In addition to this, the University of Oxford and its data processors are permitted to use the HES and mortality data released under DARS-NIC-240279-Y2V2N and DARS-NIC-375354-G8V1H to support this urgent COVID-19 risk stratification work while those two data sharing agreements remain active.  Given that COVID-19 is still a novel disease which is mutating and that we have new treatments and vaccines being used at scale and at pace and changing levels of immunity, we need detailed data at scale in order identify new risk factor, potential treatments and risks and benefits of the new COVID-19 vaccines. These data are only used for research purposes to generate new knowledge to inform policy and clinical care as rapidly as possible. The data under this agreement will only be used for COVID-19 research outlined in this agreement.\n\nQResearch is a database of linked medical records that has been used and continues to be used by a variety of research projects undertaken by UK universities, from reviewing the safety of antidepressant medicines to studying factors to predict variations in survival rates for cancer patients. The QResearch database consists of the coded pseudonymised electronic health records from primary care patients registered with approximately 1,500 general practices spread throughout the UK. \n\nQResearch was originally a not for profit collaboration originally between the University of Nottingham and Egton Medical Information Systems (EMIS) but the University of Nottingham’s roles and responsibilities have since been transferred to the University of Oxford. Strategic decisions about the GP data are taken by a Management Board representing the interests of EMIS and the University of Oxford. The University of Oxford is the sole data controller for the datasets which are linked to QResearch (deaths, cancer and hospital data) and the single point of access to the data.\n\nThe patient level data linked to QResearch is only accessed by academics employed by University of Oxford or its data processors as named in this data sharing agreement. In all cases, data can only be accessed by remote login to data stored on servers hosted at the University of Oxford. However, the researchers involved in a given project (contributing to the research question, design, interpretation and writing of the paper for publication) may be employed by other UK universities.  The NHS Digital data stay on site stored on servers based at the University of Oxford and are only handled by University of Oxford and its data processors. The University of Oxford may have a collaborator at another university on the project team advising on clinical aspects or interpretation of findings, but they will not receive any data unless they are employed by one of the organisations listed as a data processor or have an honorary contract with the University of Oxford. Data will not be used for any solely commercial purposes and all applications for the use of HES and/or mortality linked data are subject to a governance process explained in the Processing Activities section.\n\nResearch undertaken using the extended database continues to be processed using the existing arrangements with respect to scientific review and annual reports to Trent MREC.  Research has to be peer reviewed, original, hypothesis driven or hypothesis testing, intended for publication in an academic peer reviewed journal. All research undertaken using the QResearch database and linked data are subject to independent peer review and the results of all research are published.",
+  "bdef1fb50145": "This agreement specifically relates to QResearch's urgent COVID-19 research projects\nto support the current pandemic for example \n(a) development and maintenance of a COVID-19 risk stratification tool commissioned by the CMO via  New and Emerging Respiratory Virus Threats Advisory Group (NERVTAG) and funded by NIHR \n(b) assessment of risk factors and outcomes of patients associated with admission to intensive care funded by the Wellcome Trust \n(c) assessment of the safety, uptake and assessment of the COVID-19 vaccinations funded by HDRUK and \n(d) research to improve understanding of the associations between ethnicity and risk of poor outcomes from COVID-19 funded by the MRC\ne) other urgent COVID research in response to the emerging pandemic which needs to be undertaken rapidly in the national interest.\n\nTo support this work, NHS Digital will provide a monthly release of the latest available covid-19 pilar 2; civil registration deaths; covid-19 hospitalisation in England surveillance system and covid-19 SGSS and HES data This monthly release of data will be used to support urgent COVID research, and not for any additional purpose. In addition to this, the University of Oxford and its data processors are permitted to use the HES and mortality data released under DARS-NIC-240279-Y2V2N and DARS-NIC-375354-G8V1H to support this urgent COVID-19 risk stratification work while those two data sharing agreements remain active.  Given that COVID-19 is still a novel disease which is mutating and that we have new treatments and vaccines being used at scale and at pace and changing levels of immunity, we need detailed data at scale in order identify new risk facto, potential treatments and risks and benefits of the new COVID-19 vaccines. These data are only used for research purposes to generate new knowledge to inform policy and clinical care as rapidly as possible. The data under this agreement will only be used for COVID-19 research outlined in this agreement.\n\nQResearch is a database of linked medical records that has been used and continues to be used by a variety of research projects undertaken by UK universities, from reviewing the safety of antidepressant medicines to studying factors to predict variations in survival rates for cancer patients. The QResearch database consists of the coded pseudonymised electronic health records from primary care patients registered with approximately 1,500 general practices spread throughout the UK. \n\nQResearch was originally a not for profit collaboration originally between the University of Nottingham and Egton Medical Information Systems (EMIS) but the University of Nottingham’s roles and responsibilities have since been transferred to the University of Oxford. Strategic decisions about the GP data are taken by a Management Board representing the interests of EMIS and the University of Oxford. The University of Oxford is the sole data controller for the datasets which are linked to QResearch (deaths, cancer and hospital data) and the single point of access to the data.\n\nThe patient level data linked to QResearch is only accessed by academics employed by University of Oxford or its data processors as named in this data sharing agreement. In all cases, data can only be accessed by remote login to data stored on servers hosted at the University of Oxford. However, the researchers involved in a given project (contributing to the research question, design, interpretation and writing of the paper for publication) may be employed by other UK universities.  The NHS Digital data stay on site stored on servers based at the University of Oxford and are only handled by University of Oxford and its data processors. The University of Oxford may have a collaborator at another university on the project team advising on clinical aspects or interpretation of findings, but they will not receive any data unless they are employed by one of the organisations listed as a data processor or have an honorary contract with the University of Oxford. Data will not be used for any solely commercial purposes and all applications for the use of HES and/or mortality linked data are subject to a governance process explained in the Processing Activities section.\n\nResearch undertaken using the extended database continues to be processed using the existing arrangements with respect to scientific review and annual reports to Trent MREC.  Research has to be peer reviewed, original, hypothesis driven or hypothesis testing, intended for publication in an academic peer reviewed journal. All research undertaken using the QResearch database and linked data are subject to independent peer review and the results of all research are published.",
+  "dc3467838aaf": "The outputs are research papers which are published in peer reviewer academic scientific journals and presented at academic conferences. All research is published in academic journals with a link from the QResearch website on an ongoing basis. The publications are accompanied by with press releases from the relevant organisations and highlighted on social media. \n\nResults are also shared with policy makers and NICE guideline committees on a regular basis via their stakeholder consultations in order to support development of relevant guidelines. \n\nResults are also regularly shared with patient participants on the QResearch Advisory Board and PPI representatives on individual research projects. \n\nThe results tables within the papers will only contain statistical information with cell counts of > 5, being suppressed in line with the ICO code on anonymisation.  Outputs will only contain aggregate level data with small numbers suppressed in line with the HES analysis guide.\n\nNo indicators are produced which show performance of an organisation – indeed the identity of the GP practices contributing to QResearch are not shared with any third party.",
+  "e597c9510ece": "The first paper was published in Heart as a fast track submission and showed that ACE inhibitors were not associated with an increased risk of poor outcomes from COVID (as had been feared) so provided reassurance to public and professionals on the safety aspect of these drugs.\nTwo other papers have been published  - one in the BMJ describing the first version of the risk stratification tool and another in Annals regarding the particularly high risk of poor outcomes for those people with Down's syndrome.\nThree reports have been produced already for SAGE including (a) risk of COVID-19 associated with variations in household size; differences in COVID-19 risk between the first and second pandemic waves by ethnic group and (c) the first population-based study of COVID-19 outcomes in children including the differential by ethnic group."
+ }
+}
