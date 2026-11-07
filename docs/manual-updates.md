@@ -100,6 +100,13 @@ Budget about two minutes a month, plus about a minute for the parse.
    release register, list of approved projects and list of papers, and add an
    entry, with an empty `registers` list and a note if none is found.
 
+   ICB entries carry `"commissioning": true` and list the board's sub-licence
+   release register (often a section of its privacy notice) as
+   `sub-licensees` with `nhs_england_only: true`. The check doesn't report
+   ICBs with no entry, since not all have been checked yet. When an ICB's
+   agreement is renewed under a new reference, the check reports the old one
+   as not in the edition: move the entry to the new reference.
+
 5. **Write the overviews of changed agreements** (optional, a few pence).
    An agreement whose text changed shows no AI overview until this runs. It
    needs `ANTHROPIC_API_KEY` and `pip install -r requirements-summarise.txt`.

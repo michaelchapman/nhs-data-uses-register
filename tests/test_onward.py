@@ -68,9 +68,12 @@ class Checks(unittest.TestCase):
             holder([SUB_LICENSEES, APPROVED], agreements=("A", "B")),
             holder([APPROVED], agreements=("C",)),
             holder([], agreements=("D",)),
+            holder([SUB_LICENSEES], agreements=("E",), commissioning=True),
+            holder([], agreements=("F", "G"), commissioning=True),
         ]}
         self.assertEqual(onward.counts(config), {
             "holders": 3, "agreements": 4, "sub_licensees": 1, "approved_uses": 2, "publications": 0, "none": 1,
+            "icbs": 2, "icb_agreements": 3, "icbs_found": 1, "icbs_none": 1,
         })
 
 
@@ -130,6 +133,29 @@ class Site(unittest.TestCase):
             page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
         self.assertIn("This site couldn't find a public list of projects or papers under this agreement when it checked", page)
         self.assertIn("Access is decided by a committee.", page)
+
+    def test_an_icb_speaks_of_organisations_not_projects_and_papers(self):
+        found = {**SUB_LICENSEES, "nhs_england_only": True}
+        for registers in ([found], []):
+            config = {"checked": "2026-11-07", "holders": [holder(registers, commissioning=True)]}
+            with tempfile.TemporaryDirectory() as directory:
+                out = Path(directory)
+                self.build(out, config)
+                page = (out / "agreements" / "dars-nic-1-aaaaa" / "index.html").read_text()
+                organisation = (out / "organisations" / "university-of-example" / "index.html").read_text()
+                about = (out / "about" / "index.html").read_text()
+                broken, _ = linkcheck.check(out)
+            self.assertIn('<h2 id="onward">Organisations the data is passed on to</h2>', page)
+            self.assertIn("for commissioning", page)
+            self.assertNotIn("Projects and papers", page)
+            self.assertNotIn("Not every project or paper", page)
+            self.assertIn("Organisations its data is passed on to", organisation)
+            self.assertIn('id="onward-icbs"', about)
+            self.assertEqual(dict(broken), {})
+            if registers:
+                self.assertIn('<a href="https://example.test/sub">Who we pass data to</a>', page)
+            else:
+                self.assertIn("This site couldn't find a published list of the organisations Example Cohort passes this data to", page)
 
 
 if __name__ == "__main__":
