@@ -12,6 +12,9 @@
 <p>The site is built from a store of what every edition held since {{ meta.editions[0].edition|edition if meta.editions else "the first edition ingested" }}: one JSON file per agreement, with every version and each state it was published in, and one per agreement for its file releases. It is in the site's <a href="{{ meta.repo_url }}/tree/main/data/facts">code repository</a>, with the code that reads the workbooks and builds these pages, so you can see how each page is made and build it yourself.</p>
 <p><a href="{{ meta.base_path }}/meta.json">meta.json</a> gives the edition, source, retrieval date and headline counts for the current build.</p>
 
-<h2>Reuse</h2>
+{% if papers_csv %}<h2>Published papers</h2>
+<p><a href="{{ meta.base_path }}/papers/papers.csv">papers.csv</a> lists every published paper linked to an agreement, one row per paper, with its agreements and why it is listed. The links come from a separate review of open-access papers and are not part of the register: see <a href="{{ meta.base_path }}/about/#papers">how papers are linked</a>.</p>
+
+{% endif %}<h2>Reuse</h2>
 <p>Register content is under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. Please attribute NHS England as the source rather than this site.</p>
 {% endblock %}

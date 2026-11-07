@@ -45,11 +45,13 @@ nothing about it.
 
 from __future__ import annotations
 
+import csv
+import io
 import json
 import re
 from pathlib import Path
 
-from .references import base_and_version
+from .references import base_and_version, slugify
 
 ROOT = Path(__file__).resolve().parent.parent
 PATH = ROOT / "data" / "outputs.json"
@@ -190,7 +192,12 @@ def papers(outputs: dict | None, agreements: list[dict]) -> list[dict]:
     for paper in by_doi.values():
         paper["agreements"].sort(key=lambda link: (link["basis"] != "found", link["agreement"]["base_reference"]))
     for paper in by_doi.values():
-        paper["organisations"] = sorted({link["agreement"]["organisation_slug"] for link in paper["agreements"]})
+        linked = [link["agreement"] for link in paper["agreements"]]
+        paper["organisations"] = sorted({a["organisation_slug"] for a in linked})
+        # What the agreements released, not what the paper itself used: a
+        # paper may use only some of the datasets its agreement names.
+        paper["datasets"] = sorted({slug for a in linked for slug in a.get("dataset_slugs", [])})
+        paper["sectors"] = sorted({a["sector"] for a in linked if a.get("sector")})
     return sorted(by_doi.values(), key=lambda p: (-(p["year"] or 0), p["title"].lower()))
 
 
@@ -201,3 +208,137 @@ def by_organisation(papers: list[dict]) -> dict[str, int]:
         for slug in paper["organisations"]:
             counts[slug] = counts.get(slug, 0) + 1
     return counts
+
+
+def by_dataset(papers: list[dict]) -> dict[str, int]:
+    """How many papers are linked to agreements naming each dataset."""
+    counts: dict[str, int] = {}
+    for paper in papers:
+        for slug in paper["datasets"]:
+            counts[slug] = counts.get(slug, 0) + 1
+    return counts
+
+
+# The chart of papers by year starts here; the few earlier ones are in its table.
+CHART_FROM = 2010
+
+
+def _nice_top(value: int) -> tuple[int, int]:
+    """A round top for the scale, and the step between its ticks."""
+    step = 1
+    while True:
+        for factor in (1, 2, 5):
+            candidate = step * factor
+            if value / candidate <= 4:
+                return candidate * -(-max(value, 1) // candidate), candidate
+        step *= 10
+
+
+def by_year(papers: list[dict], exported: str) -> dict:
+    """Papers by year of publication, split by why they are listed, for a chart and its table.
+
+    The year of the export is marked as partial: the review ran part way through it.
+    """
+    rows: dict[int, dict] = {}
+    undated = 0
+    for paper in papers:
+        if not paper["year"]:
+            undated += 1
+            continue
+        row = rows.setdefault(paper["year"], {"year": paper["year"], "found": 0, "cited": 0})
+        row["found" if paper["basis"] == "found" else "cited"] += 1
+    partial = int(exported[:4]) if exported[:4].isdigit() else None
+    years = sorted(rows)
+    table = [{**rows[y], "total": rows[y]["found"] + rows[y]["cited"], "partial": y == partial} for y in years]
+    shown = [y for y in range(CHART_FROM, (years[-1] if years else CHART_FROM) + 1)]
+    top, step = _nice_top(max((rows[y]["found"] + rows[y]["cited"] for y in shown if y in rows), default=0))
+    columns = []
+    for y in shown:
+        row = rows.get(y, {"found": 0, "cited": 0})
+        columns.append({
+            "year": y,
+            "found": row["found"],
+            "cited": row["cited"],
+            "found_height": 100 * row["found"] / top,
+            "cited_height": 100 * row["cited"] / top,
+            "partial": y == partial,
+            # Every other year labelled, and every fourth on a phone, counting back from the last.
+            "label": (shown[-1] - y) % 2 == 0,
+            "major": (shown[-1] - y) % 4 == 0,
+        })
+    return {
+        "columns": columns,
+        "ticks": [{"value": v, "bottom": 100 * v / top} for v in range(0, top + 1, step)],
+        "table": table[::-1],
+        "earlier": sum(r["total"] for r in table if r["year"] < CHART_FROM),
+        "undated": undated,
+        "partial": partial if partial in rows else None,
+    }
+
+
+def lag(papers: list[dict]) -> dict | None:
+    """Years from an agreement's first start to its papers, where that start is known.
+
+    A paper linked to several agreements is measured from the earliest of them.
+    An agreement whose earliest version this site holds isn't its first has no
+    known start (the register's history starts part way through), so it is left
+    out; so is a paper published before its agreement started, which most often
+    came from an earlier agreement under another system.
+    """
+    gaps = []
+    for paper in papers:
+        starts = [int(link["agreement"]["first_start"][:4]) for link in paper["agreements"]
+                  if link["agreement"].get("first_start_known") and link["agreement"].get("first_start")]
+        if paper["year"] and starts and paper["year"] >= min(starts):
+            gaps.append(paper["year"] - min(starts))
+    if len(gaps) < 20:
+        return None
+    gaps.sort()
+
+    def at(share: float) -> int:
+        return gaps[min(len(gaps) - 1, int(share * len(gaps)))]
+
+    return {"papers": len(gaps), "median": at(0.5), "low": at(0.25), "high": at(0.75)}
+
+
+def coverage(papers: list[dict], agreements: list[dict], sector_names: list[str]) -> list[dict]:
+    """For each sector: its agreements, how many have a linked paper, and its papers."""
+    with_paper = {link["agreement"]["base_reference"] for p in papers for link in p["agreements"]}
+    rows = []
+    for name in sector_names:
+        these = [a for a in agreements if a.get("sector") == name]
+        if not these:
+            continue
+        rows.append({
+            "sector": name,
+            "slug": slugify(name),
+            "agreements": len(these),
+            "with_paper": sum(a["base_reference"] in with_paper for a in these),
+            "papers": sum(name in p["sectors"] for p in papers),
+        })
+    return rows
+
+
+CSV_COLUMNS = ("title", "year", "doi", "pmcid", "url", "why_listed", "also_cited_in_register",
+               "agreements", "organisations", "register_edition")
+
+
+def as_csv(papers: list[dict], org_names: dict[str, str], register_edition: str) -> str:
+    """The papers table as CSV, one row per paper, for people who want to count for themselves."""
+    out = io.StringIO()
+    writer = csv.writer(out, lineterminator="\n")
+    writer.writerow(CSV_COLUMNS)
+    for p in papers:
+        writer.writerow([
+            "" if p["untitled"] else p["title"],
+            p["year"] or "",
+            p["doi"],
+            p["pmcid"],
+            p["url"],
+            "found to have used the data" if p["basis"] == "found" else "cited in the register, not confirmed",
+            "yes" if p["register_cited"] else "no",
+            "; ".join(link["agreement"]["base_reference"] for link in p["agreements"]),
+            "; ".join(org_names.get(slug, slug) for slug in p["organisations"]),
+            register_edition,
+        ])
+    return out.getvalue()

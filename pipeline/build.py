@@ -240,6 +240,7 @@ def build(
     output_links = outputs.load()
     all_papers = outputs.papers(output_links, data["agreements"] + archived)
     papers_by_org = outputs.by_organisation(all_papers)
+    papers_by_dataset = outputs.by_dataset(all_papers)
     context = {
         "meta": meta,
         "papers_page": bool(output_links),
@@ -345,6 +346,7 @@ def build(
         "about/index.html",
         overview_models=overviews.models_used(overview_entries),
         output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
+        output_lag=outputs.lag(all_papers),
     )
     if output_links:
         render(
@@ -355,9 +357,26 @@ def build(
                 papers_by_org.items(), key=lambda item: (-item[1], display_name(org_names.get(item[0], item[0])).lower())
             ),
             org_names=org_names,
+            datasets=sorted(
+                papers_by_dataset.items(), key=lambda item: (-item[1], dataset_titles.get(item[0], item[0]).lower())
+            ),
+            dataset_titles=dataset_titles,
+            sector_counts=_sector_counts((s for p in all_papers for s in p["sectors"]), sector_config),
+            coverage=outputs.coverage(
+                all_papers, data["agreements"], [name for name, _ in stats["agreement_sectors"]]
+            ),
+            by_year=outputs.by_year(all_papers, output_links.get("exported", "")),
+            listed_with_papers=sum(
+                1 for a in data["agreements"] if outputs.for_agreement(a, output_links)
+            ),
             outputs_meta=output_links,
         )
-    render("downloads.html", "downloads/index.html")
+        # The same table as a file, for people who want to count for themselves.
+        _write(out, "papers/papers.csv", outputs.as_csv(
+            all_papers, {slug: display_name(name) for slug, name in org_names.items()},
+            output_links["register_edition"],
+        ))
+    render("downloads.html", "downloads/index.html", papers_csv=bool(output_links))
     render("not-found.html", "404.html")
 
     for agreement in data["agreements"] + archived:
@@ -418,6 +437,7 @@ def build(
             archived=archive["by_dataset"].get(dataset["slug"], []),
             org_slugs=org_slugs,
             search_numbers=search_numbers,
+            paper_count=papers_by_dataset.get(dataset["slug"], 0),
         )
 
     shutil.copytree(ASSETS, out / "assets", dirs_exist_ok=True)

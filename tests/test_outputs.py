@@ -65,7 +65,7 @@ class Page(unittest.TestCase):
         self.assertLess(page.index('id="purpose"'), page.index('id="papers"'))
         self.assertLess(page.index('id="papers"'), page.index('id="datasets"'))
         self.assertIn('id="papers"', about)
-        self.assertIn("1 agreement pages", about)
+        self.assertIn("1 of the 2 agreement pages", about)
 
     def test_register_cited_papers_say_what_the_review_found(self):
         rows = [row(doi=f"10.1000/{basis}", title=f"Paper {basis}", basis=basis) for basis in outputs.RESULTS]
@@ -134,6 +134,51 @@ class PapersPage(unittest.TestCase):
         # Newest first, so the oldest three are the folded ones.
         self.assertLess(page.index("Paper 3<"), page.index("Show 3 more"))
         self.assertGreater(page.index("Paper 2<"), page.index("Show 3 more"))
+
+    def test_figures_for_quoting_and_counting(self):
+        rows = [
+            row(),
+            row(doi="10.1000/cited", title="A paper the register cites", basis="unreadable", year=2020),
+            row(doi="10.1000/undated", title="No year", year=None),
+            row(doi="10.1000/recent", title="This year", year=2026),
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            build_site(rows, Path(directory))
+            page = (Path(directory) / "papers" / "index.html").read_text()
+            table = (Path(directory) / "papers" / "papers.csv").read_text()
+            downloads = (Path(directory) / "downloads" / "index.html").read_text()
+            datasets = list((Path(directory) / "datasets").glob("*/index.html"))
+            dataset_pages = [d.read_text() for d in datasets]
+        self.assertIn("Papers by year of publication", page)
+        self.assertIn("2026 is a part year", page)
+        self.assertIn("1 with no known year", page)
+        self.assertIn('<th scope="row">2024</th><td class="num">1</td><td class="num">0</td>', page)
+        self.assertIn("Agreements with a linked paper</dt><dd>1 of 2", page)
+        self.assertIn('id="by-sector"', page)
+        self.assertIn('data-key="sector"', page)
+        self.assertIn('data-key="dataset"', page)
+        # A control with id "dataset" would shadow the form's own `dataset` in filter.js.
+        self.assertNotIn('id="dataset"', page)
+        lines = table.splitlines()
+        self.assertEqual(lines[0].split(",")[:3], ["title", "year", "doi"])
+        self.assertEqual(len(lines), 5)
+        self.assertIn("found to have used the data", table)
+        self.assertIn("cited in the register, not confirmed", table)
+        self.assertIn("/papers/papers.csv", page)
+        self.assertIn("/papers/papers.csv", downloads)
+        self.assertTrue(any("/papers/?dataset=" in d for d in dataset_pages))
+
+    def test_lag_counts_from_the_earliest_known_start(self):
+        def link(start, known=True):
+            return {"agreement": {"first_start": start, "first_start_known": known}}
+        papers = [{"year": 2020 + n % 5, "agreements": [link("2019-04-01"), link("2015-01-01", known=False)]}
+                  for n in range(25)]
+        # Published before its agreement started: left out.
+        papers.append({"year": 2010, "agreements": [link("2019-04-01")]})
+        lag = outputs.lag(papers)
+        self.assertEqual(lag["papers"], 25)
+        self.assertEqual(lag["median"], 3)
+        self.assertIsNone(outputs.lag(papers[:5]))
 
     def test_no_file_means_no_page_and_no_menu_item(self):
         with tempfile.TemporaryDirectory() as directory:

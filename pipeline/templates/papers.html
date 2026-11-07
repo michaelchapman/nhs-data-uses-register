@@ -12,6 +12,67 @@
 <p class="papers-flag"><strong>Not part of the register.</strong>
   These links come from a separate review of open-access papers, made against the {{ outputs_meta.register_edition|edition }} edition of the register (<a href="{{ meta.repo_url }}/commit/{{ outputs_meta.source_commit }}">{{ outputs_meta.source_commit }}</a>) and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. A listed paper shows the data was used in published work, not what difference that work made. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a></p>
 
+<dl class="key-facts">
+  <div><dt>Published papers</dt><dd>{{ papers|length|commas }}</dd></div>
+  <div><dt>Found to have used the data</dt><dd>{{ found|length|commas }}</dd></div>
+  <div><dt>Agreements with a linked paper</dt><dd>{{ listed_with_papers|commas }} of {{ stats.agreements|commas }}</dd></div>
+  <div><dt>Organisations with a linked paper</dt><dd>{{ organisations|length|commas }}</dd></div>
+</dl>
+
+{% set chart = by_year %}
+<figure class="year-chart" aria-labelledby="year-chart-title">
+  <figcaption id="year-chart-title" class="chart-title">Papers by year of publication</figcaption>
+  <p class="chart-key" aria-hidden="true"><span class="key-found"></span> Found to have used the data <span class="key-cited"></span> Cited in the register, not confirmed</p>
+  <div class="chart-body">
+    <div class="chart-ticks" aria-hidden="true">
+      {% for tick in chart.ticks %}<span style="bottom: {{ '%.2f'|format(tick.bottom) }}%">{{ tick.value|commas }}</span>{% endfor %}
+    </div>
+    <div class="chart-plot year-plot" role="img" aria-label="Papers by year of publication, from {{ chart.columns[0].year }}. The table below gives every value.">
+      {% for tick in chart.ticks %}<span class="chart-grid" style="bottom: {{ '%.2f'|format(tick.bottom) }}%"></span>{% endfor %}
+      {% for c in chart.columns %}<span class="year-col{% if c.partial %} is-partial{% endif %}" title="{{ c.year }}{% if c.partial %} (part year){% endif %}: {{ c.found|commas }} found, {{ c.cited|commas }} cited in the register">
+        <span class="year-found" style="height: {{ '%.2f'|format(c.found_height) }}%"></span><span class="year-cited" style="height: {{ '%.2f'|format(c.cited_height) }}%"></span>
+      </span>{% endfor %}
+    </div>
+    <div class="year-labels" aria-hidden="true">
+      {% for c in chart.columns %}<span{% if not c.major %} class="minor"{% endif %}>{{ c.year if c.label else "" }}</span>{% endfor %}
+    </div>
+  </div>
+</figure>
+<p class="hint">{% if chart.partial %}{{ chart.partial }} is a part year: the review ran on {{ outputs_meta.exported|date }}. {% endif %}Recent years are fuller partly because newer papers are more often open access, which is all the review can read, and partly because papers take time: they typically appear a few years after an agreement starts.{% if chart.earlier %} {{ chart.earlier|commas }} paper{{ "s" if chart.earlier != 1 }} from before {{ chart.columns[0].year }} {{ "are" if chart.earlier != 1 else "is" }} in the table.{% endif %}{% if chart.undated %} {{ chart.undated|commas }} with no known year {{ "are" if chart.undated != 1 else "is" }} left out.{% endif %}</p>
+<details class="chart-table">
+  <summary>Papers by year, as a table</summary>
+  <div class="table-scroll">
+  <table class="data-table">
+    <caption class="visually-hidden">Papers by year of publication and why they are listed</caption>
+    <thead><tr><th scope="col">Year</th><th scope="col" class="num">Found to have used the data</th><th scope="col" class="num">Cited in the register, not confirmed</th><th scope="col" class="num">Total</th></tr></thead>
+    <tbody>
+    {% for row in chart.table %}
+      <tr><th scope="row">{{ row.year }}{% if row.partial %} (part year){% endif %}</th><td class="num">{{ row.found|commas }}</td><td class="num">{{ row.cited|commas }}</td><td class="num">{{ row.total|commas }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</details>
+
+<h2 id="by-sector">By sector</h2>
+<p>The sector of the organisation that applied for the agreement. A paper linked to agreements in two sectors counts in both.</p>
+<div class="table-scroll">
+<table class="data-table stack">
+  <caption class="visually-hidden">Agreements and linked papers by sector</caption>
+  <thead><tr><th scope="col">Sector</th><th scope="col" class="num">Agreements</th><th scope="col" class="num">With a linked paper</th><th scope="col" class="num">Papers</th></tr></thead>
+  <tbody>
+  {% for row in coverage %}
+    <tr><th scope="row">{% if row.papers %}<a href="?sector={{ row.slug }}">{{ row.sector }}</a>{% else %}{{ row.sector }}{% endif %}</th><td class="num" data-label="Agreements">{{ row.agreements|commas }}</td><td class="num" data-label="With a linked paper">{{ row.with_paper|commas }}{% if row.agreements %} ({{ (100 * row.with_paper / row.agreements)|round|int }}%){% endif %}</td><td class="num" data-label="Papers">{{ row.papers|commas }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="hint">An agreement with no linked paper may still have published: the review reads open-access papers only. Some sectors publish less in journals than others, so these shares say more about where work is published than about what each sector did with the data.</p>
+
+<p><a href="{{ meta.base_path }}/papers/papers.csv" download>Download every paper as a CSV file</a> (one row per paper, with its agreements and why it is listed).</p>
+
+<h2 id="list">Every paper</h2>
+
 <form class="filters" data-filter-form data-target="papers-table" role="search" aria-label="Filter papers">
   <div class="field">
     <label for="q">Search papers</label>
@@ -39,6 +100,26 @@
     <p class="hint" id="org-hint">The organisation that applied for the agreement.</p>
   </div>
   <div class="field">
+    <label for="sector">Sector</label>
+    <select id="sector" data-filter-select data-filter-tokens data-key="sector">
+      <option value="">All sectors</option>
+      {% for name, count in sector_counts %}
+      <option value="{{ name|slug }}">{{ name }} ({{ count|commas }})</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label for="data-set">Dataset</label>
+    {#- Not id="dataset": a form control with that id would hide the form's own `dataset`. #}
+    <select id="data-set" data-filter-select data-filter-tokens data-key="dataset" aria-describedby="dataset-hint">
+      <option value="">All datasets</option>
+      {% for slug, count in datasets %}
+      <option value="{{ slug }}">{{ dataset_titles.get(slug, slug) }} ({{ count|commas }})</option>
+      {% endfor %}
+    </select>
+    <p class="hint" id="dataset-hint">Papers linked to agreements that name the dataset. A paper may not use every dataset its agreement names.</p>
+  </div>
+  <div class="field">
     <label for="year">Year</label>
     <select id="year" data-filter-select data-key="year">
       <option value="">Any year</option>
@@ -61,7 +142,7 @@
   <thead><tr><th scope="col">Paper</th><th scope="col" class="num">Year</th><th scope="col">Agreements</th><th scope="col">Why listed</th></tr></thead>
   <tbody>
   {% for p in papers %}
-    <tr data-reason="{{ p.basis }}" data-org="{{ p.organisations|join(' ') }}" data-year="{{ p.year or '' }}">
+    <tr data-reason="{{ p.basis }}" data-org="{{ p.organisations|join(' ') }}" data-sector="{{ p.sectors|map('slug')|join(' ') }}" data-dataset="{{ p.datasets|join(' ') }}" data-year="{{ p.year or '' }}">
       <th scope="row"><a href="{{ p.url }}">{{ p.title }}</a>{% if p.untitled %} <span class="hint">(title not available)</span>{% endif %}</th>
       <td class="num" data-label="Year" data-sort="{{ p.year or 0 }}">{{ p.year or "—" }}</td>
       <td data-label="Agreements" data-sort="{{ p.agreements|length }}">

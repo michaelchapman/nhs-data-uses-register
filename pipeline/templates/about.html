@@ -42,12 +42,13 @@
 
 {% if output_stats %}
 <h2 id="papers">Papers linked to agreements</h2>
-<p>{{ output_stats.agreements|commas }} agreement pages list published papers linked to the agreement, and <a href="{{ meta.base_path }}/papers/">Published papers</a> lists each paper once. The links come from a separate review of open-access papers, not from NHS England, and are not part of the register. They were made against the {{ output_stats.register_edition|edition }} edition and are refreshed about every six months, so an agreement added since has none yet.</p>
+<p>{{ output_stats.agreements|commas }} of the {{ stats.agreements|commas }} agreement pages list published papers linked to the agreement, and <a href="{{ meta.base_path }}/papers/">Published papers</a> lists each paper once. The links come from a separate review of open-access papers, not from NHS England, and are not part of the register. They were made against the {{ output_stats.register_edition|edition }} edition and are refreshed about every six months, so an agreement added since has none yet.</p>
 <ul>
   <li><strong>Papers found to have used an agreement's data</strong> ({{ output_stats.found_papers|commas }} papers, on {{ output_stats.found_agreements|commas }} agreements). A paper is listed when it quotes the agreement's reference, or an identifier the agreement carries such as a trial registration, ethics approval or grant number, and names NHS England data; or when the review matched it and a model check confirmed it, with a quote from the paper.</li>
   <li><strong>Papers cited in the register, not confirmed</strong> ({{ output_stats.cited_papers|commas }} more papers). The applicant cites them in the register's benefit text, so they are listed, but the review couldn't confirm they used the agreement's data. For {{ output_stats.unreadable_papers|commas }} the full text isn't openly available, so they weren't checked; the rest were read, but the review couldn't confirm from them that the agreement's data was used.</li>
   <li><strong>What is left out.</strong> Papers the register doesn't cite that the review couldn't confirm, and protocols and analysis plans.</li>
   <li><strong>The lists are incomplete.</strong> The review reads open-access papers only, and finds about half of the papers the register itself cites. An agreement with no papers listed may still have published.</li>
+  {% if output_lag %}<li><strong>Papers take time.</strong> Where the agreement's first start date is known ({{ output_lag.papers|commas }} papers), a paper typically appears {{ output_lag.median }} years after the agreement started, and half appear between {{ output_lag.low }} and {{ output_lag.high }} years after. So an agreement that started recently has had little time to publish.</li>{% endif %}
   <li><strong>A listed paper is not a measured benefit.</strong> It shows the data was used in published work, not what difference that work made.</li>
 </ul>
 
