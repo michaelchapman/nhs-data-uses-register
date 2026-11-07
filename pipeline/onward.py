@@ -21,8 +21,14 @@ used NHS England data. A list of NHS England data only says so with
 
 A holder with no list found has an empty list, and the page says this site
 couldn't find one rather than saying nothing. Nothing here says a project or
-paper used NHS England data, or that one didn't: these are the holders' lists. The ICBs' sublicensing is a different
-arrangement, to providers for commissioning, and is not in the file.
+paper used NHS England data, or that one didn't: these are the holders' lists.
+
+The integrated care boards' sublicensing is a different arrangement: they pass
+commissioning data to councils, trusts and other partners in their area, and
+NHS England's terms ask them to publish a release register of who. Their
+entries carry `commissioning: true`, and the page then speaks of organisations
+the data is passed on to rather than projects and papers. An ICB not yet
+checked has no entry, and its page shows nothing.
 """
 
 from __future__ import annotations
@@ -74,8 +80,13 @@ def caveat(holder: dict) -> bool:
 
 
 def counts(config: dict) -> dict[str, int]:
-    """Holders and agreements covered, and how many holders keep each kind of record."""
-    holders = config.get("holders", [])
+    """Holders and agreements covered, and how many holders keep each kind of record.
+
+    The research holders and the ICBs are counted apart.
+    """
+    everyone = config.get("holders", [])
+    holders = [h for h in everyone if not h.get("commissioning")]
+    icbs = [h for h in everyone if h.get("commissioning")]
 
     def keeping(kind: str) -> int:
         return sum(1 for h in holders if any(r["kind"] == kind for r in h["registers"]))
@@ -83,6 +94,10 @@ def counts(config: dict) -> dict[str, int]:
     return {
         "holders": len(holders),
         "agreements": sum(len(h["agreements"]) for h in holders),
+        "icbs": len(icbs),
+        "icb_agreements": sum(len(h["agreements"]) for h in icbs),
+        "icbs_found": sum(1 for h in icbs if h["registers"]),
+        "icbs_none": sum(1 for h in icbs if not h["registers"]),
         "sub_licensees": keeping("sub-licensees"),
         "approved_uses": keeping("approved uses"),
         "publications": keeping("publications"),

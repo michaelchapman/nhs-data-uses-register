@@ -66,7 +66,7 @@
 <p>The list of files used, with the period each covers, is in <a href="{{ meta.repo_url }}/blob/main/data/earlier-registers.json">data/earlier-registers.json</a>.</p>
 
 {% endif %}
-{% if stats.onward and stats.onward.holders %}
+{% if stats.onward and (stats.onward.holders or stats.onward.icbs) %}
 <h2 id="onward">Projects and papers under sublicensing agreements</h2>
 <p>{{ stats.sublicensing|commas }} agreements permit the applicant to pass data on, which the register calls sublicensing. The register records that it is allowed, but not what is passed on, to whom, or what it is used for. Most of these agreements are held by integrated care boards, which pass data to the councils and providers in their area for commissioning. The rest are held by cohort studies, research databases and data services, and most of those publish lists of their own. This site links to them from each agreement and organisation page: {{ stats.onward.agreements|commas }} agreements, held by {{ stats.onward.holders|commas }} holders, collected by hand and last checked on {{ onward_checked|date }}.</p>
 <p>The lists are of three kinds, which say different things:</p>
@@ -76,7 +76,11 @@
   <li><strong>Papers the holder lists.</strong> {{ stats.onward.publications|commas }} holders publish their own list of papers that used their data.</li>
 </ul>
 <p>Most of these lists cover everything the holder holds, not only what comes from NHS England, and the pages say so. For a cohort study, linked hospital and death records are often a small part of what researchers use, so many of the projects and papers on its lists won't have used NHS England data. This site doesn't say which did.</p>
-<p>For {{ stats.onward.none|commas }} holders this site couldn't find a public list, and their pages say so. A list that exists doesn't mean data was shared, and one this site couldn't find doesn't mean it wasn't. Several holders also publish on the <a href="https://healthdatagateway.org/en/search?type=dur">Health Data Research Gateway</a>, and the UK Statistics Authority lists every project accredited under the Digital Economy Act. The addresses, and what each list holds, are in <a href="{{ meta.repo_url }}/blob/main/data/onward-registers.json">data/onward-registers.json</a>. The integrated care boards' release registers aren't linked yet.</p>
+<p>For {{ stats.onward.none|commas }} holders this site couldn't find a public list, and their pages say so. A list that exists doesn't mean data was shared, and one this site couldn't find doesn't mean it wasn't. Several holders also publish on the <a href="https://healthdatagateway.org/en/search?type=dur">Health Data Research Gateway</a>, and the UK Statistics Authority lists every project accredited under the Digital Economy Act. The addresses, and what each list holds, are in <a href="{{ meta.repo_url }}/blob/main/data/onward-registers.json">data/onward-registers.json</a>.</p>
+{% if stats.onward.icbs %}
+<h3 id="onward-icbs">Integrated care boards</h3>
+<p>Each of the 42 integrated care boards holds an agreement that lets it pass commissioning data on to the councils, trusts and other partners in its area. NHS England's terms ask each one to publish a release register of who it passes data to, and to keep it up to date. So far this site has checked {{ stats.onward.icbs|commas }} by hand, counting separately a board that has merged and the board it merged into, and the rest show nothing yet. {{ stats.onward.icbs_found|commas }} publish a list of the organisations they pass data to, either as a release register or in their privacy notice, and their agreement pages link to it. For {{ stats.onward.icbs_none|commas }} this site couldn't find one, and their pages say so. Some of the lists haven't been updated for a year or more, and the pages give the date each one shows.</p>
+{% endif %}
 {% endif %}
 
 <h2>Caveats</h2>

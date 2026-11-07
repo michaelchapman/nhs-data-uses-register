@@ -17,7 +17,11 @@
   <p class="hint">{% if holder.registers|selectattr("nhs_england_only")|list %}Lists not marked "NHS England data only" cover{% else %}These lists cover{% endif %} all of {{ holder.holder }}'s data, not only what comes from NHS England. Not every project or paper on them used NHS England data.</p>
   {% endif %}
   {% else %}
+  {% if holder.commissioning %}
+  <p>This site couldn't find a published list of the organisations {{ holder.holder }} passes this data to{% if checked %}, when it checked on {{ checked|date }}{% endif %}.</p>
+  {% else %}
   <p>This site couldn't find a public list of projects or papers under {{ 'this agreement' if holder.agreements|length == 1 else 'these agreements' }}{% if checked %} when it checked on {{ checked|date }}{% endif %}.</p>
+  {% endif %}
   {% endif %}
   {% if holder.note %}<p class="hint">{{ holder.note }}</p>{% endif %}
 </div>
