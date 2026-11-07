@@ -372,6 +372,23 @@ td .tag { white-space: nowrap; }
 .chart-years, .tl-axis .tl-track { position: relative; height: 1.5rem; font-size: 0.8125rem; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 .chart-years { grid-column: 2; }
 .chart-years span, .tl-axis .tl-track span { position: absolute; top: 0; padding: 0.125rem 0 0 0.25rem; border-left: 1px solid var(--line); line-height: 1.2; }
+/* Papers by year: one stacked column a year, found (accent) under cited
+   (muted), with a key, since this chart has two series. */
+.year-chart { margin: 1.75rem 0 0.5rem; }
+.chart-key { font-size: 0.875rem; color: var(--ink-muted); margin: 0 0 0.5rem; }
+.chart-key span { display: inline-block; width: 0.75rem; height: 0.75rem; border-radius: 2px; vertical-align: -0.0625rem; margin-left: 0.75rem; }
+.chart-key span:first-child { margin-left: 0; }
+.key-found, .year-found { background: var(--accent); }
+.key-cited, .year-cited { background: var(--chart-term); }
+.year-plot { display: flex; align-items: flex-end; }
+.year-col { position: relative; flex: 1 1 0; height: 100%; display: flex; flex-direction: column-reverse; padding: 0 1px; }
+.year-col > span { display: block; flex: none; }
+.year-col > span:last-child { border-radius: 2px 2px 0 0; }
+.year-col.is-partial > span { opacity: 0.55; }
+.year-col:hover .year-found { background: var(--ink); }
+.year-labels { grid-column: 2; display: flex; font-size: 0.8125rem; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.year-labels span { flex: 1 1 0; text-align: center; padding-top: 0.125rem; white-space: nowrap; overflow: visible; }
+@media (max-width: 40rem) { .year-labels .minor { visibility: hidden; } }
 .chart-table { margin: 0.5rem 0 1.75rem; }
 .chart-table .table-scroll { max-height: 24rem; overflow-y: auto; }
 

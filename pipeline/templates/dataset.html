@@ -24,6 +24,7 @@
   <div><dt>In term in {{ meta.edition|edition }}</dt><dd>{{ dataset.agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length|commas }}</dd></div>
   <div><dt>Organisations</dt><dd>{{ dataset.organisations|length|commas }}</dd></div>
   <div><dt>Files released</dt><dd>{{ dataset.files_released|commas }}</dd></div>
+  {% if paper_count %}<div><dt>Published papers linked</dt><dd><a href="{{ meta.base_path }}/papers/?dataset={{ dataset.slug }}">{{ paper_count|commas }}</a> <span class="hint">from agreements naming it</span></dd></div>{% endif %}
 </dl>
 {% include "_release-scope.html" %}
 
