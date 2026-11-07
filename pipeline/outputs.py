@@ -14,6 +14,10 @@ register. That review runs elsewhere and exports one file, committed here as
       ]
     }
 
+A paper with no DOI carries `"pmcid": "PMC123"` instead and links to Europe PMC.
+A paper with an empty title is shown by its DOI or PMCID, marked "title not
+available".
+
 `basis` is why a paper is listed, and only two reasons are shown:
 
 - ``found``: the review found the paper used this agreement's data. It quotes
@@ -44,6 +48,7 @@ PATH = ROOT / "data" / "outputs.json"
 
 BASES = ("found", "unreadable")
 DOI = re.compile(r"^10\.\d{4,9}/\S+$")
+PMCID = re.compile(r"^PMC\d+$")
 TITLE_LIMIT = 400
 
 
@@ -69,24 +74,33 @@ def load(path: Path | None = None) -> dict | None:
             raise OutputsError(f"{where}: basis {basis!r} is not one the site shows ({', '.join(BASES)})")
         doi = (row.get("doi") or "").strip()
         doi = re.sub(r"^(https?://(dx\.)?doi\.org/|doi:)", "", doi, flags=re.IGNORECASE)
-        if not DOI.match(doi):
-            raise OutputsError(f"{where}: {doi!r} is not a DOI")
+        pmcid = (row.get("pmcid") or "").strip().upper()
+        if doi:
+            if not DOI.match(doi):
+                raise OutputsError(f"{where}: {doi!r} is not a DOI")
+            key, url = doi.lower(), f"https://doi.org/{doi}"
+        elif PMCID.match(pmcid):
+            key, url = pmcid.lower(), f"https://europepmc.org/article/PMC/{pmcid}"
+        else:
+            raise OutputsError(f"{where}: no DOI or PMCID")
+        # A paper with no known title (some the register cites are in no index) is shown by its identifier.
         title = " ".join((row.get("title") or "").split())
-        if not title:
-            raise OutputsError(f"{where}: no title")
         if len(title) > TITLE_LIMIT:
             raise OutputsError(f"{where}: title is over {TITLE_LIMIT} characters")
         base = base_and_version((row.get("agreement") or "").strip())[0].upper()
         if not base:
             raise OutputsError(f"{where}: no agreement reference")
-        if (base, doi.lower()) in seen:
+        if (base, key) in seen:
             continue
-        seen.add((base, doi.lower()))
+        seen.add((base, key))
         year = row.get("year")
         by_agreement.setdefault(base, []).append({
+            "id": key,
             "doi": doi,
-            "url": f"https://doi.org/{doi}",
-            "title": title,
+            "pmcid": pmcid if not doi else "",
+            "url": url,
+            "title": title or (f"doi:{doi}" if doi else pmcid),
+            "untitled": not title,
             "year": int(year) if year else None,
             "basis": basis,
             "register_cited": bool(row.get("register_cited")) or basis == "unreadable",
@@ -125,8 +139,8 @@ def stats(outputs: dict | None, references: set[str]) -> dict | None:
     return {
         "agreements": len(listed),
         "found_agreements": len(found),
-        "found_papers": len({r["doi"].lower() for rows in listed.values() for r in rows if r["basis"] == "found"}),
-        "unreadable_papers": len({r["doi"].lower() for rows in listed.values() for r in rows if r["basis"] == "unreadable"}),
+        "found_papers": len({r["id"] for rows in listed.values() for r in rows if r["basis"] == "found"}),
+        "unreadable_papers": len({r["id"] for rows in listed.values() for r in rows if r["basis"] == "unreadable"}),
         "register_edition": outputs["register_edition"],
     }
 
@@ -148,7 +162,7 @@ def papers(outputs: dict | None, agreements: list[dict]) -> list[dict]:
         if not agreement:
             continue
         for r in rows:
-            paper = by_doi.setdefault(r["doi"].lower(), {**r, "agreements": []})
+            paper = by_doi.setdefault(r["id"], {**r, "agreements": []})
             if r["basis"] == "found":
                 paper["basis"] = "found"
             paper["register_cited"] = paper["register_cited"] or r["register_cited"]

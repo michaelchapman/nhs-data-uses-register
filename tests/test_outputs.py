@@ -139,8 +139,8 @@ class PapersPage(unittest.TestCase):
 
     def test_found_wins_when_a_paper_has_both_reasons(self):
         loaded = {"by_agreement": {
-            "A": [{**row(), "url": "u", "basis": "found", "register_cited": False}],
-            "B": [{**row(), "url": "u", "basis": "unreadable", "register_cited": True}],
+            "A": [{**row(), "id": "x", "url": "u", "basis": "found", "register_cited": False}],
+            "B": [{**row(), "id": "x", "url": "u", "basis": "unreadable", "register_cited": True}],
         }}
         agreements = [{"base_reference": "A", "organisation_slug": "a"}, {"base_reference": "B", "organisation_slug": "b"}]
         [paper] = outputs.papers(loaded, agreements)
@@ -172,6 +172,17 @@ class Load(unittest.TestCase):
     def test_only_known_fields_are_kept(self):
         loaded = self.load([row(quote="A long passage from the paper.")])
         self.assertNotIn("quote", loaded["by_agreement"][REFERENCE][0])
+
+    def test_a_paper_with_no_doi_links_by_pmcid(self):
+        loaded = self.load([row(doi="", pmcid="PMC123", title="")])
+        paper = loaded["by_agreement"][REFERENCE][0]
+        self.assertEqual(paper["url"], "https://europepmc.org/article/PMC/PMC123")
+        self.assertEqual(paper["title"], "PMC123")
+        self.assertTrue(paper["untitled"])
+
+    def test_a_paper_with_neither_identifier_stops_the_build(self):
+        with self.assertRaises(outputs.OutputsError):
+            self.load([row(doi="", pmcid="")])
 
     def test_missing_file_is_none(self):
         self.assertIsNone(outputs.load(Path("/nonexistent/outputs.json")))

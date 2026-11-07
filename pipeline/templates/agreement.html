@@ -164,7 +164,7 @@
 {# From a separate review of published papers, not from the register, so it
    says so first. It never calls a paper a benefit: see `pipeline.outputs`. #}
 {% macro paper(p) -%}
-<li><a href="{{ p.url }}">{{ p.title }}</a>{% if p.year %} <span class="hint">({{ p.year }})</span>{% endif %}
+<li><a href="{{ p.url }}">{{ p.title }}</a>{% if p.untitled %} <span class="hint">(title not available)</span>{% endif %}{% if p.year %} <span class="hint">({{ p.year }})</span>{% endif %}
   {%- if p.basis == "found" and p.register_cited %} <span class="hint">· also cited in the register</span>{% endif %}</li>
 {%- endmacro %}
 {# The five newest show; a long list folds the rest, so the datasets and file
