@@ -1,0 +1,863 @@
+{
+ "base_reference": "DARS-NIC-05206-L1V6D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-05206-L1V6D",
+   "version": "",
+   "organisation": "NHS Central Midlands Commissioning Support Unit",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "395876453c3b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES DIDS",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES ONS Mortality",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : MHLDDS",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : PROMS",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-05206-L1V6D-v1.5",
+   "version": "1.5",
+   "organisation": "NHS CENTRAL MIDLANDS COMMISSIONING SUPPORT UNIT",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "25f9cff1d9f8",
+     "activities": "86fa777aa534",
+     "expected_output": "64c4e535da5a",
+     "expected_benefits": "798ec8654699"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Monthly Extract : SUS PbR A&E",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Bespoke Monthly Extract : SUS PbR APC Episodes",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Bespoke Monthly Extract : SUS PbR APC Spells",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Bespoke Monthly Extract : SUS PbR OP",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures (Linkable to HES)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-05206-L1V6D-v2.6",
+   "version": "2.6",
+   "organisation": "NHS MIDLANDS AND LANCASHIRE COMMISSIONING SUPPORT UNIT",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "objective": "d7c220d89a58",
+     "activities": "660fc05884aa",
+     "expected_output": "0cac1cbfb6dc",
+     "expected_benefits": "a45e5c6f5d40"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : SUS PbR A&E",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 13
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Spells",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 15
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR OP",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 17
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Mortality Data from the Office of National Statistics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-05206-L1V6D-v3.14",
+   "version": "3.14",
+   "organisation": "NHS Midlands and Lancashire Commissioning Support Unit",
+   "organisation_type": "",
+   "listed": [
+    "2019-05-01",
+    "2019-07-01",
+    "2019-08-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-05-01",
+      "2019-07-01",
+      "2019-08-01"
+     ],
+     "objective": "f6557ef10557",
+     "activities": "21a870f8999d",
+     "expected_output": "85b0569edaef",
+     "expected_benefits": "b65c0cf23492",
+     "yielded_benefits": "cf29962b792a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 156
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-08-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-05206-L1V6D-v4.6",
+   "version": "4.6",
+   "organisation": "NHS Midlands and Lancashire Commissioning Support Unit",
+   "organisation_type": "Commissioning Support Unit (CSU)",
+   "listed": [
+    "2020-06-01",
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "objective": "6eefa64d0106",
+     "activities": "49f02ee7b890",
+     "expected_output": "36fcbd0fbf00",
+     "expected_benefits": "0802b9101d64",
+     "yielded_benefits": "ea8a83843b1d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-09-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures (Linkable to HES)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-09-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Secondary Uses Service Payment By Results Accident & Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Secondary Uses Service Payment By Results Episodes",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Secondary Uses Service Payment By Results Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Secondary Uses Service Payment By Results Spells",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0802b9101d64": "MLCSU’s work provides its customers (CCGs, Trusts, Local Authorities for the purposes of public health and social care, Sustainability and Transformation Partnerships, Public Health England, Department of Health, Clinical senates, Strategic Clinical Networks, NHS England, NHS Improvement, and health charities) with understanding and insight that helps them to make better decisions about the healthcare services they commission or provide. Improved decisions will lead to a positive effect on the quality of care and outcomes for patients. The NHS will benefit from reduced spending as a result from these improved decisions also.\n\nMLCSU's customer base is limited to organisations operating in the field of health and social care provision.",
+  "0cac1cbfb6dc": "Previous outputs:\nA. QIPP opportunity packs – these reports provide in-depth information to support commissioning organisations in developing their strategic plans. The focus of these reports is comparative information on utilisation rates for subsets of acute hospital activity (inpatient, outpatient, and A&E) that are amenable to interventions targeted at reducing levels of acute hospital activity.\n\nThe reports are bespoke to individual commissioning organisations and are only provided to those organisations that place an order. The CSU have produced similar reports for several years. In a typical year the CSU might expect to produce about 30 such reports.\n\nB. PROMS decision support tool – development work to test the concept of a tool that allows clinicians to use patient characteristics to obtain an estimate of likely benefit from receiving a joint replacement procedure.\n\nC. Mental Health activity modelling – in 2017, the CSU undertook a substantial project looking at the physical health of people who use mental health services. The CSU produced a series of analyses that highlighted significantly poorer health outcomes for mental health patients. The CSU produced locally-focussed reports for a number of commissioning organisations, before NHS England commissioned the CSU to produce a report titled \"Making the Case for Integrating Mental and Physical Health Care\" for all 44 STPs.\n\nD. Impact of demography – for several years the CSU have produced reports that provide in-depth analysis of the likely impact of demographic changes on future acute healthcare utilisation. The focus of these reports is the effect of changes in population size, age structure and health status on levels of acute healthcare activity across a range of delivery points. The reports are bespoke to individual commissioning organisations and are only provided to those organisations that place an order. In a typical year the CSU might expect to produce about 30 such reports.\n\nIn 2017, the CSU produced a report for NHS England describing the context and status of end of life care services across the West Midlands Region. Sustainability and Transformation Partnerships need to include proposals to improve choice in end of life care in their strategic plans. A second report focussed on palliative and end of life care for children and young people was later commissioned by NHS England to help understand characteristics and levels of resource required by children with life-limiting and or life-threatening conditions.\n\nAll our reports/outputs conform to relevant legislation and guidance with respect to confidentiality and other important considerations. \n\nPlanned outputs:\nA. QIPP opportunity packs – as in previous years, the CSU has been tasked with producing reports that provide in-depth information to support commissioning organisations in developing their strategic plans. The CSU expect to produce about 30 such reports in 2017-18. In 2017-18, the CSU have been asked to further develop the reports to include a version suitable for Sustainability and Transformation Partnerships (STPs).\n\nB. PROMS decision support tool – development work to test the concept of a tool that allows clinicians to use patient characteristics to obtain an estimate of likely benefit from receiving a joint replacement procedure. In particular, the CSU have been asked to consider the relationship between surgeon specialisation and patient outcomes. Most studies looking at the relationship between surgical activity and outcomes have focussed on procedure volume i.e. the volume-outcome relationship. But recently, the existence of a specialisation-outcome that is independent of the volume-outcome relationship has been advanced.\n\nC. Mental Health activity modelling – the CSU expect to produce a number of follow-up analyses based on previous work looking at the physical health of people who use mental health services. The exact focus of this work is yet to be confirmed but may include in-depth reviews of specific patient groups e.g. CAMHS, substance misuse; pathway modelling; or exploring relationships with other datasets e.g. primary care, IAPT.\n\nD. Impact of demography – as in previous years, the CSU has been tasked with producing reports that provide in-depth analysis of the likely impact of demographic changes on future acute healthcare utilisation. The CSU expect to produce about 30 such reports in 2017-18. In 2017-18, the CSU have been asked to further develop the reports to include a version suitable for Sustainability and Transformation Partnerships (STPs).\n\nIn 2017-18 the CSU has been tasked with further developing our methods for understanding the impact of demographic changes on future healthcare utilisation. The CSU intend to do this by drawing on the relationship between healthcare use and proximity to death. The proposed methods will require combining mortality data and hospital activity data.",
+  "21a870f8999d": "All data will be stored on a secure server and accessed through a SQL server database by a small group of named staff working in an analytical team. The data in its raw form will not be supplied or made available as part of any tool or appear as part of any product or output. Any outputs made available to third parties will include only aggregate data, with small numbers suppressed in line with the HES Analysis Guide.\n\nNo attempt will be made to link the data with any other record level data (other than where already provided in linked or bridging form by NHS Digital e.g. HES-DIDs). The data may, however, be linked to other non-record level data such as already exists within the public domain (e.g. organisation data published by the Organisation Data Service).\nFor clarity, the Data Services for Commissioners Regional Office (DSCRO) will not process the data for MLCSU other than initially downloading the data and storing it on servers accessible by MLCSU, and therefore is not listed as a data processor.\n\nSUS PbR\nAs described in the 'Objectives section' access to national SUS PbR data is necessary to allow MLCSU to offer QIPP reports to all CCGs/trusts in England. This data will also enable improvements to the reports through the use of more relevant comparator groups (i.e. statistical neighbours).\n\nPROMS\nAs described in the 'Objectives' section PROMS data will be used to develop a decision support tool for patients considering joint replacement surgery. PROMS data will be analysed using appropriate statistical methods to establish the relationship between a range of patient characteristics (e.g. age, gender, co-morbidities) and surgical outcomes based on PROM scores. Any tool developed as part of this work will not contain patient data. These sorts of tools require only a mathematical algorithm based on statistical relationships between patient characteristics and outcomes.\n\nMental Health Services Dataset (MHSDS)\nAs described in the ‘objectives’ section MHSDS data will be used to model expected future mental health activity levels and capacity requirements. The data will be used in two ways: firstly, it will be used to provide materials to support discussions with clinicians and commissioning stakeholders about the expected impacts of planned changes or interventions (e.g. schemes to increase early diagnosis of mental health conditions); secondly, the data will be used to operationalise statistical models to estimate the combined effect of multiple proposed interventions. Ultimately, these models will help commissioners to better understand the likely costs and benefits of proposed changes enabling them to make better decisions about the effective use of limited resources.\n\nMortality data \nAs described in the 'Objectives' section mortality data combined with national HES data will be used to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. It will also allow the CSU to develop a new approach, based on the relationship between proximity to death and healthcare utilisation, to estimating the impact of an ageing population on future healthcare demand.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "25f9cff1d9f8": "To support contractual and strategic benchmarking across Midlands and Lancashire, for programmes such as planning commissioning and productivity, service quality and performance improvement, and activity and outcomes monitoring for local populations. \nThe CSU needs: \n•\tThe provision of analytically based intelligence for a range of CCGs for benchmarking of similar health economies or populations in England, not just in the CSU’s area. \n•\tTo provide in depth analysis of all aspects of a specific service areas and allow comparisons with other CCG areas or health economies known to have better outcomes or new/different pathways. \n•\tTo support large scale transformation projects that may impact several commissioners (CCGs) \n•\tDescriptive analyses of healthcare needs, demands or supply including comparisons between providers, commissioners and geographical areas, analysis over time and of the characteristics of patients and the services they receive. \n•\tRetrospective analyses exploring the reasons for observed changes in healthcare provision and health outcomes \n•\tProspective modelling of the impact of planned or proposed changes in healthcare services on healthcare activity, travel times and resource use \n•\tQuantitative evaluations and monitoring estimating the impact of service redesign of improvement initiatives on healthcare and outcomes \n•\tTo develop tools and information packs to support patients, clinicians, commissioners and providers to make informed decisions about healthcare service provision, organisation and strategy \n\nThe specific services and products that will utilise the data are the following :- \nA. QIPP opportunity packs which provide a summary of performance, cost and activity levels for individual CCGs/trusts compared to other local CCGs/trusts. The packs include aggregate analysis in relation to QIPP priorities covering Inpatient, Outpatient and A&E but are subject to change in line with the QIPP programme. These packs were originally produced for those CCGs within the CSU's core geography (Birmingham and the Black County). However the CSU have now been requested to provide packs for a wider range of CCGs and trusts including all Staffordshire, Lancashire, Herefordshire, Worcestershire, Shropshire and Telford and Wrekin. The CSU have also had requests from as far afield as Cornwall. The value of these packs (as demonstrated by the willingness to pay) in supporting CCGs/trusts to assist with their statutory duty to commission/provide high quality and best value services for their populations is clearly proven and as such the CSU will be offering the packs to all CCGs trusts in England. In addition to the wider provision of packs the CSU's existing customers have also requested that the packs be enhanced to offer comparisons against national nearest neighbour comparators or bespoke comparators (for example Birmingham combined CCGs compared with other large cities). Customers for the packs also can request ‘deep dive’ analyses to explore identified opportunities in greater detail \n\nB. Development of decision support tools for clinicians to help them make better decisions when deciding whether a patient is suitable for Hip or knee replacement procedures. The development of the tools requires sophisticated statistical analysis to establish the relationship between a range of patient characteristics and procedure outcomes (as measured by PROMs data). The statistical relationships will be used within the tools whereby it will allow a clinician to input patient characteristics and provide an estimate of the likely benefit of the procedure for the patient. This additional information can help both the patient and their clinician make the best informed decision about whether to proceed with the operation. In order to ensure that that relationship is as robust as possible and to maximise the predictive power of the tool (which is vital given that the tool will be used to support important decisions about patient care) a full national dataset is required. In order to further validate the relationship and establish its robustness over time (which will be important for clinician and patient confidence in the tool) the CSU will be carrying out the analysis on all data years. The development of these tools will establish a prototype for the development of other similar products for other procedures where data is available through the PROMS dataset such as Varicose vein surgery etc. However for the purposes of this request the CSU are requesting only PROMS data relating to hip and knee procedures. A number of Local CCGs with programmes aimed at improving orthopaedic services (across all of Staffordshire for example) have confirmed that they plan to put this tool into practice on an initial pilot basis as soon as it is available. The CSU have also been approached by a number of other CCGs who have indicated that they would also be interested in applying the tool once its efficacy has been established. \n\nC. Projects on behalf of CCGs and Strategic Clinical Networks (part of NHS England) to model expected future Mental Health activity levels and capacity requirements within a CCG after taking into account the impact of projected demographic changes and also the potential impact of mental health prevention strategies, admission avoidance strategies and length/intensity of treatment reduction strategies. An integral part of this work is to elicit modelling parameters from clinicians and commissioning stakeholders relating to expected impacts on activity levels as a result of planned changes or interventions. In order to do this the CSU produce a range of supporting analyses to help them to understand current activity levels, trends in activity and also how they compare with others. Provision of this supporting data is key to helping stakeholders to make considered and robust estimates based on a clear understanding of past progress and performance against other relevant comparators. In order to provide this comparative benchmarking the CSU require full national datasets covering multiple years. As the CSU are requesting the full set of historical data, they felt it important to clarify their rationale for doing so. In terms of the number of years of data requested, the CSU's professional experience has shown that providing longer term trends (in excess of 5 years) is often important, given the level of variation that exists, in order to evidence general trends. Being able to show local trends in the context of national trends is also essential for sophisticated interpretation. Shorter time series can often be misleading in this respect and as such could result in incorrect assumptions about future levels of demand. \n\nD. Projects on behalf of CCGs to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. One specific aim of this work (for which ONS mortality data is required) is to investigate how patient need, demand and service utilisation changes towards the end of a person’s life. In addition it will also allow the CSU to develop a new approach to estimating the likely impact of an ageing population on future healthcare demand. The new approach will take into account not only the future size and age structure of a population but also changes in the proportion of the population who are estimated to be in their final months of life. It is also worth noting that NHS England have expressed interest in the CSU's development of this method of forecasting future demand as part of their national Fit for the Future programme (FFF). \n\nThe project requires national level datasets in order that the analysis is as statistically robust as possible. It will also allow the CSU to establish the extent to which utilisation prior to death varies across the country. Benchmarking analysis (including historical trend analysis) will be carried out in order to provide estimates of the potential scale of opportunity for reducing acute healthcare activity (or developing alternatives to acute provision) for those patients at the end of life. Benchmarking and trend analysis will also enable the identification of those Trusts or CCGs who may be more advanced in end of life care provision. As part of this project the CSU will also be considering how patterns of utilisation at the end of life have changed over time (advances in medical technology and new treatments will certainly have had an impact on levels of service utilisation particularly for older people). Long term trends in excess of five years will be important in order to identify and have confidence in historical trends and applying these trends to future estimates. \n\nE. Other specific projects are:\n\n1  Describing changes in acute utilisation over the long term provides insights that are lost when focusing on the most recent past. Striking reductions, for example, in casemix-adjusted length of stay following an emergency acute hospital admission or the frequency of admissions to psychiatric inpatient units only really become apparent when viewed over a long time frame. These longer term perspectives demonstrate the enormous positive changes that have been achieved in the past and can motivate and guide health economies seeking improvements in areas that seem equally intractable.  To delete older data would eliminate the potential for these insights. The CSU have deployed this kind of longitudinal analysis (going back to pre 2000) recently in support of several Sustainability and Transformation Plans (STPs - compromising of CCGs, trusts, Foundation Trusts, Local Authorities and other key local partners) as they seek to address the requirements placed upon them nationally.\n\n2  When explaining historical acute hospital utilisation rates, or forecasting future rates, the longer the time series, the more robust (on average) the explanation or forecast.  Whilst for time series models, it might be argued the diminishing returns result from adding very old data points, this is not necessarily the case for causal models.\n\n3  The CSU are frequently asked to model the potential implications of new models of care.  These ‘new’ models are more commonly reinventions or adaptations of earlier models.  The ‘NHS Five Year Forward View’ describes a number of new care models which move away from a purchaser-provider split in favour of lead-provider arrangements.  To many these proposed models mirror or approximate arrangements that existed in the NHS prior to the development of primary care trusts.  If analysed and interpreted appropriately, data relating to these earlier periods can provide useful insights into the unintended consequences of ‘new’ care models and the CSU are being asked to do this to support STPs and national Vanguards in meeting the national requirements placed upon them.\n\nData will only be used for the purposes outlined above, and any requirement to change the purpose will be subject to a separate request to NHS Digital.",
+  "36fcbd0fbf00": "All reports/outputs conform to relevant legislation and guidance with respect to confidentiality and other information governance considerations.\n\nPlanned outputs:\nA. QIPP opportunity packs—as in previous years, the CSU has been tasked with producing reports that provide in-depth information to support commissioning organisations in developing their strategic plans. In 2018, the CSU were asked to further develop the reports to include a version targeted at Sustainability and Transformation Partnerships (STPs).\n\nB. PROMS decision support tool—development work to test the concept of a tool that allows clinicians to use patient characteristics to obtain an estimate of likely benefit from receiving a joint replacement procedure. The CSU has also been asked to consider the relationship between surgeon specialisation and patient outcomes. Most studies looking at the relationship between surgical activity and outcomes have focused on procedure volume i.e. the volume-outcome relationship. But recently, the existence of a specialisation-outcome relationship that is independent of the volume-outcome relationship has been advanced.\n\nC. Mental Health activity modelling—the CSU expect to produce a number of follow-up analyses based on previous work looking at the physical health of people who use mental health services. The exact focus of this work is yet to be confirmed but may include in-depth reviews of specific patient groups e.g. CAMHS, substance misuse; pathway modelling; or exploring relationships with other data-sets e.g. primary care, IAPT.\n\nD. Impact of demography—as in previous years, the CSU has been tasked with producing reports that provide in-depth analysis of the likely impact of demographic changes on future hospital utilisation. In 2018, the CSU were asked to further develop the reports to include a version targeted at Sustainability and Transformation Partnerships (STPs).\n\nThe CSU has also been tasked with further developing methods for understanding the impact of demographic changes on future healthcare utilisation. The CSU intends to do this by drawing on the relationship between healthcare use and proximity to death. The proposed methods will require combining mortality data and hospital activity data.\n\nThe examples provided demonstrate that MLCSU’s work provides its customers (CCGs, Trusts, Local Authorities for the purposes of public health and social care, Sustainability and Transformation Partnerships, Public Health England, Department of Health, Clinical senates, Strategic Clinical Networks, NHS England, NHS Improvement, and health charities) with understanding and insight that helps them to make better decisions about the healthcare services they commission or provide. Improved decision making will have a direct effect on the quality of care and outcomes for patients. MLCSU's customer base is limited to organisations operating in the field of health and social care provision.\n\nAll outputs will only contain results in highly aggregated format and as statistical summaries and measures of association. Small numbers will be suppressed in line with the HES Analysis Guide. Record level information will not be released to any third party.",
+  "395876453c3b": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC: \nObjective for processing: \nTo support contractual and strategic benchmarking across Midlands and Lancashire, for programmes such as planning commissioning and productivity, service quality and performance improvement, and activity and outcomes monitoring for local populations.\nThe CSU needs:\n• The provision of analytically based intelligence for a range of CCGs for benchmarking of similar health economies or populations in England, not just in the CSU’s area. \n• To provide in depth analysis of all aspects of a specific service areas and allow comparisons with other CCG areas or health economies known to have better outcomes or new/different pathways. \n• To support large scale transformation projects that may impact several commissioners (CCGs)\n• Descriptive analyses of healthcare needs, demands or supply including comparisons between providers, commissioners and geographical areas, analysis over time and of the characteristics of patients and the services they receive.\n• Retrospective analyses exploring the reasons for observed changes in healthcare provision and health outcomes\n• Prospective modelling of the impact of planned or proposed changes in healthcare services on healthcare activity, travel times and resource use \n• Quantitative evaluations and monitoring estimating the impact of service redesign of improvement initiatives on healthcare and outcomes\n• To develop tools and information packs to support patients, clinicians, commissioners and providers to make informed decisions about healthcare service provision, organisation and strategy\nSpecific services and products that will utilise the data are the following :-\nA. QIPP opportunity packs which provide a summary of performance, cost and activity levels for individual CCGs/trusts compared to other local CCGs/trusts. The packs include aggregate analysis in relation to QIPP priorities covering Inpatient, Outpatient and A&E but are subject to change in line with the QIPP programme.  These packs were originally produced for those CCGs within our core geography (Birmingham and the Black County). However we have now been requested to provide packs for a wider range of CCGs and trusts including all Staffordshire, Lancashire, Herefordshire, Worcestershire, Shropshire and Telford and Wrekin. We have also had requests from as far afield as Cornwall. The value of these packs (as demonstrated by the willingness to pay) in supporting CCGs/trusts  to assist with their statutory duty to commission/provide  high quality and best value services for their populations is clearly proven and as such we will be offering the packs to all CCGs trusts in England. In addition to the wider provision of packs our existing customers have also requested that the packs be enhanced to offer comparisons against national nearest neighbor comparators or bespoke comparators (for example Birmingham combined CCGs compared with other large cities) . Customers for the packs  also can request ‘deep dive’ analyses to explore identified opportunities in greater detail\nB. Development of decision support tools for clinicians to help them make better decisions when deciding whether a patient is suitable for Hip or knee replacement procedures.. The development of the tools requires sophisticated statistical analysis to establish the relationship between a range of patient characteristics and procedure outcomes (as measured by PROMs data). The statistical relationships will be used within the tools whereby it will allow a clinician to input patient characteristics and provide an estimate of the likely benefit of the procedure for the patient. This additional information can help both the patient and their clinician make the best informed decision about whether to proceed with the operation. In order to ensure that that relationship is as robust as possible and to maximize the predictive power of the tool  (which is vital given that the tool will be used to support  important decisions about patient care) a full national dataset is required. In order to further validate the relationship  and establish its robustness over time (which will be important for clinician and patient confidence in the tool) we will be carrying out the analysis on all data years. The development of these tools will establish a prototype for the development of other similar products for other procedures where data is available through the PROMS dataset such as Varicose vein surgery  etc. However for the purposes of this request we are requesting only  PROMS data relating to hip and knee procedures. A number of Local CCGs with programmes aimed at improving orthopaedic services ( across all of Staffordshire for example) have confirmed  that they plan to put this tool into practice on an initial pilot basis as soon as it is available. We have also been approached by a number of other CCGs who have indicated that they would also be interested in applying the tool once its efficacy has been established.\nC. Projects on behalf of CCGs to model expected future Mental Health activity levels and capacity requirements within a CCG after taking into account the impact of projected demographic changes and also the potential impact of mental health prevention strategies, admission avoidance strategies and length/intensity of treatment reduction strategies. An integral part of this work is to elicit modelling parameters from clinicians and commissioning stakeholders relating to expected impacts on activity levels as a result of planned changes or interventions. In order to do this we produce a range of supporting analyses to help them to understand current activity levels, trends in activity and also how they compare with others. Provision of this supporting data is key to helping stakeholders to make considered and robust estimates based on a clear understanding of past progress and performance against other relevant comparators.  In order to provide this comparative benchmarking  we require full national datasets covering  multiple years. As we are requesting the full set of historical data we felt it important to clarify our rationale for doing so. In terms of the number of years of data requested our professional experience has shown that providing longer term trends (in excess of 5 years) is often important, given the level of variation that exists, in order to evidence general trends. Being able to show local trends in the context of national trends is also essential for sophisticated interpretation. Shorter time series can often be misleading in this respect and as such could result in incorrect assumptions about future levels of demand.\nD. Projects on behalf of  CCGs to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. One specific aim of this work (for which ONS mortality data is required)  is to investigate  how patient need, demand and service utilization changes towards the end of a persons life. .In addition it will also allow us to develop a new approach to estimating the likely impact of an ageing population on future healthcare demand. The new approach will take into account not only the future size and age structure of a population but also changes in the proportion of the population who are estimated to be in their final months of life. It is also worth noting that NHS England have expressed interest in our development of this method of forecasting future demand as part of their national Fit for the Future programme (FFF).\n\nThe project requires a national level datasets in order that the analysis is as statistically robust as possible. It will also allow us to establish the extent to which utilization prior to death varies across the country. Benchmarking analysis (including historical  trend analysis) will be carried out in order to provide estimates of the potential scale of opportunity for reducing acute healthcare activity (or developing alternatives to acute provision) for those patients at the end of life. Benchmarking and trend analysis will also enable the identification of those Trusts or CCGs who may be more advanced in end of life care provision..  As part of this project we will also be considering how patterns of utilisation at the end of life have changed over time (advances in medical technology and new treatments will certainly have had an impact on levels of service utilisation particularly for older people). Long term trends in excess of five years will be  important in order to identify and  have confidence in historical trends and applying these trends to future estimates.\nData will only be used for the purposes outlined above, and any requirement to change the purpose will be subject to a separate request to DAAG.\n\nProcessing activities: \nThe data will be downloaded by Data Services for Commissioners Regional Office (DCSRO) staff and stored on a secure server within the DSCRO which is an accredited safe haven. The data will be accessed through a SQL server database by a small group of named analytical staff working within the Strategy Unit of the CSU. Those staff are based at the premises detailed in this application (Kingston House). The data in its raw form will not be loaded into any tool or provided as part of any product or output. All output reports will be suitably aggregated, with appropriate suppression of small numbers.\nSUS PBR\nAs detailed in the “Objectives section”  (Objective A) accessing the national SUS PBR data will enable the CSU to offer the QIPP packs to all CCGs/trusts in England as well as allowing the CSU to improve the packs through the use of better comparative groups (i.e. nearest neighbours). In producing these packs the data required is extracted using SQL server and analysed using MS Excel to produce the charts and tables included within the packs. \nPROMS\nAs detailed in the “Objectives” section (Objective B)  the PROMS data will be used to develop a decision support tool, PROMS data will be extracted from SQL service and analysed using appropriate statistical analysis software (STATA or R) in order to establish the relationship between a range of patient characteristics (e.g. age, gender, co-morbidities) and the procedure outcomes based on PROM scores. \nThe tool that will be developed will not contain any  patient data, The tool that will be provided to the customer(s) will only contain a mathematical algorithm based on the established statistical relationships between patient characteristics and outcomes.\n\nMental Health Minimum Dataset (MHMDS)\nThe MHMDS will be used to model expected future activity levels and capacity requirements within CCGs after taking into account the impact of projected demographic changes and also the potential impact of mental health prevention strategies, admission avoidance strategies and length/intensity of treatment reduction strategies. Patient level data is required to enable us to adjust and remove activity in line with expected changes. Using patient level data also allows us minimise the impact of overestimating impacts as a result of double counting which is not possible with aggregate data. \nAs outlined in the “objective” section the data will be used in two ways firstly it will be used to provide supporting benchmarking and historical trend analyses to support modelling parameter setting. For this aspect of the project data extracts will be produced using SQL server and downloaded into MS Excel to produce the charts and tables required,\nSecondly it will be used to create a model to estimate future activity levels after accounting for changes in demographics and the impact of changes to service provision. The model will be constructed using SQL server to process the data applying any modelling factors and parameters. Aggregate output files from SQL server will be downloaded and analysed in MS  Excel in order to produce the required charts and tables for inclusion in reports. The reports and any accompanying data tables will not contain any non aggregate level data and small numbers will be suppressed where necessary.\nThe dataset will also be used to develop prospective intervention specific models to estimate changes in mental health team activity levels and the scale of potential savings  as a result of the introduction of specific strategies to reduce the need for mental health services. These strategies may include, for example, schemes to increase early diagnosis of mental health conditions. This will help the CCG to better understand the costs and benefits of proposed changes allowing them to make better decisions about the effective use of commissioning resources. As with the higher level modeling in order to develop specific intervention impact models requires the production of benchmarking and trend analyses to help the customer to make judgments on the likely scale of impact of specific interventions. These judgments are incorporated into the model so it is important that they are based as far as possible on the best available data available. These prospective models will be constructed within SQL server and aggregate outputs downloaded into MS Excel to produce required outputs. The reports and any accompanying data tables will not contain any non aggregate level data and small numbers will be suppressed where necessary\n\nONS mortality data\nAs detailed in the “Objectives” section (Objective D) the ONS mortality data combined with the national HES data will be used to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. It will also allow us to develop a new approach to estimating the impact of an ageing population on future healthcare demand. As with the other datasets the ONS data will be stored within a SQL server database and the data required for this analysis will be extracted and analysed within MS Excel or other appropriate statistical software packages such as STATA or R in order to establish the mathematical relationship between proximity to death and healthcare utilization which can be used in future (and potentially some of the current modelling work outlined in this document). During these data transfers into appropriate analysis software packages the data will not leave the secure environment,\nAny other projects that may make use of this work (for example the NHSE FFF programme)  would only utilize the a methodology  derived from this project and would not use the actual ONS data. The reports and any accompanying data tables will not contain any non aggregate level data and small numbers will be suppressed where necessary.\nAcross all of the above processing, processing will be only carried out by CSU staff with the appropriate governance and access.\nThe data will not be used to link at record level to other datasets (other than where already provided in linked or bridging form by the HSCIC).  The data may however be linked to organisational level data such as already exists within the public domain.\n\nFor clarity, the DSCRO may  not process the data for the CSU other than initially downloading the data and storing it on the servers accessible by the CSU, and hence is not listed as a data processor, furthermore, NHS England have confirmed they are happy for this DSA to reflect the request for access to data to sit under the contract which results in NHS E having responsibility for the receipt, use, storage and any dissemination of the data by the CSU.\n\nSpecific outputs expected, including target date(s): \nQIPP opportunity packs (Objective A) – these packs contain a variety of comparative charts and tables plus bespoke ‘deep dive’ reports identifying the potential scale of opportunities available relating to areas of activity that may be amenable to common admission avoidance strategies. These packs are bespoke for an individual CCG/trust will be only be provided for CCGs/trusts who commission a pack.\nPROMS decision support tool (Objective B) – the output of this project will be a web based  tool that allows clincians to input patient characteristics and receive an estimate of likely benefit of undergoing the procedure. The tool contains no data.\nMental Health activity modelling (Objective C)  -the output of this project will be a final written report containing charts, tables and written commentary. Aggregated summary data tables may also be provided and these will not be at patient level and small numbers will be suppressed. The report will be provided only to the project commissioner and will not be published or circulated.\nMental Health intervention specific modelling  -the output of this project will be a final written report containing charts, tables and written commentary. Aggregated summary data tables may also be provided and these will not be at patient level and small numbers will be suppressed. The report will be provided only to the project commissioner and will not be published or circulated.\nImpact of demography (Objective  D)– the primary outputs of this work will be a written reports containing appropriate charts, tables and written commentary. The report will be provided to the commissioning organisation and may be shared with other interested organisations with the permission of the commissioner. The secondary output will be in  the form of an improved  methodology to estimate the impact of population changes on healthcare utilization. This methodogy will be applied in future modelling projects. \nImpact of demography (Objective  D)– the primary outputs of this work will be a written reports containing appropriate charts, tables and written commentary. The report will be provided to the commissioning organisation and may be shared with other interested organisations with the permission of the commissioner. The secondary output will be in  the form of an improved  methodology to estimate the impact of population changes on healthcare utilization. This methodogy will be applied in future modelling projects. but it  would not require the re-use of the mortality data.\nData presented within all outputs is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nExpected measurable benefits to health and/or social care, including target date(s): \nAs illustrated within the examples above, the work provides customers (CCGs, Trusts, Local Authorities for the purposes of public health  and social care, CQC, Public Health England, Department of Health), Clinical senates, Strategic clinical networks, NHS England, Monitor, Trust Development Agency(TDA)), and health charities) with understanding and insight that enables them to make the best decisions about the healthcare services they commission or provide. Improved decision making will have a direct effect on the quality of care and outcomes for patients. \nIn relation to each of the services stated above, the specific benefits are :-\na. The QIPP opportunity packs provide estimates of the potential scale of opportunity if best performance levels of comparator CCGs/trusts are achieved. These packs will help CCGs/trusts to prioritise their QIPP programmes to maximise potential benefits. The Quality, Innovation, Productivity and Prevention (QIPP) programme is a large-scale programme developed by the Department of Health to drive forward quality improvements in NHS care, at the same time as making up to £20 billion of efficiency savings by 2014/15.\nb. The PROMS project will help both patients and clinician make the best decisions about whether to undergo major surgery. It will help to minimise both the financial cost of carrying out operations that are unlikely to have a beneficial impact for the patient and avoid painful and debilitating surgery for some patients who are unlikely to gain significant benefit.\nc. The modelling of future mental health demand will provide commissioners with detailed projections about the potential future demand for services. Understanding this is key to the effective functioning of commissioner organisations if they are to make sound decisions about changes to future service requirements to meet expected demand or to commission new targeted preventative services to mitigate against projected demand growth.\nd. The impact of demographics project will provide CCGs with valuable insight into how healthcare need changes not only as we get older but also as we approach the end of life. Given that healthcare utilization increases significantly at this time a clearer understanding of the patterns of utilization at this stage of life will enable commissioners to provide the most appropriate and cost effective services for these patients. \nData will only be used for NHS Health and Social Care use or by organisations who are commissioned by NHS Health and Social Care for a specific purpose as outlined above.\nCommercial;\nThe CSU is part of NHSE. The CCG customers pay for the CSU out of their management allowance which is set by central government, a form of ‘internal SLA’ within the NHS. In addition to these core services, CCGs and the other customers listed above may pay for additional analytical support from the Strategy unit , a part of the CSU, which is costed on a project by project basis. \nThe strategy unit may on occasion respond to specific tenders from public sector or third sector health and social care organisations but not private sector organisations.\nThe CSU makes no profit. All work is done at cost plus 5% which is a required margin set by and controlled by NHSE.",
+  "49f02ee7b890": "Under this Agreement one further year of pseudonymised data for the period 2018/19 will be disseminated by NHS Digital to the Strategy Unit at MLCSU. These data-sets are limited to:\n\n- Hospital Episode Statistics Critical Care (HES CC)\n- Hospital Episode Statistics Admitted Patient Care (HES APC) \n- Hospital Episode Statistics Outpatients (HES OP) \n- Hospital Episode Statistics Accident and Emergency (HES A&E) \n- Mental Health Service Dataset (MHSDS)\n- Secondary Uses Service Payment by Results A&E  (SUS PbR A&E) \n- Secondary Uses Service Payment by Results - Outpatients  (SUS PbR OP) \n- Secondary Uses Service Payment by Results Spells (SUS PbR Spells)\n- Secondary Uses Service Payment by Results Episodes (SUS PbR Episodes)\n- Civil Registration (deaths)\n- Patient Reported Outcome Measures (PROMS)\n- Patient Reported Outcome Measures Linkable to HES\n- Diagnostic Imaging Dataset (DIDS)\n\nAll data will be stored on a secure server and accessed through a SQL server database by a small group of named staff working in an analytical team at MLCSU. The data in its raw form will not be supplied or made available as part of any tool or appear as part of any product or output. Any outputs made available to third parties will include only aggregate data, with small numbers suppressed in line with the HES Analysis Guide.\n\nFor clarity, the Data Services for Commissioners Regional Office (DSCRO) will not process the data for MLCSU other than initially downloading the data and storing it on servers accessible by MLCSU, and therefore is not listed as a data processor.\n\nThere will be no subsequent flow of NHS Digital data (or record level extracts from these datasets) from MLCSU to any external organisation or body without. Aggregated counts or the findings of analyses using these data-sets may appear in reports or academic papers authored by MLCSU. All such reporting will adhere to the guidelines on releasing HES information contained in the most recent version of the HES Analysis Guide. No attempt will be made to link the data with any other record level data (other than where already provided in linked or bridging form by NHS Digital e.g. HES-DIDs). The data may, however, be linked to other non-record level data such as already exists within the public domain (e.g. organisation data published by the Organisation Data Service).\n\nSUS PbR:\nSUS PbR data is necessary to allow MLCSU to offer QIPP reports to all CCGs/trusts in England. This data will also enable improvements to the reports through the use of more relevant comparator groups (i.e. statistical neighbours).\n\nHES:\nHES datasets will be used to understand longer-term changes in healthcare utilisation and the extent to which different factors (e.g. population size, age profile, morbidity) and specific policy choices have contributed to these changes. Such understanding is essential for informing thinking, modelling, and planning for how healthcare utilisation rates might change in the future.\n\nDIDs:\nInformation on Diagnostics and Imaging from DIDs is needed to enable the mapping of complete care pathways for e.g. suspected cancer patients. Without the ability to track referral and completion of diagnostic activity the CSU would have only a partial view of the care pathway and be unable to respond to questions from clinicians and healthcare planners about the relationship between different care pathways and outcomes for patients.\n\nPROMS:\nPROMS data will be used to develop a decision support tool for patients considering joint replacement surgery. PROMS data will be analysed using appropriate statistical methods to establish the relationship between a range of patient characteristics (e.g. age, gender, co-morbidities) and surgical outcomes based on PROM scores. Any tool developed as part of this work will not contain patient data. These sorts of tools require only a mathematical algorithm based on statistical relationships between patient characteristics and outcomes.\n\nMental Health Services Dataset (MHSDS):\nMHSDS data will be used to model expected future mental health activity levels and capacity requirements. The data will be used in two ways: firstly, it will be used to provide materials to support discussions with clinicians and commissioning stakeholders about the expected impacts of planned changes or interventions (e.g. schemes to increase early diagnosis of mental health conditions); secondly, the data will be used to operationalise statistical models to estimate the combined effect of multiple proposed interventions. Ultimately, these models will help commissioners to better understand the likely costs and benefits of proposed changes enabling them to make better decisions about the effective use of limited resources.\n\nMortality data: \nMortality data combined with national HES data will be used to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. It will also allow the CSU to develop a new approach, based on the relationship between proximity to death and healthcare utilisation, to estimating the impact of an ageing population on future healthcare demand.\n\nAll organisations party to this Agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "64c4e535da5a": "QIPP opportunity packs (Objective A) – these packs contain a variety of comparative charts and tables plus bespoke ‘deep dive’ reports identifying the potential scale of opportunities available relating to areas of activity that may be amenable to common admission avoidance strategies. These packs are bespoke for an individual CCG/trust will be only be provided for CCGs/trusts who commission a pack. \n\nThe CSU are continuing to produce these packs for a significant number of CCGs across the country. In 2015 the CSU provided around 30 CCGs with bespoke QIPP opportunity packs and have continued to further develop the product to offer comparisons with national nearest neighbours and bespoke comparator sets. In addition, the CSU has supported a number of CCGs to further explore issues highlighted by the packs by providing more in depth analysis using the data. The CSU anticipate a similar level of demand for this product in the coming months in order to support healthcare systems to develop their Sustainability and Transformation Plan (STP) plans. The packs are expected to be produced before the end of December 2016.\n\nPROMS decision support tool (Objective B) – the output of this project will be a web based tool that allows clinicians to input patient characteristics and receive an estimate of likely benefit of undergoing the procedure. The tool contains no patient data. There is currently no confirmed target date for the tool's completion, however it is still being developed and the CSU are keen to continue to refine and test the methodology with a view to piloting it with an interested partner CCG or other NHS organisation.\n\nMental Health activity modelling (Objective C) -the output of this project will be a final written report containing charts, tables and written commentary. Aggregated summary data tables may also be provided and these will not be at patient level and small numbers will be suppressed. The report will be provided only to the project commissioner and will not be published or circulated. \n\nMental Health intervention specific modelling -the output of this project will be a final written report containing charts, tables and written commentary. Aggregated summary data tables may also be provided and these will not be at patient level and small numbers will be suppressed. The report will be provided only to the project commissioner and will not be published or circulated. \n\nThe CSU has carried out mental health modelling projects using the Mental Health dataset in Warwickshire and Shropshire which provided estimates of the future levels of demand for mental health services in the medium term.  The CSU are due to commence work on new modelling projects for Walsall CCG and Sandwell and West Birmingham CCG imminently, with completion expected by end of February 2017.\n\nImpact of demography (Objective D) – the primary outputs of this work will be written reports containing appropriate charts, tables and written commentary. The report will be provided to the commissioning organisation and may be shared with other interested organisations with the permission of the commissioner. The secondary output will be in the form of an improved methodology to estimate the impact of population changes on healthcare utilisation. This methodology will be applied in future modelling projects but it would not require the re-use of the mortality data. The CSU have made progress in understanding how proximity to death may be applied to provide better estimates of future healthcare demand but a final methodology is not yet complete and this objective is still on-going.\n\nThe CSU has carried out two projects looking at patterns of acute healthcare utilisation for patients in the 12 months prior to death. The first was a regional project commissioned by the West Midlands Strategic Clinical network which benchmarked patterns of acute healthcare utilisation for patients in the last 12 months of life. The second was a more in depth local analysis again using the ONS and HES data sets to further investigate seemingly high levels of utilisation in Dudley CCG and to provide the CCG with a more robust understanding of local provision of care to patients in their final year of life. \n\nData presented within all outputs is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "660fc05884aa": "The data will be stored on a secure server and accessed through a SQL server database by a small group of named analytical staff working within the Strategy Unit of the CSU. Those staff are based at the premises detailed in this application (Kingston House). The data in its raw form will not be loaded into any tool or provided as part of any product or output. All outputs will contain only data which is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nSUS PBR \nAs detailed in the “Objectives section” (Objective A) accessing the national SUS PBR data will enable the CSU to offer the QIPP packs to all CCGs/trusts in England as well as allowing the CSU to improve the packs through the use of better comparative groups (i.e. nearest neighbours). In producing these packs the data required is extracted using SQL server and analysed using MS Excel to produce the charts and tables included within the packs. \n\nPROMS \nAs detailed in the “Objectives” section (Objective B) the PROMS data will be used to develop a decision support tool, PROMS data will be extracted from SQL server and analysed using appropriate statistical analysis software (STATA or R) in order to establish the relationship between a range of patient characteristics (e.g. age, gender, co-morbidities) and the procedure outcomes based on PROM scores. \nThe tool that will be developed will not contain any patient data. The tool that will be provided to the customer(s) will only contain a mathematical algorithm based on the established statistical relationships between patient characteristics and outcomes. \n\nMental Health Minimum Dataset (MHMDS) \nThe MHMDS will be used to model expected future activity levels and capacity requirements within CCGs after taking into account the impact of projected demographic changes and also the potential impact of mental health prevention strategies, admission avoidance strategies and length/intensity of treatment reduction strategies. Patient level data is required to enable the CSU to adjust and remove activity in line with expected changes. Using patient level data also allows the CSU minimise the impact of overestimating impacts as a result of double counting which is not possible with aggregate data. \nAs outlined in the “objective” section the data will be used in two ways firstly it will be used to provide supporting benchmarking and historical trend analyses to support modelling parameter setting. For this aspect of the project data extracts will be produced using SQL server and downloaded into MS Excel to produce the charts and tables required.\n\nSecondly it will be used to create a model to estimate future activity levels after accounting for changes in demographics and the impact of changes to service provision. The model will be constructed using SQL server to process the data applying any modelling factors and parameters. Aggregate output files from SQL server will be downloaded and analysed in MS Excel in order to produce the required charts and tables for inclusion in reports. \nThe dataset will also be used to develop prospective intervention specific models to estimate changes in mental health team activity levels and the scale of potential savings as a result of the introduction of specific strategies to reduce the need for mental health services. These strategies may include, for example, schemes to increase early diagnosis of mental health conditions. This will help the CCG to better understand the costs and benefits of proposed changes allowing them to make better decisions about the effective use of commissioning resources. As with the higher level modelling in order to develop specific intervention impact models requires the production of benchmarking and trend analyses to help the customer to make judgments on the likely scale of impact of specific interventions. These judgments are incorporated into the model so it is important that they are based as far as possible on the best available data available. These prospective models will be constructed within SQL server and aggregate outputs downloaded into MS Excel to produce required outputs. The reports and any accompanying data tables will contain only data which is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nONS mortality data \nAs detailed in the “Objectives” section (Objective D) the ONS mortality data combined with the national HES data will be used to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. It will also allow the CSU to develop a new approach to estimating the impact of an ageing population on future healthcare demand. As with the other datasets the ONS data will be stored within a SQL server database and the data required for this analysis will be extracted and analysed within MS Excel or other appropriate statistical software packages such as STATA or R in order to establish the mathematical relationship between proximity to death and healthcare utilisation which can be used in future (and potentially some of the current modelling work outlined in this document). During these data transfers into appropriate analysis software packages the data will not leave the secure environment.\n\nAny other projects that may make use of this work (for example the NHS England Fit For the Future programme) would only utilise the methodology derived from this project and would not use the actual ONS data. The reports and any accompanying data tables will contain only data which is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nAcross all of the above processing, processing will be only carried out by CSU staff with the appropriate governance and access. \n\nThe data will not be used to link at record level to other datasets (other than where already provided in linked or bridging form by NHS Digital). The data may however be linked to organisational level data such as already exists within the public domain. \n\nFor clarity, the DSCRO may not process the data for the CSU other than initially downloading the data and storing it on the servers accessible by the CSU, and hence is not listed as a data processor.",
+  "6eefa64d0106": "Midlands and Lancashire Commissioning Support Unit (MLCSU) are sole data controller under this Agreement. The purpose of this Agreement is to support contractual and strategic bench-marking across Midlands and Lancashire, for programmes such as planning, commissioning, assessing service quality, performance improvement, and activity and outcomes monitoring. \nFor example, this includes:\n•\tprovision of analytical intelligence to Clinical Commissioning Groups (CCGs) e.g. for benchmarking of similar health economies or populations in England\n•\tin-depth analyses of specific services or pathways to better understand the reasons behind differences in outcomes between health economies\n•\tsupporting large scale transformation projects involving multiple commissioning organisations\n•\tquantitative evaluations and monitoring to estimate the impact of service changes or improvement initiatives\n\nThe CSU’s customer base consists of: CCGs, Trusts, Local Authorities for the purposes of public health and social care, CQC, Sustainability and Transformation Partnerships, Public Health England, Department of Health, Clinical senates, Strategic clinical networks, NHS England, NHS Improvement, and health charities. \n\nOnly pseudonymised data are requested under this Agreement. MLCSU wish to retain data previously disseminated data up to 2017/18 and one further year of data of the following data-sets:\n\n- Hospital Episode Statistics Critical Care (HES CC)\n- Hospital Episode Statistics Admitted Patient Care (HES APC) \n- Hospital Episode Statistics Outpatients (HES OP) \n- Hospital Episode Statistics Accident and Emergency (HES A&E) \n- Mental Health Service Dataset (MHSDS)\n- Secondary Uses Service Payment by Results A&E  (SUS PbR A&E) \n- Secondary Uses Service Payment by Results Outpatients  (SUS PbR OP) \n- Secondary Uses Service Payment by Results Spells (SUS PbR Spells)\n- Secondary Uses Service Payment by Results Episodes (SUS PbR Episodes)\n- Civil Registration (deaths)\n- Patient Reported Outcome Measures (PROMS)\n- Patient Reported Outcome Measures Linkable to HES\n- Diagnostic Imaging Dataset (DIDS)\n\nThe specific services and products that will utilise the data are:\n\nA. QIPP (Quality Innovation Productivity and Prevention) opportunity packs. These reports provide a summary of performance, cost, and activity levels for individual CCGs/trusts compared with other similar CCGs/trusts. Information in the reports is used to inform strategic planning. Inpatient, outpatient, and A&E hospital services are all included in the reports. The reports were originally produced for CCGs within the CSU's core geography, however, MLCSU has since been asked to produce reports for CCGs across England. The value of these packs in supporting healthcare organisations to assist with their statutory duty to commission/provide high quality and best value services for their populations is clearly proven.\n\nB. Development of decision support tools for patients and clinicians to help them make better decisions when deciding whether a patient should undergo a joint replacement procedure. The development of the tools requires advanced statistical analysis to establish the relationship between a range of patient characteristics and procedure outcomes (as measured by PROMs data). Once established, the statistical relationships will be used within the tools to allow a clinician to use individual patient characteristics to provide an estimate of the likely benefit of the procedure for the patient. This extra information can help the patient and clinician make the best informed decision about whether to proceed with the operation. A national panel dataset (i.e. cross-sectional time series data) will ensure that modelled relationship is as robust as possible and maximise the predictive power of the tool (vital given that the tool will be used to support decisions about patient care). A number of local CCGs with programmes aimed at improving orthopaedic services have expressed an interest in piloting the tool to help establish its efficacy.\n\nC. Projects on behalf of CCGs and Strategic Clinical Networks (part of NHS England) to model expected future mental health activity levels and capacity requirements. Integral to this work are discussions with clinicians and commissioning stakeholders about the expected impacts of planned changes or interventions (e.g. schemes to increase early diagnosis of mental health conditions). The CSU work with these stakeholder groups to ‘quantify’ their judgements about expected impacts and use these as inputs to statistical models. To inform this process the CSU produce a range of supporting analyses to help participants understand current activity, past trends in activity, and differences between commissioning geographies. The provision of this supporting data is essential for helping stakeholders to make considered and informed estimates, based on a clear understanding of past progress and performance. Without access to record level data, the CSU would not be able to accurately adjust activity in-line with participants' judgements. In particular, the statistical models of future mental health activity that are developed as a result of these discussions would suffer from an increased risk of overestimating the effects of planned changes (due to issues of double counting), which is unavoidable without access to record level data.\n\nTo provide the supporting materials MLCSU requires national datasets spanning multiple years. The CSU's professional experience is that providing longer-term trends is extremely important when trying to understand the relative contributions of multiple factors to changes in different types of mental health activity. Attempting to rely on shorter time series would limit the value derived from these facilitated modelling exercises and materially increase the risk of making incorrect assumptions about likely future developments.\n\nD. Projects on behalf of CCGs to understand how the nature and scale of healthcare utilisation changes as a result of changes in demography. A specific aim of this work is to investigate how patient need, and service utilisation changes towards the end of a person’s life (ONS mortality data is required for this work). MLCSU is developing a new approach to estimating the likely impact of an ageing population on future healthcare demand. The new approach will take into account not only the future size and age structure of a population but also changes in the numbers of people projected to be in their final months of life. Without access to linked national data on hospital activity and mortality this work would not be possible.\n\nWhen constructing statistical models to estimate possible future states the availability of historical data, and in particular, long time series of data is hugely important. Without a good understanding of the statistical relationships between variables over time it is extremely difficult to construct models capable of delivering useful insights about what path the future might take. As part of this project MLCSU will seek to understand how patterns of healthcare utilisation at the end of life have changed over time, for example, in response to advances in medical technology and new treatments.\n\nE. Projects to understand longer-term trends. Describing changes in acute utilisation over the long term provides insights that are lost when focusing on the most recent past. Striking reductions, for example, in casemix-adjusted length of stay following an emergency hospital admission or the frequency of admissions to psychiatric inpatient units only really become apparent when viewed over a long time frame. These longer-term perspectives demonstrate the enormous positive changes that have been achieved in the past and can motivate and guide health economies seeking improvements in areas that seem equally intractable. To omit or remove this historical data would eliminate the potential for these insights. The CSU has deployed this kind of longitudinal analysis (going back to pre-2000) recently in support of several Sustainability and Transformation Partnerships as they seek to respond to national requirements.\n\nWhen attempting to understand or explain historical hospital utilisation rates, or forecasting future rates, the longer the time series, the more robust (on average) the explanation or forecast. While for time series models, it might be argued that there are diminishing returns from including ever older data points, this is not necessarily the case for causal models.\n\nThe CSU are frequently asked to model the potential implications of new models of care. These ‘new’ models are more commonly reinventions or adaptations of earlier models. The ‘NHS Five Year Forward View’ describes a number of new care models which move away from a purchaser-provider split in favour of lead-provider arrangements. To many these proposed models mirror or approximate arrangements that existed in the NHS prior to the development of primary care trusts. If analysed and interpreted appropriately, data relating to these earlier periods can provide useful insights into the unintended consequences of ‘new’ care models, and the CSU are being asked to do this to support STPs and national Vanguards in meeting the national requirements placed upon them.\n\nNHS Midlands and Lancashire CSU (MLCSU) is part of The NHS Transformation Unit which is a hosted service of Salford Royal NHS Foundation Trust.  Access to the data supplied under this Agreement is restricted to employees of MLCSU and The NHS Transformation Unit only and access by an employee of Salford Royal NHS Foundation Trust would constitute a breach of the DSA.\n\nMLCSU is part of NHS England (NHSE). Clinical Commissioning Groups (CCGs) pay for the CSU out of their management allowance which is set by central government, a form of internal SLA within the NHS. Therefore funding for the processing of the data is provided by the NHS through the CCG.\n\nMLCSU and the Strategy Unit provide services on behalf of NHSE to other (client) organisations within the health and social care sector. These client organisations will be involved as funders and customers for projects undertaken by the Strategy Unit.\n\nMLCSU will process the data under this Agreement for the purposes set out above. Additionally MLCSU use LIMA Networks LTD. to process data and they are therefore listed as joint data processor.\n\nThe processing under this Agreement is necessary for MLCSU and the Strategy Unit to perform the tasks required of it by NHS England, namely provision of analytical intelligence and support to CCGs and other health and social care organisations. These tasks are objectively necessary for the effective functioning of a publicly-funded healthcare system and as such fall under Article 6(1)(e), performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.\n\nThe provision of accurate analytical intelligence is necessary for the effective management of the health and social care system and as such the processing under this Agreement falls under Article 9(2)(h) of the GDPR.\n\nThe data controller have determined that the data requested is the minimum amount necessary and the least intrusive way to achieve the objective of this Agreement.\n\nThe data is pseudonymised is required for the effective operation and administration of a publicly-funded healthcare system. The data-sets supplied under this agreement have an established history of use within the UK healthcare system.",
+  "798ec8654699": "As illustrated within the examples above, the work provides customers (CCGs, Trusts, Local Authorities for the purposes of public health and social care, CQC, Public Health England, Department of Health), Clinical senates, Strategic clinical networks, NHS England, Monitor, Trust Development Agency (TDA)), and health charities) with understanding and insight that enables them to make the best decisions about the healthcare services they commission or provide. Improved decision making will have a direct effect on the quality of care and outcomes for patients. The CSU's work does not go outside the health and social care arena and outcomes will only be used by health and social care organisations.\n\nIn relation to each of the services stated above, the specific benefits are :- \na. The QIPP opportunity packs provide estimates of the potential scale of opportunity if best performance levels of comparator CCGs/trusts are achieved. These packs will help CCGs/trusts to prioritise their QIPP programmes to maximise potential benefits. The Quality, Innovation, Productivity and Prevention (QIPP) programme is a large-scale programme developed by the Department of Health to drive forward quality improvements in NHS care, at the same time as making up to £20 billion of efficiency savings by 2014/15. \nb. The PROMS project will help both patients and clinician make the best decisions about whether to undergo major surgery. It will help to minimise both the financial cost of carrying out operations that are unlikely to have a beneficial impact for the patient and avoid painful and debilitating surgery for some patients who are unlikely to gain significant benefit. \nc. The modelling of future mental health demand will provide commissioners with detailed projections about the potential future demand for services. Understanding this is key to the effective functioning of commissioner organisations if they are to make sound decisions about changes to future service requirements to meet expected demand or to commission new targeted preventative services to mitigate against projected demand growth. \nd. The impact of demographics project will provide CCGs with valuable insight into how healthcare need changes not only as we get older but also as we approach the end of life. Given that healthcare utilization increases significantly at this time a clearer understanding of the patterns of utilization at this stage of life will enable commissioners to provide the most appropriate and cost effective services for these patients. \n\nThe CSU are not the end user of the outputs they produce however they regularly receive positive feedback from their customer base and currently receive repeat custom from around 75% of customers.\n\nRegarding the CSU's customer base for the above projects:\n\nAs mentioned above, with the introduction of STPs, the CSU's customer base has rapidly become a collective local ‘health and care economy’, comprising of a number of different organisation types within the NHS. For this reason, all the parties involved in STPs are referred to as customers . This is because they are now all party but also because, depending on how the STP operates, in some cases different programmes of work within the STP are split between constituents and so the CSU might actually be directly commissioned by any of them on behalf of the collective.  \n\nLocal authorities are often participants and therefore customers of facilitated modelling exercises that the CSU run to assist a health economies to estimate the demand and supply of health and social care services.  Walsall MBC employees for example are currently participating in an exercise of this type in the Black Country.  See purpose C.\n\nPublic Health England have recently added the CSU to a framework agreement to supply data analytics and impact assessments.  Work via the framework agreement will be issued over the next few months.  The CSU anticipate that specifications for these projects will be published by PHE in the public domain.\n\nNHS England have recently commissioned the CSU to model the potential shifts in activity and the implications for accessibility that might arise form a potential reconfiguration of PPCI, vascular surgery and hyper acute stroke services across the West Midlands. This is in support of STPs across the region and therefore those who are party to STPs.\n\nAlong with NHS England, NHS Improvement (previously Monitor and the Trust Development Agency) have responsibility for assessing and signing off Sustainability and Transformation Plans( STPs). The CSU have supported the Black Country, Staffordshire and Hereford and Worcestershire STP footprints to develop their STPs.  NHS England and NHS Improvement are the ultimate customers for this work.\n\nIn 2014/15, Cancer Research UK (CRUK) commissioned the CSU to model the future demand for endoscopy services in the UK.  The CSU are in discussions with CRUK to test the feasibility of estimating the impact of cancer awareness campaigns on the identification of non-cancer diseases (e.g. do lung cancer awareness campaigns increase the diagnosis of COPD) and the subsequent  impact on the demand for health services. That national work is now also being used to support individual STPs in addressing the future challenges they face in terms of endoscopy capacity.",
+  "85b0569edaef": "All reports/outputs conform to relevant legislation and guidance with respect to confidentiality and other information governance considerations.\n\nPrevious outputs:\nA. QIPP opportunity packs—these reports provide in-depth information to support commissioning organisations in developing their strategic plans. The focus of these reports is comparative information on utilisation rates for subsets of acute hospital activity (inpatient, outpatient, and A&E) that are amenable to interventions targeted at reducing levels of acute hospital activity. The reports are bespoke to individual commissioning organisations.\n\nB. PROMS decision support tool—development work to test the concept of a tool that allows clinicians to use patient characteristics to obtain an estimate of likely benefit from receiving a joint replacement procedure.\n\nC. Mental Health activity modelling—in 2017, the CSU undertook a substantial project looking at the physical health of people who use mental health services. The CSU produced a series of analyses that highlighted significantly poorer health outcomes for mental health patients. The CSU produced locally-focussed reports for a number of commissioning organisations, before NHS England commissioned the CSU to produce a report titled 'Making the Case for Integrating Mental and Physical Health Care' for all 44 STPs.\n\nD. Impact of demographic changes on healthcare utilisations—for a number of years the CSU has produced a series of reports that examine the likely impact of demographic changes on future healthcare utilisation. The focus of these reports is the effect of changes in population size, age structure and health status on levels of healthcare activity across a range of delivery settings.\nIn 2017, the CSU produced a report for NHS England describing the context and status of end of life care services across the West Midlands Region. Sustainability and Transformation Partnerships must include proposals to improve choice in end of life care in their strategic plans. A second report focussed on palliative and end of life care for children and young people was later commissioned by NHS England to help understand characteristics and levels of resource required by children with life-limiting and/or life-threatening conditions.\n\nPlanned outputs:\nA. QIPP opportunity packs—as in previous years, the CSU has been tasked with producing reports that provide in-depth information to support commissioning organisations in developing their strategic plans. In 2018, the CSU were asked to further develop the reports to include a version targeted at Sustainability and Transformation Partnerships (STPs).\n\nB. PROMS decision support tool—development work to test the concept of a tool that allows clinicians to use patient characteristics to obtain an estimate of likely benefit from receiving a joint replacement procedure. The CSU has also been asked to consider the relationship between surgeon specialisation and patient outcomes. Most studies looking at the relationship between surgical activity and outcomes have focussed on procedure volume i.e. the volume-outcome relationship. But recently, the existence of a specialisation-outcome relationship that is independent of the volume-outcome relationship has been advanced.\n\nC. Mental Health activity modelling—the CSU expect to produce a number of follow-up analyses based on previous work looking at the physical health of people who use mental health services. The exact focus of this work is yet to be confirmed but may include in-depth reviews of specific patient groups e.g. CAMHS, substance misuse; pathway modelling; or exploring relationships with other datasets e.g. primary care, IAPT.\n\nD. Impact of demography—as in previous years, the CSU has been tasked with producing reports that provide in-depth analysis of the likely impact of demographic changes on future hospital utilisation. In 2018, the CSU were asked to further develop the reports to include a version targeted at Sustainability and Transformation Partnerships (STPs).\n\nThe CSU has also been tasked with further developing methods for understanding the impact of demographic changes on future healthcare utilisation. The CSU intends to do this by drawing on the relationship between healthcare use and proximity to death. The proposed methods will require combining mortality data and hospital activity data.\n\nAll outputs will only contain results in highly aggregated format and as statistical summaries and measures of association. Small numbers will be suppressed in line with the HES Analysis Guide. Record level information will not be released to any third party.",
+  "86fa777aa534": "The data will be stored on a secure server and accessed through a SQL server database by a small group of named analytical staff working within the Strategy Unit of the CSU. Those staff are based at the premises detailed in this application (Kingston House). The data in its raw form will not be loaded into any tool or provided as part of any product or output. All outputs will contain only data which is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nSUS PBR \nAs detailed in the “Objectives section” (Objective A) accessing the national SUS PBR data will enable the CSU to offer the QIPP packs to all CCGs/trusts in England as well as allowing the CSU to improve the packs through the use of better comparative groups (i.e. nearest neighbours). In producing these packs the data required is extracted using SQL server and analysed using MS Excel to produce the charts and tables included within the packs. \n\nPROMS \nAs detailed in the “Objectives” section (Objective B) the PROMS data will be used to develop a decision support tool, PROMS data will be extracted from SQL server and analysed using appropriate statistical analysis software (STATA or R) in order to establish the relationship between a range of patient characteristics (e.g. age, gender, co-morbidities) and the procedure outcomes based on PROM scores. \nThe tool that will be developed will not contain any patient data. The tool that will be provided to the customer(s) will only contain a mathematical algorithm based on the established statistical relationships between patient characteristics and outcomes. \n\nMental Health Minimum Dataset (MHMDS) \nThe MHMDS will be used to model expected future activity levels and capacity requirements within CCGs after taking into account the impact of projected demographic changes and also the potential impact of mental health prevention strategies, admission avoidance strategies and length/intensity of treatment reduction strategies. Patient level data is required to enable the CSU to adjust and remove activity in line with expected changes. Using patient level data also allows the CSU minimise the impact of overestimating impacts as a result of double counting which is not possible with aggregate data. \nAs outlined in the “objective” section the data will be used in two ways firstly it will be used to provide supporting benchmarking and historical trend analyses to support modelling parameter setting. For this aspect of the project data extracts will be produced using SQL server and downloaded into MS Excel to produce the charts and tables required.\n\nSecondly it will be used to create a model to estimate future activity levels after accounting for changes in demographics and the impact of changes to service provision. The model will be constructed using SQL server to process the data applying any modelling factors and parameters. Aggregate output files from SQL server will be downloaded and analysed in MS Excel in order to produce the required charts and tables for inclusion in reports. \nThe dataset will also be used to develop prospective intervention specific models to estimate changes in mental health team activity levels and the scale of potential savings as a result of the introduction of specific strategies to reduce the need for mental health services. These strategies may include, for example, schemes to increase early diagnosis of mental health conditions. This will help the CCG to better understand the costs and benefits of proposed changes allowing them to make better decisions about the effective use of commissioning resources. As with the higher level modelling in order to develop specific intervention impact models requires the production of benchmarking and trend analyses to help the customer to make judgments on the likely scale of impact of specific interventions. These judgments are incorporated into the model so it is important that they are based as far as possible on the best available data available. These prospective models will be constructed within SQL server and aggregate outputs downloaded into MS Excel to produce required outputs. The reports and any accompanying data tables will contain only data which is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nONS mortality data \nAs detailed in the “Objectives” section (Objective D) the ONS mortality data combined with the national HES data will be used to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. It will also allow the CSU to develop a new approach to estimating the impact of an ageing population on future healthcare demand. As with the other datasets the ONS data will be stored within a SQL server database and the data required for this analysis will be extracted and analysed within MS Excel or other appropriate statistical software packages such as STATA or R in order to establish the mathematical relationship between proximity to death and healthcare utilisation which can be used in future (and potentially some of the current modelling work outlined in this document). During these data transfers into appropriate analysis software packages the data will not leave the secure environment.\n\nAny other projects that may make use of this work (for example the NHS England Fit For the Future programme) would only utilise the methodology derived from this project and would not use the actual ONS data. The reports and any accompanying data tables will contain only data which is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nAcross all of the above processing, processing will be only carried out by CSU staff with the appropriate governance and access. \n\nThe data will not be used to link at record level to other datasets (other than where already provided in linked or bridging form by NHS Digital). The data may however be linked to organisational level data such as already exists within the public domain. \n\nFor clarity, the DSCRO may not process the data for the CSU other than initially downloading the data and storing it on the servers accessible by the CSU, and hence is not listed as a data processor, furthermore, NHS England have confirmed they are happy for this DSA to reflect the request for access to data to sit under the contract which results in NHSE having responsibility for the receipt, use, storage and any dissemination of the data by the CSU.",
+  "a45e5c6f5d40": "As described by the examples listed above, the CSU’s work provides customers (CCGs, Trusts, Local Authorities for the purposes of public health and social care, CQC, Sustainability and Transformation Partnerships, Public Health England, Department of Health, Clinical senates, Strategic clinical networks, NHS England, NHS Improvement, and health charities) with understanding and insight that enables them to make the best decisions about the healthcare services they commission or provide. Improved decision making will have a direct effect on the quality of care and outcomes for patients. The CSU's work is limited to the health and social care arena and outputs will be used only by health and social care organisations.\n\nWith respect to the outputs listed above, the CSU wishes to highlight the following benefits:\n\nA. QIPP opportunity packs – these reports continue to help focus commissioner plans and direct resources to areas most likely to lead to improvements in quality, outcomes, and cost savings.\n\nB. PROMS decision support tool – the CSU’s work on a decision support tool is aimed at helping patients and clinicians make improved joint decisions about whether to undergo joint replacement surgery. This would help to minimise both the financial cost of such procedures and avoid unnecessary pain and risk for some patients who are unlikely to experience benefits.\n\nC. Mental Health activity modelling – in 2017, NHS England commissioned the CSU to produce a report titled \"Making the Case for Integrating Mental and Physical Health Care\" for all 44 STPs. The objectives of the report were to highlight the level of health inequalities experienced by users of specialist mental health services, to provide insight on the use of acute hospital services by mental health service users, identify groups that could benefit from targeted interventions, and provide a summary of effective interventions for improving the physical health of mental health service users. An integrated mental and physical health approach is one of the three priority actions described in the Five Year Forward View for Mental Health. In 2017-18, the CSU are committed to further work focussed on some of the issues uncovered by the report.  \n\nD. Impact of demography – understanding how demographic change will impact on population healthcare use is a central question for healthcare planners. It sets the scale of the financial challenge in health economy plans and underpins all large scale healthcare reconfigurations and long-term healthcare contracts. Overstating or understating the impact of demographic pressures may lead a health economy to set unduly radical or conservative plans for cost savings, by helping health economies to produce improved estimates of the likely impact this risk is mitigated.\n\nPalliative and end of life care – improving palliative and end of life care is a Department of Health commitment\nhttps://www.gov.uk/government/publications/choice-in-end-of-life-care-government-response The CSU’s reports in this area highlight variation and provide greater transparency around current practice.\n\nThe CSU are not the end user of the outputs they produce, however they regularly receive positive feedback from their customers and currently receive repeat business from around 75% of customers.\n\nNote on CSU's customer base:\nWith the introduction of STPs, the CSU's customer base has rapidly become a collective local 'health and care economy', comprising a number of different organisation types within the NHS. For this reason, all parties involved in STPs are referred to as customers. Depending on how an individual STP chooses to operates, different members may be directed to take responsibly for particular programmes of work such that the CSU could be directly commissioned by any member organisation on behalf of the collective STP.\n\nIn 2016, Public Health England appointed the CSU to a 4-year framework agreement to supply data science and health impact assessment services.\n\nIn 2017, NHS England commissioned the CSU to produce a report titled \"Making the Case for Integrating Mental and Physical Health Care\" for all 44 Sustainability and Transformation Partnerships. The end users of these reports are all the organisations that make up local STPs.",
+  "b65c0cf23492": "The examples provided demonstrate that MLCSU’s work provides its customers (CCGs, Trusts, Local Authorities for the purposes of public health and social care, Sustainability and Transformation Partnerships, Public Health England, Department of Health, Clinical senates, Strategic Clinical Networks, NHS England, NHS Improvement, and health charities) with understanding and insight that helps them to make better decisions about the healthcare services they commission or provide. Improved decision making will have a direct effect on the quality of care and outcomes for patients. MLCSU's customer base is limited to organisations operating in the field of health and social care provision.",
+  "cf29962b792a": "MLCSU's work is dedicated to helping commissioners, providers, charities, and government to solve complex problems by providing evidence-informed analysis and advice. This is carried out as better evidence leads to improved decision making and implementation.\n\nA. QIPP opportunity packs—these reports have facilitated commissioners to target interventions for reducing acute hospital activity.\n\nB. PROMS—this work has helped commissioners to determine whether rates of orthopaedic surgery are the result of differences in clinical thresholds for surgery.\n\nC. Mental Health activity modelling—the modelling in this area has provided powerful evidence of the need to integrate mental and physical health care, this is borne out by NHS England commissioning the CSU to produce reports for all 44 STPs.\n\nD: Impact of demography—this work has been used by commissioners in strategic plans that set the foundations for planning and contracting future levels of healthcare activity and expenditure.\n\nMLCSU suggests that that the value of its work is perhaps best judged based on feedback from its customers.\n\n\"The Strategy Unit are inspiring in their commitment, dedication to evidence and use of innovative analysis as a way to improve health and care.\"\nProfessor Sir Bruce Keogh—National Medical Director, NHS England\n\n\"I just wanted to drop you a note to say how impressed I have been with the work you and the team have recently undertaken on the 'Making the Case for Integrating Mental and Physical Health Care' report. The product you provided was extremely well researched and presented. The delivery to the MH Alliance board generated significant discussion across the system. On a personal level, the presentation and report gave me a more informed narrative and evidence to help me further drive the West Midlands Mental Health Commission priorities whilst ensuring we adopt a whole population level health promotion approach. I would urge other areas to commission this report as a baseline assessment to develop a better understanding of the potential integration opportunities across STP and local footprints\".\n\nSuperintendent Sean Russell—Mental Health Lead, West Midlands Combined Authority\n\n\"The Black Country STP has been an early adopter of this important study by the Strategy Unit. We saw its potential to inspire a transformation of our response to the physical health needs of mental health service users so we commissioned an earlier version to inform the development of our plan. Some of the differentials in both health outcomes and health service utilisation are chastening but we have been able to use these findings (and the summary of the evidence base provided) to begin building a broad coalition of local partners to identify and implement practical changes. I commend it enthusiastically to colleagues as a catalyst for much needed change\".\n\nAndy Williams—Accountable Officer, Sandwell and West Birmingham CCG.",
+  "d7c220d89a58": "To support contractual and strategic benchmarking across Midlands and Lancashire, for programmes such as planning commissioning and productivity, service quality and performance improvement, and activity and outcomes monitoring for local populations. \nThe CSU needs: \n•\tThe provision of analytically based intelligence for a range of Clinical Commissioning Groups (CCGs) for benchmarking of similar health economies or populations in England, not just in the CSU’s area. \n•\tTo provide in depth analysis of all aspects of a specific service areas and allow comparisons with other CCG areas or health economies known to have better outcomes or new/different pathways. \n•\tTo support large scale transformation projects that may impact several commissioners (CCGs) \n•\tDescriptive analyses of healthcare needs, demands or supply including comparisons between providers, commissioners and geographical areas, analysis over time and of the characteristics of patients and the services they receive. \n•\tRetrospective analyses exploring the reasons for observed changes in healthcare provision and health outcomes \n•\tProspective modelling of the impact of planned or proposed changes in healthcare services on healthcare activity, travel times and resource use \n•\tQuantitative evaluations and monitoring estimating the impact of service redesign of improvement initiatives on healthcare and outcomes \n•\tTo develop tools and information packs to support patients, clinicians, commissioners and providers to make informed decisions about healthcare service provision, organisation and strategy \n\nThe specific services and products that will utilise the data are the following :- \nA. QIPP (Quality Innovation Productivity and Prevention) opportunity packs which provide a summary of performance, cost and activity levels for individual CCGs/trusts compared to other local CCGs/trusts. The packs include aggregate analysis in relation to QIPP priorities covering Inpatient, Outpatient and A&E but are subject to change in line with the QIPP programme. These packs were originally produced for those CCGs within the CSU's core geography (Birmingham and the Black County). However the CSU have now been requested to provide packs for a wider range of CCGs and trusts including all Staffordshire, Lancashire, Herefordshire, Worcestershire, Shropshire and Telford and Wrekin. The CSU have also had requests from as far afield as Cornwall. The value of these packs (as demonstrated by the willingness to pay) in supporting CCGs/trusts to assist with their statutory duty to commission/provide high quality and best value services for their populations is clearly proven and as such the CSU will be offering the packs to all CCGs trusts in England. In addition to the wider provision of packs the CSU's existing customers have also requested that the packs be enhanced to offer comparisons against national nearest neighbour comparators or bespoke comparators (for example Birmingham combined CCGs compared with other large cities). Customers for the packs also can request ‘deep dive’ analyses to explore identified opportunities in greater detail \n\nB. Development of decision support tools for clinicians to help them make better decisions when deciding whether a patient is suitable for Hip or knee replacement procedures. The development of the tools requires sophisticated statistical analysis to establish the relationship between a range of patient characteristics and procedure outcomes (as measured by PROMs data). The statistical relationships will be used within the tools whereby it will allow a clinician to input patient characteristics and provide an estimate of the likely benefit of the procedure for the patient. This additional information can help both the patient and their clinician make the best informed decision about whether to proceed with the operation. In order to ensure that that relationship is as robust as possible and to maximise the predictive power of the tool (which is vital given that the tool will be used to support important decisions about patient care) a full national dataset is required. In order to further validate the relationship and establish its robustness over time (which will be important for clinician and patient confidence in the tool) the CSU will be carrying out the analysis on all data years. The development of these tools will establish a prototype for the development of other similar products for other procedures where data is available through the PROMS dataset such as Varicose vein surgery etc. However for the purposes of this request the CSU are requesting only PROMS data relating to hip and knee procedures. A number of Local CCGs with programmes aimed at improving orthopaedic services (across all of Staffordshire for example) have confirmed that they plan to put this tool into practice on an initial pilot basis as soon as it is available. The CSU have also been approached by a number of other CCGs who have indicated that they would also be interested in applying the tool once its efficacy has been established. \n\nC. Projects on behalf of CCGs and Strategic Clinical Networks (part of NHS England) to model expected future Mental Health activity levels and capacity requirements within a CCG after taking into account the impact of projected demographic changes and also the potential impact of mental health prevention strategies, admission avoidance strategies and length/intensity of treatment reduction strategies. An integral part of this work is to elicit modelling parameters from clinicians and commissioning stakeholders relating to expected impacts on activity levels as a result of planned changes or interventions. In order to do this the CSU produce a range of supporting analyses to help them to understand current activity levels, trends in activity and also how they compare with others. Provision of this supporting data is key to helping stakeholders to make considered and robust estimates based on a clear understanding of past progress and performance against other relevant comparators. In order to provide this comparative benchmarking the CSU require full national datasets covering multiple years. As the CSU are requesting the full set of historical data, they felt it important to clarify their rationale for doing so. In terms of the number of years of data requested, the CSU's professional experience has shown that providing longer term trends (in excess of 5 years) is often important, given the level of variation that exists, in order to evidence general trends. Being able to show local trends in the context of national trends is also essential for sophisticated interpretation. Shorter time series can often be misleading in this respect and as such could result in incorrect assumptions about future levels of demand. \n\nD. Projects on behalf of CCGs to understand how the nature and scale of healthcare utilisation changes as a result of changes in demographics. One specific aim of this work (for which ONS mortality data is required) is to investigate how patient need, demand and service utilisation changes towards the end of a person’s life. In addition it will also allow the CSU to develop a new approach to estimating the likely impact of an ageing population on future healthcare demand. The new approach will take into account not only the future size and age structure of a population but also changes in the proportion of the population who are estimated to be in their final months of life. It is also worth noting that NHS England have expressed interest in the CSU's development of this method of forecasting future demand as part of their national Fit for the Future programme (FFF). \n\nThe project requires national level datasets in order that the analysis is as statistically robust as possible. It will also allow the CSU to establish the extent to which utilisation prior to death varies across the country. Benchmarking analysis (including historical trend analysis) will be carried out in order to provide estimates of the potential scale of opportunity for reducing acute healthcare activity (or developing alternatives to acute provision) for those patients at the end of life. Benchmarking and trend analysis will also enable the identification of those Trusts or CCGs who may be more advanced in end of life care provision. As part of this project the CSU will also be considering how patterns of utilisation at the end of life have changed over time (advances in medical technology and new treatments will certainly have had an impact on levels of service utilisation particularly for older people). Long term trends in excess of five years will be important in order to identify and have confidence in historical trends and applying these trends to future estimates. \n\nE. Other specific projects are:\n\n1  Describing changes in acute utilisation over the long term provides insights that are lost when focusing on the most recent past. Striking reductions, for example, in casemix-adjusted length of stay following an emergency acute hospital admission or the frequency of admissions to psychiatric inpatient units only really become apparent when viewed over a long time frame. These longer-term perspectives demonstrate the enormous positive changes that have been achieved in the past and can motivate and guide health economies seeking improvements in areas that seem equally intractable.  To delete older data would eliminate the potential for these insights. The CSU have deployed this kind of longitudinal analysis (going back to pre-2000) recently in support of several Sustainability and Transformation Plans (STPs - compromising of CCGs, trusts, Foundation Trusts, Local Authorities and other key local partners) as they seek to address the requirements placed upon them nationally.\n\n2  When explaining historical acute hospital utilisation rates, or forecasting future rates, the longer the time series, the more robust (on average) the explanation or forecast.  Whilst for time series models, it might be argued the diminishing returns result from adding very old data points, this is not necessarily the case for causal models.\n\n3  The CSU are frequently asked to model the potential implications of new models of care.  These ‘new’ models are more commonly reinventions or adaptations of earlier models.  The ‘NHS Five Year Forward View’ describes a number of new care models which move away from a purchaser-provider split in favour of lead-provider arrangements.  To many these proposed models mirror or approximate arrangements that existed in the NHS prior to the development of primary care trusts.  If analysed and interpreted appropriately, data relating to these earlier periods can provide useful insights into the unintended consequences of ‘new’ care models and the CSU are being asked to do this to support STPs and national Vanguards in meeting the national requirements placed upon them.\n\nData will only be used for the purposes outlined above, and any requirement to change the purpose will be subject to a separate request to NHS Digital.",
+  "ea8a83843b1d": "MLCSU's work is dedicated to helping commissioners, providers, charities, and government to solve complex problems by providing evidence-informed analysis and advice. This is carried out as better evidence leads to improved decision making and implementation.\n\nA. QIPP opportunity packs—these reports provide in-depth information to support commissioning organisations in developing their strategic plans. The focus of these reports is comparative information on utilisation rates for subsets of acute hospital activity (inpatient, outpatient, and A&E) that are amenable to interventions targeted at reducing levels of acute hospital activity. The reports are bespoke to individual commissioning organisations.\n\nB. PROMS decision support tool—development work to test the concept of a tool that allows clinicians to use patient characteristics to obtain an estimate of likely benefit from receiving a joint replacement procedure.\n\nC. Mental Health activity modelling—in 2017, the CSU undertook a substantial project looking at the physical health of people who use mental health services. The CSU produced a series of analyses that highlighted significantly poorer health outcomes for mental health patients. The CSU produced locally-focussed reports for a number of commissioning organisations, before NHS England commissioned the CSU to produce a report titled 'Making the Case for Integrating Mental and Physical Health Care' for all 44 STPs.\n\nD. Impact of demographic changes on healthcare utilisations—for a number of years the CSU has produced a series of reports that examine the likely impact of demographic changes on future healthcare utilisation. The focus of these reports is the effect of changes in population size, age structure and health status on levels of healthcare activity across a range of delivery settings.\n\nIn 2017, the CSU produced a report for NHS England describing the context and status of end of life care services across the West Midlands Region. Sustainability and Transformation Partnerships must include proposals to improve choice in end of life care in their strategic plans. A second report focused on palliative and end of life care for children and young people was later commissioned by NHS England to help understand characteristics and levels of resource required by children with life-limiting and/or life-threatening conditions.",
+  "f6557ef10557": "Due to an error by one of the GP computer system suppliers (TPP), NHS Digital did not receive updated details on patients who opted out after 1 April 2016 in GP practices running SystmOne (run by TPP). This means that information may have been incorrectly included when NHS Digital provided information to approved organisations, up until 27th May 2018.  A re-supply of the mortality data between the following time period 01/04/2016 – 27/05/2018 under this agreement is now required. All other data-sets previously provided did not contain confidential data, therefore opt-outs were not applied.\n\nFurther periods of data are also requested under this application, to support contractual and strategic benchmarking across Midlands and Lancashire, for programmes such as planning, commissioning, assessing service quality, performance improvement, and activity and outcomes monitoring.\n\nIn particular, this includes:\n\n•\tprovision of analytical intelligence to Clinical Commissioning Groups (CCGs) e.g. for benchmarking of similar health economies or populations in England\n•\tin-depth analyses of specific services or pathways to better understand the reasons behind differences in outcomes between health economies\n•\tsupporting large scale transformation projects involving multiple commissioning organisations\n•\tdescriptive analyses of healthcare needs/demands and supply, including comparisons across providers, commissioners, geographical areas, and trends over time\n•\tretrospective analyses exploring the reasons for observed changes in healthcare provision or health outcomes\n•\tprospective modelling of the impact of planned or proposed changes in healthcare services on healthcare activity, service accessibility, and resource use\n•\tquantitative evaluations and monitoring to estimate the impact of service changes or improvement initiatives\n•\tdeveloping tools and information packs to support commissioners, providers, clinicians, and patients to make informed decisions about healthcare service provision, organisation and strategy\n\nThe specific services and products that will utilise the data are:\n\nA. QIPP (Quality Innovation Productivity and Prevention) opportunity packs. These reports provide a summary of performance, cost, and activity levels for individual CCGs/trusts compared with other similar CCGs/trusts. Information in the reports is used to inform strategic planning. Inpatient, outpatient, and A&E hospital services are all included in the reports. The reports were originally produced for CCGs within the CSU's core geography, however, MLCSU has since been asked to produce reports for CCGs across England. The value of these packs in supporting healthcare organisations to assist with their statutory duty to commission/provide high quality and best value services for their populations is clearly proven.\n\nB. Development of decision support tools for patients and clinicians to help them make better decisions when deciding whether a patient should undergo a joint replacement procedure. The development of the tools requires advanced statistical analysis to establish the relationship between a range of patient characteristics and procedure outcomes (as measured by PROMs data). Once established, the statistical relationships will be used within the tools to allow a clinician to use individual patient characteristics to provide an estimate of the likely benefit of the procedure for the patient. This extra information can help the patient and clinician make the best informed decision about whether to proceed with the operation. A national panel dataset (i.e. cross-sectional time series data) will ensure that modelled relationship is as robust as possible and maximise the predictive power of the tool (vital given that the tool will be used to support decisions about patient care). A number of local CCGs with programmes aimed at improving orthopaedic services have expressed an interest in piloting the tool to help establish its efficacy.\n\nC. Projects on behalf of CCGs and Strategic Clinical Networks (part of NHS England) to model expected future mental health activity levels and capacity requirements. Integral to this work are discussions with clinicians and commissioning stakeholders about the expected impacts of planned changes or interventions (e.g. schemes to increase early diagnosis of mental health conditions). The CSU work with these stakeholder groups to ‘quantify’ their judgements about expected impacts and use these as inputs to statistical models. To inform this process the CSU produce a range of supporting analyses to help participants understand current activity, past trends in activity, and differences between commissioning geographies. The provision of this supporting data is essential for helping stakeholders to make considered and informed estimates, based on a clear understanding of past progress and performance. Without access to record level data, the CSU would not be able to accurately adjust activity in-line with participants' judgements. In particular, the statistical models of future mental health activity that are developed as a result of these discussions would suffer from an increased risk of overestimating the effects of planned changes (due to issues of double counting), which is unavoidable without access to record level data.\n\nTo provide the supporting materials MLCSU requires national datasets spanning multiple years. The CSU's professional experience is that providing longer-term trends is extremely important when trying to understand the relative contributions of multiple factors to changes in different types of mental health activity. Attempting to rely on shorter time series would limit the value derived from these facilitated modelling exercises and materially increase the risk of making incorrect assumptions about likely future developments.\n\nD. Projects on behalf of CCGs to understand how the nature and scale of healthcare utilisation changes as a result of changes in demography. A specific aim of this work is to investigate how patient need, and service utilisation changes towards the end of a person’s life (ONS mortality data is required for this work). MLCSU is developing a new approach to estimating the likely impact of an ageing population on future healthcare demand. The new approach will take into account not only the future size and age structure of a population but also changes in the numbers of people projected to be in their final months of life. Without access to linked national data on hospital activity and mortality this work would not be possible.\n\nWhen constructing statistical models to estimate possible future states the availability of historical data, and in particular, long time series of data is hugely important. Without a good understanding of the statisical relationships between variables over time it is extremely difficult to construct models capable of delivering useful insights about what path the future might take. As part of this project MLCSU will seek to understand how patterns of healthcare utilisation at the end of life have changed over time, for example, in response to advances in medical technology and new treatments.\n\nE. Projects to understand longer-term trends. Describing changes in acute utilisation over the long term provides insights that are lost when focusing on the most recent past. Striking reductions, for example, in casemix-adjusted length of stay following an emergency hospital admission or the frequency of admissions to psychiatric inpatient units only really become apparent when viewed over a long time frame. These longer-term perspectives demonstrate the enormous positive changes that have been achieved in the past and can motivate and guide health economies seeking improvements in areas that seem equally intractable. To omit or remove this historical data would eliminate the potential for these insights. The CSU has deployed this kind of longitudinal analysis (going back to pre-2000) recently in support of several Sustainability and Transformation Partnerships as they seek to respond to national requirements.\n\nWhen attempting to understand or explain historical hospital utilisation rates, or forecasting future rates, the longer the time series, the more robust (on average) the explanation or forecast. While for time series models, it might be argued that there are diminishing returns from including ever older data points, this is not necessarily the case for causal models.\nThe CSU are frequently asked to model the potential implications of new models of care. These ‘new’ models are more commonly reinventions or adaptations of earlier models. The ‘NHS Five Year Forward View’ describes a number of new care models which move away from a purchaser-provider split in favour of lead-provider arrangements. To many these proposed models mirror or approximate arrangements that existed in the NHS prior to the development of primary care trusts. If analysed and interpreted appropriately, data relating to these earlier periods can provide useful insights into the unintended consequences of ‘new’ care models, and the CSU are being asked to do this to support STPs and national Vanguards in meeting the national requirements placed upon them."
+ }
+}

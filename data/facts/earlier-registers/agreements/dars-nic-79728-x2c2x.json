@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-79728-X2C2X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-79728-X2C2X",
+   "version": "",
+   "organisation": "LANCASHIRE CARE NHS FOUNDATION TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2017-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-12-01"
+     ],
+     "objective": "d6a0e3363fbe",
+     "activities": "0ad8c3383e3e",
+     "expected_output": "daec05ed2931",
+     "expected_benefits": "9ae8d82e0f15"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS data (Accident & Emergency, Admitted Patient Care & Outpatient)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0ad8c3383e3e": "Processing activities:\n1) North West Data Services for Commissioners Regional Office (North West DSCRO – part of NHS Digital) receives a flow of identifiable SUS data. North West DSCRO also receives identifiable local provider data directly from Providers.\n2) Data quality management and pseudonymisation of data is completed by North West DSCRO and the pseudonymised data is then passed securely to Arden and GEM CSU for the addition of derived fields and analysis. \n3) Arden and GEM CSU then pass the processed, pseudonymised data to the secure AIMES CHC Data Warehouse environment for the addition of derived fields and the linkage of SUS and Local Provider data sets. \n4) AIMES CHC Data Warehouse will then make the processed, pseudonymised and linked data available to Lancashire Care NHS Foundation Trust who hosts the CHC programme. All analysts are either:\n5) Substantive employees of the trust or\n6) Individuals employed by the University of Liverpool working under Honorary Contracts\nAccess is via secure VPN and analysis of the data is to identify patient cohort journeys for pathways or service design, re-design and de-commissioning.\n7) Patient level data will not be shared outside of the Data Controller and will only be shared within the Data Controller on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. Only aggregated reports with small number suppression can be shared externally. \nAimes may only process the data as defined within this agreement, and the data controller will ensure that a robust agreement is in place with AIMES to ensure that any requirements within this agreement are in place with AIMES.\nOnce data is sent from Arden and GEM CSU, the data will be deleted and not held on the CSU servers. Arden and GEM CSU will not share data with any organisations other that those listed within the Data Sharing Agreement.",
+  "9ae8d82e0f15": "Expected measurable benefits to health and/or social care including target date:\nOur CHC Demonstrator project will pilot new fluid and flexible Intelligence models, rapidly sourcing, managing and mining bigger quantities of pseudonymised data.\nBy the project end:\nA demonstrator will have been produced which provides:\n- algorithms, tools and models which have facilitated improvements to clinical pathways for our two chosen areas and which will drive future pathway improvements\n- mechanisms which will improve the quality, depth and consequent value of future data reporting.\nIn the future the resulting algorithms, tools and models will be made available to organisations such as CCGs and CSUs.",
+  "d6a0e3363fbe": "Objective for processing:\nThis is a new application for the following purposes:\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the area based on the full analysis of the linked pseudonymised SUS and Local Provider flows. This data will be shared with the NWC Connected Health Cities Analysis Team to develop new pathway indicators for clinical pathways relevant to North West Coast  CCG – geographical area.\nThe emphasis of this early phase of the CHC project is in developing information models and processes that the health service can use to improve care pathway delivery directly. \nThe CHC Programme aims to: \n- Support the development and delivery of innovative information models and algorithms to front line staff in timely ways that enable them to better plan, review and adjust the care they offer. \n- Support the development and delivery of innovative information models and algorithms to front line staff in timely ways that enable them to and develop and monitor new and/or more effective pathways  \n- Develop models for connecting and engaging people with expertise and experience from across the health, social, local government, voluntary, commercial and public sectors to turn data into information into knowledge\nThis data will enable the NWC CHC Programme to test and define the CHC programme processes. The programme is ultimately aiming for regional coverage, so further applications will follow from other partner CCGs to cover the programme’s requirements in due course.\n\nNo record level data will be linked other than as specifically detailed within this application/agreement. Record level data or aggregated data containing small numbers will not be shared with any third party, including the CHC partner organisations, other than the data processor and controller named in this agreement. The data to be released from NHS Digital will not be national data, but only that data relating to the specific locality of interest of the applicant.",
+  "daec05ed2931": "Specific outputs expected, including target date:\nBy June 2017 the CHC project will:\n- Define core datasets, outcome measures and metrics for the selected pathways\n- Identify opportunities to use novel data linkage or analysis to improve intelligence about the progress of patients along the chosen pathways and communication between services\n\nBy November 2017:\n- Documented results from investigating the broader potential ‘open’ sources of data that are available (e.g. alcohol sales or ‘events’ information to predict demand for emergency services, or social media to understand patient experience) to further inform either local and regional policy development or new intelligent indicators to guide clinical service development and design.\n- Produce aggregated reporting outputs and algorithms capable of identifying service variation and granular clinical cohorts within the selected clinical pathways.\n\nBy January 2018, outputs will include:\n- innovative, multi-dimensional analysis models built on consistently pseudonymised and linked data, tailored to the precise needs of a wide range of operational managers and clinicians\n- High level data models, and infrastructure design models, for managing nationally defined pseudonymised datasets at scale will be available to support more robust service evaluation and planning within the selected Clinical Pathways\n- Algorithms built on the CHC pseudonymised data collections to identify, categorise and monitor granular patient level cohorts will be available for testing to Clinicians and professionals working within the specific clinical areas\n- Algorithm testing and validity reports will have been delivered to provide assurance around the information governance, statistical and technical approaches utilised by the programme\n- A first level ‘documented issues’ report outlining the challenges and obstacles to the utilisation of pseudonymised and linked data will be available for public review (Data Quality, IG Barriers etc)\n\n1. Define core datasets, outcome measures and metrics for the selected pathways\n2. Identify opportunities to use novel data linkage or analysis to improve intelligence about the progress of patients along the chosen pathways and communication between services\n3. Investigate the broader potential ‘open’ sources of data that are available (e.g. alcohol sales or ‘events’ information to predict demand for emergency services, or social media to understand patient experience) to further inform either local and regional policy development and new intelligent indicators to guide clinical service development and design.\n4. Enforce the highest information security and governance standards\n5. Produce aggregated reporting outputs and algorithms capable of identifying service variation and granular clinical cohorts within the selected clinical pathways."
+ }
+}

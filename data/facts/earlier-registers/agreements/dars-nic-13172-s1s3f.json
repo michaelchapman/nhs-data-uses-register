@@ -1,0 +1,68 @@
+{
+ "base_reference": "DARS-NIC-13172-S1S3F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-13172-S1S3F-v0.12",
+   "version": "0.12",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "e15d36f5deac",
+     "activities": "c05261ad4685",
+     "expected_output": "3c47f94a4e34",
+     "expected_benefits": "cf2a8e2ec284"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3c47f94a4e34": "Results of the analyses will be presented at relevant international scientific meetings, such as the International Clinical Trials Methodology Conference and in peer reviewed journals, e.g. Clinical Trials, CJASN (Clinical Journal of the American Society of Nephrology) and NDT (Nephrology Dialysis Transplantation). These will be targeted to ensure that the results are disseminated widely among the clinical trials community, including the MRC Hub for Trial Methodology Research and UK Kidney Research Consortium Clinical Trial Network.\n\nThe results of these analyses will be posted on the SHARP website (http://www.sharpinfo.org/) in a similar manner to multiple previous SHARP-related publications. \n\nThe target time frame for publication of the results of analyses is 2019-2021.",
+  "c05261ad4685": "The data will be accessed only by substantive employees of Oxford University and only for the purposes described in this document.\n\nNHSDigital already hold the cohort data and will link this in a one off extract with mortality, cancer and HES data\n\nData supplied by NHS Digital will be psuedonymised HES data, identifiable mortality and cancer data all supplied with a study ID. The researchers will compare the NHS Digital data with the existing SHARP trial analysis database which includes:\n•\tUnique study Patient ID\n•\tClinical data on clinical events\n•\tLaboratory results\n•\tStudy treatment\n\nThe data supplied for the purpose described in this document will not be linked to the data being held for the post trial follow up held under Data Sharing Agreement NIC 147782.\n\nUniversity of Oxford will adhere to the Office for National Statistics standard terms and conditions as described in the special conditions in the Data Sharing Agreement.",
+  "cf2a8e2ec284": "Clinical trials are a pivotal part of evidence-based medicine but their rising costs are problematic and hampering research. If this project’s results indicate that routinely collected healthcare data is as robust as clinical adjudication, this would potentially result in very substantial efficiency savings for future trials as;\n\n1, Collection of trial events and trial event adjudication (which requires training and employment of skilled staff) will be greatly streamlined\n2. The need for trial participants to attend study clinics (which can be onerous and expensive if travel costs are not reimbursed) may be reduced\n\nThis in turn will enable such future research to be conducted on a greatly reduced budget, which is vital given the limited funding that national and charity funding bodies can typically offer. \n\nThis may be particularly important for trials of generic drugs in common conditions (e.g. aspirin in cancer prevention) which do not currently attract industry funding. \n\nSuch methodological research is becoming increasingly important to the efficiency, design and data collection strategies of future trials and studies, and hence will be of benefit to public health at home and abroad.\n\nIn summary, expected benefits include;\n\nResearchers/health and social care;\n1. reduced costs\n2. Greater efficiency leading to increased throughput of research and associated enhancement of evidence based medicine, with impact upon national clinical guidelines\n3. Increased awareness of the potential for routinely collected data to augment existing understanding and knowledge of a therapeutic area\n\nPatients;\n1. Reduction in the demands upon trial participants in terms of time and inconvenience in attending study visits\n2. Increased knowledge which will be used to inform healthcare decisions leading to improved quality of patient care",
+  "e15d36f5deac": "The Clinical Trial Service Unit has extensive experience in developing and running large-scale streamlined randomized trials, many of which have significantly changed clinical practice and majorly influenced national and international guidelines. One of these trials was the Study of Heart and Renal Protection (SHARP), which is the largest trial to date worldwide in patients with chronic kidney disease (CKD), and involved >9000 participants. \n\nThe SHARP trial was carried out in 18 countries with 1,987 people in the United Kingdom being randomized. It assessed the effect of lowering LDL cholesterol with a combination of simvastatin 20mg plus ezetimibe 10mg versus a matching placebo on serious vascular disease (e.g. heart attacks, strokes) and renal disease (e.g. starting dialysis) events. Participants were followed regularly in study clinics, with all serious adverse events being recorded.  Those events which were pre-specified as study outcomes were confirmed by central review of hospital notes by study doctors. This process is referred to as clinical adjudication. \n\nSuch outcome measure adjudication is typically seen as the ‘gold standard’ for assessment of study outcomes. However it is very resource intensive and expensive, and took a team of trained clinicians two years to complete for the SHARP trial.  Such increasing cost of research is a contemporary major issue for all researchers conducting trials.  If it can be demonstrated that reports from routine healthcare data-sets are complete and reliable compared with nurse reported events and/or the final adjudicated outcomes, future trials could be designed which follow-up participants solely through routine healthcare data.  \n\nThere are examples where routinely collected healthcare data has been compared to study outcomes previously and they have demonstrated that using routinely collected data to record study outcomes can be reliable which could greatly simplify future trial design, and as such benefit patients and the public. However, there are limited such examples in people with renal disease, where complex disease presentations make some researchers doubt the reliability and therefore utility of routinely collected healthcare data.  Moreover, people with chronic kidney disease – who have substantially increased morbidity and mortality compared with the general population - are often excluded from large randomized trials. Consequently, in renal disease, there is a mismatch between high clinical need and levels of evidence on which to base clinical care. \n\nThere is, therefore, a particular need to develop novel ways of conducting affordable trials of both old and new treatments in this patient group. An example is the NIHR-funded SIMPLIFIED trial http://www.phpc.cam.ac.uk/pcu/research/research-projects-list/other-projects/simplified/) which is assessing the effect of high-dose native vitamin D versus standard of care in dialysis patients. The primary outcome is all-cause mortality, however such a trial could become much more informative if the value of routinely collected hospitalisation data can be confirmed by this proposed study, and so the effect of high dose vitamin D on other non-fatal outcomes such as vascular disease, can be tested. The SHARP trial dataset is in a unique position to validate such methods for both SIMPLIFIED and other future renal trials.\n\nThis project seeks to obtain all relevant registry associated outcomes from healthcare data sources at NHS Digital so as to compare the outcome data collected and adjudicated during SHARP with those collected as part of routine practice.  To ensure the completeness of the comparison, in addition to hospital episode statistics (HES), all relevant death and cancers data are also requested.\n\nMethods:\nThis study aims to compare the validity of registry data with both the nurse-led reporting of adverse events, as well as clinically adjudicated outcomes. The main focus will be on non-fatal outcomes (where there is more doubt of validity) derived from registry data including:\n•\tmajor cardiac events\n•\tstroke and  its subtypes\n•\trevascularisation procedures\n•\tend-stage renal disease events\n•\tadmissions with acute kidney injury and \n•\ta range of infections including opportunistic infections unique to immunosuppressed transplant recipients and more common infections\nThis will involve an evaluation of the specificity and sensitivity of registry data derived outcomes, looking at both the occurrence of events and the time frame in which they occurred. Results of the original trial will be compared against replicated results using registry data derived outcomes."
+ }
+}

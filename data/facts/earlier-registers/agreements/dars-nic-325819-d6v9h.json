@@ -1,0 +1,99 @@
+{
+ "base_reference": "DARS-NIC-325819-D6V9H",
+ "versions": [
+  {
+   "reference": "DARS-NIC-325819-D6V9H",
+   "version": "",
+   "organisation": "University Hospitals Birmingham NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "objective": "8b72193bd689"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "DAAG: 040614-e1 Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "DAAG: 040614-e1 Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES ONS Mortality",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "DAAG: 040614-e1 Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012) Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "8b72193bd689": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC: \nThe HES data provided is pseudonymised.\nObjective for processing:  The objective is to provide quality and benchmarking analysis that will enable NHS organisations to deliver better services for patients.\nSuch analysis is solely provided either: via the online Healthcare Evaluation Data (HED) tool, or via bespoke reports. \nThis work is commissioned and funded on an ongoing basis by University Hospitals Birmingham NHS FT (UHB) and produced by the Health Informatics Department within the Hospital. \nThe sole objective of this work it is to support both University Hospitals Birmingham and other NHS Trusts and commissioners in the ongoing monitoring of clinical quality and organisational effectiveness. This purpose is fulfilled either:\na) directly, i.e. the NHS Trust holds a subscription to use the HED system, or\nb) indirectly i.e. analytics are provided via a non-NHS organisation who holds a subscription to use aggregate small number supressed data within the system. We have reviewed the NHS standard (ISB 1523) relating to anonymisation and can confirm the system is compliant with this. This has also been corroborated by a recent audit from the HSCIC particularly in relation to small numbers suppression.\n\nThe vast majority of subscriber organisations (approximately 95 %) are NHS Organisations, there are a small number of non-NHS organisations. Such organisations work within the healthcare space and have access to the system solely for the purpose of assisting NHS organisations.\n\nThe current types of organisations holding a subscription to use the HED tool include:\nNHS Organisations \n• NHS Hospitals \n• Clinical Commissioning Groups (CCG)\n• Commissioning Support Units (CSU)\n• the Trust Development Authority (TDA)\n• NHS England North\n• Allied Health Sciences Networks (AHSN)\nNon-NHS Organisations  \n• Private sector healthcare consultancy providers (KPMG Healthcare & PwC Healthcare)\n\nPLEASE NOTE: The level of data that can be viewed within the system depends on the access level of the named individual user and which organisation they are working for. A full explanation of this including summary table is in the next section on ‘processing activities’. \n\nAs previously mentioned, non-NHS users are UNABLE to access any information within the system that has been produced using ONS data. Non-NHS users are ONLY able to access aggregate level small number supressed information. \n\nTo deliver the stated objective a wide range of healthcare indicators are calculated (over 100) and as such various HES data sets including APC, OP, A&E as well as linked ONS data are required. The objective in having as wide an array of relevant indicators as possible is to give NHS managers and clinicians as complete a picture of hospital performance as possible.  \nHES-ONS linked data specifically will be used within this work to look at outcomes analysis and form analytical overviews relating to post discharge mortality. Such overviews relate to standardised post discharge mortality monitoring within distinct clinical cohorts and bespoke long term survival monitoring. This work will increase the understanding of complete pathways of care. Any analysis produced using ONS data will not be made available to non-NHS organisations. \nSensitive data items including Local Patient ID and Consultant ID are specifically required for the purpose of conducting root cause analysis. The ability for a hospital to be able to reference clinical notes is vital in order to enable the identification of clinical quality improvements. A protocol including Caldicott authorisation form has been approved previously by DAAG (DAAG reference: 240412-a) for controlling access to such sensitive items. This established process ensures that access to sensitive items is restricted to authorised hospital trust staff and was found to be robust during a recent HSCIC Audit.\n\nThe rationale for allowing non-NHS organisations access to aggregate level small number supressed analytics:\n\nAs some NHS organisations require additional specialist resource to deliver the benefits of using benchmarking information, therefore subscription to the HED tool is required by the non-NHS organisations as:\n1. This enables them to have people equipped to provide immediate support to NHS organisations. \n2. Providing them with aggregate level information via the tool is the most efficient way of disseminating information in support of this work – the alternative described directly below would clearly create large inefficiencies.  \n3. It allows such organisations to be autonomous in undertaking work that requires a level of independence and is beneficial to the NHS e.g. the Keogh review. In this instance PWC were commissioned to complete this review independently of any engagement of NHS Trusts involved. It would therefore have been inappropriate for them to ask the Hospitals for the information required to undertake this review.\n\nThe alternative would be for NHS organisations working with the non-NHS organisations to provide data directly to the non-NHS organisations. This arrangement would have the following detrimental effect on the NHS:\n\n1. We would actively be encouraging NHS-organisations to export data at varying levels from the HED system and send it to non-NHS organisations. By the non-NHS organisations having direct access we are able to monitor which modules are accessed when and by whom. This negating the need for NHS organisations to export isolated aggregate data and email it outside the NHS.\n2. It would introduce a longer lead time for projects which would ultimately cost the NHS more.\n\nProcessing activities:\nData received from HSCIC is only processed by authorised UHB staff on site at UHB. No third parties are involved in the processing of the data.\n\nData received from the HSCIC by UHB is processed in line with a strict protocol and is stored in an access restricted server. This process was recently audited by the HSCIC and found to be robust. \n\nThe data received is used to create a wide range of healthcare indicators which focus in on the quality, safety, productivity and efficiency of healthcare delivery. Such analysis is solely provided either: via the online Healthcare Evaluation Data (HED) tool, or via bespoke reports. Either of which is only provided to UK organisations. \nThe vast majority of subscriber organisations (approximately 95 %) are NHS Organisations, there are a small number of non-NHS organisations. Such organisations work within the healthcare space and have access to the system solely for the purpose of assisting NHS organisations.\n\nThe current types of organisations holding a subscription to use the HED tool include:\nNHS Organisations \n• NHS Hospitals \n• Clinical Commissioning Groups (CCG)\n• Commissioning Support Units (CSU)\n• the Trust Development Authority (TDA)\n• NHS England North\n• Allied Health Sciences Networks (AHSN)\nNon-NHS Organisations \n • Private sector healthcare consultancy providers (KPMG Healthcare & PwC Healthcare)\n\nThe level of data that can be viewed within the system depends on the access level of the named individual user and which organisation they are working for. As previously mentioned any modules within the system that use ONS data are not accessible to non-NHS users.\n\nSummary of types of users and access controls in place: \nNon-NHS User:  Access to aggregate level small number supressed analytics only formed using HES APC, OP or A&E data (but NOT ONS data)\nNHS but non-Hospital User:  Access to aggregate level small number supressed analytics only formed using HES APC, OP, A&E and/or ONS linked data.\nNHS Hospital User: Access to aggregate level small number supressed analytics only formed using HES APC, OP, A&E or ONS linked data unless Caldicott authorisation is in place to allow access to low level details and/or sensitive items for their own organisation only. \n\nNo record level HES or ONS data is provided to any organisation, except where an individual working within an NHS Hospital has the authorisation of their Hospital’s Caldicott Guardian to access patient level information, including sensitive items, for the purposes of conducting clinical review of cases. In such instances a summary (but not all fields present in the raw HES or ONS data) is provided at spell or patient level. For example, the summary will give details of the admission date, method and diagnosis for a patient but not all field relating to the episodes as recorded in the raw HES data.\n\nSpecific outputs expected, including target date:\nThe sole outputs are benchmarked or standardised healthcare indicators such as measures of mortality, survival, discharge and admission trends, readmissions, length of stay, patient safety etc.\nSuch outputs are solely provided either via:\n• the range of Dashboards and Modules made available within the HED system, or \n• aggregate small number censored reports \nWithin the HED system:\nDashboards will only contain aggregate level information. Modules can contain aggregate level information and low level information. As explained, the level of data that can be viewed within a module depends on the access level of the named individual user and which organisation they are working for. As such, access to low level information, including small numbers, is strictly controlled in line with the access controls outlined in the above section on ‘Processing activities’. \nOutputs are to be used solely for the purpose of assisting the NHS.\nOutputs will be used by NHS Clinicians and Managers to:\n• Assure and manage clinical quality and patient safety within NHS Organisations \n• Identify trends requiring a clinical review of patient pathways.  (Hospital based users with Caldicott approval are able to investigate nationally standardised metrics and ‘drill-down’ to patient level information, including local patient identifiers, in order to conduct clinical case note review and route cause analysis)\n• Increase the understanding of patient outcomes \n• Identify potential areas for improvement in clinical quality or operational efficiency either within a Hospital or a local healthcare economy \n• Identify areas of best practice either within hospital trusts or local healthcare economies\n• Provide consultants with the information necessary for consultant revalidation\n\nAll of the above will serve to increase the understanding of patient outcomes in regard to quality, safety, productivity and efficiency benchmarking within the NHS. \nAs mentioned, aggregate level small number censored analytics produced for the HED tool are being made available to two private sector healthcare organisations who we are working with in supporting NHS organisations. Some examples of the specific outcomes of this access are:\n• Aggregate level analytics have been used to undertake due diligence for both Monitor and CQC. A good example being production of the Keogh review information packs. This information was vital to the extensive work undertaken as part of the Keogh review which has culminated in the majority of the hospitals originally identified being taken out of special measures by the CQC. \n• Another example is use of aggregate level analytics on an extensive piece of work with a large CSU looking at opportunities across the region to improve commissioning, efficiency and to understand deviations in the quality of care. Outcomes of this work included producing commissioning insight bulletins & fact packs used by the CSU and CCGs to improve the quality and provision of care across a region.\n• A further example is use of aggregate level analytics on elderly care readmissions with a CCG in order to support work helping them to understand how they could reduce avoidable readmissions within their region.\nIt is not appropriate to set a target date for this work as the work streams are ongoing and the outputs already form part of various NHS organisations’ monthly reporting and governance assurance processes.\n\nExpected measurable benefits to health and/or social care including target date:\nThe output of analytics available to NHS organisations using the HED system enable NHS clinicians and managers to increase the understanding of patient outcomes and identify areas for improvement and best practice. \nA range of direct benefits to healthcare have already been delivered during the course of this project.\nIn summary:\n• NHS Organisations are provided with the information necessary to provide clinical quality and patient safety assurance within their organization\n• NHS Organisations are able to identify & interrogate areas of poor performance allowing for evidence based health service management\n• NHS Organisations are able to identify areas of good performance increasing the understanding of best practice in healthcare\n• Clinicians are supported in undertaking appraisal and revalidation – reflective practice is a vital contributor to ensure high quality care\nTo give a specific example:\nEach month a range of modules are produced which allow NHS hospitals to identify areas of potential concern relating to mortality within their organisation. Such areas are then investigated further. When appropriate & authorised, the ability to identify a cohort of patients within the organisations and undertake appropriate clinical case note review is invaluable as a part of ensuring good hospital governance. \nThis process is used by hospitals up and down the country, most commonly in the areas of mortality and readmissions management. Without using the data sets being requested it would be impossible to deliver this benefit to the NHS. This would have a significant impact on a sizeable number of NHS Hospitals across the country. \n\nThe role of Non-NHS Organisations in supporting NHS Organisations:\nAllowing select private sector healthcare organisations to access aggregate level analytics is beneficial to the NHS as it enable the NHS to quickly access additional specialist resource when it is required. This allows the timely delivery of improvements in clinical quality and/or operational efficiency. \nWithout this option it would be necessary for them to increase or upskill their internal resource. To do so would require longer timescales and prove more costly for the organisation in the long run if there is primarily a short term need.  \nSome further specific benefits relating to private sector access include:\n1. Supporting the Keogh review at various levels in terms of creating the initial data packs for the review and also in undertaking subsequent mortality reviews which ultimately resulted in 13 hospitals being taken off special measures by the CQC.\n2. Supporting commissioners across an area to have the evidence necessary to understand how to improve the quality and provision of care across a region.\n\nIt is not appropriate to set a target date for this work as the work streams are ongoing and the outputs already form part of a significant number of NHS organisations’ monthly reporting and governance assurance processes."
+ }
+}

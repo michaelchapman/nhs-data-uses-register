@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-36260-X3J7Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-36260-X3J7Q",
+   "version": "",
+   "organisation": "NHS HULL CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "96e198c19646",
+     "activities": "a02418ee0d1d",
+     "expected_output": "947a4b2880dc",
+     "expected_benefits": "d300a576a4ae"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "947a4b2880dc": "To provide risk profiling, calculated on activity data from secondary, urgent and primary care. As part of the risk stratification processing activity detailed above, the GP practice has access to the RAIDR tool for reports which present to them their registered patients and associated risk score.\nThe only identifier to be provided to the GP practice is the NHS number of their registered patient  (for their own patients only).  \nThe GP practice can access the RAIDR tool, which is a secure portal, at any time which will support MDT (multi-disciplinary team) discussions around ongoing patient care. \nThe GP practice can copy and paste the NHS number presented in the secure web-portal to any other program including the practice clinical system. \nCCG staff who have been granted access to the RAIDR tool can only access aggregate output / reports.\nNo record-level SUS is provided to any other organisation.",
+  "96e198c19646": "To use Pseudonymised data for the following datasets to provide intelligence to support commissioning of health services:",
+  "a02418ee0d1d": "Processing of SUS Data for the purposes of Risk Stratification includes landing, processing, staging and publication.\n1. Landing\nA local flow of identifiable urgent care data is submitted from healthcare providers to DSCRO North of England.  DSCRO North of England transfer the local provider urgent care data identifiable at the level of NHS number to NECS using a secure file transfer process and the urgent care data is landed in secure NECS network storage. \nPrior to the release of SUS data by DSCRO North England, Type 2 objections will be applied and the relevant patients data redacted. DSCRO North of England securely transfer SUS data identifiable at the level of NHS number to North of England Commissioning Support Unit (NECS). This is done by landing the SUS data in secure NECS network storage. Data is landed and processed in an access restricted server at NECS. \nPrimary care data identifiable at the level of NHS number is extracted from GP clinical systems and downloaded to secure NECS network storage – all patient objections are handled at the point of data extraction with no identifiable data  flowing where patients have a relevant dissent code (these include both type 1 and 2 as well as local system codes). \nOnly named individuals have access to process the data. All users undertake regular IG training, in line with IGT requirements.\n2. Processing (ETL)\nData is processed on a monthly basis, which follows NECS ETL (Extract, Transform and Load) process as follows. \n2.1. Cleaning and quality checks are carried out on the data.\n2.2. The primary care, and SUS & urgent care local provider data are combined using NHS number to link the data and the data is processed to create a risk stratification data set\n2.3. The urgent care data is linked to primary care data to calculate a risk score for each admission/attendance.\n\n3. Staging\nData is landed to a secure NECS staging area for final quality checks.\n4. Publication\nOutputs are available to the CCG and the GP practice via the RAIDR tool which has a secure web-portal for accessing the data.  All usage of its tools is audited.\nAccess to the RAIDR tool is via individual usernames and passwords.\nData identifiable at the level of NHS number is only available to named individuals within the GP practice who have a legitimate relationship with the patient or where an individual working within a GP practice has the authorisation of a senior individual - such as senior partner or business manager within the practice - to access data identifiable at the level of NHS number for the purposes of conducting Risk Stratification for case finding. This is only applies where there is a legitimate relationship with the patient for direct patient care. (For example, staff such as community/practice nurses who work as part of a multi-disciplinary team with the GPs.) \nThe CCG has an aggregated view only of Risk Stratification data based on their related GP practices. No record-level SUS data identifiable at the level of NHS number is provided to any other organisation.",
+  "d300a576a4ae": "Risk Stratification promotes improved case management in primary care which is expected to lead to the following benefits being realised :\n1. Improved planning by better understanding the patient flows through the healthcare system, thus allowing GPs and clinicians to design appropriate pathways to improve patient flow and identify plans to address these.\n\n2. Improved quality of services through reduced emergency readmissions, especially avoidable emergency admissions.  This is achieved via the mapping of frequent users of emergency services and the early intervention of appropriate care.\n\n3. Improved access to services by identifying which services may be in demand but have poor access and from this identify areas where improvement is required.\n\n4. Potentially reduce premature mortality by more targeted intervention in primary care, which supports the commissioner to meet its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n\nIt is expected that all of the aforementioned will lead to improved patient experience through more effective direct patient care services."
+ }
+}

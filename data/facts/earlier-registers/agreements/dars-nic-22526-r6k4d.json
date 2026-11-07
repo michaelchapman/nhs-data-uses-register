@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-22526-R6K4D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-22526-R6K4D",
+   "version": "",
+   "organisation": "NHS LEEDS WEST CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "6eddcbdbf78c",
+     "activities": "b5497b77fdbe",
+     "expected_output": "5ea8cfc80df2",
+     "expected_benefits": "d300a576a4ae"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "5ea8cfc80df2": "To provide risk profiling, calculated on activity data from secondary and primary care. As part of the risk stratification processing activity detailed above, the GP practice has access to the secure web-portal for reports which present to them their registered patients and associated risk score.\nThe GP practice can access the secure web-portal at any time to support MDT (multi-disciplinary team) discussions around ongoing patient care, and enhanced service requirements. \nThe GP practice can copy and paste the NHS number presented in the secure web-portal to any other program including the practice clinical system. \nThere are two views of the data available, pseudonymised and identifiable at the level of NHS number. The data identifiable at the level of NHS number is only available to the GP practice who has a legitimate relationship with the patient. GP practice access to the data is authorised by the GP practice Caldicott Guardians.\nThe CCG can access a pseudonymised view of the data only.\nNo record-level SUS is provided to any other organisation.",
+  "6eddcbdbf78c": "To utilise SUS data identifiable at the level of NHS number to provide risk stratification information to the CCG and GP practice.",
+  "b5497b77fdbe": "Processing of SUS Data for the purposes of Risk Stratification includes landing, processing, staging and publication.\n1. Landing\nPrior to the release of SUS data by DSCRO Yorkshire, Type 2 objections will be applied and the relevant patients data redacted. DSCRO Yorkshire securely transfer SUS and (Mental Health and Community) local provider data identifiable at the level of NHS number to NECS. This is done by landing the SUS and local provider data in secure NECS network storage.\nPrimary care data extracts from GP clinical systems identifiable at the level of NHS number are downloaded and transferred to NECS by landing the data in secure NECS network storage.\nOnly named individuals have access to process the data. All users undertake regular IG training, in line with IGT requirements.\n2. Processing\nData is processed on a monthly basis. \n2.1 Primary care data is checked for codes relating to Type 1 patient objections and sensitive conditions to provide assurance that there is no data included where these codes exist, prior to processing of the data.\n2.2 Cleaning and quality checks are carried out on the primary care data.\n2.3 The primary care is then combined with the SUS and (Mental Health and Community) local provider data using NHS numbers to link the data.\n2.4 The combined dataset is processed to produce the calculated risk scores for each patient.\n3. Staging\nData is landed to a secure NECS staging area for final quality checks before the data is loaded for publication. \n4. Publication\n\nThe data is loaded and published using the NECS SQL BI stack, which includes storage of the data in the NECS secure network storage and a secure web-portal for making the data available to GP practices.\n4.1. GP practice access to data (for their own patients only):\nData identifiable at the level of NHS number is presented via the secure web-portal to the GP practice who has a legitimate relationship with the patient. \nData identifiable at the level of NHS number is only available to named individuals within the GP practice who have a legitimate relationship with the patient. \nThe web-portal is accessed by the GP practice using a username and password.\nThe GP practice has access to SUS data identifiable at the level of NHS number to see aspects of the inpatient and outpatient activity via the secure web-portal.\nAll usage of the secure web-portal is audited and access rights are granted by the Caldicott Guardians at the GP practice.\n4.2. CCG access to data:\nThe CCG can access a pseudonymised view of the data only.",
+  "d300a576a4ae": "Risk Stratification promotes improved case management in primary care which is expected to lead to the following benefits being realised :\n1. Improved planning by better understanding the patient flows through the healthcare system, thus allowing GPs and clinicians to design appropriate pathways to improve patient flow and identify plans to address these.\n\n2. Improved quality of services through reduced emergency readmissions, especially avoidable emergency admissions.  This is achieved via the mapping of frequent users of emergency services and the early intervention of appropriate care.\n\n3. Improved access to services by identifying which services may be in demand but have poor access and from this identify areas where improvement is required.\n\n4. Potentially reduce premature mortality by more targeted intervention in primary care, which supports the commissioner to meet its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n\nIt is expected that all of the aforementioned will lead to improved patient experience through more effective direct patient care services."
+ }
+}

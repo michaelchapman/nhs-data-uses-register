@@ -1,0 +1,672 @@
+{
+ "base_reference": "DARS-NIC-147931-DT25Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147931-DT25Y",
+   "version": "",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "7b17f27ec77a"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "76f034b6de64"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "ece38ef85402"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 ((ECC 1-04(b)/2010) ) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 ((ECC 1-04(b)/2010) ) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS Mortality data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 ((ECC 1-04(b)/2010) ) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (ECC 1-04(b)/2010) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (ECC 1-04(b)/2010) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "objective": "b23130eccba8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 20
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 14
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v1.3",
+   "version": "1.3",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01",
+    "2017-03-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01",
+      "2017-03-01",
+      "2017-09-01"
+     ],
+     "objective": "13bdf02c40de",
+     "activities": "bf8313dc757c",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01",
+      "2017-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 19
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-09-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2017-09-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 12
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v2.9",
+   "version": "2.9",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "objective": "13bdf02c40de",
+     "activities": "bf8313dc757c",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a"
+    },
+    {
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "objective": "13bdf02c40de",
+     "activities": "bf8313dc757c",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a",
+     "yielded_benefits": "2306a9e0960c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 21
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "National Health Service Act 2006 - s251 - 'Control of patient information'.",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v3.4",
+   "version": "3.4",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01",
+    "2019-05-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "objective": "6c6daee43e0b",
+     "activities": "d0367496d938",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a",
+     "yielded_benefits": "2306a9e0960c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-02-01",
+      "2019-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 21
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v4.4",
+   "version": "4.4",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2019-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-06-01"
+     ],
+     "objective": "6c6daee43e0b",
+     "activities": "1994497b1eca",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a",
+     "yielded_benefits": "2306a9e0960c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v5.3",
+   "version": "5.3",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-07-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2020-01-01",
+    "2020-04-01",
+    "2020-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-07-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2020-01-01",
+      "2020-04-01",
+      "2020-06-01"
+     ],
+     "objective": "6c6daee43e0b",
+     "activities": "1994497b1eca",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a",
+     "yielded_benefits": "2306a9e0960c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 21
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-07-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2020-01-01",
+      "2020-04-01",
+      "2020-06-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-09-01",
+      "2020-01-01",
+      "2020-04-01",
+      "2020-06-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147931-DT25Y-v6.6",
+   "version": "6.6",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-09-01",
+    "2020-10-01",
+    "2020-12-01",
+    "2021-02-01",
+    "2021-03-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-12-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "objective": "924892d5d705",
+     "activities": "1994497b1eca",
+     "expected_output": "ea9389abcb89",
+     "expected_benefits": "fe77f3d1d13a",
+     "yielded_benefits": "2306a9e0960c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Demographics",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-10-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-10-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-02-01"
+     ],
+     "rows": 23
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "13bdf02c40de": "Evaluating the age extension of the NHS Breast Screening Programme - Age Extension (AgeX) trial\n\nThe NHS Breast Screening Programme (NHSBSP) routinely invites women aged 50-70 years to come for three-yearly screening.  Because of uncertainty about the effects of screening outside this age range, an England-wide cluster-randomised trial is under way to assess the risks and benefits of additional invitations for screening at ages 47 to 49 and, separately, after age 70 (currently 71-73). \n\nRandom allocation of small clusters of participants is used to determine (in a 50:50 ratio) which women are offered one additional screening invitation before age 50 and which are not, and which women are offered additional screening after age 70 and which are not.  This trial will involve about 71 of the 81 breast screening units in England and will randomize at least two million women aged 47-49 and one million aged 71-73 to be invited for additional screening.  Women will be followed up by routine electronic linkage to NHS and ONS mortality records to assess short-term and long-term effects of the additional screening on: patterns of investigation, detection and treatment of breast lesions; breast cancer incidence; breast cancer mortality; hospital admissions; and overall mortality.\n\nThe principal outcome for screening before age 50 and, separately, after age 70 will be breast cancer mortality, eventually subdivided by 5-year time periods (0-4, 5-9, 10-14 years, etc.) since random allocation.  Subsidiary analyses will assess effects on other outcomes.  The main results are expected in the mid-2020s.\n\nWhen the main results of the trial are available results will be reported to the Advisory Committee on Breast Cancer Screening which oversees the NHSBSP and reports to government ministers.  The NHSBSP sets the standards for the screening units and monitors performance through a national quality assurance network. \n\nThe data will be pseudonymised before analysis and will not be shared with any third parties.\n\nThe reason for this trial is to provide definitive evidence on an issue that has been the subject of controversy for over 15 years – specifically whether the harms of breast screening outweigh the benefits.  Previous trials have evidenced the benefits without sufficiently evidencing the potential harms.  Numerous claims and counter claims have been made and continue to be made emanating from such sources as patient groups, publications, scientific literature and in the media.  The nature of the claims varies over time.  For example, it may, at different times, be claimed that harms include increases in operations, hospital stays, related health episodes of specific types, etc.  Such claims are typically varied with a lack of definitive supporting evidence.\n\nThis trial aims to amass and analyse sufficient evidence that will enable the final reports to provide definitive unequivocal evidence.  Where such claims of harm have been made, the trial will investigate the validity and tailor the content of planned reports to provide responses.  Due to the potentially wide variety of possible harms which might be attributed to screening, the trial requires wide ranging hospital episode data not restricted to specific types of episode.\n\nThe number of women involved in the trial is necessarily large in order to ensure that the findings of the trial are unequivocal.  The sample size has been reviewed by numerous committees and accepted as being appropriate.\n\nIn terms of the number of years of data required, it is necessary to have data over such a long period because firstly, the screening programme currently offers women 7 screenings between the ages of 50 and 70 and the trial is investigating the effect of adding just one screen to the existing 7 routinely offered.  Therefore the screening period is already more than 20 years and effects of screening are likely to become visible at least 10 years after the first screening.  Secondly, it is essential for the trial design to have information on morbidity prior to randomization. It is well established that women with prior co-morbidities are less likely to attend for screening, when invited. It is stated explicitly in the protocol that groups of women will be excluded from the main analyses where there are known (on the basis of information collected before randomization) to be unlikely to accept an invitation for screening. It is therefore a fundamental requirement that the trial analyses HES data going back as far as is possible.",
+  "1994497b1eca": "To date, identifying details have been supplied to NHS Digital (formerly known as HSCIC) in separate batches for flagging on NHS Digital's MIDAS system and NHS Digital has supplied periodic updates on deaths, cancers and exits from NHS registration.  Approximately 3.1 million cohort members have been flagged to date with the number to rise to 4.2m during 2019.\n\nFurther batches of trial participants will be supplied as new participants are randomised into the trial on an ongoing basis.\n\nIn addition to the ongoing supply of notifications, NHS Digital will perform further linkage to Hospital Episode Statistics data and supply the linked data to the Cancer Epidemiology  Unit (CEU) within the Nuffield Department of Population Health (NDPH) at the University of Oxford.\n\nAll data received from NHS Digital is added to the core AgeX database, which also contains trial participants’ records from the National Breast Screening System and PHE cancer outcome datasets.\n\nThe purpose for collecting the data is to assess the short-term and long-term effects of the additional screening on: patterns of investigation; detection and treatment of breast lesions; breast cancer incidence; breast cancer mortality; hospital admissions, and overall mortality. \n\nThe data will be held exclusively at the Cancer Epidemiology Unit (CEU) within the Nuffield Department of Population Health at the University of Oxford and used solely for the purpose of this project. \n\nAll data (including core trial data on women randomized, flagging information, deaths, cancers, externally linked data, some admin data) is held in a central database. Several internal ID's exist so that data can be appropriately structured. No statistical analyses of the data are performed directly on this database. Direct access to the entire database is limited to the database manager who is a substantive employee of the University of Oxford. Access to personal identifiers is required to process externally linked data, and to prepare datasets for external linkage to HES, Civil Registration Mortality, Cancer Registration, NHS Registration and NHS Screening records.\n\nPseudonymised analysis data is extracted from the database, either as database views or via text files. When accessing views directly, appropriate roles exist to strictly limit access to the appropriate data only. Analysis datasets will never contain any personally identifiable data e.g. name, NHS number etc. ONLY linkage datasets will require this information. Where appropriate year and month will be used in place of full dates, similarly, other abstractions will be applied to non-date fields where such abstractions are possible and appropriate.",
+  "2306a9e0960c": "No benefits to date the study is due to be completed in the mid-2020s",
+  "6c6daee43e0b": "The University of Oxford requires data for the purpose of a clinical trial: 'Evaluating the age extension of the NHS Breast Screening Programme - Age Extension (AgeX)'.\n\nThe NHS Breast Screening Programme routinely invites women aged 50-70 years to come for three-yearly screening.   Because of uncertainty about the effects of screening outside this age range, an England-wide cluster-randomised trial is under way to assess the risks and benefits of additional invitations for screening at ages 47 to 49 and, separately, after age 71 (currently 71-73). \n\nRandom allocation of small clusters of participants is used to determine (in a 50:50 ratio) which women are offered one additional screening invitation before age 50 and which are not, and which women are offered additional screening after age 71 and which are not.  This trial involves about 65 of the 81 breast screening units in England and will randomize at least four million women aged 47-49 and two million aged 71-73 to be invited for additional screening.  Women will be followed up by routine electronic linkage to NHS and Civil Registration mortality records to assess short-term and long-term effects of the additional screening on: patterns of investigation, detection and treatment of breast lesions; breast cancer incidence; breast cancer mortality; hospital admissions; and overall mortality. \n\nThe principal outcome for screening before age 50 and, separately, after age 70 will be breast cancer mortality, eventually subdivided by 5-year time periods (0-4, 5-9, 10-14 years, etc.) since random allocation.  Subsidiary analyses will assess effects on other outcomes.  The trial began recruiting participants in 2010 and the main results are expected in the mid-2020s. \n\nApprovals have been obtained, and remain ongoing from London Harrow Research Ethics committee to conduct the trial and Confidentiality Advisory Group (CAG) to process participant’s data under section 251 of the NHS Act and permit linkage to the NHS databases for medical history and civil registration data. \n\nThe data collected for this trial is processed under the following articles of GDPR at the Cancer Epidemiology Unit in the Nuffield Department of Population Health at the University of Oxford who act as the Data Controller. \n\nThis work is research in the public interest as it aims to improve care for all patients considering undergoing this type of process – informing clinicians and commissioners of variation and outcomes and complications to support work to improve and standardise treatment selection choices.\n\nThe University of Oxford has determined that there are no moral or ethical issues from dissemination of data for this purpose. Once received from NHS Digital, the data being processed by the University of Oxford will be pseudonymised and will be compliant with the ICO's \"Anonymisation: managing data protection risk\" code of practice.\n\nThe data will be pseudonymised before analysis and will not be shared with any third parties.\n\nWhen the main results of the trial are available results will be reported to the Advisory Committee on Breast Cancer Screening which oversees the NHSBSP and reports to government ministers.  The NHSBSP sets the standards for the screening units and monitors performance through a national quality assurance network. \n\nThe reason for this trial is to provide definitive evidence on an issue that has been the subject of controversy for over 15 years – specifically whether the harms of breast screening outweigh the benefits.  Previous trials have evidenced the benefits without sufficiently evidencing the potential harms.  Numerous claims and counter claims have been made and continue to be made emanating from such sources as patient groups, publications, scientific literature and in the media.  The nature of the claims varies over time.  For example, it may, at different times, be claimed that harms include increases in operations, hospital stays, related health episodes of specific types, etc.  Such claims are typically varied with a lack of definitive supporting evidence.\n\nThis trial aims to amass and analyse sufficient evidence that will enable the final reports to provide definitive unequivocal evidence.  Where such claims of harm have been made, the trial will investigate the validity and tailor the content of planned reports to provide responses.  Due to the potentially wide variety of possible harms which might be attributed to screening, the trial requires wide ranging hospital episode data not restricted to specific types of episode.\n\nThe number of women involved in the trial is necessarily large in order to ensure that the findings of the trial are unequivocal.  The sample size has been reviewed by numerous committees and accepted as being appropriate.\n\nIn terms of the number of years of data required, it is necessary to have data over such a long period because firstly, the screening programme currently offers women 7 screenings between the ages of 50 and 70 and the trial is investigating the effect of adding just one screen to the existing 7 routinely offered.  Therefore, the screening period is already more than 20 years and effects of screening are likely to become visible at least 10 years after the first screening.  Secondly, it is essential for the trial design to have information on morbidity prior to randomization. It is well established that women with prior co-morbidities are less likely to attend for screening, when invited. It is stated explicitly in the protocol that groups of women will be excluded from the main analyses where there are known (on the basis of information collected before randomization) to be unlikely to accept an invitation for screening. It is therefore a fundamental requirement that the trial analyses HES data going back as far as is possible.",
+  "76f034b6de64": "Evaluating the age extension of the NHS Breast Screening Programme\n\nTo evaluate the effects of a) offering women one additional screen at age 47-49 years and b) offering women one additional screen at age 71-73 years, within the existing NHS Breast Screening Programme which currently offers women seven 3-yearly screens between the ages of 50 and 70 years.   \n\nTo date there is limited evidence on the net benefit of extending the age range for breast screening; no trial has looked at the added value of one extra screen within an existing screening programme.\n\nThis trial provides a unique opportunity to assess the effects of adding an extra screening invitation to an existing screening programme. The results have the potential to inform future screening policy in the UK and elsewhere.\n\nData access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC.",
+  "7b17f27ec77a": "Evaluating the age extension of the NHS Breast Screening Programme To evaluate the effects of a) offering women one additional screen at age 47-49 years and b) offering women one additional screen at age 71-73 years, within the existing NHS Breast Screening Programme which currently offers women seven 3-yearly screens between the ages of 50 and 70 years. To date there is limited evidence on the net benefit of extending the age range for breast screening; no trial has looked at the added value of one extra screen within an existing screening programme. This trial provides a unique opportunity to assess the effects of adding an extra screening invitation to an existing screening programme. The results have the potential to inform future screening policy in the UK and elsewhere. Data access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC.",
+  "924892d5d705": "23/07/2019: addition of only 1 year complete HES data for 2018/2019.\n\nThe University of Oxford requires data for the purpose of a clinical trial: 'Evaluating the age extension of the NHS Breast Screening Programme - Age Extension (AgeX)'.\n\nThe NHS Breast Screening Programme routinely invites women aged 50-70 years to come for three-yearly screening.   Because of uncertainty about the effects of screening outside this age range, an England-wide cluster-randomised trial is under way to assess the risks and benefits of additional invitations for screening at ages 47 to 49 and, separately, after age 71 (currently 71-73). \n\nRandom allocation of small clusters of participants is used to determine (in a 50:50 ratio) which women are offered one additional screening invitation before age 50 and which are not, and which women are offered additional screening after age 71 and which are not.  This trial involves about 65 of the 81 breast screening units in England and will randomize at least four million women aged 47-49 and two million aged 71-73 to be invited for additional screening.  Women will be followed up by routine electronic linkage to NHS and Civil Registration mortality records to assess short-term and long-term effects of the additional screening on: patterns of investigation, detection and treatment of breast lesions; breast cancer incidence; breast cancer mortality; hospital admissions; and overall mortality. \n\nThe principal outcome for screening before age 50 and, separately, after age 70 will be breast cancer mortality, eventually subdivided by 5-year time periods (0-4, 5-9, 10-14 years, etc.) since random allocation.  Subsidiary analyses will assess effects on other outcomes.  The trial began recruiting participants in 2010 and the main results are expected in the mid-2020s. \n\nApprovals have been obtained, and remain ongoing from London Harrow Research Ethics committee to conduct the trial and Confidentiality Advisory Group (CAG) to process participant’s data under section 251 of the NHS Act and permit linkage to the NHS databases for medical history and civil registration data. \n\nThe data collected for this trial is processed under the following articles of GDPR at the Cancer Epidemiology Unit in the Nuffield Department of Population Health at the University of Oxford who act as the Data Controller. \n\nThis work is research in the public interest as it aims to improve care for all patients considering undergoing this type of process – informing clinicians and commissioners of variation and outcomes and complications to support work to improve and standardise treatment selection choices.\n\nThe University of Oxford has determined that there are no moral or ethical issues from dissemination of data for this purpose. Once received from NHS Digital, the data being processed by the University of Oxford will be pseudonymised and will be compliant with the ICO's \"Anonymisation: managing data protection risk\" code of practice.\n\nThe data will be pseudonymised before analysis and will not be shared with any third parties.\n\nWhen the main results of the trial are available results will be reported to the Advisory Committee on Breast Cancer Screening which oversees the NHSBSP and reports to government ministers.  The NHSBSP sets the standards for the screening units and monitors performance through a national quality assurance network. \n\nThe reason for this trial is to provide definitive evidence on an issue that has been the subject of controversy for over 15 years – specifically whether the harms of breast screening outweigh the benefits.  Previous trials have evidenced the benefits without sufficiently evidencing the potential harms.  Numerous claims and counter claims have been made and continue to be made emanating from such sources as patient groups, publications, scientific literature and in the media.  The nature of the claims varies over time.  For example, it may, at different times, be claimed that harms include increases in operations, hospital stays, related health episodes of specific types, etc.  Such claims are typically varied with a lack of definitive supporting evidence.\n\nThis trial aims to amass and analyse sufficient evidence that will enable the final reports to provide definitive unequivocal evidence.  Where such claims of harm have been made, the trial will investigate the validity and tailor the content of planned reports to provide responses.  Due to the potentially wide variety of possible harms which might be attributed to screening, the trial requires wide ranging hospital episode data not restricted to specific types of episode.\n\nThe number of women involved in the trial is necessarily large in order to ensure that the findings of the trial are unequivocal.  The sample size has been reviewed by numerous committees and accepted as being appropriate.\n\nIn terms of the number of years of data required, it is necessary to have data over such a long period because firstly, the screening programme currently offers women 7 screenings between the ages of 50 and 70 and the trial is investigating the effect of adding just one screen to the existing 7 routinely offered.  Therefore, the screening period is already more than 20 years and effects of screening are likely to become visible at least 10 years after the first screening.  Secondly, it is essential for the trial design to have information on morbidity prior to randomization. It is well established that women with prior co-morbidities are less likely to attend for screening, when invited. It is stated explicitly in the protocol that groups of women will be excluded from the main analyses where there are known (on the basis of information collected before randomization) to be unlikely to accept an invitation for screening. It is therefore a fundamental requirement that the trial analyses HES data going back as far as is possible.",
+  "b23130eccba8": "Evaluating the age extension of the NHS Breast Screening Programme\n\nTo evaluate the effects of a) offering women one additional screen at age 47-49 years and b) offering women one additional screen at age 71-73 years, within the existing NHS Breast Screening Programme which currently offers women seven 3-yearly screens between the ages of 50 and 70 years.   \n\nTo date there is limited evidence on the net benefit of extending the age range for breast screening; no trial has looked at the added value of one extra screen within an existing screening programme.\n\nThis trial provides a unique opportunity to assess the effects of adding an extra screening invitation to an existing screening programme. The results have the potential to inform future screening policy in the UK and elsewhere.",
+  "bf8313dc757c": "To date, identifiable details have been supplied to NHS Digital (formerly known as HSCIC) in separate batches for flagging on NHS Digital's MIDAS system and NHS Digital has supplied periodic updates on deaths, cancers and exits from NHS registration.  Approximately 2 million cohort members have been flagged to date with the number to rise to 2.5m.\n\nFurther batches of trial participants will be supplied as new participants are randomised into the trial on an ongoing basis.\n\nIn addition to the ongoing supply of notifications, NHS Digital will perform further linkage to Hospital Episode Statistics data and supply the linked data to the CEU.\n\nAll data received from NHS Digital is linked with trial participants’ records from the National Breast Screening System and PHE cancer outcome datasets.\n\nThe purpose for collecting the data is to assess the short-term and long-term effects of the additional screening on: patterns of investigation; detection and treatment of breast lesions; breast cancer incidence; breast cancer mortality; hospital admissions, and overall mortality. \n\nThe data will be held exclusively at the Cancer Epidemiology Unit (CEU) at the University of Oxford and used solely for the purpose of this project. \n\nAll data (core trial data, including personal details, flagging information, deaths, cancers, externally linked data, some admin data) is held in a central database. Several internal ID's exist so that data can be appropriately structured. No statistical analyses of the data are performed directly on this database. Direct access to the entire database is limited to the database manager. Access to personal identifiers is required to process externally linked data, and to prepare datasets for external linkage to HES, ONS, Cancer Registration, NHS Registration and NHS Screening records.\n\nPseudonymised analysis data is extracted from the database, either as database views or via text files. When accessing views directly, appropriate roles exist to limit access to the required view(s) only. Analysis datasets will have no individual level identifiers but may have a group identifier e.g. year recruited or site recruited. Analysis datasets will never contain any personally identifiable data e.g. name, NHS number etc. ONLY linkage datasets will require this information. If required year and month of birth will be used instead of full date of birth or death.",
+  "d0367496d938": "To date, identifiable details have been supplied to NHS Digital (formerly known as HSCIC) in separate batches for flagging on NHS Digital's MIDAS system and NHS Digital has supplied periodic updates on deaths, cancers and exits from NHS registration.  Approximately 3.1 million cohort members have been flagged to date with the number to rise to 4.2m during 2019.\n\nFurther batches of trial participants will be supplied as new participants are randomised into the trial on an ongoing basis.\n\nIn addition to the ongoing supply of notifications, NHS Digital will perform further linkage to Hospital Episode Statistics data and supply the linked data to the Cancer Epidemiology  Unit (CEU) within the Nuffield Department of Population Health (NDPH) at the University of Oxford.\n\nAll data received from NHS Digital is added to the core AgeX database, which also contains trial participants’ records from the National Breast Screening System and PHE cancer outcome datasets.\n\nThe purpose for collecting the data is to assess the short-term and long-term effects of the additional screening on: patterns of investigation; detection and treatment of breast lesions; breast cancer incidence; breast cancer mortality; hospital admissions, and overall mortality. \n\nThe data will be held exclusively at the Cancer Epidemiology Unit (CEU) within the Nuffield Department of Population Health at the University of Oxford and used solely for the purpose of this project. \n\nAll data (including core trial data on women randomized, flagging information, deaths, cancers, externally linked data, some admin data) is held in a central database. Several internal ID's exist so that data can be appropriately structured. No statistical analyses of the data are performed directly on this database. Direct access to the entire database is limited to the database manager who is a substantive employee of the University of Oxford. Access to personal identifiers is required to process externally linked data, and to prepare datasets for external linkage to HES, Civil Registration Mortality, Cancer Registration, NHS Registration and NHS Screening records.\n\nPseudonymised analysis data is extracted from the database, either as database views or via text files. When accessing views directly, appropriate roles exist to strictly limit access to the appropriate data only. Analysis datasets will never contain any personally identifiable data e.g. name, NHS number etc. ONLY linkage datasets will require this information. Where appropriate year and month will be used in place of full dates, similarly, other abstractions will be applied to non-date fields where such abstractions are possible and appropriate.",
+  "ea9389abcb89": "The primary output of the study will be findings disseminated by publications in peer-reviewed open-access journals and presented at medical conferences to academics, NHS national policy makers and on the web.  The results are expected to help determine future NHS policy on breast cancer screening outside the 50-70 age group.  The main results are not expected before the mid-2020s.\n\nOutputs will include only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nAs with any clinical trial, it is necessary to gather evidence incrementally throughout the course of the trial in order to check that the trial itself is not exposing participants to increased risk of harm or, conversely, to check for evidence of benefits.  The trial end date is not fixed and may be brought forward if at any stage, sufficient evidence is obtained.\n\nThe outputs from the interim analyses will be annual reports to the Data Ethics and Monitoring Committee who may also request additional analyses within the scope of the clinical trial’s objectives if they identify the need.  The Data Ethics and Monitoring Committee report any concerns about the trial or findings to the trial management group.",
+  "ece38ef85402": "To evaluate the effects of a) offering women one additional screen at age 47-49 years and b) offering women one additional screen at age 71-73 years, within the existing NHS Breast Screening Programme which currently offers women seven 3-yearly screens between the ages of 50 and 70 years. To date there is limited evidence on the net benefit of extending the age range for breast screening; no trial has looked at the added value of one extra screen within an existing screening programme. This trial provides a unique opportunity to assess the effects of adding an extra screening invitation to an existing screening programme. The results have the potential to inform future screening policy in the UK and elsewhere.",
+  "fe77f3d1d13a": "The aim of the trial is to assess reliably the risks and benefits of additional NHS invitations for breast screening before age 50 and, separately, after age 70.  The results are expected to help determine future NHS policy on age at breast screening.  The main results are not expected before the mid-2020s but interim results will be reviewed and the trial end date may be brought forward if the evidence is clear before then.\n\nPublic Health England  will use the findings to inform government and influence policy.  This will affect breast screening policy in the UK and influence policy in much of the rest of the world for decades after the results have published.\n\nThe benefits of interim analyses are that these will be used to monitor the protection and safety of trial participants in addition to feeding into the wider trial aims."
+ }
+}

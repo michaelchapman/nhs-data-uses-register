@@ -1,0 +1,131 @@
+{
+ "base_reference": "DARS-NIC-165012-9JHGZ",
+ "versions": [
+  {
+   "reference": "DARS-NIC-165012-9JHGZ",
+   "version": "",
+   "organisation": "Royal College of Physicians",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "8dcaefae80a3"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Section 251 (ECC 6-02(FT3)/2012) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "The Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-165012-9JHGZ-v0.0",
+   "version": "0.0",
+   "organisation": "ROYAL COLLEGE OF PHYSICIANS OF LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "afebcd97dfcb"
+    },
+    {
+     "periods": [
+      "2016-09-01"
+     ]
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "8dcaefae80a3": "Linkage of SSNAP patient records with ONS death data, to determine patient outcomes (such as survival at 30 days, 6 months and 1 year post stroke), so that the quality of care delivered can be compared with the outcome for patients and linkage with HES data to identify readmissions and further strokes (again so that the quality of care can be compared with the outcome for patients) as well as the case ascertainment of audit participants (the proportion of their coded stroke patients which are recorded in the audit), which is important for contextualising the outcomes. Teams submitting data to SSNAP will be updated with death data via the same secure system they enter the patient identifiable audit data into. Teams are required to carry out a six month follow-up assessment of patients and accessing the death data is important so that teams can know which patients to contact for the appointment.  \nThe data will also be used for producing outcome statistics at various levels including at national level, CCG level and hospital level where appropriate. Any data reported on is carefully considered in terms of whether it could be potentially identifiable and advice is given on how the outputs should be interpreted. \nThe outputs of our analysis will include mortality statistics at different time points and at different levels and dates of death will be used in statistical modelling. The proportion of patients entered into the audit for each hospital team, compared with the numbers in HES, will be vital in determining how results are used (for instance, where there is low case ascertainment, the mortality outcomes may not be reported so that there is no potential misrepresentation).",
+  "afebcd97dfcb": "Linkage of SSNAP patient records with ONS death data, to determine patient outcomes\n(such as survival at 30 days, 6 months and 1 year post stroke), so that the quality of care\ndelivered can be compared with the outcome for patients and linkage with HES data to\nidentify readmissions and further strokes (again so that the quality of care can be\ncompared with the outcome for patients) as well as the case ascertainment of audit\nparticipants (the proportion of their coded stroke patients which are recorded in the\naudit), which is important for contextualising the outcomes. Teams submitting data to\nSSNAP will be updated with death data via the same secure system they enter the\npatient identifiable audit data into. Teams are required to carry out a six month follow-up\nassessment of patients and accessing the death data is important so that teams can\nknow which patients to contact for the appointment.\nThe data will also be used for producing outcome statistics at various levels including at\nnational level, CCG level and hospital level where appropriate. Any data reported on is\ncarefully considered in terms of whether it could be potentially identifiable and advice is\ngiven on how the outputs should be interpreted."
+ }
+}

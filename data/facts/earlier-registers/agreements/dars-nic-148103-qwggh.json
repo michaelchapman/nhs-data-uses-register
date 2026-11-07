@@ -1,0 +1,80 @@
+{
+ "base_reference": "DARS-NIC-148103-QWGGH",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148103-QWGGH",
+   "version": "",
+   "organisation": "Aintree University Hospital NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "d6eed5329905"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "3939ee15abf4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3939ee15abf4": "The data supplied by NHS IC to University Hospital Aintree will be used only for the approved Medical Research Project identified above.",
+  "d6eed5329905": "To identify when a patient with Oro and Oropharyngeal malignancy dies and the cause of the death inorder to update the prospective Head and Neck Oncology database at the Regional Maxilliofacial Unit.  The database is comprehensive and address demographic details, investigation, treatment modalities, pathology, adjuvant treatments and outcomes."
+ }
+}

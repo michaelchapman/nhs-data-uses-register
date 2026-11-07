@@ -1,0 +1,108 @@
+{
+ "base_reference": "DARS-NIC-344511-H6N5B",
+ "versions": [
+  {
+   "reference": "DARS-NIC-344511-H6N5B",
+   "version": "",
+   "organisation": "British Society of Gastroenterology",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "b36a58f7f48f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(CAG 6-07(d)/2013) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(CAG 6-07(d)/2013) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(CAG 6-07(d)/2013) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-344511-H6N5B-v1.5",
+   "version": "1.5",
+   "organisation": "BRITISH SOCIETY OF GASTROENTEROLOGY",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01"
+     ],
+     "objective": "886a1f4ede7d",
+     "activities": "b829658258b8",
+     "expected_output": "ead8ce3efca9",
+     "expected_benefits": "dc1d71677123"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 21
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 12
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "886a1f4ede7d": "To link the registry of Inflammatory Bowel Disease (IBD) patients in England to HES and in doing so produce a source of high quality information that will be able to provide more accurate identification of the health outcomes and health care utilisation of IBD patients.\nOutputs from this registry would then be used for feeding into national service development planning and fulfilling national audit, improving IBD standards and quality improvement benchmarks.\nThere are currently three identified outputs which can be categorised as follows: \n1.\tA Trust level feedback report \n2.\tAnnual registry report \n3.\tA research project entitled ‘Maximising the value of the UK IBD Registry for service delivery, audit and research’",
+  "b36a58f7f48f": "Objective for processing:  \nTo create a registry of patients in England with a diagnosis of Inflammatory Bowel Disease (IBD) and in doing so produce a source of high quality information that will be able to provide more accurate identification of the health outcomes and health care utilisation of IBD patients.\nOutputs from this registry would then be used for feeding into national service development planning and fulfilling national audit, improving IBD standards and quality improvement benchmarks.”\n There are currently three identified outputs which can be categorised as follows: \n1.\tA Trust level feedback report \n2.\tAnnual registry report \n3.\tA research project entitled ‘Maximising the value of the UK IBD Registry for service delivery, audit and research’  \nProcessing activities: \nPseudonymised IBD Registry data is provided to the HSCIC with NHS number. The HSCIC link the IBD Registry data with HES data and the linked dataset is pseudonymised. The linked HES/IBD dataset is provided to the University of Liverpool who are processing the data on behalf of the British Society of Gastroenterology. \nThe University of Liverpool will analyse the HES/IBD data and will produce the aggregate outputs for the three purposes listed above. As required the University of Liverpool will enhance the combined HES/IBD dataset with non-identifiable reference data sets such as labels and groupings for diagnosis codes, or indices of deprivation. \nThose outputs will have small numbers suppressed in line with the HES Analysis Guide. \nSpecific outputs expected, including target date: \nOutput 1: Trust Level Feedback Report\nPublication Intent: Available to participating trusts only and limited to those Trusts that have provided the data.\nTarget Date: From January 2016\nDetail: To provide aggregated information at site level on both the ‘Registered’ (patients identified in the IBD Registry) and ‘Unregistered’ (patients identified by clinical codes submitted to HES).\nSuppression:  Suppressed in line with the HES analysis guide\n  \nOutput 2:  Annual Registry Report.\nPublication Intent: Published\nTarget Date: June 2016\nDetail:  This is a report into the performance of the NHS on IBD and will provide aggregated information down to site level on both the ‘Registered’ (patients identified in the IBD Registry) and ‘Unregistered’ (patients identified by clinical codes submitted to HES). \nSuppression:  Suppressed in line with the HES analysis guide\n  \nOutput 3:  Registry Research Project Publications ‘Maximising the value of the UK IBD Registry for service delivery, audit and research’\nPublication Intent: Published\nTarget Date: From June 2016 onwards\nDetail:  aims to use the Registry systems to capture the full secondary-care IBD population of participating hospitals and validate a sample of the records reported to the Registry.\nSuppression:  Suppressed in line with the HES analysis guide\n\nExpected measurable benefits to health and/or social care including target date:\nFirst quarterly feedback – From January 2016\nThe provision of comparative information on service activity, cost, clinical treatments and patient outcomes to participating hospitals will enable effective benchmarking and comparison of local services against other IBD services. These comparisons will improve patient care by enabling participating organisations to identify their own strengths and weaknesses and plan improvements to their patient pathways and service organisation. \n\nFirst Annual Report – June 2016\nAt present, information on IBD is scarce at national level. As such, policy makers are unable to take an informed view on standards and clinical practice across the country and are unable to develop evidence based policies based on national information. The development of the annual report is intended to fill this gap in knowledge. Any subsequent application for renewal of this database would provide further detail on how this report has been used to facilitate change within the NHS.  This will  provide a national overview of the current state and historic trends in health utilisation and outcomes for IBD; enabling national clinical guidelines and standards to be reviewed and improved with the benefit of population-based evidence to supplement consensus clinical opinion.  Improved guidelines and standards will improve patient care.\n\nRegistry research project – December 2016 \nThe first approved Registry Research Project entitled ‘Maximising the value of the UK IBD Registry for service delivery, audit and research’ has been funded by Crohn's and Colitis UK after peer-review by their Research Committee. The project is being conducted by the University of Liverpool in collaboration with participating hospitals and aims to use the Registry systems to capture their full secondary-care IBD population and validate a sample of the records reported to the Registry. \nA substantial part of the project focuses on developing the analytical methods to maximize the use of HES data, including the combined HES/IBD dataset, for service evaluation, audit and research so that the Registry can apply these methods in its future cycles of data collection and reporting. Publication of these methods used in IBD are likely to have an academic value for other researchers involved in similar projects in the future. Connected to output:  Registry Research Project Publications.\nPublications and presentations are expected throughout 2016. The project will formally report to the funding body in December 2016.  This work will drive improvements in the methodology and outputs of the registry increasing the value that is obtained from the data held by the registry; this will ensure that the other activities undertaken using data held by the registry are of a higher quality and there for have a greater positive impact on patient care.  These improvements in methodology may also be of value outside of the registry.",
+  "b829658258b8": "NHS Digital (Clinical Audit and Registry Management Service) are data processors for the IBD Registry. They collect and hold identifiable data from providers, which they anonymise with the IBD Study ID before providing it to the IBD Registry. NHS Digital (HES) are provided with the IBD Study ID, NHS Number, Date of Birth, Gender and Postcode by NHS Digital (CARMS). NHS Digital link the IBD Registry data with the HES data attaching the provided StudyID where appropriate. The requested HES dataset (and IBD Study ID) is provided to the University of Liverpool , who already hold the Registry data.\n \nThe University of Liverpool will analyse the HES/IBD data and will produce the aggregate outputs for the three purposes listed above. As required the University of Liverpool will enhance the combined HES/IBD dataset with non-identifiable reference data sets such as labels and groupings for diagnosis codes, or indices of deprivation. \n\nThose outputs will have small numbers suppressed in line with the HES Analysis Guide. \n\nTwo sensitive data items are requested - consultant code and registered GP code. Consultant code is to assist in identifying the correct records for inclusion in the analysis for each IBD Team to produce aggregated information on workload at team level. The GP code is to enable the patient's activity to be allocated in the analysis to the the responsible CCG so that for the first time ever the IBD workload for each CCG can be accurately identified. The two data items will not be used to identify individual consultants or individual GPs in any of the report outputs or publications.",
+  "dc1d71677123": "First quarterly feedback – From January 2017\nThe provision of information on service activity, cost, clinical treatments and patient outcomes to participating hospitals will enable effective benchmarking and comparison of local services against other IBD services. The information will improve patient care by enabling participating organisations to identify their own strengths and weaknesses and plan improvements to their patient pathways and service organisation. \n\nFirst Annual Report – September 2017\nAt present, information on IBD is scarce at national level. As such, policy makers are unable to take an informed view on standards and clinical practice across the country and are unable to develop evidence based policies based on national information. The development of the annual report is intended to fill this gap in knowledge.  This will  provide a national overview of the current state and historic trends in health utilisation and outcomes for IBD; enabling national clinical guidelines and standards to be reviewed and improved with the benefit of population-based evidence to supplement consensus clinical opinion. When the previous DARS application was made, the intention had been to produce a first Registry annual report in June 2016.  However, the Registry development was significantly delayed by the decision of NHS England in 2015 to cease funding the Inflammatory Bowel Disease Audit as part of the NCAPOP programme. This required the Registry to adapt its planned developments to collaborate with the IBD Audit during a transition year (2016-17) funded by NHS England specifically to ensure the transfer of the national biologics audit data collection and IBD quality improvement into the IBD Registry.  \n\nRegistry research project – December 2016 \nThe first approved Registry Research Project entitled ‘Maximising the value of the UK IBD Registry for service delivery, audit and research’ has been funded by Crohn's and Colitis UK as a two-year project after peer-review by their Research Committee. The project is being conducted by the University of Liverpool in collaboration with participating hospitals and aims to (a) generate metrics of care based on the combined HES/IBD dataset for cases entered into the Registry.\nA substantial part of the project focuses on developing the analytical methods to maximize the use of HES data, firstly in isolation from Registry data (to define methodologies for analysing pseudonymised HES data alone) and secondly using the combined HES/IBD dataset. The Registry can apply these methods in its future cycles of data collection and reporting. Publication of these methods used in IBD is likely to support improved use of HES data for IBD benchmarking within the NHS and have an academic value for other researchers involved in similar projects in the future. Connected to output:  Registry Research Project Publications.\nPublications and presentations are expected throughout 2016. The project will formally report to the funding body in October 2016 and the project is funded through to September 2017.  This work will drive improvements in the methodology and outputs of the registry increasing the value that is obtained from the data held by the registry; this will ensure that the other activities undertaken using data held by the registry are of a higher quality and there for have a greater positive impact on patient care.  These improvements in methodology may also be of value outside of the registry.",
+  "ead8ce3efca9": "Output 1: Trust Level Feedback Report\nPublication Intent: Available to Trusts that are participating in the Registry.\nTarget Date: From September 2016\nDetail: To provide aggregated information at site level on both the ‘Registered’ (patients identified in the IBD Registry) and ‘Unregistered’ (patients identified by clinical codes submitted to HES).\nSuppression:  Suppressed in line with the HES analysis guide\n\n******\nUpdate for the renewal \n\nThis work has progressed well during the year following a clearly defined path designed to engage clinicians in the process of developing an agreed methodology.\n\nSample reports were provided to a small set of participating hospitals for comment by the IBD teams on whether the aggregated figures derived from the analysis had face validity and were useful in clinical service evaluation.  Comments were received and taken into account in the development of the next stage, which is to provide all IBD teams in participating NHS Trusts in England with an example St Elsewhere’s report to seek their views on the format of the report, suggestions for further development and also to invite them to request a similar output for their Trust.  \n\nAlongside this is a short survey to collect some organisational data necessary to make the individual reports more accurate and useful.  This consultation will take place in January 2017, and the hope is to provide tailored reports in April/May 2017.\n\n ****************\n  \nOutput 2:  Annual Registry Report.\nPublication Intent: Published\nTarget Date: September 2017\nDetail:  This is a report into the performance of the NHS on IBD and will provide aggregated information down to site level on both the ‘Registered’ (patients identified in the IBD Registry) and ‘Unregistered’ (patients identified by clinical codes submitted to HES). \nSuppression:  Suppressed in line with the HES analysis guide\n  \nOutput 3:  Registry Research Project Publications ‘Maximising the value of the UK IBD Registry for service delivery, audit and research’\nPublication Intent: Published\nTarget Date: From June 2016 onwards\nDetail:  Aims to (a) develop IBD care metrics based on HES data alone, HES/IBD Registry data and IBD Registry data alone, and (b) use the Registry systems to capture the full secondary-care IBD population of participating hospitals and validate a sample of the records reported to the Registry.\nSuppression:  Suppressed in line with the HES analysis guide\n\n******************\nUpdate for renewal\n\nThis element of the research is progressing well.  There have been two publications as abstracts at the BSG Annual Meeting in June 2016: one concerning mortality and one methodological.\n\nBSG 2016 - Abstract Submission\n Inflammatory Bowel Disease\nBSG16-ABS-1756\nTRENDS IN MORTALITY FOR IBD PATIENTS ADMITTED AS AN EMERGENCY TO ENGLISH HOSPITALS: A 10-\nYEAR ANALYSIS OF ROUTINE ADMINISTRATIVE DATA\n\nBSG 2016 - Abstract Submission\nGastroenterology service: development, delivery, IT\nBSG16-ABS-1952\nDEVELOPMENT OF INFORMATICS TOOLS FOR THE UK IBD REGISTRY USING ROUTINE DATA: PROFILING\nOF NATIONAL-LEVEL HOSPITAL ACTIVITY FOR IBD PATIENTS IN ENGLAND\n\nFurther abstracts will be submitted in February 2017 for the BSG June 2017 meeting.  The work is currently focusing on rates of Unplanned admissions and A&E attendances as potential indicators of less than good care, which could in future be presented alongside some key elements of resource and organisation such as availability of IBD nurses and use of IBD-specific clinics.  The research is also looking at healthcare utilisation before and after prescription of biological therapies - some early results on both aspects will form the basis of the 2017 abstracts.\n************"
+ }
+}

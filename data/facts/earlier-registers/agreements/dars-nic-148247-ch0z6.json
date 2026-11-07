@@ -1,0 +1,199 @@
+{
+ "base_reference": "DARS-NIC-148247-CH0Z6",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148247-CH0Z6",
+   "version": "",
+   "organisation": "University of Manchester",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "dc6325a461a4"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "de63d68f1e4e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148247-CH0Z6-v0.0",
+   "version": "0.0",
+   "organisation": "The University of Manchester",
+   "organisation_type": "Academic",
+   "listed": [
+    "2017-03-01",
+    "2018-03-01",
+    "2019-03-01",
+    "2019-04-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01",
+      "2018-03-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "objective": "1c2051fcab7e",
+     "activities": "16e774a1d073",
+     "expected_benefits": "232d1b3c7b6f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01",
+      "2019-04-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-04-01",
+      "2020-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "16e774a1d073": "This is an observational prospective cohort study to compare the risk of development initially over 3 years, of the endpoint in two cohorts: (i) a group of patients with SLE newly exposed to a biologic therapy and (ii) A comparison cohort of patients with SLE newly exposed to conventional, non-biologic therapy, with an equivalent disease severity.  We intend to flag both the biologic cohort and the comparison cohort for notification of mortality and cancer registration.  A copy of the death certificate will be required for those who die and a copy of the histology for those who develop a malignancy. This will enable us to monitor any adverse events in both cohorts",
+  "1c2051fcab7e": "This study will document use of biologic drugs in patients with Systemic Lupus Erythematosus (SLE) in order to assess their efficacy and safety during routine clinical use. 2 cohorts will be recruited: a cohort treated with biologic therapy and a biologically naïve group. \n\nThe primary aim of establishing the BILAG Biologics Prospective Cohort is to ascertain whether using biologics in the routine treatment of SLE is associated with an increased risk of being hospitalised for infection, compared to SLE patients with similar disease activity receiving conventional therapies. The secondary purpose of the BILAG Biologics Prospective Cohort is to determine the long-term efficacy of biological therapies in the treatment of SLE.\n\nA further aim of the study is to collect  biological samples from patients receiving biologic therapy in the UK to allow us to test whether there are variations in genes which can predict who will respond and who may get serious side effects.",
+  "232d1b3c7b6f": "There have been very few major advances in the treatment of Systemic Lupus Erythematosus (SLE) over the past 35 years.  In the past 5 years however, there has been an explosion of interest in developing new molecules for the treatment of SLE.  A number of approaches have been proposed and are currently in various stages of development including B-cell depleting therapies, IL6 and IL10 blockade as well as inhibition of co-stimulatory molecules, TNF-blockade and lymphodepletion.  As these drugs become available for diseases such as RA, off-licence use in SLE is already underway and it is likely that several of these products will gain licences for use in SLE over the next 5 years. However, clinical trials are limited by patient numbers and study duration and therefore are under powered to study potentially important adverse events.  In addition, clinical trials tend to exclude patients who have been exposed to other biological therapies in the past and therefore the potential medium-term interactions between various therapeutic approaches cannot be adequately studied.  It was therefore decided to establish the BILAG Biologics Prospective Cohort to monitor the long-term safety and efficacy of these new biologic treatments in patients with SLE",
+  "dc6325a461a4": "BILAG Biologics Prospective Cohort: The Use of Novel Biological Therapies in the Treatment of Systemic Lupus Erythematosus (SLE)\n\nThis study will document use of biologic drugs in patients with Systemic Lupus Erythematosus (SLE) in order to assess their efficacy and safety during routine clinical use. 2 cohorts will be recruited: a cohort treated with biologic therapy and a biologically naïve group. \n\nThe primary aim of establishing the BILAG Biologics Prospective Cohort is to ascertain whether using biologics in the routine treatment of SLE is associated with an increased risk of being hospitalised for infection, compared to SLE patients with similar disease activity receiving conventional therapies. The secondary purpose of the BILAG Biologics Prospective Cohort is to determine the long-term efficacy of biological therapies in the treatment of SLE.\n\nA further aim of the study is to collect  biological samples from patients receiving biologic therapy in the UK to allow us to test whether there are variations in genes which can predict who will respond and who may get serious side effects.\n\nData access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC.",
+  "de63d68f1e4e": "This study will document use of biologic drugs in patients with Systemic Lupus Erythematosus (SLE) in order to assess their efficacy and safety during routine clinical use. 2 cohorts will be recruited: a cohort treated with biologic therapy and a biologically naïve group."
+ }
+}

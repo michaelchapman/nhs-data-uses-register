@@ -1,0 +1,175 @@
+{
+ "base_reference": "DARS-NIC-16274-J8H5T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-16274-J8H5T-v1.21",
+   "version": "1.21",
+   "organisation": "University of Sheffield",
+   "organisation_type": "",
+   "listed": [
+    "2019-01-01",
+    "2019-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "objective": "0a8a2c0c1a79",
+     "activities": "6f9bdb98994c",
+     "expected_output": "ce8e4bf7a540",
+     "expected_benefits": "b3f8451bdabf",
+     "yielded_benefits": "dc2aea469816"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 24
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-16274-J8H5T-v2.3",
+   "version": "2.3",
+   "organisation": "University of Sheffield",
+   "organisation_type": "",
+   "listed": [
+    "2019-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-10-01"
+     ],
+     "objective": "0a8a2c0c1a79",
+     "activities": "6f9bdb98994c",
+     "expected_output": "ce8e4bf7a540",
+     "expected_benefits": "b3f8451bdabf",
+     "yielded_benefits": "dc2aea469816"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 20
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 15
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0a8a2c0c1a79": "In providing any clinical service there is tension between maximising efficiency, cost effectiveness and other desirable features of the service. There is currently enormous pressure for the reconfiguration of vascular services due to many conflicting requirements. \n\nAn NIHR Programme Grant has been secured by The University of Sheffield and the title of the grant is “The Design, Development, Commissioning and Evaluation of Patient Focused Vascular Services”.  The programme grant has four workstreams. The first workstream is Objective 1: Current Service Arrangements (https://scharr.dept.shef.ac.uk/vascular-research/our-research/workstream-1-analysis-of-routinely-collected-nhs-data/). A key element of this first workstream involves the examination of vascular service activity and outcomes using pseudonymised HES data. The data will be used to identify trends and variation in activity and aspects of case mix and outcome that can be established from routinely collected data sources.\n\nWorkstream 2 is carrying out a thorough evaluation of the various outcome measures that are already available to vascular services in order to assess the quality of the service and outcomes.  Where necessary it is developing new methods of evaluating outcome that can be used to assist clinicians and patients in managing their condition and can also be used to evaluate the overall quality of services that are being provided.\n\nWorkstream 3 is focusing on evaluating the strength of patients preferences for various aspects of service that are likely to be affected by re-organisation, including both clinical aspects of the service and non-clinical aspects of the organisation, such as travelling distances and locality.\n\nWorkstream 4 will bring together the evidence from the first three workstreams in creating computer models of the ways in which patients with vascular disease are treated, This will allow a prediction of the effects of re-organising services on workload, outcomes and the use of resources.\n\nA supporting document has been provided with further, in-depth information about each workstream.\n\nThe Programme Grant will feed into the process of reconfiguration, initially based upon data analysis and the development of organisational models for care and subsequently through the development of quality indicators that will become available and validated over the course of the research programme. \n\nAs part of the NIHR programme grant work, the initial aim is to characterise existing vascular service arrangements and establish their relationship to workload, case mix and outcomes. This aim will be achieved by analysing routinely collected sources of data, primarily Hospital Episode Statistics (HES) and Civil registration Mortality data.",
+  "6f9bdb98994c": "The original processing is continuing. Over the past two years detailed analysis and modelling protocols have been developed to define case mix groups and outcomes and incorporate these into models of service configuration.  The University of Sheffield are currently awaiting NHS Digital data so that these models can be updated with more recent data. This data will be used to identify trends and variation in activity across vascular service provision areas in England. The analysis will focus on four main conditions (abdominal aortic aneurysms, peripheral arterial disease, carotid artery disease, varicose veins). Variations in case mix and comorbidity will be examined. Outcomes for which data are available will be examined (e.g. readmissions, surgical revision procedures, subsequent cardiovascular events). Linked mortality data will be a key indicator in relation to longer term outcome.\n\nData analysis will consider: trends in activity; identification of appropriate outcome measures; variations in practice, particularly in relation to new technologies (e.g. endovascular repair of aortic aneurysms, endovascular treatment of peripheral arterial disease, new treatment modalities for varicose veins) and differences in patient selection; travel distances to treatment centres and transfers between hospitals; relationships between service configuration, volume and outcomes.\n\nVascular case mix groups will be defined using a previous Health Technology Assessment (HTA) study (in 2000). An expert working group of specialists in general practice, vascular surgery, vascular radiology, nursing and other relevant specialties will be established to review the decision-making rules used to analyse the data. The group only have access to the aggregated outputs, with small numbers suppressed in line with the HES Analysis Guide. . It will review and modify the classification of case mix groups to take account of changes in coding and new procedures and investigations. It will also advise on potential quality indicators and outcomes from aggregated outputs. These outputs will be small numbers suppressed in line with the HES Analysis Guide.\n\nPotential indicators and outcomes include extended hospital stay (criteria specified for individual procedural or diagnostic groups), readmissions and repeated procedures, early and late mortality after aortic aneurysm surgery, diagnosis of stroke after carotid surgery and amputation of a lower limb after arterial surgery.\n\nThe research requires data over a long time-period, to include periods of time before and after reconfiguration.  The data also needs to be for the whole country in order to assess differences in practice and outcomes across the country.\n\nThe data will be stored on the University of Sheffield’s secure central computer machines managed by the University’s Corporate Information and Computing Services Department (CiCS). A firewall is operated and maintained by CiCS to protect the entire University of Sheffield campus network. The machine room is secure with shutters, access control, intrusion detection and early fire detection with fire suppressant facilities. CiCS carries responsibility for the physical and other security of the networked systems of the University, a requirement of the data handling commitments under data protection legislation.\n\nAccess to the NHS Digital data will be password protected and restricted to researchers working directly on the project.\n\nThe volume of data is large and processing is carried out on fast encrypted computers housed in University premises and connected to the University’s campus network.\n\nData will only be accessed and processed by substantive employees of the University of Sheffield and will not be accessed or processed by any other third parties not mentioned in this agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThere will not be data linkage undertaken with NHS Digital data provided under this agreement that is not already noted in the agreement.",
+  "b3f8451bdabf": "The outputs from the programme will be a set of tools of use to providers and commissioners of vascular services. There will be six specific outputs.\n\n1. The outputs from the HES analysis will provide a report of existing service configuration, workload and referral patterns, along with a set of standardised measures for vascular activity and those outcomes that are identifiable from routine datasets. It will also identify recent and planned changes to vascular service configuration.\n\n2. A systematic review of the relationship of outcome to identified aspects of service configuration will provide an assessment of the existing literature that links outcomes within vascular services to aspects of service configuration.\n\n3. A library of reported utility values for outcomes relating to arterial disease will be published based upon the literature review. These values will be updated when values obtained from the outcome measure assessment in the ePAQ-VAS become available.\n\n4. A set of validated generic and condition specific outcome measures will be developed along with a standardised and validated electronic format for data collection that will be suitable for clinical assessment and service evaluation.\n\n5. A report will identify the attributes, other than those included in calculation of health related quality of life, that are considered important in the provision of vascular services with an estimate of QALY equivalents that can be used to guide future service planning.\n\n6. The final report from the programme will include a set of cost utility models covering the main pathways of care in five key disease areas within vascular disease. The report will include a consideration of the cost utility of a variety of changes in practice that are identified as being potential effects of service reconfiguration, as well as allowing future assessment of the cost utility of other service changes or introductions of new technologies.",
+  "ce8e4bf7a540": "The results have been, and will continue to be, submitted to NIHR in the form of project reports and presented to committees overseeing national vascular service provision and strategic development. The findings will be disseminated through publication in peer reviewed journals and presentation at national and international conferences.\n\nProject reports have been submitted to NIHR annually through the five-year duration of the project (2013-2018) and will continue to be submitted through the extension period. \n\nThe following paper has been accepted for publication:\n\nAber A, Tong TS; Chilcott J, Thokala P, Maheswaran R, Thomas SM, Nawaz S, Walters SJ, Michaels J. Sex differences in the rates of repair of emergency abdominal aortic aneurysm: A Nationwide Population-Based Cohort Study in England between 2002-2015. British Journal of Surgery 2018 (in press).\n\nThe following paper will be resubmitted to BMC Health Services Research following revision in line with reviewers’ comments:\n\nAber A, Tong TS; Chilcott J, Maheswaran R, Thomas SM, Nawaz S, Michaels J. Methodology to Identify Aortic Aneurysm Activity in England from Hospital Admissions Data.\n\nThe Programme Grant will feed into the process of reconfiguration of NHS vascular services in England, initially based upon data analysis and the development of organisational models for care and subsequently through the development of quality indicators that will become available and validated over the course of the research programme.\n\n The benefits will begin to be realised from 2019 onwards.\n\nThe programme (including all work streams) has produced a number of outputs, which are available on the website:\n\nAcademic research papers: https://scharr.dept.shef.ac.uk/vascular-research/outputs-and-resources/academic-researchpapers/\n\nPosters and other media: https://scharr.dept.shef.ac.uk/vascular-research/outputs-and-resources/posters-and-othermedia/\n\nPresentations: https://scharr.dept.shef.ac.uk/vascular-research/outputs-and-resources/presentations/\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "dc2aea469816": "The Researchers are still in the process of analysing the data. The original data was only received two years into the five-year programme grant duration. The analysis is therefore well behind schedule and an extension from NIHR has been granted."
+ }
+}

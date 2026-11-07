@@ -1,0 +1,105 @@
+{
+ "base_reference": "DARS-NIC-312474-H5Q0T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-312474-H5Q0T",
+   "version": "",
+   "organisation": "Healthcare Quality Improvement Partnership",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "36d16cde9a97"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "212a1bb25ad0"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (CAG 8-03(PR11)/2013) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251/ Class Support (CAG 8-03(PR11)/2013) approval is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (CAG 8-03(PR11)/2013) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-312474-H5Q0T-v0.4",
+   "version": "0.4",
+   "organisation": "Royal College of Physicians of London",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "e8fa4f096cf7",
+     "activities": "eabec8dbb174",
+     "expected_output": "7f26936eaf56",
+     "expected_benefits": "c1c0b3b48db8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "212a1bb25ad0": "The intention of the audit is to; Ensure clinicians and managers have access to reliable data Use it to improve the processes of care for patients  As a result improve outcomes for patients Ensure reliable information on quality of care and outcomes is available for patients and the public. Act as the measurement tool for the DH Best Practice Tariff for hip fracture initiative",
+  "36d16cde9a97": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC.\nObjective for processing: \nRESEARCH \nTo calculate the total length of stay in NHS hospitals after a hip fracture (the “super-spell”), which can be derived from HES, and relate variation in super-spell to the variations in clinical care measured in the  NHFD, to determine whether or not patients return to independent living after a hip fracture, and relate this to their clinical care.  Using linked HES and NHFD extracts would overcome the limitations of each respectively: NHFD has incomplete follow-up, so it is not known what happens to patients that are discharged to PCT-run rehabilitation units; HES has too little detail in the coding of discharge destination, with the category “usual residence” covering a range of living arrangements.  Using the linked data, it would be possible to identify a cohort of patients admitted from their own home who were living independently (from NHFD), who were discharged back to their usual residence at the end of the super-spell (from HES).\n2)\tTo relate clinical processes of care, in particular orthogeriatric input into care (using NHFD), to medium and long-term outcomes including readmission to hospital and 365-day mortality (using ONS data (held under MR1346)  already linked to NHFD, and already linked to HES at CEU)\n3)\tTo relate individual comorbidity, measured using HES, to processes of care and patient outcomes, and to adjust for comorbidity in analyses of the relationship between clinical care and outcomes.\nAUDIT\n The calculation of super-spell will involve the linkage of HES episodes that may not occur in the same hospital, or be contiguous in time.  To ensure The Royal College of Physicians can account for all reasons for a sequence of episodes ending, they need to be able to identify when a patient has died, particularly when this occurs unexpectedly during a planned sequence of episodes.\n\nProcessing activities:\nRESEARCH\n\nMultivariable logistic regression models will be used to look at the relationship between processes of care (measured using NHFD) and various patient outcomes (measured using NHFD, HES and ONS), adjusting for patient characteristics (measured using NHFD and HES) that potentially affect both the care given and the risk of mortality, such as age, sex and pre-fracture mobility.  Adjustment would also be made for hospital and time trends, which are also both potential confounding factors.\nMultilevel logistic and cox regression may also be used to estimate the effects of individual care and organisational factors on 30-day mortality and survival, respectively.  Methods for handling missing data, such as multiple imputation, will be used if suitable.  In addition, the potential for using structural models to assess direct and indirect effects of processes of care on outcomes will be explored.\n\nAUDIT\n\n1.\tTo estimate the annual number of hip-fractures in England at individual NHS trusts and hospitals so that levels of case-ascertainment within the NHFD can be derived.\n2.\tTo estimate whether there has been consistent reporting of outcomes to the NHFD by examining the agreement between the outcome measures derived from NHFD and HES data.\n3.\tTo calculate superspell figures for hospitals and NHS trusts from the last two available financial years and compare the average lengths of stays with superspell figures in the current year to assess whether there has been a reduction in acute and/or post-acute lengths of hospital stay.   \n4.\tUse HES to evaluate the benefit of long-term outcome measures such as 6-month / 1-year survival and readmission profiles by using ability the ability of HES to track patients and describe their patterns of care after an incident hip fracture.\nSpecific outputs expected, including target date: \n\nRESEARCH\nResearch presentations and peer-reviewed articles are the required outputs of the NIHR Fellowship over the period 2014-2016.\n\nAUDIT\nThe results and methods used to derive case-ascertainment and HES super-spells will be published in the NHFD annual report in September 2015.  The results of the other analyses will be published in other NHFD supplementary reports and /or peer-reviewed articles.\nExpected measurable benefits to health and/or social care including target date: \n1.\tMore accurate risk-adjustment when comparing hospital performance, where linkage to HES will allow better measurement and adjustment for patient comorbidity.  This would enable clinicians to identify patients with the highest risk of poorer outcomes.\n2.\tMeasurement of the impact of hospital hip fracture care on long-term outcomes, where linkage to HES will allow measurement of long-term outcomes such as readmission to hospital and future hip fractures. This will generate important knowledge that will inform the allocation of resources for hip fracture care.\n3.\tMeasurement of the rate of return to independent living vs. residential care following a hip fracture.  This is a key outcome of care.  Each of the NHFD and HES database individually have shortcomings that can be overcome by using linked data.  This will be useful to clinicians and commissioners involved in design and funding of intermediate, rehabilitation and social care.\n4.\tMore accurate estimation of case-ascertainment (ie, number and % of hip fracture patients recorded in NHFD).  Targeted action could be taken to inform hospitals with incomplete case-ascertainment.\n\nIs the purpose of this application in anyway commercial?\t YES / NO, if yes, please explain.- \nNO",
+  "7f26936eaf56": "AUDIT\nThe results and methods used to derive case-ascertainment and HES super-spells will be published by the RCP in the NHFD annual report in September 2015 & September 2016.  The results of the other analyses will be published in other NHFD supplementary reports and /or peer-reviewed articles.\nRCP publish CCG level outcomes for the Best Practice Tariff and to support the NHS Outcomes Framework and CCG Outcome Indicators Set.\nRCP publish provider level outcomes for the Best Practice Tariff.\nFor statistical purposes, such as monitoring trends, registered individuals at Trusts can access date of death for patients they submit to the audit, derived from ONS mortality data. Run charts and tables are also provided using 30 day survival.\nWhilst the patient information leaflet states “We sometimes get requests from hospitals, universities and other organisations who want to carry out research using the data that we collect. We always ensure that researchers that we agree to share data with have approval from the National Research Ethics Service and we will never release information that could be used to identify you as an individual.” No record level data falling under this agreement will be shared to any third-party without prior HSCIC approval; such requests will be subject to separate consideration by DAAG. If approved only anonymised data would be shared with credible third parties in line with the customers S251.\n\nRESEARCH\nResearch presentations and peer-reviewed articles in journals (such as ‘Medical Care’, ‘Anesthesia’, ‘Bone and Joint Journal’) are the required outputs of the NIHR Fellowship (ref PDF-2013-06-078)  over the period 2014-2016.\n\nAll outputs will comply with the HES analysis guide, ONS disclosure control guidance for birth and death statistics , and the NHS anonymisation standard.",
+  "c1c0b3b48db8": "As part of the Falls and Fragility Fracture Audit Programme (FFFAP) within the Clinical Effectiveness and Evaluation Unit at the RCP, the NHFD has now developed into a comprehensive quality improvement initiative and combines several elements:\n•\tdescription of facilities and practice in different units around the country\n•\taudit of practice against the NICE quality standard for hip fracture (QS16)\n•\tperformance evaluation to support Monitor’s Best Practice Tariff (BPT)\n•\tsupport for clinical governance in individual hospitals\n•\tmetrics to support patient safety monitoring\n•\tidentification of outlier hospitals in respect of patient outcome\n•\ta framework to support local and national audit work\n•\tan infrastructure for scientific and research work\n•\ta resource of specialist information, expertise and networking.\n\nThe data requested in this application will support\n\n•\tMore accurate risk-adjustment when comparing hospital performance, where linkage to HES will allow better measurement and adjustment for patient comorbidity.  This would enable clinicians to identify patients with the highest risk of poorer outcomes – leading to better care and better delivery of services (value for money)\n•\tMeasurement of the impact of hospital hip fracture care on long-term outcomes, where linkage to HES will allow measurement of long-term outcomes such as readmission to hospital and future hip fractures. This will generate important knowledge that will inform the allocation of resources for hip fracture care leading to better commissioning and value for money.\n•\tMeasurement of the rate of return to independent living vs. residential care following a hip fracture.  This is a key outcome of care.  Each of the NHFD and HES database individually have shortcomings that can be overcome by using linked data.  This will be useful to clinicians and commissioners involved in design and funding of intermediate, rehabilitation and social care leading to better commissioning and value for money.\n•\tMore accurate estimation of case-ascertainment (i.e., number and % of hip fracture patients recorded in NHFD).  Targeted action could be taken to inform hospitals with incomplete case-ascertainment this will lead to better future audit and hence more robust benefits derived from it.",
+  "e8fa4f096cf7": "AUDIT\nThe National Hip Fracture Database (NHFD) is a clinically led, web-based quality improvement\ninitiative commissioned by the Healthcare Quality Improvement Partnership (HQIP) and managed by the Royal College of Physicians (RCP).\nAll 182 eligible hospitals in England, Wales and Northern Ireland are now regularly submitting data to NHFD, the largest hip fracture database in the world, with:\n• a third of a million cases recorded since its launch in 2007\n• over 95% of all new hip fracture cases being documented\n• 5,700 records being added every month.\nIn addition to the information collected by the audit, Hospital Episode Statistics (HES) data is linked to the audit data to provide a richer data set.\nHES data is used in this audit to look at patient pathways for people who have experienced a hip fracture. The audit will look at HES episode data for patients and link them together into a ‘super-spell’, this is the whole period of hospitalisation for the patient regardless of which consultant they are under and crossing hospitals where a transfer has taken place.\nTo ensure The Royal College of Physicians (RCP) can account for all reasons for a sequence of episodes ending, they need to be able to identify when a patient has died, particularly when this occurs unexpectedly during a planned sequence of episodes.\nThe data will be used to refine case ascertainment algorithms for the audit.\nThe data will be used to validate and refine casemix risk adjustment models for the audit.\n\nRESEARCH  \nTo calculate the total length of stay in NHS hospitals after a hip fracture (the “super-spell”), which can be derived from HES, and relate variation in super-spell to the variations in clinical care measured in the  NHFD, to determine whether or not patients return to independent living after a hip fracture, and relate this to their clinical care.  \nTo relate clinical processes of care, in particular orthogeriatric input into care (using NHFD), to medium and long-term outcomes including readmission to hospital and 365-day mortality (using ONS and HES data linked to NHFD,)\nTo relate individual comorbidity, measured using HES, to processes of care and patient outcomes, and to adjust for comorbidity in analyses of the relationship between clinical care and outcomes.",
+  "eabec8dbb174": "Crown Informatics  send NHS Number, Date of Birth, Full postcode, Name, and FFFAP ID ( a study ID for the Falls and Fragility Fracture Audit Programme) to the HSCIC.\nHSCIC DARS link data and provide Crown with \n•\tList cleaning file (validated identifiers) with FFFAP ID\n•\tHES non sensitive data for cohort with FFFAP ID\n•\tHES non sensitive data for falls patients who are not in cohort but have a diagnosis of a fall or fracture\n•\tONS Date of death with FFFAP ID\nCrown informatics receive data from HSCIC and combine with FFFAP data\nCrown send validated identifiers and FFFAP ID to NWIS to receive Patient Episode Data for Wales ( PEDW)\n\nCrown Informatics  send Royal College of Surgeons (RCS)\n•\tFFFAP ID and date of death, HES data, and PEDW data, data is pseudonymised apart from date of death.\nRCS analyses data for research and audit\nCrown make death data available to trusts. For statistical purposes such as monitoring trends registered individuals at Trusts can access date of death for patients they submit to the audit derived from ONS mortality data. Run charts and tables are also provided using 30 day survival.\nAUDIT\n1.\tTo estimate the annual number of hip-fractures in England at individual NHS trusts and hospitals so that levels of case-ascertainment within the NHFD can be derived.\n2.\tTo estimate whether there has been consistent reporting of outcomes to the NHFD by examining the agreement between the outcome measures derived from NHFD and HES data.\n3.\tTo calculate superspell figures for hospitals and NHS trusts from the last two available financial years and compare the average lengths of stays with superspell figures in the current year to assess whether there has been a reduction in acute and/or post-acute lengths of hospital stay.  \n4.\tUse HES to evaluate the benefit of long-term outcome measures such as 6-month / 1-year survival and readmission profiles by using ability the ability of HES to track patients and describe their patterns of care after an incident hip fracture.\n5.\tTo validate and refine casemix risk adjustment models for the audit\n\nRESEARCH\nMultivariable logistic regression models will be used to look at the relationship between processes of care (measured using NHFD) and various patient outcomes (measured using NHFD, HES and ONS), adjusting for patient characteristics (measured using NHFD and HES) that potentially affect both the care given and the risk of mortality, such as age, sex and pre-fracture mobility.  Adjustment would also be made for hospital and time trends, which are also both potential confounding factors.\nMultilevel logistic and cox regression may also be used to estimate the effects of individual care and organisational factors on 30-day mortality and survival, respectively.  Methods for handling missing data, such as multiple imputation, will be used if suitable.  In addition, the potential for using structural models to assess direct and indirect effects of processes of care on outcomes will be explored.\nUsing linked HES and NHFD extracts would overcome the limitations of each respectively: NHFD has incomplete follow-up, so it is not known what happens to patients that are discharged to PCT-run rehabilitation units; HES has too little detail in the coding of discharge destination, with the category “usual residence” covering a range of living arrangements.  Using the linked data, it would be possible to identify a cohort of patients admitted from their own home who were living independently (from NHFD), who were discharged back to their usual residence at the end of the super-spell (from HES)."
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "base_reference": "DARS-NIC-378491-R6K9Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-378491-R6K9Y-v2.2",
+   "version": "2.2",
+   "organisation": "University of Sheffield",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "edd0627c0b4c",
+     "activities": "ce11c5559aa1",
+     "expected_output": "fd89539e3de2",
+     "expected_benefits": "ba3c0990b537"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "ba3c0990b537": "This will demonstrate the benefits and cost savings of RTNs to the NHS and provide evidence to support the implementation of RTNs in other areas, for example Northern Ireland. It is anticipated that the information will be evaluative in terms of identifying the degree to which the cost effectiveness of trauma care has changed over the period of RTN implementation. If cost effectiveness at the NICE threshold is not achieved this will highlight a need for action to NHS England. It is unlikely RTN’s will be abandoned unless case fatality is worse and there is already evidence from TARN that this is unlikely.\n\nThe modelling may indicate differences between regions although direct comparisons are difficult to make as some RTNs were only fully implemented in 2014. If there is a wide disparity between regions who implemented at the same time then this will be explored to the level of determining whether variation in clinical outcomes, or cost, explain discrepancies. This has the potential to highlight good practice to lead clinicians and decision-makers at NHS England.\n\nThe target date will be to approximately 6 months after receiving the data for the report with the target audience being policy makers at NHS England.  The target audience for the open access peer review article will be clinicians and managers involved in trauma care in the NHS with possible journals including the BMJ or the Journal of Trauma and Acute Care Surgery",
+  "ce11c5559aa1": "Data will be accessed for the purposes of providing model parameters for mortality and costs for a cost-effectiveness model of RTNs. Data will be inputted into the cost-effectiveness model at an aggregate level e.g. mortality from trauma across England. The cost-effectiveness model is a mathematical/statistical model that uses a simulation technique to estimate the cost-effectiveness of regional trauma networks based on a set of parameters. In the case of the trauma networks these are number or survivors, number of deaths, mean cost. There will be no sharing with third parties. Any small numbers will be suppressed in line with the HES Analysis Guide.",
+  "edd0627c0b4c": "In 2009 the University of Manchester was commissioned by the Department of Health to evaluate the expected cost effectiveness of regional trauma networks (RTNs) prior to their implementation using published data and information from long-term follow-up of seriously injured patients. This work was subsequently sub-contracted to the University of Sheffield, and the University of Manchester will not have access to the data. The aim of this initial study was to estimate the expected costs and consequences of regional trauma systems with a view to implementing them across England and Wales should they be shown to be cost-effective. When estimating the expected cost-effectiveness of regional systems it was necessary to make a number of assumptions about the system owing to the sparse reported evidence on trauma systems at the time. However, it was felt that there was sufficient evidence to recommend the implementation of regional trauma systems. NHS England want to evaluate regional trauma networks and HES-ONS data would be used to update mortality estimates which are the number of trauma cases per year and cost (resources) in the period up to discharge from hospital following a trauma incident. Data from long-term follow-up of serious injuries and Trauma Audit and Research Network (TARN) data will be used to populate other parameters in the model. No data linkage will be made between HES, TARN and long-term follow-up data. \n\nTARN includes patients who arrive at hospital alive after injury and subsequently fulfil one of the following criteria:\n(i) Death in hospital during the acute phase\n(ii) initial spell of care > 72hours\n(iii) requires High-Dependency Unit (HDU) or Intensive Care Unit (ICU) care\n(iv) Requires an interhospital transfer for acute care\n\nThe aim is to run cost effectiveness models comparing the period prior to trauma networks existing, during the set up phase and after implementation of trauma networks for the whole of England and separately for each trauma network. Information will be used to update model parameters in the cost-effectiveness model and reported as overall number of cases, mortality or overall cost for trauma networks across England or per trauma network for each of the periods described.",
+  "fd89539e3de2": "Information will be used to populate an economic model on the cost-effectiveness of RTNs. Model outputs will include: incremental cost-effectiveness ratios, costs of running trauma networks and quality adjusted life years, expected number of additional survivors from RTNs, total number of trauma cases and number of deaths. The model will be run over 10,000 simulations and the mean result with confidence intervals will be reported. Other outputs will include a cost-effectiveness plane and cost-effectiveness acceptability curve for model results. This will be completed six months after receipt of data from HSCIC.\n\nIn statistical analysis and health economic analysis there is uncertainty around summary estimates, typically reported with standard deviations or confidence intervals.  In economic evaluations a number of parameters contribute towards cost-effectiveness analysis e.g. costs, survival, quality of life and each of these has uncertainty around it. Generally, all uncertainties can be accounted for simultaneously in a cost-effectiveness model by assigning (statistical/mathematical) distributions (e.g. the normal distribution) around the information that is included in the model and use computer simulations to account for the uncertainty. The economic model built at the University of Sheffield for the previous work uses computer simulations to account for the uncertainty.\n\nThe University have previously produced a paper in 2011 looking at the cost-effectiveness of RTNs."
+ }
+}

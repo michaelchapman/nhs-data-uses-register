@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-278518-F3H0X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-278518-F3H0X-v1.3",
+   "version": "1.3",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "bfc6b2c7c2ba",
+     "activities": "17687db06604",
+     "expected_output": "1c1a6fddc82f",
+     "expected_benefits": "8d8dd2c5a7d9"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 8
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "17687db06604": "The data will be processed in the offices of the Vascular Surgery Research Group in Room 4N12 at Charing Cross Hospital (Imperial College Healthcare NHS Trust) on a non-networked dedicated computer with built-in BitLocker encryption (i.e. full disk encryption) in a secure office only accessible to the IMPROVE trial manager, who is employed by Imperial College London, but has a Research Passport and Letter of Access with Imperial College Healthcare NHS Trust. The sole trial manager has had IGT training and will comply with the principles of the Data Protection Act 1998 at all times when processing/storing personal information. Identifiable personal information will *only* be viewed by the trial manager on this specific computer (i.e. no mobile or remote working). HES datasets will not be saved on any other trial database in any other location.  \n\nOnce the data has been checked and cleaned, it will be fully anonymised on this same stand-alone computer and all patient identifying details removed (only the trial ID will be carried through during data analysis). Procedure codes received from HES will be summarised into clinically helpful categories (e.g. aorta and distal artery related, damaged bowel or abdominal wall related, etc.) and an anonymised file containing four digit Trial ID and these summary categories of complications will be analysed by the statistician, (based at the University of Cambridge) and two health economists (based at the London School of Hygiene and Tropical Medicine (LSHTM).  Both the University of Cambridge and LSHTM have formal subcontracts with Imperial College London, to undertake the statistical and health economic analysis for the trial, respectively.  Both the statistician and health economists will only view and analyse the anonymised data file at Charing Cross Hospital at the Imperial College site and under the controls/policies of Imperial College London.",
+  "1c1a6fddc82f": "1. Clinical and cost-effectiveness of an endovascular strategy versus open repair at 3-years after repair of ruptured abdominal aortic aneurysm [for major journal publication, Health Technology Assessment (HTA) report and reporting to the National Institute for Health and Care Excellence (NICE) for April 2017.\n2. The main findings to 3 years will be presented to The Vascular Society of Great Britain and Ireland on 1st December 2016.  The major outcomes also will be reported at other national and international conferences (International VEITHsymposium in New York, The British Society of Endovascular Therapy and the European Society for Vascular Surgery), on the IMPROVE trial websites and via social media outlets such as Twitter. \n\nAll outputs will consist of aggregate data only with small numbers suppressed in line with HES analysis guide.",
+  "8d8dd2c5a7d9": "1. To add to the accuracy of the cost-effectiveness and the incremental net benefit of an endovascular strategy for repair of ruptured abdominal aortic aneurysm: 2016-2017.\n2. To benefit all future patients admitted to hospital with a diagnosis of ruptured abdominal aortic aneurysm.\n3 To drive organisational changes, so that endovascular repair becomes available to all patients with ruptured abdominal aortic aneurysm",
+  "bfc6b2c7c2ba": "To provide a robust alternative assessment of the use of health service resources by patients enrolled in IMPROVE (ISRCTN48334791), a randomised trial of an endovascular strategy versus open repair for patients with a clinical diagnosis of ruptured abdominal aortic aneurysm.  \n\nSince the primary outcome of the trial, 30-day mortality, was not different between the two randomised groups (BMJ 2014;348:f7661), accurate longer-term clinical and cost-effectiveness evaluations of the 2 treatments have particular relevance for the NHS.\n\nImperial College London's current source of information on the use of health services after hospital discharge comes primarily from the specialist vascular centres participating in the trial (where patients had their ruptured aneurysms repaired).  Re-admissions to non-trial hospitals are not captured.  To enhance the generalisability and robustness of clinical and cost-effectiveness evaluations, IMPROVE trial Management Committee wish to cross-check both aneurysm-related re-interventions and hospital re-admissions (any hospital for any reason) data, to validate and supplement the information collected from relevant trial hospitals with HES admissions/procedures data.  The aneurysm-related re-interventions include procedures directly related to the aorta and distal arteries (L procedure codes) and procedures which arise as a result of damaged bowel or abdominal wall during aneurysm repair (including some G, H and T procedure codes).\n\nHES data for admissions, procedures, length of hospital stay are requested for specified patients, to provide details of hospital resources used between discharge and 3 years post-operative period.  Ethical approvals are in place to support the collection of data.\n\nAdmitted patient care and critical care datasets from 2009/10 (01/09/2009 onwards) to 2012/13 were received in 2015 as one-off files as part of this DSA and the data crosschecked against aneurysm-related re-interventions captured by participating hospitals: this covered 1-year follow-up for the majority of patients (randomised Sep-2009 to July-2013).  Imperial College London identified two major re-interventions in the HES dataset (1 had occurred at a non-participating hospital and the other overlooked by one of the participating centres).  After 3 years of follow-up, Imperial College London again need to cross check the data received from trial centres, this time separating re-interventions on the aorto-iliac and distal arteries from those due to damage to the abdominal viscera or aorta wall incurred by either the event or repair of the ruptured aneurysm.   \n\nImperial College London will submit details for patients who were recruited to the IMPROVE trial at England hospitals and were alive at primary discharge, with post-operative consent (around 350 patients). Imperial will provide the NHS number, Trial ID, sex, DOB and the date of discharge after index repair date for each patient. For these patients Imperial would like to request all hospital admission dates, discharge dates, diagnosis codes, provider codes, until 3 years following discharge from index repair (or death if this occurs before 3 years). Imperial would also like for these admissions to be linked to certain procedure codes to ascertain aneurysm-related re-interventions, if there were any.  To be able to cover 3-year period for all patients Imperial request to receive admitted patient care and critical care datasets from 2009/10 to 2015/16 (current year needed to 22nd July 2016).  Imperial plan on using Trial ID and HES patient identifier to link APC and CC datasets and do not require any sensitive/identifiable fields. The pseudonymised data received from NHS Digital will not be linked to identifiable data which is held on a separate unlinked database."
+ }
+}

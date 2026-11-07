@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-28480-W2R8F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-28480-W2R8F-v1.4",
+   "version": "1.4",
+   "organisation": "PHARMERIT INTERNATIONAL",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "d11a48891768",
+     "activities": "b49fa4742def",
+     "expected_output": "e8022c1ee6cb",
+     "expected_benefits": "e6d815da80af"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 6
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "b49fa4742def": "The data request is for pseudonymised non-sensitive data only and is specific with regards to the filtering of vaginal and vulval cancer ICD-10 codes and extraction fields. A retrospective (non-comparative) case series will be performed using the extracted pseudonymised patient level data; with derived spell Healthcare Resource Groups (HRGs) being cross-referenced with published national costs to quantify the economic burden associated with vaginal and vulval cancer in England. \n\nExtracted finished consultant episodes (FCEs) will be grouped into spells using the HSCIC’s HRG grouper (for the respective year). Analysis at spell level of prevalence, patient demographics and treatment outcomes (HRG frequency, length of hospital stay, readmission and mortality) delineating by data extraction year will be conducted to allow accurate costing of the spells. Whilst the HESID field will be used during the analyses, this field will solely be used to track patients throughout the extracted year in case they are re-admitted due to their vaginal / vulval cancer. It is important to track re-admissions in order to estimate an accurate per patient cost in these analyses. All outputs from the analyses of the pseudonymised data will be aggregated in format, and no individual records will be reported. \n\nSmall numbers will be suppressed in line with the HES analysis guide to avoid potential identification of patients. All analyses will be conducted in line with the Hospital Episode Statistics (HES) analysis guide.\n\nCosting of the extracted data will be conducted using the most recent published national costing data (NHS national tariff and reference costs) adhering to the rules of Payment by Results (PbR) to derive an estimate of the economic burden of these cancers in England. A costing algorithm will be developed specifically to match and apply the national costs. The algorithm will adhere to the guidelines of the former PbR framework. The costing algorithm will be developed by Pharmerit for Pharmerit’s use during these analyses. It will not be shared with any third parties. With the exception of cross-referencing to national costing databases (NHS reference costs, NHS national tariff), Pharmerit Ltd. will not link this data to any other sources. Outputs of the costing exercise will be published in aggregate format and no individual records will be reported.\n\nTo validate the findings from the analyses of the HES data, a separate mathematical model (decision tree and Markov model) will be developed to simulate the treatment pathway for a vulval cancer case and a vaginal cancer case of squamous origin in order to estimate the average cost of treating a single patient. The model will be developed based on UK clinical guidelines, expert opinion / input and the aggregated data from the analyses for which this data request pertains.\n\nAll data requested will be non-sensitive and pseudonymised.\n\nAll individuals with access to the record level data are employed by Pharmerit. \nPharmerit Ltd. will not link this data with any other data.\nPharmerit Ltd. will not hold any identifiable data – any change to this position would result in a resubmission to DARS.",
+  "d11a48891768": "According to statistics provided by Cancer Research UK (CRUK), vulval cancer incidence rates have increased overall in Great Britain since the mid-1970s, due to increased prevalence of human papillomavirus (HPV), other sexually transmitted infections, and smoking. Without appropriate preventative advice or other intervention, it is expected that rates will continue to rise. CRUK report that in 2011, there were 1,200 diagnoses of vulval cancer, and approximately 400 deaths in 2012, more than one every day. In the case of vaginal cancer there were 256 diagnoses in 2011 and 111 deaths (equating to around two per week) in 2012. \n\nDespite rising disease incidence rates, there are currently no published figures for the cost of a case of vaginal or vulval cancer, nor of their precursor lesions, vulval intraepithelial neoplasia (VIN) and vaginal intraepithelial neoplasia (VaIN), in the United Kingdom (UK). \n\nPharmerit Ltd wish to process patient-level data to estimate the economic burden of vulval and vaginal cancers on the National Health Service (NHS), with the final aim of reporting their findings in the form of a manuscript for publication in a peer-reviewed journal.  \n\nOutputs produced will only ever contain aggregate data with small numbers supressed in line with the HES analysis guide) will then be available sourced by other parties including health funding decision-makers and those who have an influence on decisions for use as inputs into cost-effectiveness analyses and other forecasting activities stakeholders in both the private and public sectors. This will allow optimal decision making in the Department of Health (DH), NHS and public health sector regarding the best use of their limited resources, and thereby maximise the health of the population they serve.\n\nAlthough Pharmerit Ltd hope that health-funding decision makers will use the published research in their forecasting activities moving forward, Pharmerit themselves will not be involved in any wider programme of research concerning these data. If the data requested in this application is not received, the current data gap will remain, with no published figures being publically available. In this situation, crude figures are used in budget estimations, potentially resulting in sub-optimal distribution of NHS resources.",
+  "e6d815da80af": "By calculating the cost to the NHS of vaginal and vulvar cancer as well as the precancerous lesions VIN and VaIN, this work will fill a gap in current knowledge. This information can be used in economic analyses of preventative measures, treatments and procedures related to these conditions. \n\nFully-informed economic analyses ensure optimal use of a limited health budget, by maximising health gains, and thus improve the efficiency of the health and social care system as a whole.\n\nFor the vaginal/vulvar cancer patient this would mean a more efficient care pathway and access to more effective treatments and procedures, which in turn would improve prognosis and increase patient quality of life. \n\nSuch benefits would begin to be seen as soon as the information is in the public domain, as from this point it would be available for use in economic evaluations and health technology assessments.\n\nPharmerit Ltd hope to publish the findings from this research by mid-2017.",
+  "e8022c1ee6cb": "The ultimate aim of this research is to ensure real-world data based estimates of the cost of treating vaginal and vulval cancers are made available in the public domain for use by decision-makers through publication in peer-reviewed journal(s) and presentation at conferences routinely attended by key stakeholders and relevant NHS decision-makers. One expected output from this research is a poster for presentation at a conference on the economic burden and resource implications associated with vaginal and vulval cancer. \n\nTarget conferences are:\n\nHPV 31st International Papillomavirus Conference;\nISPOR (International Society of Pharmacoeconomics and Outcomes Research);\n22nd Annual International Meeting and the BASHH (British Association for Sexual Health and HIV) Annual Conference 2017. \n\nPharmerit Ltd intend to target these conferences as they are well-attended by health economists and health professionals working in sexual health and/or oncology. ISPOR is a major health economic conference, and BASHH a major sexual health conference. Both have large audiences which routinely include key stakeholders and relevant decision makers. \n\nPharmerit Ltd also intend to publish findings in a peer-reviewed journal. The intention of Pharmerit Ltd is to submit findings to a British Cancer journal such as the British Journal of Cancer or BMC Public Health. This will ensure the findings reach a relevant readership of sexual health professionals, including those responsible for the decision-making process of NHS funding in England as well as those who have an influence on this decision-making process.\n\nDepending on the timing of data receipt, publication of findings is planned for Q1/early Q2 of 2017.\n\nBy publishing the work Pharmerit hope to fill some of the unmet need in terms of published estimates of the economic burden associated with vaginal and vulval cancers. The intention is that the analyses Pharmerit plans to conduct will inform decision-making by health care budget planners and other health service staff regarding the optimal utilisation of NHS resources. Pharmerit will provide the outputs to NHS organisations and relevant charities on request. \n\nSpecific outputs that will be included in the publication (all per cancer type) are:\n•             Average age at diagnosis\n•             Total number of patients per year \n•             Average number of spells / admissions per patient\n•             Average lengths of stay\n•             Frequencies of most prevalent HRGs (including unbundled HRGs) and procedures\n•             Average cost per patient \n•             Average cost per spell / admission\n•             Average costs of unbundled care (chemotherapy / radiotherapy / diagnostics)\n\nDraft analysis outputs are expected late Q4 2016 / early Q1 2017, depending on timing of data receipt. No outputs in addition to those listed above will be generated. All generated outcomes and outputs will be made available in the public domain.\n\nThe data supplied will only be used to inform the publication activities described above, no record level data will be released to any other parties. All outputs will be aggregated with small numbers supressed in line with the HES analysis guide."
+ }
+}

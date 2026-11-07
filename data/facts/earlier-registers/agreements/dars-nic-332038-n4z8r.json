@@ -1,0 +1,60 @@
+{
+ "base_reference": "DARS-NIC-332038-N4Z8R",
+ "versions": [
+  {
+   "reference": "DARS-NIC-332038-N4Z8R",
+   "version": "",
+   "organisation": "BMJ",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "094504bf4009"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "094504bf4009": "Background BMJ Publishing Group Limited (BMJ), a wholly owned subsidiary of the British Medical Association, has grown beyond publishing and provides products and services in medical education, clinical decision support, data analytics and quality improvement. BMJ’s ‘Health Analytics’ team have been developing a suite of web-based tools called ‘Hospital Insight’ and this application is for the HES data needed to drive these tools. The HES data requested will not be used for any purpose other than ‘Hospital Insight’. ‘Hospital Insight’ is only supplied to acute non-specialist NHS trusts in England and provides clinical benchmarking focused around four themes - quality, efficiency, understanding the local market and clinician revalidation. The system will be used by trusts to monitor performance and conduct ad-hoc investigations into these themes. In developing the product BMJ have worked with clinical users and industry leaders from various NHS organisations to ensure the system helps them to deliver better quality care. BMJ have worked with 3 Foundation Trusts and an Acute Trust in developing the produce, and have signed up a separate 3 Foundation Trusts to receive the product (across the country). Discussions continuing with numerous other potential customers around England. During this initial phase these organisations will be given access to the product free of charge as early adopters, in due course this will become a subscription based product. BMJ are also on the NHS North Of England Commercial Procurement Collaborative framework for the supply of Health Informatics and Clinical Benchmarking Systems - ‘Hospital Insight’ has been developed to meet the specifications set out by this framework. Sensitive data BMJ are seeking consultant code for the customers of ‘Hospital Insight’ only. As new customers are signed up BMJ will seek make the necessary amendments to the application to request Consultant Code for these organisations. Conversely, BMJ will notify HSCIC, amend the agreement and delete the relevant data for organisations that cease to be BMJ customers. Consultant Code will be used for three purposes: • Enabling users to define the structure of their organisation by assigning consultant teams to particular departments. It is only possible to do this if BMJ know which consultant team is which. • Enabling users to compare the performance of consultant teams within their own organisation. • Enabling consultant teams themselves to be able to review their own performance. Users are only able to view data for consultant teams within their own organisation. Processing activities: Processing The raw HES data is loaded into a secure data warehouse at BMJ, accessible only by four named data professionals within BMJ responsible for ‘Hospital Insight’ who are all aware of the HES data handling protocol. HES data will not be stored on any other systems. Aggregations and subsets of this data are loaded into a secure data warehouse to drive the ‘Hospital Insight’ product. The team within BMJ holds ISO 27001 accreditation and all data processing is carried out in line with this standard. Data minimisation efforts To minimise the amount of data being held and processed BMJ have considered • The time period for which BMJ would be requesting data • The organisations for which BMJ would hold data Time period Following careful review by BMJ, BMJ have confirmed that they require less data than currently held, and thus propose to delete previous years data. The historic data will be used for two purposes. Firstly, BMJ will provide customers with the ability to view their data historically. Customers need to see historic data to: - enable them to monitor trends in the quality of care. In this situation a bare minimum of two years is required to give an adequate view of how performance has changed over time; and to - enable them to monitor the quality of low frequency procedures. Some types of surgery might only be carried out a handful of times each year. To understand whether there is a systemic problem with such events requires users to look over longer periods. The second way historic data will be used to calculate indirectly standardised metrics (e.g. HSMR, standardised readmission ratios). These methodologies are widely used in the NHS (e.g. by CQC, NHS England) and analyse several years of historic data to produce estimated probability for particular outcomes in a target year. For these estimates to be robust they need to be based on sufficient data to ensure that even rare events are observed a number of times. BMJ will only use data for 2010-11 and 2011-12 to calculate measures for 2012-13 and data for these two years will not be accessible to users. Users will be able to view their trust’s own data for 2012-13 forward. Organisations BMJ also considered whether they could reduce the number of organisations for which they receive data either by taking a regional subset or an administrative subset (i.e. acute NHS trusts). However BMJ have decided to request data for all organisations because: • By excluding some activity BMJ would not be able to provide users with an unbiased and complete view of their performance. For example, if BMJ took a subset of data, BMJ would be unable to identify emergency readmissions occurring outside of that subset. By not identifying such cases there was a risk that users may receive false assurances about the quality of their care. Please note that in this example BMJ would not identify the trust in which the readmission occurred – merely the rate of readmissions within the user’s trust. • Similarly, by taking a subset BMJ would be unable to benchmark against national performance. This is a key requirement of our customers and the trusts spoken to in developing ‘Hospital Insight’ • BMJ would not be able to help organisations understand the market they are operating in, given that some patients they could have treated may be referred to non-NHS organisations. In addition, BMJ considered whether any further criteria could be used to reduce the volume of data and identified that BMJ are only interested in records where the Admin Category At Start Of Episode (ADMINCATST) is 01 (NHS Patient) or 03 (Amenity Patient). Specific outputs expected, including target date: Our systems ‘Hospital Insight’ is accessed through a secure web-portal. Individual named users can view aggregated measures for their organisation as well as some comparison with peers or national levels. Data is aggregated to a variety of levels, for example our mortality measure is aggregated for a whole trust, for divisions and for specialties within divisions. This will enable users to see that they are performing as expected at a trust-level, but to identify whether a particular division is performing worse than expected and furthermore that within that division a single specialty is causing the problem. Measures are presented to users in tabular and chart form and include counts of spells, counts of observed events (e.g. readmissions), sums of expected events and indirectly standardised ratios (of observed events to expected events). Statistical processing is applied to each row so users can choose to filter and only see statistically outlying groups. Disclosure control The systems have been designed to avoid disclosure. By default, users are not able to access patient-level records and cells with counts of 5 patients or less are not displayed. BMJ have been told by NHS trusts that there are situations where individuals need to see counts of 5 or less and individual patient-level data, but only for their own organisation (for example when investigating a quality issue of concern). Such an individual would already have access to all local patient information. This level of access would only be provided within the system to individuals authorised in writing by their organisations Caldicott Guardian for the purposes of properly investigating potential quality of care issues - as previously described, other users would be unable to see counts of 5 patients or less. Users are only able to view data for their own organisation with one exception; they are able view peer comparisons for aggregate measures. Users All acute hospitals are structured differently and therefore a variety of roles may be interested in each of the themes covered. Anticipated users include Medical Director, Head of Clinical Directorate, Director Of Quality, Director Of Performance, as well as individual Consultants and their teams to be interested in the information contained within ‘Hospital Insight’. Expected measurable benefits to health and/or social care including target date: The system provides users with the ability to monitor quality, efficiency and their local market. There are differing benefits to the health system of each: Quality • The quality theme enables users to monitor a broad basket of quality measures and their current performance relative to the national benchmark on an ongoing basis. Such monitoring plays a critical role in ensuring that hospitals are able to identify cohorts of patients for whom outcomes are worse than expected. BMJ employ the most sensitive statistical techniques to ensure that changes in patient outcomes are detected as fast as possible. By identifying such cohorts as they become apparent users are able to investigate further and make changes to improve clinical quality without delay. This is an ongoing process and different areas for investigation are identified each month as hospital performance varies."
+ }
+}

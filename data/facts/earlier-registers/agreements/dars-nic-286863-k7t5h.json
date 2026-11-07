@@ -1,0 +1,49 @@
+{
+ "base_reference": "DARS-NIC-286863-K7T5H",
+ "versions": [
+  {
+   "reference": "DARS-NIC-286863-K7T5H",
+   "version": "",
+   "organisation": "University of Keele",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "e4d893b7d2ce"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "e4d893b7d2ce": "Objective for processing: The data will be used in a number of reports and ad-hoc analysis produced by the centre for Clinical Commissioning Groups (CCGs)/Trusts/practices in England as commissioned by the organisations. Analysis of admissions is designed to provide a broader context to the prescribing and prevalence information presented in these reports. The objective of the University of Keele’s reporting service is to encourage the optimal use of medicines in patient care. Data are standardised using denominators such as PU (prescribing units i.e. GP patient list size weighted for over 65s), QOF (Quality and Outcomes Framework) disease registers and total number of admissions; practice level analysis is only undertaken where there are sufficient admissions to ensure patient confidentiality can be maintained. Our subscriber CCGs and Trusts have agreed to share CCG and Trust level information, so each subscriber has access to organisational level data and will know the Trust/CCG to which the data refers. The pseudonymised HES data includes a practice code which enables data to be aggregated by practice, CCG or nationwide. Data at practice level is only reported to the parent CCG audience. Data is reported as aggregated data and where small numbers are present (which could potentially make data identifiable) this data is masked/not reported. Processing activities: Data is kept on a secure server, inside a locked server cupboard, in a coded entry room, with restricted access. Only named individuals have access to this data via a secure server connection. Data is uploaded onto an SQL database on this server, which can be accessed by a secure ODBC connection via an Access database on the named user’s PC. Using lookup tables for practices and their associated CCGs held in a further database on this server and which we have access to through our use of ePACT prescribing data, Keele University are able to analyse and report the data via a number of Access queries and reports, and from here to a series of PDF reports. Using the GP practice identifier, data is linked to practice and CCG lookup tables to allow data aggregation, and to lookup tables for any denominators to allow comparisons to be made between organisations, and give context to the data. For example, number of admissions per number of patients on QOF register, for a particular condition. Data is presented in graph or table form and may also be mapped. The decision regarding how to present the data takes into account the need to preserve confidentiality No record level data will be shared with any third party, and all outputs will be aggregated in line with the requirements of the HES Analysis Guide. Data will only be linked at an organizational level (e.g. by GP Practice) Specific outputs expected, including target date: The data will be used in part II of an annual report 'Prescribing Information to Support Quality Innovation, Productivity and Prevention (QIPP) due for publication by the end of March 2015. It will also be used throughout the year in other reports as deemed appropriate, to provide broader context to prescribing and prevalence information. All reports are made available only to our subscriber CCGs/trusts. Anonymised versions of the reports are occasionally made available to other organisations to demonstrate our portfolio of work. Expected measurable benefits to health and/or social care including target date: Data will be used alongside prescribing and prevalence information to provide context, with the main aim being to encourage the optimal use of medicines in patient care. This is not always measurable. Is the purpose of this application in anyway commercial? The University of Keele are commissioned by CCGs to provide a medicines optimisation and data analysis service and receive funding from them for this purpose, but this is not a profit making service, with the funding received covering our costs. The University of Keele have not tendered for this commission, owing to the unique nature of the service provided and our experience in this field, having supplied a similar service to these CCGs and their predecessors for over 15 years."
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "base_reference": "DARS-NIC-349877-M5P7D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-349877-M5P7D",
+   "version": "",
+   "organisation": "i5 Health",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "4d964609fa5a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR APC Episodes, PbR APC Spells",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : SUS PbR OP",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "4d964609fa5a": "Objective for processing: • i5 Health evaluates, on behalf of the Health Education Board of NHS England, the economic impact of Non-Medical Prescribing (NMP) - the prescribing of drugs by health practitioners other than doctors. i5 Health analyses the relevant activity data in order to identify utilisation of NMP practitioners in various healthcare settings. In doing so, they can measure the impact NMP has or, if introduced more widely, will have on different health economies. (Academic Paper ID: WNC 48 'Nurse Prescribing' - WorldwideNursingConference,Singapore2014;abstract http://www.citeulike.org/user/gstf/article/13247895 ) • i5 Health provides support to CCGs in their decision making for commissioning purposes. The specific purposes are:- • To identify realistic NHS QIPP initiatives for specific CCGs, CSUs and Providers in order to spot trends and to perform benchmarking that support commissioners in particular with their operational, strategic planning and co-commissioning. Current work includes with NHS England to identify suitable initiatives for Specialist Services like Cardiology and Cardiac Surgery. • i5 Health advises Voluntary Sector Organisations (VSOs) that have charitable status and exist to complement the work of the NHS in improving patient care. Such VSOs include Age UK and Asthma UK. • To measure standards of care and identify gaps in provision to inform commissioning strategy. A number of CCG’s including NHS Halton CCG, C4G CCG, Brent CCG, Ashford CCG, have been working with i5 Health in this respect to develop their strategies. Where HSCIC has already given formal approval for i5 Health to analyse data (IG Ref DSCON066/Halton CCG), the outcome was described by the Director of Transformation as giving \"…..Halton CCG a unique glance into what financial results could be made through our partnership approach. Unlike any other piece of consultancy, i5 and COP shone an economic light on what schemes are working well and what areas i5 Health could prioritise our energy on.\" I5 Health requires PBR spells & episode at patient level, including procedure and diagnosis codes, in order to evaluate the applicability of a particular QIPP initiative for a group of patients. Data on PBR spells and episodes is essential in i5 Health establishing the nature and size of specific patient cohorts in a given acute provider setting. Such identification allows i5 Health to calculate accurately the effect of any proposed, specific initiative including the financial impact of that change (e.g. provision of certain alternatives in the primary care sector to hospital treatment). • VSOs already cooperate with i5 Health to improve the extent and quality of the information that i5 Health relies on to support, with data processing, clinical commissioning within the NHS. The VSOs have occasion to ask for i5 Health reports, based on data analysis that can improve their own specific charitable works for NHS patients. Processing activities: The data will be loaded into a database that will be managed locally and secured by the DBA with user access control. I5 Health will be using SQL Server 2008 on a bit locker encrypted partition. The reports contain aggregate data covering cohorts from localities to large geographical areas for NHS England. No record level data is supplied to third parties. The inclusion of VSOs as recipients in the ‘commercial’ purpose context outlined below in no way changes the processing activities set out in this paragraph Specific outputs expected, including target date: The outputs will be aggregated analysis with small numbers suppressed for inclusion within economic evaluation and CCG strategy. All outputs are solely provided to the NHS customers and no service/product/data will be supplied to any commercial organisation by i5health except in so far as is permitted for VSOs for the purpose outlined in the ‘commercial’ purpose section below. The data provided will be used solely for the purposes identified above. Expected measurable benefits to health and/or social care including target date: The NMP has been in existence for 26 years. Over time there are good reasons to believe that the returns from it, across the board, have been very positive: from cost effectiveness, through staff development to patient satisfaction. Not least of all, the clinicians Audit, in growing use since 2009, has elicited important data supportive of that contention. However, greater evidence of the performance and effect of NMP is necessary. I5 health is therefore being asked to review existing HES and studies to draw out relevant information, propose new methodology, refine existing audits and promote new ones to provide a comprehensive analysis of NMP to assist in decisions on whether and to what extent NMP should be adopted more widely in England. VSOs cooperate with i5 Health to improve the extent and quality of the information that i5 Health relies on to support, with data processing, clinical commissioning within the NHS. The VSOs have occasion to ask for i5 Health reports, based on data analysis that can improve their own specific charitable works for NHS patients. The benefits to the UK Health and Social Care system are better strategic planning and commissioning decisions, and subsequently improved care for patients due to better planning and strategy. The financial benefit for the healthcare system varies from case to case. By way of example, analysis by i5health for the Sussex health economy two years ago resulted in a 10% reduction in Non-Elective admissions (NEL) thus saving hundreds of thousands of pounds annually. Commercial purpose: The ‘commercial purpose’ relates to voluntary sector organisations that support the health and social services. For example for the purposes of clinical commissioning support, i5Health are working with Age UK to ensure a variety of care situations (e.g. palliative) are properly covered by our Commissioning Opportunity (COP) module. This is a system fully developed and owned by i5Health to facilitate transformational change by evaluating hundreds of successfully implemented healthcare initiatives by the NHS at patient level to identify patient cohorts that would benefit from an initiative. Metrics for each initiative have been developed with commissioners; clinical staff and other HCP in an exercise initially set up to reduce NEL admissions and have been extensively expanded since. It supports QIPP, BCF, CIP, Co-Commissioning etc. planning activities for both two year operational and five year strategic plans and can also be used for constant monitoring of initiatives. Age UK have expressed a wish to have I5Health to do analysis work for them to help improve their own services. I5Health have had similar discussions with Asthma UK."
+ }
+}

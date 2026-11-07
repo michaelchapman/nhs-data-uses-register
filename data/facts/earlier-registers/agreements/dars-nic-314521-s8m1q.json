@@ -1,0 +1,49 @@
+{
+ "base_reference": "DARS-NIC-314521-S8M1Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-314521-S8M1Q",
+   "version": "",
+   "organisation": "Department of Health (DH)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "40426af4b9fe"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES ONS Mortality",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "40426af4b9fe": "Objective for processing: This research study forms part of a larger programme of work at the Department of Health looking at NHS activity in England, feeding primarily into a workstream on cross-sectional variation in supply. This bespoke extract has been requested to examine the variation in end-of-life healthcare delivered to chronically ill patients, and aims to replicate analysis carried out by Jack Wennberg and the Dartmouth Atlas Project in the US. In brief, the extract will be used to develop a Hospital Care Intensity Index (HCI) at provider and CCG level. This will capture the intensity of care delivered to chronically ill patients in the last two years of life. The study will then seek to: • Test whether variation in the HCI across local health economies is correlated with measures of capacity, patient experience and outcomes • Compare variation in the HCI in England against that in the US These findings will provide an insight into the scope for managing supply-sensitive care in England. The study outcomes will further be used in providing advice to the Secretary of State and inform wider departmental work on healthcare activity. These methods are described in more detail in the following sections and in the 2011 report “Trends and Variation in End-of-Life Care for Medicare Beneficiaries with Severe Chronic Illness”, available here: http://www.rwjf.org/content/dam/farm/reports/reports/2011/rwjf69939 Processing activities: The bespoke extract requested consists of HES data (Admitted Patient Care, Outpatients, A&E and Critical Care), linked to ONS death records, where: • The patient has a registered date of death between 1 April 2004 and 31 March 2014 (date death occurred, not date of registration) • All hospital episodes occurring in the last two years prior to death are included (no activity prior to this point is required). This should include episodes starting, but not completed before the two year period. • The patient experienced at least one of nine chronic conditions in the last two years prior to death: - Malignant cancer/Leukemia - Chronic Pulmonary Disease - Coronary Artery Disease - Congestive Heart Failure - Peripheral Vascular Disease - Severe Chronic Liver Disease - Diabetes with End Organ Damage - Renal Failure - Dementia The exact ICD-10-CM codes used to categorise patients are provided in a separate attachment. The extract will be held on a secure network drive with access permissions granted only to the named researchers (see section 8). Access to the network is available only via personal authentication using a desktop within a DH building. Given this extract, the following processing activities will be undertaken: • Exploratory data analysis • A measure of utilization will be calculated based upon: - bed days - intensive care unit days (“high” and “low” intensity) - other measures to be explored once data access granted at both provider and CCG level • This will be adjusted for age, sex, ethnicity, primary chronic condition and co-morbidities (within the set of nine conditions listed) using regression analysis. From this, a “Hospital Care Intensity Index” (HCI) will be developed. The HCI will then be used with external sources of data at provider/commissioner-level to: • Test whether variation in the HCI across local health economies is correlated with measures of capacity, patient experience and outcomes • Compare variation in the HCI in England against that in the US The outcomes from this study may then feed into further research on supply-sensitive care in England. Specific outputs expected, including target date(s): No published outputs planned. Internal outputs to include non-disclosive tabular results (measures of utilisation and HCI) and plots at provider and CCG level. Syntax files will also be retained. Research to be completed for Autumn 2015 Expected measurable benefits to health and/or social care, including target date(s): These findings will provide an insight into the scope for managing supply-sensitive care in England. The study outcomes will further be used in providing advice to the Secretary of State and inform wider departmental work on healthcare activity. In particular, the outcomes of this research study will: • Provide a measure of utilisation and care intensity across local health economies in England • Assess whether variation in care intensity is correlated with measures of capacity, patient experience and outcomes. In other words: test whether greater intensity of care leads to improved patient outcomes. • Assess the prevalence of supply-sensitive hospital care within England Inform wider departmental research into the underlying drivers of health activity"
+ }
+}

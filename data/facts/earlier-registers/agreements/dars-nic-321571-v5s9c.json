@@ -1,0 +1,89 @@
+{
+ "base_reference": "DARS-NIC-321571-V5S9C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-321571-V5S9C",
+   "version": "",
+   "organisation": "Monitor",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "objective": "22c912285603"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "dda7ccd180f6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "22c912285603": "Re-Use Application Statement Objective for processing: Under the Health & Social Care Act, Monitor is taking on new responsibilities. Monitor uses this data to fulfill its role under the Health and Social Care Act: • Licensing providers: Monitor will license providers of NHS services in England. • Regulating prices for NHS-funded care: Monitor will take on responsibility for pricing, working together with the NHS Commissioning Board. • Integrated care: Monitor will have a duty to consider how it can enable or facilitate the delivery of integrated care for patients where this would improve quality of care or improve efficiency. • Preventing anti-competitive behaviour: Under the Act Monitor's role will focus on making sure that any competition in the health sector is fair and that it operates in the best interests of patients. • Supporting the continuity of services: Monitor will support commissioners to ensure that patients could continue to access the care that they need if a healthcare provider fails. Access to detailed hospital activity information describing all aspects of healthcare over a number of years is essential for these functions to operate effectively, for example, assessing activity in a health economy to identify anti-competitive behaviours, by comparing referral rates or activity volumes, or considering how a failing Provider’s activity may be re-directed to other hospitals or services, or modelling new Tariffs according to life-years-of-care to investigate the effects of potential Tariff changes on the health economy, or to check, validate and analyse the national priced / PbR activity for a provider, looking at both the activity and price applied. Processing activities: Monitor uses the data for analysis across all our business Directorates. Data is accessed by authorised users in the business teams as data reports, aggregated summaries or within analysis tools. Data is processed through the development of SQL scripts to produce the required outputs and the development of SSIS packages to group data. Further processing is conducted in analytic and statistical applications using Tableau, STATA, Excel and SAS among others. Specific outputs expected, including target date: Data at its most granular level (without identifiers and sensitive items) is needed because the data will need to be queried, aggregated and combined in many different ways to support the variety of business queries that each of the above functions will generate; requesting ad-hoc extracts / tabulations from the HSCIC for each specific case will be ineffective and hugely inefficient. Monitor will also use the data to produce bespoke analysis in direct support of its duties as outlined within the objectives above. Such analysis will be aggregate, with small numbers suppressed, or take the form of indicators. Monitor will make bespoke extracts available to it’s analytic staff in order to produce these analyses. Monitor will not supply record level data to any third party, and the data will not form part of any tool, product or analytical output which is made available on a commercial basis. Outputs that do form part of its core functions are: • Reports on total tariff and activity by provider and commissioning body; • Referral patterns from GP practices to trusts; • Investigating the effects of potential tariff changes on the health economy: o Changes to marginal rates or to HRG definitions o Modelling variations of specialist top up definition, o Modelling life-years-of-care to, • Reporting activity by variable aggregations, the types of reports are: o Attended/ did not attend, o Consultant speciality, o Patient demographics, o Length of stay, o Geographic analysis to understand catchment areas and access to services, o Readmission rates, o Deriving ambulatory care sensitive condition flags, o Outpatient first attendance to follow up ratios. • The total national price quantum of a provider organisation; • The value of the nationally priced income for a particular service (if a Trust were to apply for a top-up to a nationally priced service under a local modification); • The types of activity the provider provides for its Local Health Economy; • The activity and Casemix by site; • Any non-compliance or enforcement issues as a result of the way activity has been treated or charged, in line with the 2014/15 National Tariff Payment System. Expected measurable benefits to health and/or social care including target date: • Following the Francis Report into Mid Staffordshire Foundation Trust, Monitor is acutely aware of the need to use data much more effectively to fulfil its regulatory responsibilities, and will therefore use detailed record-level data in different combinations of indicators and metrics to form a better contextual view of Provider performance and delivery to ensure that organisations are meeting the terms of the license.",
+  "dda7ccd180f6": "Re-Use Application Statement\n\nObjective for processing:\nUnder the Health & Social Care Act, Monitor is taking on new responsibilities.\nMonitor uses this data to fulfill its role under the Health and Social Care Act: \n• Licensing providers: Monitor will license providers of NHS services in England. \n• Regulating prices for NHS-funded care: Monitor will take on responsibility for pricing, working together with the NHS Commissioning Board.\n• Integrated care: Monitor will have a duty to consider how it can enable or facilitate the delivery of integrated care for patients where this would improve quality of care or improve efficiency.\n• Preventing anti-competitive behaviour: Under the Act Monitor's role will focus on making sure that any competition in the health sector is fair and that it operates in the best interests of patients.\n• Supporting the continuity of services: Monitor will support commissioners to ensure that patients could continue to access the care that they need if a healthcare provider fails.\nAccess to detailed hospital activity information describing all aspects of healthcare over a number of years is essential for these functions to operate effectively, for example, assessing activity in a health economy to identify anti-competitive behaviours, by comparing referral rates or activity volumes, or considering how a failing Provider’s activity may be re-directed to other hospitals or services, or modelling new Tariffs according to life-years-of-care to investigate the effects of potential Tariff changes on the health economy, or  to check, validate and analyse the national priced / PbR activity for a provider, looking at both the activity and price applied.\nProcessing activities: \nMonitor uses the data for analysis across all our business Directorates.  Data is accessed by authorised users in the business teams as data reports, aggregated summaries or within analysis tools.\nData is processed through the development of SQL scripts to produce the required outputs and the development of SSIS packages to group data.  Further processing is conducted in analytic and statistical applications using Tableau, STATA, Excel and SAS among others.\nSpecific outputs expected, including target date:\nData at its most granular level (without identifiers and sensitive items) is needed because the data will need to be queried, aggregated and combined in many different ways to support the variety of business queries that each of the above functions will generate; requesting ad-hoc extracts / tabulations from the HSCIC for each specific case will be ineffective and hugely inefficient. \nMonitor will also use the data to produce bespoke analysis in direct support of its duties as outlined within the objectives above.  Such analysis will be aggregate, with small numbers suppressed, or take the form of indicators.  Monitor will make bespoke extracts available to it’s analytic staff in order to produce these analyses.  Monitor will not supply record level data to any third party, and the data will not form part of any tool, product or analytical output which is made available on a commercial basis.  Outputs that do form part of its core functions are:\n•\tReports on total tariff and activity by provider and commissioning body; \n•\tReferral patterns from GP practices to trusts;\n•\tInvestigating the effects of potential tariff changes on the health economy:\no\tChanges to marginal rates or to HRG definitions\no\tModelling variations of specialist top up definition, \no\tModelling life-years-of-care to, \n•\tReporting activity by variable aggregations, the types of reports are: \no\tAttended/ did not attend, \no\tConsultant speciality, \no\tPatient demographics, \no\tLength of stay, \no\tGeographic analysis to understand catchment areas and access to services, \no\tReadmission rates, \no\tDeriving ambulatory care sensitive condition flags, \no\tOutpatient first attendance to follow up ratios.\n•\tThe total national price quantum of a provider organisation;\n•\tThe value of the nationally priced income for a particular service (if a Trust were to apply for a top-up to a nationally priced service under a local modification); \n•\tThe types of activity the provider provides for its Local Health Economy;\n•\tThe activity and Casemix by site; \n•\tAny non-compliance or enforcement issues as a result of the way activity has been treated or charged, in line with the 2014/15 National Tariff Payment System. \n\nExpected measurable benefits to health and/or social care including target date:\n\n•\tFollowing the Francis Report into Mid Staffordshire Foundation Trust, Monitor is acutely aware of the need to use data much more effectively to fulfil its regulatory responsibilities, and will therefore use detailed record-level data in different combinations of indicators and metrics to form a better contextual view of Provider performance and delivery to ensure that organisations are meeting the terms of the license."
+ }
+}

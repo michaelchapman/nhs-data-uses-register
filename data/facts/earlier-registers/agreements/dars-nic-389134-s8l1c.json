@@ -1,0 +1,843 @@
+{
+ "base_reference": "DARS-NIC-389134-S8L1C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01",
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-12-01",
+      "2017-03-01"
+     ],
+     "objective": "250b3ebf4d0c",
+     "activities": "f6d0c2c4cb81",
+     "expected_output": "e3c0acbd6ed1",
+     "expected_benefits": "e76dd68fd9a5"
+    },
+    {
+     "periods": [
+      "2016-09-01"
+     ]
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Bespoke",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 27
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2017-03-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 19
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v2.5",
+   "version": "2.5",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "250b3ebf4d0c",
+     "activities": "f6d0c2c4cb81",
+     "expected_output": "e3c0acbd6ed1",
+     "expected_benefits": "e76dd68fd9a5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v3.2",
+   "version": "3.2",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01"
+     ],
+     "objective": "250b3ebf4d0c",
+     "activities": "a130d95206dd",
+     "expected_output": "2f298ffb987e",
+     "expected_benefits": "e76dd68fd9a5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v4.2",
+   "version": "4.2",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01"
+     ],
+     "objective": "250b3ebf4d0c",
+     "activities": "a130d95206dd",
+     "expected_output": "2f298ffb987e",
+     "expected_benefits": "e76dd68fd9a5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v5.2",
+   "version": "5.2",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "objective": "250b3ebf4d0c",
+     "activities": "a130d95206dd",
+     "expected_output": "2f298ffb987e",
+     "expected_benefits": "e76dd68fd9a5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v6.4",
+   "version": "6.4",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "cc6f18aea89a",
+     "activities": "ec8d8b3f7408",
+     "expected_output": "d593545a9c02",
+     "expected_benefits": "8c59dc900cf2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v7.3",
+   "version": "7.3",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-05-25"
+     ],
+     "objective": "84e0001fd470",
+     "activities": "df0cfdf02782",
+     "expected_output": "5abde4b09a24",
+     "expected_benefits": "be5d179c86b5",
+     "yielded_benefits": "89e84f02ed02"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v8.6",
+   "version": "8.6",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2018-10-01",
+    "2019-01-01",
+    "2019-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "objective": "84e0001fd470",
+     "activities": "df0cfdf02782",
+     "expected_output": "e9316809fb59",
+     "expected_benefits": "be5d179c86b5",
+     "yielded_benefits": "89e84f02ed02"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v9.5",
+   "version": "9.5",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-03-01",
+    "2019-04-01",
+    "2019-05-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2019-11-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01",
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01"
+     ],
+     "objective": "84e0001fd470",
+     "activities": "df0cfdf02782",
+     "expected_output": "e9316809fb59",
+     "expected_benefits": "be5d179c86b5",
+     "yielded_benefits": "89e84f02ed02"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01"
+     ],
+     "rows": 22
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01"
+     ],
+     "rows": 18
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01",
+      "2020-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-06-01",
+      "2019-11-01"
+     ],
+     "rows": 22
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v10.4",
+   "version": "10.4",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-07-01"
+     ],
+     "objective": "295bb276a28e",
+     "activities": "df0cfdf02782",
+     "expected_output": "e9316809fb59",
+     "expected_benefits": "be5d179c86b5",
+     "yielded_benefits": "89e84f02ed02"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v11.2",
+   "version": "11.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01"
+     ],
+     "objective": "8d93e10ee5ea",
+     "activities": "df0cfdf02782",
+     "expected_output": "e9316809fb59",
+     "expected_benefits": "be5d179c86b5",
+     "yielded_benefits": "89e84f02ed02"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-08-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-389134-S8L1C-v12.2",
+   "version": "12.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01",
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "8d93e10ee5ea",
+     "activities": "df0cfdf02782",
+     "expected_output": "e9316809fb59",
+     "expected_benefits": "be5d179c86b5",
+     "yielded_benefits": "6708fe41320b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "250b3ebf4d0c": "The Million Women Study (MWS) is a national study of women’s health funded by Cancer Research UK and the Medical Research Council. The study involves 1.3 million UK women, recruited in 1996-2001, who have given written consent for follow up of their health through their medical records, to examine how reproductive and lifestyle factors affect their future health.",
+  "295bb276a28e": "23/7/2019 Amendment to the DSA to add only 1 complete year of HES for 2018/2019 \n\nThe University of Oxford requires HES, mortality, cancer registration and PDS data for use in the Million Women Study (MWS).\n\nThe MWS is a national study of women’s health funded by Cancer Research UK and the Medical Research Council.  The study involves 1.3 million women in England and Scotland, recruited through NHS breast screening clinics between 1996 and 2001, who gave written consent for follow up of their health through their medical records to examine how reproductive, lifestyle and other factors affect their future health. While the initial stimulus of the study was to investigate use of different types on menopausal hormone therapy and risk of breast cancer, from its inception the study was designed to investigate the role of other factors (such as smoking and obesity) and other health outcomes. The overall aim of the study is to investigate common, largely modifiable, risk factors for serious and common diseases in women. As the study has progressed, and the cohort has aged, different conditions have become of greater relevance: for example, dementia, other neurodegenerative and neurological conditions, mental health, cardiovascular disease and stroke, as well as other cancers. The research agenda is peer- reviewed every few years as part of the applications for renewed funding  and developments and are determined by the MWS team in the Cancer Epidemiology Unit (CEU) at the University of Oxford, taking into account the importance of age-appropriate research questions, in relation to new evidence and to public health priorities; the availability of sufficiently long follow-up and number of cases for less common diseases; and additional information which becomes available for linkage and which may allow new analytic approaches.\n \nCancer diagnosis data and death data and HES admitted patient data are required in order to define end points and disease diagnoses in study participants during follow-up. To produce scientifically valid results, it is essential that the whole Million Women Study cohort is linked to information from medical records. With incomplete linkage, or with follow-up using other methods such as participant report, there would be a high risk of the results being biased by selective lack of follow-up e.g. women who have died and many who are ill cannot complete follow-up questionnaires. Up to date details of deaths and of identifiers such as name and postal address are also needed to ensure that when re-contacting participants, this will ensure no mail will be sent to recently-deceased participants and minimise mailing to out of date addresses. \n\nThe wealth of data in the MWS requires careful analysis, and any pre-existing conditions and confounding factors need to be considered. For this reason, it requires a complete picture of the medical history of the participant going back as far as NHS linked records permit, and new diagnoses going forward. In order to produce accurate results in a long –term study of broad scope, it is not possible  to minimise further the amount of data requested.\n\nLinked data from NHS Digital are used together with personal, social, lifestyle and health information provided to the study by participants completing the study questionnaires. There is baseline data collected for 1.3 million women via the recruitment questionnaire. Postal re-survey questionnaires were sent to all study participants around 3, 8, 12, and 15 years after recruitment, to keep track of participant’s health and to ask some new questions; and selected women also provided answers to an online diet questionnaire and to disease specific questionnaires, e.g. for cervical cancer and breast cancer. In addition, some women were recruited into a sub study collecting blood samples for biochemical and genetic analyses, the Million Women Study: Disease Susceptibility in Women study.",
+  "2f298ffb987e": "The data set (HES data) will be used to examine relationships between lifestyle and reproductive factors (collected via questionnaire data) and a wide range of outcomes. These outcomes would mainly consist of a variety of cancer diagnoses, hip fractures and joint replacements and cardiovascular disease. CEU plan to publish their anonymised findings in peer reviewed scientific journals so that they can contribute to knowledge of common diseases and causes of hospital admissions.\nCEU have successfully published papers using data from their previous HES extract (ET2535) and wish to continue using similar data together with extra information, to increase the understanding of patterns of disease groups including cancer diagnoses, joint replacements, fractures and cardiovascular disease. Further information can be found on the website at www.millionwomenstudy.org\n\nAll outputs will contain only aggregate with small numbers suppressed in line with the HES analysis guide.",
+  "5abde4b09a24": "The Million Women Study is an ongoing open-ended cohort study. Results are disseminated nationally and internationally in peer-reviewed open-access papers in research journals including The Lancet and The International Journal of Epidemiology, in related presentations to national and international research and clinical colleagues, in reports to government regulatory bodies, on the study website, through the media and through public outreach work (science open days, talks to participant groups). The study has been running for over 20 years and publications are produced on an ongoing basis. Presentations of findings will be at conferences such as the National Cancer Research Institute (NCRI) Conference in 2019. \n\nThe publications do not identify individuals and contain only de-identified data in aggregate form (tabulations and figures showing analysis results at the minimum level of detail required, using small number suppression) in line with the HES Analysis Guide and with ONS terms and conditions relating to the data being shared under this Agreement. \n\nAmong over 120 published papers, notable study publications include:\n1. Beral V; Million Women Study Collaborators. Breast cancer and hormone-replacement therapy in the Million Women Study. Lancet. 2003;362(9382):419-27. \n2. Sweetland S, Beral V,  et al. Venous thromboembolism risk in relation to use of different types of postmenopausal hormone therapy in a large prospective study.  J Thromb Haemost. 2012;10(11):2277-86. \n3. Pirie K, Peto R, et al. The 21st century hazards of smoking and benefits of stopping: a prospective study of one million women in the UK. Lancet. 2013 Jan 12;381(9861):133-41.\n4. Travis RC,et al. Night Shift Work and Breast Cancer Incidence: Three Prospective Studies and Meta-analysis of Published Studies. J Natl Cancer Inst 2016;108. \n5. Kent S,et al. Hospital costs in relation to body-mass index in 1·1 million women in England: a prospective cohort study. Lancet Public Health. 2017;2(5):e214-e222.\n\nMillion Women Study results are reported in the media such as the BBC and national newspapers and its outputs reach a worldwide audience. e.g. \nhttp://www.bbc.co.uk/news/health-35052404 - being unhappy or stressed will not make you ill\nhttp://news.bbc.co.uk/1/hi/health/7906355.stm - a drink a day raises cancer risk\nhttp://www.bbc.co.uk/news/health-14220382 - tall people more likely to develop cancer\n\nFuture anticipated work using HES, cancer registry and ONS mortality data:\nCurrent funded work includes analyses of hormonal and other risk factors for subtypes of various common cancers (ovarian, colorectal, breast, endometrial and haematological); of diet and risk of cancer, fracture and vascular disease; of lifestyle factors, past health including mental health and long-term risk of dementia; of risk of osteoporosis and fracture in relation to use of bisphosphonate drugs; and of risk factors for different types of stroke. The study team will submit academic papers on the results of these analyses to open-access, high impact, peer-reviewed journals and will continue to liaise with NHS regulatory bodies as appropriate to ensure the results are used to help provide evidence for health guidelines and best clinical practice.\n\nThe Million Women Study website at www.millionwomenstudy.org  provides links to open access papers and offers free downloads of accessible summaries of findings. The twitter handles at Nuffield Department of Population Health (@Oxford_NDPH) and Oxford Medical Sciences Division (@OxfordMedSci) with a combined following of over 11,000 will promote all significant findings and will disseminate the findings at academic conferences and to lay audiences, as above.\n\nAll future outputs will contain only data that is aggregated, with small numbers suppressed in line with the HES Analysis Guide. ONS terms and conditions relating to the data being shared under this agreement will be adhered to.\n\nIn the next year or so the following reports, analyses and presentations are planned:\n\nData Analyses and papers:\n1. Long-term effects of dementia associated with midlife body mass index, diet and physical activity in one million UK women to be submitted to the journal Alzheimer’s and  Dementia 2018/19.\n2. Smoking and dementia incidence: prospective study of one million UK women to be submitted to The Lancet 2018/19. \n3. Foods, macronutrients and breast cancer risk in postmenopausal women: a large UK cohort. To be submitted to the International Journal of Epidemiology 2018/19.\n4. Diet and risk of different types of stroke. To be submitted to the journal Neurology 2018/19.\n\nUpcoming Conference presentations:\n1. Use of Endocrine therapy for breast cancer to be presented to The Early Breast Cancer Triallists Collaborative Group in Oxford June 2018.\n2. Timing of alcohol consumption and risk of liver cirrhosis: prospective study of UK women at European Congress of Epidemiology in Lyon July 2018.\n3. Histological type as a predictor of ovarian cancer survival at the British Association of Gynaecological Pathologists - Annual Meeting  June 2018.\n4. Integrating pathology into epidemiology: Challenges and opportunities. European Society of Pathology Academy July 2018.",
+  "6708fe41320b": "The Million Women Study research using linked health data has already directly influenced health care. Results showed, for example, that women using hormone replacement therapy are at increased risk of breast cancer; this work, published in 2003, was shared with the Medicines and Healthcare Regulatory Agency and helped inform changes in prescribing guidance both for the UK and elsewhere. It is estimated that tens of thousands of cases of cancer worldwide have been avoided as a result of the subsequent fall in use of hormone therapy. Another example where NHS Digital data contributed to an influential paper was in showing that risk of blood clots after surgery was far higher, and lasted for much longer, than had been previously thought. This work is helping to inform European surgical care guidelines. MWS results on how characteristics of individuals affect participation and outcomes of bowel cancer screening are being incorporated into screening programme development. Recent work on the costs to the NHS of obesity-related conditions, and on breast cancer risk in relation to night shift work, has direct public health relevance. Participants in the Million Women Study are the first generation of women in the UK to have smoked to the same extent as a man and the findings show that female smokers died about 10 years earlier than non-smokers. These effects are much greater than had been reported previously and influence policy.",
+  "84e0001fd470": "The University of Oxford requires HES, mortality, cancer registration and PDS data for use in the Million Women Study (MWS).\n\nThe MWS is a national study of women’s health funded by Cancer Research UK and the Medical Research Council.  The study involves 1.3 million women in England and Scotland, recruited through NHS breast screening clinics between 1996 and 2001, who gave written consent for follow up of their health through their medical records to examine how reproductive, lifestyle and other factors affect their future health. While the initial stimulus of the study was to investigate use of different types on menopausal hormone therapy and risk of breast cancer, from its inception the study was designed to investigate the role of other factors (such as smoking and obesity) and other health outcomes. The overall aim of the study is to investigate common, largely modifiable, risk factors for serious and common diseases in women. As the study has progressed, and the cohort has aged, different conditions have become of greater relevance: for example, dementia, other neurodegenerative and neurological conditions, mental health, cardiovascular disease and stroke, as well as other cancers. The research agenda is peer- reviewed every few years as part of the applications for renewed funding  and developments and are determined by the MWS team in the Cancer Epidemiology Unit (CEU) at the University of Oxford, taking into account the importance of age-appropriate research questions, in relation to new evidence and to public health priorities; the availability of sufficiently long follow-up and number of cases for less common diseases; and additional information which becomes available for linkage and which may allow new analytic approaches.\n \nCancer diagnosis data and death data and HES admitted patient data are required in order to define end points and disease diagnoses in study participants during follow-up. To produce scientifically valid results, it is essential that the whole Million Women Study cohort is linked to information from medical records. With incomplete linkage, or with follow-up using other methods such as participant report, there would be a high risk of the results being biased by selective lack of follow-up e.g. women who have died and many who are ill cannot complete follow-up questionnaires. Up to date details of deaths and of identifiers such as name and postal address are also needed to ensure that when re-contacting participants, this will ensure no mail will be sent to recently-deceased participants and minimise mailing to out of date addresses. \n\nThe wealth of data in the MWS requires careful analysis, and any pre-existing conditions and confounding factors need to be considered. For this reason, it requires a complete picture of the medical history of the participant going back as far as NHS linked records permit, and new diagnoses going forward. In order to produce accurate results in a long –term study of broad scope, it is not possible  to minimise further the amount of data requested.\n\nLinked data from NHS Digital are used together with personal, social, lifestyle and health information provided to the study by participants completing the study questionnaires. There is baseline data collected for 1.3 million women via the recruitment questionnaire. Postal re-survey questionnaires were sent to all study participants around 3, 8, 12, and 15 years after recruitment, to keep track of participant’s health and to ask some new questions; and selected women also provided answers to an online diet questionnaire and to disease specific questionnaires, e.g. for cervical cancer and breast cancer. In addition, some women were recruited into a sub study collecting blood samples for biochemical and genetic analyses, the Million Women Study: Disease Susceptibility in Women study.",
+  "89e84f02ed02": "The Million Women Study research using linked health data has already directly influenced health care. Results showed, for example, that women using hormone replacement therapy are at increased risk of breast cancer; this work, published in 2003, was shared with the Medicines and Healthcare Regulatory Agency and helped inform changes in prescribing guidance both for the UK and elsewhere. It is estimated that tens of thousands of cases of cancer worldwide have been avoided as a result of the subsequent fall in use of hormone therapy. Another example where NHS Digital data contributed to an influential paper was in showing that risk of blood clots after surgery was far higher, and lasted for much longer, than had been previously thought. This work is helping to inform European surgical care guidelines. MWS results on how characteristics of individuals affect participation and outcomes of bowel cancer screening are being incorporated into screening programme development. Recent work on the costs to the NHS of obesity-related conditions, and on breast cancer risk in relation to night shift work, has direct public health relevance. Participants in the Million Women Study are the first generation of women in the UK to have smoked to the same extent as a man and our findings show that female smokers died about 10 years earlier than non-smokers. These effects are much greater than had been reported previously and influence policy.",
+  "8c59dc900cf2": "The Million Women Study research using linked health data has directly influenced health care. Results showed, for example, that women using hormone replacement therapy are at increased risk of breast cancer; this work helped inform changes in prescribing, and it is estimated that tens of thousands of cases of cancer worldwide have been avoided as a result of the subsequent fall in use of hormone therapy.\nAnother example where NHS Digital data contributed to an influential paper was in showing that risk of blood clots after surgery was far higher, and lasted for much longer, than had been previously thought. This work is helping to inform European surgical care guidelines. \nOther influential MWS work with direct health care benefits is looking at how to best implement a screening programme for bowel cancer following a study into how characteristics of individuals affect participation and outcomes of screening.",
+  "8d93e10ee5ea": "The University of Oxford requires HES, mortality, cancer registration and PDS data for use in the Million Women Study (MWS).\n\nThe MWS is a national study of women’s health funded by Cancer Research UK and the Medical Research Council.  The study involves 1.3 million women in England and Scotland, recruited through NHS breast screening clinics between 1996 and 2001, who gave written consent for follow up of their health through their medical records to examine how reproductive, lifestyle and other factors affect their future health. While the initial stimulus of the study was to investigate use of different types on menopausal hormone therapy and risk of breast cancer, from its inception the study was designed to investigate the role of other factors (such as smoking and obesity) and other health outcomes. The overall aim of the study is to investigate common, largely modifiable, risk factors for serious and common diseases in women. As the study has progressed, and the cohort has aged, different conditions have become of greater relevance: for example, dementia, other neurodegenerative and neurological conditions, mental health, cardiovascular disease and stroke, as well as other cancers. The research agenda is peer- reviewed every few years as part of the applications for renewed funding  and developments and are determined by the MWS team in the Cancer Epidemiology Unit (CEU) at the University of Oxford, taking into account the importance of age-appropriate research questions, in relation to new evidence and to public health priorities; the availability of sufficiently long follow-up and number of cases for less common diseases; and additional information which becomes available for linkage and which may allow new analytic approaches.\n \nCancer diagnosis data and death data and HES admitted patient data are required in order to define end points and disease diagnoses in study participants during follow-up. To produce scientifically valid results, it is essential that the whole Million Women Study cohort is linked to information from medical records. With incomplete linkage, or with follow-up using other methods such as participant report, there would be a high risk of the results being biased by selective lack of follow-up e.g. women who have died and many who are ill cannot complete follow-up questionnaires. Up to date details of deaths and of identifiers such as name and postal address are also needed to ensure that when re-contacting participants, this will ensure no mail will be sent to recently-deceased participants and minimise mailing to out of date addresses. \n\nThe wealth of data in the MWS requires careful analysis, and any pre-existing conditions and confounding factors need to be considered. For this reason, it requires a complete picture of the medical history of the participant going back as far as NHS linked records permit, and new diagnoses going forward. In order to produce accurate results in a long –term study of broad scope, it is not possible  to minimise further the amount of data requested.\n\nLinked data from NHS Digital are used together with personal, social, lifestyle and health information provided to the study by participants completing the study questionnaires. There is baseline data collected for 1.3 million women via the recruitment questionnaire. Postal re-survey questionnaires were sent to all study participants around 3, 8, 12, and 15 years after recruitment, to keep track of participant’s health and to ask some new questions; and selected women also provided answers to an online diet questionnaire and to disease specific questionnaires, e.g. for cervical cancer and breast cancer. In addition, some women were recruited into a sub study collecting blood samples for biochemical and genetic analyses, the Million Women Study: Disease Susceptibility in Women study.\n\nThe average age of Million Women Study participants is now 77 years. Study participants are especially vulnerable to coronavirus infection. The study are currently documenting mortality from the disease and about 4000 have already died (mainly in April and May 2020) with COVID mentioned on their death certificate. However, there are considerably more deaths than expected from previous years from non-COVID causes. Having additional hospital admission (HES) data for April, May and June 2020, even if provisional, would help understand risk factors, not only for COVID, but also the extra deaths occurring in April, May and June 2020.",
+  "a130d95206dd": "The cohort participants are already flagged with the HSCIC, and this will be used to link to the HES data.\nData will be used by teams of researchers/statisticians in the Cancer Epidemiology Unit (CEU) at the University of Oxford. All individuals with access to the record level data are substantive employees of the University of Oxford. The data will be used solely within the CEU and will not be shared with any other organisation.",
+  "be5d179c86b5": "The Million Women Study will continue to directly benefit health care through the NHS by providing clinicians and other NHS health care professionals with up-to-date evidence to inform evidence-based public health guidance on the effects of modifiable risk factors, such as smoking, obesity, alcohol and long-term health and the risk of death. This will improve clinical health care and inform planners and policy makers to address demands on health and social care in the present and the future. \n\nTarget dates are ongoing.",
+  "cc6f18aea89a": "The Million Women Study (MWS) based at the Cancer Epidemiology Unit (CEU) is a national study of women’s health funded by Cancer Research UK and the Medical Research Council. The study involves 1.3 million UK women, recruited in 1996-2001, who have given written consent for follow up of their health through their medical records, to examine how reproductive and lifestyle factors affect their future health.",
+  "d593545a9c02": "The data will be used to examine relationships between lifestyle and reproductive factors (collected via questionnaire data) and a wide range of outcomes. These outcomes would mainly consist of a variety of cancer diagnoses, hip fractures and joint replacements and cardiovascular disease. CEU plan to publish their anonymised findings in peer reviewed scientific journals so that they can contribute to knowledge of common diseases and causes of hospital admissions.\nCEU have successfully published papers using data from their previous HES extract  and wish to continue using similar data together with extra information, to increase the understanding of patterns of disease groups including cancer diagnoses, joint replacements, fractures and cardiovascular disease. Further information can be found on the website at www.millionwomenstudy.org\n\nAll outputs will contain only aggregate with small numbers suppressed in line with the HES analysis guide.",
+  "df0cfdf02782": "The Million women Study participants are already flagged on the MIDAS systems. The participants were originally linked in 1996- 2001 when the CEU securely transferred files containing identifiers (NHS Number, Date of Birth and Postcode plus Unique Study ID) to NHS Digital.\n\nFor each member of the cohort, NHS Digital provides HES Admitted Patient Care data on an ad hoc basis (typically annually) and on a monthly basis provides notifications of deaths, cancer registrations and updates to patient registrations from the Personal Demographic Service (PDS). The CEU stores the data on a server in the CEU in the Nuffield Department of Population Health on the University of Oxford Campus which can be only accessed on location. Access to identifiable data is restricted to a small number of individuals all of whom are substantive employees of the University of Oxford, for the purposes of enabling linkage of the data from NHS Digital with data collected from other sources.  The other sources are questionnaire responses, data derived from analyses of blood and tissue samples, cancer data from Public Health England (PHE), data from CPRD and the equivalent data from Scotland to those provided by NHS Digital which are provided by NHSCR Scotland and the Information Services Division (ISD Scotland).  The University of Oxford will not link the data further and the only data linkages are those described in this Agreement.\n\nAccess to pseudonymised data is by named individuals within the CEU who have authorisation from the Principal Investigators to access the data for the purposes described, all of whom are substantive employees or students of the University of Oxford.  \n\nThis Data Sharing Agreement does not permit data to be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide, unless a third party has received separate approval from NHS Digital to receive the data covered by this Agreement.  Any third party seeking access to the data provided under this Agreement would be required to make a separate application to NHS Digital.\n\nAll organisations party to this Agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purpose of that use) by 'Personnel' (as defined within the Data Sharing Framework Contract - i.e employees, agents and contractors of the Data Receipt who may have access to the data).",
+  "e3c0acbd6ed1": "The data set (HES data) will be used to examine relationships between lifestyle and reproductive factors (collected via questionnaire data) and a wide range of outcomes. These outcomes would mainly consist of a variety of cancer diagnoses, hip fractures and joint replacements and cardiovascular disease. CEU plan to publish their anonymised findings in peer reviewed scientific journals so that they can contribute to knowledge of common diseases and causes of hospital admissions.\nCEU have successfully published papers using data from their previous HES extract (ET2535) and wish to continue using similar data together with extra information, to increase the understanding of patterns of disease groups including cancer diagnoses, joint replacements, fractures and cardiovascular disease. Further information can be found on the website at www.millionwomenstudy.org",
+  "e76dd68fd9a5": "The Million Women Study research using linked health data has directly influenced health care. Results showed, for example, that women using hormone replacement therapy are at increased risk of breast cancer; this work helped inform changes in prescribing, and it is estimated that tens of thousands of cases of cancer worldwide have been avoided as a result of the subsequent fall in use of hormone therapy.\nAnother example where HSCIC data contributed to an influential paper was in showing that risk of blood clots after surgery was far higher, and lasted for much longer, than had been previously thought. This work is helping to inform European surgical care guidelines. \nOther influential MWS work with direct health care benefits is looking at how to best implement a screening programme for bowel cancer following a study into how characteristics of individuals affect participation and outcomes of screening.",
+  "e9316809fb59": "The Million Women Study is an ongoing open-ended cohort study. Results are disseminated nationally and internationally in peer-reviewed open-access papers in research journals including The Lancet and The International Journal of Epidemiology, in related presentations to national and international research and clinical colleagues, in reports to government regulatory bodies, on the study website, through the media and through public outreach work (science open days, talks to participant groups). The study has been running for over 20 years and publications are produced on an ongoing basis. Presentations of findings will be at conferences such as the National Cancer Research Institute (NCRI) Conference in 2019. \n\nThe publications do not identify individuals and contain only de-identified data in aggregate form (tabulations and figures showing analysis results at the minimum level of detail required, using small number suppression) in line with the HES Analysis Guide and with ONS terms and conditions relating to the data being shared under this Agreement. \n\nAmong over 120 published papers, notable study publications include:\n1.\tBeral V; Million Women Study Collaborators. Breast cancer and hormone-replacement therapy in the Million Women Study. Lancet. 2003;362(9382):419-27. \n2.\tSweetland S, Beral V,  et al. Venous thromboembolism risk in relation to use of different types of postmenopausal hormone therapy in a large prospective study.  J Thromb Haemost. 2012;10(11):2277-86. \n3.\tPirie K, Peto R, et al. The 21st century hazards of smoking and benefits of stopping: a prospective study of one million women in the UK. Lancet. 2013 Jan 12;381(9861):133-41.\n4.\tTravis RC,et al. Night Shift Work and Breast Cancer Incidence: Three Prospective Studies and Meta-analysis of Published Studies. J Natl Cancer Inst 2016;108. \n5.\tKent S,et al. Hospital costs in relation to body-mass index in 1·1 million women in England: a prospective cohort study. Lancet Public Health. 2017;2(5):e214-e222.\n\nMillion Women Study results are reported in the media such as the BBC and national newspapers and its outputs reach a worldwide audience. e.g. \nhttp://www.bbc.co.uk/news/health-35052404 - being unhappy or stressed will not make you ill\nhttp://news.bbc.co.uk/1/hi/health/7906355.stm - a drink a day raises cancer risk\nhttp://www.bbc.co.uk/news/health-14220382 - tall people more likely to develop cancer\n\nFuture anticipated work using HES, cancer registry and ONS mortality data:\nCurrent funded work includes analyses of hormonal and other risk factors for subtypes of various common cancers (ovarian, colorectal, breast, endometrial and haematological); of diet and risk of cancer, fracture and vascular disease; of lifestyle factors, past health including mental health and long-term risk of dementia; of risk of osteoporosis and fracture in relation to use of bisphosphonate drugs; and of risk factors for different types of stroke. The study team will submit academic papers on the results of these analyses to open-access, high impact, peer-reviewed journals and will continue to liaise with NHS regulatory bodies as appropriate to ensure the results are used to help provide evidence for health guidelines and best clinical practice.\n\nThe Million Women Study website at www.millionwomenstudy.org  provides links to open access papers and offers free downloads of accessible summaries of findings. The twitter handles at Nuffield Department of Population Health (@Oxford_NDPH) and Oxford Medical Sciences Division (@OxfordMedSci) with a combined following of over 11,000 will promote all significant findings and will disseminate the findings at academic conferences and to lay audiences, as above.\n\nAll future outputs will contain only data that is aggregated, with small numbers suppressed in line with the HES Analysis Guide. ONS terms and conditions relating to the data being shared under this agreement will be adhered to.\n\nIn the next year or so the following reports, analyses and presentations are planned:\n\nData Analyses and papers:\n1.\tLong-term effects of dementia associated with midlife body mass index, diet and physical activity in one million UK women to be submitted to the journal Alzheimer’s and  Dementia 2018/19.\n2.\tSmoking and dementia incidence: prospective study of one million UK women to be submitted to The Lancet 2018/19. \n3.\tFoods, macronutrients and breast cancer risk in postmenopausal women: a large UK cohort. To be submitted to the International Journal of Epidemiology 2018/19.\n4.\tDiet and risk of different types of stroke. To be submitted to the journal Neurology 2018/19.\n\nUpcoming Conference presentations:\n1.\tUse of Endocrine therapy for breast cancer to be presented to The Early Breast Cancer Triallists Collaborative Group in Oxford June 2018.\n2.\tTiming of alcohol consumption and risk of liver cirrhosis: prospective study of UK women at European Congress of Epidemiology in Lyon July 2018.\n3.\tHistological type as a predictor of ovarian cancer survival at the British Association of Gynaecological Pathologists - Annual Meeting  June 2018.\n4.\tIntegrating pathology into epidemiology: Challenges and opportunities. European Society of Pathology Academy July 2018.",
+  "ec8d8b3f7408": "The 1.3 million cohort participants are already flagged with NHS Digital (formally known as Health and Social Care Information Centre), and this will be linked to HES data and continues to report to CEU on a frequent basis..\nData will be used by teams of researchers/statisticians in the Cancer Epidemiology Unit (CEU) at the University of Oxford. All individuals with access to the record level data are substantive employees of the University of Oxford. The data will be used solely within the CEU and will not be shared with any other organisation.",
+  "f6d0c2c4cb81": "The cohort participants are already flagged with the HSCIC, and this will be used to link to the HES data.\nData will be used by teams of researchers/statisticians in the Cancer Epidemiology Unit (CEU) at the University of Oxford. The data will be used solely within the CEU and will not be shared with any other organisation."
+ }
+}

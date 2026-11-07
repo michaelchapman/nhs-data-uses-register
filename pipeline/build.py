@@ -10,10 +10,10 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import aliases, compare, ods, outputs, overviews, privacy, relations, releases, search, sectors, sources
+from . import aliases, compare, earlier, ods, outputs, overviews, privacy, relations, releases, search, sectors, sources
 from .model import archive_views, organisation_slug
 from .names import display_name, strip_code
-from .references import slugify
+from .references import slugify, version_key
 from .rules import Rules
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -170,6 +170,57 @@ def version_diffs(
     return diffs
 
 
+def earlier_views(
+    store: dict | None,
+    agreements: list[dict],
+    organisation_aliases: dict | None = None,
+    organisation_lineage=None,
+) -> tuple[dict[str, dict], list[dict]]:
+    """What the earlier release registers add: `({base: view}, [agreements only they list])`.
+
+    A view of an agreement the site already has leaves out the versions its
+    pages already show, and carries `rows`: each remaining version, newest
+    first, paired with the version after it, so the page shows only text that
+    changed. See `pipeline.earlier`.
+    """
+    if not store:
+        return {}, []
+    periods = store["periods"]
+    known = {a["base_reference"].upper(): a for a in agreements}
+    views: dict[str, dict] = {}
+    only: list[dict] = []
+    for base, record in store["agreements"].items():
+        agreement = known.get(base.upper())
+        if agreement is None:
+            view = earlier.view(record, periods)
+            view["organisation_slug"] = organisation_slug(view["organisation"], organisation_aliases or {},
+                                                          organisation_lineage)
+            ordered = list(reversed(view["versions"]))
+            view["rows"] = [(version, ordered[n - 1] if n else None) for n, version in enumerate(ordered)]
+            only.append(view)
+            continue
+        held = {v["reference"] for v in agreement["versions"] + agreement.get("dropped_versions", [])}
+        view = earlier.view(record, periods, held)
+        oldest = agreement["versions"][0] if agreement["versions"] else None
+        after_all = {
+            "reference": oldest["reference"],
+            "texts": {field: oldest.get(field, "") for field in earlier.TEXT_FIELDS},
+        } if oldest else None
+        rows = []
+        for n, version in enumerate(view["earlier_only"]):
+            if n:
+                newer = view["earlier_only"][n - 1]
+            elif oldest and version_key(oldest["version"]) > version_key(version["version"]):
+                newer = after_all
+            else:
+                newer = None
+            rows.append((version, newer))
+        view["rows"] = rows
+        views[agreement["base_reference"]] = view
+    only.sort(key=lambda a: (a["last_listed"], a["base_reference"]), reverse=True)
+    return views, only
+
+
 def build(
     data: dict,
     meta: dict,
@@ -241,9 +292,23 @@ def build(
     all_papers = outputs.papers(output_links, data["agreements"] + archived)
     papers_by_org = outputs.by_organisation(all_papers)
     papers_by_dataset = outputs.by_dataset(all_papers)
+    # NHS Digital's release registers from before July 2021; see `pipeline.earlier`.
+    # With no store, agreement pages have no earlier section and there is no list.
+    earlier_store = earlier.load(excluded=rules.excluded)
+    earlier_by_base, earlier_only = earlier_views(
+        earlier_store, data["agreements"] + archived, organisation_aliases, organisation_lineage
+    )
+    taken = {a["slug"] for a in data["agreements"] + archived}
+    for agreement in [a for a in earlier_only if a["slug"] in taken]:
+        print(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
+    earlier_only = [a for a in earlier_only if a["slug"] not in taken]
+    earlier_files = earlier_store["files"] if earlier_store else []
     context = {
         "meta": meta,
         "papers_page": bool(output_links),
+        "earlier_periods": len(earlier_files),
+        "earlier_span": earlier.period_label(earlier_files[0]["period_start"], earlier_files[-1]["period_end"])
+        if earlier_files else "",
         # The edition being built. A historical changes page overrides `meta`
         # to show its own edition, but its list of editions still needs to know
         # which one is current.
@@ -282,7 +347,12 @@ def build(
     )
     search_numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
     render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
-           org_slugs=org_slugs, search_numbers=search_numbers)
+           org_slugs=org_slugs, search_numbers=search_numbers, earlier_count=len(earlier_only))
+    if earlier_only:
+        render("earlier-agreements.html", "agreements/earlier/index.html", agreements=earlier_only, org_slugs=org_slugs)
+        for agreement in earlier_only:
+            render("earlier-agreement.html", f"agreements/{agreement['slug']}/index.html", agreement=agreement,
+                   rows=agreement["rows"], org_slugs=org_slugs)
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
            archived_organisations=archive["organisations"])
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
@@ -347,6 +417,13 @@ def build(
         overview_models=overviews.models_used(overview_entries),
         output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
         output_lag=outputs.lag(all_papers),
+        earlier_stats={
+            "agreements": len(earlier_by_base),
+            "with_versions": sum(1 for view in earlier_by_base.values() if view["rows"]),
+            "versions": sum(len(view["rows"]) for view in earlier_by_base.values()),
+            "only": len(earlier_only),
+            "skipped": earlier_store["skipped"],
+        } if earlier_store else None,
     )
     if output_links:
         render(
@@ -395,6 +472,7 @@ def build(
             timeline=releases.agreement_timeline(agreement, dataset_aliases, meta["as_of"]),
             overview=overviews.current(agreement, overview_entries),
             papers=outputs.for_agreement(agreement, output_links),
+            earlier=earlier_by_base.get(agreement["base_reference"]),
         )
     for organisation in data["organisations"] + archive["organisations"]:
         render(
@@ -449,7 +527,7 @@ def build(
         {**meta, "edition_label": sources.edition_label(meta["edition"]), "stats": stats}, indent=1
     ))
     _write(out, "sitemap.xml", env.get_template("sitemap.xml").render(
-        **context, agreements=data["agreements"] + archived,
+        **context, agreements=data["agreements"] + archived + earlier_only,
         organisations=data["organisations"] + archive["organisations"],
         datasets=data["datasets"] + archive["datasets"],
         changes_editions=[e["edition"] for e in changes_history or [] if e["edition"] != meta["edition"]],

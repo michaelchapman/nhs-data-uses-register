@@ -1,0 +1,160 @@
+{
+ "base_reference": "DARS-NIC-154590-YG6QH",
+ "versions": [
+  {
+   "reference": "DARS-NIC-154590-YG6QH",
+   "version": "",
+   "organisation": "PUBLIC HEALTH ENGLAND (PHE)",
+   "organisation_type": "Agency/Public Body",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01",
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01",
+    "2019-05-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2019-11-01",
+    "2019-12-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01",
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01",
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "04830ad2e69c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Patient level data relating to Diabetic Retinopathy Eye Screening FOR DIRECT CARE",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Patient level data relating to Diabetic Retinopathy Eye Screening FOR DIRECT CARE",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 29
+    },
+    {
+     "dataset": "Patient level data relating to Diabetic Retinopathy Eye Screening FOR DIRECT CARE",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "04830ad2e69c": "Objective for processing: The diabetic retinopathy screening program will use:• the demographic patient information transferred to invite people recently-diagnosed with diabetes for annual screening;• the relevant clinical information transferred about patients who attend clinic appointments so that appropriate patient care is provided to those patients;Processing activities:For each monthly cohort, all patients with diabetes codes (Diabetes Exclusions CST, Diabetes Resolved CST and Diabetes CST) will be identified by the HSCIC and only those who have 'Diabetes CST' as their latest code will then have demographic and clinical data extracted for them. The full list of all required demographic data will be extracted by the HSCIC alongside the latest diabetes code including the date and time of this record.The Data Provider Output (DPO) is the data that general practice system suppliers extract from general practice clinical systems and submit to the HSCIC. The DPO is based on the data extraction specification (referred to as the ‘Extraction Requirement’) that the HSCIC circulates to general practice system suppliers.There will be a small amount of data transformation performed on the DPO. The HSCIC will use the General Practice Extraction Tool - Query (GPET-Q) system to collate the general practices’ DPO data into a file and then send the resulting file to the HSCIC Data Management Environment (DME). This is the 'Full Cohort' extract.Two data attributes (NHS Number and Registered Practice Id) will be copied from the file into a further file which will be stored in the HSCIC DME.  This is the 'Missing Patients' extract. It identifies the patients with diabetes extracted in the previous month’s extraction run, and the practices at which those patients were registered. Each month the HSCIC will replace the file with a new file of patient identifiers. Without that information it would be possible to send out confidential invitation letters inappropriately (e.g. to a person who has died, to the wrong address), potentially “lose” people in need of diabetic retinopathy services, and/or spend time and money investigating the \"missing patients\".The 'Missing Patients' and 'Full Cohort' extracts are the two data extracts that form the output files. The HSCIC processes and places the output files in a secure repository for Quicksilva (data processor for the 72 NHS diabetic retinopathy screening programmes) to download. The HSCIC retains the list of NHS numbers and GP practices until the next extract for the purpose of identifying the patients missing between months. This list will be destroyed once approved data about the missing patients has been extracted and sent to the 72 NHS diabetic retinopathy screening programmes. The data received will be stored within the central database of patient records maintained by the NHS diabetic retinopathy screening programme and used for the purposes described above.The  screening database of patient records is maintained in data centres in Harrogate & London which are provided by Redcentric PLC (Redcentric PLC is certified in ISO27001, ISO9001 and NHS IG Toolkit 12 (commercial third party)). Quicksilva manage and operate the screening database and process the data to the requirements of the Public Health England. After processing activities, the data is sent using a N3 host to  the 72 NHS diabetic retinopathy screening programmes dedicated systems located within secure care provider network environments (e.g. NHS trusts) and also sent to data reconciliation tools which updates  patient demographic data with local clinical system data.In order that the right people get access to the right data, the screening database includes:• a mapping of the patient’s general practice to a local screening program;• role based access controls that limit what patient data can be accessed depending on a specific role;• and audit trails to detect any unauthorised and/or excessive access.In addition to the data provided to PHE, two data attributes (NHS Number and Practice) will be stored in the HSCIC DME to be used in future extractions Specific outputs expected, including target date:The data will be used on an ongoing basis within patient records maintained by the NHS diabetic retinopathy screening programme to invite patients for screening, and to enable clinicians to provide appropriate clinical care. This database will be updated monthly.Expected measurable benefits to health and/or social care including target date:See “03_GP2DRS - Benefits Plan - August 2013 (NIC-154590-YG6QH)”"
+ }
+}

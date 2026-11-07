@@ -1,0 +1,38 @@
+{
+ "base_reference": "DARS-NIC-331739-Y7B7X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-331739-Y7B7X",
+   "version": "",
+   "organisation": "NHS England",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "4c415fbd329d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : MHLDDS",
+     "form": "Pseudonymised",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "4c415fbd329d": "Objective for processing: The use of the data is required for the purpose of understanding commissioning patterns, disease prevalence, treatments and outcomes at practice, CCG and provider level. NHS England has a responsibility under ‘Parity of Esteem’ to improve outcomes and tackle inequalities of people with MH problems, therefore NHS England require access to data which enables NHS England to measure improvement. NHS England access to the MHMDS is essential so that they can ensure that appropriate services are being commissioned for the population for which they are responsible.  From a provider and commissioner perspective, the MDS structures form the basis for much of the business intelligence to enable robust quality and performance monitoring Processing activities: The data will be stored on a non-networked PC within a secure building with 24/7 security staff. The data is held on a disk partition encrypted to AES256 standard. A password is required for each user to log onto the PC, and another to mount the MHMDS volume. The data is stored with SQL Server and only listed users can view or access the data There will be an initial set up of data storage design required to hold the data so the sooner the organisation has access to the dataset, the sooner value can be mined from the MHMDS and related datasets. Analysis techniques from other datasets is continuing to develop and it would be useful to incorporate the MHMDS into this as soon as possible. This means that NHS England are using HES at the moment to work out methods for identifying high/low intensity and high/low risk users and would like to try the same sorts of methods on the MHMDS data. Specific outputs expected, including target date: The analysis will involve: 1) Which factors are involved that result in high service usage 2a) Analysis of ICD10 diagnosis coding. This analysis will firstly focus on an understanding of the completeness and quality of ICD10 coding in the dataset to provide a basis for any further analysis. NHS England would like to work with HSCIC to understand their work completed to date on understanding the completeness and validity of this data item, as well as identifying any geographical trends or particular providers which show problems with coding completeness. Access to the data would enable further discussion of coding practices in providers for casemix complexity. This intelligence can be shared through commissioning routes to help drive up coding completeness and accuracy to make any subsequent analysis more meaningful. The target date for this is 30/06/15 2b) The following analysis that would be beneficial to complete is the spread of diagnoses geographically and demographically to identify any trends as well as diagnoses recorded over time (given a robust starting point for coding accuracy and completeness). Admissions and readmissions and activity could also be analysed by diagnosis to better understand these trends and potential differences in provider models to inform commissioning decisions and service improvement. The target date for this is 30/09/15. 3) An analysis of restraint shown monthly to identify any trends or outliers across providers, CCGs and sub-regions. The analysis will also include the frequency of restraint per patient and by ward type. This will highlight any areas for concern in the use of restraint to inform further discussion with commissioners. As the Restraint type is added to the MHLDDS in v2.0 this will provide further insight and areas for focus in discussions with commissioners. The target date for an initial piece of analysis on this is 30/04/15. The aim of this is to provide intelligence to commissioners to support the reduction of unnecessary restraint and potentially abusive restraint. 4) An updated Mental Health Quality Dashboard using quality measures derived from the MHMDS/MHLDDS. The current dashboard is under review to focus the measures further on quality and utilising the dataset will enable a wider availability of measures as well as robust data. The dashboard can be used by commissioners and providers for benchmarking and identifying areas for service improvement as well as to inform commissioning decisions. The target date for completion of the dashboard is 31/07/15. The aim of the dashboard is to monitor quality within Mental health providers NHS England may publish aggregate indicators or statistics derived from the data on the NHS England website but this will never be at individual level and small numbers will be suppressed. Expected measurable benefits to health and/or social care including target date: The data set provides opportunities to explore trends and to examine policy outcomes at many levels of granularity. Having rapid access to this data enables the organisation to be in a much better position to make more timely and informed decisions on its commissioning and patient experience responsibilities and assists in producing analysis with greater accuracy and relevance. In relation to the specific pieces of analysis above, 2a could show an improvement in coding quality and completeness from Quarter 2 2015/16 onwards and 2b if utilised by commissioners could support commissioning decisions from Quarter 3 and 4 2015/16. The restraint analysis under point 3 will provide an initial picture for commissioners to further understand by the end of Quarter 1 2015/16. Point 4 above will begin to support commissioning decisions and benchmarking from July 2015."
+ }
+}

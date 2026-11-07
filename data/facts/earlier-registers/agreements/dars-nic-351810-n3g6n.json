@@ -1,0 +1,75 @@
+{
+ "base_reference": "DARS-NIC-351810-N3G6N",
+ "versions": [
+  {
+   "reference": "DARS-NIC-351810-N3G6N",
+   "version": "",
+   "organisation": "Warwick Clinical Trials Unit",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "2eca0cdf26e4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "identifiable",
+     "sensitivity": "sensitive",
+     "legal_basis": "Section 251 (ECC 8-04 (C)/2013) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-351810-N3G6N-v0.3",
+   "version": "0.3",
+   "organisation": "University of Warwick",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "17a9880fc133",
+     "activities": "1872846bf319",
+     "expected_output": "3e5bf3f0e264",
+     "expected_benefits": "d8d76a04bc84"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "17a9880fc133": "The British Heart Foundation and the Resuscitation Council UK have funded the development of a database of Out of Hospital Cardiac Arrests (OHCA) attended by an NHS ambulance emergency response.  The project is called Epidemiology and Outcome from Out of Hospital Cardiac Arrest (OHCAO). It is run by the Emergency and Critical Care Team at the Warwick Clinical Trials Unit, University of Warwick. Data is collected by Ambulance Service Trusts and returned to a secure database run by the team.\nThe project aims to establish the feasibility of developing and sustaining a national data base.  This includes identifying the optimal process for case identification and outcome verification following OCHA.  The project also aims to report on the epidemiology and outcome following OHCA.  Survival is a key outcome.\nThis application concerns the part of the OHCAO project, which aims to standardise and streamline the process for outcome verification for patients who did not die in the care of the ambulance services, to determine whether or not these survivors died subsequently.  Initially a subset of data collected for the OHCAO project will be used to assess the feasibility of the data linkage process.\nPrevious work by the team (Paramedic Study: NIHR HTA - 07/37/69) found that collecting data on mortality after a patient was admitted to hospital was challenging for the Ambulance Services. The ONS data on mortality is a single, accurate and reliable source or mortality, so the OCHAO project would like to establish the feasibility of linking the OHCAO project data set with ONS data.\nGiven acknowledged difficulties for Ambulance Services to collect patients' NHS numbers, which are needed to make the link to the ONS data set, an objective is to assess the feasibility of improving the match rate of OHCAO dataset with the ONS and assess its accuracy through HSCIC's list cleaning service. The objectives of this application are therefore to use a randomly selected 10% sample of the OCHAO data collected in 2014 to:\n1.\tAssess the completeness and quality of variables used for case identification, collected by the Ambulance Services, through the HSCIC list cleaning service.\n2.\tAssess the quality and completeness of mortality data collected by the Ambulance Services through linkage with ONS mortality data,\n3.\tAssess whether and by how much the HSCIC list cleaning will improve the match rate of the OHCAO data for data linkage to ONS mortality data\n4.\tUse the resulting data set to analyse 30-day survival from OHCA",
+  "1872846bf319": "The process of obtaining and using the data provided by HSCIC and the ONS will follow several steps.\n1.\tOHCAO team will provide a 10% randomly selected sub-set of data held in the OHCAO database for the year 01/01/2014. to 31/12/2014 to HSCIC, via the HSCIC managed secure transfer system, which will contain the following variables:\na.\tPatient forename and surname\nb.\tNHS Number\nc.\tPost Code\nd.\tDate of birth\n2.\tHSCIC will provide a list cleaning service which will check the accuracy of the OHCAO data set and provide missing data where possible on the following variables:\na.\tHospital Number\nb.\tPost code\nc.\tDate of birth\nd.        Date of death\ne.        Surname\nf.         Forename\n3.\tHSCIC will link this data set to the ONS mortality data set, specifically to the variable \"date of death\". HSCIC will provide the “date of death” to OHCAO to allow OHCAO to calculate survival rates. OHCAO requires information on deaths from 01/01/2014 until 31/01/2015.  This will be used to produce an outcome of 30-day survival from the work.  For this reason, because OHCAO data set provided ends at the end of December 2014, mortality data is requested  covering the period up to the end of January 2015.  This will allow calculation of 30-day survival for any patients who had an arrest up to and including 31/12/2014.\n4.\tHSCIC will securely transfer the list-cleaned data set and the linked date of death from the ONS to the OHCAO project team at Warwick University.\n5.\tThe data set will be held securely. The University’s network is protected by Cisco designed infrastructure incorporating firewalls, VLANS (used to secure distinct areas of the university’s campus) and Intrusion Detection Software to alert the Network Services team of potential risks. The Network Services team uses a comprehensive system for logging network activity.  All servers are located in a purpose built data centre protected by a strictly policed access control system and CCTV surveillance. Occasional visitors/contractors are always escorted by an appropriate member of staff.  Access to all systems requires a user name and password.  Access to the database application requires an additional security role to be assigned to lock down features of the application to only those users who require them e.g. access to personally identifiable data.\n6.\tOnly the individuals with Approved Researcher accreditation will have access to the raw data.\n7.\tThe dataset will be used to establish the accuracy of the OHACO data base variables for NHS Number, Post Code, Date of Birth and Date of Death and used to update the database where necessary.  Decisions will be taken on what are the minimum identifiers needed for data linkage and identifiers that are not required will be destroyed.  For example, if it transpires that the NHS number and Date of Birth are sufficient for data collection by the ambulance services then the project will ask the ambulance service to stop collecting forename and surname in the future.\n8.\tThe data set will be analysed to investigate the 30-day survival rates for patients.",
+  "2eca0cdf26e4": "The project aims to establish the feasibility of developing and sustaining a national data base.  This includes identifying the optimal process for case identification and outcome verification following OCHA.  The project also aims to report on the epidemiology and outcome following OHCA.  Survival is a key outcome.",
+  "3e5bf3f0e264": "This application relates to a 10% sample of one year of data held on the OHCAO database and it's specific outputs will be\n1.\tA report for the funders on the outcomes of this data linkage project this would contain details on how they link the mortality data to see if there is an increase to individuals who have out of hospital cardiac arrest.  Target date April 2016\n2.\tA report to the ambulance services.  This would contain details of the 12 ambulance services across the country and within the report it would provide individual reports to showing how out of hospital cardiac arrests is linked to mortality for that region covered by that service linking the ambulance service within that region to cardiac outcomes in that area.  Target date April 2016.\n3.\tA paper in a peer reviewed journal.  This is a high impact journal covering the  UK detailing how mortality caused by out of hospital cardiac arrests are linked and survival rates  Target publication date December 2017\nAll reports and papers will only contain data that is anonymised and aggregated in line with the HES Analysis Guidelines.\nIt is the intention to report findings about the feasibility of linking the OCHAO data set with HSCIC/ONS data and the implications for expanding linkage to other HSCIC held data. It is also planned to report the results of survival analysis on the 10% sample.",
+  "d8d76a04bc84": "By establishing a national Out of Hospital Cardiac Arrest Outcomes database there is potential in the future for considerable patient benefit.  For example, Ambulance Services may use data to assess the impact of service improvement initiatives or researchers may use the data to assess the impact of interventions designed to improve survival, or understand the epidemiology of OHCA providing information about variation in outcome in the UK.  This sort of understanding could help target interventions to improve patient outcomes.  However, at this stage of the project, the focus is on developing and testing the best ways to collect the most accurate and reliable data for such a registry. The key expected benefits of this development phase will influence the next steps for establishing the OCHAO database.\nThe results will inform the OCHAO team in making decisions about improving data completeness and quality for the remainder of the funding period (October 2018). It will also inform decisions about the feasibility of future data linkage work and the potential and value of extending this process to the whole database.\nThe report to the funders will feed into their decision making about the feasibility of the data base and potential uses of the data for their future work.  There are other elements of the OCHAO Project that will contribute to this decision-making.  However this list cleaning and data linkage project will provide specific information about data collection and maximising data completeness and quality.\nThe report to the Ambulance Services will provide feedback and inform decisions about data collection, data completeness and data quality for the remainder of the OCHAO project (October 2018).\nThe paper in the peer-reviewed journal will provide knowledge to the research community about the methods of this data cleaning and linkage project and the survival outcomes for the subset of patients from the OCHAO database. It will inform researchers of the potential of the OCHAO database as an outcome database for future research to improve patient outcomes. Target date for publication: December 2017."
+ }
+}

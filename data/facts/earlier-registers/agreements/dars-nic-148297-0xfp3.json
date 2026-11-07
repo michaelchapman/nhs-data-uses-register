@@ -1,0 +1,147 @@
+{
+ "base_reference": "DARS-NIC-148297-0XFP3",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148297-0XFP3",
+   "version": "",
+   "organisation": "Addenbrooke's Hospital",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "085d99c17dae"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "5fa7e70c022a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148297-0XFP3-v0.0",
+   "version": "0.0",
+   "organisation": "ADDENBROOKE'S HOSPITAL",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01",
+    "2017-03-01",
+    "2017-09-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01",
+      "2017-03-01",
+      "2017-09-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "55f789adc375"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2017-03-01",
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01",
+      "2017-03-01",
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "085d99c17dae": "Peripheral vascular disease (PVD) is a major cause of morbidity and mortality. Patients with PVD often have significant medical conditions, such as coronary heart disease, high blood pressure and impaired function of the blood vessels and possibly stiffened arteries. Data concerning arterial stiffness in patients with PVD is limited, but stiffness predicts cardiovascular events in other patient groups. The aim of this study is to determine whether arterial stiffness predicts outcome in patients with PVD. We believe that a better understanding of vascular changes in PVD patients may eventually help us in treating patients with PVD and also in determining the risk for the future cardiovascular events, but this study will not provide any direct benefit for those taking part.",
+  "55f789adc375": "The data supplied by the NHS IC to Addenbrookes Hospital will be used only for the approved Medical Research Project MR835.",
+  "5fa7e70c022a": "This is a follow up study to determine if arterial stiffness and endothelial dysfunction are correlated and whether they predict outcome"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "base_reference": "DARS-NIC-383345-W2D3J",
+ "versions": [
+  {
+   "reference": "DARS-NIC-383345-W2D3J-v0.12",
+   "version": "0.12",
+   "organisation": "THE ROYAL COLLEGE OF SURGEONS OF ENGLAND",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "8e673819bc9a",
+     "activities": "7a721e696776",
+     "expected_output": "4d4a0b20fbfb",
+     "expected_benefits": "3ed939f50614"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 16
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 13
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-383345-W2D3J-v1.9",
+   "version": "1.9",
+   "organisation": "THE ROYAL COLLEGE OF SURGEONS OF ENGLAND",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01"
+     ],
+     "objective": "b458a9a8cfe6",
+     "activities": "4264c30ab6b5",
+     "expected_output": "fca75735b999",
+     "expected_benefits": "3ed939f50614"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3ed939f50614": "Over 650,000 mothers give birth every year in England, and there has been growing recognition of the need for evidence on how maternal factors prior to and during pregnancy affect childhood service use and outcomes. For example, NHS Digital are developing a new Maternity and Children’s Data Set linking prospective mother and child data, in order to commission services in a way that improve health and reduce inequalities; HQIP have funded the RCOG to run the National Maternity and Perinatal Audit, which will evaluate the quality of care received by women and newborns in the UK. \n\nOutputs from this study will add to and complement both of these initiatives by providing detailed information on trajectories of care for mothers and babies, and evaluating changes in service use over time using retrospective data analyses. \n\nThis study will directly benefit the Health and Social Care sector by providing healthcare professionals, NHS managers, commissioners and policy makers with detailed evidence to inform policy and aid decision making in relation to maternal and paediatric healthcare services. \n\nSpecifically, these outputs will provide information on variation in healthcare use in NHS organisations, which will be used to help to reduce inappropriate variation in practice and to improve outcomes of care for specific groups of mothers and babies; this research will provide detailed information on maternal and infant hospitalisation patterns and outcomes which will be used to identify which groups would benefit from increased support prior to birth, or intervention prior to delivery or following birth. \n\nAs well as presenting to paediatricians and other clinicians at national and international conferences, this study team will work with clinicians on the study Steering Group and members of the Royal College of Obstetricians (RCOG) and the Royal College of Surgeons (RCS) to ensure that the outputs of this study are used to support clinicians, policy makers and commissioners in their efforts to improve the quality of NHS care. \n\nThe study team is also closely linked with ongoing maternity service evaluation conducted by the Royal College of Obstetricians.  Similar RCOG studies have had clear benefits for the Health and Social Care sector, for example by providing evidence on modifiable risk factors for stillbirth to inform better monitoring during pregnancy, and by informing NICE guidelines relating to providing patients with information explaining the long-term consequences of prematurity. \n\nResults will also provide evidence to support the Children and Young People’s Health Outcomes Forum and the National Child and Maternal Health Intelligence Network. Therefore, this will directly influence policy, through adding to the body of evidence to allow policy-makers to improve maternity and paediatric services across the UK, and supporting them to meet the needs of women giving birth in England and their families.",
+  "4264c30ab6b5": "The data requested will only be accessed by staff within the RCS on a need to know basis and only for the purposes of this application, not for any other purposes.\n\nData will be stored on the secure server at the Royal College of Surgeons (RCS) and will be accessed by substantive employees of the Royal College of Surgeons and the research fellow, who has an honorary contract with RCS.\n\nDate of birth is required to calculate accurate post-natal length of stay and time to readmission. \n\nTo identify corresponding maternal and baby records (linking mother to baby), RCS will use non-disclosive, clinical and demographic variables common to both maternal and baby HES admission records. These would be episode dates, provider code, postcode district, GP practice and delivery information. \n\nThe ONS data will be processed in accordance with ONS standard terms and conditions as described in the special conditions of this document.\n\nLinked ONS mortality data will be used to account for maternal and infant deaths within analyses; date of death will be transformed into days since birth/postnatal discharge and then destroyed. Taking into account timing of deaths is important when assessing trends in maternal and infant readmissions over time. Date of birth is required to calculate accurate post-natal length of stay and time to readmission.  \n\nAgreement between HES and national aggregate published data from the Office for National Statistics will be assessed, in relation to distributions of important data items (e.g. gestational age, birth weight, maternal age).\n\nThe data will not be linked to any other datasets.\n\nRCS will not attempt, nor have any requirement,  to re-identify any participants within the data.\n\nRCS will not share the data with any 3rd parties, including the Royal College of Obstetricians and Gynaecologists or linked with the National Maternity Audit data.\n\n \n\nRCS  agree to the destruction of the date of birth and date of death data once the required calculations have been completed. Data destruction documents will be submitted to NHS Digital once completed.",
+  "4d4a0b20fbfb": "The outputs of the analysis, in the form of aggregate data with small numbers suppressed ( in line with the HES Analysis Guide), will be submitted for publication in peer-review journals and presented at national and international conferences.\n\nThe study has received funding from the Wellcome Trust, who will support the publication of results in open access journals and ensure the wide dissemination of this study’s results to healthcare professionals, NHS managers, commissioners and policy makers. \n\nThe study team is also closely linked with ongoing maternity service evaluation conducted by the Royal College of Obstetricians ( RCOG) . The RCOG set standards for clinical practice, publish clinical guidelines and patient information leaflets, contribute to policy development, and advise the government and other public bodies on healthcare matters\n\nRCS aim to make their results available in both clinical and methodological forums: RCS will aim to submit abstracts for presentation at the following conferences within 1 year of data access:\n* International Population Data Linkage Network, \n*Society for Longitudinal and Lifecourse Studies, \n*Public Health Science, Society for Social Medicine. \n\nRCS will aim to submit publications to the following journals within 2 years of data access: \n*International Journal of Epidemiology, \n*Journal of Clinical Epidemiology, \n*PLoS One, \n*Archives of Disease in Childhood, Paediatrics. \n\nAll papers will be published with open access.\n\nOutputs will contain only aggregate level data with small numbers suppressed in line with HES analysis guide. Data will not be used for sales or marketing purposes.",
+  "7a721e696776": "The data requested will only be accessed by staff within the RCS on a need to know basis and only for the purposes of this application, not for any other purposes.\n\nData will be stored on the secure server at the Royal College of Surgeons (RCS) and will be accessed by substantive employees of the Royal College of Surgeons and the research fellow, who has an honorary contract with RCS.\n\nDate of birth is required to calculate accurate post-natal length of stay and time to readmission.  \n\nTo identify corresponding maternal and baby records (linking mother to baby), RCS will use non-disclosive, clinical and demographic variables common to both maternal and baby HES admission records. These would be episode dates, provider code, postcode district, GP practice and delivery information. \n\nAgreement between HES and national aggregate published data from the Office for National Statistics will be assessed, in relation to distributions of important data items (e.g. gestational age, birth weight, maternal age).",
+  "8e673819bc9a": "Royal College of Surgeons (RCS) request patient-level Hospital Episode Statistics (HES) to support a programme of work on maternal and child health, specifically focusing on how maternal factors prior to and during pregnancy affect childhood service use and outcomes. RCS propose to link key characteristics from maternal admission records to hospitalisation patterns for their offspring, and to use this information to provide an integrated approach for understanding infant healthcare use and childhood outcomes.\n\nLinked hospital data on mothers and their offspring has been used to support service evaluation, planning, and research in smaller populations (including within Scotland, Australia, the US, Canada, and the Netherlands) and prospective mother-child data will be made available as part of the Maternity and Children’s Data Set (http://content.digital.nhs.uk/maternityandchildren?tabid=2). \n\nBringing together information on mothers and their offspring using retrospective, national hospital data in England will allow RCS to evaluate maternal and household determinants of service use and outcomes in children, on a substantially larger and more detailed scale than previously possible.\n\nFirstly, RCS will analyse HES data to investigate how maternal hospitalisation patterns are related to birth outcomes and childhood readmissions. Determinants of variation in healthcare use and outcomes will be described for a variety of patient groups, defined either by specific diagnoses and/or procedure (e.g. obstetric procedures, pregnancy-related conditions, chronic conditions, mental health or indicators of social risk/adversity).\n\nSecondly, RCS will bring together information on outcomes of previous pregnancies to investigate how previous birth outcomes and inter-pregnancy interval influence childhood outcomes and hospitalisation patterns. \n\nFinally, RCS will combine information on healthcare use in mothers and all her offspring, to determine changing influences throughout childhood. This increasingly complex information will help RCS to understand how determinants of healthcare use change through childhood – i.e. from clinical birth outcomes in infancy to maternal and household influences throughout childhood.",
+  "b458a9a8cfe6": "Royal College of Surgeons (RCS) request patient-level Hospital Episode Statistics (HES) linked with ONS mortality data to support a programme of work on maternal and child health, specifically focusing on how maternal factors prior to and during pregnancy affect childhood service use and outcomes. RCS propose to link key characteristics from maternal admission records to hospitalisation patterns for their offspring, and to use this information to provide an integrated approach for understanding infant healthcare use and childhood outcomes.\n\nLinked hospital data on mothers and their offspring has been used to support service evaluation, planning, and research in smaller populations (including within Scotland, Australia, the US, Canada, and the Netherlands) and prospective mother-child data will be made available as part of the Maternity and Children’s Data Set (http://content.digital.nhs.uk/maternityandchildren?tabid=2). \n\nBringing together information on mothers and their offspring using retrospective, national hospital data in England will allow RCS to evaluate maternal and household determinants of service use and outcomes in children, on a substantially larger and more detailed scale than previously possible.\n\nFirstly, RCS will analyse HES-ONS data to investigate how maternal hospitalisation patterns are related to birth outcomes and childhood readmissions. Determinants of variation in healthcare use and outcomes will be described for a variety of patient groups, defined either by specific diagnoses and/or procedure (e.g. obstetric procedures, pregnancy-related conditions, chronic conditions, mental health or indicators of social risk/adversity).\n\nSecondly, RCS will bring together information on outcomes of previous pregnancies to investigate how previous birth outcomes and inter-pregnancy interval influence childhood outcomes and hospitalisation patterns. \n\nFinally, RCS will combine information on healthcare use in mothers and all her offspring, to determine changing influences throughout childhood. This increasingly complex information will help RCS to understand how determinants of healthcare use change through childhood – i.e. from clinical birth outcomes in infancy to maternal and household influences throughout childhood.",
+  "fca75735b999": "The outputs of the analysis, in the form of aggregate data with small numbers suppressed ( in line with the HES Analysis Guide), will be submitted for publication in peer-review journals and presented at national and international conferences.\n\nThe study has received funding from the Wellcome Trust, who will support the publication of results in open access journals and ensure the wide dissemination of this study’s results to healthcare professionals, NHS managers, commissioners and policy makers. \n\nThe study team is also closely linked with ongoing maternity service evaluation conducted by the Royal College of Obstetricians ( RCOG) . The RCOG set standards for clinical practice, publish clinical guidelines and patient information leaflets, contribute to policy development, and advise the government and other public bodies on healthcare matters\n\nRCS aim to make their results available in both clinical and methodological forums: RCS will aim to submit abstracts for presentation at the following conferences within 1 year of data access:\n* International Population Data Linkage Network, \n*Society for Longitudinal and Lifecourse Studies, \n*Public Health Science, Society for Social Medicine. \n\nRCS will aim to submit publications to the following journals within 2 years of data access: \n*International Journal of Epidemiology, \n*Journal of Clinical Epidemiology, \n*PLoS One, \n*Archives of Disease in Childhood, Paediatrics. \n\nAll papers will be published with open access.\n\nData will not be used for sales or marketing purposes."
+ }
+}

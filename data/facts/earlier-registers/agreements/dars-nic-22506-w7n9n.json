@@ -1,0 +1,43 @@
+{
+ "base_reference": "DARS-NIC-22506-W7N9N",
+ "versions": [
+  {
+   "reference": "DARS-NIC-22506-W7N9N",
+   "version": "",
+   "organisation": "NHS AIREDALE, WHARFEDALE AND CRAVEN CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "326bcbee1b92",
+     "activities": "48358fb4fe80",
+     "expected_output": "7ca7a6b87d12",
+     "expected_benefits": "7ca7a6b87d12"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "326bcbee1b92": "To utilise SUS data Identifiable at the level of NHS number to provide risk stratification information to the GP practice.",
+  "48358fb4fe80": "Processing of SUS Data for the purposes of Risk Stratification includes landing, processing, staging and publication.\n1. Landing\nPrior to the release of SUS data by DSCRO Yorkshire, Type 2 objections will be applied and the relevant patients data redacted. DSCRO Yorkshire securely transfer the SUS data identifiable at the level of NHS number. Data is landed and processed in an access restricted data centre located at eMBED. \nOnly named individuals have access to process the data. All users undertake regular IG training, in line with IGT & ISO 27001:2013 requirements.\n2. Processing\nData is processed on a monthly basis. \n2.1. Data is extracted from primary care systems and downloaded to a secure storage area within eMBED, it is then processed to exclude data for patient objections and sensitive conditions\n2.2. Cleaning and quality checks are carried out and documented.\n2.3. SUS and primary care data are linked.\n2.4. Creation of Risk Stratification dataset.\n2.5. Risk Stratification dataset processed through CPM Risk Stratification Algorithm to produce a Risk Stratified scoring dataset.\n \n3. Staging\nData is landed to a secure staging area for final quality checks before forwarding to the live server. \n4. Publication\nOutputs are available to GP practice for their own patients only via the eMBED CPM web-portal. Access to the eMBED CPM web-portal is via username and password.  All usage of its tools is audited this is controlled by the practices. \nThere are two outputs available, these are:\n• Identifiable Reports – containing a record for each patient with NHS number, name and unique identifier Patient ID which is added to each record during data processing.\n\n• Non-Identifiable Reports – NHS number and name are removed but the record still contains the unique identifier patient ID. (The Patient ID is generated during the loading and processing and are used in referencing the different tables so no one knows these numbers.)\nData identifiable at the level of NHS number is only available to named individuals within the GP Practices who have a legitimate relationship with the patient. \nThe web-portal is accessed by the GP using a username and password.\nThe GP have direct access to any underlying patient level SUS data where they can see all aspects of the inpatient and outpatient activity. \nThe GP also has access to the diagnosis data from both SUS data and the primary care data.",
+  "7ca7a6b87d12": "To provide risk profiling, calculated on activity data from secondary and primary care. As part of the risk stratification processing activity detailed above, the GP have access to the eMBED CPM web-tool for reports which presents to them their registered patients and associated risk score.\nThe GP can access the eMBED CPM web-tool which is a secure portal at any time which will support multi-disciplinary team discussions around ongoing patient care, enhanced service requirements and supporting patient care. \nThe GP can copy and paste the NHS number presented in the eMBED CPM web-tool to any other program including the practice clinical system, in order to perform the key aspects of this risk stratification role. \nThere are two outputs available in the eMBED CPM web-tool, these are:\n• Identifiable Reports – containing a record for each patient with NHS number, name and unique identifier Patient ID which is added to each record during data processing.\n\nNon-Identifiable Reports – NHS number and name are removed but the record still contains the unique identifier patient ID. The GP practice authorises the access to the eMBED CPM web-tool, the level of access and which view is available.\nAggregated outputs are available to the CCG on request via eMBED.\nNo data will be shared with any other third party organisations."
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "base_reference": "DARS-NIC-148098-9ZV2X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148098-9ZV2X",
+   "version": "",
+   "organisation": "University of Leeds",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "48998a5d71da"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148098-9ZV2X-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY OF LEEDS",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "389da9b3bc69"
+    },
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "f4489eb7870f"
+    },
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "f4489eb7870f",
+     "activities": "d0354ad7bf9f",
+     "expected_output": "3f34d6f141cf",
+     "expected_benefits": "3f34d6f141cf"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "389da9b3bc69": "The data supplied by the NHS IC to Institute of Cancer Research will be used only for the approved Medical Research Project identified above.",
+  "3f34d6f141cf": "To be completed by the applicant",
+  "48998a5d71da": "To characterise in detail and establish a database of patients with chronic heart failure attending Leeds Teaching Hospitals, Bradford Foundation Trust NHS Hospitals, and the Mid-Yorkshire Hospitals NHS Trust. The present proposal aims to try and use the results of routinely collected tests to identify patients with chronic heart failure at high risk of premature death and mode of death. Identifying patients at high risk of dying and predicting the mode of death may allow us to target treatments at these patients more effectively.",
+  "d0354ad7bf9f": "To be completed by applicant",
+  "f4489eb7870f": "The data supplied to the University of Leeds will be used for the approved Medical Research Project, Prognostic markers in patients with chronic heart failure."
+ }
+}

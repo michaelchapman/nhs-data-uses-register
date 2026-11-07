@@ -1,0 +1,178 @@
+{
+ "base_reference": "DARS-NIC-148473-G85HC",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148473-G85HC",
+   "version": "",
+   "organisation": "Public Health England (PHE)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "objective": "f0b3989548af"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "a43410f5dc1e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148473-G85HC-v0.0",
+   "version": "0.0",
+   "organisation": "PUBLIC HEALTH ENGLAND (PHE)",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-12-01",
+    "2017-06-01",
+    "2017-09-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "f0b3989548af"
+    },
+    {
+     "periods": [
+      "2016-12-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "2dba15ee3c47"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-12-01",
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01",
+      "2017-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Other-NHS Regulations (3)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "2dba15ee3c47": "The data supplied by the NHSIC to Public Health England will be used only for the approved Medical Research Project MR1045.",
+  "a43410f5dc1e": "The data supplied by the NHS IC to Health Protection Agency will be used only for the approved Medical Research project identified above.",
+  "f0b3989548af": "To describe the clinical state at diagnosis and long-term outcome of HTLV infected individuals, 2). To investigate factors associated with transmission, disease an survival in HTLV infected individuals. Uninfected recipients (of donated blood) identified in the 'lookback' will provide a comparative group."
+ }
+}

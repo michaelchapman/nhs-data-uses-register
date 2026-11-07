@@ -1,0 +1,91 @@
+{
+ "base_reference": "DARS-NIC-184980-J5B6C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-184980-J5B6C",
+   "version": "",
+   "organisation": "Cardiff University",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "0981d3a94a26"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-184980-J5B6C-v0.0",
+   "version": "0.0",
+   "organisation": "CARDIFF UNIVERSITY",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01"
+     ],
+     "objective": "da86304734a6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0981d3a94a26": "This is a flagging study examining mortality and cancer registrations, It is an on going trial with 747 patients currently randomised with acute myeloid leukaemia (AML).\nThe age range is between 0-59 years, however some patients over  60 years will be included where intensive therapy is considered appropriate.  The study aims to recruit 2500-3000 patients.",
+  "da86304734a6": "Treatment choice and outcome substantially decided by age.  Patients <60 years have a significantly improved survival,  Of patients >60 years treated intensively over the last 15 years there is little evidence of improvements in survival, CR rate not improved beyond 60% and relapse is 85% of patients.  Large groups of patients >60 years are not considered fit for intensive treatment - median survival 4 months.  Median age of disease is 65 years.\n\nAs the general population lives longer, the number of patients in this age group will increase.  There is an urgent need to find new treatments for patients >60 years who are not catered for in most trials.\n\nHCTU will use the data to support the analysis and long term follow up of the AML15 clinical trial with an aim of producing academic papers."
+ }
+}

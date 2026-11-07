@@ -1,0 +1,279 @@
+{
+ "base_reference": "DARS-NIC-147827-NC2TC",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147827-NC2TC",
+   "version": "",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "c5e13116129a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (PIAG 1-05(e)/2006) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147827-NC2TC-v0.0",
+   "version": "0.0",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-12-01"
+     ],
+     "objective": "de5946274162"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-12-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147827-NC2TC-v2.12",
+   "version": "2.12",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2018-05-25",
+    "2018-10-01",
+    "2019-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-05-25"
+     ],
+     "objective": "1b3272e0dd0e",
+     "activities": "3a7a4676d537",
+     "expected_output": "9c2f9a451c20",
+     "expected_benefits": "0bc7b703926b",
+     "yielded_benefits": "346e6bb57b6e"
+    },
+    {
+     "periods": [
+      "2018-10-01",
+      "2019-02-01"
+     ],
+     "objective": "28c8964a376c",
+     "activities": "3a7a4676d537",
+     "expected_output": "9c2f9a451c20",
+     "expected_benefits": "0bc7b703926b",
+     "yielded_benefits": "346e6bb57b6e"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-02-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147827-NC2TC-v3.10",
+   "version": "3.10",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2019-08-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-08-01"
+     ],
+     "objective": "58aeb19b79b3",
+     "activities": "f7c89004368d",
+     "expected_output": "6d3811d27538",
+     "expected_benefits": "da31c0d6f5d5",
+     "yielded_benefits": "c91309d3f14b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-08-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-08-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147827-NC2TC-v4.1",
+   "version": "4.1",
+   "organisation": "Imperial College London",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-10-01",
+    "2020-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-10-01",
+      "2020-02-01"
+     ],
+     "objective": "58aeb19b79b3",
+     "activities": "f7c89004368d",
+     "expected_output": "6d3811d27538",
+     "expected_benefits": "da31c0d6f5d5",
+     "yielded_benefits": "c91309d3f14b"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-02-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-02-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0bc7b703926b": "The IA study is required to determine the extent to which the current UK adenoma surveillance guidelines gives rise to unnecessary colonoscopies in people with intermediate-risk adenomas; the elimination of which would minimise risks of complications associated with the procedure and worry to patients, plus ease the current unsustainable economic and workforce pressures on the NHS.\n\nFor the All Adenomas study, by quantifying CRC risk in all adenoma patients with and without surveillance, the study will benefit patients and the NHS by identifying:\n• those at sufficiently low risk of CRC after adenoma diagnosis at colonoscopy to render surveillance unnecessary;\n• those most likely to benefit from colonoscopic surveillance;\n• the minimum surveillance required to afford adequate protection from CRC, and when it can be safely stopped.\n\nThis study would be the first to use CRC incidence as an outcome to evaluate adenoma surveillance requirements, and through its large size and longevity of follow-up, would provide new evidence of long-term CRC risk in all adenoma patients. Because the dataset is current, the results generated could have enduring value as a reference against which future interventions for minimising CRC risks in adenoma patients could be compared.",
+  "1b3272e0dd0e": "This application covers the amendment of the ‘Intermediate Adenoma study’ to the ‘All Adenomas study’.\n\nThe Intermediate Adenoma study:\n\nThe Intermediate Adenoma study (the IA study) was set-up in 2006, funded by the National Institute Health Research Health Technology Assessment (NIHR-HTA) following a commissioned call (reference 04/01/33), to investigate the most suitable frequency of follow-up for patients with intermediate-risk adenomas detected during colonoscopy.\n\nThe IA study was conducted by the Cancer Screening and Prevention Research Group (CSPRG) at Imperial College London in collaboration with 17 participating NHS hospitals in England and Scotland.\n\nThe study included a ‘hospital’ dataset and a ‘screening’ dataset. The hospital dataset was established from consecutive routine gastrointestinal endoscopy examinations in the participating hospitals to identify the study cohort – i.e. patients who were diagnosed as having an intermediate-risk adenoma at ‘baseline’.\n\nCSPRG, Imperial College London has utilized this baseline investigation, plus subsequent colonoscopy and pathology investigations to determine the risk of advanced adenomas (large (≥ 1cm) or with advanced pathology) and colorectal cancer (CRC) in the study cohort. The hospital data was combined with data received from NHS Digital on colorectal cancer incidence and deaths, to ensure all incidences of colorectal cancer were reported for the study cohort.\n\nThe combined IA hospital dataset enabled the CSPRG to investigate:\n- The optimal frequency of surveillance in people found to have intermediate-risk colorectal adenomas.\n- The risks and benefits to the patient with respect to prevention of cancer and the development of advanced adenomas; anxiety, morbidity and mortality; costs and cost-effectiveness and implications for the NHS\n\nThe primary outcomes of the IA study have been published (see outputs section) and IA study is now in long-term follow-up and secondary analyses will be conducted to explore the data further through 2018 (manuscripts in preparation).\n\nAmendment to the All Adenomas study:\n\nCSPRG were awarded further funding by the NIHR-HTA in March 2017 (reference 15/80/13)  to expand the remit of this study to investigate the same endpoints in all adenoma risk-groups, not just the intermediate-risk group. To achieve this, the IA study protocol was amended to the ‘All Adenomas study’. \n\nThe All Adenomas study protocol amendment has three main components:\n1. To extend the analysis to investigate the ideal frequency of follow-up for patients with any adenoma detected at the initial investigation (low-, intermediate- or high- risk, as defined by the UK adenoma surveillance guidelines, 2002), using the same study cohort\n\n2. To extend the follow-up period to at least 10-years post initial endoscopic investigation\n1.3. To add a health economic analysis, to be conducted by the Health Economic Research Centre (HERC), University of Oxford, in collaboration with the CPSRG to determine the cost implications of any changes to the number of colonoscopies required as a result of the investigations of the low-, intermediate- and high-risk adenoma groups (either an increase or decrease).\n\nThe CSPRG has has recently received research ethics committee and health research authority approvals (including section 251 support) to include these additional analyses.\n\nThe CSPRG would now like to receive an updated data extract on all records to enable them to follow-up the whole cohort for up to 10 years post the initial endoscopic investigation.\n\nA new health economic analysis will be conducted by the University of Oxford to determine the cost implications of any changes to the number of colonoscopies required as a result of the investigations of the low-, intermediate- and high-risk adenoma groups (either an increase or decrease).  The University of Oxford have been asked by Imperial to do the economic analysis which will result in the provision of a chapter for the proposed report.",
+  "28c8964a376c": "This application covers the amendment of the ‘Intermediate Adenoma study’ to the ‘All Adenomas study’.\n\nThe Intermediate Adenoma study:\n\nThe Intermediate Adenoma study (the IA study) was set-up in 2006, funded by the National Institute Health Research Health Technology Assessment (NIHR-HTA) following a commissioned call (reference 04/01/33), to investigate the most suitable frequency of follow-up for patients with intermediate-risk adenomas detected during colonoscopy.\n\nThe IA study was conducted by the Cancer Screening and Prevention Research Group (CSPRG) at Imperial College London in collaboration with 17 participating NHS hospitals in England and Scotland.\n\nThe study included a ‘hospital’ dataset and a ‘screening’ dataset. The hospital dataset was established from consecutive routine gastrointestinal endoscopy examinations in the participating hospitals to identify the study cohort – i.e. patients who were diagnosed as having an intermediate-risk adenoma at ‘baseline’.\n\nCSPRG, Imperial College London has utilized this baseline investigation, plus subsequent colonoscopy and pathology investigations to determine the risk of advanced adenomas (large (≥ 1cm) or with advanced pathology) and colorectal cancer (CRC) in the study cohort. The hospital data was combined with data received from NHS Digital on colorectal cancer incidence and deaths, to ensure all incidences of colorectal cancer were reported for the study cohort.\n\nThe combined IA hospital dataset enabled the CSPRG to investigate:\n- The optimal frequency of surveillance in people found to have intermediate-risk colorectal adenomas.\n- The risks and benefits to the patient with respect to prevention of cancer and the development of advanced adenomas; anxiety, morbidity and mortality; costs and cost-effectiveness and implications for the NHS\n\nThe primary outcomes of the IA study have been published (see outputs section) and IA study is now in long-term follow-up and secondary analyses will be conducted to explore the data further through 2018 (manuscripts in preparation).\n\nAmendment to the All Adenomas study:\n\nCSPRG were awarded further funding by the NIHR-HTA in March 2017 (reference 15/80/13)  to expand the remit of this study to investigate the same endpoints in all adenoma risk-groups, not just the intermediate-risk group. To achieve this, the IA study protocol was amended to the ‘All Adenomas study’. \n\nThe All Adenomas study protocol amendment has three main components:\n1.\tTo extend the analysis to investigate the ideal frequency of follow-up for patients with any adenoma detected at the initial investigation (low-, intermediate- or high- risk, as defined by the UK adenoma surveillance guidelines, 2002), using the same study cohort\n\n2.\tTo extend the follow-up period to at least 10-years post initial endoscopic investigation\n1.3.\tTo add a health economic analysis, to be conducted by the Health Economic Research Centre (HERC), University of Oxford, in collaboration with the CPSRG to determine the cost implications of any changes to the number of colonoscopies required as a result of the investigations of the low-, intermediate- and high-risk adenoma groups (either an increase or decrease).\n\nThe CSPRG has has recently received research ethics committee and health research authority approvals (including section 251 support) to include these additional analyses.\n\nThe CSPRG would now like to receive an updated data extract on all records to enable them to follow-up the whole cohort for up to 10 years post the initial endoscopic investigation.\n\nA new health economic analysis will be conducted by the University of Oxford to determine the cost implications of any changes to the number of colonoscopies required as a result of the investigations of the low-, intermediate- and high-risk adenoma groups (either an increase or decrease).  The University of Oxford have been asked by Imperial to do the economic analysis which will result in the provision of a chapter for the proposed report.",
+  "346e6bb57b6e": "The generation of the Intermediate Adenoma database has enabled the CSPRG to successfully receive additional funding from the National Institute for Health Research-Health Technology Assessment to extend the analysis to include both the low- and high-risk adenoma groups, as the 'All Adenomas study'.\n\nThe outcomes of the All adenomas study will help to inform the update of the UK Adenoma Surveillance Guideline, which have not been updated since 2002.",
+  "3a7a4676d537": "On receipt of the cancer and mortality data from NHS Digital on the IA study cohort, CSPRG will format it in accordance with the existing IA hospital database schema before uploading it to the IA hospital study database.  All CSPRG staff members who have access to the data are substantive employees of Imperial College London  staff accessing the data at University of Oxford are all substantive employees of the University of Oxford.\n\nWith the new data in the database, and after basic data cleaning, CSPRG will match the cancers and deaths to the trial participants. This will tell CSPRG which new cancers and / or deaths have occurred since the last data extract was received. It will also tell CSPRG which, if any, deaths or cancers were incorrectly reported in the previous excerpt. \n\nThe data will be pseudonymised and given to CSPRG statisticians for analysis and to give the required outputs for reporting and publication in accordance with the NIHR-HTA terms and conditions.\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nA sub-set of the pseudonymised data will be shared with the University of Oxford for the purpose of conducting the health economic data.  The sub set is minimised by the study before sharing with Oxford to ensure that only the required fields are shared which are necessary for the analysis being undertaken.\n\nProcessing activities by the University of Oxford: The data received from the CSPRG will be used to estimate resource use (for example, number of healthcare appointments), costs, and health outcomes (for example, number of adenomas and cancers detected). This will involve rearranging the data; applying unit cost estimates and resource use estimates from external sources; and producing summary statistics.\n\nSecondly, the University of Oxford will estimate long term economic outcomes by fitting statistical models to the data received. The statistical models will be combined with unit costs and quality of life estimates to estimate long terms costs and quality of life for subgroups of individuals in the data (by surveillance strategy as defined by the group at Imperial, and cancer stage as provided in the linked data).\n\nThe data will not be further linked with other patient level datasets for the analysis by the University of Oxford beyond what is provided by the CSPRG.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nONS Terms and Conditions will be adhered to.\n\nData obtained for Deaths & Cancers in Scotland For English patients who have moved to Scotland during the study will not be provided by NHS Digital these data are sourced from the Scottish equivalent organisation.",
+  "58aeb19b79b3": "The Intermediate Adenomas study (the IA study) was set-up in 2006, funded by the National Institute for Health Research Health Technology Assessment (NIHR-HTA) following a commissioned call (reference 04/01/33), to investigate the most suitable frequency of follow-up for patients with intermediate-risk adenomas detected during colonoscopy.  Imperial Collage London are the Data Controllers for this work and are processing the personal data in line with Article 6(1)(e) & 9(2)(j) of the GDPR.  Imperial College are a public authority and have a remit to conduct and carry out research.\n\nThe IA study was conducted by the Cancer Screening and Prevention Research Group (CSPRG) at Imperial College London in collaboration with 17 participating NHS hospitals in England and Scotland.\n\nThe study included a ‘hospital’ dataset and a ‘screening’ dataset. The hospital dataset was composed of routine gastrointestinal endoscopy examinations for the cohort.  The cohort consisted of patients who were diagnosed with a colorectal adenoma that placed them at “intermediate risk”.  The study refer to the exam where the adenoma was found as the “baseline”. \n\nThe study has utilized this baseline investigation, plus subsequent colonoscopy and pathology investigations, to determine the risk of advanced adenomas (large (≥ 1cm) or with advanced pathology) and colorectal cancer (CRC) in the study cohort. The hospital data was combined with data received from NHS Digital on colorectal cancer incidence and deaths, to ensure all incidences of colorectal cancer were reported for the study cohort.\n\nThe combined IA hospital dataset enabled the CSPRG to investigate:\n- The optimal frequency of surveillance in people found to have intermediate-risk colorectal adenomas.\n- The risks and benefits to the patient with respect to prevention of cancer and the development of advanced adenomas; anxiety, morbidity and mortality; costs and cost-effectiveness and implications for the NHS.\n\nThe primary outcomes of the IA study have been published (see outputs section). The IA study was subsequently amended in 2017 to include the aims of the All Adenomas study.\n\nAmendment to the IA study protocol to incorporate the All Adenomas study objectives (2017):\nCSPRG were awarded further funding by the NIHR-HTA in March 2017 (reference 15/80/13) to expand the remit of the IA study to investigate the same endpoints in all adenoma risk-groups, not just the intermediate-risk group. To achieve this, the IA study protocol was amended to the ‘All Adenomas study’. \n\nThe All Adenomas study has three main components:\n1. To extend the analysis to investigate the ideal frequency of follow-up for patients with any adenoma detected at the initial investigation (low-, intermediate- or high- risk, as defined by the UK adenoma surveillance guidelines, 2002), using the same study cohort.\n2. To extend the follow-up period to at least 10-years post initial endoscopic investigation.\n3. To add a health economic analysis, to be conducted by the Health Economic Research Centre (HERC), University of Oxford, in collaboration with the CSPRG to determine the cost implications of any changes to the number of colonoscopies required as a result of the investigations of the low-, intermediate- and high-risk adenoma groups (either an increase or decrease).\n\nThe CSPRG has research ethics committee and health research authority approvals (including section 251 support) to include these additional analyses.  \n\nThe health economic analysis will be conducted by the University of Oxford to determine the cost implications of any changes to the number of colonoscopies required as a result of the investigations of the low-, intermediate- and high-risk adenoma groups (either an increase or decrease). The University of Oxford have been asked by Imperial to do the economic analysis which will result in the provision of a chapter for the proposed report plus any associated publications.  \n\nIn 2018, Imperial amended the All Adenomas study protocol, at the request of Public Health England (PHE), to provide additional clarifications on the proposed analyses. This amendment also contained the intention of the CSPRG to use data from the UK Flexible Sigmoidoscopy Trial (UKFSST; DARS-NIC-148071) to validate the findings of the IA study and All Adenomas study in combination with 2 independent screening datasets.\n\n2019 amendment to this agreement:\n\nCancer staging data is required to complete the health economic analysis for the All Adenomas study. CSPRG has been working with PHE to obtain this data. In order for this data to be obtained NHS Digital need to be able to share the study identifiers, NHS number and date of birth with PHE to correctly identify the subcohort of the All Adenomas study who had baseline adenomas. \n\nThe data to be provided by PHE on the subcohort includes the tumour staging and treatment received for those people reported to have a cancer of the digestive system, with minimal descriptive information on the cancer to ensure accurate linkage of the data to the All Adenomas study database.",
+  "6d3811d27538": "The primary outcomes of the Intermediate Adenoma study have been published in the Lancet Oncology on the 25th April 2017 (electronically); https://doi.org/10.1016/S1470-2045(17)30187-0. \n\nThe Intermediate Adenoma study NIHR Final Report was published in May 2017 [Atkin W, Brenner A, Martin J, Wooldrage K, Shah U, Lucas F, et al. The clinical effectiveness of different surveillance strategies to prevent colorectal cancer in people with intermediate-grade colorectal adenomas: a retrospective cohort analysis, and psychological and economic evaluations. Health Technol Assess 2017;21(25)].\n\nSecondary outcomes of the IA study will be submitted to journals such as the Lancet Oncology, Gut or Gastroenterology.\n\nIn addition, an abstract entitled 'The effect of adenoma surveillance on colorectal cancer incidence: a multicentre cohort study' was presented at the Digestive Disease Week conference in May 2017 in the session 'Colon Cancer Biomarkers and Screenings' (Chicago, USA).\n\nThe All Adenomas study:\nThe results of the All Adenomas study will be written up for publication in similar high-impact, peer-reviewed journals and submitted for presentation at a scientific conference in 2019. The publication of the outcomes of this study in international journals and presentation at international conferences during 2019 will ensure that this data is available for future validation of the recommendations from the study and potential uptake into revised guidelines for surveillance.\n\nOf note, the CSPRG have been working with the British Society for Gatsroenterology surveillance guidelines group to ensure our data is used, when available, to inform the update of the adenomas surveillance guidelines for the UK.\n\nThe University of Oxford will produce reports in the form of summary statistics, and submit abstracts/manuscripts to cancer-specific and/or health economics conferences/journals in order to disseminate the results of the health economic  research independently.\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nThe study now have a confirmed panel of four Public Patient Representatives (PPRs; 2 men, 2 women) who have agreed to work with the CSPRG with the interpretation and communication of the study results. Two meetings were held with the PPRs in 2018: (1) an Introduction to the All Adenomas study (16th March 2018) and (2) a workshop to co-design the remaining PPI/E activities for the study (April 2018). Once the study results are available they will initiate the remaining PPI/E activities and develop the dissemination plan with them.",
+  "9c2f9a451c20": "The primary outcomes of the Intermediate Adenoma study have been published in the Lancet Oncology on the 25th April 2017 (electronically); https://doi.org/10.1016/S1470-2045(17)30187-0. \n\nThe Intermediate Adenoma study NIHR Final Report was published in May 2017 [Atkin W, Brenner A, Martin J, Wooldrage K, Shah U, Lucas F, et al. The clinical effectiveness of different surveillance strategies to prevent colorectal cancer in people with intermediate-grade colorectal adenomas: a retrospective cohort analysis, and psychological and economic evaluations. Health Technol Assess 2017;21(25)].\n\nSecondary outcomes of the IA study will be submitted to journals such as the Lancet Oncology, Gut or Gastroenterology.\n\nIn addition, an abstract entitled 'The effect of adenoma surveillance on colorectal cancer incidence: a multicentre cohort study' was presented at the Digestive Disease Week conference in May 2017 in the session 'Colon Cancer Biomarkers and Screenings' (Chicago, USA).\n\nThe All Adenomas study:\nThe results of the All Adenomas study will be written up for publication in similar high-impact, peer-reviewed journals and submitted for presentation at a scientific conference in 2018/2019. \n\nThe publication of the outcomes of this study in international journals and presentation at international conferences during 2017 will ensure that this data is available for future validation of the recommendations from the study and potential uptake into revised guidelines for surveillance.\n\nThe University of Oxford will produce reports in the form of summary statistics, and submit abstracts/manuscripts to cancer-specific and/or health economics conferences/journals in order to disseminate the results of the health economic  research independently.\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "c5e13116129a": "This study is analysing the risk of cancer or advanced adenomas with varying frequency of colonoscopic surveillance for patients identified with intermediate grade adenomas. The overall research objectives are to:Examine the optimal frequency of surveillance in people found to have intermediate grade colorectal adenomas.*Examine the risks and benefits to the patient with respect to prevention of cancer and the development of advanced adenomas; anxiety, morbidity and mortality; costs and cost-effectiveness and implications for the NHS.*Key: * - aims for which we require data from ONS.",
+  "c91309d3f14b": "Benefits are yet to be fully realised however the generation of the Intermediate Adenoma database has enabled the CSPRG to successfully receive additional funding from the National Institute for Health Research-Health Technology Assessment to extend the analysis to include both the low- and high-risk adenoma groups, as the 'All Adenomas study'.\n\nThe outcomes of the All adenomas study will help to inform the update of the UK Adenoma Surveillance Guideline, which have not been updated since 2002.",
+  "da31c0d6f5d5": "The IA study was required to determine the extent to which the current UK adenoma surveillance guidelines gives rise to unnecessary colonoscopies in people with intermediate-risk adenomas; the elimination of which would minimise risks of complications associated with the procedure and worry to patients, plus ease the current unsustainable economic and workforce pressures on the NHS.\n\nFor the All Adenomas study, by quantifying CRC risk in all adenoma patients with and without surveillance, the study will benefit patients and the NHS by identifying:\n• those at sufficiently low risk of CRC after adenoma diagnosis at colonoscopy to render surveillance unnecessary;\n• those most likely to benefit from colonoscopic surveillance;\n• the minimum surveillance required to afford adequate protection from CRC, and when it can be safely stopped.\n\nThis study will be the first to use CRC incidence as an outcome to evaluate adenoma surveillance requirements, and through its large size and longevity of follow-up, would provide new evidence of long-term CRC risk in all adenoma patients. Because the dataset is current, the results generated could have enduring value as a reference against which future interventions for minimising CRC risks in adenoma patients could be compared.\n\nFurther research is needed now because:\n1. The increasing number of referrals for surveillance colonoscopy since the implementation of the Bowel Cancer Screening Programme (BCSP), is overwhelming NHS endoscopy resources (time, staff and costs); surveillance now constitutes ~20% of all colonoscopies performed (26).\n2. Surveillance colonoscopies may be too frequent or unnecessary in some subgroups:\n(a) The UK adenoma surveillance guideline (UK-ASG) has not changed since its implementation in 2002 due to lack of new evidence (15, 23, 24). Yet, the quality of colonoscopy has improved substantially since the introduction of national colonoscopy quality audits and modern high-definition\nendoscopes (26). As a result, interval cancer rates (those diagnosed within 3 years following colonoscopy) decreased by ~30% between 2001 and 2007 (32). Nowadays, more thorough baseline colonoscopies may be finding more adenomas (26) thereby increasing a patient’s risk classification according to existing UK-ASG definitions, whilst the more efficient removal of adenomas may be substantially lowering their colorectal cancer (CRC) risk. Hence, improved colonoscopy standards may significantly alter the population classified within each risk-group, providing strong justification for now reviewing risk-group definitions.\n(b) New evidence from our study of intermediate-risk (IR) patients has shown that adequate CRC\nprotection can be achieved with less than the currently recommended surveillance. The study identified a\nsubgroup (up to 50% of IR patients) in which CRC risk is so low that further surveillance after the first follow-up is not warranted. The study also justified using CRC risk as a more valid measure than advanced adenoma (AA) of the need for regular colonoscopy surveillance (HTA 04/033, report submitted (1)). As a result of increasing endoscopy demand, it is vital that risk groups are evaluated based on CRC outcome, rather than AA (which inevitably overestimates risk).",
+  "de5946274162": "This study is analysing the risk of cancer or advanced adenomas with varying frequency of colonoscopic surveillance for patients identified with intermediate grade adenomas.  The overall research objectives are to:\n- Examine the optimal frequency of surveillance in people found to have intermediate grade colorectal adenomas.*\n- Examine he risks and benefits to the patient with respect to prevention of cancer and the development of advanced adenomas; anxiety, morbidity and mortality; costs and cost-effectiveness and implications for the NHS.*\n\n* aims for which we require data from ONS using the MRIS.",
+  "f7c89004368d": "On receipt of the cancer and mortality data from NHS Digital on the All Adenomas study cohort, CSPRG formatted it in accordance with the existing All Adenomas study hospital database schema before uploading it to the All Adenomas study hospital study database.  All CSPRG staff members who have access to the data are substantive employees of Imperial College London or PhD students. As PhD students at Imperial College London are not held to the same contractual clauses as staff, the CSPRG have implemented a ‘student data access agreement’ which they must complete to indicate their obligations for processing personal data.\n \nStaff accessing the data at the University of Oxford are all substantive employees of the University of Oxford.\n\nWith the new data in the database, and after basic data cleaning, CSPRG matched the cancers and deaths to the trial participants. This informed CSPRG which new cancers and / or deaths occurred since the last data extract was received. It also informed CSPRG which, if any, deaths or cancers were incorrectly reported in the previous excerpt. \n\nThe data will be pseudonymised and given to CSPRG statisticians for analysis and to give the required outputs for reporting and publication in accordance with the NIHR-HTA terms and conditions.\n\nAll outputs will contain only data that is aggregated, with small numbers suppressed in line with the HES Analysis Guide.\n\nA sub-set of the pseudonymised data will be shared with the University of Oxford for the purpose of conducting the health economic analysis.  The sub set will be minimised by the CSPRG study team before sharing with Oxford to ensure that only those fields that are essential for the analysis are sent.\n\nProcessing activities by the University of Oxford: \nThe data received from the CSPRG will be used to estimate resource use (for example, number of healthcare appointments), costs, and health outcomes (for example, number of adenomas and cancers detected). This will involve rearranging the data; applying unit cost estimates and resource use estimates from external sources; and producing summary statistics.\n\nSecondly, the University of Oxford will estimate long-term economic outcomes by fitting statistical models to the data received. The statistical models will be combined with unit costs and quality of life estimates to estimate long-term costs and quality of life for subgroups of individuals in the data (by surveillance strategy as defined by the CSPRG, and cancer stage as provided in the linked data).\n\nThe data will not be further linked with other patient level datasets for the analysis by the University of Oxford beyond what is provided by the CSPRG.\n\nIn order to receive cancer staging data from PHE. CSPRG will provide NHS Digital with the unique study identifiers for the 30,259 people who had adenomas detected at their baseline investigation. NHS Digital will then provide the unique study ID, NHS number and date of birth to PHE for this cohort. PHE will use the information provided by NHS Digital to identify the participants with cancers and send CSPRG the corresponding staging information (without the NHS number or date of birth). \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data)  \n\nCancer & mortality data for any English patients who have moved to Scotland during the study will not be provided by NHS Digital. These data are sourced from the Scottish equivalent organisation.\n\nThere will be not data linkage undertaken with NHS Digital data provided under this agreement that is not already noted in the agreement."
+ }
+}

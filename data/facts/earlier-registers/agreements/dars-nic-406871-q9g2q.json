@@ -1,0 +1,106 @@
+{
+ "base_reference": "DARS-NIC-406871-Q9G2Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-406871-Q9G2Q-v0.4",
+   "version": "0.4",
+   "organisation": "Department of Health and Social Care",
+   "organisation_type": "Ministerial Department",
+   "listed": [
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "objective": "39851599c9a3",
+     "activities": "7c1a3774ecbd",
+     "expected_output": "de9eab2b99fd",
+     "expected_benefits": "10d5bac5eafe"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-406871-Q9G2Q-v1.6",
+   "version": "1.6",
+   "organisation": "Department of Health and Social Care",
+   "organisation_type": "Ministerial Department",
+   "listed": [
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "8721005aa251",
+     "activities": "d26dc2773de9",
+     "expected_output": "de9eab2b99fd",
+     "expected_benefits": "e4422fc269f5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Covid-19 UK Non-hospital Antigen Testing Results (pillar 2)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "CV19: Regulation 3 (4) of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "10d5bac5eafe": "The benefits of the dissemination are to offer more robust early warning analysis, thereby suppressing transmission of COVID-19. The analysis and insight provided will improve the effectiveness of the response to the pandemic. The intention is to limit the ability of the virus to be spread, to protect public health and the lives of the population, and to reduce the burden on the National Health Service.\n\nThe overall objective of the programme is to provide an integrated and world-class COVID-19 Test & Trace Programme, designed to control the virus and enable people to live a safer and more normal life.",
+  "39851599c9a3": "Data is requested for the Department of Health & Social Care (DHSC) – Test and Trace Programme.\nThe NHS Test & Trace Programme is operated by the Department for Health and Social Care. It uses the experience and expertise of Public Health England (PHE - an executive agency of the Department), and co-ordinates closely with NHS England, various other NHS bodies and local authorities. DHSC is the data controller in respect of the data collected by, and further processed within, the constituent parts of the Programme.\n\nThe Joint Biosecurity Centre (JBC) is part of the NHS Test and Trace service in the DHSC. The JBC was created by the Secretary of State for Health and Social Care and launched with Initial Operating Capability on 1 June 2020.  The JBC operates as a specialist data analytical and assessment centre within the NHS Test and Trace Programme.   Whilst it benefits from the statutory and Crown prerogative powers of the Secretary of State, the JBC is operationally independent from Ministers for the purpose of producing its analytical insights and assessments.\n\nLooking ahead, the National Institute for Health Protection (NIHP) will bring together the existing health protection responsibilities discharged by PHE with the new capabilities of NHS Test and Trace, including the JBC, creating a single agency with a focus on COVID-19 and the challenges posed by domestic and global threats to health. This builds on the existing close working between PHE and NHS Test and Trace which includes a series of joint appointments and joint teams.\n\nFor now, this data has been requested to support analysis related to the COVID-19 NHS Test & Trace Programme and to support the UK and Devolved Governments’ responses to the COVID-19 challenge.\n \nThe JBC provides the strategic assessment for NHS Test & Trace, to identify early outbreaks of COVID-19 infections and will provide analysis and advice to local, regional, and national decision makers to help them respond rapidly to any outbreak.  \n\nThe data is not intended to be used to inform direct care, but instead to influence strategic / operational planning at a local and national level.",
+  "7c1a3774ecbd": "At least daily data is required as the intention is that data feeds are carried out with the minimum possible latency.  This will ensure that the research, analysis and statistics derived from the data science hub are a “single view of the facts”.  Statistics, analysis and research from operational systems in Public Health England and NHS-Digital (for example) will continue.  Reducing latency to a minimum will ensure these different sources of derived data have a comparable information basis.\n\nThe data is to be disseminated to the DHSC for use by the JBC. Record level data containing NHS number, patient age and gender will be processed as part of this dissemination to enable linkage to existing patient test data already stored and processed within the DHSC EDGE (Environment for Data Gathering and Engineering) solution.  Location is provided at Upper Tier Local Authority (UTLA) level only. The extract is to be filtered on only patients who reach any of NHS Pathways COVID-related Disposition outcomes.\n\nIn addition to the datasets listed under 'Additional Data Access Requested' (section 3) the following non-onboarded datasets will also be released from NHS Digital:\n- NHS 111 & 999 telephony triage data\n- Pillar 3 testing data\n\nAccess to the data will be via strictly controlled user access and secure user management, with all users needing to be appropriately authenticated and authorised to access specific resources.\n\nAll organisations party to this agreement must comply with the data sharing framework contract requirements, including those regarding the use (and purposes of that use) by “personnel” (as defined within the data sharing framework contract i.e. employees, agents and contractors of the data recipient who may have access to that data).",
+  "8721005aa251": "Data is requested for the Department of Health & Social Care (DHSC) – Test and Trace Programme.\n\nThe NHS Test & Trace Programme is operated by the Department for Health and Social Care. It uses the experience and expertise of Public Health England (PHE - an executive agency of the Department), and co-ordinates closely with NHS England, various other NHS bodies and local authorities. DHSC is the data controller in respect of the data collected by, and further processed within, the constituent parts of the Programme.\n\nThe Joint Biosecurity Centre (JBC) is part of the NHS Test and Trace service in the DHSC. The JBC was created by the Secretary of State for Health and Social Care and launched with Initial Operating Capability on 1 June 2020.  The JBC operates as a specialist data analytical and assessment centre within the NHS Test and Trace Programme.   Whilst it benefits from the statutory and Crown prerogative powers of the Secretary of State, the JBC is operationally independent from Ministers for the purpose of producing its analytical insights and assessments.\n\nLooking ahead, the National Institute for Health Protection (NIHP) will bring together the existing health protection responsibilities discharged by PHE with the new capabilities of NHS Test and Trace, including the JBC, creating a single agency with a focus on COVID-19 and the challenges posed by domestic and global threats to health. This builds on the existing close working between PHE and NHS Test and Trace which includes a series of joint appointments and joint teams.\n\nFor now, this data has been requested to support analysis related to the COVID-19 NHS Test & Trace Programme and to support the UK and Devolved Governments’ responses to the COVID-19 challenge.\n\nThis analysis includes \n• Recognising Local outbreaks, \n• impact of measures. \n• Determine vulnerability within the population, \n• Impact of the virus on different sectors and settings\n \nThe JBC provides the strategic assessment for NHS Test & Trace, to identify early outbreaks of COVID-19 infections and will provide analysis and advice to local, regional, and national decision makers to help them respond rapidly to any outbreak.  \n\nJBC directly provides analytical insights to ministers. It is hard to exactly determine and predict in this agreement what decisions will be made, but this encapsulates any decisions made in response to the COVID-19 Crisis\n\nThe data is not intended to be used to inform direct care, but instead to influence strategic / operational planning at a local and national level. The data will provide a macro view of the COVID-19 response, allowing Local and National authorities to make informed decisions \n\nAs it stands the JBC models are using an estimated number on the length of stay (assumes that the patient will stay 10 days in the hospital) but by plugging in the SUS data we will be able to more accurately forecast hospital admissions and occupancy. This is particularly important in the context of vaccination rollout and lifting of national lockdown restriction - decision makers will want to plan ahead and foresee any increases.    \n\nThe insights will forecast impact to hospital admissions and occupancy and help inform local and national decision makers on what measures they need to consider for future hospitalisation planning.",
+  "d26dc2773de9": "All organisations party to this agreement must comply with the data sharing framework contract requirements, including those regarding the use (and purposes of that use) by “personnel” (as defined within the data sharing framework contract i.e. employees, agents and contractors of the data recipient who may have access to that data). \n\nRegular data feeds are required as the intention is that data feeds are carried out with the minimum possible latency.  This will ensure that the research, analysis and statistics derived from the data science hub are a “single view of the facts”.\n\nIn its raw format the data will be stored in a secure file storage solution.  Data will be classified, coded, cleaned, and de-identified (“pseudonymised”) or aggregated by the data engineering element of the Data Analysis Platform before being made accessible to its registered and authorised users. Many users of the data held in the Data Analysis Platform, and all JBC users, will analyse the data using a Data Science Hub.  There are two elements of the Data Analysis Platform – the data engineering environment where data are ingested and prepared for use; and the data science hub, where analysis of those prepared data takes place.  This is consistent with the model described in the Digital Economy Act Research Code of Practice.\n\nData preparations drawn from the data engineering environment will be supplied into the data science hub to meet analytical requirements thereby minimising the processing of personal data. These will be de-identified (“pseudonymised”) where possible before being made accessible to registered and approved analytical, research and statistical users - where possible.\n\nStatistics, analysis and research from operational systems in Public Health England and NHS-Digital (for example) will continue.  Reducing latency to a minimum will ensure these different sources of derived data have a comparable information basis. Reducing Latency across all feeds allow the clearest picture in the COVID-19 Crisis which is a constantly evolving picture.\n\nThe need for personal data for an analytical function (taken from the Data Protection Impact Assessment)\n\nThere is a need for JBC and the wider Programme to obtain and analyse data, including personal data, where necessary and proportionate, in order to:\n\na. Recognise local outbreaks of COVID-19 and to inform local decision makers and response teams about its their characteristics;\nb. Describe, at a granular level, whether particular groups/ sectors of the population are more vulnerable than others, either because of the characteristics of the group or sector (as described in terms of its ethnicity, gender, pre-existing health conditions, socio-economic class etc) or because of the living conditions, leisure pursuits or working conditions experienced by those groups or sectors; \nc. Develop an early warning capability to identify areas that are vulnerable to an outbreak; \nd. Be able to use data from more than one source/data set to produce assessments and analysis of better quality (for example, by linking current PHE data about COVID-19 death rates to death certificate data held by the Office for National Statistics, in order to provide more accurate statistics about morbidity rates and cause of death).\n\nSecondary Use Services Data is also required by the JBC. This data is to cover all of England is required from 2019 onwards to allow for enough data for a historical trend to be identified prior to COVID. Data on all patients, in both episodes and spells is required.\nThis dataset is requested so information can be analysed regarding hospital admissions and length of stay. Detailed hospital admissions data required where possible to include Age, Gender, Ethnicity, socio-economic status, where the patent resides (i.e. at LSOA, LTLA level) and hospital name.  The JBC will use this for modelling incidents and prevalence.  The JBC will use to adjust for P2 cases removing existing bias to better understand infection prevalencenFor example JBC will use the data for our Lewis, Islay and other prevalence models.  It will also assist to back calculate incidents for hospital admissions.\nThe data will be used to link in to overall prevalence data sets that inform the infection rates.\n\nData from SUS will be used to produce a number of graphs and reports. JBC will use data to incorporate into prevalence dashboards that is used to inform the bronze, silver and gold reporting to No.10 Downing Street.  Overall, SUS Data is required to help empower JBC stakeholders to make effective decisions on the COVID-19 response\n\nThe data is to be disseminated to the DHSC for use by the JBC. Record level data containing NHS number, patient age and gender will be processed as part of this dissemination to enable linkage to existing patient test data already stored and processed within the DHSC EDGE (Environment for Data Gathering and Engineering) solution.  Location is provided at Upper Tier Local Authority (UTLA) level only. The extract is to be filtered on only patients who reach any of NHS Pathways COVID-related Disposition outcomes.\n\nIn addition to the datasets listed under 'Additional Data Access Requested' (section 3) the following non-onboarded datasets will also be released from NHS Digital:\n- NHS Pathways data\n\nAccess to the data will be via strictly controlled user access and secure user management, with all users needing to be appropriately authenticated and authorised to access specific resources. EDGE has a stringent access controls within the environment.",
+  "de9eab2b99fd": "Data will be used to:\n\n• Provide insights into the factors that affect the spread of COVID-19 and their potential consequences, including focused insight into the sectors and settings that are the most significant drivers of the transmission of the virus.\n\n• Help local decision makers understand how their infection rates are changing relative to the national picture, what factors lie behind localised increases in infection rates, the potential consequences for the local health and care system, and where action should be prioritised to stop the spread of the virus.\n\n• Help drive decisions on where and how to deploy testing capacity, improve the speed and coverage of contact tracing, identify and manage clusters, and improve understanding and awareness of risk for individuals, businesses and public services.",
+  "e4422fc269f5": "The benefits of the dissemination are to offer more robust early warning analysis, thereby suppressing transmission of COVID-19. The analysis and insight provided will improve the effectiveness of the response to the pandemic. The intention is to limit the ability of the virus to be spread, to protect public health and the lives of the population, and to reduce the burden on the National Health Service.\n\nThe overall objective of the programme is to provide an integrated and world-class COVID-19 Test & Trace Programme, designed to control the Corona virus and enable people to live a safer and more normal life.\n\nData is used to inform decisions at national and local levels, responsibility for the roll out lies with decision makers."
+ }
+}

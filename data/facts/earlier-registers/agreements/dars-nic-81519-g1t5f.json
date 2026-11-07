@@ -1,0 +1,112 @@
+{
+ "base_reference": "DARS-NIC-81519-G1T5F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-81519-G1T5F-v0.15",
+   "version": "0.15",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "objective": "a8082d141677",
+     "activities": "3524e965cde4",
+     "expected_output": "b011673cfe91",
+     "expected_benefits": "df039dcae9bc"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Mortality Data from the Office of National Statistics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3524e965cde4": "The TargetCOPD trial started in 2012, with patient-level data being obtained from various sources (patient study assessments, patient self-completion questionnaires and general practice clinical systems) over the trial period. Study assessments were conducted by trained research assistants. Routine data (e.g. comorbidities and prior test results) was extracted from general practice clinical systems, covered by patient informed consent and signed Data Sharing Agreements with each participating general practice.\n\nThe data collected from these sources are stored in pseudonymised form and linked using study ID numbers.  Patient identifiers linked to the study ID numbers are stored separately and held only for administrative purposes and for use in facilitating linkage to other data.\n\nThe TargetCOPD trial identified 74,818 patients as potentially eligible and NHS Digital and ONS data is requested in relation to these patients. The University of Birmingham will send the following data extracted from the participating GP Practices (see Section 4) to NHS Digital for linking purposes: NHS Number, date of birth, postcode, sex and study ID number. The study team will destroy the identifiable data previously obtained from the GP practice once it has been shared with NHS Digital. \n\nPatient identifiable data is flowing to NHS Digital with a study ID, and pseudonymised HES data is flowing back to the University of Birmingham with the study ID as the only identifier. As the University of Birmingham holds identifiable data for patients consenting to the TargetCOPD trial (approx 10% of the total sample involved in this application), the HES data is classed as identifiable. However, data obtained from NHS Digital will never be merged with participant identifiers, meaning that the HES/ONS data will remain pseudonymous.\n\nThe data requested from NHS Digital will be downloaded to a University of Birmingham computer, and saved in a restricted area of the University server that is only accessible to specified members of the research team who are substantive employees of University of Birmingham. Data within this area of the server will be backed up internally so that data can be fully deleted within 2 weeks of a deletion request from NHS Digital or at the end of the data retention period. All data will be processed and stored at the University of Birmingham.\n\nThe NHS Digital data will be merged into the existing pseudonymised dataset, for analysis purposes only, using study ID. It will not be re-identified and will be stored separately from the participant identifiers. Only substantive employees of University of Birmingham will access and analyse the data (individuals names as ONS users later in the application). In addition, it will not be linked to any other data.\n\nLinking the stated data sources will allow the research team to compare health care usage and mortality, according to early COPD diagnosis. The analyses will use the linked pseudonymised data only.\n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nAll processing of ONS data will be in line with ONS standard conditions.",
+  "a8082d141677": "The Birmingham Lung Improvement StudieS (BLISS) programme is a series of connected research studies about Chronic Obstructive Pulmonary Disease (COPD) funded by a five-year programme grant from the National Institute for Health Research. The overall aim of the programme is to evaluate new ways of better identifying and managing patients with COPD in the community.\n\nBackground (TargetCOPD trial):\nThe study for which data is being sought is an extension of TargetCOPD trial (2012-2014), which is a substantial work package within a NIHR-funded research programme grant (ref: RP-PG-0109-10061, 01/01/2011 – 31/12/2016). Chronic Obstructive Pulmonary Disease (COPD) is an important health problem, accounting for significant health service and societal costs. Although diagnosed COPD is estimated at 1.3% of the population, it is widely accepted that under diagnosis may be in the region of 50-80%, where patients with clinically significant disease are unable to access effective treatments as they have not yet presented to their GP.  \n\nSection 251 will provide a legal basis for the use of the data under this application, previous trial consent is not being relied on.\n\nThe TargetCOPD trial aimed to determine the most effective method of identifying new cases of COPD amongst primary care patients. This trial did not include any data sharing with NHS Digital/HSCIC. Results of the trial showed it was most effective to post screening questionnaires to at-risk patients and invite those reporting respiratory symptoms for an additional lung function assessment at their GP practice. \n\nStudy aims and processing activities of TargetCOPD extension (TargetCOPD2):\nPatients were recruited to the study between August 2012 and June 2014. At the time of recruitment, the participants were provided with the Patient Information Leaflet and asked to sign the Consent form. \n\nWhilst the evidence from the TargetCOPD is useful, it does not provide information on whether diagnosing people earlier than usual leads to health benefits such as reduced hospital admissions and mortality.   The Target COPD2 study will address this question by following-up patients for up to 5 years.   Data is being requested from 2011 (to cover from the start of the recruitment period) - 2017/2018 (to allow five years follow-up). \n\nTo do this accurately, hospitalisation and mortality data is required for all patients deemed to be at-risk (~75,000) when  the TargetCOPD trial started in 2012. It can then be determined if health outcomes differ for the patients receiving earlier COPD diagnoses as a result of the trial. The routine health data requested will include A&E attendance, inpatient and outpatient hospital admissions and ONS mortality. These data are unavailable from other sources and will be more accurate and complete than self-reported information. The research study team only holds data on patients that responded to the initial screening questionnaire (~8,000) thereby consenting to their information being held; hence  data on all 75,000 patients can only be obtained by accessing certain patient identifiable data at the GP practices and subsequently sharing this with NHS Digital. \n\nBenefits to health care:\nLong-term follow-up of all eligible patients is in the interests of the health of the public. Considerable resources would be required for the primary care sector to adopt methods used in the TargetCOPD trial to diagnose COPD patients earlier. If long-term analysis demonstrates that hospital usage and mortality is not reduced through earlier COPD diagnosis, it would indicate that NHS resources could be better spent in other ways. Evidence from the current study will be produced as a final report for the National Institute for Health Research as well as peer-reviewed academic papers, hence disseminating evidence to policy makers and academic researchers.",
+  "b011673cfe91": "A report will be submitted to the funders (NIHR) in early 2018. This will provide a narrative on the methodology, the results, the conclusions and recommendations. If the results indicate that early COPD diagnosis leads to better health outcomes, the report will contain evidence-based recommendations for COPD case finding to be adopted, to reduce future hospitalisation rates and improve outcomes.\n\nResearch findings will be published in relevant peer-reviewed academic journals, with either a respiratory or primary care focus and readership. For example, research findings will be submitted to Lancet Respiratory, Thorax, British Medical Journal, npj Primary Care Respiratory Medicine (but not restricted to these). Outputs will also be presented at relevant academic national and international conferences, such as European Respiratory Society, International Primary Care Research Group, Society for Academic Primary Care. Such dissemination will take place either during or following the study period. \n\nA lay summary of the results for the patients who responded to the questionnaire in the TargetCOPD trial will be produced in the form of a newsletter or similar. The Patient Advisory Group will also be presented with the findings. In addition, a dissemination event will be held for all stakeholders e.g. patients, health care professionals and policy makers. This will be advertised through various patient organisations e.g. British Lung Foundation Breathe Easy groups. \n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nThe funder’s report will be solely for the purposes of the funding body. All academic publications will be ‘open-access’ (available to members of the public without cost) and will be available on the websites of the publishing journal as well as the study website (www.birmingham.ac.uk/bliss).",
+  "df039dcae9bc": "Patients diagnosed with COPD via case finding programmes would be expected to receive treatment, resulting in improved quality of life, increased survival, and reduction in hospital admissions and work-related absences. The requested data will provide robust, generalisable evidence to quantify the long-term patient health outcomes associated with COPD case finding. If the long-term analysis demonstrates that hospital usage and/or mortality is reduced through earlier COPD diagnosis, the findings would feed into the National Screening Committee (NSC). The NSC advises Government regarding implementation of screening programmes; if evidence supported case finding for COPD, expected patient benefits would include improved health and quality of life as a result of appropriate treatment. Considerable resources would be required for the primary care sector to adopt methods used in the TargetCOPD trial to diagnose COPD patients earlier. If the analysis does not demonstrate health benefits for patients, it would indicate that NHS resources could be better spent in other ways.\n\nThe planned dissemination is expected to lead to evaluation of the findings by NIHR and other interested parties involved in setting national guidelines such as NICE. The BLISS study team hopes its recommendations regarding COPD case finding are implemented in primary care within 5 years of study completion. This time frame reflects the fact that the outputs from this study will contribute to a body of evidence from multiple research studies that provide cumulative evidence forming a consensus on which policy and best practice guidelines are based.\n\nPolicies and guidelines are based on the entire existing evidence base (i.e. all previous research studies on the topic), rather than a single trial.  Whilst these other studies are not part of the NIHR programme grant in any way and were conducted by different researchers, it is important to consider all the available evidence to obtain a consensus."
+ }
+}

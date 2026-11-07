@@ -1,0 +1,49 @@
+{
+ "base_reference": "DARS-NIC-348988-V6G1J",
+ "versions": [
+  {
+   "reference": "DARS-NIC-348988-V6G1J",
+   "version": "",
+   "organisation": "Healthcare Quality Improvement Partnership (HQIP)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "7969555351b1"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "7969555351b1": "Objective for processing: The NPID audit is part of Healthcare Quality Improvement Partnerships (HQIP) National Clinical Audit and Patient Outcomes Programme (NCAPOP). NCAPOP is a closely linked set of centrally funded national clinical audit projects that collect data on compliance with evidence based standards, and provide Trusts with benchmarked reports on their compliance and performance. The National Pregnancy in Diabetes Audit (NPID) measures the quality of pre-gestational diabetes care against National Institute for Health and Care Excellence (NICE) guideline based criteria and the outcome of pre-gestational diabetic pregnancy. HES Identifiable data is required for the NPID audit to allow the linkage of records of our consented cohort to data about their mode of delivery and delivery outcomes. Such data is essential for the analysis of the audit questions which are; - Were women with diabetes adequately prepared for pregnancy? - Were appropriate steps taken during pregnancy to reduce adverse outcomes for the mother? - Did any adverse outcomes occur? The NPID audit enables all diabetes pregnancy services to measure their performance against NICE clinical guidelines and quality standards and peer units. It has been designed to limit the burden of local data collection by linking to data that is already collected from other sources. All participating hospitals will receive annual comprehensive benchmarked reports. Processing activities: HES Identifiable data is required for the NPID audit to allow the linkage of records of their consented cohort to data about their mode of delivery and delivery outcomes. Such data is essential for the analysis of the audit questions as listed above. HQIP will never have access to the data, other than where made publicly available (aggregated, small numbers suppressed). There is no intention to share the Identifiable data outside of the audit team; all analysis is carried out internally at the HSCIC. If however there was ever any need to share data outside of the audit it would only be with the appropriate legal basis with an agreement and DAAG approval. The HES data csv file is loaded and analysed through SQL to then generate aggregated data tables which we then publish in a PDF report. Data will be processed by an internal HSCIC team and transferred via the secure server. The data will be held on the secure DME server DEVDME Server (TS-D-SQL-666). The area of this server where the data will be stored is restricted to members of the audit team and is in line with the HSCIC security protocols. This server is a remote access server and can be accessed securely by members of the audit team. Specific outputs expected, including target date(s): This is information for a National Clinical Audit and so a publication will be produced to look at the audit questions regarding care for pregnant women with pre-existing diabetes all data presented will be aggregated and in line with HES small number suppression, a risk assessment will be carried out in line with the HSCIC publication process and this will be signed off prior to publication by statistical governance. The date for the publication is planned for September 2015. The outcome of this report will inform quality improvement at a local and national level. Expected measurable benefits to health and/or social care, including target date(s): This data will improve the audit report by enabling the audit to access the method of delivery etc. with a reduced burden on the participating sites. The reporting of the audit data alongside the HES linked information will allow delivery units to look at improvements to the quality of care provided for women with diabetes who have a pregnancy. Expected timelines for benefits are long term relying on the build-up of information collected through the audit to inform quality improvement measures."
+ }
+}

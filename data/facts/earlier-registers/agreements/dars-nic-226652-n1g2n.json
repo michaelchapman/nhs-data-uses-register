@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-226652-N1G2N",
+ "versions": [
+  {
+   "reference": "DARS-NIC-226652-N1G2N-v0.0",
+   "version": "0.0",
+   "organisation": "Barts Health NHS Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "74814ed33618",
+     "activities": "8f03f1c5a43a",
+     "expected_output": "4826f180efed",
+     "expected_benefits": "408517b43e24"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "408517b43e24": "The avoidance of harm to women who should have been offered breast screening, but remain outside the programme.  These women could be offered screening as soon as they are identified with the data provided.\nEstablishing whether significant harm resulted from the incorrect removal from the programme, such that women had an undetected cancer which killed them.  Not only is this important information for the service, patient’s families have a right to know.\nThere will be no commercial benefits from this work.  It is not research and will not be published in a scientific journal.",
+  "4826f180efed": "A dataset providing name, date of death, and cause of death if it was breast cancer.  Given the time that has elapsed seeking these data, the sooner the better to minimise the chance of continuing harm to patients.",
+  "74814ed33618": "1.\tTo establish whether women who should have been invited for breast screening and were not, have died from breast cancer, possibly resulting from inappropriate ceasing of screening.\n2.\tTo establish whether any women who are recorded as having died are in fact still alive and not being offered breast screening and are at risk of an undetected cancer progressing.\n\nBackground\nFollowing the identification of an SUI in 2011 relating to the incorrect removal (‘inappropriate ‘ceasing’) of a woman from the breast screening programme by the Central and East London Breast Screening Service (CELBSS) it was agreed that an audit should be undertaken of all women with a ‘ceased’ status for breast screening within the Central and East London Breast Screening Service and related Exeter databases.  The total number of women in the audit was 2299. That audit has been completed, with the exception of those women recorded as being deceased, a number of whom were ceased from the programme before their death.  1019 were recorded as deceased by the breast screening programme.  We are seeking more information on that cohort, to confirm they have deceased and whether they died of breast cancer.  We can provide the complete details of those women to HSIC.",
+  "8f03f1c5a43a": "Once we receive the data set, we will anonymise it and pass it to PHAST to produce a dataset identifying those who died and date of death, of those, those who died of breast cancer and date of death and those still alive.\nPHAST is a not-for-profit consultancy and they have identified a clinician and an analyst who have honorary contracts with Barts Health and will only view anonymised data.\nOnce we have completed the audit the data will be disposed of appropriately."
+ }
+}

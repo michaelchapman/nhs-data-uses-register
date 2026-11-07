@@ -4,6 +4,7 @@
 {% block description %}{{ agreement.organisation|org }} holds agreement {{ agreement.base_reference }} ({{ agreement.title }}) covering {{ agreement.dataset_names|length }} NHS datasets.{% endblock %}
 {% from "_change_details.html" import prose_diff, change_details, wide_edit %}
 {% from "_fold.html" import fold_summary %}
+{% from "_earlier.html" import earlier_flag, earlier_version with context %}
 {% macro version_diff(diff) %}
 <details class="diff">
   <summary>What changed from {{ diff.previous }}</summary>
@@ -111,6 +112,7 @@
   <div><dt>Commercial purposes</dt><dd>{{ v.commercial or "Not stated" }}</dd></div>
   <div><dt>Sublicensing</dt><dd>{{ v.sublicensing or "Not stated" }}</dd></div>
   <div><dt>Files released to date</dt><dd>{{ agreement.files_released|commas }}</dd></div>
+  {% if earlier and earlier.first_label %}<div><dt>First listed receiving data</dt><dd><a href="#earlier-registers">{{ earlier.first_label }}</a></dd></div>{% endif %}
 </dl>
 
 {% set show_controllers = v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}
@@ -123,6 +125,7 @@
     <li><a href="#datasets">Datasets</a></li>
     <li><a href="#releases">Files released</a></li>
     <li><a href="#history">Version history</a></li>
+    {% if earlier %}<li><a href="#earlier-registers">Earlier registers</a></li>{% endif %}
     <li><a href="#register-history">Register history</a></li>
   </ul>
 </nav>
@@ -278,7 +281,7 @@
 {% endif %}
 
 <h2 id="history">Version history</h2>
-<p>The register lists each renewal of this agreement as a separate row. This site has {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }}{% if not agreement.first_start_known %} — {% if history and not history.first_is_earliest %}earlier versions exist, but none has been listed in an edition this site holds{% else %}earlier versions existed before this site's records begin{% endif %}{% endif %}.</p>
+<p>The register lists each renewal of this agreement as a separate row. This site has {{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 else "" }}{% if not agreement.first_start_known %} — {% if earlier and earlier.rows %}{{ earlier.rows|length }} earlier version{{ "s are" if earlier.rows|length != 1 else " is" }} in the <a href="#earlier-registers">earlier registers</a>{% elif history and not history.first_is_earliest %}earlier versions exist, but none has been listed in an edition this site holds{% else %}earlier versions existed before this site's records begin{% endif %}{% endif %}.</p>
 {% for version in agreement.versions|reverse %}
 <details class="version" {% if loop.first %}open{% endif %}>
   <summary>
@@ -361,6 +364,20 @@
   {% endif %}
 </details>
 {% endfor %}
+{% endif %}
+
+{% if earlier %}
+<h2 id="earlier-registers">Earlier registers</h2>
+{{ earlier_flag() }}
+<p>{% if earlier.first_label %}Data was first listed as released under this agreement in the <strong>{{ earlier.first_label }}</strong> release register, and it appears in {{ earlier.periods_listed }} of the {{ earlier_periods }} registers held, the last {{ earlier.last_label }}.{% else %}The earlier registers give this agreement's purpose but list no data released under it.{% endif %}</p>
+{% if earlier.rows %}
+<p>{{ earlier.rows|length }} version{{ "s" if earlier.rows|length != 1 }} of the agreement {{ "appear" if earlier.rows|length != 1 else "appears" }} only in the earlier registers, newest first. Text is shown where it differs from the version after it.</p>
+{% for version, newer in earlier.rows %}
+{{ earlier_version(version, newer) }}
+{% endfor %}
+{% else %}
+<p class="hint">Every version they list is in the version history above.</p>
+{% endif %}
 {% endif %}
 
 <h2 id="register-history">Register history</h2>

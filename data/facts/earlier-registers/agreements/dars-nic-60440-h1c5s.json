@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-60440-H1C5S",
+ "versions": [
+  {
+   "reference": "DARS-NIC-60440-H1C5S",
+   "version": "",
+   "organisation": "NHS NORTH LINCOLNSHIRE CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "338db9a09f2c",
+     "activities": "40bfd5543b7e",
+     "expected_output": "c6a382823b40",
+     "expected_benefits": "fd00da702833"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Local Provider Data - Acute, Ambulance, Community, Demand for Service, Diagnostic Services, Emergency Care, Experience Quality and Outcomes, Mental Health, Other not elsewhere classified, Population Data, Primary Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "338db9a09f2c": "SUS and Local Provider Data - The CCG recognises that good information and intelligence is crucial for the commissioning of high quality and safe services leading to better outcomes for the populations they serve. This application supports this objective.\nThis arrangement was previously agreed to facilitate the transfer of Commissioning Support Services, from Yorkshire & Humber Commissioning Support Unit (Y&H CSU), who previously held ASH status and served the CCGs, to North England CSU (NECS), and eMBED Health Consortium, for ongoing provision in line with the NHS England Lead Provider Framework (LPF). \n\nData Processor 1 - NECS is a commissioning support unit that had been working with the CCG for some time. \nData Processor 2 - eMBED was appointed in March 2016 to continue the operations of the Yorkshire and Humber CSU; Kier Business Services Limited, with additional Business Intelligence work carried out under contract by Dr Foster Ltd. \nKier Business Services are the prime partner for the LPF within the eMBED Health Consortium. Both organisations (Kier Business Services and Dr Foster Ltd) are a legal entity in their own right. Dr Foster Ltd are subcontracted to Kier Business Services for the delivery of eMBED Health Consortium services.",
+  "40bfd5543b7e": "1. Yorkshire Data Services for Commissioners Regional Office / North England Data Services for Commissioners Regional Office (DSCRO) obtains a flow of SUS identifiable data for the CCG from the SUS Repository. Yorkshire / North England DSCRO also obtains identifiable local provider data for the CCG directly from Providers.  \n2. Data quality management and pseudonymisation of data is completed by the DSCRO and the pseudonymised data is then passed securely to North of England CSU for the addition of derived fields and analysis. \n3. North of England CSU then pass the processed, pseudonymised data to both eMBED and the CCG. \n4. eMBED receives the Pseudonymised data for the addition of derived fields, linkage of data sets and analysis. Linked data is limited to  the following to give a rich and broad clinical journey allowing improved care planning, patient care and commissioning:\n\n- SUS data and Local Provider data at pseudonymised level \n- Mental Health (MHSDS, MHLDDS, MHMDS) with SUS\n- Improving Access to Psychological Therapies (IAPT) with SUS\n- Diagnostic Imaging Dataset (DIDs) with SUS\n- Maternity (MSDS) with SUS\n- Children and Young People’s Health Services (CYPHS) with Local provider data\n- Mental Health (MHSDS, MHLDDS, MHMDS) with Local provider data \n- Improving Access to Psychological Therapies (IAPT) with Local provider data \n- Diagnostic Imaging Dataset (DIDs) with Local provider data \n- Maternity (MSDS) with Local provider data \n- Children and Young People’s Health Services (CYPHS) with Local provider data \n\n5. eMBED securely transfer pseudonymised outputs for management use by the CCG.\n6. The CCG receive Pseudonymised data from both North of England CSU and eMBED. The CCG then analyse the data to see patient journeys for pathways or service design, re-design and de-commissioning. \n7. Aggregation of required data for CCG management use will be completed by the CSU, eMBED or the CCG as instructed by the CCG.\n8. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place.\n9. The CCG securely transfer Pseudonymised data back to the provider to:\na) confirm how patients are reported in SUS, and how the commissioner can reliably group these patients into categories for points of delivery; \nb) allow for granular data validation whereby a commissioner may query the SUS record, and need to pass it back to the provider for checking; and \nc) to allow the provider to undertake further analysis of a cohort of their patients as requested and specified by the commissioner.\nThe data transferred to the provider is only that which relates directly to the data previously uploaded by that particular provider.",
+  "c6a382823b40": "1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of acute / community / mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports include high flyers.  \n9. Monitoring of hospital activity against planned levels where an established contract exists between a provider and a commissioner inclusive of:\no Overall contract reporting of actual vs plan for activity and value at aggregate level\no Reconciliation reports between local hospital data, and SUS records at aggregate level.\no Contract Data Quality reporting at anonymised in context record level.\n10. QIPP scheme analysis at aggregate level\n11. Monitoring of SUS based CCG Outcome Framework indicators at aggregate level with small number suppression.\n12. “Deep dive” analysis of hospital activity at aggregate level.\n13. Cross CCG benchmarking at aggregate level.\n14. Provision of aggregate reports with small number suppression activity data to CCGs’ stakeholders e.g. Health and Wellbeing Boards where the CCG have agreed to this",
+  "fd00da702833": "1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against 18 weeks wait targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.\ni. Understanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers."
+ }
+}

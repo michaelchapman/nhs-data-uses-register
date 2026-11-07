@@ -1,0 +1,99 @@
+{
+ "base_reference": "DARS-NIC-309034-C7M7W",
+ "versions": [
+  {
+   "reference": "DARS-NIC-309034-C7M7W",
+   "version": "",
+   "organisation": "University of Cambridge",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "97104e40c673"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-309034-C7M7W-v2.13",
+   "version": "2.13",
+   "organisation": "University of Cambridge",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-11-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-11-01"
+     ],
+     "objective": "86afa6133acf",
+     "activities": "6853d219b8db",
+     "expected_output": "8babe9613648",
+     "expected_benefits": "e5ca29f30cec",
+     "yielded_benefits": "99adc249cc29"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "6853d219b8db": "1.\tUniversity of Cambridge will resend to NHS Digital the encrypted HESIDs for each individual (provided under the previously approved Agreement) to allow linkage of a demographic blood donor dataset on 200 000 donors, for linkage to: \n- Civil Registration Mortality Data  including date of death\n\n2. Once linkage to mortality data is complete, NHS Digital will provide a dataset containing mortality data together with the internal (non-identifiable) study id to University of Cambridge Department of Public Health and Primary Care. There the health data will be linked to blood donation history using the internal study id. The research dataset will be stored on secure servers at the University of Cambridge Clinical School and will be accessible only to authorised staff members nominated in the ethics approvals. Only substantive employees of University of Cambridge will have access to the NHS Digital data.\n\nThe HES data has already been provided to University of Cambridge Department of Public Health and Primary Care.  The applicant is only requesting mortality data and a bridge file: HES to Civil Registration mortality data under this application.\n\nNHS Blood and Transplant (NHSBT) will not access any record level data. The record level data will not be shared with any third parties. \n\nAll outputs and publications will contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nAll processing of mortality data will be in line with ONS standard conditions  “Individuals, working under appropriate supervision on behalf of data controller(s) / processor(s) within this agreement, who are subject to the same policies, procedures and equivalent controls as substantive employees”.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data\n\nThe data approved under this data sharing agreement will not be linked further by the applicant  and the only data linkages are those permitted in this application.",
+  "86afa6133acf": "NHS Blood and Transplant (NHSBT) and other blood services have a duty of care for their donors, not only ensuring that they are fit to donate, but also that possible harmful effects of single or repeat donations are avoided. However, while much attention has been given to transfusion safety through improvement of disease screening and donor selection, very little is known about the possible long-term health effects of either repeated whole blood donation or platelet donation by apheresis on outcomes such as cardiovascular disease, diabetes, cancer etc. Moreover, studies investigating these effects have typically focused on only one disease outcome, and have included only a few hundred disease cases. Thus the question of the impact of blood donation on long term health, though essential to donors, remains largely unanswered.\n\nAs such, the long-term objective of this project is to address a question of considerable national and international public health importance: What is the balance of any risks and benefits of repeated whole blood and platelet donation by apheresis on major chronic disease outcomes? In order to answer this question, the long-term aim of this research will be to establish an unprecedentedly large and detailed population research platform involving donors enrolled within NHSBT, who will be linked to a variety of electronic health (e-health) records such as Hospital Episode Statistics (HES), Civil Registration mortality and cancer data, Myocardial Ischaemia National Audit Project (MINAP) data. The record level data will not be shared with third parties. With the broad range of health outcomes available from these health records, this platform will allow University of Cambridge in collaboration with NHSBT, to provide strong evidence in large numbers of donors on the question of the medium and long-term health effects of blood donation. Results from this research will help to guide future NHSBT practice and strategies to ensure the long term health of their donor population. This future study will be subject to a separate data application and will undergo a separate ethics approval.\n\nThe aim of the current pilot study which this application relates to, is to determine whether it is operationally feasible to establish a non-identifiable electronic haemovigilance platform which will allow NHSBT to address immediate questions relating to donor health. As part of this pilot study, retrospective linkage is being sought between Civil Registration records and previously linked HES-NHSBT blood donor records. In this pilot study, only retrospective linkage is being requested in accordance with the ethical approvals obtained. Any future studies will be based on a consent framework and will be subject to separate data requests and ethical approvals.\n\nThe applicant has previously received HES admitted patient care and outpatient data.  No further HES data is being requested as part of this agreement.\n\nData transfers will be between University of Cambridge Department of Public Health and Primary Care and NHS Digital. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nUniversity of Cambridge DPHPC will only have access to pseudonymised record-level data.",
+  "8babe9613648": "The main purpose of this demonstration study is to assess the feasibility of large scale record linkage of blood donor records to health records.   The findings of this pilot study will be reported in peer-reviewed medical journals.  Readers of medical journals include clinicians, decision-makers and academic scientists. It is anticipated that the outputs of this research will be presented at blood donor research conferences to inform the wider blood donors research community and will also be communicated to donors via NHSBT newsletters and a publicly accessible website: https://www.nhsbt.nhs.uk/research-and-development/current-research/clinical-research/donor-health/. Initial study outputs are expected by 2019-2020.",
+  "97104e40c673": "Objective for processing: The current study is a demonstration study in 200,000 donors which aims to determine whether it is operationally feasible to establish a non-identifiable electronic haemovigilance platform which will allow NHS Blood and Transplant (NHSBT) to address immediate questions relating to donor health. NHSBT and other blood services have a duty of care for donors, not only ensuring that they are fit to donate, but also that harmful effects of single or repeat donations are avoided. However, while much attention has been given to transfusion safety through improvement of disease screening and donor selection, very little is known about the possible long-term health effects of either repeated whole blood donation or platelet donation by apheresis. Moreover, studies investigating these effects have been unable to provide concurrent and powerful assessment of several relevant chronic disease outcomes, as they have included only a few hundred cardiovascular cases or did not have information on incidence of type 2 diabetes and site-specific cancer outcomes. The long-term aim of this research, following completion of the demonstration study, will be to establish an unprecedentedly large and detailed population research platform involving donors enrolled within NHSBT who will be linked to a variety of electronic health (e-health) records. The objective is to address a question of considerable national and international public health importance: What is the balance of any risks and benefits of repeated whole blood and platelet donation by apheresis on major chronic disease outcomes? Data transfers will be between NHSBT (as a provider of data to HSCIC only), HSCIC and University of Cambridge Department of Public Health and Primary Care (DPHPC). No data at record-level or aggregated, will be made accessible to any third parties. University of Cambridge DPHPC will only have access to de-identified data. The following services are requested from HSCIC for the demonstration study: 1. Linkage of a demographic blood donor dataset on 200 000 donors provided by NHSBT, containing identifiers (NHS number, age, sex, postcode etc.) and a study ID but no blood donation data, to: -HES outpatient data -HES inpatient data 2. Use of donor postcode provided by NHSBT to calculate deprivation index score for all donors. 3. Once linkage of demographic data to HES data is complete, HSCIC will provide a pseudonymised dataset containing HES data together with the study id (but no identifiable data) to University of Cambridge Department of Public Health and Primary Care. There the health data will be linked to blood donation history using the study id. The research dataset will be stored securely at the Department of Public Health and Primary Care (DPHPC) and accessible only to authorised staff members nominated in the ethics approvals. Specific outputs expected, including target date: NHSBT plan to establish a powerful and pragmatic surveillance platform embedded within NHSBT service by linkage of existing donor’s records with multiple electronic health record sources. Access to such records can provide information related to cause-specific mortality and other health events. Linkages for the demonstration study will be done with Hospital Episodes Statistics. This demonstration study is intended to assess feasibility of large scale record linkage of blood donor records to health records. The findings from this pilot study will be reported in peer-reviewed journals and in a publicly accessible website; they will provide general insights for future investigation involving linking donors with e-health records in the UK. No individual level data will be made accessible to any third parties and reports will be presented in the form of summarized data. Initial outputs are expected within a year of receiving data from NHSBT and HSCIC. Expected measurable benefits to health and/or social care including target date: Given the nature of this trial study, no immediate benefits to donor health or NHSBT service are expected. However the ultimate benefit from the Study is that its results will provide the basis for a decision on the creation of an electronic-haemovigilance platform which would enable NHSBT to answer crucial questions regarding donor health and well-being with the potential to inform future NHSBT policies. Is the purpose of this application in anyway commercial? There are no commercial purposes to this project or to the use of data obtained from HSCIC. This project is funded by NHSBT with the long term aim of this project being to help improve NHSBT services.",
+  "99adc249cc29": "Thus far, the design and initial results of this study have been communicated at the European Conference on Donor Health and Management in 2016, the largest international conference on blood donor health. Preliminary findings of the effects of whole blood donation on hospital episode statistics have also been presented to blood donors and NHSBT researchers at the National Institute for Health Research (NIHR) Blood and Transplant Research Unit Training Day in Cambridge in 2017.\n\nThese presentations have fostered exciting discussions with blood donor researchers and international blood donation organizations about the methods used for long term follow-up of blood donors to improve their health. As further results of these discussions, various methods have been explored to improve our pilot study and enhance the feasibility of creating a large scale donor health follow-up study.",
+  "e5ca29f30cec": "In the short term, this study will expand scientific knowledge of the possible approaches to investigate the health effects of blood donation, and will provide initial insight into the health effects of blood donation. Given the lack of previous studies investigating blood donor health with comparable size in the UK and worldwide, this study will provide crucial evidence regarding the feasibility of large scale linkage studies in blood donor populations. Results from this study will also help to improve the design and analysis of future large scale studies on blood donor health, which will be essential for future studies seeking to understand the long term effects of frequent blood donation. These short term benefits will be realised by means of publications in peer-reviewed medical journals and direct interaction with the international blood donation community at conferences and collaboration meetings. In the short term it is expected that this study will provide critical information to clinicians, decision-makers and academic scientists working in the field of blood donor health. In the short term this study will not benefit patients directly but will be essential for the progression to further studies that will produce substantial benefits for patients.\n\nIn the long term, this study will provide the basis for the creation of an electronic-haemovigilance platform which will provide NHSBT with the means to answer crucial questions regarding donor health and well-being, in particular regarding the consequences of blood donation on chronic disease outcomes. The answers obtained from this surveillance platform are expected to help to inform future NHSBT policies and strategies benefiting the 5 million donors registered with NHSBT. These benefits will be realised by means of publications in peer-reviewed medical journal, interaction with the international blood donation community, and direct cooperation with relevant policymakers within the UK. In the long term it is expected that this study will provide vital information on how best to monitor and preserve blood donor health, improving efficiency and safety of blood donation in the UK and worldwide. Further, the information provided to donors will allow them to make a more informed decision about frequent blood donation with regards to their long term health."
+ }
+}

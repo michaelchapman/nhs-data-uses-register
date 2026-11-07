@@ -1,0 +1,110 @@
+{
+ "base_reference": "DARS-NIC-147770-1WNFL",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147770-1WNFL",
+   "version": "",
+   "organisation": "Picker Institute Europe",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "29f6fcf62529"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "1b876d808c6a"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "b9ac9d6329ef"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Exception - IG accreditation process to permit the receipt and processing of data by the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Exception - IG accreditation process to permit the receipt and processing of data by the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147770-1WNFL-v0.0",
+   "version": "0.0",
+   "organisation": "PICKER INSTITUTE EUROPE",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "objective": "b9ac9d6329ef"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "1b876d808c6a": "Re-use statement:\nTo distribute, collect, process and submit PROMS questionnaires.\n\nAims:\nUpdate to demographic data prior to supplier sending out pre and post op questionnaires\n\nMethod: \nList cleaning; this may be requested in two phases the first to complete NHS No’s the second to identify the deceased and provide latest address information for the living.  There are no restrictions for this to be processed as a single file run.\n\nPermissions:\nThe organisation are a PROMs accredited Supplier and hold a valid and up to date PROMs sub-license (issued by the Department of Health).  The PROMs sub-licence prcess is overseen by the PROMs team (Giles Foster) and checked on an annual basis.  Giles Foster has confirmed accreditation is still in place.  The PROMs supplier must complete the NHS Information Governance Toolkit (IGT) on an annual basis and attain/retain Level 2 compliance (confirmed by Giles Foster).",
+  "29f6fcf62529": "Re-use statement: To distribute, collect, process and submit PROMS questionnaires. Aims: Update to demographic data prior to supplier sending out pre and post op questionnaires Method: List cleaning; this may be requested in two phases the first to complete NHS No’s the second to identify the deceased and provide latest address information for the living. There are no restrictions for this to be processed as a single file run. Permissions: The organisation are a PROMs accredited Supplier and hold a valid and up to date PROMs sub-license (issued by the Department of Health). The PROMs sub-licence prcess is overseen by the PROMs team and checked on an annual basis. Team leader has confirmed accreditation is still in place. The PROMs supplier must complete the NHS Information Governance Toolkit (IGT) on an annual basis and attain/retain Level 2 compliance",
+  "b9ac9d6329ef": "Update to demographic data prior to supplier sending out pre and post op questionnaires (This is not a Medical Research study We are providing List Cleaning to return NHS No’s where not complete, fact of death and latest address of the living. This is in order to update demographic data prior to supplier sending out pre and post op questionnaires. The only purpose is to get the latest address)"
+ }
+}

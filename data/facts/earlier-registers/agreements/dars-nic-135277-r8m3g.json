@@ -1,0 +1,633 @@
+{
+ "base_reference": "DARS-NIC-135277-R8M3G",
+ "versions": [
+  {
+   "reference": "DARS-NIC-135277-R8M3G-v0.8",
+   "version": "0.8",
+   "organisation": "Regional Drug & Therapeutic Centre",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01",
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "objective": "faed912a4470",
+     "activities": "c6d616d421d9",
+     "expected_output": "1cf174193efa",
+     "expected_benefits": "bd49cc93d2ad"
+    },
+    {
+     "periods": [
+      "2018-05-25"
+     ],
+     "objective": "403b5e6ad3ba",
+     "activities": "b947645cf947",
+     "expected_output": "7d14292c0a53",
+     "expected_benefits": "47accf5dcfe5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System access",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System access",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System access",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System access",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 5
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-135277-R8M3G-v1.4",
+   "version": "1.4",
+   "organisation": "Regional Drug & Therapeutic Centre",
+   "organisation_type": "",
+   "listed": [
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "objective": "ac943e2863a2",
+     "activities": "341a9c467887",
+     "expected_output": "aef306f3bb9b",
+     "expected_benefits": "c97ec7dc4e45",
+     "yielded_benefits": "344493a3003c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-135277-R8M3G-v2.4",
+   "version": "2.4",
+   "organisation": "Regional Drug & Therapeutic Centre",
+   "organisation_type": "Agency/Public Body",
+   "listed": [
+    "2019-04-01",
+    "2019-05-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2019-11-01",
+    "2019-12-01",
+    "2020-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01"
+     ],
+     "objective": "8e2fd97dd9dd",
+     "activities": "de09a8fa664b",
+     "expected_output": "3a2d59bb7f12",
+     "expected_benefits": "c97ec7dc4e45",
+     "yielded_benefits": "f2d44457fc69"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01"
+     ],
+     "rows": 10
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-135277-R8M3G-v3.5",
+   "version": "3.5",
+   "organisation": "Regional Drug & Therapeutic Centre",
+   "organisation_type": "Agency/Public Body",
+   "listed": [
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "objective": "ba1c4d11b4a5",
+     "activities": "8d4cc4eee0cf",
+     "expected_output": "b243afb527fa",
+     "expected_benefits": "d0c58398f86d",
+     "yielded_benefits": "87614372be1c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01"
+     ],
+     "rows": 11
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-135277-R8M3G-v4.10",
+   "version": "4.10",
+   "organisation": "Regional Drug & Therapeutic Centre",
+   "organisation_type": "Agency/Public Body",
+   "listed": [
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-06-01"
+     ],
+     "objective": "06545c34e487",
+     "activities": "fab4536d638e",
+     "expected_output": "6ae423c86e0e",
+     "expected_benefits": "fde461190e96",
+     "yielded_benefits": "87614372be1c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "GPES Data for Pandemic Planning and Research (COVID-19)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "System Access",
+     "periods": [
+      "2021-06-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "06545c34e487": "AMENDMENT REQUEST:\n\nThe NHS Digital Portal (also referred to as DAE), provides secure access to the health and care data held by NHS Digital and it reduces the need for it to leave NHS Digital.  Users can access the data within the NHS Digital Portal remotely and it ensures that the correct person, with the correct permissions accesses this data.  The NHS Digital Portal caters for standard users with access to standard data sets.   \n\nThe Regional Drug and Therapeutics Centre (RDTC) (Newcastle-upon-Tyne Hospitals NHS Foundation Trust) require access to the GDPPR data. \n\nThis is broadly to enable continued provision of accurate prescribing information which is needed to support the NHS at a primary care/ICS level to fulfil their statutory duties. There is significant increased pressure caused by the lack of knowledge of the impact of COVID-19 on both the short-term and long-term prescribing costs. The specific costs presented for prescribing are also used by the CCGs to inform their budget discussions, planning and finance arrangements.  \n\nAll GP and PCN colleagues within those CCGs that have an SLA with the RDTC are able to receive RDTC reports. The researchers are actively seeking better ways to engage and work collaboratively with colleagues across the Northern region, in particular PCNs as their structures develop.\n \nBelow are outlined some examples of how GDPPR data may be used to support the CCG stakeholders. \n \n• The prescribing reports present ePACT2 data, HES data and relevant QOF prevalence, national audit data and public health data in a combined way that enables CCGs to understand their specific prescribing behaviour over time, the impact of prescribing on outcomes (such as hospital admissions) and the impact of external factors (such as price changes and supply issues). Throughout the prescribing reports that RDTC produce, the researchers use weightings in many charts, to enable more specific interpretation of prescribing. For instance, antipsychotics weighted for the number of dementia patients. With the exception of dementia list size, most weightings (COPD/asthma patients, diabetes prevalence data etc.) are through QOF or national audit and available annually at best. It has been noted that the large number of COVID-19 deaths will impact directly on practice list sizes for specific conditions. The researchers will be unable to correct the weightings in most of the charts to account for decreases in list size (due to COVID-19 deaths) for at least 12 months, when the next QOF data is released. This will make the charts potentially very inaccurate and meaningless for the CCGs, thus removing one of the tools for managing and monitoring the safety of prescribing behaviour.\n \n• With respect to the COVID-19 pandemic, CCG stakeholders are currently without sufficient information to make informed decisions around both the short-term cost impact of changes in prescribing over the last few months and additionally the impact of changes in prescribing throughout the COVID-19 pandemic and for the foreseeable future, as the Mid to long term effects of post COVID-19 recovery health needs are seen. In accessing the GDPPR data, it is hoped that analysis of the medication prescribed both at the time of diagnosis and over time following a diagnosis could be used to understand and assist with forecasting CCG spend and cost growth. These areas are usually determined through analysis of ePACT2 data, however, ePACT2 data is only available with a 3 month delay (the CCGs need the information now) and does not provide the level of differentiation needed to understand costs due to COVID-19 infection and short term costs due to changes in prescribing behaviour (e.g. stocking up on medicines).\n \n• RDTC also undertake deep dive research for stakeholders, to understand specific therapeutic area prescribing in greater detail where there is concern or a change in behaviour detected. Currently, the COVID-19 impact is a great unknown. Being able to differentiate the data to understand which type of patients, e.g. age group, co-morbidities etc. will help to direct research and be used in conjunction with the ePACT2 prescribing data (released 3 months later) to support the CCGs with specific actions to manage the impact of COVID-19 on prescribing and future strategic planning that may be required to meet the post-COVID-19 infection long term needs.\n \n-*-*-*-*-*-\nPreviously approved Version 3 of the DSA: \n\nThe Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Hospitals Foundation Trust require continued access to the NHS Digital Portal (Data Access Environment) to access pseudonymised, non-sensitive HES data to aid with report writing and project work as described below.  \n\nPrescribing is the most common patient-level intervention in the NHS, and covers all sectors of care: primary, hospital, public and community health. It is the second highest area of spending in the NHS, after staffing costs (NHS Digital). The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Hospitals Foundation Trust (the trust) extracts and analyses prescribing data to identify trends and variation, and to support medicines optimisation. These are presented in reports at regional (Sustainable Transformation Partnerships [STP]/ Integrated Care Systems [ICS]) and Clinical Commissioning Group (CCG) level in relation to particular conditions, such as diabetes. \n\nScatter charts incorporating the HES data are included within these reports, and are used to present the outcomes that may be attributed in some part to prescribing patterns within an area. In particular, the reports are useful for CCGs to benchmark against others, identifying where they, for example, have an unusual or high prescribing pattern for a particular condition, which could have a higher than average cost. They can then use this information to investigate further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.\n\nReducing unwarranted variation and increasing value through medicines optimisation is a crucial element of NHS RightCare’s innovation work (further information can be found on the NHS RightCare website). RDTC prescribing reports were developed in response to requests from CCGs (and this work is funded by the CCGs) so that variation in prescribing between CCGs could be illustrated, so CCGs can benchmark their performance against other CCGs both regionally and nationally. Identifying variation at this level prompts CCGs to investigate the causes of variation locally. They can then identify the better performing CCGs (those with lower prescribing costs and fewer hospital admissions) and make contact with them to share best practice, which can be implemented locally with an aim to improve prescribing and outcomes in the CCGs area. \n\nThe RDTC produces a series of reports and publications for RDTC stakeholders across the North of England, primarily utilising EPACT2 data, Quality Outcomes Framework (QOF) and Hospital Episodes Statistics (HES) data (from NHS Digital), but also incorporating relevant data sets including public health, ONS and national audit data.\n\nThe RDTC have found some CCGs demonstrate lower prescribing costs in diabetes realising lower hospital admissions whereas other CCGs are demonstrating higher admissions with higher prescribing costs. RDTC believe it would be of benefit for CCGs demonstrating higher admissions with higher prescribing costs to communicate with those better performing CCGs (or those CCGs demonstrating lower prescribing costs and lower hospital admissions) to understand steps that can be taken to improve the CCGs prescribing and outcome position. Prescribing reports created by the RDTC will allow better communication between the CCGs. \n\nThe RDTC is hosted by the Trust (the data controller), however data processing is undertaken by the prescribing reports team within the RDTC. The reports are produced only for RDTC stakeholders.\n\nThere are no other funders or commissioners involved in this work that are not mentioned in this agreement.\n\nHES data is supplied to stakeholders within the form of charts presented as a minimum at CCG level. This work was instigated in response to stakeholder requests that it would be of value to include information highlighting whether prescribing patterns could influence episodes of hospital admissions. This data is presented at a minimum of CCG level, and is only extracted for processing at CCG level.\n\nThe aim of this work is to highlight variation in prescribing between CCGs. More specifically the use of HES data within these reports aims to highlight possible variation in hospitals admissions due to prescribing practice. It is possible that the data suggests that higher prescribing costs within a therapeutic area by CCG A do not lead to reduced hospital admissions compared to CCG B who is prescribing at a lower cost. National data is specifically required in order to enable benchmarking of CCGs.\n\nRDTC were previously granted access to HES data in October 2013 and have been incorporating the data into their reports since October 2014 via the data depot system and the NHS Digital Portal system. \n\nThe reports will be updated as necessary with access required to the Hospital Episode Statistics data covering various therapeutic areas.\n\nThe RDTC requires HES data from NHS Digital, as it is the only avenue available.\n\nData minimisation\nThe datasets requested are required to cover the diversity of therapeutic areas and the breadth of work across an integrated care system to meet the specific prescribing analysis needs. Up to 5 years of data may be required to understand and demonstrate trends in prescribing behavior. The geography used is directly related to the CCG stakeholders. However, in order to benchmark prescribing, access to the 10 most similar CCGs nationally (for each CCG) and a national benchmark, is required. Different therapeutic areas and prescribing analysis may necessitate access to different age and clinical factors. Similarly, all patient episodes are required to enable quantification of the scale of an outcome related to a prescribing behavior.\n\nThe RDTC rely on the following Legal basis under GDPR for processing HES data:\n\nThe data requested is necessary for the performance of a task carried out in the public interest; monitoring outcomes and patterns of prescribing services in local areas (covered by Article 6 (1)(e) of GDPR)). The Trust is a public body and can rely on this legal basis. Processing is necessary for the purposes of preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards referred to in paragraph 3, covered by Article 9 (2)(h) of the GDPR, as the analysis of prescribing services looks to see if differences in patterns have an impact on hospital admissions.\n\nThis data is only extracted as aggregated data at CCG level. The RDTC does not extract record level data.",
+  "1cf174193efa": "The following outputs will be produced: Therapeutic prescribing reports will be provided to stakeholder CCGs on a quarterly basis via the secure area of the RDTC website which stakeholders can access via password protection. The pdf summary report document is also emailed to stakeholders to alert them to the fact that a new therapeutic report is available from the website. \n\nThe RDTC twitter account also alerts stakeholders that a new report has been added to the website via a statement such as “the latest RDTC cardiovascular report is now available to stakeholders on the RDTC website”. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPublished outputs will not identify individual general practices.\n\nCCG medicines optimisation teams use the information within the report to benchmark their prescribing against their neighbouring CCGs and their comparator CCGs. The hospital admissions data enable CCGs to identify whether their prescribing practice is leading to improved outcomes for patients via a reduction in hospital admission for that condition. CCG medicines optimisation teams can also look to those CCGs where there appear to be \"better\" outcomes and seek to replicate this success.\n\nFor example identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD, may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nCCGs across GM has implemented a new treatment pathway across its health economy to address the following issues:\n\n•\tMultitude of different inhalers and inhaler types\n•\t Probable overprescribing of inhaled corticosteroids\n•\tVariation between CCGs in admission rates and spend on respiratory drugs.\n\nThe outputs being measured are: \n\n•\tAny change in corticosteroid prescribing\n•\tAny change in exacerbations of COPD\n•\tAny change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "341a9c467887": "The NHS Digital Portal is a secure method giving access to datasets and associated analytical tools. It is accessed via a secure authentication method to named users.  Users are only able to access the datasets detailed within this agreement.  Users log onto the portal and are presented with analysis tools which allow them to access the relevant data sets and reference data tables so that they can return appropriate descriptions to the coded data.  The access and use of the system is fully auditable and all users must comply with the use of the data as specified in this agreement.\n\nData is extracted from NHS Digital Portal aggregated at CCG level. Record-level data cannot be downloaded and, in line with the HES Analysis Guide suppression rules, small numbers will be suppressed at the point of extraction from NHS Digital Portal and will not include any description of a cell size below 6. Data is saved within a restricted drive as per the Protocol - RDTC Management of Hospital Episode Statistics (HES) data. The original downloads are password protected.  All downloads are recorded in the extraction log including:\n\n• date and purpose of extraction. \n• the name and location of the extraction.\n• the report the extraction will be included in.\n• a review date for deletion.\n\nData is imported into a specific database which only holds hospital data aggregates the data to LAT, Region and North of England level. The data then flows via linked tables into databases for each therapeutic area and after processing for weighting with the data’s denominator. The data is then linked to a further database which holds all scatter plot data. Data is copied from this database into a spreadsheet for all scatterplot data and finally copied into the therapeutic report spreadsheet.\n\nThe reports are made available to stakeholders via the centres website which is password protected. A PDF of the reports dashboard summary is emailed to all stakeholders.\n\nData is only handled as per the protocol and data flow maps.\n\nData will only be accessed by individuals within the prescribing reports team of the prescribing support unit at the RDTC who have authorisation from NHS Digital to access the data for the purpose(s) described, all of whom are substantive employees of the RDTC. Only one team member currently has the authority and thus the log in details to access NHS Digital Portal system, and will be the only user. \n\nHES data will be plotted against EPACT prescribing data and quality and outcomes framework (QOF) data. The plotted data is displayed as scatter charts. It will only be presented at CCG and Area Team level.\n\nThe data will not be linked with any record level data.\n\nThere will be no requirement nor attempt to reidentify individuals from the data.\n\nThe data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess is being requested to admitted patient care data as this will provide the Trust with the data required to produce the scatter charts detailed above. They only require data for the current financial year, national data is required in order that The Trust will filter this to only include the exact CCGs they require as not all CCGs nationally fit the top 10 most similar CCGs, for example Central London (Westminster) CCG does not feature in the top 10 similar CCGs of any of the applicant's stakeholders so the data could be filtered out.\n\nData will be filtered by the applicant for specific conditions using ICD-10 codes within the diagnosis fields. For example diabetes admissions counts will be identified using the E10 to E14 diagnosis codes. Procedure codes will also be used to filter data where appropriate.\n\nProcessing of HES Accident and Emergency, outpatients and Critical Care data is not permitted under this agreement.  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe following conditions apply to NHS Digital Portal access:\n\n1) Access to NHS Digital Portal will be restricted to approved users agreed with the NHS Digital in a controlled manner.   Only users who have undergone Information Governance training as required by IG Toolkit v14 may be permitted to access NHS Digital Portal.\n\n2) Initially, 1 user licences are approved and this will be managed under change control. The charges outlined in the agreement may therefore vary over the agreement period. \n\n3) An annual review of the system use will be completed as part of the audit process. \n\n4) The NHS Digital will monitor use of the NHS Digital Portal system as part of ongoing access and any excessive use will be reviewed and access could be withdrawn with data destruction notices issued if that occurs. \n\n5) Users are only permitted to download tabulated data (which may contain small numbers) from the system. Downloading of record-level data or record level linkage is not permitted under this agreement.  \n\n6) Where any record level data may have been downloaded previously from NHS Digital Portal, such data must be securely destroyed and certificate of data destruction provided to NHS Digital within 2 months of this agreement.  \n\n7) Where downloaded aggregated data contains small numbers, such data must be securely destroyed at the end of the data sharing agreement, and a certificate of data destruction supplied to NHS Digital.\n\n8) Where downloaded aggregated data is suppressed in line with the HES analysis guide, such data may be retained beyond the period of this agreement.\n\n9) All outputs shared by the licensee must have small numbers suppressed in line with the HES analysis guide.",
+  "344493a3003c": "By presenting the HES data provided within RDTC therapeutic reports, stakeholders have been able to identify and prioritise key areas for development. For example, in Greater Manchester the illustration that CV outcomes in diabetes population were out with that of the rest of the region has driven the accelerated development of a pathway to tackle this issue, resulting in changes to the agents listed within the formulary to provide those agents with known cardiovascular benefit to be placed over previously used therapies. Without this data this population may not have been highlighted as needing more appropriate therapy, the provision of this data has directed the necessary resource to support this work ahead of other topics.",
+  "3a2d59bb7f12": "The following outputs will be produced: Therapeutic prescribing reports will be provided to stakeholder CCGs on a quarterly basis via the secure area of the RDTC website which stakeholders can access via password protection. The pdf summary report document is also emailed to stakeholders to alert them to the fact that a new therapeutic report is available from the website. \n\nThe RDTC twitter account also alerts stakeholders that a new report has been added to the website via a statement such as “the latest RDTC cardiovascular report is now available to stakeholders on the RDTC website”. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPublished outputs will not identify individual general practices.\n\nCCG medicines optimisation teams use the information within the report to benchmark their prescribing against their neighbouring CCGs and their comparator CCGs. The hospital admissions data enable CCGs to identify whether their prescribing practice is leading to improved outcomes for patients via a reduction in hospital admission for that condition. CCG medicines optimisation teams can also look to those CCGs where there appear to be \"better\" outcomes and seek to replicate this success.\n\nFor example identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD, may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nCCGs across Greater Manchester has implemented a new treatment pathway across its health economy to address the following issues:\n\n• Multitude of different inhalers and inhaler types\n•  Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs.\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for Chronic Obstructive Pulmonary Disesease (COPD) exacerbations. If a correlation is identified, then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "403b5e6ad3ba": "Prescribing is the most common patient-level intervention in the NHS, and covers all sectors of care: primary, hospital, public and community health. It is the second highest area of spending in the NHS, after staffing costs (NHS Digital). The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Foundation Trust (NUTH) extracts and analyses prescribing data to identify trends and variation, and to support medicines optimization. These are presented in reports at regional and CCG level in relation to particular conditions, such as diabetes. Scatter charts  incorporating the HES data are included within these reports, and are used to present the outcomes that may be attributed in some part to prescribing patterns within an area. In particular, the reports are useful for CCGs to benchmark against others, identifying where they, for example, have an unusual or high prescribing pattern for a particular condition, which could have a higher than average cost. They can then use this information to investigate further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.\n\nReducing unwarranted variation and increasing value through medicines optimisation is a crucial element of NHS RightCare’s innovation work (further information can be found on the NHS RightCare website). RDTC prescribing reports were developed in response to requests from CCGs (and this work is funded by the CCGs) so that variation in prescribing between CCGs could be illustrated, so that they can benchmark their performance against their peers regionally and nationally. Identifying variation at this level prompts CCGs to investigate the causes of variation locally. They can then identify better performing CCGs and make contact with them to share best practice, which can be implemented locally with an aim to improve prescribing and outcomes in their area. \n\nThe RDTC produces a series of reports and publications for their stakeholders across the North of England, utilizing EPACT data, Quality Outcomes Framework (QOF) data and for a small number of their charts Hospital Episodes Statistics (HES) data. The RDTC requires HES data for use in the therapeutic prescribing reports, in the attached example the scatter chart illustrates that the CCGs sitting in the bottom left quadrat  are demonstrating lower prescribing costs in diabetes realising lower hospital admissions whereas the CCGs sitting in the top right quadrat are demonstrating higher admissions with higher prescribing costs. It would be of benefit for the latter CCGs to communicate with those better performing CCGs to understand steps that can be taken to improve their prescribing and outcome position.\n\nThe RDTC is hosted by the Newcastle Upon Tyne Foundation Trust (the data controller), however data processing is undertaken by the prescribing reports team within the RDTC. The reports are produced only for RDTC stakeholders as listed:\n\nNewcastle Gateshead CCG\nNorth Cumbria CCG\nNorth Tyneside CCG\nNorthumberland CCG\nSouth Tyneside CCG\nSunderland CCG\nDarlington CCG\nDurham Dales, Easington and Sedgefield CCG\nHartlepool and Stockton CCG\nNorth Durham CCG\nSouth Tees CCG\nBolton CCG\nBury CCG\nHeywood, Middleton and Rochdale CCG\nManchester CCG\nOldham CCG\nSalford CCG\nStockport CCG\nTameside and Glossop CCG\nTrafford CCG\nWigan Borough CCG\nEast Riding of Yorkshire CCG\nHambleton, Richmondshire and Whitby CCG\nHarrogate and Rural District CCG\nHull CCG\nNorth East Lincolnshire CCG\nNorth Lincolnshire CCG\nScarborough and Ryedale CCG\nVale of York CCG\nRotherham CCG\nAiredale, Wharfedale and Craven CCG\nBradford City CCG\nBradford Districts CCG\nLeeds North CCG\nLeeds South and East CCG\nLeeds West CCG\nNorth of England Commissioning Support Service\nGreater Manchester Shared Service\nYorkshire Shared Service\n\nHES data is currently only supplied to these users within the form of scatter charts presented at either an area team level or CCG level. This work was instigated in response to stakeholder requests that it would be of value to include information highlighting whether prescribing patterns could influence episodes of hospital admissions. This data is only presented at CCG  level, and is only extracted for processing at CCG level.\n\nThe aim of this work is to highlight variation in prescribing between CCGs, more specifically the use of HES data within these reports aims to highlight possible variation in hospitals admissions due to prescribing practice. It maybe that the data suggests that higher prescribing costs within a therapeutic area by CCG A do not lead to reduced hospital  admissions compared to CCG B who is prescribing at a lower cost. National data is specifically required in order to enable benchmarking of CCGs.\n\nRDTC were previously granted access to HES data in October 2013 and have been incorporating the data into their reports since October 2014 via the data depot system and the HDIS system. They have had no access to HES data since July 2016 in any form (i.e. HDIS or an extract), hence the request for a new DSA.\n\nThe reports are updated quarterly, the following data is required for inclusion in the therapeutic reports:\n\nDiabetes report\n• Diabetes hospital admissions (ICD-10 codes E10-E14) per diabetes patients within each CCG compared against spend on diabetic drugs per diabetic patients or QOF target DM007. \n• Severe hypoglycaemia hospital admissions (ICD-10 codes E160-162) per diabetic patients compared against insulin Determir, Glargine and Degludec as a percentage of all long/inter insulin analogues. \nRespiratory report\n• Chronic Obstructive Pulmonary Disease (COPD) hospital admissions (ICD-10 codes J40-J44) per COPD patients compared against spend on LAMA inhalers. \n• COPD and asthma hospital admissions (ICD-10 codes J40-J45) per COPD and asthma patients compared against spend on bronchodilators and corticosteroids. \nCardiovascular report\n• Stroke hospital admissions (ICD-10 codes I60-I69) with a secondary diagnosis for Atrial Fibrillation (ICD-10 codes I48) per stroke patients compared against defined daily doses (DDDs) per stroke patients.\nBone Metabolism report\n• Hip fracture hospital admissions (ICD-10 codes S720-S722) per bisphosphonate STARPU compared against spend on bisphosphonate drugs per bisphosphonate STARPU.\n\nThe applicant requires this data from NHS Digital, as it is the only avenue available to them.",
+  "47accf5dcfe5": "By highlighting to medicines optimisation teams any potential relationship between prescribing patterns and hospital admissions organisations can work to identify ways to optimize prescribing, enabling the most cost effective use of medicines across the health economy.  \n\nIdentifying better outcomes to the patient population by a change in prescribing pattern  e.g. identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD , may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nOne of the applicant's stakeholder regions has implemented a new treatment pathway across its health economy to address the following issues:\n\n• Multitude of different inhalers and inhaler types\n• Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "6ae423c86e0e": "AMENDMENT REQUEST:\n\nThe output for the addition of the GDPPR data will be through the current therapeutic and financial reports, COVID-19 specific reports and response to CCG's.\n\n-*-*-*-*-*-\nPreviously approved Version 3 of the DSA:\n\nThe following outputs will be produced: Prescribing reports will be provided to stakeholder organisations across the North of England and other organisations that CCGs were content to share with, via the secure area of the RDTC website which stakeholders can access via password protection. The pdf summary report document is also emailed to stakeholders to alert them to the fact that a new report is available from the website. \n\nThe RDTC twitter account also alerts stakeholders that a new report has been added to the website via a statement such as “the latest RDTC cardiovascular report is now available to stakeholders on the RDTC website”. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPublished outputs will not identify individual general practices.\n\nCCG medicines optimisation teams use the information within the report to benchmark their prescribing against their neighbouring CCGs, comparator CCGs and regionally and nationally. The hospital admissions data enable CCGs to identify whether their prescribing practice is leading to improved outcomes for patients via a reduction in hospital admission for that condition. CCG medicines optimisation teams can also look to those CCGs where there appear to be \"better\" outcomes and seek to replicate this success.\n\nThe target dates for outputs are on a rolling calendar and vary from monthly to annual, including one-off reports as need requires. Reports are realised as stated in the text above.",
+  "7d14292c0a53": "The following outputs will be produced: Therapeutic prescribing reports will be provided to stakeholder CCGs on a quarterly basis via the secure area of the RDTC website which stakeholders can access via password protection. The pdf summary report document is also emailed to stakeholders to alert them to the fact that a new therapeutic report is available from the website. \n\nThe RDTC twitter account also alerts stakeholders that a new report has been added to the website via a statement such as “the latest RDTC cardiovascular report is now available to stakeholders on the RDTC website”. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPublished outputs will not identify individual general practices.\n\nCCG medicines optimisation teams use the information within the report to benchmark their prescribing against their neighbouring CCGs and their comparator CCGs. The hospital admissions data enable CCGs to identify whether their prescribing practice is leading to improved outcomes for patients via a reduction in hospital admission for that condition. CCG medicines optimisation teams can also look to those CCGs where there appear to be \"better\" outcomes and seek to replicate this success.\n\nFor example identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD, may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nCCGs across GM has implemented a new treatment pathway across its health economy to address the following issues:\n\n• Multitude of different inhalers and inhaler types\n• Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs.\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "87614372be1c": "By presenting the HES data provided within RDTC  reports, stakeholders have been able to identify and prioritise key areas for development. For example, in Greater Manchester the illustration that Cardiovascular outcomes in diabetes population were out with that of the rest of the region has driven the accelerated development of a pathway to tackle this issue, resulting in changes to the agents listed within the formulary to provide those agents with known cardiovascular benefit to be placed over previously used therapies. \n\nWithout this data this population may not have been highlighted as needing more appropriate therapy, the provision of this data has directed the necessary resource to support this work ahead of other topics.\n\nNHS Digital data is used to support stakeholder organisations to reduce avoidable hospital admissions through medicines optimisation and improved pathway development in primary care. \n\nThe presentation of primary care prescribing data against hospital admissions data at CCG level enables opportunities for improvement to be identified. Area prescribing committees use this data to set workplans for the coming year and to monitor against them, for example, GMMMG workplan and the identification of the need to redefine diabetes pathway to reduce unnecessary hospital admissions whilst maintaining use of those agents which are most cost effective.\n\nStakeholders have redefined their COPD and asthma pathways and use our reports to monitor implementation of these new pathways, for example, reduced use of high dose inhaled corticosteroids, but without increased admissions to secondary care for exacerbations of condition.",
+  "8d4cc4eee0cf": "All organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe NHS Digital Portal is a secure method giving access to datasets and associated analytical tools. It is accessed via a secure authentication method to named users.  Users are only able to access the datasets detailed within this agreement.  Users log onto the portal and are presented with analysis tools which allow them to access the relevant data sets and reference data tables so that they can return appropriate descriptions to the coded data.  The access and use of the system is fully auditable and all users must comply with the use of the data as specified in this agreement.\n\nData is only handled as per the agreed processes set out in the protocol and data flow map provided to NHS Digital. Details of the data flow map are included below. Any changes to protocol deemed significant by the Trust Information Governance team that changes the processing activities or purposes of this agreement will be communicated to NHS Digital and subsequent amendments will be made to the agreement.\n\nData is extracted from NHS Digital Portal aggregated at CCG level. The extraction and processing of data is carried out by a substantive employee appropriately trained in data protection as required by the Trust. The data is processed by the RDTC at within a secure environment and stored at the approved trust premises. (Newcastle-upon-Tyne).\n\nRecord-level data cannot be downloaded and, in line with the HES Analysis Guide suppression rules, small numbers will be suppressed at the point of extraction from NHS Digital Portal and will not include any description of a cell size between 1 and 7. If national total is greater than or equal to 8, then all other counts will be rounded to the nearest 5. Data is saved within a restricted access folder within a restricted drive as per the Protocol - RDTC Management of Hospital Episode Statistics (HES) data. The original downloads are password protected.  All downloads are recorded in the extraction log including:\n\n• date and purpose of extraction. \n• the name and location of the extraction.\n• the report the extraction will be included in.\n• a review date for deletion.\n\nData is imported into a specific database which only holds hospital data and aggregates the data to LAT, Region and North of England level. The data then flows via linked tables into databases for each therapeutic area and after processing is then weighted with the data’s denominator. The data is then linked to a further database which holds all chart data. Data is copied from this database into a spreadsheet for all chart data and finally copied into the prescribing report spreadsheet.\n\nThe reports are made available to stakeholders via the centres website which is password protected and a summary PDF via email to stakeholders.\n\nData will only be accessed by individuals within the prescribing reports team of the prescribing support unit at the RDTC who have authorisation from NHS Digital to access the data for the purpose(s) described, all of whom are substantive employees of the RDTC. Only one team member currently has the authority and thus the log in details to access NHS Digital Portal system, and will be the only user. \n\nHES data will be primarily plotted against EPACT2 prescribing data, quality and outcomes framework (QOF) data and other applicable data sets. The plotted data is displayed as charts. It will be presented at CCG level as a minimum but in some instances up to National level depending on the report format.\n\nThe data will not be linked with any record level data.\n\nThere will be no requirement nor attempt to re-identify individuals from the data.\n\nThe data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess is being requested to HES data, as this will provide the Trust with the data required to produce the scatter charts detailed above. Data is only required for the last 5 years, national data is required in order that The Trust will filter this to only include the exact CCGs they require as not all CCGs nationally fit the top 10 most similar CCGs, for example Central London (Westminster) CCG does not feature in the top 10 similar CCGs of any of the applicant's stakeholders so the data could be filtered out.\n\nData will be filtered by the applicant for specific conditions using ICD-10 codes within the diagnosis fields. For example diabetes admissions counts will be identified using the E10 to E14 diagnosis codes. Procedure codes will also be used to filter data where appropriate.\n\nThe following conditions apply to NHS Digital Portal access:\n\n1) Access to NHS Digital Portal will be restricted to approved users agreed with the NHS Digital in a controlled manner.   Only users who have undergone Information Governance training may be permitted to access NHS Digital Portal.\n\n2) Initially, 1 user licences are approved and this will be managed under change control. The charges outlined in the agreement may therefore vary over the agreement period. \n\n3) An annual review of the system use will be completed as part of the audit process. \n\n4) NHS Digital will monitor use of the NHS Digital Portal system as part of ongoing access and any excessive use will be reviewed and access could be withdrawn with data destruction notices issued if that occurs. \n\n5) Users are only permitted to download tabulated data (which may contain small numbers) from the system. Downloading of record-level data or record level linkage is not permitted under this agreement.  \n\n6) Where any record level data may have been downloaded previously from NHS Digital Portal, such data must be securely destroyed and certificate of data destruction provided to NHS Digital within 2 months of this agreement.  \n\n7) Where downloaded aggregated data contains small numbers, such data must be securely destroyed at the end of the data sharing agreement, and a certificate of data destruction supplied to NHS Digital.\n\n8) Where downloaded aggregated data is suppressed in line with the HES analysis guide, such data may be retained beyond the period of this agreement.\n\n9) All outputs shared by the licensee must have small numbers suppressed in line with the HES analysis guide.",
+  "8e2fd97dd9dd": "Prescribing is the most common patient-level intervention in the NHS, and covers all sectors of care: primary, hospital, public and community health. It is the second highest area of spending in the NHS, after staffing costs (NHS Digital). The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Foundation Trust (NUTH) extracts and analyses prescribing data to identify trends and variation, and to support medicines optimization. These are presented in reports at regional and CCG level in relation to particular conditions, such as diabetes. Scatter charts  incorporating the HES data are included within these reports, and are used to present the outcomes that may be attributed in some part to prescribing patterns within an area. In particular, the reports are useful for CCGs to benchmark against others, identifying where they, for example, have an unusual or high prescribing pattern for a particular condition, which could have a higher than average cost. They can then use this information to investigate further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.\n\nReducing unwarranted variation and increasing value through medicines optimisation is a crucial element of NHS RightCare’s innovation work (further information can be found on the NHS RightCare website). RDTC prescribing reports were developed in response to requests from CCGs (and this work is funded by the CCGs) so that variation in prescribing between CCGs could be illustrated, so that they can benchmark their performance against their peers regionally and nationally. Identifying variation at this level prompts CCGs to investigate the causes of variation locally. They can then identify better performing CCGs and make contact with them to share best practice, which can be implemented locally with an aim to improve prescribing and outcomes in their area. \n\nThe RDTC produces a series of reports and publications for their stakeholders across the North of England, utilizing EPACT data, Quality Outcomes Framework (QOF) data and for a small number of their charts Hospital Episodes Statistics (HES) data. The RDTC requires HES data for use in the therapeutic prescribing reports, in the attached example the scatter chart illustrates that the CCGs sitting in the bottom left quadrat are demonstrating lower prescribing costs in diabetes realising lower hospital admissions whereas the CCGs sitting in the top right quadrat are demonstrating higher admissions with higher prescribing costs. It would be of benefit for the latter CCGs to communicate with those better performing CCGs to understand steps that can be taken to improve their prescribing and outcome position.\n\nThe RDTC is hosted by the Newcastle Upon Tyne Foundation Trust (the data controller), however data processing is undertaken by the prescribing reports team within the RDTC. The reports are produced only for RDTC stakeholders.\n\nHES data is currently only supplied to these users within the form of scatter charts presented at either an area team level or CCG level. This work was instigated in response to stakeholder requests that it would be of value to include information highlighting whether prescribing patterns could influence episodes of hospital admissions. This data is only presented at CCG level, and is only extracted for processing at CCG level.\n\nThe aim of this work is to highlight variation in prescribing between CCGs, more specifically the use of HES data within these reports aims to highlight possible variation in hospitals admissions due to prescribing practice. It maybe that the data suggests that higher prescribing costs within a therapeutic area by CCG A do not lead to reduced hospital admissions compared to CCG B who is prescribing at a lower cost. National data is specifically required in order to enable benchmarking of CCGs.\n\nRDTC were previously granted access to HES data in October 2013 and have been incorporating the data into their reports since October 2014 via the data depot system and the NHS Digital Portal system. \n\nThe reports will be updated quarterly with access required to the Hospital Episode Statistics data covering various therapeutic areas.\n\nThe applicant requires this data from NHS Digital, as it is the only avenue available to them.",
+  "ac943e2863a2": "Prescribing is the most common patient-level intervention in the NHS, and covers all sectors of care: primary, hospital, public and community health. It is the second highest area of spending in the NHS, after staffing costs (NHS Digital). The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Foundation Trust (NUTH) extracts and analyses prescribing data to identify trends and variation, and to support medicines optimization. These are presented in reports at regional and CCG level in relation to particular conditions, such as diabetes. Scatter charts  incorporating the HES data are included within these reports, and are used to present the outcomes that may be attributed in some part to prescribing patterns within an area. In particular, the reports are useful for CCGs to benchmark against others, identifying where they, for example, have an unusual or high prescribing pattern for a particular condition, which could have a higher than average cost. They can then use this information to investigate further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.\n\nReducing unwarranted variation and increasing value through medicines optimisation is a crucial element of NHS RightCare’s innovation work (further information can be found on the NHS RightCare website). RDTC prescribing reports were developed in response to requests from CCGs (and this work is funded by the CCGs) so that variation in prescribing between CCGs could be illustrated, so that they can benchmark their performance against their peers regionally and nationally. Identifying variation at this level prompts CCGs to investigate the causes of variation locally. They can then identify better performing CCGs and make contact with them to share best practice, which can be implemented locally with an aim to improve prescribing and outcomes in their area. \n\nThe RDTC produces a series of reports and publications for their stakeholders across the North of England, utilizing EPACT data, Quality Outcomes Framework (QOF) data and for a small number of their charts Hospital Episodes Statistics (HES) data. The RDTC requires HES data for use in the therapeutic prescribing reports, in the attached example the scatter chart illustrates that the CCGs sitting in the bottom left quadrat  are demonstrating lower prescribing costs in diabetes realising lower hospital admissions whereas the CCGs sitting in the top right quadrat are demonstrating higher admissions with higher prescribing costs. It would be of benefit for the latter CCGs to communicate with those better performing CCGs to understand steps that can be taken to improve their prescribing and outcome position.\n\nThe RDTC is hosted by the Newcastle Upon Tyne Foundation Trust (the data controller), however data processing is undertaken by the prescribing reports team within the RDTC. The reports are produced only for RDTC stakeholders as listed:\n\nNewcastle Gateshead CCG\nNorth Cumbria CCG\nNorth Tyneside CCG\nNorthumberland CCG\nSouth Tyneside CCG\nSunderland CCG\nDarlington CCG\nDurham Dales, Easington and Sedgefield CCG\nHartlepool and Stockton CCG\nNorth Durham CCG\nSouth Tees CCG\nBolton CCG\nBury CCG\nHeywood, Middleton and Rochdale CCG\nManchester CCG\nOldham CCG\nSalford CCG\nStockport CCG\nTameside and Glossop CCG\nTrafford CCG\nWigan Borough CCG\nEast Riding of Yorkshire CCG\nHambleton, Richmondshire and Whitby CCG\nHarrogate and Rural District CCG\nHull CCG\nNorth East Lincolnshire CCG\nNorth Lincolnshire CCG\nScarborough and Ryedale CCG\nVale of York CCG\nRotherham CCG\nAiredale, Wharfedale and Craven CCG\nLeeds CCG\nNorth of England Commissioning Support Service\nGreater Manchester Shared Service\nYorkshire Shared Service\n\nHES data is currently only supplied to these users within the form of scatter charts presented at either an area team level or CCG level. This work was instigated in response to stakeholder requests that it would be of value to include information highlighting whether prescribing patterns could influence episodes of hospital admissions. This data is only presented at CCG  level, and is only extracted for processing at CCG level.\n\nThe aim of this work is to highlight variation in prescribing between CCGs, more specifically the use of HES data within these reports aims to highlight possible variation in hospitals admissions due to prescribing practice. It maybe that the data suggests that higher prescribing costs within a therapeutic area by CCG A do not lead to reduced hospital admissions compared to CCG B who is prescribing at a lower cost. National data is specifically required in order to enable benchmarking of CCGs.\n\nRDTC were previously granted access to HES data in October 2013 and have been incorporating the data into their reports since October 2014 via the data depot system and the NHS Digital Portal system. They have had no access to HES data since July 2016 in any form (i.e. NHS Digital Portal or an extract), with access re-established in November 2017.\n\nThe reports will be updated quarterly with access required to Admitted Patient Care data covering various therapeutic areas.\n\nThe applicant requires this data from NHS Digital, as it is the only avenue available to them.",
+  "aef306f3bb9b": "The following outputs will be produced: Therapeutic prescribing reports will be provided to stakeholder CCGs on a quarterly basis via the secure area of the RDTC website which stakeholders can access via password protection. The pdf summary report document is also emailed to stakeholders to alert them to the fact that a new therapeutic report is available from the website. \n\nThe RDTC twitter account also alerts stakeholders that a new report has been added to the website via a statement such as “the latest RDTC cardiovascular report is now available to stakeholders on the RDTC website”. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPublished outputs will not identify individual general practices.\n\nCCG medicines optimisation teams use the information within the report to benchmark their prescribing against their neighbouring CCGs and their comparator CCGs. The hospital admissions data enable CCGs to identify whether their prescribing practice is leading to improved outcomes for patients via a reduction in hospital admission for that condition. CCG medicines optimisation teams can also look to those CCGs where there appear to be \"better\" outcomes and seek to replicate this success.\n\nFor example identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD, may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nCCGs across GM has implemented a new treatment pathway across its health economy to address the following issues:\n\n• Multitude of different inhalers and inhaler types\n•  Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs.\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified, then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "b243afb527fa": "The following outputs will be produced: Prescribing reports will be provided to stakeholder CCGs via the secure area of the RDTC website which stakeholders can access via password protection. The pdf summary report document is also emailed to stakeholders to alert them to the fact that a new report is available from the website. \n\nThe RDTC twitter account also alerts stakeholders that a new report has been added to the website via a statement such as “the latest RDTC cardiovascular report is now available to stakeholders on the RDTC website”. \n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nPublished outputs will not identify individual general practices.\n\nCCG medicines optimisation teams use the information within the report to benchmark their prescribing against their neighbouring CCGs, comparator CCGs and regionally and nationally. The hospital admissions data enable CCGs to identify whether their prescribing practice is leading to improved outcomes for patients via a reduction in hospital admission for that condition. CCG medicines optimisation teams can also look to those CCGs where there appear to be \"better\" outcomes and seek to replicate this success.\n\nThe target dates for outputs are on a rolling calendar and vary from monthly to annual, including one-off reports as need requires. Reports are realised as stated in the text above.",
+  "b947645cf947": "Data is extracted from HDIS aggregated at CCG level. Record-level data cannot be downloaded and, in line with the HES Analysis Guide suppression rules, small numbers will be suppressed and/or aggregated, and will not include any description of a cell size below 6. Data is saved within a restricted drive as per the Protocol - RDTC Management of Hospital Episode Statistics (HES) data. The original downloads are password protected.  All downloads are recorded in the extraction log including:\n\n• date and purpose of extraction. \n• the name and location of the extraction.\n• the report the extraction will be included in.\n• a review date for deletion.\n\nData is imported into a specific database which only holds hospital data aggregates the data to LAT, Region and North of England level. The data then flows via linked tables into databases for each therapeutic area and after processing for weighting with the data’s denominator. The data is then linked to a further database which holds all scatter plot data. Data is copied from this database into a spreadsheet for all scatterplot data and finally copied into the therapeutic report spreadsheet.\n\nThe reports are made available to stakeholders via the centres website which is password protected. A PDF of the reports dashboard summary is emailed to all stakeholders.\n\nData is only handled as per the protocol and data flow maps.\n\nData will only be accessed by individuals within the prescribing reports team of the prescribing support unit at the RDTC who have authorisation from NHS Digital to access the data for the purpose(s) described, all of whom are substantive employees of the RDTC. Only one team member currently has the authority and thus the log in details to access HDIS system, and will be the only user. \n\nHES data will be plotted against EPACT prescribing data and displayed as scatter charts. It will only be presented at CCG and Area Team level.\n\nThe data will not be linked with any record level data.\n\nThere will be no requirement nor attempt to reidentify individuals from the data.\n\nThe data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess is being requested to admitted patient care data as this will provide the Trust with the data required to produce the scatter charts detailed above. They only require data for the current financial year, national data is required in order that The Trust will filter this to only include the exact CCGs they require as not all CCGs nationally fit the top 10 most similar CCGs, for example Central London (Westminster) CCG does not feature in the top 10 similar CCGs of any of the applicant's stakeholders so the data could be filtered out.\n\nData will be filtered by the applicant for specific conditions using ICD-10 codes within the diagnosis fields. For example diabetes admissions counts will be identified using the E10 to E14 diagnosis codes. \n\nProcessing of HES Accident and Emergency, Outpatient and Critical Care data is not permitted under this agreement.  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\nthis agreement. \n\nThe following conditions apply to HDIS access:\n\n1) Access to HDIS will be restricted to approved users agreed with the NHS Digital in a controlled manner.   Only users who have undergone Information Governance training as required by IG Toolkit v14 may be permitted to access HDIS.\n\n2) Initially, 1 user licences are approved and this will be managed under change control. The charges outlined in the agreement may therefore vary over the agreement period. \n\n3) An annual review of the system use will be completed as part of the audit process. \n\n4) The NHS Digital will monitor use of the HDIS system as part of ongoing access and any excessive use will be reviewed and access could be withdrawn with data destruction notices issued if that occurs. \n\n5) Users are only permitted to download tabulated data (which may contain small numbers) from the system. Downloading of record-level data or record level linkage is not permitted under this agreement.  \n\n6) Where any record level data may have been downloaded previously from HDIS, such data must be securely destroyed and certificate of data destruction provided to NHS Digital within 2 months of this agreement.  \n\n7) Where downloaded aggregated data contains small numbers, such data must be securely destroyed at the end of the data sharing agreement, and a certificate of data destruction supplied to NHS Digital.\n\n8) Where downloaded aggregated data is suppressed in line with the HES analysis guide, such data may be retained beyond the period of this agreement.\n\n9) All outputs shared by the licensee must have small numbers suppressed in line with the HES analysis guide.",
+  "ba1c4d11b4a5": "The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Hospitals Foundation Trust require continued access to the NHS Digital Portal (Data Access Environment) to access pseudonymised, non-sensitive HES data to aid with report writing and project work as described below.\n\nPrescribing is the most common patient-level intervention in the NHS, and covers all sectors of care: primary, hospital, public and community health. It is the second highest area of spending in the NHS, after staffing costs (NHS Digital). The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Hospitals Foundation Trust (the trust) extracts and analyses prescribing data to identify trends and variation, and to support medicines optimisation. These are presented in reports at regional (Sustainable Transformation Partnerships [STP]/ Integrated Care Systems [ICS]) and Clinical Commissioning Group (CCG) level in relation to particular conditions, such as diabetes. \n\nScatter charts incorporating the HES data are included within these reports, and are used to present the outcomes that may be attributed in some part to prescribing patterns within an area. In particular, the reports are useful for CCGs to benchmark against others, identifying where they, for example, have an unusual or high prescribing pattern for a particular condition, which could have a higher than average cost. They can then use this information to investigate further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.\n\nReducing unwarranted variation and increasing value through medicines optimisation is a crucial element of NHS RightCare’s innovation work (further information can be found on the NHS RightCare website). RDTC prescribing reports were developed in response to requests from CCGs (and this work is funded by the CCGs) so that variation in prescribing between CCGs could be illustrated, so CCGs can benchmark their performance against other CCGs both regionally and nationally. Identifying variation at this level prompts CCGs to investigate the causes of variation locally. They can then identify better performing CCGs and make contact with them to share best practice, which can be implemented locally with an aim to improve prescribing and outcomes in the CCGs area. \n\nThe RDTC produces a series of reports and publications for RDTC stakeholders across the North of England, primarily utilising EPACT2 data, Quality Outcomes Framework (QOF) and Hospital Episodes Statistics (HES) data (from NHS Digital), but also incorporating relevant data sets including public health, ONS and national audit data.\n\nThe RDTC have found some CCGs demonstrate lower prescribing costs in diabetes realising lower hospital admissions whereas other CCGs are demonstrating higher admissions with higher prescribing costs. RDTC believe it would be of benefit for CCGs demonstrating higher admissions with higher prescribing costs to communicate with those better performing CCGs to understand steps that can be taken to improve the CCGs prescribing and outcome position. Prescribing reports created by the RDTC will allow better communication between the CCGs. \n\nThe RDTC is hosted by the Trust (the data controller), however data processing is undertaken by the prescribing reports team within the RDTC. The reports are produced only for RDTC stakeholders.\n\nThere are no other funders or commissioners involved in this work that are not mentioned in this agreement.\n\nHES data is supplied to stakeholders within the form of charts presented as a minimum at CCG level. This work was instigated in response to stakeholder requests that it would be of value to include information highlighting whether prescribing patterns could influence episodes of hospital admissions. This data is presented at a minimum of CCG level, and is only extracted for processing at CCG level.\n\nThe aim of this work is to highlight variation in prescribing between CCGs. More specifically the use of HES data within these reports aims to highlight possible variation in hospitals admissions due to prescribing practice. It is possible that the data suggests that higher prescribing costs within a therapeutic area by CCG A do not lead to reduced hospital admissions compared to CCG B who is prescribing at a lower cost. National data is specifically required in order to enable benchmarking of CCGs.\n\nRDTC were previously granted access to HES data in October 2013 and have been incorporating the data into their reports since October 2014 via the data depot system and the NHS Digital Portal system. \n\nThe reports will be updated as necessary with access required to the Hospital Episode Statistics data covering various therapeutic areas.\n\nThe RDTC requires HES data from NHS Digital, as it is the only avenue available.\n\nData minimisation\nThe datasets requested are required to cover the diversity of therapeutic areas and the breadth of work across an integrated care system to meet the specific prescribing analysis needs. Up to 5 years of data may be required to understand and demonstrate trends in prescribing behavior. The geography used is directly related to the CCG stakeholders. However, in order to benchmark prescribing, access to the 10 most similar CCGs nationally (for each CCG) and a national benchmark, is required. Different therapeutic areas and prescribing analysis may necessitate access to different age and clinical factors. Similarly, all patient episodes are required to enable quantification of the scale of an outcome related to a prescribing behavior.\n\nThe RDTC rely on the following Legal basis under GDPR for processing HES data:\n\nThe data requested is necessary for the performance of a task carried out in the public interest; monitoring outcomes and patterns of prescribing services in local areas (covered by Article 6 (1)(e) of GDPR)). The Trust is a public body and can rely on this legal basis. Processing is necessary for the purposes of preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards referred to in paragraph 3, covered by Article 9 (2)(h) of the GDPR, as the analysis of prescribing services looks to see if differences in patterns have an impact on hospital admissions.\n\nThis data is only extracted as aggregated data at CCG level. The RDTC does not extract record level data.",
+  "bd49cc93d2ad": "By highlighting to medicines optimisation teams any potential relationship between prescribing patterns and hospital admissions organisations can work to identify ways to optimize prescribing, enabling the most cost effective use of medicines across the health economy.  \n\nIdentifying better outcomes to the patient population by a change in prescribing pattern  e.g. identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD , may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nOne of the applicant's stakeholder regions has implemented a new treatment pathway across its health economy to address the following issues:\n\n•\tMultitude of different inhalers and inhaler types\n•\t Probable overprescribing of inhaled corticosteroids\n•\tVariation between CCGs in admission rates and spend on respiratory drugs\n\nThe outputs being measured are: \n\n•\tAny change in corticosteroid prescribing\n•\tAny change in exacerbations of COPD\n•\tAny change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "c6d616d421d9": "Data is extracted from HDIS aggregated at CCG level. Record-level data cannot be downloaded and, in line with the HES Analysis Guide suppression rules, small numbers will be suppressed and/or aggregated, and will not include any description of a cell size below 6. Data is saved within a restricted drive as per the Protocol - RDTC Management of Hospital Episode Statistics (HES) data. The original downloads are password protected.  All downloads are recorded in the extraction log including:\n\n•\tdate and purpose of extraction. \n•\tthe name and location of the extraction.\n•\tthe report the extraction will be included in.\n•\ta review date for deletion.\n\nData is imported into a specific database which only holds hospital data aggregates the data to LAT, Region and North of England level. The data then flows via linked tables into databases for each therapeutic area and after processing for weighting with the data’s denominator. The data is then linked to a further database which holds all scatter plot data. Data is copied from this database into a spreadsheet for all scatterplot data and finally copied into the therapeutic report spreadsheet.\n\nThe reports are made available to stakeholders via the centres website which is password protected. A PDF of the reports dashboard summary is emailed to all stakeholders.\n\nData is only handled as per the protocol and data flow maps.\n\nData will only be accessed by individuals within the prescribing reports team of the prescribing support unit at the RDTC who have authorisation from NHS Digital to access the data for the purpose(s) described, all of whom are substantive employees of the RDTC. Only one team member currently has the authority and thus the log in details to access HDIS system, and will be the only user. \n\nHES data will be plotted against EPACT prescribing data and displayed as scatter charts. It will only be presented at CCG and Area Team level.\n\nThe data will not be linked with any record level data.\n\nThere will be no requirement nor attempt to reidentify individuals from the data.\n\nThe data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess is being requested to admitted patient care data as this will provide the Trust with the data required to produce the scatter charts detailed above. They only require data for the current financial year, national data is required in order that The Trust will filter this to only include the exact CCGs they require as not all CCGs nationally fit the top 10 most similar CCGs, for example Central London (Westminster) CCG does not feature in the top 10 similar CCGs of any of the applicant's stakeholders so the data could be filtered out.\n\nData will be filtered by the applicant for specific conditions using ICD-10 codes within the diagnosis fields. For example diabetes admissions counts will be identified using the E10 to E14 diagnosis codes. \n\nProcessing of HES Accident and Emergency, Outpatient and Critical Care data is not permitted under this agreement.  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\nthis agreement. \n\nThe following conditions apply to HDIS access:\n\n1) Access to HDIS will be restricted to approved users agreed with the NHS Digital in a controlled manner.   Only users who have undergone Information Governance training as required by IG Toolkit v14 may be permitted to access HDIS.\n\n2) Initially, 1 user licences are approved and this will be managed under change control. The charges outlined in the agreement may therefore vary over the agreement period. \n\n3) An annual review of the system use will be completed as part of the audit process. \n\n4) The NHS Digital will monitor use of the HDIS system as part of ongoing access and any excessive use will be reviewed and access could be withdrawn with data destruction notices issued if that occurs. \n\n5) Users are only permitted to download tabulated data (which may contain small numbers) from the system. Downloading of record-level data or record level linkage is not permitted under this agreement.  \n\n6) Where any record level data may have been downloaded previously from HDIS, such data must be securely destroyed and certificate of data destruction provided to NHS Digital within 2 months of this agreement.  \n\n7) Where downloaded aggregated data contains small numbers, such data must be securely destroyed at the end of the data sharing agreement, and a certificate of data destruction supplied to NHS Digital.\n\n8) Where downloaded aggregated data is suppressed in line with the HES analysis guide, such data may be retained beyond the period of this agreement.\n\n9) All outputs shared by the licensee must have small numbers suppressed in line with the HES analysis guide.",
+  "c97ec7dc4e45": "By highlighting to medicines optimisation teams any potential relationship between prescribing patterns and hospital admissions organisations can work to identify ways to optimize prescribing, enabling the most cost effective use of medicines across the health economy.  \n\nIdentifying better outcomes to the patient population by a change in prescribing pattern  e.g. identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD , may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nOne of the applicant's stakeholder regions has implemented a new treatment pathway across its health economy to address the following issues:\n\n• Multitude of different inhalers and inhaler types\n•  Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.",
+  "d0c58398f86d": "The following is expected to be achieved from the use of the HES data:\n\nBy highlighting to medicines optimisation teams any potential relationship between prescribing patterns and hospital admissions organisations can work to identify ways to optimise prescribing, enabling the most cost effective use of medicines across the health economy.  \n\nIdentifying better outcomes to the patient population by a change in prescribing pattern. For example. identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD , may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nAn example of how a respiratory therapeutic report is used to achieve the purpose of data processing is as follows: One of the applicant's stakeholder regions has implemented a new treatment pathway across its health economy to address the following issues\n\n• Multitude of different inhalers and inhaler types\n•  Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.\n\nCCG's can use this information in the reports to investigate discrepancies further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.",
+  "de09a8fa664b": "The NHS Digital Portal is a secure method giving access to datasets and associated analytical tools. It is accessed via a secure authentication method to named users.  Users are only able to access the datasets detailed within this agreement.  Users log onto the portal and are presented with analysis tools which allow them to access the relevant data sets and reference data tables so that they can return appropriate descriptions to the coded data.  The access and use of the system is fully auditable and all users must comply with the use of the data as specified in this agreement.\n\nData is extracted from NHS Digital Portal aggregated at CCG level. Record-level data cannot be downloaded and, in line with the HES Analysis Guide suppression rules, small numbers will be suppressed at the point of extraction from NHS Digital Portal and will not include any description of a cell size below 6. Data is saved within a restricted drive as per the Protocol - RDTC Management of Hospital Episode Statistics (HES) data. The original downloads are password protected.  All downloads are recorded in the extraction log including:\n\n• date and purpose of extraction. \n• the name and location of the extraction.\n• the report the extraction will be included in.\n• a review date for deletion.\n\nData is imported into a specific database which only holds hospital data aggregates the data to LAT, Region and North of England level. The data then flows via linked tables into databases for each therapeutic area and after processing for weighting with the data’s denominator. The data is then linked to a further database which holds all scatter plot data. Data is copied from this database into a spreadsheet for all scatterplot data and finally copied into the therapeutic report spreadsheet.\n\nThe reports are made available to stakeholders via the centres website which is password protected. A PDF of the reports dashboard summary is emailed to all stakeholders.\n\nData is only handled as per the protocol and data flow maps.\n\nData will only be accessed by individuals within the prescribing reports team of the prescribing support unit at the RDTC who have authorisation from NHS Digital to access the data for the purpose(s) described, all of whom are substantive employees of the RDTC. Only one team member currently has the authority and thus the log in details to access NHS Digital Portal system, and will be the only user. \n\nHES data will be plotted against EPACT prescribing data and quality and outcomes framework (QOF) data. The plotted data is displayed as scatter charts. It will only be presented at CCG and Area Team level.\n\nThe data will not be linked with any record level data.\n\nThere will be no requirement nor attempt to reidentify individuals from the data.\n\nThe data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess is being requested to HES data, as this will provide the Trust with the data required to produce the scatter charts detailed above. They only require data for the current financial year, national data is required in order that The Trust will filter this to only include the exact CCGs they require as not all CCGs nationally fit the top 10 most similar CCGs, for example Central London (Westminster) CCG does not feature in the top 10 similar CCGs of any of the applicant's stakeholders so the data could be filtered out.\n\nData will be filtered by the applicant for specific conditions using ICD-10 codes within the diagnosis fields. For example diabetes admissions counts will be identified using the E10 to E14 diagnosis codes. Procedure codes will also be used to filter data where appropriate.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe following conditions apply to NHS Digital Portal access:\n\n1) Access to NHS Digital Portal will be restricted to approved users agreed with the NHS Digital in a controlled manner.   Only users who have undergone Information Governance training as required by IG Toolkit v14.1 may be permitted to access NHS Digital Portal.\n\n2) Initially, 1 user licences are approved and this will be managed under change control. The charges outlined in the agreement may therefore vary over the agreement period. \n\n3) An annual review of the system use will be completed as part of the audit process. \n\n4) The NHS Digital will monitor use of the NHS Digital Portal system as part of ongoing access and any excessive use will be reviewed and access could be withdrawn with data destruction notices issued if that occurs. \n\n5) Users are only permitted to download tabulated data (which may contain small numbers) from the system. Downloading of record-level data or record level linkage is not permitted under this agreement.  \n\n6) Where any record level data may have been downloaded previously from NHS Digital Portal, such data must be securely destroyed and certificate of data destruction provided to NHS Digital within 2 months of this agreement.  \n\n7) Where downloaded aggregated data contains small numbers, such data must be securely destroyed at the end of the data sharing agreement, and a certificate of data destruction supplied to NHS Digital.\n\n8) Where downloaded aggregated data is suppressed in line with the HES analysis guide, such data may be retained beyond the period of this agreement.\n\n9) All outputs shared by the licensee must have small numbers suppressed in line with the HES analysis guide.",
+  "f2d44457fc69": "By presenting the HES data provided within RDTC therapeutic reports, stakeholders have been able to identify and prioritise key areas for development. For example, in Greater Manchester the illustration that Cardio Vascular outcomes in diabetes population were out with that of the rest of the region has driven the accelerated development of a pathway to tackle this issue, resulting in changes to the agents listed within the formulary to provide those agents with known cardiovascular benefit to be placed over previously used therapies. Without this data this population may not have been highlighted as needing more appropriate therapy, the provision of this data has directed the necessary resource to support this work ahead of other topics.",
+  "fab4536d638e": "AMENDMENT REQUEST\n\nThe processing activities and conditions as outlined will also apply to the dissemination of the GDPPR data.\n\n-*-*-*-*-*-\nPreviously approved Version 3 of the DSA:\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nThe NHS Digital Portal is a secure method giving access to datasets and associated analytical tools. It is accessed via a secure authentication method to named users.  Users are only able to access the datasets detailed within this agreement.  Users log onto the portal and are presented with analysis tools which allow them to access the relevant data sets and reference data tables so that they can return appropriate descriptions to the coded data.  The access and use of the system is fully auditable and all users must comply with the use of the data as specified in this agreement.\n\nData is only handled as per the agreed processes set out in the protocol and data flow map provided to NHS Digital. Details of the data flow map are included below. Any changes to protocol deemed significant by the Trust Information Governance team that changes the processing activities or purposes of this agreement will be communicated to NHS Digital and subsequent amendments will be made to the agreement.\n\nData is extracted from NHS Digital Portal aggregated at CCG level. The extraction and processing of data is carried out by a substantive employee appropriately trained in data protection as required by the Trust. The data is processed by the RDTC at within a secure environment and stored at the approved trust premises. (Newcastle-upon-Tyne).\n\nRecord-level data cannot be downloaded and, in line with the HES Analysis Guide suppression rules, small numbers will be suppressed at the point of extraction from NHS Digital Portal and will not include any description of a cell size between 1 and 7. If national total is greater than or equal to 8, then all other counts will be rounded to the nearest 5. Data is saved within a restricted access folder within a restricted drive as per the Protocol - RDTC Management of Hospital Episode Statistics (HES) data. The original downloads are password protected.  All downloads are recorded in the extraction log including:\n\n• date and purpose of extraction. \n• the name and location of the extraction.\n• the report the extraction will be included in.\n• a review date for deletion.\n\nData is imported into a specific database which only holds hospital data and aggregates the data to LAT, Region and North of England level. The data then flows via linked tables into databases for each therapeutic area and after processing is then weighted with the data’s denominator. The data is then linked to a further database which holds all chart data. Data is copied from this database into a spreadsheet for all chart data and finally copied into the prescribing report spreadsheet.\n\nThe reports are made available to stakeholders via the centres website which is password protected and a summary PDF via email to stakeholders.\n\nData will only be accessed by individuals within the prescribing reports team of the prescribing support unit at the RDTC who have authorisation from NHS Digital to access the data for the purpose(s) described, all of whom are substantive employees of the RDTC. Only one team member currently has the authority and thus the log in details to access NHS Digital Portal system, and will be the only user. \n\nHES data will be primarily plotted against EPACT2 prescribing data, quality and outcomes framework (QOF) data and other applicable data sets. The plotted data is displayed as charts. It will be presented at CCG level as a minimum but in some instances up to National level depending on the report format.\n\nThe data will not be linked with any record level data.\n\nThere will be no requirement nor attempt to re-identify individuals from the data.\n\nThe data will not be made available to any third parties other than those specified except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nAccess is being requested to HES data, as this will provide the Trust with the data required to produce the scatter charts detailed above. Data is only required for the last 5 years, national data (via the NHS Digital Portal) is required in order that The Trust will filter this to only include the exact CCGs they require as not all CCGs nationally fit the top 10 most similar CCGs, for example Central London (Westminster) CCG does not feature in the top 10 similar CCGs of any of the applicant's stakeholders so the data could be filtered out.\n\nData will be filtered by the applicant for specific conditions using ICD-10 codes within the diagnosis fields. For example diabetes admissions counts will be identified using the E10 to E14 diagnosis codes. Procedure codes will also be used to filter data where appropriate.\n\nThe following conditions apply to NHS Digital Portal access:\n\n1) Access to NHS Digital Portal will be restricted to approved users agreed with the NHS Digital in a controlled manner.   Only users who have undergone Information Governance training may be permitted to access NHS Digital Portal.\n\n2) Initially, 1 user licences are approved and this will be managed under change control. The charges outlined in the agreement may therefore vary over the agreement period. \n\n3) An annual review of the system use will be completed as part of the audit process. \n\n4) NHS Digital will monitor use of the NHS Digital Portal system as part of ongoing access and any excessive use will be reviewed and access could be withdrawn with data destruction notices issued if that occurs. \n\n5) Users are only permitted to download tabulated data (which may contain small numbers) from the system. Downloading of record-level data or record level linkage is not permitted under this agreement.  \n\n6) Where any record level data may have been downloaded previously from NHS Digital Portal, such data must be securely destroyed and certificate of data destruction provided to NHS Digital within 2 months of this agreement.  \n\n7) Where downloaded aggregated data contains small numbers, such data must be securely destroyed at the end of the data sharing agreement, and a certificate of data destruction supplied to NHS Digital.\n\n8) Where downloaded aggregated data is suppressed in line with the HES analysis guide, such data may be retained beyond the period of this agreement.\n\n9) All outputs shared by the licensee must have small numbers suppressed in line with the HES analysis guide.",
+  "faed912a4470": "Prescribing is the most common patient-level intervention in the NHS, and covers all sectors of care: primary, hospital, public and community health. It is the second highest area of spending in the NHS, after staffing costs (NHS Digital). The Regional Drug and Therapeutics Centre at Newcastle (RDTC) hosted by the Newcastle Upon Tyne Foundation Trust (NUTH) extracts and analyses prescribing data to identify trends and variation, and to support medicines optimization. These are presented in reports at regional and CCG level in relation to particular conditions, such as diabetes. Scatter charts  incorporating the HES data are included within these reports, and are used to present the outcomes that may be attributed in some part to prescribing patterns within an area. In particular, the reports are useful for CCGs to benchmark against others, identifying where they, for example, have an unusual or high prescribing pattern for a particular condition, which could have a higher than average cost. They can then use this information to investigate further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective.\n\nReducing unwarranted variation and increasing value through medicines optimisation is a crucial element of NHS RightCare’s innovation work (further information can be found on the NHS RightCare website). RDTC prescribing reports were developed in response to requests from CCGs (and this work is funded by the CCGs) so that variation in prescribing between CCGs could be illustrated, so that they can benchmark their performance against their peers regionally and nationally. Identifying variation at this level prompts CCGs to investigate the causes of variation locally. They can then identify better performing CCGs and make contact with them to share best practice, which can be implemented locally with an aim to improve prescribing and outcomes in their area. \n\nThe RDTC produces a series of reports and publications for their stakeholders across the North of England, utilizing EPACT data, Quality Outcomes Framework (QOF) data and for a small number of their charts Hospital Episodes Statistics (HES) data. The RDTC requires HES data for use in the therapeutic prescribing reports, in the attached example the scatter chart illustrates that the CCGs sitting in the bottom left quadrat  are demonstrating lower prescribing costs in diabetes realising lower hospital admissions whereas the CCGs sitting in the top right quadrat are demonstrating higher admissions with higher prescribing costs. It would be of benefit for the latter CCGs to communicate with those better performing CCGs to understand steps that can be taken to improve their prescribing and outcome position.\n\nThe RDTC is hosted by the Newcastle Upon Tyne Foundation Trust (the data controller), however data processing is undertaken by the prescribing reports team within the RDTC. The reports are produced only for RDTC stakeholders as listed:\n\nNewcastle Gateshead CCG\nNorth Cumbria CCG\nNorth Tyneside CCG\nNorthumberland CCG\nSouth Tyneside CCG\nSunderland CCG\nDarlington CCG\nDurham Dales, Easington and Sedgefield CCG\nHartlepool and Stockton CCG\nNorth Durham CCG\nSouth Tees CCG\nBolton CCG\nBury CCG\nHeywood, Middleton and Rochdale CCG\nManchester CCG\nOldham CCG\nSalford CCG\nStockport CCG\nTameside and Glossop CCG\nTrafford CCG\nWigan Borough CCG\nEast Riding of Yorkshire CCG\nHambleton, Richmondshire and Whitby CCG\nHarrogate and Rural District CCG\nHull CCG\nNorth East Lincolnshire CCG\nNorth Lincolnshire CCG\nScarborough and Ryedale CCG\nVale of York CCG\nRotherham CCG\nAiredale, Wharfedale and Craven CCG\nBradford City CCG\nBradford Districts CCG\nLeeds North CCG\nLeeds South and East CCG\nLeeds West CCG\nNorth of England Commissioning Support Service\nGreater Manchester Shared Service\nYorkshire Shared Service\n\nHES data is currently only supplied to these users within the form of scatter charts presented at either an area team level or CCG level. This work was instigated in response to stakeholder requests that it would be of value to include information highlighting whether prescribing patterns could influence episodes of hospital admissions. This data is only presented at CCG  level, and is only extracted for processing at CCG level.\n\nThe aim of this work is to highlight variation in prescribing between CCGs, more specifically the use of HES data within these reports aims to highlight possible variation in hospitals admissions due to prescribing practice. It maybe that the data suggests that higher prescribing costs within a therapeutic area by CCG A do not lead to reduced hospital  admissions compared to CCG B who is prescribing at a lower cost. National data is specifically required in order to enable benchmarking of CCGs.\n\nRDTC were previously granted access to HES data in October 2013 and have been incorporating the data into their reports since October 2014 via the data depot system and the HDIS system. They have had no access to HES data since July 2016 in any form (i.e. HDIS or an extract), hence the request for a new DSA.\n\nThe reports are updated quarterly, the following data is required for inclusion in the therapeutic reports:\n\nDiabetes report\n•\tDiabetes hospital admissions (ICD-10 codes E10-E14) per diabetes patients within each CCG compared against spend on diabetic drugs per diabetic patients or QOF target DM007. \n•\tSevere hypoglycaemia hospital admissions (ICD-10 codes E160-162) per diabetic patients compared against insulin Determir, Glargine and Degludec as a percentage of all long/inter insulin analogues. \nRespiratory report\n•\tChronic Obstructive Pulmonary Disease (COPD) hospital admissions (ICD-10 codes J40-J44) per COPD patients compared against spend on LAMA inhalers. \n•\tCOPD and asthma hospital admissions (ICD-10 codes J40-J45) per COPD and asthma patients compared against spend on bronchodilators and corticosteroids. \nCardiovascular report\n•\tStroke hospital admissions (ICD-10 codes I60-I69) with a secondary diagnosis for Atrial Fibrillation (ICD-10 codes I48) per stroke patients compared against defined daily doses (DDDs) per stroke patients.\nBone Metabolism report\n•\tHip fracture hospital admissions (ICD-10 codes S720-S722) per bisphosphonate STARPU compared against spend on bisphosphonate drugs per bisphosphonate STARPU.\n\nThe applicant requires this data from NHS Digital, as it is the only avenue available to them.",
+  "fde461190e96": "AMENDMENT REQUEST \n \nThe short-term cost impact of changes in prescribing over the last few months and additionally the impact of changes in prescribing throughout the pandemic and for the foreseeable future, as the Mid to long term effects of post COVID-19 recovery health needs are seen. In accessing the GPES data, it is hoped that analysis of the medication prescribed both at the time of diagnosis and over time following a diagnosis could be used to understand and assist with forecasting CCG spend and cost growth to support the CCG in meeting their statutory functions during the pandemic.\n\nThe provision of accurate prescribing data appropriately contextualised, is needed at a CCG level to improve prescribing in line with guidance, detect trends and feed into strategic work plans.\n\nUsing the GPES information in conjunction with other data sources may enable statisticians to calculate a COVID-19 adjustment to the weightings. This is essential and will support the NHS CCG stakeholders to be able to continue to monitor and change their prescribing behaviour to meet the targets set out in the NHS long term plan. It will also support identification of potential mis-management of prescribing in COVID-19 infection and subsequent management, which is needed to ensure optimum patient care.\n\nThe GPES data will help to fight against the pandemic by predicting increased usage of different medicines groups due to COVID-19 in the long term and by attributing usage to COVID-19 impact in the short-term. This will help to manage the impact of the virus and thus ease pressures in the NHS system.\n\nPart of supporting the CCGs with specific actions to help manage the impact of COVID-19 on prescribing and future strategic planning includes noting where CCGs are prescribing in a manner different to their peers. This helps to identify areas where the quality of prescribing may be improved and similarly potential unsafe practice. One of the particular areas that the researchers are interested in looking at further is the use of antipsychotics during the COVID-19 pandemic. Preliminary data highlighted this as an area of potential concern as it appeared that there was increased prescribing. It is likely that this is a mis-representation of the data due to a significant change in the dementia patient list size. However, without the GPES data, the researchers are unable to confirm this and clarify what is happening in a timescale that is going to assist with patient care and safety.\n\n-*-*-*-*-*-\nPreviously approved Version 3 of the DSA:\n\nThe following is expected to be achieved from the use of the HES data:\n\nBy highlighting to medicines optimisation teams any potential relationship between prescribing patterns and hospital admissions organisations can work to identify ways to optimise prescribing, enabling the most cost effective use of medicines across the health economy.  \n\nIdentifying better outcomes to the patient population by a change in prescribing pattern. For example. identifying that lower prescribing rates of high dose inhaled corticosteroids (ICS) does not result in increased hospital admissions for an exacerbation of COPD , may support prescribers to reduce high dose ICS prescribing which is of health benefit to the patient. High dose ICS are associated with an increased risk of systemic side effects, including adrenal suppression and growth retardation in children (NICE Academic detailing aid, July 2012). \n\nAn example of how a respiratory therapeutic report is used to achieve the purpose of data processing is as follows: One of the applicant's stakeholder regions has implemented a new treatment pathway across its health economy to address the following issues\n\n• Multitude of different inhalers and inhaler types\n•  Probable overprescribing of inhaled corticosteroids\n• Variation between CCGs in admission rates and spend on respiratory drugs\n\nThe outputs being measured are: \n\n• Any change in corticosteroid prescribing\n• Any change in exacerbations of COPD\n• Any change in COPD referral or admission rates.\n\nUsing the RDTC respiratory report the group are able to watch for any change in trends of ICS prescribing and also any change in hospital admissions for COPD exacerbations. If a correlation is identified then the team can investigate further using their local data. The benefit of using CCG reports enables the stakeholder to benchmark their progress against other CCGs, where the health economy is working on one footprint such as in Greater Manchester this enables the medicines management group to consider the whole health economy whilst being able to instigate variation at CCG level within that health economy.\n\nCCG's can use this information in the reports to investigate discrepancies further, consider practice in other CCGs, and make changes accordingly, with a view to being more cost effective."
+ }
+}

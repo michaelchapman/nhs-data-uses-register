@@ -1,0 +1,121 @@
+{
+ "base_reference": "DARS-NIC-42321-K7G1C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-42321-K7G1C-v0.10",
+   "version": "0.10",
+   "organisation": "CARDIFF UNIVERSITY",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "ad40696188b7",
+     "activities": "29304ace8d98",
+     "expected_output": "29c487383626",
+     "expected_benefits": "e938db64a784"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "29304ace8d98": "It is proposed that record level data from each participating nation (England, Wales, Scotland and Northern Ireland) will be released to the Secure Anonymised Information Linkage (SAIL) databank. SAIL have previous experience of hosting NHS Digital data and will be the safe haven for the datasets. \n\nResearchers at Cardiff University have been approved by SAIL to access the data (via data access agreement, completion of Research Data and Confidentiality e­learning course, submission of CV). The Cardiff researchers will travel to SAIL and access the data on site at Swansea via the SAIL Gateway, but no record level data will be removed from the system. The SAIL Gateway is the remote data access system, and is the sole method by which approved data users are able to access any record level SAIL data. Access is restricted to only those individuals listed in the application to NHS Digital  who are substantive employees of either Cardiff University or Swansea University.  NCEPOD and HQIP will not have access to the data.\n\nOnly aggregated and anonymised data will small numbers suppressed, in line with the HES analysis guide and the relevant Mental Health suppression guidelines will be removed from the system.  \n\nSAIL will also hold data from Wales, Scotland and Northern Ireland and comparisons at a national aggregated and anonymised level will be made where possible. No record level data from the other countries, or any other source, will be linked to NHS Digital data.\n\nStudy population: \nThe study population will include HES data linked to ONS, and MHMDS/MHLDDS data, as well as a separate extract of IAPT data, for 0-25 year olds. The MHMDS/MHLDDS and ONS data supplied be only be for those patients who appear in the HES data.\n\nAll those aged 0-25 years within the HES, ONS, or MHMDS/MHLDDS are requested to be used as comparison groups. Data are requested for a 10 year time period - January 1st 2004 to 31st December 2014. The population of interest is children and young people (11-25 years) who have mental disorders (SH, A&D, ED which form the AMH)  and CYP (0-25 years) with chronic neurodisability (CP) who are residents in England. For AMH, only patients 11 and older will be analysed as the number of cases below at start are low, whereas CP is often identified at a much younger age so the full age range can be used for that condition.\n\nThe population of interest will be identified and flagged by analysts in SAIL using algorithms based upon relevant ICD 10 codes (e.g. G80 for CP and X60-84 (SH), F32-39 (A & D) and F50 (ED) for AMH). Furthermore, age filters will be applied (those born after 01/01/1979) to the IAPT data, as NHS Digital cannot apply filters to this data set. The extraneous IAPT data not covering 0-25 year olds will be destroyed. \n\nCardiff staff will analyse both the AMH and the CP data, with Swansea staff analysing the AMH information.\n\nPatient and Public Participation:\nThe service user groups for both themes form part of the study advisory groups and regularly inform project design.  A further component of the NCEPOD lead project includes patient, parent and carer surveys. The findings from these are fed back into the study design. \n\nData Cleaning and preparation:\nAs with all analyses of routinely collected datasets there is potential for misclassification in coding diagnoses, linkage errors and missing data.  Consistency checks will be made by SAIL analysts and missing data between the national datasets described.\n\nData Analysis:\nThis will be undertaken when datasets become available and is likely to take 12-14 months overall. The linked data will then be analysed by a team of researchers at both Cardiff and Swansea Universities who are experienced in data linkage and using large datasets. \n\nSummary of the main analysis of the linked dataset:\nReasons for hospital admission, number of admissions and length of stay in CYP with AMH or CP will be described and compared to those without AMH or CP. Causes of death and patterns of healthcare utilisation prior to death will be examined. Reasons and frequency of admission will be compared, before, during and after the transition from paediatric to adult services. Patterns based on age, gender, demographics and area-based social deprivation will be investigated. \n\nDescriptive statistics, chi-squared tests, rate ratios and regression analysis will be used as appropriate. \nComparison between countries will be made where possible using appropriate statistical methodologies e.g. Poisson regression.",
+  "29c487383626": "This project is the first government funded investigation into the extent to which routinely collected data may be used to inform and improve the health and social care received by CYP in the UK. \n\nThe proposed project outcomes for the CP and AMH work are as follows;\n\nCP – \n\n1)\tA descriptive analysis of the number, nature and reasons for hospital admissions, specifically admissions to Paediatric intensive care units (PICU) for children with CP compared for England, Northern Ireland, Scotland and Wales.\n2)\tA description of primary and secondary care utilization for a representative population of children with CP in England and Wales\n3)\tA description of healthcare utilization for cohorts of children with CP in each Nation to include outpatient, Emergency department attendeances where possible and severity where possible\n4)\tA comparison of health care utilization at transition from children to adult services\n\nAMH\n\n1)\tA description of primary and secondary care utilization for a representative population of children with AMH (SH, A&D, ED) in England and Wales\n2)\tA description of healthcare utilization for cohorts of children with AMH (SH, A&D, ED) in each Nation to include outpatient, Emergency department attendances where possible and severity where possible\n3)\tA comparison of health care utilization at transition from children to adult services\n\nUsing these outcomes it is hoped that the key questions detailed within the objectives will be answered. \n\nThese outcomes will form the final national project report, that  is due in December 2017.  It will inform keystakeholders such as: service users, clinicians, health care commissioners, Departments of Health, Royal Colleges and policy makers, clinical standards and guideline development groups. The full report will be available on the HQIP and NCEPOD websites free of charge. The report will be clear and concise, and made readily available as a PDF for easy circulation.\n\nThe professional groups will be advised on areas which they can improve quality of care for adolescents with mental health disorders and CYP with chronic neurodisability. The recommendations made will be targeted at the most relevant group(s) to implement them. Key patient group stakeholders that will be informed and worked with on launch day include the children and young people’s patient safety expert group, the children and young peoples’ outcomes forum and The Child Health Intelligence Network. \n\nIn addition to the policy and public outputs, there will also be academic outputs.  The purpose of these academic outputs are to report the methods used in order to answer the research question as well as the results of the study. Furthermore, reflection and feedback on the problems and barriers in obtaining and analysing UK wide data will be a valuable aid to future research. Academic outputs will be presented both in writing and at conferences for the purpose of sharing knowledge, to aid other researchers using these methods, these data, and these topic areas.  Publishing in scientific journals will involve rigorous independent scientific peer review. This provides additional reassurance to the funder, the public and other researchers that the methods and results presented are of high quality, credible and scientifically robust.\n\nThe project plans to publish academic papers in peer reviewed journals such as, the Journal of Affective Disorders, BMJ Open, Archives of Disease of Child hood, Child; Care Health and Development. Academic conferences will include RCPCH Annual Conference and the Faculty of Public Health Annual Conference, and invited keynote talks will report on methodological, epidemiology and key findings for public health practitioners and CYP clinicians.\n\nIts recognised that the provision for both groups of children require joined up multidisciplinary care and as such a communication and dissemination plan to deliver the findings to multidisciplinary audiences that include patient representation has been created .\n\nAll stakeholder groups will be asked to put links on their websites, add items into bulletins or newsletters regularly throughout the programme about the study. Alongside this, a project ‘discussion board’ where issues and problems can be posted and discussed has been created amongst the stakeholders. This has the added advantage of maintaining lines of communication across the project team.\n\nSocial media will be used following feedback from the stakeholders, and there are plans to include patient and participant leaflets, podcasts, and the use of social media such as YouTube where patients and carers will be asked to put the reports' findings in their own words.\n\nNCEPOD sends out quarterly updates to medical directors where there are questionnaire or case note requests and this process will be adopted for this programme. A newsletter with study progress updates twice per year will be sent out to these directors.\n\nPublished results at a national level will only contain aggregated data with small numbers suppressed, in line with the HES analysis guide and the relevant Mental Health suppression guidelines.",
+  "ad40696188b7": "The national Child Health Outcome Review continues the work of the Confidential Enquiry into Child Health (CMACE). This new programme is commissioned by the Health Quality Improvement Partnership (HQIP) on behalf of NHS England, NHS Wales, the Northern Ireland Department of Health, Social Services and Public Safety (DHSSPS), the Scottish Government, the states of Guernsey, the States of Jersey and the Isle of Man government. NHS representatives from each of the four nations (England, Wales, Scotland and Northern Island) )sit on the CMACE's Independent Advisory Group. The project is being undertaken as a partnership between the National Confidential Enquiry into Patient Outcome and Death (NCEPOD), Cardiff and Swansea Universities with Swansea's SAIL (The Secure Anonymised Information Linkage) Databank being at the core of project. This work will add to the findings of the CMACE which found that the highest proportions of child deaths were among those with chronic disabilities and mental health problems in adolescence. \n\nThere are two workstreams to this programme and are being run separately - \n\n1) This is run by NCEPOD which consists of a case note review, organisational survey and consultation with children and their parents regarding their care. NCEPOD are performing this and it does not impact the work of the second workstream, and vice versa.\n\n2) This is being run by Swansea University and Cardiff Universities. It will link administrative health care data, which offers a source of data to provide a population based overview of adolescent mental health (AMH) and childhood neurodisability for children and young people (CYP).  The data will be stored and accessed within SAIL, based at Swansea University along with the AMH team. The chronic neurodisability team are based at Cardiff University who will travel to Swansea to access the data.\n\nThe project arose from the findings of the report, “Clinical Outcome Review Programme: Overview of Child Deaths in Four UK Countries” commissioned by the Healthcare Quality Improvement Partnership (HQIP), which found 30-40% of children who died in England and Wales were affected by neurological or sensory conditions and 30-40% of 13-18 year olds were affected by mental health problems, learning disabilities and behavioural conditions.\n\nThe aim of this study is to explore:\n1. Characteristics of hospital and primary care attendances including rates, reasons, length of stay and outcomes for the populations of interest and the general children and young people population\n2. The interface between different care settings for example primary and secondary care and health and social care\n3. Transition between child and adult services\n\nThese aims will be investigated according to condition, age and socio-demographic characteristics.\n\nNHS Digital data is vital to this project in order to report on the rates at which children and young people with AMH and chronic neurodisabilities attend hospital in England, and the reasons why they are admitted. It will also provide information about the nature and outcomes of such attendances in comparison to children and young people without either of the conditions of interest. This data will feed into the wider project objective of exploring healthcare for children and young people with AMH and chronic disabilities across the four nations and will compliment the qualitative research carried out by NCEPOD.\n\nCerebral palsy (CP) has been selected as the index condition for chronic neurodisability and self-harm (SH), anxiety and depression (A & D), and eating disorders (ED) as the index conditions for AMH disorders.\n\nThe priority questions the study aims to answer for CP and AMH using NHS Digital data are as follows;\n\nCP –\nWhat is the annual incidence of hospital  admissions per child with CP by disease severity?\nWhat are the reasons for hospital admission  (disease type /procedure) by disease severity?\nHow many inpatient, outpatient attendances/ED attendances are made annually by children with CP?\nWhat is the pattern of primary care attendances per child by severity and age (subject to data availability from CPRD)?\nHow many children in each age group received MRI at diagnosis?\nHow many children receive regular hip X Ray surveillance?\n\nAMH - \nWhat is the annual incidence of hospital admissions per child with SH, A&D, ED?\nWhat are the reasons for hospital admission?\nHow many inpatient, outpatient, attendances/ED are made annual by CYP with SH, A&D, ED?\nWhat is the pattern of primary care attendances per child (subject to data availability from CPRD)\nWhat is the relationship between primary care attendance and hospital admissions and outpatient attendances?\nWhat is the relationship  between GP or hospital attendance for SH, A&D or ED and overall mortality?",
+  "e938db64a784": "This project is being conducted to identify problems in health care quality and delivery for CYP with AMH and neurodisability against those who are not affected by these conditions. It is a follow up study to the HQIP ‘Overview of Child Deaths in Four UK Countries’ report, which found that two thirds of children who died in England and Wales had chronic conditions, of which 30-40% were affected by neurological or sensory conditions and 30-40% were affected by mental health, learning difficulties or behavioural conditions.\n\nIt’s recognised that until the data has been processed and the outputs created, that there is difficulty in recognising the true benefits. However, exploration of the reasons why these CYP are admitted to hospital, the patterns of healthcare utilisation, as well as the assessment of quality of care indicators (e.g. waiting times) could highlight gaps in care and areas for improvement. The allocation of NHS funding to this timely project indicates its necessity and the findings, if disseminated appropriately (see previous section), could have a considerable impact.\n\nA secondary benefit of this work is that the assessment of the feasibility of such a large, data-linkage study using population-based healthcare data will provide recommendations for improvements in data recording and data accessibility.\n\nFurthermore, this work could be used to facilitate research questions. Since, although only AMH and CP will be addressed, the issues these populations face in terms of healthcare accessibility are similar to other conditions or diseases and the methods used in this study can be replicated and extended.\n\nUltimately however, it is hoped that through wide dissemination of the report - a launch day, press coverage, social media, summary sheets relevant to children and lay audiences, conferences, academic publications etc. - the report will act as a communicative platform for clinicians and policy makers to improve services for patients."
+ }
+}
