@@ -6,7 +6,9 @@ import datetime as dt
 import json
 import shutil
 from collections import Counter
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -349,20 +351,67 @@ def warn(message: str) -> None:
     print(message)
 
 
-def build(
+@dataclass
+class Site:
+    """Everything the pages are rendered from, worked out before any page is written.
+
+    `assemble` reads the hand-kept files (sectors, relations, papers, the earlier
+    registers, sublicensing registers) and joins them onto the extracted register;
+    `build` renders pages from the result. Keeping the two apart means every
+    figure is settled once, before any template shows it.
+    """
+
+    data: dict
+    meta: dict
+    changes: dict
+    changes_history: list[dict]
+    history: dict[str, dict]
+    rules: Rules
+    stats: dict
+    by_slug: dict[str, dict]
+    archived: list[dict]
+    archive: dict
+    org_slugs: set[str]
+    org_names: dict[str, str]
+    sector_config: dict
+    dataset_aliases: dict
+    release_rows: dict[str, dict[str, dict]]
+    latest_month: str
+    dataset_slugs: set[str]
+    dataset_titles: dict[str, str]
+    related: dict[str, list]
+    organisation_aliases: dict
+    organisation_lineage: Any
+    changed_refs: dict[str, dict]
+    output_links: dict | None
+    all_papers: list[dict]
+    papers_by_org: dict[str, int]
+    papers_by_dataset: dict[str, int]
+    earlier_store: dict | None
+    earlier_by_base: dict[str, dict]
+    earlier_only: list[dict]
+    earlier_by_dataset: dict[str, dict]
+    earlier_by_org: dict[str, list[dict]]
+    pages_before_earlier: dict[str, str]
+    earlier_orgs: dict[str, dict]
+    earlier_files: list[dict]
+    onward_config: dict
+    onward_by_agreement: dict
+    onward_by_org: dict
+    onward_slugs: dict[str, str]
+
+
+def assemble(
     data: dict,
     meta: dict,
     changes: dict,
-    out: Path,
     changes_history: list[dict] | None = None,
     history: dict[str, dict] | None = None,
     rules: Rules | None = None,
     onward_config: dict | None = None,
-) -> dict[str, dict]:
-    WARNINGS.clear()
+) -> Site:
+    """Join the hand-kept files onto the extracted register, warning about anything they name that isn't there."""
     rules = rules or Rules.load()
-    env = environment(rules)
-    prepare_output(out)
 
     stats = compute_stats(data, meta["as_of"])
     by_slug = {a["slug"]: a for a in data["agreements"]}
@@ -391,8 +440,6 @@ def build(
     latest_month = releases.last_month(meta["as_of"])
     dataset_slugs = {d["slug"] for d in data["datasets"] + archive["datasets"]}
     dataset_titles = {d["slug"]: d["name"] for d in data["datasets"] + archive["datasets"]}
-    slug_of = env.filters["dataset_slug"]
-    env.filters["dataset_name"] = lambda name: dataset_titles.get(slug_of(name), name)
     # Related organisations, from data/organisation-relations.json.
     related_config = relations.load()
     for slug in relations.unknown(related_config, org_slugs):
@@ -400,9 +447,6 @@ def build(
     related = relations.lines(related_config)
     organisation_aliases = rules.organisation_aliases
     organisation_lineage = rules.lineage
-    # The page a register name is listed on, for tables that carry only the
-    # name as some edition wrote it.
-    env.filters["org_slug"] = lambda name: organisation_slug(name, organisation_aliases, organisation_lineage)
 
     # Attach change status to agreements so detail pages can flag recent activity.
     changed_refs = {
@@ -471,6 +515,101 @@ def build(
     onward_by_org = onward.by_organisation(onward_config)
     onward_slugs = {a["base_reference"].upper(): a["slug"] for a in data["agreements"] + archived}
     stats["onward"] = onward.counts(onward_config)
+    return Site(
+        data=data,
+        meta=meta,
+        changes=changes,
+        changes_history=changes_history or [],
+        history=history or {},
+        rules=rules,
+        stats=stats,
+        by_slug=by_slug,
+        archived=archived,
+        archive=archive,
+        org_slugs=org_slugs,
+        org_names=org_names,
+        sector_config=sector_config,
+        dataset_aliases=dataset_aliases,
+        release_rows=release_rows,
+        latest_month=latest_month,
+        dataset_slugs=dataset_slugs,
+        dataset_titles=dataset_titles,
+        related=related,
+        organisation_aliases=organisation_aliases,
+        organisation_lineage=organisation_lineage,
+        changed_refs=changed_refs,
+        output_links=output_links,
+        all_papers=all_papers,
+        papers_by_org=papers_by_org,
+        papers_by_dataset=papers_by_dataset,
+        earlier_store=earlier_store,
+        earlier_by_base=earlier_by_base,
+        earlier_only=earlier_only,
+        earlier_by_dataset=earlier_by_dataset,
+        earlier_by_org=earlier_by_org,
+        pages_before_earlier=pages_before_earlier,
+        earlier_orgs=earlier_orgs,
+        earlier_files=earlier_files,
+        onward_config=onward_config,
+        onward_by_agreement=onward_by_agreement,
+        onward_by_org=onward_by_org,
+        onward_slugs=onward_slugs,
+    )
+
+
+def build(
+    data: dict,
+    meta: dict,
+    changes: dict,
+    out: Path,
+    changes_history: list[dict] | None = None,
+    history: dict[str, dict] | None = None,
+    rules: Rules | None = None,
+    onward_config: dict | None = None,
+) -> dict[str, dict]:
+    WARNINGS.clear()
+    site = assemble(data, meta, changes, changes_history, history, rules, onward_config)
+    prepare_output(out)
+    rules = site.rules
+    env = environment(rules)
+    # The names the render below has always used, so each reads as before.
+    stats = site.stats
+    by_slug = site.by_slug
+    archived = site.archived
+    archive = site.archive
+    org_slugs = site.org_slugs
+    org_names = site.org_names
+    sector_config = site.sector_config
+    dataset_aliases = site.dataset_aliases
+    release_rows = site.release_rows
+    latest_month = site.latest_month
+    dataset_slugs = site.dataset_slugs
+    dataset_titles = site.dataset_titles
+    related = site.related
+    organisation_aliases = site.organisation_aliases
+    organisation_lineage = site.organisation_lineage
+    changed_refs = site.changed_refs
+    output_links = site.output_links
+    all_papers = site.all_papers
+    papers_by_org = site.papers_by_org
+    papers_by_dataset = site.papers_by_dataset
+    earlier_store = site.earlier_store
+    earlier_by_base = site.earlier_by_base
+    earlier_only = site.earlier_only
+    earlier_by_dataset = site.earlier_by_dataset
+    earlier_by_org = site.earlier_by_org
+    pages_before_earlier = site.pages_before_earlier
+    earlier_orgs = site.earlier_orgs
+    earlier_files = site.earlier_files
+    onward_config = site.onward_config
+    onward_by_agreement = site.onward_by_agreement
+    onward_by_org = site.onward_by_org
+    onward_slugs = site.onward_slugs
+    slug_of = env.filters["dataset_slug"]
+    env.filters["dataset_name"] = lambda name: dataset_titles.get(slug_of(name), name)
+    # The page a register name is listed on, for tables that carry only the
+    # name as some edition wrote it.
+    env.filters["org_slug"] = lambda name: organisation_slug(name, organisation_aliases, organisation_lineage)
     context = {
         "meta": meta,
         "papers_page": bool(output_links),

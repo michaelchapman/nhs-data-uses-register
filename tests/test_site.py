@@ -25,6 +25,16 @@ class BuiltSite(unittest.TestCase):
         self.assertGreater(pages, 5)
         self.assertEqual(dict(broken), {})
 
+    def test_the_site_is_assembled_before_any_page_is_written(self):
+        # `assemble` works out every figure without writing anything, so a
+        # test can check numbers without reading HTML.
+        with dataset_aliases():
+            data = extract(workbook_bytes())
+            site = build.assemble(data, site_meta(), FIRST_EDITION)
+        self.assertEqual(site.stats["agreements"], len(data["agreements"]))
+        self.assertTrue(all("since" in a for a in data["agreements"]))
+        self.assertEqual(set(site.by_slug), {a["slug"] for a in data["agreements"]})
+
     def test_every_figure_agrees_across_pages(self):
         with tempfile.TemporaryDirectory() as directory:
             out = Path(directory)
