@@ -197,6 +197,7 @@ def earlier_views(
                                                           organisation_lineage)
             ordered = list(reversed(view["versions"]))
             view["rows"] = [(version, ordered[n - 1] if n else None) for n, version in enumerate(ordered)]
+            view["only_earlier"] = True
             only.append(view)
             continue
         held = {v["reference"] for v in agreement["versions"] + agreement.get("dropped_versions", [])}
@@ -216,9 +217,49 @@ def earlier_views(
                 newer = None
             rows.append((version, newer))
         view["rows"] = rows
+        view["only_earlier"] = False
         views[agreement["base_reference"]] = view
     only.sort(key=lambda a: (a["last_listed"], a["base_reference"]), reverse=True)
     return views, only
+
+
+def link_earlier_datasets(views: list[dict], spellings: dict[str, str], alias_map: dict) -> dict[str, dict]:
+    """Give each dataset row in the earlier views the slug of its page, and gather them by page.
+
+    Returns `{dataset slug: {"first_start", "first_label", "names", "agreements": [...]}}`, each
+    agreement listed once with the first and last period it received the dataset.
+    """
+    names = {d["dataset"] for view in views for v in view["versions"] for d in v["datasets"]}
+    matched = earlier.match_datasets(names, spellings, alias_map)
+    by_dataset: dict[str, dict] = {}
+    for view in views:
+        rows: dict[str, dict] = {}
+        for version in view["versions"]:
+            for d in version["datasets"]:
+                found = matched.get(d["dataset"])
+                d["slug"] = found["slug"] if found else ""
+                if not found:
+                    continue
+                row = rows.setdefault(found["slug"], {
+                    "base_reference": view["base_reference"], "slug": view["slug"],
+                    "organisation": view["organisation"], "first_start": d["first_start"], "first": d["first"],
+                    "last_start": d["last_start"], "last": d["last"], "names": set(),
+                })
+                row["names"].add(d["dataset"])
+                if d["first_start"] < row["first_start"]:
+                    row["first_start"], row["first"] = d["first_start"], d["first"]
+                if d["last_start"] > row["last_start"]:
+                    row["last_start"], row["last"] = d["last_start"], d["last"]
+        for slug, row in rows.items():
+            entry = by_dataset.setdefault(slug, {"agreements": [], "names": set()})
+            entry["names"] |= row["names"]
+            entry["agreements"].append({**row, "only_earlier": view["only_earlier"]})
+    for entry in by_dataset.values():
+        entry["agreements"].sort(key=lambda r: (r["first_start"], r["base_reference"]))
+        first = entry["agreements"][0]
+        entry["first_label"] = first["first"]
+        entry["names"] = sorted(entry["names"], key=str.casefold)
+    return by_dataset
 
 
 def build(
@@ -302,6 +343,13 @@ def build(
     for agreement in [a for a in earlier_only if a["slug"] in taken]:
         print(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
     earlier_only = [a for a in earlier_only if a["slug"] not in taken]
+    # The earlier registers' own dataset names, linked to the site's dataset pages where the name says which.
+    earlier_by_dataset = link_earlier_datasets(
+        list(earlier_by_base.values()) + earlier_only,
+        {name: slug for name, slug in earlier.dataset_spellings(data["agreements"] + archived, dataset_aliases).items()
+         if slug in dataset_slugs},
+        dataset_aliases,
+    )
     earlier_files = earlier_store["files"] if earlier_store else []
     context = {
         "meta": meta,
@@ -516,6 +564,7 @@ def build(
             org_slugs=org_slugs,
             search_numbers=search_numbers,
             paper_count=papers_by_dataset.get(dataset["slug"], 0),
+            earlier=earlier_by_dataset.get(dataset["slug"]),
         )
 
     shutil.copytree(ASSETS, out / "assets", dirs_exist_ok=True)

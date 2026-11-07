@@ -171,7 +171,12 @@ put the workbooks in `data/raw/earlier/` (gitignored, never committed) and run:
 .venv/bin/python -m pipeline.earlier ingest data/raw/earlier/   # rewrite data/facts/earlier-registers/
 ```
 
-It takes about 15 seconds. Unlike the editions store, this one is rewritten
+It takes about 15 seconds. To see how the registers' dataset names are linked
+to dataset pages, and which aren't, run
+`.venv/bin/python -m pipeline.earlier datasets`. Names are linked on their
+spelling only (see `DATASET_REWRITES` in `pipeline/earlier.py`), never on which
+datasets were released alongside them, so a name added to
+`data/dataset-aliases.json` is picked up at the next build with nothing else to do. Unlike the editions store, this one is rewritten
 whole each time, so a parsing fix is just a re-run. Each text is stored once
 per agreement under a short hash, which keeps the store to about 90 MB on disk.
 
