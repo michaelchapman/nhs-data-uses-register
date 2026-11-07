@@ -139,6 +139,27 @@
 
 {% with intro="Agreements naming " ~ (organisation.name|org) ~ " as applicant or data controller that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
 
+{% if earlier_only %}
+{% from "_earlier.html" import earlier_flag with context %}
+{% set via = earlier_only|selectattr("organisation_succeeded")|list %}
+<h2 id="earlier-registers">Only in the earlier registers ({{ earlier_only|length|commas }})</h2>
+{{ earlier_flag() }}
+<p>Agreements that received data before July 2021 and were never in the Data Uses Register.{% if via %} {{ via|length|commas }} {{ "was" if via|length == 1 else "were" }} held by an organisation that {{ organisation.name|org }} took over, according to NHS ODS, and {{ "is" if via|length == 1 else "are" }} listed under the name it had then.{% endif %} None is counted in this page's figures.</p>
+<div class="table-scroll">
+<table class="data-table compact">
+  <caption class="visually-hidden">Agreements of {{ organisation.name|org }} only in the earlier release registers</caption>
+  <thead><tr><th scope="col">Agreement</th>{% if via %}<th scope="col">Held by</th>{% endif %}<th scope="col">First listed</th><th scope="col">Last listed</th><th scope="col" class="num">Datasets</th></tr></thead>
+  <tbody>
+  {% for a in earlier_only|sort(attribute="first_listed") %}
+    <tr><th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.base_reference }}</a></th>
+      {% if via %}<td>{{ a.organisation|org }}</td>{% endif %}
+      <td>{{ a.first_label or "—" }}</td><td>{{ a.last_label or "—" }}</td><td class="num">{{ a.dataset_names|length }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+
 <h2>Datasets named in its agreements</h2>
 <ul class="pill-list">
   {% for name in organisation.dataset_names|map("dataset_name")|sort %}

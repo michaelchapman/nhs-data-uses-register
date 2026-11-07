@@ -114,9 +114,25 @@
 </table>
 </div>
 {% with intro="Agreements that earlier editions listed and the " ~ (meta.edition|edition) ~ " edition does not. Most left in February 2023, when NHS Digital merged into NHS England and agreements within the merged organisation moved to a separate internal register.", show_organisation=true %}{% include "_archived.html" %}{% endwith %}
-{% if earlier_count %}
-<h2 id="earlier">Only in the earlier registers ({{ earlier_count|commas }})</h2>
-<p>Agreements that received data between {{ earlier_span }}, listed in the release registers NHS Digital published before the Data Uses Register began, but never in the Data Uses Register itself. <a href="{{ meta.base_path }}/agreements/earlier/">List the {{ earlier_count|commas }} agreements</a></p>
+{% if earlier_only %}
+<h2 id="earlier">Only in the earlier registers ({{ earlier_only|length|commas }})</h2>
+<p>Agreements that received data between {{ earlier_span }}, listed in the release registers NHS Digital published before the Data Uses Register began, but never in the Data Uses Register itself. None is counted in this site's figures. <a href="{{ meta.base_path }}/agreements/earlier/">More about these agreements</a></p>
+<p class="result-count" role="status" data-earlier-count hidden></p>
+<div class="table-scroll">
+<table class="data-table" id="earlier-table">
+  <caption class="visually-hidden">Agreements only in the earlier release registers</caption>
+  <thead><tr><th scope="col">Agreement</th><th scope="col">Organisation</th><th scope="col">Last listed</th></tr></thead>
+  <tbody>
+  {% for a in earlier_only %}
+    <tr data-search="{{ a.base_reference }} {{ a.organisation|org }} {{ org_names.get(a.organisation_slug, '')|org if a.organisation_succeeded }}">
+      <th scope="row"><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.base_reference }}</a></th>
+      <td>{% if a.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ a.organisation_slug }}/">{{ a.organisation|org }}</a>{% else %}{{ a.organisation|org or "—" }}{% endif %}</td>
+      <td>{{ a.last_label or "—" }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
 {% endif %}
 {% endblock %}
 {% block scripts %}<script src="{{ meta.base_path }}/assets/filter.js" defer></script>{% endblock %}

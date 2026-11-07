@@ -223,6 +223,33 @@ def earlier_views(
     return views, only
 
 
+def earlier_organisation_page(name: str, slugs: set[str], organisation_aliases: dict, organisation_lineage) -> tuple[str, bool]:
+    """`(page slug, succeeded)` for an organisation the earlier registers name, or ("", False).
+
+    Most earlier-only applicants with no page of their own are CCGs that merged
+    before the Data Uses Register began. ODS records who took each over, so the
+    agreement is listed on the page of the first successor the site has a page
+    for, saying so.
+    """
+    slug = organisation_slug(name, organisation_aliases, organisation_lineage)
+    if slug in slugs:
+        return slug, False
+    node = organisation_lineage.node(name) if organisation_lineage and name else None
+    seen, queue = set(), [node] if node else []
+    while queue:
+        node = queue.pop(0)
+        if node in seen:
+            continue
+        seen.add(node)
+        for later, _ in organisation_lineage.successors(node):
+            identity = organisation_lineage.identity(later)
+            page = slugify(organisation_lineage.page_name(identity))
+            if page in slugs:
+                return page, True
+            queue.append(later)
+    return "", False
+
+
 def link_earlier_datasets(views: list[dict], spellings: dict[str, str], alias_map: dict) -> dict[str, dict]:
     """Give each dataset row in the earlier views the slug of its page, and gather them by page.
 
@@ -343,6 +370,14 @@ def build(
     for agreement in [a for a in earlier_only if a["slug"] in taken]:
         print(f"earlier: {agreement['base_reference']} shares a page address with a listed agreement; left out")
     earlier_only = [a for a in earlier_only if a["slug"] not in taken]
+    earlier_by_org: dict[str, list[dict]] = {}
+    for agreement in earlier_only:
+        page, succeeded = earlier_organisation_page(
+            agreement["organisation"], org_slugs, organisation_aliases, organisation_lineage
+        )
+        agreement["organisation_slug"], agreement["organisation_succeeded"] = page, succeeded
+        if page:
+            earlier_by_org.setdefault(page, []).append(agreement)
     # The earlier registers' own dataset names, linked to the site's dataset pages where the name says which.
     earlier_by_dataset = link_earlier_datasets(
         list(earlier_by_base.values()) + earlier_only,
@@ -395,12 +430,13 @@ def build(
     )
     search_numbers = {a["slug"]: n for n, a in enumerate(data["agreements"])}
     render("agreements.html", "agreements/index.html", agreements=data["agreements"], archived=archived,
-           org_slugs=org_slugs, search_numbers=search_numbers, earlier_count=len(earlier_only))
+           org_slugs=org_slugs, search_numbers=search_numbers, earlier_only=earlier_only, org_names=org_names)
     if earlier_only:
-        render("earlier-agreements.html", "agreements/earlier/index.html", agreements=earlier_only, org_slugs=org_slugs)
+        render("earlier-agreements.html", "agreements/earlier/index.html", agreements=earlier_only, org_slugs=org_slugs,
+               org_names=org_names)
         for agreement in earlier_only:
             render("earlier-agreement.html", f"agreements/{agreement['slug']}/index.html", agreement=agreement,
-                   rows=agreement["rows"], org_slugs=org_slugs)
+                   rows=agreement["rows"], org_slugs=org_slugs, org_names=org_names)
     render("organisations.html", "organisations/index.html", organisations=data["organisations"],
            archived_organisations=archive["organisations"])
     render("datasets.html", "datasets/index.html", datasets=data["datasets"], archived_datasets=archive["datasets"])
@@ -534,6 +570,7 @@ def build(
             dataset_slugs=dataset_slugs,
             search_numbers=search_numbers,
             paper_count=papers_by_org.get(organisation["slug"], 0),
+            earlier_only=earlier_by_org.get(organisation["slug"], []),
         )
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of

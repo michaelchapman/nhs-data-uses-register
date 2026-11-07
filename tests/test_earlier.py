@@ -223,7 +223,8 @@ class SiteTest(unittest.TestCase):
         oldest = known["versions"][0]["reference"]
         cls.store = Store(root, {
             "a.xlsx": ("2017-03-01", "2017-05-31", register(
-                [release(f"{known['base_reference']}-v0.1"), release(oldest), release("NIC-99999-ZZZZZ-v1")],
+                [release(f"{known['base_reference']}-v0.1"), release(oldest),
+                 release("NIC-99999-ZZZZZ-v1", organisation=known["organisation"].upper())],
                 [purpose(f"{known['base_reference']}-v0.1", "An earlier objective"),
                  purpose("NIC-99999-ZZZZZ-v1", "A finished study")])),
         })
@@ -260,6 +261,16 @@ class SiteTest(unittest.TestCase):
         self.assertIn('id="earlier-registers"', html)
         self.assertIn("dars-nic-99999-zzzzz", html)
 
+    def test_organisation_page(self):
+        html = self.page(f"organisations/{self.known['organisation_slug']}")
+        self.assertIn("Only in the earlier registers (1)", html)
+        self.assertIn("dars-nic-99999-zzzzz", html)
+
+    def test_agreements_list_searchable(self):
+        html = self.page("agreements")
+        self.assertIn('id="earlier-table"', html)
+        self.assertIn('data-search="DARS-NIC-99999-ZZZZZ', html)
+
     def test_about_page(self):
         self.assertIn('id="earlier-registers"', self.page("about"))
 
@@ -275,3 +286,34 @@ class NoStoreTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SuccessorPageTest(unittest.TestCase):
+    """An earlier-only agreement of a merged CCG is listed on its successor's page."""
+
+    class Lineage:
+        def node(self, name):
+            return {"NHS OLD CCG": "ccg:01A"}.get(name)
+
+        def successors(self, node):
+            return {"ccg:01A": [("ccg:02B", "2018-04-01")], "ccg:02B": [("org:QWO", "2022-07-01")]}.get(node, [])
+
+        def identity(self, node):
+            return node
+
+        def page_name(self, identity):
+            return {"ccg:02B": "NHS Middle CCG", "org:QWO": "NHS New ICB"}[identity]
+
+        def page(self, name):
+            return None
+
+    def test_first_successor_with_a_page(self):
+        found = build.earlier_organisation_page("NHS OLD CCG", {"nhs-new-icb"}, {}, self.Lineage())
+        self.assertEqual(found, ("nhs-new-icb", True))
+
+    def test_own_page_first(self):
+        found = build.earlier_organisation_page("NHS OLD CCG", {"nhs-old-ccg", "nhs-new-icb"}, {}, self.Lineage())
+        self.assertEqual(found, ("nhs-old-ccg", False))
+
+    def test_no_page(self):
+        self.assertEqual(build.earlier_organisation_page("CTSU", {"nhs-new-icb"}, {}, self.Lineage()), ("", False))

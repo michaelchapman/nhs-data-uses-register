@@ -66,6 +66,24 @@ def register_names(register_slug: str) -> tuple[Counter, Counter]:
     return names, swaps
 
 
+def earlier_names() -> Counter:
+    """Organisation names in the release registers published before July 2021 (see `pipeline.earlier`).
+
+    Most are CCGs that merged before the Data Uses Register began, which ODS
+    still holds, as inactive records, under exactly these names. With a code,
+    each is followed through ODS to the organisation that took it over.
+    """
+    from . import earlier
+
+    store = earlier.load(excluded=exclusions.bases())
+    names: Counter[str] = Counter()
+    for record in (store or {}).get("agreements", {}).values():
+        for version in record["versions"]:
+            if version.get("organisation"):
+                names[version["organisation"]] += 1
+    return names
+
+
 def propose(names, swaps, kept: list[dict], fetch=ods.fetch, search=ods.search, report=print) -> tuple[list[dict], list[str]]:
     """`(entries, for_review)`: a code for every name the evidence supports."""
     entries = {aliases.name_key(e["name"]): e for e in kept}
@@ -142,6 +160,7 @@ def main() -> None:
     args = parser.parse_args()
 
     names, swaps = register_names(args.register)
+    names.update(earlier_names())
     kept = [e for e in lineage.load_codes() if e["evidence"].startswith("reviewed:")]
     print(f"{len(names)} names in the register; looking each up in ODS")
     entries, for_review = propose(names, swaps, kept)
