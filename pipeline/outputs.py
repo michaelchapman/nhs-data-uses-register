@@ -155,4 +155,15 @@ def papers(outputs: dict | None, agreements: list[dict]) -> list[dict]:
             paper["agreements"].append({"agreement": agreement, "basis": r["basis"]})
     for paper in by_doi.values():
         paper["agreements"].sort(key=lambda link: (link["basis"] != "found", link["agreement"]["base_reference"]))
+    for paper in by_doi.values():
+        paper["organisations"] = sorted({link["agreement"]["organisation_slug"] for link in paper["agreements"]})
     return sorted(by_doi.values(), key=lambda p: (-(p["year"] or 0), p["title"].lower()))
+
+
+def by_organisation(papers: list[dict]) -> dict[str, int]:
+    """How many papers are linked to each applicant organisation's agreements."""
+    counts: dict[str, int] = {}
+    for paper in papers:
+        for slug in paper["organisations"]:
+            counts[slug] = counts.get(slug, 0) + 1
+    return counts

@@ -238,6 +238,8 @@ def build(
     # Papers linked to agreements, from data/outputs.json; see `pipeline.outputs`.
     # With no file there is no papers page, and the menu doesn't offer one.
     output_links = outputs.load()
+    all_papers = outputs.papers(output_links, data["agreements"] + archived)
+    papers_by_org = outputs.by_organisation(all_papers)
     context = {
         "meta": meta,
         "papers_page": bool(output_links),
@@ -345,14 +347,15 @@ def build(
         output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
     )
     if output_links:
-        all_papers = outputs.papers(output_links, data["agreements"] + archived)
         render(
             "papers.html",
             "papers/index.html",
-            found=[p for p in all_papers if p["basis"] == "found"],
-            unreadable=[p for p in all_papers if p["basis"] == "unreadable"],
+            papers=all_papers,
+            organisations=sorted(
+                papers_by_org.items(), key=lambda item: (-item[1], display_name(org_names.get(item[0], item[0])).lower())
+            ),
+            org_names=org_names,
             outputs_meta=output_links,
-            org_slugs=org_slugs,
         )
     render("downloads.html", "downloads/index.html")
     render("not-found.html", "404.html")
@@ -385,6 +388,7 @@ def build(
             org_slugs=org_slugs,
             dataset_slugs=dataset_slugs,
             search_numbers=search_numbers,
+            paper_count=papers_by_org.get(organisation["slug"], 0),
         )
     # A page a merge retired still answers. Before an alias or ODS moved a name
     # onto another organisation's page, it had a page of its own at the slug of

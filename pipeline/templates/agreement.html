@@ -167,6 +167,23 @@
 <li><a href="{{ p.url }}">{{ p.title }}</a>{% if p.year %} <span class="hint">({{ p.year }})</span>{% endif %}
   {%- if p.basis == "found" and p.register_cited %} <span class="hint">· also cited in the register</span>{% endif %}</li>
 {%- endmacro %}
+{# The five newest show; a long list folds the rest, so the datasets and file
+   releases below stay in reach on an agreement with dozens of papers. #}
+{% macro paper_list(rows, name) -%}
+<ul class="paper-list">
+  {% for p in rows[:5] %}{{ paper(p) }}
+  {% endfor %}
+</ul>
+{% if rows|length > 5 %}
+<details class="fold paper-more">
+  <summary><span class="fold-show">Show {{ rows|length - 5 }} more</span><span class="fold-hide">Hide {{ rows|length - 5 }} more</span><span class="visually-hidden"> {{ name }}</span></summary>
+  <ul class="paper-list">
+    {% for p in rows[5:] %}{{ paper(p) }}
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
+{%- endmacro %}
 <section class="papers" aria-labelledby="papers">
 <h2 id="papers">Papers linked to this agreement</h2>
 <p class="papers-flag"><strong>Not part of the register.</strong>
@@ -176,18 +193,12 @@
 {% if not v.yielded_benefits %}
 <p class="hint">The register reports no benefits for this agreement. These papers were found by the review, not cited by the register.</p>
 {% endif %}
-<ul class="paper-list">
-  {% for p in papers.found %}{{ paper(p) }}
-  {% endfor %}
-</ul>
+{{ paper_list(papers.found, "papers found to have used this agreement's data") }}
 {% endif %}
 {% if papers.unreadable %}
 <h3>Cited by the register, not checked</h3>
 <p class="hint">Cited in the register's benefit text; the full text isn't openly available, so the review couldn't check it.</p>
-<ul class="paper-list">
-  {% for p in papers.unreadable %}{{ paper(p) }}
-  {% endfor %}
-</ul>
+{{ paper_list(papers.unreadable, "papers cited by the register") }}
 {% endif %}
 </section>
 {% endif %}

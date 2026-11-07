@@ -57,6 +57,7 @@
   {% else %}
   <div><dt>Sector</dt><dd>{{ organisation.sector }}</dd></div>
   <div><dt>Agreements as applicant</dt><dd>{{ organisation.agreement_count|commas }}</dd></div>
+  {% if paper_count %}<div><dt>Published papers linked</dt><dd><a href="{{ meta.base_path }}/papers/?org={{ organisation.slug }}">{{ paper_count|commas }}</a></dd></div>{% endif %}
   <div><dt>In term in {{ meta.edition|edition }}</dt><dd>{{ organisation.agreements|selectattr("coverage_end", "ge", meta.as_of)|list|length|commas }}</dd></div>
   <div><dt>Distinct datasets</dt><dd>{{ organisation.dataset_names|length }}</dd></div>
   <div><dt>Files released</dt><dd>{{ organisation.files_released|commas }}</dd></div>

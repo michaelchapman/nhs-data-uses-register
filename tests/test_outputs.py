@@ -103,13 +103,32 @@ class PapersPage(unittest.TestCase):
         self.assertIn("<h1>Published papers</h1>", page)
         self.assertEqual(page.count("https://doi.org/10.1136/bmj-2024-000001"), 1)
         self.assertIn("Not part of the register.", page)
-        self.assertIn('id="found"', page)
-        self.assertIn('id="unreadable"', page)
+        self.assertEqual(page.count('data-reason="found"'), 1)
+        self.assertEqual(page.count('data-reason="unreadable"'), 1)
+        self.assertIn('id="papers-table"', page)
+        self.assertIn("filter.js", page)
         self.assertIn(f"/agreements/{REFERENCE.lower()}/", page)
         self.assertNotIn("Orphan paper", page)
         self.assertIn("2 published papers", page)
         self.assertIn('/papers/">Papers</a>', home)
         self.assertIn("/papers/</loc>", sitemap)
+
+    def test_organisation_pages_link_to_their_papers(self):
+        with tempfile.TemporaryDirectory() as directory:
+            build_site([row()], Path(directory))
+            page = (Path(directory) / "papers" / "index.html").read_text()
+            organisation = (Path(directory) / "organisations" / "university-of-example" / "index.html").read_text()
+        self.assertIn('/papers/?org=university-of-example">1</a>', organisation)
+        self.assertIn('<option value="university-of-example">University of Example (1)</option>', page)
+
+    def test_long_lists_on_an_agreement_page_fold_after_five(self):
+        rows = [row(doi=f"10.1000/p{n}", title=f"Paper {n}", year=2010 + n) for n in range(8)]
+        with tempfile.TemporaryDirectory() as directory:
+            page, _ = build_with(rows, Path(directory))
+        self.assertIn("Show 3 more", page)
+        # Newest first, so the oldest three are the folded ones.
+        self.assertLess(page.index("Paper 3<"), page.index("Show 3 more"))
+        self.assertGreater(page.index("Paper 2<"), page.index("Show 3 more"))
 
     def test_no_file_means_no_page_and_no_menu_item(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -123,7 +142,7 @@ class PapersPage(unittest.TestCase):
             "A": [{**row(), "url": "u", "basis": "found", "register_cited": False}],
             "B": [{**row(), "url": "u", "basis": "unreadable", "register_cited": True}],
         }}
-        agreements = [{"base_reference": "A"}, {"base_reference": "B"}]
+        agreements = [{"base_reference": "A", "organisation_slug": "a"}, {"base_reference": "B", "organisation_slug": "b"}]
         [paper] = outputs.papers(loaded, agreements)
         self.assertEqual(paper["basis"], "found")
         self.assertTrue(paper["register_cited"])
