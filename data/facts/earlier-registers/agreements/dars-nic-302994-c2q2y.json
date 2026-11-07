@@ -1,0 +1,773 @@
+{
+ "base_reference": "DARS-NIC-302994-C2Q2Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v0.4",
+   "version": "0.4",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "29f58798b3b7",
+     "activities": "e40f5f176b59",
+     "expected_output": "97367a3c40ba",
+     "expected_benefits": "5b3706c83f4a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 12
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v1.2",
+   "version": "1.2",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01"
+     ],
+     "objective": "29f58798b3b7",
+     "activities": "e40f5f176b59",
+     "expected_output": "97367a3c40ba",
+     "expected_benefits": "5b3706c83f4a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 12
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v2.2",
+   "version": "2.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2018-03-01",
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "objective": "bcb4ce97400e",
+     "activities": "39eff19fc961",
+     "expected_output": "75b1ebada91a",
+     "expected_benefits": "514238980ce6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v3.2",
+   "version": "3.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2018-10-01",
+    "2019-01-01",
+    "2019-03-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-09-01",
+    "2019-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-03-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-09-01",
+      "2019-10-01"
+     ],
+     "objective": "f07af32fd878",
+     "activities": "f2af89fdb639",
+     "expected_output": "39ad0fa69376",
+     "expected_benefits": "514238980ce6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-03-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-10-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-03-01",
+      "2019-06-01",
+      "2019-10-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-03-01",
+      "2019-06-01",
+      "2019-10-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-01-01",
+      "2019-06-01",
+      "2019-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-01-01",
+      "2019-06-01",
+      "2019-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-01-01",
+      "2019-06-01",
+      "2019-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-01-01",
+      "2019-06-01",
+      "2019-09-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v4.3",
+   "version": "4.3",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-12-01",
+    "2020-01-01",
+    "2020-03-01",
+    "2020-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "objective": "1fc52ec3bfe9",
+     "activities": "96997dca2f75",
+     "expected_output": "1e3fa6e5229e",
+     "expected_benefits": "0187e8926cfb",
+     "yielded_benefits": "65093e40648a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-12-01",
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-12-01",
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-12-01",
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-01-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-01-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-01-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-01-01",
+      "2020-03-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v5.2",
+   "version": "5.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-06-01",
+    "2020-09-01",
+    "2020-10-01",
+    "2020-12-01",
+    "2021-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-06-01",
+      "2020-09-01",
+      "2020-10-01",
+      "2020-12-01",
+      "2021-01-01"
+     ],
+     "objective": "1fc52ec3bfe9",
+     "activities": "96997dca2f75",
+     "expected_output": "1e3fa6e5229e",
+     "expected_benefits": "0187e8926cfb",
+     "yielded_benefits": "65093e40648a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-06-01",
+      "2020-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-06-01",
+      "2020-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-06-01",
+      "2020-12-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2021-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2020-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-10-01",
+      "2020-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-12-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302994-C2Q2Y-v6.2",
+   "version": "6.2",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2021-03-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "objective": "1fc52ec3bfe9",
+     "activities": "96997dca2f75",
+     "expected_output": "1e3fa6e5229e",
+     "expected_benefits": "0187e8926cfb",
+     "yielded_benefits": "65093e40648a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0187e8926cfb": "The data collected from central NHS registries during the Long–Term Follow-up phase of the study, will be used to assess whether any benefits of aspirin observed within the trial, continue long-term or additional benefits emerge during longer-term follow-up.\n\nIt had been suggested that low-dose aspirin might protect against cancer and ASCEND provides one of the first opportunities to test this hypothesis. The analyses based on the study treatment phase showed no reduction in any cancers during the up to 9 years of follow-up available so far. However, the main focus of the analyses will be after longer-term post-trial follow-up, when there will be much better power to detect plausible differences in cancer incidence between the arms due to larger numbers of events.\n\nDementia and cognitive impairment present major health care and social burdens which are increasing globally with increasing lifespan. In observational studies, diabetes is associated, not only with a 2-3 fold increased risk of vascular events, but also with a 50% increased risk of dementia and a 20% increase in the rate of cognitive decline. Therefore, it is of particular importance to obtain randomized evidence of the effects of therapies for vascular prevention on cognitive decline among people with diabetes. Furthermore, the higher risks of cognitive decline and dementia among people with diabetes make them a potentially powerful population for investigating cognitive effects.\n\nDementia or cognitive impairment has been captured from multiple sources in the ASCEND trial: during routine trial follow-up, participants were asked to record all serious illnesses and hospitalisations (including dementia or cognitive impairment); at final participant follow-up, participants were asked whether they had been referred to a memory clinic; additionally participants may state that they are unable to complete cognitive assessment because of cognitive impairment, or use of dementia drugs may be recorded; at final GP follow-up, dementia or cognitive impairment was specifically asked about. Linked electronic NHS central registry data, provides an additional source of evidence of dementia and indications of cognitive impairment. A study evaluating NHS Digital Hospital Episode Statistics (HES) data as a source of dementia diagnosis, concluded that there was good agreement with evidence from primary care records but a mean delay of 1.6 years between first mention of the condition in hospital admissions, compared to in primary care records. Therefore, diagnoses of dementia-related outcomes from HES data or from death certificates will be included up to 31 March 2019, a date 1.5-2 years beyond when cognitive assessment was sought (March-December 2017).\n\nThe main ASCEND study includes long-term follow-up of the effects of aspirin on its main outcomes.  In parallel, analyses of the effects of aspirin on cognitive outcomes are planned for 5 and 10 years after the end of the scheduled treatment period (i.e. including data up to 31.3.2022 and 31.3.2027). \n\nDiabetic retinopathy and diabetic maculopathy are among the most common causes of registerable blindness among working-age adults in the UK. The eye sub-study is assessing the impact of aspirin and omega-3 fatty acids on various eye outcomes including diabetic retinopathy, macular degeneration and cataracts allowing linkage to diabetic screening registry information. Visual loss impacts significantly on the quality of life for those people affected, as well as generating financial costs to the NHS ophthalmology services. Therefore the preservation of vision is extremely important.",
+  "1e3fa6e5229e": "For all outputs no participants will be identifiable in any information provided.\n\nThe main outputs from the research will be in the form of scientific reports of the results of the trial. \n\nThe results from the scheduled treatment phase were presented during 2018 at the European Society of Cardiology Annual Congress in Berlin and published simultaneously in two articles; The New England Journal of Medicine (N Engl J Med 2018; 379:1529-1539  and  N Engl J Med 2018; 379:1540-1550).  In addition, the British Heart Foundation helped with promotion and dissemination of the results. The results are likely to be incorporated into an individual participant data meta-analysis of similar trials run by the Anti-Thrombotic Trialists’ Collaboration, which is coordinated by the University of Oxford. \n\nThe outputs from the Long-term Follow-up phase will be in the form of scientific reports and presentations at National and International Scientific meetings. Summaries of key findings will be placed on the study website and disseminated through Oxford University Communications channels. \n\nAll outputs will consist of aggregate level data only with small numbers suppressed in line with HES analysis guide.\n\nThe study participants were sent a summary of the study results shortly after the main presentation in 2018  and the medical consultants representing the various NHS hospital trusts involved, will also be presented with a summary of the results and attended a specific meeting at which the results were discussed around the same time. This summary was also be available via the study-specific web-site along with a short video of the results (https://ascend.medsci.ox.ac.uk/).\n\nIn addition to this, the two pharmaceutical companies provided the medication and matching placebo for the study and some funds to cover the costs of packaging the treatment have an interest in seeing these treatments (aspirin and fish oils) properly evaluated in a large well run randomised trial. They received the same publicly available results. The pharmaceutical companies may wish to use tabulated data from the study to seek approval from the regulatory agencies for the marketing of these treatments to this group. The data provided would be aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nIf a submission is made to a regulatory agency, the Clinical Trial Service Unit at Oxford University would provide relevant information in the form of tabulations of numbers (for example: number of participants randomized, experiencing serious or other adverse events) with no individuals being identifiable in any submission. There would be considerable overlap between any tabulations provided to the companies and the published results, however the companies might ask for specific detail that were not considered necessary to publish. No participants will be identifiable in any information provided and the pharmaceutical companies do not have any influence in the research or the results. All data provided to the companies would be aggregate with small numbers suppressed in line with the HES Analysis Guide.\n\nThe funding arrangements described in this document do not include any restrictions regarding the dissemination of outputs or how the research is conducted.",
+  "1fc52ec3bfe9": "The aim of ASCEND (A Study of Cardiovascular Events iN Diabetes) is to determine reliably whether low dose aspirin and/or supplementation with omega-3 fatty acids, safely prevents cardiovascular events (such as heart attacks and strokes), and deaths in patients with diabetes, who have not previously been diagnosed with arterial disease. Although aspirin is recommended for people with established arterial disease, since it also causes bleeding, the balance of benefits and possible harms are not clear in this group of people with diabetes.\n\nThis question is relevant to many millions of people worldwide with diabetes. According to Diabetes UK, in November 2016 3.6 million people in the UK had a diagnosis of diabetes and this number is rising each year. The World Health Organisation reports the number of people with diabetes worldwide has risen from 108 million in 1980 to 422 million in 2014 and the global prevalence of diabetes among adults over 18 years of age has risen from 4.7% in 1980 to 8.5% in 2014. Adults with diabetes are at an increased risk of heart attacks and strokes and it is not clear whether aspirin should be routinely recommended for heart disease and stroke prevention and the ASCEND study is designed to help answer this question.\n\nThe ASCEND study processes data and special category data in accordance with Article 6(1)(e) and 9(2)(j) of the General Data Protection Regulation respectively. The processing of personal sensitive data is in the public interest as it will potentially provide information to guide doctors’ decisions about the management of their patients. The processing is of medical data about particular individuals and will be related to their involvement in the randomised part of the trial when they either were allocated active or placebo (dummy) aspirin and active or placebo fish oils.\n\nBy undertaking post-trial follow-up, the study team plan to maximise the value of the contribution made by the ASCEND participants during the scheduled treatment period.\n\nThe main question to be addressed by the ASCEND post-treatment follow-up, is whether aspirin reduces the future risk of cancer. If it does, then this may take up 20 years to become clear. Additional questions, such as the effect of aspirin on future dementia risk, and on the development of heart failure as well as on heart attacks and strokes, will also be valuable to assess. Other analyses may be undertaken if new related, scientific questions arise.\n\nThis phase of the study is planned to continue until at least 2037 with information continuing to be collected from NHS Digital, and related registries, about causes of death, cancer diagnoses and any relevant hospital admissions, attendances at out-patient clinics or A&E departments, and critical care episodes. These data will be used to assess whether any benefits of aspirin and the omega-3 fish oils observed within the trial, continue long-term, or whether new benefits emerge. These analyses will include all 15,480 people within the UK, who were formerly entered “randomized” into the study between June 2005 and July 2011  (unless they  withdrew consent).  Any analyses will involve comparisons among all those previously allocated aspirin compared with those previously allocated placebo (dummy) and similarly between those previously allocated fish oil supplements versus those allocated placebo.\n\nFurther detail follows about the purpose of the planned cancer analyses. The ASCEND trial provides one of the first opportunities to prospectively test the hypothesis that aspirin prevents gastrointestinal and overall cancer incidence and death, both during the trial and during the ongoing longer term post-trial follow-up. Aspirin did not reduce the risk of cancer during the study treatment phase of the study but this was too early to give a reliable answer as cancers may emerge later, hence the initial analyses are pre-specified to be undertaken in 2022 and 2027 (5 and 10 years into the post-trial follow-up period).\n\nCancer data already held includes the period of the study as well as from the period before the study started. Participants were eligible to take part if they had a history of cancer more than 5 years previously; if they report a new cancer, it is important to ascertain whether this is a new cancer or the recurrence of one that was diagnosed some years before. The analyses will include assessing the impact of the study treatments on newly diagnosed cancers and so it is important to be able to be sure that reported cancers are new. The source of the medical events of interest to these analyses will be from the NHS Digital cancer and death registry data and also the Outpatient, and Admitted Patient Care data-sets.\n\nAlzheimer’s Research UK provided a grant to allow an assessment of cognitive function in the ASCEND trial participants around the time of the end of the scheduled treatment period. It is known that there is a link between dementia and diseases of the heart or circulation. Risk factors for circulatory diseases such as smoking, diabetes and high blood pressure are also more common in people who develop dementia. However, it is not known whether treatments such as aspirin, which can help to protect against heart attacks and strokes, might affect memory and brain power and affect the risk of developing dementia. Participants voluntarily took part and either completed a cognitive function test conducted via telephone by a research nurse or an on-line version sent via email.\n\nASCEND represents a unique opportunity to assess the effect of aspirin, and of omega-3 FA, on cognitive function cost-effectively. A planned meta-analysis between ASCEND and the ongoing 19,000 participant ASPREE study (in addition to combining with data from earlier studies if possible) would have good power to detect a small, but important, effect of aspirin on cognitive function. \n\nFurther to the on-study treatment analyses of the effects of aspirin on cognitive outcomes, there are further analyses planned for 5 and 10 years after the end of the scheduled treatment period (i.e. including data up to 31.3.2022 and 31.3.2027). The source of the medical events of interest to the cognitive function analyses will be from the following NHS Digital registry data-sets: Admitted Patient Care and the Outpatient data on attendance at memory clinics. The source of the information on heart attacks, strokes and heart failure will be from the following NHS Digital Hospital data-sets: Admitted Patient Care, Outpatient, Accident and Emergency (being replaced by the Emergency Care data-set) and Critical Care.\n\nAdditionally the ASCEND Eye sub-study, for which involvement was voluntary, will assess the effects of taking aspirin and/or omega-3 fish oils on diabetic retinopathy and age-related macular degeneration, a leading cause of vision loss in people over age 60. Data processing activity for the eye assessment sub-study will be on-going during the long-term phase of the study but will not involve linking to NHS Digital controlled data-sets as diabetic retinopathy data will derive from the NHS Diabetic Eye Screening Programme (DESP) in England and the Diabetic Retinopathy Screening Service for Wales. However the eye sub-study will include data about eye conditions previously collected during the main treatment phase of the study, some of which were sourced from the following NHS Digital data-sets : the Accident and Emergency, Outpatient and Admitted Patient Care.] \n\nThe University of Oxford is the sole Data Controller and also processes the data for this study. No other organisations process these data for the purpose described in this Agreement. A Data Monitoring Committee and a Steering Committee have been involved in an advisory capacity and have only had access to aggregated outputs. The Data Monitoring Committee was only active during the treatment phase of the study and is no longer relevant for the long-term follow-up. The study is currently funded by the Clinical Trials Service Unit (CTSU) core grants from the British Heart Foundation (BHF), Medical Research Council (MRC) and Cancer Research UK. Separate project grant funding is to be sought for the Long-Term Follow-Up from the BHF.",
+  "29f58798b3b7": "The aim of the British Heart Foundation (BHF)-funded ‘A Study of Cardiovascular Events iN Diabetes’ (ASCEND) randomised trial is to determine reliably whether aspirin (100mg daily or matching placebo) and/or supplementation with omega-3 fatty acids (1g capsule or matching placebo) safely prevents cardiovascular events and deaths in patients with diabetes, who do not already have clinically manifest arterial disease. Although aspirin is recommended for people with arterial disease, since it also causes bleeding, the balance of benefits and possible harms are not clear in this group with diabetes. \n\nThe study is funded by the British Heart Foundation and the packaged study treatment is provided free of charge by Bayer Pharma AG [100mg aspirin/matching placebo] and Abbott Products Operations AG [1g omega-3 capsule/matching placebo]. \n\n15,480 participants were randomized between June 2005 and July 2011 and median follow-up is currently ~4 years with a planned duration of at least 7 years. All serious adverse events (SAEs) are to be recorded among the randomised participants to allow detailed analyses of both the safety and efficacy of trial treatments. In order to reliably record and code reported SAEs during follow-up, as outlined within the study protocol, the team require clinical information about diagnoses and operations, including dates of occurrence. Access to electronic central records of hospital episodes will allow this complete and unbiased follow-up and appropriate intention-to-treat analyses. \n\nThe sensitive identifiable fields are required to ensure robust linkage  to ensure that the records pertain to the correct participant, which is vital for the accuracy of the study data. The HES data will also provide additional confirmation of some participant reported events. The HES data relevant to the trial outcomes (heart attacks, strokes etc.) will be further followed up via GPs for additional information, and will be reviewed by study clinicians (who remain blind to treatment allocation) with the aim of confirming or refuting events.",
+  "39ad0fa69376": "For all outputs no participants will be identifiable in any information provided.\n\nThe main outputs from the research will be in the form of scientific reports of the results of the trial. \n\nThe results will be presented during 2018 at international scientific meetings and published in a prominent peer-reviewed medical journal within about a year. The arrangements are not yet finalised but the international meeting is likely to be one of: American Diabetes Association, European Society of Cardiology or the American Heart Association. The journal is likely to be The Lancet but again not finalised at this stage. In addition the British Heart Foundation will play a role in the advertising and promotion of the results. The results are likely to be incorporated into an individual participant data meta-analysis of similar trials run by the Anti-thrombotic Trialists Collaboration. \n\nAll outputs will consist of aggregate level data only with small numbers suppressed in line with HES analysis guide.\n\nThe study participants and their GPs will be sent a summary of the study results shortly after the main presentation in 2018  and the medical consultants representing the various NHS hospital trusts involved, will also be presented with a summary of the results around the same time. This summary will also be available via the study-specific web-site and it is anticipated that a video will be provided as well.\n\nIn addition to this, the two pharmaceutical companies providing the medication and matching placebo for the study and some funds to cover the costs of packaging the treatment have an interest in seeing these treatments (aspirin and fish oils) properly evaluated in a large well run randomised trial. They will receive the same publically available results. If the study results show benefits for diabetic patients, the pharmaceutical companies may wish to use tabulated data from the study to seek approval from the regulatory agencies for the marketing of these treatments to this group. The data provided would be aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nIf a submission is made to a regulatory agency, the Clinical Trial Service Unit at Oxford University would provide relevant information in the form of tabulations of numbers (for example: number of participants randomized, experiencing serious or other adverse events) with no individuals being identifiable in any submission. There would be considerable overlap between any tabulations provided to the companies and the published results, however the companies might ask for specific detail that were not considered necessary to publish. No participants will be identifiable in any information provided and the pharmaceutical companies do not have any influence in the research or the results. All data provided to the companies would be aggregate with small numbers suppressed in line with the HES Analysis Guide.\n\nThe funding arrangements described in this document do not include any restrictions regarding the dissemination of outputs or how the research is conducted.",
+  "39eff19fc961": "Relevant background to the processing activities:\nStudy teams conducting clinical trials involving Investigational Medicinal Products (IMPs) i.e. the study treatments being assessed as part of the clinical trial, are legally required to comply with the European Medicines Agency (EMA) directives for Good Clinical Practice (GCP), which are enacted as legislation in the UK via the Medicines for Human Use Act. Within the UK, the Medicines and Healthcare Products Regulatory Agency (MHRA) ensure these regulations are enforced via inspections. Additionally clinical trial teams are required to comply with the Data Protection Act (DPA), and the University of Oxford is registered as a data controller with the Information Commissioners Office (ICO) who regulate this activity. These regulations governing the conduct of clinical trials dictate certain processes within the trials.\n\nThe legal basis for providing the HES/ONS and cancer data from NHS Digital, continues to be informed patient consent from the participants entered into the study. Subsequently participants have been kept informed of the trial activities via regular newsletters and the study-specific web-site, which includes a section detailing how participants’ information is processed. \n\nAll of the Hospital Episode Statistics (HES), Office of National Statistics (ONS) death and cancer registry data received, are stored and processed solely by the Clinical Trial Service Unit ASCEND study team, who form part of the University of Oxford. The cohort was sent by the ASCEND study team and is currently held linked to the participants NHS record at NHS Digital, under existing agreement (NIC 14843), this linkage was completed in 2011. Regular updates have been provided to the ASCEND study team with details of any deaths or diagnoses of cancer since 2006. Approval to receive HES data, acquired in 2016, did not require any further data files to be sent from the ASCEND team as it was possible for NHS Digital to use the cohort previously provided.\n\nThe data received from NHS Digital are transferred into the trial database by the person registered to receive data. The ASCEND trial database is study specific and is stored on an ASCEND specific computer server. The identifiable NHS Digital data are stored in an encrypted TrueCrypt container to which access is granted on a \"need to know\" basis i.e. the level of access will depend on the staff role. All such access is granted on the instruction of the Information Asset Owner for ASCEND. Access is routinely reviewed and revoked when the team member leaves ASCEND.  The data supplied by NHS Digital is linked back to the study database and it is critical that this is robust. Linking the wrong medical information to a participant is potentially significant both in terms of the analyses but also for the conduct of the trial as, for example, failure to record a death correctly could lead to a participant’s study treatment being stopped inappropriately or a member of the team could call a participant who is known to be dead, which can cause significant upset to relatives. Therefore the team use the participant’s identifiable details so that multi-part checks can be applied. The current identifiable details provided by NHS Digital also ensure that the study team have the most up-to-date information about the participant, in order to send follow-up requests, as complete follow-up for all participants is critical to ensure reliable results. Collection of up-to-date details is more difficult with a mail-based study when one can only prompt via the follow-up questionnaires and other communications, such as the newsletters, as opposed to being able to speak with participants directly, as for a clinic-based study.\n\nAs part of the study, participant-reported medical events are recorded.  These medical events allow detailed assessment of both the safety and efficacy of the trial treatments and are coded by the study medical team who require additional evidence (such as information about diagnoses as well as dates and nature of operations). This evidence is largely provided from the datasets held by NHS Digital, providing details of hospital attendances and admissions, medical diagnoses and, for any participant death, the cause of death information from the death certificate, as well as the participant’s GP. These data will also allow the study medical team to identify medical events not previously reported.  This robust process will ensure the results are reliable and unbiased and so complying with current regulations governing clinical trials. \n\nThe study team are requesting the latest data-set information and also the early data-sets not previously requested for both the ‘Admitted patient care’ and ‘Out-patient’ products. This is to allow access to any diagnoses of cancer and/or incidents of major bleeding prior to entry into the study. Participants were eligible to take part if they had a history of cancer more than 5 years previously; if they report a new cancer, it is important to ascertain whether this is a new cancer or the recurrence of one that was diagnosed some years before. The analyses will include assessing the impact of the study treatments on newly diagnosed cancers and so it is important to be able to be sure that reported cancers are new.  Similarly when assessing the effect of aspirin on the risk bleeding it will be valuable to know whether the participant has experienced a major bleeding event before entering the study. \n\nThe complete supplied ONS, cancer registry and HES data will need to be retained for 15 years as the team need to be able to trace all study medical events (some of which may be identified from the supplied data as well as being used as evidence for coding) back to source data to comply with the European Medicines Agency guidelines for Good Clinical Practice and have this readily available during any Medicines and Healthcare Products Regulatory Agency (MHRA) inspection (the UK organisation ensuring that the regulations are enforced) and retained for any marketing authorisations.  \n(https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency)\n\nThe ASCEND study team shall not provide or otherwise make available the HES, ONS or cancer registry data to any third party or allow use of it or them by or on behalf of any third party, in whole or in part, whether by way of sale, resale, loan, transfer, hire or any other form of exploitation. However, there are two exceptions, these are;\n1.  the situation where there may be a need to write to an individual participant’s GP for further clarification about a medical event or death to support the medical event coding process undertaken by the study medical team. \n2. the situation where an MHRA inspector, as described in the previous paragraph, may see an individual record with a medical event or death recorded, which may have been supplied by ONS/NHS Digital. \n\nNo participants will be identifiable in any information provided to funding organisations and pharmaceutical companies and they do not have any influence in the research or the results. All data provided would be aggregate with small numbers suppressed in line with the HES Analysis Guide.\n\nData will not be shared with any other organisations.\n\nThe University of Oxford will comply with all Office for National Statistics terms and conditions.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "514238980ce6": "If ASCEND can reliably demonstrate that aspirin and/or omega-3 FA safely reduce the risk of cardiovascular events, cancers and deaths in diabetic patients, without pre-existing occlusive arterial disease, this would be relevant to some hundreds of millions of people world-wide currently not receiving such therapy, and could save tens of thousands of lives each year, particularly relevant given the world-wide rise in the prevalence of people with diabetes. On the other hand, if the risks of serious bleeding outweigh or are similar in magnitude to the cardiovascular benefits in this group, then these risks could be avoided by the very large number of diabetic patients who are currently being treated with aspirin. \n\nASCEND is a high profile trial (already widely referred to in international journals and presentations)  whose results have the possibility of influencing national and international guidelines for the use of anti-platelet therapy in this very large patient group (currently at least 3.6M in the UK and over 400M worldwide). Access to the data requested will allow a complete and unbiased analysis of the benefits and hazards of allocation to aspirin and to omega-3 fish oils in the ASCEND study, thus enhancing the reliability of the study findings. The study results are expected in 2018 but any changes to treatment guidelines as a result of the ASCEND trial may take several years to emerge.",
+  "5b3706c83f4a": "ASCEND is a high profile trial (already widely referred to in international journals)  whose results have the possibility of influencing national and international guidelines for the use of anti-platelet therapy in this very large patient group (currently at least 3M in the UK and over 300M worldwide). Access to the data requested will allow a complete and unbiased analysis of the benefits and hazards of allocation to aspirin and to omega-3 fish oils in the ASCEND study, thus enhancing the reliability of the study findings. The study results are expected in 2018 but any changes to treatment guidelines as a result of the ASCEND trial may take several years to emerge.",
+  "65093e40648a": "For the on-treatment phase of the ASCEND study, the analyses have shown conclusively that aspirin reduces the risk of vascular events in primary prevention, as it does in people who already have cardiovascular disease, but these benefits are largely counter-balanced by the number of major bleeds caused by aspirin. This is an important finding with implications for many millions of people who have diabetes but have not yet had cardiovascular events. Previous clinical guidelines have varied in their recommendations about the use of aspirin for primary prevention because of a previous lack of clear evidence. \n\nThe results of ASCEND now provide much needed clarity. The findings are likely to be widely incorporated into future guidelines for the prevention of cardiovascular events in people with diabetes both nationally and internationally. The World Health Organisation statistics detail 422 million people with diabetes in 2014, a rise of almost 400% since 1980. The prevalence of diabetes in the UK and global population is expected to continue to rise.",
+  "75b1ebada91a": "For all outputs no participants will be identifiable in any information provided.\n\nThe main outputs from the research will be in the form of scientific reports of the results of the trial. \n\nThe results will be presented during 2018 at international scientific meetings and published in a prominent peer-reviewed medical journal within about a year. The arrangements are not yet finalised but the international meeting is likely to be one of: American Diabetes Association, European Society of Cardiology or the American Heart Association. The journal is likely to be The Lancet but again not finalised at this stage. In addition the British Heart Foundation will play a role in the advertising and promotion of the results. The results are likely to be incorporated into an individual participant data meta-analysis of similar trials run by the Anti-thrombotic Trialists Collaboration. \n\nAll outputs will consist of aggregate level data only with small numbers suppressed in line with HES analysis guide.\n\nThe study participants and their GPs will be sent a summary of the study results shortly after the main presentation in 2018  and the medical consultants representing the various NHS hospital trusts involved, will also be presented with a summary of the results around the same time. This summary will also be available via the study-specific web-site and we anticipate providing  a video as well.\n\nIn addition to this, the two pharmaceutical companies providing the medication and matching placebo for the study and some funds to cover the costs of packaging the treatment have an interest in seeing these treatments (aspirin and fish oils) properly evaluated in a large well run randomised trial. They will receive the same publically available results. If the study results show benefits for diabetic patients, the pharmaceutical companies may wish to use tabulated data from the study to seek approval from the regulatory agencies for the marketing of these treatments to this group. The data provided would be aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nIf a submission is made to a regulatory agency, the Clinical Trial Service Unit at Oxford University would provide relevant information in the form of tabulations of numbers (for example: number of participants randomized, experiencing serious or other adverse events) with no individuals being identifiable in any submission. There would be considerable overlap between any tabulations provided to the companies and the published results, however the companies might ask for specific detail that were not considered necessary to publish. No participants will be identifiable in any information provided and the pharmaceutical companies do not have any influence in the research or the results. All data provided to the companies would be aggregate with small numbers suppressed in line with the HES Analysis Guide.\n\nThe funding arrangements described in this document do not include any restrictions regarding the dissemination of outputs or how the research is conducted.",
+  "96997dca2f75": "All of the Hospital Episode Statistics (HES), mortality and cancer registry data received, are stored and processed solely by the Clinical Trial Service Unit ASCEND study team at the University of Oxford. The flagged cohort was sent by the ASCEND study team (linkage was completed in 2011) and is currently held linked to the participants NHS record at NHS Digital, under an existing agreement. Regular updates have been provided to the ASCEND study team with details of any deaths or diagnoses of cancer since 2006.  Approval to receive HES data, acquired in 2016, did not require any further data files to be sent from the ASCEND team as it was possible for NHS Digital to use the cohort previously provided.\n\nThe data received from NHS Digital are transferred into the trial database by the person registered to receive data. The ASCEND trial database is study specific and is stored on an ASCEND specific computer server. The identifiable NHS Digital data are stored in an encrypted TrueCrypt container to which access is granted on a \"need to know\" basis i.e. the level of access will depend on the staff role. All such access is granted on the instruction of the Information Asset Owner for ASCEND. Access is routinely reviewed and revoked when the team member leaves ASCEND.  The data supplied by NHS Digital is linked back to the study database and it is critical that this is robust. Linking the wrong medical information to a participant is potentially significant in terms of the analyses and could be assessed as in breach of Good Clinical Practice during any MHRA inspection.  Therefore, the team use the participant’s identifiable details so that multi-part checks can be applied. However, this has been reassessed in the light of the main study treatment phase of the study closing, as part of the reason for requesting these identifiers was so that the study team had up-to-date participant contact details. However, given that no further contact with the participants is intended plus the need to be mindful of data minimisation principals, the decision has been agreed to only receive the study ID and the NHS number and no other personal identifiers.   \n\nAs part of the study, participant-reported medical events are recorded.  These medical events allow detailed assessment of both the safety and efficacy of the trial treatments and are coded by the study medical team who require additional evidence (such as information about diagnoses as well as dates and nature of operations). This evidence is largely provided from the datasets held by NHS Digital, providing details of hospital attendances and admissions, medical diagnoses and, for any participant death, the cause of death information from the death certificate, as well as the participant’s GP. These data will also allow the study medical team to identify medical events not previously reported.  This robust process will ensure the results are reliable and unbiased and so complying with current regulations governing clinical trials. The source of medical events during the Long-term follow-up phase of the study is intended to be solely from NHS registries.  Therefore, there will be no further requirement to request the GP code and if any further contact is required, then the practice code would suffice.\n\nAlthough the University of Oxford has minimised the supplied personal identifiers in the data requested, the remaining supplied data will still be linked to the existing study database, which does store the identifying data. The study team is required to do this as the study is still ongoing and has to comply with Good Clinical Practice Guidelines enacted in UK law via the Medicines for Human Use Act. Within the UK, the Medicines and Healthcare Products Regulatory Agency (MHRA) ensure these regulations are enforced via inspections.\n\nThe ASCEND databases are stored on the WING server on the Linux platform, which is backed up according to the following schedule:\nFull backups to tape are taken at the beginning of the month to tape; the January and July tape are taken out of rotation as archive copies. Differential backups are taken in the early hours of Monday to Thursday, with an incremental backup early on Friday. \nAt the end of the retention period, the ASCEND databases files are deleted from the virtual Linux server as part of the decommissioning process by the study team. Once decommissioned, it is deleted from the hypervisor and the virtual machine data store. The data store is built around an array of arrays, with the files split between many hard disks making retrieval of any meaningful data non-viable in the short term, with the available memory soon overwritten by other virtual machines.\n\nAs the NHS registry data is stored on a segregated encrypted NAS device, no archive or backup copies are made throughout the lifecycle of the data. The NAS device is mirrored to ensure information integrity, with both devices subject to secure erase (O&O SafeErase) upon expiry. A certificate of Destruction will be issued.\n\nThe raw data files will be stored securely with access limited to those receiving the files from the NHS registries and those who need to process the data in order to merge into the study-specific database.\nData is stored, accessed and backed up at University of Oxford, Richard Doll Building, Old Road Campus, Roosevelt Drive, Oxford, OX3 7LF and University of Oxford, Big Data Institute Building, Old Road Campus, Roosevelt Drive, Oxford, OX3 7LF.\nAccess to data is restricted via user identification provided by Active Directory Services (username and password).\nWhere required, specific Sensitive and Personal data sets are contained and isolated within a dedicated high compliance NAS array, with additional login (password) requirements. This allows selective destruction of both live data and backups upon request.\n\nThe ASCEND study team shall not provide or otherwise make available the HES, mortality or cancer registry data to any third party or allow use of it or them by or on behalf of any third party, in whole or in part, whether by way of sale, resale, loan, transfer, hire or any other form of exploitation. However, there are two exceptions, these are;\n1.  the situation where there may be a need to write to an individual participant’s GP for further clarification about a medical event or death to support the medical event coding process undertaken by the study medical team. \n2. the situation where an MHRA inspector, as described in the previous paragraph, may see an individual record with a medical event or death recorded, which may have been supplied by NHS Digital. \nNo participants will be identifiable in any information provided to funding organisations and pharmaceutical companies and they do not have any influence in the research or the results. All data provided would be aggregate with small numbers suppressed in line with the HES Analysis Guide.\nData will not be shared with any other organisations.\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "97367a3c40ba": "The main outputs from the research will be in the form of scientific reports of the results of the trial. If ASCEND can reliably demonstrate that aspirin and/or omega-3 FA safely reduce the risk of cardiovascular events, cancers and deaths in diabetic patients, without pre-existing occlusive arterial disease, this would be relevant to some hundreds of millions of people world-wide currently not receiving such therapy, and could save tens of thousands of lives each year. On the other hand, if the risks of serious bleeding outweigh or are similar in magnitude to the cardiovascular benefits in this group, then these risks could be avoided by the very large number of diabetic patients who are currently being treated with aspirin.\n\nThe results will be presented during 2018 at international scientific meetings and published in a prominent peer-reviewed medical journal within about a year. The arrangements are not yet finalised but the international meeting is likely to be one of: American Diabetes Association, European Society of Cardiology or the American Heart Association. The journal is likely to be The Lancet but again not finalised at this stage. In addition the BHF will play a role in the advertising and promotion of the results. The results are likely to be incorporated into an individual participant data meta-analysis of similar trials run by the Anti-thrombotic Trialists Collaboration. \n\nAll outputs will consist of aggregate data only with small numbers suppressed in line with HES analysis guide.\n\nIn addition to this the two pharmaceutical companies providing the medication and matching placebo for the study and some funds to cover the costs of packaging the treatment have an interest in seeing these treatments (aspirin and fish oils) properly evaluated in a large well run randomised trial. They will receive the same publically available results. If the study results show benefits for diabetic patients, the pharmaceutical companies may wish to use tabular data from the study to seek approval from the regulatory agencies for the marketing of these treatments to this group. The data provided would be aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nIf a submission is made to a regulatory agency, the Clinical Trial Service Unit at Oxford University would provide relevant information in the form of tabulations of numbers (for example: number of participants randomized, experiencing serious or other adverse events) with no individuals being identifiable in any submission. There would be considerable overlap between any tabulations provided to the companies and the published results, however the companies might ask for specific detail that were not considered necessary to publish. No participants will be identifiable in any information provided and the pharmaceutical companies do not have any influence in the research or the results. All data provided to the companies would be aggregate with small numbers suppressed in line with the HES Analysis Guide.",
+  "bcb4ce97400e": "The aim of ASCEND (A Study of Cardiovascular Events iN Diabetes) is to determine reliably whether low dose aspirin and/or supplementation with omega-3 fatty acids, safely prevents cardiovascular events (such as heart attacks and strokes), and deaths in patients with diabetes, who have not previously been diagnosed with arterial disease. Although aspirin is recommended for people with established arterial disease, since it also causes bleeding, the balance of benefits and possible harms are not clear in this group of people with diabetes.\n\n15,480 people with diabetes, identified from NHS GP and hospital records within the UK, were randomly allocated between June 2005 and July 2011 to take a daily aspirin (100mg) or matching dummy tablet and also a fish oil (1g capsule) or matching dummy capsule for a planned duration of at least 7 years. \n\nThis question is relevant to many millions of people worldwide with diabetes. According to Diabetes UK, in November 2016 3.6 million people in the UK had a diagnosis of diabetes and this number is rising each year. The World Health Organisation reports the number of people with diabetes worldwide has risen from 108 million in 1980 to 422 million in 2014 and the global prevalence of diabetes among adults over 18 years of age has risen from 4.7% in 1980 to 8.5% in 2014. Adults with diabetes are at an increased risk of heart attacks and strokes and it is not clear whether aspirin should be routinely recommended for heart disease and stroke prevention and the ASCEND study is designed to help answer this question.\n\nThe study is funded by a British Heart Foundation grant to the University of Oxford , who coordinate the study, and the packaged study treatment is provided free of charge by Bayer Pharma AG [100mg aspirin/matching placebo] and Mylan EPD [1g omega-3 capsule/matching placebo]. Both the study participants and the study team remain blinded to which study treatment each participant has been allocated to. \n\nData collection, cleaning and confirmation of reported medical events is on-going for the scheduled treatment phase of the study, in preparation for conducting the analyses for the results of the study.   As part of the study, participant-reported medical events are recorded.  These medical events allow detailed assessment of both the safety and efficacy of the trial treatments and are coded by the study medical team who require additional evidence (such as information about diagnoses as well as dates and nature of operations). This evidence is largely provided from the datasets held by NHS Digital and the ONS (Office for National Statistics), providing details of hospital attendances and admissions, medical diagnoses and, for any participant death, the cause of death information from the death certificate, as well as the participant’s GP. These data will also allow the study medical team to identify medical events not previously reported.  The additional GP practice code data being requested under this agreement for the participants will be used to follow up medical events with the relevant GP. This robust process will ensure the results are reliable and unbiased and so complying with current regulations governing clinical trials.",
+  "e40f5f176b59": "Information is collected routinely of the ~15,480 participants who were randomised between June 2005 and July 2011 by postal questionnaire however, over time, some participants stop returning questionnaires and this is more likely among people who have also stopped their study treatments. To minimise bias all participants need to be followed-up irrespective of whether they have been taking their study treatments and all events included in intention-to-treat analyses. \n\nIn order to comply with the EU Clinical trials directive, the data received will be transferred into the trial database by the person registered to receive data. The ASCEND trial database is study specific and is stored on an ASCEND specific server. The identifiable HSCIC data is stored in an encrypted TrueCrypt container to which access is granted on a \"need to know\" basis i.e. the level of access will depend on the staff role. All such access will be granted on the instruction of the Information Asset Owner for ASCEND. Access is routinely reviewed and revoked when the team member leaves ASCEND. The complete supplied HES data will need to be retained for 15 years (as per the ASCEND Protocol, section 2.4.6) as the team need to be able to trace all study medical events (some of which may be identified from HES data) back to source data to comply with the European Medicines Agency guidelines for good clinical practice and have this readily available during any Medicines and Healthcare Products Regulatory Agency (MHRA) inspection.  \n\nThe ASCEND study team shall not, except as may be strictly necessary for carrying out the project, provide or otherwise make available the HES or ONS data to any third party or allow use of it or them by or on behalf of any third party, in whole or in part, whether by way of sale, resale, loan, transfer, hire or any other form of exploitation. This statement is intended to cover the situation where there may be a need to write to an individual participant’s GP for further clarification about a medical event or death to support the adjudication coding process undertaken by the study medical team. The event/death may have been supplied by ONS/HSICIC although the source of the event would not be supplied to the GP. Clinical trials involving Investigational Medicinal Products (IMPs) are legally required to comply with GCP which is regulated by the MHRA so this phrase also covers MHRA Good Clinical Practice inspections, during which an inspector may see an individual record with a medical event or death recorded which may have been supplied by ONS/HSCIC.\n\nCause of death data from the Office for National Statistics has been processed by NHS Digital through a separate Data Sharing Agreement and will be assessed separately when the agreement is due for review in March 2017.",
+  "f07af32fd878": "The aim of ASCEND (A Study of Cardiovascular Events iN Diabetes) is to determine reliably whether low dose aspirin and/or supplementation with omega-3 fatty acids, safely prevents cardiovascular events (such as heart attacks and strokes), and deaths in patients with diabetes, who have not previously been diagnosed with arterial disease. Although aspirin is recommended for people with established arterial disease, since it also causes bleeding, the balance of benefits and possible harms are not clear in this group of people with diabetes.\n\n15,480 people with diabetes, identified from NHS GP and hospital records within the UK, were randomly allocated between June 2005 and July 2011 to take a daily aspirin (100mg) or matching dummy tablet and also a fish oil (1g capsule) or matching dummy capsule for a planned duration of at least 7 years. \n\nThis question is relevant to many millions of people worldwide with diabetes. According to Diabetes UK, in November 2016 3.6 million people in the UK had a diagnosis of diabetes and this number is rising each year. The World Health Organisation reports the number of people with diabetes worldwide has risen from 108 million in 1980 to 422 million in 2014 and the global prevalence of diabetes among adults over 18 years of age has risen from 4.7% in 1980 to 8.5% in 2014. Adults with diabetes are at an increased risk of heart attacks and strokes and it is not clear whether aspirin should be routinely recommended for heart disease and stroke prevention and the ASCEND study is designed to help answer this question.\n\nThe study is funded by a British Heart Foundation grant to the University of Oxford , who coordinate the study, and the packaged study treatment is provided free of charge by Bayer Pharma AG [100mg aspirin/matching placebo] and Mylan EPD [1g omega-3 capsule/matching placebo]. Both the study participants and the study team remain blinded to which study treatment each participant has been allocated to. \n\nData collection, cleaning and confirmation of reported medical events is on-going for the scheduled treatment phase of the study, in preparation for conducting the analyses for the results of the study.   As part of the study, participant-reported medical events are recorded.  These medical events allow detailed assessment of both the safety and efficacy of the trial treatments and are coded by the study medical team who require additional evidence (such as information about diagnoses as well as dates and nature of operations). This evidence is largely provided from the datasets held by NHS Digital, providing details of hospital attendances and admissions, medical diagnoses and, for any participant death, the cause of death information from the death certificate, as well as the participant’s GP. These data will also allow the study medical team to identify medical events not previously reported.  The additional GP practice code data being requested under this agreement for the participants will be used to follow up medical events with the relevant GP. This robust process will ensure the results are reliable and unbiased and so complying with current regulations governing clinical trials.",
+  "f2af89fdb639": "Relevant background to the processing activities:\nStudy teams conducting clinical trials involving Investigational Medicinal Products (IMPs) i.e. the study treatments being assessed as part of the clinical trial, are legally required to comply with the European Medicines Agency (EMA) directives for Good Clinical Practice (GCP), which are enacted as legislation in the UK via the Medicines for Human Use Act. Within the UK, the Medicines and Healthcare Products Regulatory Agency (MHRA) ensure these regulations are enforced via inspections. Additionally clinical trial teams are required to comply with the Data Protection Act (DPA), and the University of Oxford is registered as a data controller with the Information Commissioners Office (ICO) who regulate this activity. These regulations governing the conduct of clinical trials dictate certain processes within the trials.\n\nThe legal basis for providing the HES/mortality and cancer data from NHS Digital, continues to be informed patient consent from the participants entered into the study. Subsequently participants have been kept informed of the trial activities via regular newsletters and the study-specific web-site, which includes a section detailing how participants’ information is processed. \n\nAll of the Hospital Episode Statistics (HES), mortality and cancer registry data received, are stored and processed solely by the Clinical Trial Service Unit ASCEND study team, who form part of the University of Oxford. The cohort was sent by the ASCEND study team and is currently held linked to the participants NHS record at NHS Digital, under existing agreement (NIC 14843), this linkage was completed in 2011. Regular updates have been provided to the ASCEND study team with details of any deaths or diagnoses of cancer since 2006. Approval to receive HES data, acquired in 2016, did not require any further data files to be sent from the ASCEND team as it was possible for NHS Digital to use the cohort previously provided.\n\nThe data received from NHS Digital are transferred into the trial database by the person registered to receive data. The ASCEND trial database is study specific and is stored on an ASCEND specific computer server. The identifiable NHS Digital data are stored in an encrypted TrueCrypt container to which access is granted on a \"need to know\" basis i.e. the level of access will depend on the staff role. All such access is granted on the instruction of the Information Asset Owner for ASCEND. Access is routinely reviewed and revoked when the team member leaves ASCEND.  The data supplied by NHS Digital is linked back to the study database and it is critical that this is robust. Linking the wrong medical information to a participant is potentially significant both in terms of the analyses but also for the conduct of the trial as, for example, failure to record a death correctly could lead to a participant’s study treatment being stopped inappropriately or a member of the team could call a participant who is known to be dead, which can cause significant upset to relatives. Therefore the team use the participant’s identifiable details so that multi-part checks can be applied. The current identifiable details provided by NHS Digital also ensure that the study team have the most up-to-date information about the participant, in order to send follow-up requests, as complete follow-up for all participants is critical to ensure reliable results. Collection of up-to-date details is more difficult with a mail-based study when one can only prompt via the follow-up questionnaires and other communications, such as the newsletters, as opposed to being able to speak with participants directly, as for a clinic-based study.\n\nAs part of the study, participant-reported medical events are recorded.  These medical events allow detailed assessment of both the safety and efficacy of the trial treatments and are coded by the study medical team who require additional evidence (such as information about diagnoses as well as dates and nature of operations). This evidence is largely provided from the datasets held by NHS Digital, providing details of hospital attendances and admissions, medical diagnoses and, for any participant death, the cause of death information from the death certificate, as well as the participant’s GP. These data will also allow the study medical team to identify medical events not previously reported.  This robust process will ensure the results are reliable and unbiased and so complying with current regulations governing clinical trials. \n\nThe study team are requesting the latest data-set information and also the early data-sets not previously requested for both the ‘Admitted patient care’ and ‘Out-patient’ products. This is to allow access to any diagnoses of cancer and/or incidents of major bleeding prior to entry into the study. Participants were eligible to take part if they had a history of cancer more than 5 years previously; if they report a new cancer, it is important to ascertain whether this is a new cancer or the recurrence of one that was diagnosed some years before. The analyses will include assessing the impact of the study treatments on newly diagnosed cancers and so it is important to be able to be sure that reported cancers are new.  Similarly when assessing the effect of aspirin on the risk bleeding it will be valuable to know whether the participant has experienced a major bleeding event before entering the study. \n\nThe complete supplied mortality, cancer registry and HES data will need to be retained for 15 years as the team need to be able to trace all study medical events (some of which may be identified from the supplied data as well as being used as evidence for coding) back to source data to comply with the European Medicines Agency guidelines for Good Clinical Practice and have this readily available during any Medicines and Healthcare Products Regulatory Agency (MHRA) inspection (the UK organisation ensuring that the regulations are enforced) and retained for any marketing authorisations.  \n(https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency)\n\nThe ASCEND study team shall not provide or otherwise make available the HES, mortality or cancer registry data to any third party or allow use of it or them by or on behalf of any third party, in whole or in part, whether by way of sale, resale, loan, transfer, hire or any other form of exploitation. However, there are two exceptions, these are;\n1.  the situation where there may be a need to write to an individual participant’s GP for further clarification about a medical event or death to support the medical event coding process undertaken by the study medical team. \n2. the situation where an MHRA inspector, as described in the previous paragraph, may see an individual record with a medical event or death recorded, which may have been supplied by NHS Digital. \n\nNo participants will be identifiable in any information provided to funding organisations and pharmaceutical companies and they do not have any influence in the research or the results. All data provided would be aggregate with small numbers suppressed in line with the HES Analysis Guide.\n\nData will not be shared with any other organisations.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)."
+ }
+}

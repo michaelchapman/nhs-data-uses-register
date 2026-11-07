@@ -1,0 +1,71 @@
+{
+ "base_reference": "DARS-NIC-386877-S2T6C",
+ "versions": [
+  {
+   "reference": "DARS-NIC-386877-S2T6C",
+   "version": "",
+   "organisation": "CSL-UK (CompuFile System Limited)",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "38a4e6817e18"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "38a4e6817e18": "Objective for processing:\nCSL process HES to provide third parties involved in the delivery of healthcare with aggregated, masked data (small numbers not shown) to fulfil the following objectives:  \n•\tTo show aggregated patient pathways through the hospital system to provide an understanding of how patients are treated, and how treatment differs by key factors such as trust, CCG or patient demographic (currently provided to NHS, medical suppliers and pharmaceutical companies)\n•\tTo compare actual treatments with best practice and nice guidelines and to contrast trusts and CCGs with each other (currently provided to NHS and medical suppliers)\n•\tTo quantify patient subsets to identify opportunities for joint working initiatives and to monitor these initiatives once in place (aspirational)\n•\tTo aide the setting up of clinical trials by providing evidence of patient volumes by potential trial center (aspirational)\nCSL are providing services to CCGs, medical supplies companies and pharmaceutical companies (currently in equal measure).\nProcessing activities:\n The pseudonomised patient records are only held by CSL, and are imported into a secure database where they are organised for analysis within CSL’s own software (ESPRIT).  No patient data are linked to other data sources at a patient level.  ESPRIT allows the data to be queried without the need to provide the user with access to the raw data, and only provides aggregated, masked results.  CSL often conducts analyses for clients, and on some occasions clients have access to ESPRIT themselves.  \nClients are reminded of the objectives for which the data may be used, and that data must be used to improve patient care and/or to support cost benefit analyses to assist commissioning and/or reduce treatment costs.  This is conveyed via a message in ESPRIT each time it opens or footer on reports containing HES data.  \nCSL do not require access to sensitive elements of the data, and CSL do not utilise data such as postcode district (Postdist), pseudonomised consultant code (pconsult), pseudonomised GP code (preggmp) as these are not relevant to the delivery of CSL’s objectives.  \nSpecific outputs expected, including target date:\n Once the data has been aggregated it is provided to the user as cross-tabulations, charts and flow diagrams.  Small numbers are masked in all output according to the rules set out in the HSCIC’s guidelines.  It is not possible to see record level results.  \nEach output is filtered to include the data relevant to the question being asked, and is then cross-tabulated by variables important to the analysis, such as hospital trust or patient diagnosis to provide the data necessary to meet the objectives outlined above.  \nAnalyses are both conducted as a one off or updated on an ongoing basis to monitor changes within care provision.  \nCSL does not make the data available to clients for marketing purposes, and does not provide healthcare professional level data to clients to ensure that it cannot be used for targeting or direct marketing.  \nExpected measurable benefits to health and/or social care including target date:\nCSL are delivering the following benefits to the English healthcare system:\n•\tProviding data to support cost benefit analyses to assist commissioning and/or reduce treatment costs. For example, enabling users to identify avoidable hospital admissions and monitoring levels of hospital acquired infections.  E.g. In a recent study for a local CCG CSL were able to demonstrate that their patients were receiving far more of a particular operation than would be expected, enabling them to review this with the trusts delivering the care.  \n•\tHelping NHS suppliers to identify joint working opportunities with hospital trusts or CCGs to deliver cost savings or enhance patient care services\n•\tIdentification of potential for efficiency gains in healthcare provision\nEvaluation of adherence to pathway guidelines and to create evidence based comparisons of patient journeys treated at different trusts. E.g. CSL are working with a medical supplies provider to measure the adherence to NICE guidelines in patients undergoing anesthesia, to enable them to highlight where patient care could be improved.  \nCSL is providing the NHS and those offering products and services to it with a toolset to enable them to analyse data, and in some cases consultancy to help them understand the results.  CSL charges for these services."
+ }
+}

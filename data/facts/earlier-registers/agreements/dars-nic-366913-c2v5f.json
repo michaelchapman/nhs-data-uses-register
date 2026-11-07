@@ -1,0 +1,204 @@
+{
+ "base_reference": "DARS-NIC-366913-C2V5F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-366913-C2V5F",
+   "version": "",
+   "organisation": "University College London Hospitals NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "116a89242aa8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-366913-C2V5F-v0.0",
+   "version": "0.0",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-05-25",
+    "2018-10-01",
+    "2019-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-10-01",
+      "2019-01-01"
+     ],
+     "objective": "fd4e7e5f8296",
+     "activities": "889af9c00920",
+     "expected_output": "1edec471b793",
+     "expected_benefits": "ef5f0cb1ab5b"
+    },
+    {
+     "periods": [
+      "2018-05-25"
+     ],
+     "objective": "fd4e7e5f8296",
+     "activities": "889af9c00920",
+     "expected_output": "1edec471b793",
+     "expected_benefits": "dd0198d31de9"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2017-09-01",
+      "2017-12-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-366913-C2V5F-v1.12",
+   "version": "1.12",
+   "organisation": "National Institute for Health Research",
+   "organisation_type": "",
+   "listed": [
+    "2019-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-09-01"
+     ],
+     "objective": "de5f476ba5dc",
+     "activities": "0c808677f92f",
+     "expected_output": "c7f73b1e3a93",
+     "expected_benefits": "799d18fad04c",
+     "yielded_benefits": "6c19a380bd31"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-366913-C2V5F-v2.2",
+   "version": "2.2",
+   "organisation": "National Institute for Health Research",
+   "organisation_type": "Research",
+   "listed": [
+    "2020-11-01",
+    "2020-12-01",
+    "2021-03-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "objective": "de5f476ba5dc",
+     "activities": "0c808677f92f",
+     "expected_output": "c7f73b1e3a93",
+     "expected_benefits": "799d18fad04c",
+     "yielded_benefits": "6c19a380bd31"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Demographics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-11-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 5
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0c808677f92f": "NHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).  \n\nThe National Institute of Health Research (NIHR) Clinical Research Network Coordinating Centre (NIHR CRNCC) will periodically (on an ad-hoc basis - every four months) provide NHS Digital with lists of registrants. The lists will include \n\n• Name, \n• Date of birth, \n• NHS number (if available), \n• Address, \n• Postcode\n• Gender.\n \nUsing its List Cleaning product, NHS Digital will confirm back to NIHR CRNCC which registrants are deceased. NHS Digital will send back a Member Number (Study ID), supplied identifiers (minus NHS Number) and the fact of death (if applicable) back to the University of Leeds. This will happen each quarter. The data provided by NHS Digital is then used to remove deceased registrants from the secure JDR platform. Only staff with appropriate permissions are able to access the JDR platform to perform edits.  The JDR platform is hosted in a cloud environment. NIHR CRNCC information services are managed by PA Consulting  via a direct contract with the DHSC.  PA Consulting employees do not have any access to the data provided by NHS Digital, they do not act in a processing or controlling capacity. Once the deceased registrants have been removed from the Register, the data supplied by NHS Digital is permanently deleted. The data provided by NHS Digital will not be shared, or processed by any third party and no third party can access records of registrants deleted from the register to identify which were reported as deceased by NHS Digital.\n\nThese data processing activities are only carried out by substantive employees of the data processors who are aware of data protection and confidentiality requirements and are trained in their responsibilities for this.",
+  "116a89242aa8": "A regular list cleaning service for the ‘Join Dementia Research’ register in order to comply with the Data Protection Act. List cleaning will enable the removal of volunteers who have died from the register. This will keep it up to date and accurate. This will also reduce the risk of correspondence being sent to deceased volunteers which could cause undue distress to family members.",
+  "1edec471b793": "The link to HSCIC will lead to the removal of records of deceased patients from the register which enables ‘Join Dementia Research’ to comply with the following undertaking from the consent forms used when recruiting patients:\n“I understand that if I withdraw, or after my death, then all identifiable information will be removed from ‘Join dementia research’.”\nThe timely removal of deceased patients records will reduce the chances of contacting people who are deceased.\nThe register will be updated at least quarterly and possibly more frequently.",
+  "6c19a380bd31": "Using the NHS List Cleaning Product has yielded several benefits to several parties:\n\n• NIHR CRNCC has been able to remove several hundred deceased volunteers, enabling the Register to meet its required standards;\n• NIHR CRNCC is able to maintain the currency of the JDR Register;\n• NIHR CRNCC is able to prevent undue distress to JDR Registrants or their families by ensuring the research staff do not contact bereaved families;\n• NIHR CRNCC is able keep its promise to JDR Registrants and/or their families by ensuring the Registrant’s details are removed from the Register upon death;\n• The currency of the Register fosters trust between individuals and encourages participants to sign up;\n• Increased numbers signing up to the Register increases the likelihood of the JDR system being able to meet the PM challenge.\n\nThe JDR Register ensures a steady supply of research participants to research studies for which they may have been matched. This increases the level of research into dementia, the potential for improving treatments for those with dementia and the likelihood of finding a cure for this terrible disease.\n• Nearly 40,000 volunteers have signed up to JDR to be contacted about Research opportunities, from these over 11,000 volunteers have been enrolled into research studies. JDR has been used on over 330 research studies in over 250 NHS, University and commercial sites.  \n\nData that has been supplied/will continue to be supplied from NHS Digital will not be used in support af a particular PhD or post graduate research study.",
+  "799d18fad04c": "The report provided by NHS Digital is used to cleanse the JDR Register of deceased registrants, thereby ensuring the Register is kept current and no untoward distress is caused to relatives/families by inappropriate contact being made. Maintaining an up-to-date Register is a benefit to both the NIHR CRNCC, DHSC and the Office of the National Director for Dementia Research. The removal of deceased registrants is a key benefit to all of the above agencies but particularly to families of the deceased. It furthers trust between the NIHR CRNCC, and registrants as it ensures CRNCC is able to fulfil its obligations to registrants in a timely manner.\n\nThe report from NHS Digital benefits the provision of health care by enabling NIHR CRNCC via Join Dementia Research to be able to process data fairly without unintentionally breaching the undertaking given to volunteers that their identifiable information will be removed from the register after their deaths. \n\nIn terms of benefits to the promotion of health, Join Dementia Research has been running since July 2014, and was nationally launched in February 2015. By February 2019 the Register had over 39,500 volunteers and had supported more than 11,000 instances of recruitment to dementia research studies in the UK.  Join Dementia Research aims to support the PM Challenge target to ensure 10% of all people with dementia are involved in dementia research. The benefits of the JDR system include the following: \n\n• The system enables everyone in the country aged over 18 to have an opportunity to express an interest in being involved in research.\n• All dementia research studies taking place in the UK (funded by government, NIHR, charities and commercial organisations) with ethical approval can use the system.\n• JDR provides a new and improved way of identifying and recruiting volunteers into vitally important dementia research studies; the traditional way of recruiting dementia research volunteers is through NHS memory clinics, a method that takes time, as researchers wait for suitable subjects to come through clinic. Join dementia research removes this barrier, by having volunteers ready and waiting to join studies. \n• All dementia research studies will recruit more quickly, saving time and money. Currently over 70% of research studies exceed recruitment target times, this system will speed up those times. \n• As a result of studies being concluded more quickly, this ensures that the findings from those studies can be acted upon and implemented or considered for the benefit of patients and the public. \n• The service will also help ensure that studies funded and delivered across the world could be attracted to take place in the UK. \n• The studies look at prevention, diagnosis, treatment, care and potentially cures for people living with dementia. \n• Over the next 2 years NIHR CRNCC expect the service to have attracted over 100,000 volunteers and to become the main mechanism by which researchers find study volunteers.\n\nCompleting the removal of deceased registrant details will ensure a reduction in the risk of causing distress to families/relatives by attempting to contact members of the Register who have deceased. \n\nWithout this data dissemination, there is a danger that the JDR Register would not be up to date. It would also not allow the NIHR CRNCC to fulfil its promise to registrants, this being:\n““I understand that if I withdraw, or after my death, then all identifiable information will be removed from Join Dementia Research”.",
+  "889af9c00920": "University College London Hospitals NHS Foundation Trust (UCLH) will periodically provide HSCIC with lists of identifying details of patients from the register.  The lists will include name, date of birth, NHS number, postcode and gender  Using its List Cleaning service, the HSCIC will confirm which patients are deceased. The information is then used to remove deceased patients from the register. Once the deceased patients have been removed from the register, the data supplied by the HSCIC will be permanently deleted.  The data provided by HSCIC will not be shared, or processed by any third party and no third party can access records of patients deleted from the register to identify which were reported as deceased by the HSCIC.",
+  "c7f73b1e3a93": "NHS Digital will utilise the list provided by NIHR CRNCC to produce a report for the CRNCC which will clearly show which of the JDR registrants have deceased.  The report will include name, date of birth, NHS number, address, postcode and gender for JDR registrants at that point in time and will further be marked up to identify those who have deceased. There will be no other information provided from NHS Digital than fact of death - no details of cause, date or locaiton of death (if available) will be given.\n \nCRNCC JDR staff will then use this report to edit the JDR Registry. The records of deceased registrants will be removed from the register which enables Join Dementia Research͛ to comply with the following undertaking from the consent forms used when recruiting volunteers: \n“I understand that if I withdraw, or after my death, then all identifiable information will be removed from Join dementia research”.\n\nThe timely removal of deceased registrant records will reduce the chances of attempting to contacting people who are deceased / family members of deceased volunteers thereby preventing added distress. The JDR Register will be updated each time the report is sent.\n \nThis is the extent of the activity associated with this report. Once deceased registrants have been removed from the JDR Register, the information provided by NHS Digital is then permanently deleted.\n\nThe information provided by NHS Digital is used for a very specific objective i.e.data cleansing, in order to maintain the currency of the JDR Registry and to ensure NIHR CRNCC fulfils it’s promise to registrants that upon death, their identifiable information will be removed. The information provided is used for this purpose only and not for any further research purpose. There will be no supplementary reports, journal articles, webinars or workshops created.\n\nThere will be no creation/development of algorithms or testing of new tools and new technologies intended to be made using the data that NHS Digital will provide.",
+  "dd0198d31de9": "The benefits are that ‘Join Dementia Research’ will be able to process data fairly without unintentionally breaching the undertaking given to volunteers that their identifiable information will be removed from the register after their deaths and a reduction in the risk of causing distress by attempting to contact members of the cohort that have deceased.\nThe following information provides background on ‘Join Dementia Research’:\nThe service has been running since July 2014, and was nationally launched in February 2015. The benefits described are already being recognized, but they will increase over the next 2-3 years and the register grows.\nBenefits of the register - \n‘Join dementia research’ has been funded by the Department of Health and is delivered in partnership with the National Institute for Health Research, Alzheimer Scotland, Alzheimer’s Research UK and the Alzheimer’s Society. Its development was prompted by the Prime Ministers Challenge on Dementia, and it’s purpose is to support the PM Challenge target to ensure 10% of all people with dementia are involved in dementia research.\nThe benefit of this being that:\na. The system enables everyone in the country aged over 18 has an opportunity to express an interest in being involved in research.\nb. All dementia research studies taking place in the UK (funded by government, NIHR, charities and commercial organizations) with ethical approval can use the system. Providing a new and improved way of identifying and recruiting volunteers into vitally important dementia research studies.\nc. The traditional way of recruiting dementia research volunteers, in through NHS memory clinics. This method takes time, as researchers wait for suitable subjects to come through clinic. Join dementia research removes this barrier, by having volunteers ready and waiting to join studies. All dementia research studies will recruit more quickly, saving time and money. Currently over 70% of research studies exceed recruitment target times, this system will speed up those times.\nd. As a result of studies being concluded more quickly, we can ensure that the findings of those studies can be acted upon and implemented or considered for the benefit of patients and the public. The service will also help ensure that studies funded and delivered across the world could be attracted to take place in the UK.\ne. The studies look at prevention, diagnosis, treatment, care and potentially cures for people living with dementia.\nf. Over the next 12-18 months we expect the service to have attracted 100,000 volunteers and to become the main mechanism by which researchers find study volunteers.\ng. The system is already supporting recruitment to 29 studies (over half of all studies on the NIHR CRN portfolio) and has recruited 219 (over 10%) of all participants into research studies which as the PROTECT study at Kings College, an important study which gathers data to support innovative research to improve our understanding of the ageing brain and why people develop dementia, and EXPEDITION 3 and Eli Lilly study which is testing a new medication for people with mild early dementia symptoms.\nh. The service was nationally launched in February, it was announced in the media and here is a link to the press release with comments from Secretary of State for Health and Chief Medical Officer http://news.joindementiaresearch.nihr.ac.uk/press-pack-toolkit/\ni. It will contribute to delivery of the Prime Minister Challenge on Dementia target of having 10% of all people with dementia involved in research.\nwww.joindementiaresearch.nihr.ac.uk",
+  "de5f476ba5dc": "The Join Dementia Research register is a national service funded and owned by the Department of Health and Social Care; it enables members of the public to register to be contacted about potential research studies. In registering they consent for their information to be available to the dementia research community.  The data subjects are those that have registered to be part of JDR. This may be those who have dementia or carers, friends, relatives of those with dementia.\n\nJDR is a UK-wide service that allows people to register their interest in participating in dementia research and be matched to suitable studies via website and database and is a key element of the Prime Minister’s Challenge on Dementia 2020.\n\nThe Data Controller has always been the Department of Health and Social Care, however contract arrangements for the management of the service have changed over time. Under the previous contractual arrangement for the operational management of the service, the responsibility for data cleaning lay with University College London, who then acted as Data Processor. \n\nUnder the current contractual arrangement, the operational management of the JDR Service is through the NIHR Clinical Research Network Coordinating Centre (NIHR CRNCC). The NIHR CRNCC is delivered under contract between DHSC and a consortium arrangement between the University of Leeds and Guy’s and St Thomas’ NHS Foundation Trust.  \n\nThe delivery of the JDR Service is managed by the CRNCC through an Optional Services Work Order between the DHSC and the consortium of the University of Leeds and Guy’s and St Thomas’ NHS Foundation Trust. (GSTT)\n\nThe way the contract of the consoritum is structured means that most employees who work on the JDR Registry for the CRNCC are employed by University of Leeds (the majority) but one employee is substantively employed by GSTT. The data that this one member of staff (who works for CRNCC but is employed by GSTT) deals with is processed via the CRNCC systems and does not go into any systems operated/housed or held by GSTT.\n\nDHSC is the Data Controller for the JDR Service. CRNCC administers the Service (along with Charity Partners) on behalf of the DHSC and thus University of Leeds and Guys's and St Thomas' NHS Foundation Trust are Data Processors. Primary funding comes from the NIHR. No other funders / commissioners are involved. \n\nThe DHSC remains the Data Controller whilst the NIHR CRNCC processes the data in accordance with the Optional Services Work Order between DHSC and the consortium of the University of Leeds and Guy's and St Thomas' NHS Foundation Trust.  This means that University College London no longer play a role in the Service and are no longer listed as data processors.\n\nThe Article 6 justification for processing the data is Article 6 (1)(e) of the GDPR - (processing is necessary for the performance of a task in the public interest or in the exercise of official authority vested in the controller). The Department of Health is a public authority, performing it's public task to provide the services to deliver research into dementia.\nThe Article 9 justification for the processing of special categories of personal data is Article 9 ( 2)(j) of the GDPR - processing is necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) based on Union or Member State law which shall be proportionate to the aim pursued, respect the essence of the right to data protection and provide for suitable and specific measures to safeguard the fundamental rights and the interests of the data subject). Data must be processed in this way to allow the registry to be maintained correctly - so that research into dementia can continue.\n\nThe list cleaning product requested from NHS Digital will ensure people who are deceased are removed from the Department of Health and Social Care (DHSC) Join Dementia Research System. By removing deceased volunteers it will ensure potential research volunteers are not harmed or distressed by attempting to contact people who have died.  Without this product, it would be far more difficult for the Join Dementia Research System to be kept up to date. \n\nThe purpose of this agreement is to send NHS Digital information on all volunteers from the register on an ad-hoc basis (every four months). NHS Digital will simply confirm if any of the volunteers have died by supplying fact of death. No other updated demographics will be provided to the NIHR CRNCC at the University of Leeds. There are no other efficient means of obtaining this data. There is no wider collaboration or use of the data intended other than what is stated in this agreement.\n\nThe data requested is not intended nor will it be used for any PhD studies or projects.\n\nNHS Digital will not disseminate data that will be used directly in Dementia Research Studies. Moreover, NHS Digital provide the CRNCC with updated lists of registrants to the JDR platform, to let them know who is deceased, and therefore who can continue to be contacted by the JDR about future potential studies. that they potentially could be involved in. This cleaning of the data is essential to ensure that no stress is caused to family members of deceased, and that only suitable candidates are approached to make research as robust and accurate as possible. It should be remembered that the service managed by CRNCC is a JDR Register i.e. the staff are not involved directly in contacting individuals about research studies. That is done by qualified research professionals and research studies are managed by health professionals; registrants have a choice about whether or not to be involved in any research study.",
+  "ef5f0cb1ab5b": "The benefits are that ‘Join Dementia Research’ will be able to process data fairly without unintentionally breaching the undertaking given to volunteers that their identifiable information will be removed from the register after their deaths and a reduction in the risk of causing distress by attempting to contact members of the cohort that have deceased.\nThe following information provides background on ‘Join Dementia Research’:\nThe service has been running since July 2014, and was nationally launched in February 2015. The benefits described are already being recognized, but they will increase over the next 2-3 years and the register grows.\nBenefits of the register - \n‘Join dementia research’ has been funded by the Department of Health and is delivered in partnership with the National Institute for Health Research, Alzheimer Scotland, Alzheimer’s Research UK and the Alzheimer’s Society. Its development was prompted by the Prime Ministers Challenge on Dementia, and it’s purpose is to support the PM Challenge target to ensure 10% of all people with dementia are involved in dementia research.\nThe benefit of this being that:\na.\tThe system enables everyone in the country aged over 18 has an opportunity to express an interest in being involved in research.\nb.\tAll dementia research studies taking place in the UK (funded by government, NIHR, charities and commercial organizations) with ethical approval can use the system. Providing a new and improved way of identifying and recruiting volunteers into vitally important dementia research studies.\nc.\tThe traditional way of recruiting dementia research volunteers, in through NHS memory clinics. This method takes time, as researchers wait for suitable subjects to come through clinic. Join dementia research removes this barrier, by having volunteers ready and waiting to join studies. All dementia research studies will recruit more quickly, saving time and money. Currently over 70% of research studies exceed recruitment target times, this system will speed up those times.\nd.\tAs a result of studies being concluded more quickly, we can ensure that the findings of those studies can be acted upon and implemented or considered for the benefit of patients and the public. The service will also help ensure that studies funded and delivered across the world could be attracted to take place in the UK.\ne.\tThe studies look at prevention, diagnosis, treatment, care and potentially cures for people living with dementia.\nf.\tOver the next 12-18 months we expect the service to have attracted 100,000 volunteers and to become the main mechanism by which researchers find study volunteers.\ng.\tThe system is already supporting recruitment to 29 studies (over half of all studies on the NIHR CRN portfolio) and has recruited 219 (over 10%) of all participants into research studies which as the PROTECT study at Kings College, an important study which gathers data to support innovative research to improve our understanding of the ageing brain and why people develop dementia, and EXPEDITION 3 and Eli Lilly study which is testing a new medication for people with mild early dementia symptoms.\nh.\tThe service was nationally launched in February, it was announced in the media and here is a link to the press release with comments from Secretary of State for Health and Chief Medical Officer http://news.joindementiaresearch.nihr.ac.uk/press-pack-toolkit/\ni.\tIt will contribute to delivery of the Prime Minister Challenge on Dementia target of having 10% of all people with dementia involved in research.\nwww.joindementiaresearch.nihr.ac.uk",
+  "fd4e7e5f8296": "The ‘Join dementia research’ register is a national service funded by the Department of Health; it enables members of the public to register to be contacted about potential research studies. In registering they consent for their information to be available to the dementia research community\n\nThe link requested to HSCIC information will ensure people who are deceased are removed from the Department of Health (DOH) letter states that the ‘delegation will run up until September 2015’the ‘register’ of potential research volunteers to ensure that no harm or distress is caused by contacting people who have died.\nThe intention is to send HSCIC information on all volunteers from the register on a monthly or quarterly basis (depending on cost). The HSCIC will simply confirm if any of the volunteers have died by supplying fact of death. No updated demographics will be provided to University College London (UCL)."
+ }
+}

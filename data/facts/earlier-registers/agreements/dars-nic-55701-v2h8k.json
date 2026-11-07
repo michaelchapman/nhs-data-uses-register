@@ -1,0 +1,110 @@
+{
+ "base_reference": "DARS-NIC-55701-V2H8K",
+ "versions": [
+  {
+   "reference": "DARS-NIC-55701-V2H8K",
+   "version": "",
+   "organisation": "NHS TOWER HAMLETS CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "a451346aead0",
+     "activities": "5ca240e37779",
+     "expected_output": "e877a5111cb7",
+     "expected_benefits": "eb70d0ac1e88"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Children and Young People's Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Local Provider Data - Acute, Ambulance, Community, Demand for Service, Diagnostic Services, Emergency Care, Experience Quality and Outcomes, Mental Health, Other not elsewhere classified, Population Data, Primary Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "5ca240e37779": "North East London DSCRO will apply Type 2 objections before any identifiable data leaves the DSCRO.\nThe CCG and any Data Processor will only have access to records of its own CCG. Access is limited to substantive employees with authorised user accounts used for identification and authentication on a need to know basis only.\nInvoice Validation\n1. SUS Data is obtained from the SUS Repository to North East London Data Services for Commissioners Regional Office (DSCRO). \n2. North East London DSCRO de-identifies the data and pushes a one-way data flow of SUS data anonymised in line with the ICO Code of Practice and using the local identifiers into the Controlled Environment for Finance (CEfF) in the North East London CSU.\n3. The CSU carry out the following processing activities within the CEfF for invoice validation purposes: \na. Checking the individual is registered to a particular Clinical Commissioning Group (CCG) and associated with an invoice from the national SUS data flow to validate the corresponding record in the backing data flow\nb. Once the backing information is received, this will be checked against national NHS and local commissioning policies as well as being checked against system access and reports provided by the HSCIC to confirm the payments are:\ni. In line with Payment by Results tariffs\nii. are in relation to a patient registered with a CCG GP or resident within the CCG area.\niii. The health care provided should be paid by the CCG in line with CCG guidance.\nIdentifiable data supplied by the provider will only flow when SUS data is not available for a particular service. The identifiable data cannot be used to re-identify the Pseudonymised SUS data provided for invoice validation.\n4. The CCG are notified that the invoice has been validated and can be paid.\n5.  Any discrepancies or non-validated invoices are investigated and resolved between the CSU CEfF team and the provider using the local patient ID and local event ID. The local identifiers must only be used for the purpose of contract monitoring to ensure sound financial management, challenge of costs or data between commissioner and provider and the prevention and possible investigation of any fraudulent or potentially fraudulent acts.\n6. The CCG only receives notification to pay and management reporting detailing the total quantum of invoices received pending, processed etc.\n\nCommissioning (Pseudonymised) SUS\nData Processor 1 – NEL CSU\n1. North East London Data Services for Commissioners Regional Office (DSCRO) obtains a flow of SUS identifiable data for the CCG from the SUS Repository. North East London DSCRO also obtains identifiable local provider data for the CCG directly from Providers.  \n2. Data quality management and pseudonymisation of data is completed by the DSCRO and the pseudonymised data is then passed securely to North East London CSU for the addition of derived fields, linkage of data sets and analysis. Allowed linkage is between SUS data sets and local flows.\n3. North East London CSU then pass the processed, pseudonymised and linked data to the CCG. The CCG analyse the data to see patient journeys for pathways or service design, re-design and de-commissioning. \n4. Aggregation of required data for CCG management use will be completed by the CSU or the CCG as instructed by the CCG.\n5. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place. \n\nData Processor 2 – Queen Mary University of London\n1. Data Services for Commissioners Regional Office (DSCRO) North East London obtains a flow of SUS identifiable data for the CCG from the SUS Repository. \n2. Data quality management and pseudonymisation of data is completed by the DSCRO and the pseudonymised data is then passed securely to North East London CSU. \n3. North East London CSU then pass the processed, pseudonymised SUS data to The Clinical Effectiveness Group within Queen Mary University of London (Data Processor 2). \n4. Queen Mary University of London process the data on behalf of the CCG to evaluate clinical outcomes and recommend best practice with regard to long term conditions and other health priorities within the area and securely transfer the pseudonymised patient level output to the CCG.\n5. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place.\n\nCommissioning (Pseudonymised) – SUS, Local Flows, Mental Health, MSDS, IAPT, CYPHS and DIDS\n1. Data Services for Commissioners Regional Office (DSCRO) North East London obtains a flow of SUS identifiable data for the CCG from the SUS Repository and identifiable local provider data directly from Providers. \n2. Data Services for Commissioners Regional Office (DSCRO) North East London obtains a flow of data identifiable at the level of NHS number for Mental Health (MHSDS, MHMDS, MHLDDS), Maternity (MSDS), Improving Access to Psychological Therapies (IAPT), Child and Young People’s Health (CYPHS) and Diagnostic Imaging (DIDS) for commissioning purposes.\n3. Data quality management and pseudonymisation of data is completed by DSCRO North East London and the pseudonymised data is then passed securely to North East London CSU for the addition of derived fields, linkage and analysis. \n4. North East London CSU then pass the processed, pseudonymised and linked data to the CCG.\n5. The CCG analyses the data to see patient journeys for pathway or service design, re-design and de-commissioning\n6. Aggregation of required data for CCG management use will be completed by the CSU or the CCG as instructed by the CCG \n7. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared where contractual arrangements are in place.",
+  "a451346aead0": "Invoice Validation \nAs an approved Controlled Environment for Finance (CEfF), the data processor receives SUS data anonymised in line with the ICO Code of Practice and using the local identifiers to undertake invoice validation on behalf of the CCG. The CCG are advised by the CSU whether payment for invoices can be made or not.\n\nCommissioning (Pseudonymised) – SUS, Local Flows, Mental Health, Maternity, IAPT, CYPHS and DIDS\nTo use pseudonymised data for the following datasets to provide intelligence to support commissioning of health services :\n- Mental Health Minimum Data Set (MHMDS)\n- Mental Health Learning Disability Data Set (MHLDDS)\n- Mental Health Services Data Set (MHSDS)\n- Maternity Services Data Set (MSDS)\n- Improving Access to Psychological Therapy (IAPT)\n- Child and Young People Health Services (CYPHS)\n- Diagnostic Imaging Data Set (DIDS)\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\n\nCommissioning (Pseudonymised) – SUS \nTo use pseudonymised data to provide intelligence to support commissioning of health services, using Queen Mary University of London as Data Processor. The pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of pseudonymised SUS data.\nThe CCGs commission services from a range of providers covering a wide array of services. The SUS data flow requested supports the commissioned activity of one or more providers. \n\nNo record level data will be linked other than as specifically detailed within this application/agreement. Data will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data, but only that data relating to the specific locality of interest of the applicant.\nData may only be used for the purposes outlined within the Data Sharing Agreement and must not be used for any other purpose.",
+  "e877a5111cb7": "Invoice Validation\n1. Addressing poor data quality issues \n2. Production of reports for business intelligence\n3. Budget reporting\n4. Validation of invoices for non-contracted events\n\nCommissioning (Pseudonymised)  – SUS and Local Flows\nPara 3d)\n1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of acute / community / mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports include high flyers.  \n\nCommissioning (Pseudonymised) SUS, Local Flows, Mental Health, Maternity, IAPT, CYPHS and DIDs\n1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports include high flyers.",
+  "eb70d0ac1e88": "Invoice Validation\n1. Financial validation of activity \n2. CCG Budget control\n3. Commissioning and performance management\n4. Meeting commissioning objectives without compromising patient confidentiality \n5. The avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care\n\nCommissioning (Pseudonymised) – SUS and Local Flows\n1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against 18 weeks wait targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows.\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.\ni. Understanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.      \n7. Auditing A&E attendances and related hospital admissions\n\nCommissioning (Pseudonymised)  – Mental Health, Maternity, IAPT, CYPHS and DIDS\n1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, Integrated care and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.\ni. Understanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers."
+ }
+}

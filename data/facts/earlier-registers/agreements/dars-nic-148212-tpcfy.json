@@ -1,0 +1,72 @@
+{
+ "base_reference": "DARS-NIC-148212-TPCFY",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148212-TPCFY",
+   "version": "",
+   "organisation": "CTSU",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "objective": "f67128898e39"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "8ee7b8be3b00"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "8ee7b8be3b00": "The data supplied by NHS IC to Clinical Trial Support Unit will be used only for the approved Medical Research Project identified above.",
+  "f67128898e39": "To test the following questions relating to the treatment of children with Acute Lymphoblastic Leukaemia (ALL). Randomised. (1) Can treatment be reduced without compromising efficacy in a MRF-defined low risk group. (2) Does further post-remission intensification improve outcome for a MRD- defined high risk group. (3) What is the effect of treatment on childrens quality of  life. NON Randomised. What is the frequency of sensitsation to asparaginase and its impact of effiacy to a second exposure to the drug."
+ }
+}

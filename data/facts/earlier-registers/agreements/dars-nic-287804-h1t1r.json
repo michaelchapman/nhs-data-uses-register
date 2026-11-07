@@ -1,0 +1,166 @@
+{
+ "base_reference": "DARS-NIC-287804-H1T1R",
+ "versions": [
+  {
+   "reference": "DARS-NIC-287804-H1T1R",
+   "version": "",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "8c00023b8e66"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "3e23d2ae657a"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "1db6e1c4e532"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: Scottish events",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data and Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-287804-H1T1R-v1.3",
+   "version": "1.3",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "objective": "e83bf7a26d34",
+     "activities": "75d8a5ebe5f1",
+     "expected_output": "db7950363dfe",
+     "expected_benefits": "329c17dbcefd"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "1db6e1c4e532": "Aim: to compare the mortality from ruptured abdominal aortic aneurysm (AAA) in patients treated by an endovascular first strategy versus the conventional treatment of immediate open repair.\nSize of the trial: the trial plans to recruit 600 patients over a 27 month period, to provide 90% power to detect (as significant at 5%) a difference in 30-day mortality of 14%, with mortality estimated at 44.6% in the open repair group and 30.4% in the EVAR first strategy group.",
+  "329c17dbcefd": "1.\tTo enable discrimination between aneurysm-related and other causes of death in the mid-term, as well as full patient follow up for mortality, following endovascular or open repair of ruptured abdominal aortic aneurysm: 2015-2017.\n2.\tTo benefit all future patients admitted to hospital with a diagnosis of ruptured abdominal aortic aneurysm (from 2015)\n3.\tTo drive organizational changes, so that endovascular repair becomes available to all patients with ruptured abdominal aortic aneurysm (from 2015)",
+  "3e23d2ae657a": "Objective for processing:\nTo provide a robust alternative assessment of the use of health service resources by patients enrolled in IMPROVE (ISRCTN48334791), a randomised trial of an endovascular strategy versus open repair for patients with a clinical diagnosis of ruptured abdominal aortic aneurysm.  \nOur current source of information on the use of health services after hospital discharge comes primarily from patient-questionnaires (returned by about 80%) of each randomised group, supported by available information from the specialist vascular centres where these patients were treated.  To enhance the generalisability and robustness of cost and cost-effectiveness evaluations, Imperial wish to cross-check both aneurysm-related re-interventions (list A) and hospital re-admissions (any hospital for any reason) data, to validate the information collected from relevant trial hospitals and patients with HES admissions/procedures data. \nHES data for admissions, procedures, length of hospital stay is requested for specified patients, to provide details of hospital resources used between discharge and 3 years.  Ethical approvals are in place to support the collection of data.\nSince the primary outcome of the trial, 30-day mortality, was not different between the two randomised groups (BMJ 2014;348:f7661), accurate cost and cost-effectiveness evaluations of the 2 treatments have particular relevance for the NHS.\nProcessing activities:\nThe data will be processed in the offices of the Vascular Surgery Research Group in Room 4N12 at Charing Cross Hospital on a non-networked dedicated computer with built-in BitLocker encryption (i.e. full disk encryption) in a secure office only accessible to researchers for the purpose of this application.  Such researchers will have full IGT training, and the data may only be viewed on this specific computer (i.e. no mobile or remote working).  It will not be saved on any other trial database in any other location.  Once the data has been checked and cleaned, it will be fully pseudonymised on this same stand-alone computer and all patient identifying details removed and only the trial ID will be carried through during data analysis.\n\nHealth economists at the London School of Hygiene and Tropical Medicine (LSHTM) have a formal subcontract from Imperial College, to undertake the health economic analysis for the trial.  The health economists will access the pseudonymised data at Charing Cross Hospital (at the Imperial College site and under the controls/policies of Imperial College).\nSpecific outputs expected, including target date:\n1 Cost-effectiveness of an endovascular strategy versus open repair 1-year after rupture of an abdominal aortic aneurysm [for major journal publication, Health Technology Assessment (HTA) report and reporting to the National Institute for Health and Care Excellence (NICE)for April 2015.\n2 Cost-effectiveness of an endovascular strategy versus open repair 3-years after rupture of an abdominal aortic aneurysm (for major journal publication and reporting to NICE) for December 2016.\nThese 2 major outcomes also will be reported at conferences and via social media outlets. \nAll outputs will consist of aggregate data only with small numbers suppressed in line with HES analysis guide.\nExpected measurable benefits to health and/or social care including target date:\n1 To add to the accuracy of the cost-effectiveness and the incremental net benefit of an endovascular strategy for repair of ruptured abdominal aortic aneurysm: 2015-2017.\n2 To benefit all future patients admitted to hospital with a diagnosis of ruptured abdominal aortic aneurysm (from 2015).\n3 To drive organisational changes, so that endovascular repair becomes available to all patients with ruptured abdominal aortic aneurysm (from 2015).",
+  "75d8a5ebe5f1": "The data will be processed in the offices of the Vascular Surgery Research Group in Room 4N12 at Charing Cross Hospital (Imperial College Healthcare NHS Trust) on a non-networked dedicated computer with built-in  BitLocker encryption (i.e. full disk , encryption) password-protected computer in a secure office only accessible to the trial manager, who is employed by Imperial College London, but has a Research Passport and Letter of Access with Imperial College Healthcare NHS Trust.  The trial manager has had IGT training and will comply with the principles of the Data Protection Act 1998 at all times when processing/storing personal information. Identifiable personal information will *only* be viewed by the trial manager on this specific computer (i.e. no mobile or remote working)\nData will then be fully pseudonymised by removing all identifiable information, and a file containing four digit Trial ID and category (10 used) of underlying cause of death will be analysed by the statistician, who is based at the University of Cambridge, but he will carry out the analysis at Imperial College Charing Cross Campus under  the controls and policies of Imperial College).",
+  "8c00023b8e66": "Objective for processing: To provide a robust alternative assessment of the use of health service resources by patients enrolled in IMPROVE (ISRCTN48334791), a randomised trial of an endovascular strategy versus open repair for patients with a clinical diagnosis of ruptured abdominal aortic aneurysm. Our current source of information on the use of health services after hospital discharge comes primarily from patient-questionnaires (returned by about 80%) of each randomised group, supported by available information from the specialist vascular centres where these patients were treated. To enhance the generalisability and robustness of cost and cost-effectiveness evaluations, Imperial wish to cross-check both aneurysm-related re-interventions (list A) and hospital re-admissions (any hospital for any reason) data, to validate the information collected from relevant trial hospitals and patients with HES admissions/procedures data. HES data for admissions, procedures, length of hospital stay is requested for specified patients, to provide details of hospital resources used between discharge and 3 years. Ethical approvals are in place to support the collection of data. Since the primary outcome of the trial, 30-day mortality, was not different between the two randomised groups (BMJ 2014;348:f7661), accurate cost and cost-effectiveness evaluations of the 2 treatments have particular relevance for the NHS. Processing activities: The data will be processed in the offices of the Vascular Surgery Research Group in Room 4N12 at Charing Cross Hospital on a non-networked dedicated computer with built-in BitLocker encryption (i.e. full disk encryption) in a secure office only accessible to researchers for the purpose of this application. Such researchers will have full IGT training, and the data may only be viewed on this specific computer (i.e. no mobile or remote working). It will not be saved on any other trial database in any other location. Once the data has been checked and cleaned, it will be fully pseudonymised on this same stand-alone computer and all patient identifying details removed and only the trial ID will be carried through during data analysis. Health economists at the London School of Hygiene and Tropical Medicine (LSHTM) have a formal subcontract from Imperial College, to undertake the health economic analysis for the trial. The health economists will access the pseudonymised data at Charing Cross Hospital (at the Imperial College site and under the controls/policies of Imperial College). Specific outputs expected, including target date: 1 Cost-effectiveness of an endovascular strategy versus open repair 1-year after rupture of an abdominal aortic aneurysm [for major journal publication, Health Technology Assessment (HTA) report and reporting to the National Institute for Health and Care Excellence (NICE)for April 2015. 2 Cost-effectiveness of an endovascular strategy versus open repair 3-years after rupture of an abdominal aortic aneurysm (for major journal publication and reporting to NICE) for December 2016. These 2 major outcomes also will be reported at conferences and via social media outlets. All outputs will consist of aggregate data only with small numbers suppressed in line with HES analysis guide. Expected measurable benefits to health and/or social care including target date: 1 To add to the accuracy of the cost-effectiveness and the incremental net benefit of an endovascular strategy for repair of ruptured abdominal aortic aneurysm: 2015-2017. 2 To benefit all future patients admitted to hospital with a diagnosis of ruptured abdominal aortic aneurysm (from 2015). 3 To drive organisational changes, so that endovascular repair becomes available to all patients with ruptured abdominal aortic aneurysm (from 2015).",
+  "db7950363dfe": "Mortality following endovascular strategy versus open repair 3-years after repair of a  rupture of an abdominal aortic aneurysm [for major journal publication, HTA report and reporting to NICE] for December 2016\nThis major outcome also will be reported at conferences and via relevant charities, patient groups and social media outlets.",
+  "e83bf7a26d34": "To facilitate complete reporting of mortality for a randomised trial of an endovascular strategy versus open repair for patients with a clinical diagnosis of ruptured abdominal aortic aneurysm (IMPROVE ISRCTN48334791), which is supported by the National Institute for Health Research.   The primary outcome of this trial is 30-day mortality and secondary outcomes are 1 year and 3 year mortality and aneurysm-related mortality.  \nThe most recent data file was received for these patients in December 2015.  To enable full patient follow up for a minimum of 3 years, data are needed for deaths through July 2016 (last patient in the study will complete 3-year follow-up on 21st July 2016).\nThe trial included critically ill patients often in great pain.  Either patients or a relative/carer/welfare guardian on behalf of the patient have signed a consent form before aneurysm repair.  After recovery patients provided fully informed consent for continued participation in the trial, which included consent to access “their data from NHS Information Centre and NHS Central Register NHS information”."
+ }
+}

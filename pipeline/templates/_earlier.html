@@ -1,0 +1,54 @@
+{#- What NHS Digital's release registers, published before July 2021, say about an agreement. See `pipeline.earlier`. -#}
+{% from "_fold.html" import fold_summary %}
+
+{% macro earlier_flag() -%}
+<p class="papers-flag"><strong>From the earlier release registers.</strong>
+  Before the Data Uses Register began in July 2021, NHS Digital published a release register, quarterly and then monthly, listing the data it had released in each period. It names each agreement version that received data, and from 2016 its purpose. It gives no titles, terms or controllers, and lists a version only in periods when data was released under it. <a href="{{ meta.base_path }}/about/#earlier-registers">About the earlier registers</a></p>
+{%- endmacro %}
+
+{% macro version_label(version) -%}
+{{ version.reference }}{% if not version.version %} <span class="hint">(not yet versioned)</span>{% endif %}
+{%- endmacro %}
+
+{# One version: when it was listed, the datasets released under it, and its text where it differs from `newer`'s. #}
+{% macro earlier_version(version, newer, open=false) %}
+<details class="version"{% if open %} open{% endif %}>
+  <summary>
+    <span class="version-ref">{{ version_label(version) }}</span>
+    <span class="version-term">{% if version.first_label %}First listed {{ version.first_label }}{% if version.last_label != version.first_label %}; last {{ version.last_label }}{% endif %}{% else %}Purpose listed, no release recorded{% endif %}</span>
+  </summary>
+  {% if version.datasets %}
+  <div class="table-scroll">
+  <table class="data-table compact">
+    <caption class="visually-hidden">Data released under {{ version.reference }}, by period</caption>
+    <thead><tr><th scope="col">Data released</th><th scope="col">Form</th><th scope="col">Frequency</th><th scope="col">First listed</th><th scope="col">Last listed</th></tr></thead>
+    <tbody>
+    {% for d in version.datasets %}
+      <tr><th scope="row">{{ d.dataset }}</th><td>{{ d.form or "—" }}</td><td>{{ d.frequency or "—" }}</td><td>{{ d.first }}</td><td>{{ d.last }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% endif %}
+  {% set sections = [("Objective for processing", "objective"), ("Expected output", "expected_output"), ("Expected measurable benefits", "expected_benefits"), ("Benefits reported", "yielded_benefits")] %}
+  {% set same = [] %}
+  {% for section, key in sections if version.texts[key] %}
+    {% if newer and version.texts[key] == newer.texts[key] %}
+    {% set _ = same.append(section) %}
+    {% else %}
+    <div class="prose-block">
+    <h4>{{ section }}</h4>
+    <details class="fold">{{ fold_summary(section|lower) }}
+    {% for para in version.texts[key]|paragraphs %}<p>{{ para }}</p>{% endfor %}
+    </details>
+    </div>
+    {% endif %}
+  {% endfor %}
+  {% if same %}
+  <p class="hint">The same as {{ newer.reference }}: {{ same|join(", ")|capitalize }}.</p>
+  {% endif %}
+  {% if version.text_period %}
+  <p class="hint">Text as published in the {{ version.text_period }} release register.</p>
+  {% endif %}
+</details>
+{% endmacro %}

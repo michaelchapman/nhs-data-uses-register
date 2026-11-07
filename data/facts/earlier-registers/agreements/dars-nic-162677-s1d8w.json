@@ -1,0 +1,1814 @@
+{
+ "base_reference": "DARS-NIC-162677-S1D8W",
+ "versions": [
+  {
+   "reference": "DARS-NIC-162677-S1D8W-v0.4",
+   "version": "0.4",
+   "organisation": "NHS Guildford and Waverley CCG",
+   "organisation_type": "",
+   "listed": [
+    "2018-05-25",
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-05-25"
+     ],
+     "objective": "7048399a8179",
+     "activities": "9814bd8bbfdf",
+     "expected_output": "c52a71592da7",
+     "expected_benefits": "b2718c61d26a"
+    },
+    {
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "objective": "53c04987a4ff",
+     "activities": "2d37bd579520",
+     "expected_output": "e069dcd393bb",
+     "expected_benefits": "f3b1fb8563dd"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent adhoc flow",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01"
+     ],
+     "rows": 4
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-162677-S1D8W-v1.3",
+   "version": "1.3",
+   "organisation": "NHS Guildford and Waverley CCG",
+   "organisation_type": "",
+   "listed": [
+    "2018-10-01",
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01",
+    "2019-05-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "objective": "66d5a75296a1",
+     "activities": "d45b7c829ac8",
+     "expected_output": "e069dcd393bb",
+     "expected_benefits": "f3b1fb8563dd",
+     "yielded_benefits": "53df554500e2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "National Cancer Waiting Times Monitoring DataSet (CWT)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01"
+     ],
+     "rows": 6
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-162677-S1D8W-v2.3",
+   "version": "2.3",
+   "organisation": "NHS Guildford and Waverley CCG",
+   "organisation_type": "Clinical Commissioning Group (CCG)",
+   "listed": [
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2019-10-01",
+    "2019-11-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "objective": "eebdfc0faab1",
+     "activities": "54ed5dff3de3",
+     "expected_output": "f9d7b7b99b6d",
+     "expected_benefits": "00093fdaa2cf",
+     "yielded_benefits": "53df554500e2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Civil Registration - Births",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "National Cancer Waiting Times Monitoring DataSet (CWT)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "National Diabetes Audit",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2019-10-01",
+      "2019-11-01"
+     ],
+     "rows": 6
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-162677-S1D8W-v3.8",
+   "version": "3.8",
+   "organisation": "NHS Guildford and Waverley CCG",
+   "organisation_type": "Clinical Commissioning Group (CCG)",
+   "listed": [
+    "2019-12-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "objective": "5c8072e03372",
+     "activities": "8a6b995b84a1",
+     "expected_output": "16634a0cdde0",
+     "expected_benefits": "00093fdaa2cf"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Acute-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Ambulance-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Children and Young People Health",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Civil Registration - Births",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Community Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Community-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Demand for Service-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Diagnostic Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Emergency Care-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Experience, Quality and Outcomes-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Maternity Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Mental Health-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "National Cancer Waiting Times Monitoring DataSet (CWT)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "National Diabetes Audit",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Other Not Elsewhere Classified (NEC)-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Patient Reported Outcome Measures",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Population Data-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Primary Care Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Public Health and Screening Services-Local Provider Flows",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "SUS for Commissioners",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01"
+     ],
+     "rows": 4
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "00093fdaa2cf": "Commissioning\n1.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n2.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3.\tHealth economic modelling using:\na.\tAnalysis on provider performance against 18 weeks wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd.\tAnalysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4.\tCommissioning cycle support for grouping and re-costing previous activity.\n5.\tEnables monitoring of:\na.\tCCG outcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tSuccessful delivery of integrated care within the CCG.\nd.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\ne.\tCase management.\nf.\tCare service planning.\ng.\tCommissioning and performance management.\nh.\tList size verification by GP practices.\ni.\tUnderstanding the care of patients in nursing homes.\n6.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n7.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n8.\tImproved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services and early intervention of appropriate care.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tPotentially reduced premature mortality by more targeted intervention in primary care, which supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n11.\tBetter understanding of the health of and the variations in health outcomes within the population to help understand local population characteristics.  \n12.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n13.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n14.\tReviewing current service provision\na.\tCost-benefit analysis and service impact assessments to underpin service transformation across health economy\nb.\tService planning and re-design (development of NMoC and integrated care pathways, new partnerships, working with new providers etc.)\nc.\tImpact analysis for different models or productivity measures, efficiency and experience\nd.\tService and pathway review\ne.\tService utilisation review\n15.\tEnsuring compliance with evidence and guidance\na.\tTesting approaches with evidence and compliance with guidance.\n16.\tMonitoring outcomes\na.\tAnalysis of variation in outcomes across population group\n17.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis of productivity, outcomes, experience, plan, targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact of services on health inequalities\n18.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience & outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n19.\tUnderstanding future drivers for change across health economy\na.\tForecasting health and care needs for population and population cohorts across STPs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained from procuring services across wider footprints, from new innovations\nd.\tPredictive modelling\n20.\tDelivering services that meet changing needs of population\na.\tAnalysis to support policy development\nb.\tEthical and equality impact assessments\nc.\tImplementation of NMOC\nd.\tWhat do next years contracts need to include?\ne.\tWorkforce planning\n21.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment in services analysis\nf.\tOpportunity analysis\n22.\tProviding greater understanding of the underlying courses and look to commission improved supportive networks, this would be ongoing work which would be continually assessed.\n23.\tInsight to understand the numerous factors that play a role in the outcome for both datasets. The linkage will allow the reporting both prior to, during and after the activity, to provide greater assurance on predictive outcomes and delivery of best practice.\n24.\tProvision of indicators of health problems, and patterns of risk within the commissioning region. \n25.\tSupport of benchmarking for evaluating progress in future years.",
+  "16634a0cdde0": "Commissioning\n1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns.\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis.\n3.\tProduction of aggregate reports for CCG Business Intelligence.\n4.\tProduction of project / programme level dashboards.\n5.\tMonitoring of acute / community / mental health quality matrix.\n6.\tClinical coding reviews / audits.\n7.\tBudget reporting down to individual GP Practice level.\n8.\tGP Practice level dashboard reports include high flyers.  \n9.\tComparators of CCG performance with similar CCGs as set out by a specific range of care quality and performance measures detailed activity and cost reports\n10.\tData Quality and Validation measures allowing data quality checks on the submitted data\n11.\tContract Management and Modelling\n12.\tPatient Stratification, such as:\na.\tPatients at highest risk of admission \nb.\tUse of high cost activity\nc.\tFrail and elderly \nd.\tPatients that are currently in hospital\ne.\tPatients with most referrals to secondary care\nf.\tPatients with most emergency activity \ng.\tPatients with most expensive prescriptions \nh.\tPatients recently moving from one care setting to another \ni.\tDischarged from hospital\nii.\tDischarged from community\n13.\tIdentifying and managing preventable and existing conditions\na.\tIdentifying types of individuals and population cohorts at risk of non-elective re-admission\nb.\tRisk stratification to identify populations suitable for case management\nc.\tRisk profiling and predictive modelling\nd.\tRisk stratification for planning services for population cohorts\ne.\tIdentification of disease incidence and diagnosis stratification\n14.\tReducing health inequalities\na.\tIdentifying cohorts of patients who have worse health outcomes typically deprived, ethnic groups, homeless, travellers etc. to enable services to proactively target their needs\nb.\tSocio-demographic analysis\n15.\tManaging demand\na.\tWaiting times analysis\nb.\tService demand and supply modelling\nc.\tUnderstanding cross-border and overseas visitor\nd.\tWinter planning\ne.\tEmergency preparedness, business continuity, recovery and contingency planning\n16.\tCare co-ordination and planning\na.\tPlanning packages of care\nb.\tService planning\nc.\tPlanning care co-ordination\n17.\tMonitoring individual patient health, service utilisation, pathway compliance experience & outcomes across the heath and care system\na.\tPatient pathway analysis across health and care\nb.\tOutcomes & experience analysis\nc.\tAnalysis to support anti-terror initiatives\nd.\tAnalysis to identify vulnerable patients with potential safeguarding issues\ne.\tUnderstanding equity of care and unwarranted variation\nf.\tModelling patient flow\ng.\tTracking patient pathways\nh.\tMonitoring to support New Models of Care\ni.\tIdentifying duplications in care\nj.\tIdentifying gaps in care, missed diagnoses and triple fail events\nk.\tAnalysing individual and aggregated timelines\n18.\tUndertaking budget planning, management and reporting\na.\tTracking financial performance against plans\nb.\tBudget reporting\nc.\tTariff development\nd.\tDeveloping and monitoring capitated budgets\ne.\tDeveloping and monitoring individual-level budgets\nf.\tFuture budget planning and forecasting\ng.\tPaying for care of overseas visitors and cross-border flow\n19.\tMonitoring the value for money\na.\tService-level costing & comparisons\nb.\tIdentification of cost pressures\nc.\tCost benefit analysis\nd.\tEquity of spend across services and population cohorts\ne.\tFinance impact assessment\n20.\tComparing population groups, peers, national and international best practice\na.\tIdentification of variation in productivity, cost, outcomes, quality, experience, compared with peers, national and international & best practice\nb.\tBenchmarking against other parts of the country\nc.\tIdentifying unwarranted variations\n21.\tComparing expected levels\na.\tStandardised comparisons for prevalence, activity, cost, quality, experience, outcomes for given populations\n22.\tComparing local targets & plan\na.\tMonitoring of local variation in productivity, cost, outcomes, quality and experience\nb.\tLocal performance dashboards by service provider, commissioner, geography, NMOC \n23.\tMonitoring activity and cost compliance against contract and agreed plans\na.\tContract monitoring\nb.\tContract reconciliation and challenge\nc.\tInvoice validation\n24.\tMonitoring provider quality, demand, experience and outcomes against contract and agreed plans\na.\tPerformance dashboards\nb.\tCQUIN reporting\nc.\tClinical audit\nd.\tPatient experience surveys\ne.\tDemand, supply, outcome & experience analysis\nf.\tMonitoring cross-border flows and overseas visitor activity\n25.\tImproving provider data quality\na.\tCoding audit\nb.\tData quality validation and review\nc.\tChecking validity of patient identity and commissioner assignment.\t\n26.\tValidation for payment approval, ability to validate that claims are not being made after an individual has died, like Oxygen services.\n27.\tValidation of programs implemented to improve patient pathway e.g. High users unable to validate if the process to help patients find the best support are working or did the patient die.\n28.\tClinical - understand reasons why patients are dying, what additional support services can be put in to support.\n29.\tUnderstanding where patients are dying e.g. are patients dying at hospitals due to hospices closing due to Local authorities withdrawing support, or is there a problem at a particular trust.\n30.\tRemoval of patients from Risk Stratification reports.\n31.\tRe births provide a one stop shop of information, Births are recorded in multiple sources covering hospital and home births, a chance to overlook activity",
+  "2d37bd579520": "Data must only be used as stipulated within this Data Sharing Agreement.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nThe Data Controller and any Data Processor will only have access to records of patients of residence and registration within the Surrey Heartlands Sustainable Transformation Partnership. \n\nNo patient level data will be linked other than as specifically detailed within this agreement. Data will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data, but only that data relating to the specific locality of interest of the applicant.\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nSegregation\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\nAll access to data is audited\n\nCommissioning \nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\no\tAcute\no\tAmbulance\no\tCommunity\no\tDemand for Service\no\tDiagnostic Service\no\tEmergency Care\no\tExperience, Quality and Outcomes\no\tMental Health\no\tOther Not Elsewhere Classified\no\tPopulation Data\no\tPrimary Care Services\no\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tMaternity Services Data Set (MSDS)\n7.\tImproving Access to Psychological Therapy (IAPT)\n8.\tChild and Young People Health Service (CYPHS)\n9.\tCommunity Services Data Set (CSDS)\n10.\tDiagnostic Imaging Data Set (DIDS)\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\nData Processor 1 – North East London Commissioning Support Unit\n1)\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS)\n and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to North East London Commissioning Support Unit.\n2)\tNorth East London Commissioning Support Unit add derived fields, link data and provide analysis to:\no\tSee patient journeys for pathways or service design, re-design and de-commissioning. \no\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\no\tUndertake population health management\no\tUndertake data quality and validation  checks\no\tThoroughly investigate the needs of the population\no\tUnderstand cohorts of residents who are at risk\no\tConduct Health Needs Assessments\n3)\tAllowed linkage is between the data sets contained within point 1.\n4)\tNorth East London Commissioning Support Unit then pass the processed, pseudonymised and linked data to the CCG. \n5)\tAggregation of required data for CCG management use will be completed by North East London Commissioning Support Unit or the CCG as instructed by the CCG.\n6)\tPatient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+  "53c04987a4ff": "Commissioning \nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers.\n\nThe Surrey Heartlands Sustainable Transformation Partnership (STP) includes 3 CCGs: NHS Surrey Downs CCG, NHS Guildford and Waverley CCG, and NHS North West Surrey CCG. The STP is responsible for implementing large parts of the 5 year forward view from NHS England.  The STP is implementing several initiatives: \n\n1.\tPutting the patient at the heart of the health system\n2.\tWorking across organisational boundaries to deliver care and including social care, public Health, providers and GPs as well as CCGs\n3.\tReviewing patient pathways to improve patient experience whilst reducing costs e.g. reduce the number of standard tests a patient may have and only have the ones they need\n4.\tPlanning the demand and capacity across the healthcare system across 3 CCGs to ensure we have the right buildings, services and staff to cope with demand whilst reducing the impact on costs\n5.\tWorking to prevent or capture conditions early as they are cheaper to treat\n6.\tIntroduce initiatives to change behaviours e.g. move more care into the community\n7.\tPatient pathway planning for the above\n\nTo ensure the patient is at the heart of care, the STP is focussing on where services are required across the geographical region. This assists to ensure delivery of care in the right place for patients who may move and change services across CCGs.\n\nThe CCG will work proactively and collaboratively with the other CCGs in the STP to redesign services across boundaries to integrate services. Collaborative sharing is required for CCGs to understand these requirements.\n \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n-\tSecondary Uses Service (SUS+)\n-\tLocal Provider Flows\no\tAcute\no\tAmbulance\no\tCommunity\no\tDemand for Service\no\tDiagnostic Service\no\tEmergency Care\no\tExperience, Quality and Outcomes\no\tMental Health\no\tOther Not Elsewhere Classified\no\tPopulation Data\no\tPrimary Care Services\no\tPublic Health Screening\n-\tMental Health Minimum Data Set (MHMDS)\n-\tMental Health Learning Disability Data Set (MHLDDS)\n-\tMental Health Services Data Set (MHSDS)\n-\tMaternity Services Data Set (MSDS)\n-\tImproving Access to Psychological Therapy (IAPT)\n-\tChild and Young People Health Service (CYPHS)\n-\tCommunity Services Data Set (CSDS)\n-\tDiagnostic Imaging Data Set (DIDS)\nThe pseudonymised data is required to for the following purposes: \n\tPopulation health management:\n•\tUnderstanding the interdependency of care services \n•\tTargeting care more effectively \n•\tUsing value as the redesign principle \n•\tEnsuring we do what we should \n\tData Quality and Validation – allowing data quality checks on the submitted data\n\tThoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n\tUnderstanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n\tMonitoring population health and care interactions to understand where people may slip through the net, or where the provision of care may be being duplicated\n\tModelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n\tService redesign\n\tHealth Needs Assessment – identification of underlying disease prevalence within the local population\n\tPatient stratification and predictive modelling - to identify specific patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\nProcessing for commissioning will be conducted by North East London Commissioning Support Unit",
+  "53df554500e2": "Commissioning\n1.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.",
+  "54ed5dff3de3": "Data must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nThe Data Controller and any Data Processor will only have access to records of patients of residence and registration within the Surrey Heartlands Sustainable Transformation Partnership. \n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role.\n \nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data.\n \nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nOnward Sharing\n \nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n \nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSegregation\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData Minimisation in relation to the data sets listed within section 3 are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n•    Patients who are normally registered and/or resident within NHS Guildford and Waverley CCG, NHS Surrey Downs CCG and NHS North West Surrey CCG  (including historical activity where the patient was previously registered or resident in another commissioner).\nand/or\n•    Patients treated by a provider where NHS Guildford and Waverley CCG, NHS Surrey Downs CCG or NHS North West Surrey CCG is the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this is only for commissioning and relates to both national and local flows.\nand/or\n•    Activity identified by the provider and recorded as such within national systems (such as SUS+) as for the attention of NHS Guildford and Waverley CCG, NHS Surrey Downs CCG and NHS North West Surrey CCG - this is only for commissioning and relates to both national and local flows.\n\nData Barracks supply IT infrastructure and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nThe Bunker Secure Hosting Ltd and Interxion do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nCommissioning \nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1. SUS+\n2. Local Provider Flows (received directly from providers)\n\ta. Acute\n\tb. Ambulance\n\tc. Community\n\td. Demand for Service\n\te. Diagnostic Service\n\tf. Emergency Care\n\tg. Experience, Quality and Outcomes\n\th. Mental Health\n\ti. Other Not Elsewhere Classified\n\tj. Population Data\n\tk. Primary Care Services\n\tl. Public Health Screening\n3. Mental Health Minimum Data Set (MHMDS)\n4. Mental Health Learning Disability Data Set (MHLDDS)\n5. Mental Health Services Data Set (MHSDS)\n6. Maternity Services Data Set (MSDS)\n7. Improving Access to Psychological Therapy (IAPT)\n8. Child and Young People Health Service (CYPHS)\n9. Community Services Data Set (CSDS)\n10. Diagnostic Imaging Data Set (DIDS)\n11. National Cancer Waiting Times Monitoring Data Set (CWT)\n12. Civil Registries Data (CRD)\n13. National diabetes Audit (NDA)\n14. Patient Reported Outcome Measures (PROMs)\n\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\nData Processor 1 – North East London Commissioning Support Unit\n1)\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), Diagnostic Imaging data (DIDS), National Cancer Waiting Times Monitoring Data Set (CWT), Civil Registries Data (CRD), National diabetes Audit (NDA) and Patient Reported Outcome Measures (PROMs) only is securely transferred from the DSCRO to North East London Commissioning Support Unit.\n2)\tNorth East London Commissioning Support Unit add derived fields, link data and provide analysis to:\no\tSee patient journeys for pathways or service design, re-design and de-commissioning. \no\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\no\tUndertake population health management\no\tUndertake data quality and validation  checks\no\tThoroughly investigate the needs of the population\no\tUnderstand cohorts of residents who are at risk\no\tConduct Health Needs Assessments\n3)\tAllowed linkage is between the data sets contained within point 1.\n4)\tNorth East London Commissioning Support Unit then pass the processed, pseudonymised and linked data to the CCG. \n5)\tAggregation of required data for CCG management use will be completed by North East London Commissioning Support Unit or the CCG as instructed by the CCG.\n6)\tPatient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+  "5c8072e03372": "Commissioning \nNHS Surrey Downs CCG, NHS Guildford and Waverley CCG, and NHS North West Surrey CCG work jointly across the region to fulfill their commissioning functions. The CCGs will work proactively and collaboratively with each other to redesign services across boundaries to integrate services. \n\nThe CCGs will use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the geographical region.  \n\nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers. \n \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n- Secondary Uses Service (SUS+)\n- Local Provider Flows\n\to Acute\n\to Ambulance\n\to Community\n\to Demand for Service\n\to Diagnostic Service\n\to Emergency Care\n\to Experience, Quality and Outcomes\n\to Mental Health\n\to Other Not Elsewhere Classified\n\to Population Data\n\to Primary Care Services\n\to Public Health Screening\n- Mental Health Minimum Data Set (MHMDS)\n- Mental Health Learning Disability Data Set (MHLDDS)\n- Mental Health Services Data Set (MHSDS)\n- Maternity Services Data Set (MSDS)\n- Improving Access to Psychological Therapy (IAPT)\n- Child and Young People Health Service (CYPHS)\n- Community Services Data Set (CSDS)\n- Diagnostic Imaging Data Set (DIDS)\n- National Cancer Waiting Times Monitoring Data Set (CWT)\n- Civil Registries Data (CRD) (Births and Deaths)\n- National diabetes Audit (NDA)\n- Patient Reported Outcome Measures (PROMs)\n\nThe pseudonymised data is required to for the following purposes: \n§ Population health management:\n· Understanding the interdependency of care services \n· Targeting care more effectively \n· Using value as the redesign principle \n§ Data Quality and Validation – allowing data quality checks on the submitted data\n§ Thoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n§ Understanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n§ Monitoring population health and care interactions to understand where people may slip through the net, or where the provision of care may be being duplicated\n§ Modelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n§ Service redesign\n§ Health Needs Assessment – identification of underlying disease prevalence within the local population\n§ Patient stratification and predictive modelling - to highlight patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n \nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG areas based on the full analysis of multiple pseudonymised datasets.\n\nProcessing for commissioning will be conducted by North East London Commissioning Support Unit, North West Surrey CCG, and Optum Health Solutions Limited.",
+  "66d5a75296a1": "Commissioning \nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers.\n\nThe Surrey Heartlands Sustainable Transformation Partnership (STP) includes 3 CCGs: NHS Surrey Downs CCG, NHS Guildford and Waverley CCG, and NHS North West Surrey CCG. The STP is responsible for implementing large parts of the 5 year forward view from NHS England.  The STP is implementing several initiatives: \n\n1.\tPutting the patient at the heart of the health system\n2.\tWorking across organisational boundaries to deliver care and including social care, public Health, providers and GPs as well as CCGs\n3.\tReviewing patient pathways to improve patient experience whilst reducing costs e.g. reduce the number of standard tests a patient may have and only have the ones they need\n4.\tPlanning the demand and capacity across the healthcare system across 3 CCGs to ensure we have the right buildings, services and staff to cope with demand whilst reducing the impact on costs\n5.\tWorking to prevent or capture conditions early as they are cheaper to treat\n6.\tIntroduce initiatives to change behaviours e.g. move more care into the community\n7.\tPatient pathway planning for the above\n\nTo ensure the patient is at the heart of care, the STP is focussing on where services are required across the geographical region. This assists to ensure delivery of care in the right place for patients who may move and change services across CCGs.\n\nThe CCG will work proactively and collaboratively with the other CCGs in the STP to redesign services across boundaries to integrate services. Collaborative sharing is required for CCGs to understand these requirements.\n \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n-\tSecondary Uses Service (SUS+)\n-\tLocal Provider Flows\n-\tAcute\n-\tAmbulance\n-\tCommunity\n-\tDemand for Service\n-\tDiagnostic Service\n-\tEmergency Care\n-\tExperience, Quality and Outcomes\n-\tMental Health\n-\tOther Not Elsewhere Classified\n-\tPopulation Data\n-\tPrimary Care Services\n-\tPublic Health Screening\n-\tMental Health Minimum Data Set (MHMDS)\n-\tMental Health Learning Disability Data Set (MHLDDS)\n-\tMental Health Services Data Set (MHSDS)\n-\tMaternity Services Data Set (MSDS)\n-\tImproving Access to Psychological Therapy (IAPT)\n-\tChild and Young People Health Service (CYPHS)\n-\tCommunity Services Data Set (CSDS)\n-\tDiagnostic Imaging Data Set (DIDS)\n-      National Cancer Waiting Times (CWT)\n\nThe pseudonymised data is required to for the following purposes: \n-\tPopulation health management:\n-\tUnderstanding the interdependency of care services \n-\tTargeting care more effectively \n-\tUsing value as the redesign principle \n-\tEnsuring we do what we should -\n-\tData Quality and Validation – allowing data quality checks on the submitted data\n -\tThoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n-\tUnderstanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n-\tMonitoring population health and care interactions to understand where people may slip through the net, or where the provision of care may be being duplicated\n-\tModelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n-\tService redesign\n-\tHealth Needs Assessment – identification of underlying disease prevalence within the local population\n-\tPatient stratification and predictive modelling - to identify specific patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\nProcessing for commissioning will be conducted by North East London Commissioning Support Unit",
+  "7048399a8179": "Commissioning \nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers.\n\nThe Surrey Heartlands Sustainable Transformation Partnership (STP) includes 3 CCGs: NHS Surrey Downs CCG, NHS Guildford and Waverley CCG, and NHS North West Surrey CCG. The STP is responsible for implementing large parts of the 5 year forward view from NHS England.  The STP is implementing several initiatives: \n\n1. Putting the patient at the heart of the health system\n2. Working across organisational boundaries to deliver care and including social care, public Health, providers and GPs as well as CCGs\n3. Reviewing patient pathways to improve patient experience whilst reducing costs e.g. reduce the number of standard tests a patient may have and only have the ones they need\n4. Planning the demand and capacity across the healthcare system across 3 CCGs to ensure we have the right buildings, services and staff to cope with demand whilst reducing the impact on costs\n5. Working to prevent or capture conditions early as they are cheaper to treat\n6. Introduce initiatives to change behaviours e.g. move more care into the community\n7. Patient pathway planning for the above\n\nTo ensure the patient is at the heart of care, the STP is focussing on where services are required across the geographical region. This assists to ensure delivery of care in the right place for patients who may move and change services across CCGs.\n\nThe CCG will work proactively and collaboratively with the other CCGs in the STP to redesign services across boundaries to integrate services. Collaborative sharing is required for CCGs to understand these requirements.\n \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n- Secondary Uses Service (SUS+)\n- Local Provider Flows\no Acute\no Ambulance\no Community\no Demand for Service\no Diagnostic Service\no Emergency Care\no Experience, Quality and Outcomes\no Mental Health\no Other Not Elsewhere Classified\no Population Data\no Primary Care Services\no Public Health Screening\n- Mental Health Minimum Data Set (MHMDS)\n- Mental Health Learning Disability Data Set (MHLDDS)\n- Mental Health Services Data Set (MHSDS)\n- Maternity Services Data Set (MSDS)\n- Improving Access to Psychological Therapy (IAPT)\n- Child and Young People Health Service (CYPHS)\n- Community Services Data Set (CSDS)\n- Diagnostic Imaging Data Set (DIDS)\nThe pseudonymised data is required to for the following purposes: \n§ Population health management:\n• Understanding the interdependency of care services \n• Targeting care more effectively \n• Using value as the redesign principle \n• Ensuring we do what we should \n§ Data Quality and Validation – allowing data quality checks on the submitted data\n§ Thoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n§ Understanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n§ Monitoring population health and care interactions to understand where people may slip through the net, or where the provision of care may be being duplicated\n§ Modelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n§ Service redesign\n§ Health Needs Assessment – identification of underlying disease prevalence within the local population\n§ Patient stratification and predictive modelling - to identify specific patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\nProcessing for commissioning will be conducted by North East London Commissioning Support Unit",
+  "8a6b995b84a1": "Data must only be used for the purposes stipulated within this Data Sharing Agreement. Any additional disclosure / publication will require further approval from NHS Digital.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nThe Data Controller and any Data Processor will only have access to records of patients of residence and registration within the Surrey Heartlands Sustainable Transformation Partnership. \n\nAll access to data is managed under Role-Based Access Controls. Users can only access data authorised by their role.\n \nPatient level data will not be linked other than as specifically detailed within this Data Sharing Agreement. Data released will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data.\n \nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nOnward Sharing\n \nPatient level data will not be shared outside of the CCG unless it is for the purpose of Direct Care, where it may be shared only with those health professionals who have a legitimate relationship with the patient and a legitimate reason to access the data.\n \nAggregated reports only with small number suppression can be shared externally as set out within NHS Digital guidance applicable to each data set.\n\nSegregation\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData Minimisation in relation to the data sets listed within section 3 are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n•    Patients who are normally registered and/or resident within NHS Guildford and Waverley CCG, NHS Surrey Downs CCG and NHS North West Surrey CCG  (including historical activity where the patient was previously registered or resident in another commissioner).\nand/or\n•    Patients treated by a provider where NHS Guildford and Waverley CCG, NHS Surrey Downs CCG or NHS North West Surrey CCG is the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this is only for commissioning and relates to both national and local flows.\nand/or\n•    Activity identified by the provider and recorded as such within national systems (such as SUS+) as for the attention of NHS Guildford and Waverley CCG, NHS Surrey Downs CCG and NHS North West Surrey CCG - this is only for commissioning and relates to both national and local flows.\n\nMicrosoft UK provide Cloud Services to North East London Commissioning Support Unit and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nData Barracks supply IT infrastructure to NHS Guildford and Waverley CCG, NHS Surrey Downs CCG and NHS North West Surrey CCG and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nThe Bunker Secure Hosting Ltd, Sungard Availability Services (UK) Ltd and Interxion UK do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nCommissioning \nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1. SUS+\n2. Local Provider Flows (received directly from providers)\n\ta. Acute\n\tb. Ambulance\n\tc. Community\n\td. Demand for Service\n\te. Diagnostic Service\n\tf. Emergency Care\n\tg. Experience, Quality and Outcomes\n\th. Mental Health\n\ti. Other Not Elsewhere Classified\n\tj. Population Data\n\tk. Primary Care Services\n\tl. Public Health Screening\n3. Mental Health Minimum Data Set (MHMDS)\n4. Mental Health Learning Disability Data Set (MHLDDS)\n5. Mental Health Services Data Set (MHSDS)\n6. Maternity Services Data Set (MSDS)\n7. Improving Access to Psychological Therapy (IAPT)\n8. Child and Young People Health Service (CYPHS)\n9. Community Services Data Set (CSDS)\n10. Diagnostic Imaging Data Set (DIDS)\n11. National Cancer Waiting Times Monitoring Data Set (CWT)\n12. Civil Registries Data (CRD)\n13. National diabetes Audit (NDA)\n14. Patient Reported Outcome Measures (PROMs)\n\nData quality management and pseudonymisation is completed within the DSCRO (using the DSCRO pseudonymisation process) and is then disseminated as follows:\n\n1.\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), Diagnostic Imaging data (DIDS), National Cancer Waiting Times Monitoring Data Set (CWT), Civil Registries Data (CRD), National diabetes Audit (NDA) and Patient Reported Outcome Measures (PROMs) only is securely transferred from the DSCRO to North East London Commissioning Support Unit.\n\n2.\tNorth East London Commissioning Support Unit also receive identifiable GP data for a GP Practices within the CCGs area. The GP data is received and process as per points i-iv below.\n\ni.\tIdentifiable GP data is extracted from consented GP practices Principal Clinical System via NEL-hosted IM1 GP Extraction service.\nii.\tExtracted data lands on secure NEL CSU GP Environment where strict access is limited to individuals who have been authorised by NEL DSCRO Business Lead or Senior Information Risk Owner and act on behalf of the Data Controller (GP Practice).\niii.\tThe NEL CSU Pseudonym is then applied to GP data within Secure GP Data Environment via a Black Box function. The pseudonymisation enables the linkage with other data sets specified in this DSA.\niv.\tThe agreed specification of Pseudonymised GP data is then made available to CCGs via a secure means of transfer from the secure NEL CSU GP environment to the destination CCG or CSU environment where only pseudonymised data resides.\n\n3.\ta) North East London Commissioning Support Unit securely transfer the pseudonymised data in point 1 and point 2 to NHS North West Surrey CCG.\nb) NHS North West Surrey CCG are permitted to link pseudonymised data listed in point 1 and point 2. \nc) NHS North West Surrey CCG act as a data processor for the CCGs listed within the agreement and conduct business intelligence functions. NHS North West Surrey CCG then pass the pseudonymised data to Optum Health Solutions (UK) Ltd.\n\n4.      Optum Health Solutions (UK) Ltd provide analysis to support the CCGs to:\n•     See patient journeys for pathways or service design, re-design and de-commissioning\n•     Undertake population health management\n•     Undertake data quality and validation checks\n•     Thoroughly investigate the needs of the population\n•     Understand cohorts of residents who are at risk\n•     Conduct Health Needs Assessments\n\n5.\tOptum Health Solutions (UK) Ltd then pass the processed pseudonymised data to the CCG. Aggregation of required data for CCG management use will be completed by Optum Health Solutions (UK) Ltd or the CCG as instructed by the CCG.\n\n6.    Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+  "9814bd8bbfdf": "Data must only be used as stipulated within this Data Sharing Agreement.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nThe Data Controller and any Data Processor will only have access to records of patients of residence and registration within the Surrey Heartlands Sustainable Transformation Partnership. \n\nNo patient level data will be linked other than as specifically detailed within this agreement. Data will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data, but only that data relating to the specific locality of interest of the applicant.\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nSegregation\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\nAll access to data is audited\n\nCommissioning \nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1. SUS+\n2. Local Provider Flows (received directly from providers)\no Acute\no Ambulance\no Community\no Demand for Service\no Diagnostic Service\no Emergency Care\no Experience, Quality and Outcomes\no Mental Health\no Other Not Elsewhere Classified\no Population Data\no Primary Care Services\no Public Health Screening\n3. Mental Health Minimum Data Set (MHMDS)\n4. Mental Health Learning Disability Data Set (MHLDDS)\n5. Mental Health Services Data Set (MHSDS)\n6. Maternity Services Data Set (MSDS)\n7. Improving Access to Psychological Therapy (IAPT)\n8. Child and Young People Health Service (CYPHS)\n9. Community Services Data Set (CSDS)\n10. Diagnostic Imaging Data Set (DIDS)\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\nData Processor 1 – North East London Commissioning Support Unit\n1) Pseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS)\n and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to North East London Commissioning Support Unit.\n2) North East London Commissioning Support Unit add derived fields, link data and provide analysis to:\no See patient journeys for pathways or service design, re-design and de-commissioning. \no Check recorded activity against contracts or invoices and facilitate discussions with providers.\no Undertake population health management\no Undertake data quality and validation  checks\no Thoroughly investigate the needs of the population\no Understand cohorts of residents who are at risk\no Conduct Health Needs Assessments\n3) Allowed linkage is between the data sets contained within point 1.\n4) North East London Commissioning Support Unit then pass the processed, pseudonymised and linked data to the CCG. \n5) Aggregation of required data for CCG management use will be completed by North East London Commissioning Support Unit or the CCG as instructed by the CCG.\n6) Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+  "b2718c61d26a": "Commissioning\n1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against 18 weeks wait targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Financial and Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.\ni. Understanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n7. Improved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n8. Improved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services and early intervention of appropriate care.\n9. Improved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10. Potentially reduced premature mortality by more targeted intervention in primary care, which supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n11. Better understanding of the health of and the variations in health outcomes within the population to help understand local population characteristics.  \n12. Better understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n13. Insights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n14. Reviewing current service provision\na. Cost-benefit analysis and service impact assessments to underpin service transformation across health economy\nb. Service planning and re-design (development of NMoC and integrated care pathways, new partnerships, working with new providers etc.)\nc. Impact analysis for different models or productivity measures, efficiency and experience\nd. Service and pathway review\ne. Service utilisation review\n15. Ensuring compliance with evidence and guidance\na. Testing approaches with evidence and compliance with guidance.\n16. Monitoring outcomes\na. Analysis of variation in outcomes across population group\n17. Understanding how services impact across the health economy\na. Service evaluation\nb. Programme reviews\nc. Analysis of productivity, outcomes, experience, plan, targets and actuals\nd. Assessing value for money and efficiency gains\ne. Understanding impact of services on health inequalities\n18. Understanding how services impact on the health of the population and patient cohorts\na. Measuring and assessing improvement in service provision, patient experience & outcomes and the cost to achieve this\nb. Propensity matching and scoring\nc. Triple aim analysis\n19. Understanding future drivers for change across health economy\na. Forecasting health and care needs for population and population cohorts across STPs\nb. Identifying changes in disease trends and prevalence\nc. Efficiencies that can be gained from procuring services across wider footprints, from new innovations\nd. Predictive modelling\n20. Delivering services that meet changing needs of population\na. Analysis to support policy development\nb. Ethical and equality impact assessments\nc. Implementation of NMOC\nd. What do next years contracts need to include?\ne. Workforce planning\n21. Maximising services and outcomes within financial envelopes across health economy\na. What-if analysis\nb. Cost-benefit analysis\nc. Health economics analysis\nd. Scenario planning and modelling\ne. Investment and disinvestment in services analysis\nf. Opportunity analysis",
+  "c52a71592da7": "Commissioning\n1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of acute / community / mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports include high flyers.  \n9. Comparators of CCG performance with similar CCGs as set out by a specific range of care quality and performance measures detailed activity and cost reports\n10. Data Quality and Validation measures allowing data quality checks on the submitted data\n11. Contract Management and Modelling\n12. Patient Stratification, such as:\na. Patients at highest risk of admission \nb. Most expensive patients (top 15%)\nc. Frail and elderly \nd. Patients that are currently in hospital\ne. Patients with most referrals to secondary care\nf. Patients with most emergency activity \ng. Patients with most expensive prescriptions \nh. Patients recently moving from one care setting to another \ni. Discharged from hospital\nii. Discharged from community\n13. Identifying and managing preventable and existing conditions\na. Identifying types of individuals and population cohorts at risk of non-elective re-admission\nb. Risk stratification to identify populations suitable for case management\nc. Risk profiling and predictive modelling\nd. Risk stratification for planning services for population cohorts\ne. Identification of disease incidence and diagnosis stratification\n14. Reducing health inequalities\na. Identifying cohorts of patients who have worse health outcomes typically deprived, ethnic groups, homeless, travellers etc. to enable services to proactively target their needs\nb. Socio-demographic analysis\n15. Managing demand\na. Waiting times analysis\nb. Service demand and supply modelling\nc. Understanding cross-border and overseas visitor\nd. Winter planning\ne. Emergency preparedness, business continuity, recovery and contingency planning\n16. Care co-ordination and planning\na. Planning packages of care\nb. Service planning\nc. Planning care co-ordination\n17. Monitoring individual patient health, service utilisation, pathway compliance experience & outcomes across the heath and care system\na. Patient pathway analysis across health and care\nb. Outcomes & experience analysis\nc. Analysis to support anti-terror initiatives\nd. Analysis to identify vulnerable patients with potential safeguarding issues\ne. Understanding equity of care and unwarranted variation\nf. Modelling patient flow\ng. Tracking patient pathways\nh. Monitoring to support NMoC,  ACOs, STPs\ni. Identifying duplications in care\nj. Identifying gaps in care, missed diagnoses and triple fail events\nk. Analysing individual and aggregated timelines\n18. Undertaking budget planning, management and reporting\na. Tracking financial performance against plans\nb. Budget reporting\nc. Tariff development\nd. Developing and monitoring capitated budgets\ne. Developing and monitoring individual-level budgets\nf. Future budget planning and forecasting\ng. Paying for care of overseas visitors and cross-border flow\n19. Monitoring the value for money\na. Service-level costing & comparisons\nb. Identification of cost pressures\nc. Cost benefit analysis\nd. Equity of spend across services and population cohorts\ne. Finance impact assessment\n20. Comparing population groups, peers, national and international best practice\na. Identification of variation in productivity, cost, outcomes, quality, experience, compared with peers, national and international & best practice\nb. Benchmarking against other parts of the country\nc. Identifying unwarranted variations\n21. Comparing expected levels\na. Standardised comparisons for prevalence, activity, cost, quality, experience, outcomes for given populations\n22. Comparing local targets & plan\na. Monitoring of local variation in productivity, cost, outcomes, quality and experience\nb. Local performance dashboards by service provider, commissioner, geography, NMOC, STPs\n23. Monitoring activity and cost compliance against contract and agreed plans\na. Contract monitoring\nb. Contract reconciliation and challenge\nc. Invoice validation\n24. Monitoring provider quality, demand, experience and outcomes against contract and agreed plans\na. Performance dashboards\nb. CQUIN reporting\nc. Clinical audit\nd. Patient experience surveys\ne. Demand, supply, outcome & experience analysis\nf. Monitoring cross-border flows and overseas visitor activity\n25. Improving provider data quality\na. Coding audit\nb. Data quality validation and review\nc. Checking validity of patient identity and commissioner assignment.",
+  "d45b7c829ac8": "Data must only be used as stipulated within this Data Sharing Agreement.\n\nData Processors must only act upon specific instructions from the Data Controller. \n\nData can only be stored at the addresses listed under storage addresses.\n\nThe Data Controller and any Data Processor will only have access to records of patients of residence and registration within the Surrey Heartlands Sustainable Transformation Partnership. \n\nNo patient level data will be linked other than as specifically detailed within this agreement. Data will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from NHS Digital will not be national data, but only that data relating to the specific locality of interest of the applicant.\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nSegregation\nWhere the Data Processor and/or the Data Controller hold both identifiable and pseudonymised data, the data will be held separately so data cannot be linked.\n\nAll access to data is auditable by NHS Digital.\n\nData Minimisation in relation to the data sets listed within section 3 are listed below. This also includes the purpose on which they would be applied - \n\nFor the purpose of Commissioning:\n•\tPatients who are normally registered and/or resident within the commissioner (including historical activity where the patient was previously registered or resident in another commissioner).\nand/or\n•\tPatients treated by a provider where the commissioner is the host/co-ordinating commissioner and/or has the primary responsibility for the provider services in the local health economy – this only relates to both national and local flows.\n\nThe above relates to data requested only (Table 3B). Data currently held (Table 3A) will have the following Data Minimisation:\n•\tCCG of residence and/or registration.\n\nFor clarity, any access by Interxion to data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nCommissioning \nThe Data Services for Commissioners Regional Office (DSCRO) obtains the following data sets:\n1.\tSUS+\n2.\tLocal Provider Flows (received directly from providers)\no\tAcute\no\tAmbulance\no\tCommunity\no\tDemand for Service\no\tDiagnostic Service\no\tEmergency Care\no\tExperience, Quality and Outcomes\no\tMental Health\no\tOther Not Elsewhere Classified\no\tPopulation Data\no\tPrimary Care Services\no\tPublic Health Screening\n3.\tMental Health Minimum Data Set (MHMDS)\n4.\tMental Health Learning Disability Data Set (MHLDDS)\n5.\tMental Health Services Data Set (MHSDS)\n6.\tMaternity Services Data Set (MSDS)\n7.\tImproving Access to Psychological Therapy (IAPT)\n8.\tChild and Young People Health Service (CYPHS)\n9.\tCommunity Services Data Set (CSDS)\n10.\tDiagnostic Imaging Data Set (DIDS)\n11.   National Cancer Waiting Times Data Set (NCWT) \n\nData quality management and pseudonymisation is completed within the DSCRO and is then disseminated as follows:\nData Processor 1 – North East London Commissioning Support Unit\n1)\tPseudonymised SUS+, Local Provider data, Mental Health data (MHSDS, MHMDS, MHLDDS), Maternity data (MSDS), Improving Access to Psychological Therapies data (IAPT), Child and Young People’s Health data (CYPHS), Community Services Data Set (CSDS), National Cancer Waiting Times (CWT) and Diagnostic Imaging data (DIDS) only is securely transferred from the DSCRO to North East London Commissioning Support Unit.\n2)\tNorth East London Commissioning Support Unit add derived fields, link data and provide analysis to:\no\tSee patient journeys for pathways or service design, re-design and de-commissioning. \no\tCheck recorded activity against contracts or invoices and facilitate discussions with providers.\no\tUndertake population health management\no\tUndertake data quality and validation  checks\no\tThoroughly investigate the needs of the population\no\tUnderstand cohorts of residents who are at risk\no\tConduct Health Needs Assessments\n3)\tAllowed linkage is between the data sets contained within point 1.\n4)\tNorth East London Commissioning Support Unit then pass the processed, pseudonymised and linked data to the CCG. \n5)\tAggregation of required data for CCG management use will be completed by North East London Commissioning Support Unit or the CCG as instructed by the CCG.\n6)\tPatient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared as set out within NHS Digital guidance applicable to each data set.",
+  "e069dcd393bb": "Commissioning\n1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns.\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis.\n3.\tProduction of aggregate reports for CCG Business Intelligence.\n4.\tProduction of project / programme level dashboards.\n5.\tMonitoring of acute / community / mental health quality matrix.\n6.\tClinical coding reviews / audits.\n7.\tBudget reporting down to individual GP Practice level.\n8.\tGP Practice level dashboard reports include high flyers.  \n9.\tComparators of CCG performance with similar CCGs as set out by a specific range of care quality and performance measures detailed activity and cost reports\n10.\tData Quality and Validation measures allowing data quality checks on the submitted data\n11.\tContract Management and Modelling\n12.\tPatient Stratification, such as:\na.\tPatients at highest risk of admission \nb.\tMost expensive patients (top 15%)\nc.\tFrail and elderly \nd.\tPatients that are currently in hospital\ne.\tPatients with most referrals to secondary care\nf.\tPatients with most emergency activity \ng.\tPatients with most expensive prescriptions \nh.\tPatients recently moving from one care setting to another \ni.\tDischarged from hospital\nii.\tDischarged from community\n13.\tIdentifying and managing preventable and existing conditions\na.\tIdentifying types of individuals and population cohorts at risk of non-elective re-admission\nb.\tRisk stratification to identify populations suitable for case management\nc.\tRisk profiling and predictive modelling\nd.\tRisk stratification for planning services for population cohorts\ne.\tIdentification of disease incidence and diagnosis stratification\n14.\tReducing health inequalities\na.\tIdentifying cohorts of patients who have worse health outcomes typically deprived, ethnic groups, homeless, travellers etc. to enable services to proactively target their needs\nb.\tSocio-demographic analysis\n15.\tManaging demand\na.\tWaiting times analysis\nb.\tService demand and supply modelling\nc.\tUnderstanding cross-border and overseas visitor\nd.\tWinter planning\ne.\tEmergency preparedness, business continuity, recovery and contingency planning\n16.\tCare co-ordination and planning\na.\tPlanning packages of care\nb.\tService planning\nc.\tPlanning care co-ordination\n17.\tMonitoring individual patient health, service utilisation, pathway compliance experience & outcomes across the heath and care system\na.\tPatient pathway analysis across health and care\nb.\tOutcomes & experience analysis\nc.\tAnalysis to support anti-terror initiatives\nd.\tAnalysis to identify vulnerable patients with potential safeguarding issues\ne.\tUnderstanding equity of care and unwarranted variation\nf.\tModelling patient flow\ng.\tTracking patient pathways\nh.\tMonitoring to support NMoC,  ACOs, STPs\ni.\tIdentifying duplications in care\nj.\tIdentifying gaps in care, missed diagnoses and triple fail events\nk.\tAnalysing individual and aggregated timelines\n18.\tUndertaking budget planning, management and reporting\na.\tTracking financial performance against plans\nb.\tBudget reporting\nc.\tTariff development\nd.\tDeveloping and monitoring capitated budgets\ne.\tDeveloping and monitoring individual-level budgets\nf.\tFuture budget planning and forecasting\ng.\tPaying for care of overseas visitors and cross-border flow\n19.\tMonitoring the value for money\na.\tService-level costing & comparisons\nb.\tIdentification of cost pressures\nc.\tCost benefit analysis\nd.\tEquity of spend across services and population cohorts\ne.\tFinance impact assessment\n20.\tComparing population groups, peers, national and international best practice\na.\tIdentification of variation in productivity, cost, outcomes, quality, experience, compared with peers, national and international & best practice\nb.\tBenchmarking against other parts of the country\nc.\tIdentifying unwarranted variations\n21.\tComparing expected levels\na.\tStandardised comparisons for prevalence, activity, cost, quality, experience, outcomes for given populations\n22.\tComparing local targets & plan\na.\tMonitoring of local variation in productivity, cost, outcomes, quality and experience\nb.\tLocal performance dashboards by service provider, commissioner, geography, NMOC, STPs\n23.\tMonitoring activity and cost compliance against contract and agreed plans\na.\tContract monitoring\nb.\tContract reconciliation and challenge\nc.\tInvoice validation\n24.\tMonitoring provider quality, demand, experience and outcomes against contract and agreed plans\na.\tPerformance dashboards\nb.\tCQUIN reporting\nc.\tClinical audit\nd.\tPatient experience surveys\ne.\tDemand, supply, outcome & experience analysis\nf.\tMonitoring cross-border flows and overseas visitor activity\n25.\tImproving provider data quality\na.\tCoding audit\nb.\tData quality validation and review\nc.\tChecking validity of patient identity and commissioner assignment.",
+  "eebdfc0faab1": "Commissioning \nTo use pseudonymised data to provide intelligence to support the commissioning of health services. The data (containing both clinical and financial information) is analysed so that health care provision can be planned to support the needs of the population within the CCG area. \nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers.\n\nThe Surrey Heartlands Sustainable Transformation Partnership (STP) includes 3 CCGs: NHS Surrey Downs CCG, NHS Guildford and Waverley CCG, and NHS North West Surrey CCG. The STP is responsible for implementing large parts of the 5 year forward view from NHS England.  The STP is implementing several initiatives: \n\n1.\tPutting the patient at the heart of the health system\n2.\tWorking across organisational boundaries to deliver care and including social care, public Health, providers and GPs as well as CCGs\n3.\tReviewing patient pathways to improve patient experience whilst reducing costs e.g. reduce the number of standard tests a patient may have and only have the ones they need\n4.\tPlanning the demand and capacity across the healthcare system across 3 CCGs to ensure we have the right buildings, services and staff to cope with demand whilst reducing the impact on costs\n5.\tWorking to prevent or capture conditions early as they are cheaper to treat\n6.\tIntroduce initiatives to change behaviours e.g. move more care into the community\n7.\tPatient pathway planning for the above\n\nTo ensure the patient is at the heart of care, the STP is focussing on where services are required across the geographical region. This assists to ensure delivery of care in the right place for patients who may move and change services across CCGs.\n\nThe CCG will work proactively and collaboratively with the other CCGs in the STP to redesign services across boundaries to integrate services. Collaborative sharing is required for CCGs to understand these requirements.\n \nThe following pseudonymised datasets are required to provide intelligence to support commissioning of health services:\n- Secondary Uses Service (SUS+)\n- Local Provider Flows\n\to Acute\n\to Ambulance\n\to Community\n\to Demand for Service\n\to Diagnostic Service\n\to Emergency Care\n\to Experience, Quality and Outcomes\n\to Mental Health\n\to Other Not Elsewhere Classified\n\to Population Data\n\to Primary Care Services\n\to Public Health Screening\n- Mental Health Minimum Data Set (MHMDS)\n- Mental Health Learning Disability Data Set (MHLDDS)\n- Mental Health Services Data Set (MHSDS)\n- Maternity Services Data Set (MSDS)\n- Improving Access to Psychological Therapy (IAPT)\n- Child and Young People Health Service (CYPHS)\n- Community Services Data Set (CSDS)\n- Diagnostic Imaging Data Set (DIDS)\n- National Cancer Waiting Times Monitoring Data Set (CWT)\n- Civil Registries Data (CRD) (Births and Deaths)\n- National diabetes Audit (NDA)\n- Patient Reported Outcome Measures (PROMs)\n\nThe pseudonymised data is required to for the following purposes: \n§ Population health management:\n· Understanding the interdependency of care services \n· Targeting care more effectively \n· Using value as the redesign principle \n§ Data Quality and Validation – allowing data quality checks on the submitted data\n§ Thoroughly investigating the needs of the population, to ensure the right services are available for individuals when and where they need them\n§ Understanding cohorts of residents who are at risk of becoming users of some of the more expensive services, to better understand and manage those needs\n§ Monitoring population health and care interactions to understand where people may slip through the net, or where the provision of care may be being duplicated\n§ Modelling activity across all data sets to understand how services interact with each other, and to understand how changes in one service may affect flows through another\n§ Service redesign\n§ Health Needs Assessment – identification of underlying disease prevalence within the local population\n§ Patient stratification and predictive modelling - to highlight patients at risk of requiring hospital admission and other avoidable factors such as risk of falls, computed using algorithms executed against linked de-identified data, and identification of future service delivery models\n \nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\n\nProcessing for commissioning will be conducted by North East London Commissioning Support Unit",
+  "f3b1fb8563dd": "Commissioning\n1.\tSupporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na.\tAnalysis to support full business cases. \nb.\tDevelop business models.\nc.\tMonitor In year projects.  \n2.\tSupporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3.\tHealth economic modelling using:\na.\tAnalysis on provider performance against 18 weeks wait targets.\nb.\tLearning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc.\tAnalysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd.\tAnalysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4.\tCommissioning cycle support for grouping and re-costing previous activity.\n5.\tEnables monitoring of:\na.\tCCG outcome indicators.\nb.\tFinancial and Non-financial validation of activity.\nc.\tSuccessful delivery of integrated care within the CCG.\nd.\tChecking frequent or multiple attendances to improve early intervention and avoid admissions.\ne.\tCase management.\nf.\tCare service planning.\ng.\tCommissioning and performance management.\nh.\tList size verification by GP practices.\ni.\tUnderstanding the care of patients in nursing homes.\n6.\tFeedback to NHS service providers on data quality at an aggregate and individual record level – only on data initially provided by the service providers.   \n7.\tImproved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n8.\tImproved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services and early intervention of appropriate care.\n9.\tImproved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n10.\tPotentially reduced premature mortality by more targeted intervention in primary care, which supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n11.\tBetter understanding of the health of and the variations in health outcomes within the population to help understand local population characteristics.  \n12.\tBetter understanding of contract requirements, contract execution, and required services for management of existing contracts, and to assist with identification and planning of future contracts\n13.\tInsights into patient outcomes, and identification of the possible efficacy of outcomes-based contracting opportunities.\n14.\tReviewing current service provision\na.\tCost-benefit analysis and service impact assessments to underpin service transformation across health economy\nb.\tService planning and re-design (development of NMoC and integrated care pathways, new partnerships, working with new providers etc.)\nc.\tImpact analysis for different models or productivity measures, efficiency and experience\nd.\tService and pathway review\ne.\tService utilisation review\n15.\tEnsuring compliance with evidence and guidance\na.\tTesting approaches with evidence and compliance with guidance.\n16.\tMonitoring outcomes\na.\tAnalysis of variation in outcomes across population group\n17.\tUnderstanding how services impact across the health economy\na.\tService evaluation\nb.\tProgramme reviews\nc.\tAnalysis of productivity, outcomes, experience, plan, targets and actuals\nd.\tAssessing value for money and efficiency gains\ne.\tUnderstanding impact of services on health inequalities\n18.\tUnderstanding how services impact on the health of the population and patient cohorts\na.\tMeasuring and assessing improvement in service provision, patient experience & outcomes and the cost to achieve this\nb.\tPropensity matching and scoring\nc.\tTriple aim analysis\n19.\tUnderstanding future drivers for change across health economy\na.\tForecasting health and care needs for population and population cohorts across STPs\nb.\tIdentifying changes in disease trends and prevalence\nc.\tEfficiencies that can be gained from procuring services across wider footprints, from new innovations\nd.\tPredictive modelling\n20.\tDelivering services that meet changing needs of population\na.\tAnalysis to support policy development\nb.\tEthical and equality impact assessments\nc.\tImplementation of NMOC\nd.\tWhat do next years contracts need to include?\ne.\tWorkforce planning\n21.\tMaximising services and outcomes within financial envelopes across health economy\na.\tWhat-if analysis\nb.\tCost-benefit analysis\nc.\tHealth economics analysis\nd.\tScenario planning and modelling\ne.\tInvestment and disinvestment in services analysis\nf.\tOpportunity analysis",
+  "f9d7b7b99b6d": "Commissioning\n1.\tCommissioner reporting:\na.\tSummary by provider view - plan & actuals year to date (YTD). \nb.\tSummary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc.\tSummary by provider view - activity & finance variance by POD. \nd.\tPlanned care by provider view - activity & finance plan & actuals YTD.\ne.\tPlanned care by POD view - activity plan & actuals YTD.\nf.\tProvider reporting.\ng.\tStatutory returns.\nh.\tStatutory returns - monthly activity return. \ni.\tStatutory returns - quarterly activity return. \nj.\tDelayed discharges. \nk.\tQuality & performance referral to treatment reporting. \n2.\tReadmissions analysis.\n3.\tProduction of aggregate reports for CCG Business Intelligence.\n4.\tProduction of project / programme level dashboards.\n5.\tMonitoring of acute / community / mental health quality matrix.\n6.\tClinical coding reviews / audits.\n7.\tBudget reporting down to individual GP Practice level.\n8.\tGP Practice level dashboard reports include high flyers.  \n9.\tComparators of CCG performance with similar CCGs as set out by a specific range of care quality and performance measures detailed activity and cost reports\n10.\tData Quality and Validation measures allowing data quality checks on the submitted data\n11.\tContract Management and Modelling\n12.\tPatient Stratification, such as:\na.\tPatients at highest risk of admission \nb.\tMost expensive patients (top 15%)\nc.\tFrail and elderly \nd.\tPatients that are currently in hospital\ne.\tPatients with most referrals to secondary care\nf.\tPatients with most emergency activity \ng.\tPatients with most expensive prescriptions \nh.\tPatients recently moving from one care setting to another \ni.\tDischarged from hospital\nii.\tDischarged from community\n13.\tIdentifying and managing preventable and existing conditions\na.\tIdentifying types of individuals and population cohorts at risk of non-elective re-admission\nb.\tRisk stratification to identify populations suitable for case management\nc.\tRisk profiling and predictive modelling\nd.\tRisk stratification for planning services for population cohorts\ne.\tIdentification of disease incidence and diagnosis stratification\n14.\tReducing health inequalities\na.\tIdentifying cohorts of patients who have worse health outcomes typically deprived, ethnic groups, homeless, travellers etc. to enable services to proactively target their needs\nb.\tSocio-demographic analysis\n15.\tManaging demand\na.\tWaiting times analysis\nb.\tService demand and supply modelling\nc.\tUnderstanding cross-border and overseas visitor\nd.\tWinter planning\ne.\tEmergency preparedness, business continuity, recovery and contingency planning\n16.\tCare co-ordination and planning\na.\tPlanning packages of care\nb.\tService planning\nc.\tPlanning care co-ordination\n17.\tMonitoring individual patient health, service utilisation, pathway compliance experience & outcomes across the heath and care system\na.\tPatient pathway analysis across health and care\nb.\tOutcomes & experience analysis\nc.\tAnalysis to support anti-terror initiatives\nd.\tAnalysis to identify vulnerable patients with potential safeguarding issues\ne.\tUnderstanding equity of care and unwarranted variation\nf.\tModelling patient flow\ng.\tTracking patient pathways\nh.\tMonitoring to support NMoC,  ACOs, STPs\ni.\tIdentifying duplications in care\nj.\tIdentifying gaps in care, missed diagnoses and triple fail events\nk.\tAnalysing individual and aggregated timelines\n18.\tUndertaking budget planning, management and reporting\na.\tTracking financial performance against plans\nb.\tBudget reporting\nc.\tTariff development\nd.\tDeveloping and monitoring capitated budgets\ne.\tDeveloping and monitoring individual-level budgets\nf.\tFuture budget planning and forecasting\ng.\tPaying for care of overseas visitors and cross-border flow\n19.\tMonitoring the value for money\na.\tService-level costing & comparisons\nb.\tIdentification of cost pressures\nc.\tCost benefit analysis\nd.\tEquity of spend across services and population cohorts\ne.\tFinance impact assessment\n20.\tComparing population groups, peers, national and international best practice\na.\tIdentification of variation in productivity, cost, outcomes, quality, experience, compared with peers, national and international & best practice\nb.\tBenchmarking against other parts of the country\nc.\tIdentifying unwarranted variations\n21.\tComparing expected levels\na.\tStandardised comparisons for prevalence, activity, cost, quality, experience, outcomes for given populations\n22.\tComparing local targets & plan\na.\tMonitoring of local variation in productivity, cost, outcomes, quality and experience\nb.\tLocal performance dashboards by service provider, commissioner, geography, NMOC, STPs\n23.\tMonitoring activity and cost compliance against contract and agreed plans\na.\tContract monitoring\nb.\tContract reconciliation and challenge\nc.\tInvoice validation\n24.\tMonitoring provider quality, demand, experience and outcomes against contract and agreed plans\na.\tPerformance dashboards\nb.\tCQUIN reporting\nc.\tClinical audit\nd.\tPatient experience surveys\ne.\tDemand, supply, outcome & experience analysis\nf.\tMonitoring cross-border flows and overseas visitor activity\n25.\tImproving provider data quality\na.\tCoding audit\nb.\tData quality validation and review\nc.\tChecking validity of patient identity and commissioner assignment.\t\n26.\tValidation for payment approval, ability to validate that claims are not being made after an individual has died, like Oxygen services.\n27.\tValidation of programs implemented to improve patient pathway e.g. High users unable to validate if the process to help patients find the best support are working or did the patient die.\n28.\tClinical - understand reasons why patients are dying, what additional support services can be put in to support.\n29.\tUnderstanding where patients are dying e.g. are patients dying at hospitals due to hospices closing due to Local authorities withdrawing support, or is there a problem at a particular trust.\n30.\tRemoval of patients from Risk Stratification reports.\n31.\tRe births provide a one stop shop of information, Births are recorded in multiple sources covering hospital and home births, a chance to overlook activity"
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-10496-Z3F9B",
+ "versions": [
+  {
+   "reference": "DARS-NIC-10496-Z3F9B-v0.10",
+   "version": "0.10",
+   "organisation": "University of Oxford",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "0fcd86994173",
+     "activities": "123faf88a9b2",
+     "expected_output": "170d6946868d",
+     "expected_benefits": "a27d82c25f44"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0fcd86994173": "This is a research study aiming to establish the proportion of patients dying over the course of a year in Oxfordshire who are assessed by the Oxfordshire Out of Hours (OOH) service in the 4 weeks prior to their death. The study also aims to evaluate whether there are clinical and demographic features which could help distinguish patient subgroups at higher risk of death within 4 weeks of contact with the OOH service.",
+  "123faf88a9b2": "Mortality data provided by the HSCIC/ONS will be linked to OOH records for Oxfordshire held by the Oxford Health NHS Foundation Trust. Linkage will be performed by cross-referencing NHS numbers between the two data sets. Only employees of the University of Oxford will process the data at the Trust, before the data is transferred to the University. In this way, it can be established what proportion of people who died in Oxfordshire during the study period were seen by the OOH service in the 4 weeks prior to their death. This will identify the study population (patients who saw OOH services within 4 weeks of their death). Data from patients who died in Oxfordshire during the study period but who had not been seen by the OOH service within four weeks of their death will be securely disposed of at this point as this information plays no further part in the study.\n\nData to be collected, together with an explanation of why this information is required, is detailed below. \nNHS numbers -  required in initial HSCIC dataset to enable linkage with OOH dataset to establish proportion of patients dying in Oxfordshire who had seen the OOH service within 4 weeks of their death.\nDate of death - required to establish 4 week period prior to death.\nCause of death - required for subgroup analysis seeking to establish any patient groups who might be at high risk of death following OOH contact.\nDate of birth (month and year) - Age of patient required for demographics/risk profiling.\nPostcode - District level postcode required for deprivation scoring.\nGender - For demographics/risk profiling.\n\nThis will form a dataset of all patients who had died in Oxfordshire between 1st January 2015 and 31st December 2015 and who had contacted the Oxfordshire Out of Hours service within four weeks of their death. This is the study population of interest.  To minimise the use of identifiable data, study data will be pseudonymised at this point by replacing NHS numbers with a unique study number. Following pseudonymisation, data will be transferred to the Department of Primary Care Health Sciences at the University of Oxford for further analysis via secure electronic file transfer (SEFT). This subsequent analysis will include Multivariable logistic regression analyses with the data of patients who did die within four weeks of contact with the Oxfordshire OOH service, to identify any particular groups at particularly high risk of death.",
+  "170d6946868d": "When data processing is complete, the aim is to have established the proportion of patients who died over the course of a year in Oxfordshire who had seen the Oxfordshire OOH service in the 4 weeks prior to their death. Multivariable logistic regression will have been used to see whether any particularly high risk patient subgroups can be identified (hence the need for causes of death). \n\nOxford University aim to have completed the study (including preparation of manuscripts for publication) within one year of receipt of data from the HSCIC/ONS. The findings will be published in academic journals such as the British Medical Journal (BMJ) and the British Journal of General Practice (BJGP) and shared with colleagues at conferences. A report will be written for the study funder, and this will be held in their archives. On completion of the study, the funder (Oxford Radcliffe Hospitals Charitable Funds charity) may report a summary of the study on their website. \n\nOutputs from this study (online, for the funder, and any others) will not include personal data and will only use aggregated data, with any small numbers supressed in line with the HES Analysis Guide. \n\nThis data will not be used for any commercial purpose at any point.",
+  "a27d82c25f44": "The provision of primary care services outside core contracted hours is fundamental to the operation of the NHS. On a national scale it is clear that out of hours care is an area of significant challenge, and a current focus for quality improvement; the 2014 Urgent Care Commission report ‘Urgent and important: the future for urgent care in a 24/7 NHS' issued a direct ‘call to action’ for improvement in out of hours primary care provision. If Out of hours primary care is a fertile research area, then end of life care is even more so. ‘Actions for End of Life Care’ (NHS England, 2014) clearly establishes improving end of life care as a key goal for the NHS.\n\nThe contribution of out of hours primary care to end of life care is currently unknown. It is not known how many patients who have contact with OOH services die shortly after, and it is not known whether these deaths were expected or not. This study seeks to address those questions. In doing so the study is expected to contribute to improvements in healthcare in the following ways:\n\n-\tBy providing crucial background information for further research to enable the development of out of hours primary care services that are better able to meet the needs of people at end of life in the community. \n\n-\tIdentifying particular subgroups at risk of death has direct implications for patient safety and service design. Detailed analysis of the results, including use of deprivation indices might provide the basis for targeted local interventions in particular patient groups. \n\n-\tThis study benefits from having direct links to the service it is based upon. A co-investigator on the study is the clinical lead for Urgent Care at Oxford Health NHS Foundation Trust (who runs the Oxfordshire OOH service). Having management so closely integrated within the study team provides an immediate route for dissemination of the findings of the study, for their discussion, and for changes to be identified and made if necessary.\n\n-\tThe two nominated users have previously done research involving the Oxfordshire OOH service, results of which we have shared and discussed with clinicians working at the service at Research and Development meetings. These meetings informed the design of this study in its early stages. Study findings would be discussed in future meetings to share findings, and discuss how service change might result from these. \n\n-\tThe aim is to publish the results of this study in appropriate peer reviewed journals, and to present findings at conferences. This contributes to a growing evidence base around out of hours primary care, and, through national collaboration may help to inform and understand regional variation in the UK. \n\n-\tAlready underway is the process of setting up a local patient public involvement group (PPI) group for out of hours primary care (none currently exists). Results of the study would be shared with this group, and used as a basis for discussion of further research, and to gather service user views on how the results of the study could change local services."
+ }
+}

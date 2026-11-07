@@ -1,0 +1,89 @@
+{
+ "base_reference": "DARS-NIC-371011-F4X5F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-371011-F4X5F",
+   "version": "",
+   "organisation": "NHS England",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "objective": "5341d227480c"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Monthly Subscription Assuring Transformation",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Bespoke Linkage HESAPC - Assuring Transformation",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-371011-F4X5F-v0.0",
+   "version": "0.0",
+   "organisation": "NHS ENGLAND",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "9d891e309209",
+     "activities": "7ebea37fd549",
+     "expected_output": "04099ccf9683",
+     "expected_benefits": "4258e650a798"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Monthly Subscription Assuring Transformation",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "04099ccf9683": "HSCIC will supply a summary report to NHS England, giving aggregate figures for patients included in one data set but not the other, and patients coded in HES under 'respite care'. HSCIC will also supply a pseudonymised, patient-level data set, to allow NHS England to carry out detailed analysis. It is anticipated that NHS England will want to identify any under-reporting in Assuring Transformation that is not accounted for by respite care admissions, so that it can work with the relevant commissioners to help them improve their reporting.\nNHS England will analyse the detailed data set and produce its own qualitative report in early 2016 - this is intended for NHS England management and operational managers, and for partners in the cross-system Transforming Care programme (Department of Health, Public Health England and CQC).",
+  "4258e650a798": "Understanding the differences in the data sets is important for giving confidence in the AT data - whilst the discrepancy is unexplained there will be lingering uncertainty that AT is able to accurately report on inpatient care for people with learning disabilities, and be used for monitoring delivery of the Transforming Care programme. Where under-reporting is identified, NHS England will be able to work with commissioners to improve their reporting - this will in turn enable AT to be used effectively to identify poor practice (particularly around discharging patients) and hence will drive up quality of care.",
+  "5341d227480c": "Objective for processing: \nTransforming Care Programme - NHS England has set out a clear programme of work with other national partners, outlined in ‘Transforming Care – Next Steps’, to improve services for people with learning disabilities and/or autism, and drive system-wide change. This will enable more people to live in the community, with the right support, ideally close to home. The programme is led jointly by NHS England, the Association of Adult Social Services (ADASS), the Care Quality Commission (CQC), Local Government Association (LGA), Health Education England (HEE) and the Department of Health (DH).\nA key objective of the Transforming Care programme is a reduction in the reliance on inpatient care – reducing the number of people being admitted to hospital and discharging current inpatients, with a net reduction in the number of people with LD and/or autism in hospital. The Assuring Transformation data is the principle data set used to monitor the number of inpatients.\nWhen compared to published Assuring Transformation (AT) data, published HES data shows significantly more admissions each month (an order of magnitude greater). By carrying out a comparative analysis of the two data sets we will be able to understand and explain why this difference occurs. If the analysis shows that some organisations are under-reporting in AT, NHS England and partners in the cross-system Transforming Care programme (Department of Health, Public Health England and the Care Quality Commission) will be able to work with commissioners to improve their reporting. The analysis will be at aggregate level and small numbers will be supressed in line with the HES analysis guide.\n\nProcessing activities: \nComparative analysis, linking provisional HES and AT will be undertaken within HSCIC. A consistent pseudonym will be applied to HES and AT data, and the sets will be linked via the pseudonymised patient ID. As well as a summary report, HSCIC will supply NHS England with a patient level, non-identifiable data set, which will be used by NHS England analysts to examine the differences between the two data sets. NHS England analysts will provide qualitative reports to NHS England management. In particular, analysts will use the linked data set to test the hypothesis that much of the activity reported in provisional HES but missing from AT is for patients admitted for short-term respite care. If this hypothesis is correct, it will give confidence that AT is accurately recording all patients being admitted for assessment and treatment. If it is not correct (respite care does not account for all or most of the difference between the two data sets) then it is evidence of under-reporting in AT – NHS England can then use this evidence to work with commissioners to improve reporting in AT.\nThe data set will be held by NHS England in the secure environment already set up for Assuring Transformation data. It will be stored securely but separately from these identifiable data sets, and no attempt will be made to link the different data sets. The Assuring Transformation data set already received and stored by NHS England is fully identifiable, not pseudonymised. NHS England will not have access to the pseudonymisation algorithm used by HSC IC, so the two data sets (identifiable AT, pseudonymised HES-AT) cannot be linked as there is no common identifiable field.\nThis application specifically asks for HSC IC to link pseudonymised HES with pseudonymised AT, and analyse this linked data set – once this is done there is no requirement for any further linkage to AT.\nThe data will not be stored, processed or in any other way accessible by a third party organisation or across multiple locations within NHS England. No record-level data will be shared with any third party. As noted above, data will be stored on a secure network drive, to which only named analysts working in NHS England’s Learning Disability Programme have access. The central analytical support for the LD programme in NHS England consists of three people, one of whom does not have access to the secure drive where the identifiable data set is stored.\nShould NHS England carry out any analysis on the pseudonymised data set, it will be carried out by the same two analysts in the team, as there are no other analysts supporting the central NHS England LD programme.\nNHS England has no intention of attempting to link the pseudonymised and identifiable data sets and will carry out stand-alone analysis only of the pseudonymised data set.\n\nSpecific outputs expected, including target date: \nHSCIC will supply a summary report to NHS England, giving aggregate figures for patients included in one data set but not the other, and patients coded in HES under 'respite care'. HSCIC will also supply a pseudonymised, patient-level data set, to allow NHS England to carry out detailed analysis. It is anticipated that NHS England will want to identify any under-reporting in Assuring Transformation that is not accounted for by respite care admissions, so that it can work with the relevant commissioners to help them improve their reporting.\nNHS England will analyse the detailed data set and produce its own qualitative report in early 2016 - this is intended for NHS England management and operational managers, and for partners in the cross-system Transforming Care programme (Department of Health, Public Health England and CQC).\n\nExpected measurable benefits to health and/or social care including target date: \nUnderstanding the differences in the data sets is important for giving confidence in the AT data - whilst the discrepancy is unexplained there will be lingering uncertainty that AT is able to accurately report on inpatient care for people with learning disabilities, and be used for monitoring delivery of the Transforming Care programme. Where under-reporting is identified, NHS England will be able to work with commissioners to improve their reporting - this will in turn enable AT to be used effectively to identify poor practice (particularly around discharging patients) and hence will drive up quality of care.",
+  "7ebea37fd549": "Comparative analysis, linking provisional HES and AT will be undertaken within HSCIC. A consistent pseudonym will be applied to HES and AT data, and the sets will be linked via the pseudonymised patient ID. As well as a summary report, HSCIC will supply NHS England with a patient level, non-identifiable data set, which will be used by NHS England analysts to examine the differences between the two data sets. NHS England analysts will provide qualitative reports to NHS England management. In particular, analysts will use the linked data set to test the hypothesis that much of the activity reported in provisional HES but missing from AT is for patients admitted for short-term respite care. If this hypothesis is correct, it will give confidence that AT is accurately recording all patients being admitted for assessment and treatment. If it is not correct (respite care does not account for all or most of the difference between the two data sets) then it is evidence of under-reporting in AT – NHS England can then use this evidence to work with commissioners to improve reporting in AT.\nThe data set will be held by NHS England in the secure environment already set up for Assuring Transformation data. It will be stored securely but separately from these identifiable data sets, and no attempt will be made to link the different data sets. The Assuring Transformation data set already received and stored by NHS England is fully identifiable, not pseudonymised. NHS England will not have access to the pseudonymisation algorithm used by HSC IC, so the two data sets (identifiable AT, pseudonymised HES-AT) cannot be linked as there is no common identifiable field.\nThis application specifically asks for HSC IC to link pseudonymised HES with pseudonymised AT, and analyse this linked data set – once this is done there is no requirement for any further linkage to AT.\nThe data will not be stored, processed or in any other way accessible by a third party organisation or across multiple locations within NHS England. No record-level data will be shared with any third party. As noted above, data will be stored on a secure network drive, to which only named analysts working in NHS England’s Learning Disability Programme have access. The central analytical support for the LD programme in NHS England consists of three people, one of whom does not have access to the secure drive where the identifiable data set is stored.\nShould NHS England carry out any analysis on the pseudonymised data set, it will be carried out by the same two analysts in the team, as there are no other analysts supporting the central NHS England LD programme.\nNHS England has no intention of attempting to link the pseudonymised and identifiable data sets and will carry out stand-alone analysis only of the pseudonymised data set.",
+  "9d891e309209": "Transforming Care Programme - NHS England has set out a clear programme of work with other national partners, outlined in ‘Transforming Care – Next Steps’, to improve services for people with learning disabilities and/or autism, and drive system-wide change. This will enable more people to live in the community, with the right support, ideally close to home. The programme is led jointly by NHS England, the Association of Adult Social Services (ADASS), the Care Quality Commission (CQC), Local Government Association (LGA), Health Education England (HEE) and the Department of Health (DH).\nA key objective of the Transforming Care programme is a reduction in the reliance on inpatient care – reducing the number of people being admitted to hospital and discharging current inpatients, with a net reduction in the number of people with LD and/or autism in hospital. The Assuring Transformation data is the principle data set used to monitor the number of inpatients.\nWhen compared to published Assuring Transformation (AT) data, published HES data shows significantly more admissions each month (an order of magnitude greater). By carrying out a comparative analysis of the two data sets we will be able to understand and explain why this difference occurs. If the analysis shows that some organisations are under-reporting in AT, NHS England and partners in the cross-system Transforming Care programme (Department of Health, Public Health England and the Care Quality Commission) will be able to work with commissioners to improve their reporting. The analysis will be at aggregate level and small numbers will be supressed in line with the HES analysis guide."
+ }
+}

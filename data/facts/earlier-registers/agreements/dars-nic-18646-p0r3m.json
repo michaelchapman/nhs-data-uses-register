@@ -1,0 +1,167 @@
+{
+ "base_reference": "DARS-NIC-18646-P0R3M",
+ "versions": [
+  {
+   "reference": "DARS-NIC-18646-P0R3M-v0.9",
+   "version": "0.9",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01"
+     ],
+     "objective": "0a2877884209",
+     "activities": "9c230deb5ac5",
+     "expected_output": "1d37e6b7a672",
+     "expected_benefits": "6407fe081331"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 5
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-18646-P0R3M-v1.5",
+   "version": "1.5",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "0a2877884209",
+     "activities": "9c230deb5ac5",
+     "expected_output": "1d37e6b7a672",
+     "expected_benefits": "6407fe081331"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0a2877884209": "The Clinical Relevance of Microbleeds in Stroke (CROMIS-2) study is an observational inception cohort study of patients throughout the UK (80 hospitals) started on best practice oral anticoagulant (without prior use) for presumed cardioembolic ischaemic stroke due to non-valvular AF with follow up for the occurrence of ICH, ischaemic stroke and cognitive function for two years.\n\nOver the last decade, increasing use of oral anticoagulants to prevent cardioembolic ischaemic stroke due to atrial fibrillation (AF) in an ageing population has led to a five-fold increase in the incidence of anticoagulant-related intracranial haemorrhage (ICH) - a rare but unpredictable and catastrophic complication.  Cerebral microbleeds (CMBs) on magnetic resonance imaging (MRI) may predict ICH risk, as may genetic polymorphisms influencing brain small-vessel integrity or anticoagulation stability. \n\nThe CROMIS-2 study aims to establish the value of CMBs and genetic factors in predicting symptomatic ICH following best practice oral anticoagulation to prevent recurrent ischaemic stroke due to AF. \n\nThe data provided by NHS Digital about patients recruited to the CROMIS-2 study will inform UCL when an outcome event occurs during their 24 month follow up period.  This supports the objectives of the study and will allow reporting on the whole study population, and helps ensure families are not approached after a relative’s death.\n\nThe study has also recruited patients admitted to participating centres with intracerebral haemorrhage -ICH and DNA is collected to increase the power of the genetic studies. Clinical and imaging data is collected from these ICH cases to investigate risk factors associated with anticoagulant-related ICH compared to non anticoagulant-related ICH.\n\nThe CROMIS-2 primary research question asks: \n\n(1) whether the presence of CMBs helps predict the risk of symptomatic oral anticoagulant-related ICH in patients who are anticoagulated following cardioembolic stroke due to non-valvular AF? \n\n(2) Do the burden (number) and distribution of CMBs at baseline influence the risk of ICH in this cohort?\n\nSecondary Questions \n\n(3) In patients anticoagulated after ischaemic stroke due to non-valvular AF, are CMBs associated with an increased risk of recurrent TIA, ischaemic stroke or death? \n(4) Are genetic polymorphisms related to the integrity of brain small vessels or anticoagulant metabolism associated with an increased risk of ICH? \n(5) Are CMBs a better predictor of oral anticoagulant-related ICH than clinical risk factors and/or leukoaraiosis on MRI scans? \n(6) Can a useful risk prediction model incorporating clinical, imaging and genetic factors be developed to assess the risk of best practice oral anticoagulant-related ICH? \n(7) Can UCL identify new genetic, clinical or radiological risk factors associated with anticoagulant-related ICH?\n\nThe data will not be used for commercial purposes, and will not be provided in record level to any third party, or used for direct marketing in any way. \n\nThe study tracks patients using NHS Digital's patient tracking service, and also by contacting the patients and their GPs at 6, 12 and 24 months to obtain follow up for our outcome measures. The purpose for receiving HES data is to ensure all hospital episodes of the cohort are captured if missed via the other methods of follow up, to ensure a high completion of data and success to the study, which aims to benefit directly the health and social care system by allowing better management of patients following stroke.  Patients were recruited from August 2011 until July 2015, as an extension was granted by the funders to increase our sample size. UCL are now in follow up phase. Follow up will end July 2017.",
+  "1d37e6b7a672": "All outputs will be aggregated with small numbers suppressed in line with the HES analysis guidance.\n\nOutcome measures are reoccurring stroke (by type), cardiac events, bleeding events and death.  The study is funded until July 2017 and findings will be available early 2018. The data from the study will be anonymised fully, and be published in research journals, and the outputs will be accessible to clinicians, academics and the public, as well as charities such as the Stroke Association and the British Heart Foundation. The data will be beneficial to the health and social care system by enabling clinicians and academics to make informed decisions about anticoagulation for patients who have had an ischaemic stroke due to Atrial Fibrillation.\n\nThe study findings from CROMIS 2 study I (AF) will be available at the end of the study in 2017 (primary output). The study findings will be disseminated via a research article which will be submitted to a high impact peer reviewed journal (e.g. Lancet Neurology) and aims to help guide clinicians with anticoagulant decisions in patients with cerebral microbleeds. \n\nIn the interim, baseline data and other sub studies will be published.  UCL are presenting two papers at the UK Stroke Forum (2016), highlighting findings from the baseline data. Both presentations are published as abstracts in the International Journal of Stroke. These abstracts will be made into papers in due course and submitted to high impact peer review journals who will review and decide whether to disseminate based on merit. The first talk outlines how common microbleeds are in this cohort and the second talk highlights the missed opportunities in preventing stroke secondary to atrial fibrillation in the UK.\n\nCROMIS study II (ICH) has produced a paper currently in press on a sub study, showing the clinical and radiological characteristics as well as outcomes of warfarin intracerebral haemorrhage vs. direct thrombin inhibitor intracerebral haemorrhage. This paper has been accepted by Neurology, a high impact clinical journal. It will help guide clinicians in their choice of anticoagulant for stroke prevention in AF. This sub study has lead to an international collaboration of 12 centres worldwide looking at the same question. CROMIS-2 has the most patients within this collaboration. CROMIS- 2 (ICH) also contributed to another international collaboration looking at outcomes for different treatment regimens in ICH. Again this was published in a high quality peer reviewed journal and helps clinicians in their management of ICH (Annals of Neurology. Ann Neurol. 2015 Jul;78(1):54-62. doi: 10.1002/ana.24416. Epub 2015 May 14. PMID:2585722).\n\nPublished papers: \n1) Volume and functional outcome of intracerebral hemorrhage according to oral anticoagulant type Wilson D, Charidimou A, Shakeshaft C, Ambler G, White M, Cohen H, Yousry T, Al-Shahi Salman R, Lip GY, Brown MM, Jäger HR, Werring DJ; CROMIS-2 collaborators. Neurology. 2016 Jan 26;86(4):360-6. doi: 10.1212/WNL.0000000000002310. Epub 2015 Dec 30.PMID: 26718576.\n\n2) Reversal strategies for vitamin K antagonists in acute intracerebral hemorrhage. Parry-Jones AR, Di Napoli M, Goldstein JN, Schreuder FH, Tetri S, Tatlisumak T, Yan B, van Nieuwenhuizen KM, Dequatre-Ponchelle N, Lee-Archer M, Horstmann S, Wilson D, Pomero F, Masotti L, Lerpiniere C, Godoy DA, Cohen AS, Houben R, Al-Shahi Salman R, Pennati P, Fenoglio L, Werring D, Veltkamp R, Wood E, Dewey HM, Cordonnier C, Klijn CJ, Meligeni F, Davis SM, Huhtakangas J, Staals J, Rosand J, Meretoja A.Ann Neurol. 2015 Jul;78(1):54-62. doi: 10.1002/ana.24416. Epub 2015 May 14.PMID:25857223\n\nIn addition, UCL are investigating genotypes of haptoglobin in ICH among CROMIS-2 patients and risk prediction scores in ICH patients from CROMIS-2. UCL hope to publish these papers in 2016.\n\nThe HES data is vital for the primary outcome of the study, which is reoccurring stroke/TIA; bleeding events; cardiac events and death. Without this information UCL cannot be sure if they may have missed many primary outcomes which are absolutely essential to the reliability of the data and its outputs.",
+  "6407fe081331": "Both CROMIS-2 non vitamin k oral anticoagulant (NOAC) ICH and non NOAC ICH should expect to add a great deal to the understanding, prevention and management of ICH.\n\nPublished papers:\n\n1) This paper outlined how NOAC intracerebral haemorrhage volumes were smaller and clinical outcomes better when compared with warfarin intracerebral haemorrhage in the CROMIS-2 data set. This may lead clinicians to have more confidence in prescribing non vitamin K oral anticoagulants as there has been previous cncern that ICH on these medications would be large and devastating.\n\n2) This paper outlines current vitamin K reversal stratergies in ICH and their correlation with clinical outcome. We were able to show the combination of fresh frozen plasma and prothrombin complex concentrate might be associated with the lowest case fatality in reversal of vitamin k antagonist associated intracerebral haemorrhage (VKA-ICH) (VKA=warfarin in most cases), and fresh frozen plasma (FFP)  (used to reverse anticoagulation) may be equivalent to prothrombin complex concentrate (PCC) (Used to reverse vitamin k antagonists (i.e. warfarin)). This helps clinicians make treatment decisions in patients with intracerebral haemorrhage.\n \nConference talks and published abstracts:\n1)      Missed opportunities to prevent stroke in patients with AF. European stroke organisation conference 2016. European stroke journal\nThis talk highlighted that only 1/3 of patients with AF and fulfilling guidelines for anticoagulation were anticoagulated. This should highlight to clinicians and GPs that patients with AF should be on anticoagulation to prevent ischaemic strokes.\n\nPublications pending:\n1)      Results of CROMIS 2. Yet to be written/submitted\nIt is difficult to hypothesis what the benefits will be of this paper as we do not know the results. Either way it will be the largest dataset of patients with ischaemic stroke, AF and anticoagulatants with rating of cerebral microbleeds. It should inform clinicians what the risk of cerebral microbleeds are with these patients. This has not been written or submitted at this stage.\n\nThrough the papers listed above UCL would hope to be able to improve risk prediction for patients with ischaemic stroke and CMBs as well as for patients with ICH who have concurrent AF. Dissemination will be primarily through peer reviewed journals and presentations at major stroke conferences (International stroke conference, European stroke organisation conference and UKSF).\n\nThis study will help guide clinicians an policy as to when it is safe to provide anticoagulants to patients who have had ischaemic stroked with atrial fibrillation. The study results are also being pooled with an international collaboration, involving 15 other studies around the world that have been collecting data on the same sample of patients. This will further inform policy and benefit clinicians. The stroke association have a conference every year which UCL are part of, with a stand and also with talks and presentations. The stroke association are supportive of UCL’s research.",
+  "9c230deb5ac5": "UCL originally supplied the flowing identifiable details of the cohort to NHS Digital to flag on its IT system;\nMember number, NHS number, surname, forename, date of birth, sex, postcode, address, date of address.\n\nNHS Digital provides quarterly updates on participants’ deaths or changes in NHS registration status.  The cohort identifiers NHS Digital  holds will be used to link to HES data and the linked data will be supplied back to UCL. \n\nThe supplied data files will be downloaded by the Study Co-ordinator only. This will allow the patient database (accessed only by the Study Co-ordinator) to be updated with any primary and secondary outcomes that have occurred whilst the patient is being follow up and that UCL have not already been informed about via our follow up methods (GP and patient questionnaires). The identifiable data will be removed from the clinical data.  All outputs will be aggregated with small numbers suppressed in line with the HES analysis guidance.\n\nThe data will only be stored on a secure database at UCL at one location only. \n\nStandard ONS Terms and conditions will be adhered to in regards to the data being processed.\n\nThe record level data will be accessed only by the study coordinator at UCL they are a substantive employee of UCL."
+ }
+}

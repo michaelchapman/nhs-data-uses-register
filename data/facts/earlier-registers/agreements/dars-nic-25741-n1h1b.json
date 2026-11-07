@@ -1,0 +1,88 @@
+{
+ "base_reference": "DARS-NIC-25741-N1H1B",
+ "versions": [
+  {
+   "reference": "DARS-NIC-25741-N1H1B-v1.2",
+   "version": "1.2",
+   "organisation": "INFORMATICA SYSTEMS LTD",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "a921216b1592",
+     "activities": "df6b87a1897b",
+     "expected_output": "ac190a81a7f4",
+     "expected_benefits": "aa1844459112"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "a921216b1592": "The purpose of the National CKD Audit and Quality Improvement Programme (NCKDA) is to improve the identification and management of CKD in primary care. The audit will measure variation between practices, as well as clinical commissioning groups (CCGs) and local health boards (LHBs) in Wales, in the identification and management of CKD. Because CKD is a silent disease it is important to test for it. Once a patient is coded for CKD the GP prescribing software will identify this patient as having kidney disease, which may in turn lead to safer prescribing decisions. \n\nThe audit is designed to address the following objectives:\n\nCKD Identification and Recording: \n•\tAre patients with risk factors being tested for CKD? (details of patients with risk factors will not be flowed to the HSCIC. The data provided by the HSCIC will not address this question) \n•\tAre patients with CKD being correctly diagnosed and given an appropriate CKD Read code?\n\nCKD Management:\n•\tAre patients with recorded CKD meeting blood pressure targets?\n•\tAre patients with recorded CKD having their kidney function monitored regularly?\n•\tAre patients with recorded CKD receiving appropriate cardiovascular risk management?\n•\tAre patients with CKD being appropriately referred to specialist care?\n\nAlongside data on referral patterns specific outcomes to be investigated from linked data will include: \n\n•\tDistribution and number of hospitalisation events via A&E in patients with CKD by CKD-stage within a 6-month period  (HES/PEDW)\n•\tPercentages of patients with CKD by CKD stage who had either one, or two or more non-elective ICU admissions within a 6-month period  (HES/PEDW)\n•\tPercentage of CKD patients by CKD stage who had either one, or two or more hospitalisations with acute kidney injury/kidney failure within a 6-month period  (HES/PEDW)\n•\tPercentage of CKD patients by CKD stage with cardiovascular events (stroke, myocardial infarctions) within a 6-month period (HES/PEDW)\n•\tPercentage of CKD patients by CKD stage who die within a 6-month period (ONS)\n\nOutcomes of patients with CKD are also reported as part of the NCKDA programme. \n\nThe National CKD Audit will link Primary Care data to HES/PEDW and ONS will help identify gaps and shortfalls in commissioned services",
+  "aa1844459112": "Patient information will be used to improve patient care by improving the diagnosis of chronic kidney disease (CKD) in primary care and to improve diagnosis and care using electronic patient systems. More specifically it will used to: \n•\tDeliver the most benefit for patients with CKD and for their practitioners by focusing on CKD stages 3 -5.\n•\tAssess local practice against NICE CKD guidelines and NICE CKD quality standards and drive service improvement.\n•\tCompare their outcomes of care with similar NHS organisations.\n•\tIdentify and share best practice. \nPatient information will be used to serve the wider public interest by identifying gaps or shortfalls in commissioning services and providing a more comprehensive picture of care and outcomes of people with CKD within primary care in England and Wales.  \n\nThe National Institute for Clinical Excellence (NICE) issued guidance on the early identification and management of CKD in adults in primary and secondary care in 2008 (National Institute for Health and Care Excellence, 2008) with a recent update in 2014 (National Institute for Health and Care Excellence, 2014). \n\nPatients with CKD are more likely to suffer acute kidney injury (Hsu et al., 2008) and a small proportion (<1% per year) will progress to end stage kidney disease requiring dialysis or transplantation (Marks et al., 2014).\n\nThe early stages of CKD are usually asymptomatic. Hence it is important that those who are at risk are tested at appropriate intervals so that CKD is identified early, with the opportunity to institute appropriate management to prevent progression and cardiovascular disease (CVD) complications. Most patients with CKD will be identified and managed by their GP and there a number of Read codes used by practice computer systems which identify these patients and enable a practice register to support regular monitoring and treatment decisions. \n\nThe National CKD Audit will be implemented in England and Wales to provide a comprehensive picture of management and outcomes for people with CKD stages 3-5 in the region. It aims to improve the quality of patient care and assesses of each GP practice against NICE CKD quality guidelines and standards to encourage quality improvement. The results of the audit will enable comparison between Practices, and will both identify, and help GPs share, best practice.\n\nThe linkage of Primary Care data to HES/PEDW and ONS will help identify gaps and shortfalls in commissioned services, as well as assisting in evaluation of those provided. There is good quality evidence to suggest that optimising treatment of patients with CKD will improve outcomes (Baigent et al., 2011, Lv et al., 2013). As only a minority of patients with CKD will need to be referred on to kidney specialists in secondary care there is the opportunity for patients to obtain substantial health benefits from high quality care in General Practice. \n\nHES and ONS data will be used to examine the association between variation in coding/ management of CKD with outcomes to better understand if and how these are related. A better understanding of variation of outcomes of patients with CKD will allow CCGs to investigate and ultimately improve  care of the services offered to these patients. \n\nLinked data from outpatient records will identify those CKD  patients who were not just managed in primary care and provide a more holistic picture of the burden of health needs of the CKD population.",
+  "ac190a81a7f4": "The NCKDA provides outputs aimed at professionals, policy makers and patients. A National Report with the main audit outcomes will be published in December 2016. Through participation in the audit, local services are able to benchmark their performance and identify where they are performing well, and improve the quality of treatment and care they provide. On a national level, wide participation in the audit also provides an overview of the quality of care being provided in England and Wales as well as provide critical information for commissioners.\n\nAdditional analyses will be published in peer-reviewed journals in 2016 and 2017. \n\nFor the national report comparisons of data will be made at CCG level, regional level and national level as per the audit aims, and case-mix adjusted funnel plots will be used to clarify the variation in performance and outcomes. Outcome data comparisons will be reported as being subject to residual confounding by variables which haven’t been captured in the present audit.\n\nAll reports produced will be available for the public domain, excluding any information that makes individual patients identifiable.  The use of jargon and acronyms in documentation will be avoided.  Patients will be kept informed throughout the clinical audit process about timescales, progress, results and planned actions. \n\nDepending on the timing of provision of HES/ONS data it may not be possible to report on all outcomes prior to report National report publication at the end of 2016. If this is the case the NCKDA will have a reporting extension that will likely allow the outcomes of these analyses to be reported in summer 2017. \n \nGoing forwards it is proposed the NCKDA will transfer to the UK Renal Registry where additional benefits (linkage to the dialysis and transplantation datasets, aligning with the ‘think kidneys’ AKI programme) are foreseen.  Continuing quality-improvement efforts will bring together all these different strands of kidney care.",
+  "df6b87a1897b": "Linkages to other databases are essential to drive maximum value for the audit and in helping to deliver demonstrable improvement in the management of CKD through the quality improvement tool. Linkage to other data sets will allow for research to estimate reductions in hospitalisation events and will calculation of the time from referral by GP to being seen in specialist clinic (HES outpatient data) before interpreting performance for NICE quality standard 4. For follow-up data  HES stroke and MI codes will be compared with the codes entered by the GP, as well as for mortality with ONS data. HES data is believed to be sufficient for the secondary care and specialist clinics output for years 1-3 of this audit. \n\nData flows\nCurrently patient records are pseudonoymised by BMJ and passed to LSHTM. LSHTM process these records to determine the presence of CKD. LSHTM will the provide a list of pseudonoymised IDs of patients with CKD back to BMJ. BMJ can then provide a list of patients with identifiers (NHS No., DOB, Sex) to HSCIC. Data requested from the HSCIC will be limited to those patients with a diagnosis of CKD and will not include those patients who are identified as having a risk factor for CKD.  On receipt of HES and ONS data BMJ will once again strip out all identifiers and replace with a pseudonoymised ID before passing these data to LSHTM. \n\nThere are three organisations involved in the processing of the data on behalf of the data controller (HQIP) and commissioner (NHS England): \n-\tInformatica Systems Limited (ISL). Informatica Systems Limited  are under contract with HQIP to run the CKD Audit. ISL have been given approval section 251 support by HRA CAG (CAG-6-07(c)/2013) to store patient identifiable information for the purpose of the audit.  ISL are not involved in processing the data.\n\n-\tBMJ publishing group (BMJ). HQIP have consented for ISL to subcontract the data processing activities for the audit to a small team within the Health Analytics Department of BMJ. The data processing is defined as; receipt, storage, processing and linking of data collected from GP Practices within the National CKD Audit and the associated secondary care and mortality data provided by HSCIC, NHS Wales Informatics Service (NWIS) and ONS.\n\n-\tLondon School of Hygiene and Tropical Medicine. LSHTM will conduct statistical analysis on the linked and pseudonymised data set produced by BMJ. \n\nThe extraction and linkage process is as follows: \n•\tISL will extract identifiable data (NHS number, date of birth, postcode) from participating GP practices across England and Wales. Data is extracted for those patients diagnosed with CKD and those for whom diagnostic tests indicate CKD. Data is being extracted from 01/01/2008 forward to ensure there are sufficient records to draw meaningful conclusions. The identifiable data is stored on a secure server on the NHS N3 network accessible only by two individuals in the BMJ Health Analytics team (which is covered by the same ISO27001 certificate as ISL).\n \n•\tIn addition to the patient data extracted from GP systems, a list of patients who have chosen to opt-out of the audit is held. Patients opt out by telling their GP they do not want to take part (in which case this is stored on the GP system), or by contacting ISL directly. The opt-out list is stored on the secure NHS N3 server to ensure data for these patients is securely destroyed from the audit data. No data will be requested from HSCIC or NWIS for patients who have chosen to opt out of the audit. All GP practices taking part are provided with a poster for display in the surgery to advertise the fact that they are taking part and to give patients the choice of opting out. Informatica Systems Ltd were granted approval for this by CAG on 10/12/2013, on the condition that Informatica Systems Ltd updated the patient leaflet to include particular details of the data being extracted (i.e. NHS number, gender, DOB etc.). Informatica Systems Ltd submitted the revised leaflet on 08/09/2014 and received an annual review approval letter from CAG on 01/12/2014.\n\n•\tHSCIC and NWIS will supply HES records, critical care records and ONS mortality data for the cohort provided for the agreed period. Informatica Systems Ltd will request data extracted from both English GP practices and Welsh practices from both HSCIC and NWIS in order to track patients who have moved across national boundaries. Cohort details will be transferred as a password-protected and encrypted CSV file to HSCIC and NWIS. Details of patients who have chosen to opt-out will not be sent to HSCIC or NWIS. \n•\tThis linked data will be stored on the secure N3 server which is only to accessible to two BMJ employees. BMJ will create a linked dataset from the identifiable primary and secondary care data. This dataset will be pseudonymised using an SHA-256 algorithm. The pseudonymised record-level data is then transferred, in the form of password protected encrypted CSV files, to a secure server accessible only by the approved researchers at LSHTM. LSHTM will not have access to any identifiable data or sensitive data fields.\n•\tThe secure server at LSHTM is only accessible by a small team working on this project. LSHTM will use the data to define statistical analyses that examining the measures listed in the objectives section above. \n\n•\tOnce the data has been transferred to LSHTM and verified as not corrupted, BMJ will securely destroy all data received from HSCIC and NWIS.\n\nAll individuals with access to record level data are employees of the data processors."
+ }
+}

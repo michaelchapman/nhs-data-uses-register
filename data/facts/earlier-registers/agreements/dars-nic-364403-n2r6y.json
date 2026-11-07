@@ -1,0 +1,38 @@
+{
+ "base_reference": "DARS-NIC-364403-N2R6Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-364403-N2R6Y",
+   "version": "",
+   "organisation": "Public Health England (PHE)",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "d33124ab90f3"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke LD Census3_3 Years_2013-2015",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "d33124ab90f3": "Objective for processing:  \nTo undertake detailed secondary analysis, as PHE did with the 2013 census data. Three specific areas of interest:\n1. Predictors of patient movement between 2013 and 2014 \n2. More detailed characterization of reasons why people are in hospital, particularly in relation to their legal status\n3. Predictors of adverse experiences in hospital. Specifically whether any individual hospital providers are significantly associated with more or less likelihood of adverse experiences in multivariate models adjusting for a full range of patient characteristics.\n\nWhen 2015 census data becomes available, this will be used in similar ways. Three questions will then be addressable. First it should be possible to track patient movements between the three censuses. This should allow PHE to identify predictors in the 2013 and 2014 censuses of movement to lower or higher security levels and to placements closer or more distant from the patients area of normal residence (where this is available). A more limited version of this will be possible using only the 2013 and 2014 data. \nSecond, the 2015 data should show much more clearly the trends in the structure of the in-patient population. Relatively little net patient movement happened between the 2013 and 2014 censuses. However a great deal of Care and Treatment Review work and resettlement work has happened in the period since October 2014. The patterns of which groups of patients have declined in overall numbers should be key to understanding the extent to which patients are still being admitted to replace those discharged.\nThird, PHE aim to explore whether there is evidence that any individual units are associated with additional risk to patients of adverse experiences (seclusion, restraint, experience of assault, accidents and self-harm). The use of all three years of data will enhance the possibility of this by providing a larger dataset. This should make statistical associations clearer as confidence intervals sharpen. However if the 2015 census shows a changed patient profile (which seems likely for the reasons discussed above) this may be a reason for considering whether the performance of individual units has changed.\n\nProcessing activities: \nData will not be stored, processed or in any other way accessible by a third party.\nAnalysis will be carried out by PHE England. No identifiable data is requested. No record level data will be shared with any third party. PHE are requesting both 2013 and 2014 census data (and 2015 when available) in this application as PHE no longer hold the 2013 data (as per license terms). In any case for objective 1 PHE will need patients to have a consistent subject identifier between the two datasets, to undertake linked analysis between the two censuses (see below). \n                                  \nAs the ID for each year is different it is not possible to link directly on ID. As a solution HSCIC will provide additional linking information to say which are the same patients if the patient is included in more than one dataset (year). This linking is worked out on NHS number and then additional checks are done on gender, DOB and name to which if 2 of these 3 match then HSCIC could confirm that it was the same person. HSCIC will apply a pseudonymised ID to the datasets in order to link the same patient and therefore this is the only linking information that is required in order to link between years. This method will remove some extra people who would be initially linked on NHS number alone. \nAs this request is a pseudonymised request, PHE would not receive the Patient Identifiable data and therefore HSCIC would provide the unique pseudonymised ID in order to link between years. \n                                                           \nPublic Health England has office bases in a lot of places reflecting the various NHS and other organisations which were taken into Public Health England. The unit that PHE work in is the Eastern Knowledge and Intelligence Team (KIT(East)). This was the NHS Eastern Region Public Health Observatory until March 2013. This was, and currently still is, based in the Cambridge Institute of Public Health which, which is part of the University of Cambridge.\nHowever although the customer is physically based in a University building the customer’s IT systems are independent of the university and managed by two Public Health England IT staff who are located with the customer. The servers concerned at present are physically in a KIT(East) machine room in the customer’s (Public Health England) corridor which is locked and access controlled for KIT staff. \n\nSpecific outputs expected, including target date: \nAnticipated outputs will be PHE report, papers for relevant learning disability academic journals and conference presentations. All intended late 2015. Where numbers permit PHE will explore production of in-patient prevalence indicators for specific sub-groups of patients to be included with Self-Assessment Framework reports and in PHE’s learning disability health profiles. The viability of this will be considered with careful attention to small number control requirements as set out in the Data Sharing Agreement.\nAll outputs will be aggregated with small number suppression.\n\nExpected measurable benefits to health and/or social care including target date: \nThe data will give detailed information about the nature of the group of patients with LD and autism currently receiving mental hospital in-patient care and the characteristics associated with specific reasons why hospitalisation is considered by respondents to be required.  In the light of PHE’s report on last year’s census, and specifically considering the linkage analysis between the two, PHE will consider what characteristics predict likelihood of movement or stasis. PHE will also explore using multivariate analyses whether individual provider units are associated with greater or lesser likelihood of patient movement and patient experiences after allowing statistically for details casemix characteristics.  This would only be possible for units with sufficient in-patients for models to reach statistical significance. PHE explored this type of analysis in 2012 using Count-Me-In census data (Glover G. and Olson V. Assessment and Treatment Units and Other Specialist Inpatient Care for People with Learning Disabilities in the Count-Me-In surveys, 2006 to 2010. Improving Health and Lives Learning Disabilities Observatory, Durham. Available online at http://www.ihal.org.uk/gsf.php5?f=16342 see p 30-37).\n                                                                     \nThis “Call to Action” is a direct result of the PHE LD census report: https://www.england.nhs.uk/2015/07/14/urgent-pledge/\n\nPHE report on the 2013 data: https://www.improvinghealthandlives.org.uk/publications/313900/The_2013_census_of_people_in_mental_hospitals_with_learning_disabilities_or_autism"
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "base_reference": "DARS-NIC-177392-B8T1Z",
+ "versions": [
+  {
+   "reference": "DARS-NIC-177392-B8T1Z-v0.7",
+   "version": "0.7",
+   "organisation": "University of Oxford",
+   "organisation_type": "Academic",
+   "listed": [
+    "2018-10-01",
+    "2020-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-10-01",
+      "2020-09-01"
+     ],
+     "objective": "70e8d50107b3",
+     "activities": "9d82ffeed13f",
+     "expected_output": "e634c00d5bff",
+     "expected_benefits": "89930a935123"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration (Deaths) - Secondary Care Cut",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01",
+      "2020-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01",
+      "2020-09-01"
+     ],
+     "rows": 22
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01",
+      "2020-09-01"
+     ],
+     "rows": 36
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01",
+      "2020-09-01"
+     ],
+     "rows": 20
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-10-01",
+      "2020-09-01"
+     ],
+     "rows": 30
+    },
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "70e8d50107b3": "The Big Health Data Group (which is part of the University of Oxford) requires data from NHS Digital for the purpose of determining the clinical and cost-effectiveness of reorganisation of trauma care services into Regional Trauma Networks (RTNs) and Major Trauma Centres (MTCs). \n\nTrauma is the leading cause of mortality under the age of 45 years and a significant cause of short and long-term morbidity. Every year 12,500 people die from trauma in England & Wales. \n\nThere is some international evidence that inclusive trauma systems within designated major trauma centres (MTCs) may reduce mortality for severely injured patients. Following the international trend, Regional Trauma Networks (RTNs) were established in England in 2012, each with one or more dedicated specialist hub hospitals or Major Trauma Centres (MTCs). This restructuring required considerable financial investment by the NHS, however it is not known whether this has resulted in improved care for severely injured patients.\n\nThe reconfiguration of major trauma services has been associated with very substantial changes to hospital case-mix, clinical processes and workload. Some limited observational data suggest that there has been a reduction in mortality following reorganisation. However, despite being in place for almost five years, there is substantial variation in the way MTCs in England are structured and organised.  \n\nProviders agree that information-sharing up to now has been ineffective and that they do not know how best to provide services and almost certainly, the existing variations in services between MTCs lead to variations in health outcomes.\n\nOpen fracture of the lower limb is a unique tracer condition for trauma services organisation. It can be diagnosed at the point of injury and has clear within-network bypass pathways testing triage and bypass systems with RTNs. Specialist surgical associations and National Institute for Health Care and Excellence (NICE) have issued widely agreed best practice guidance for the management of these severe injuries (NG37 & BOAST4) which requires these patients to be immediately transferred to the care of specialist trauma multidisciplinary teams provided exclusively by MTCs. The Trauma Audit and Research Network (TARN) collects the key performance indicators for this care pathway now reporting centre-level compliance with these standards. Effective, timely treatment reduces complications and length of stay and failed initial treatment very often mandates revision surgery; all outcomes recorded in Hospital Episode statistics (HES).\n\nThe objective of this study is to explore variation in outcomes following major trauma and link this to the variations in service structures already operating across England to inform planning for future services in the devolved countries. The results can improve major trauma services by learning from variation that exists in our current systems. Crucially, the system in England may soon be replicated in other UK countries.",
+  "89930a935123": "Open fracture is a major societal burden: nearly 7000 people sustain open fractures in the UK every year. (Performance Comparison: Trauma Care. (2016)). \n\nIn and out of hospital care and societal costs are substantial even in the least injured patients. TARN reported outcomes from the MTC22 collaborative from 646 of the most severe type of open fracture of the tibia in the last annual reporting cycle (in press Young et al 2017). \n\nThe biggest single observational study of these most severe injuries (Bosse, M. J. et al. An analysis of outcomes of reconstruction or amputation after leg-threatening injuries. N. Engl. J. Med. 347, 1924–1931 (2002)) estimated that 40% of patients had persisting severe disability; only half returned to work and US healthcare costs (2002 USD) were $163,000 if the limb can be salvaged and more than $500,000 if amputation is required.  This was a fraction of the subsequent personal and societal cost.\n\nDetermining the effectiveness of components of the service will reduce the costs to the NHS by reducing variability and maximise patients’ functional recovery and quality of life following open fracture. This programme of work will be considered by the Major Trauma Clinical Reference Group which advises NHS England on the services that should be commissioned for major trauma. This programme will produce new economic models for MTCs effectiveness, capable of informing commissioning decisions and modelling considerations for updates to NICE Major Trauma Guidance (NG40). Major trauma: service delivery. www.nice.org.uk (2016). Available at: https://www.nice.org.uk/guidance/ng40. (Accessed: 16 February 2017) \n\nThe University of Oxford will also be able to provide evidence for the utility of the national audit of trauma, generating high impact research findings from this dataset. This was a research priority identified by NICE in same guideline (NG40). Major trauma: service delivery. www.nice.org.uk (2016). Available at: https://www.nice.org.uk/guidance/ng40. (Accessed: 16 February 2017) \n\nThe University of Oxford will feedback to each of the centres their individual centre performance, in terms of cost and clinical outcomes; but crucially set within the context of the national picture across the 22 MTCs. This will allow local hospital staff and management to identify areas of good practice and those which may be improved. This will facilitate hospitals to take up evidence-based best practice in major trauma service delivery for the first time, reducing the unwarranted variability in outcomes across England.",
+  "9d82ffeed13f": "The Trauma Audit and Research Network (TARN) is hosted by the University of Manchester.  TARN will generate a cohort from the year 2000 to present of all patients with an open fracture recorded in the database. A file of unique TARN ID patient identifiers (pseudonymised) along with the NHS number, date of birth, gender and postcode will be sent from the University of Manchester to NHS Digital. The cohort is expected to include approximately 100,000 patients. \n\nNHS Digital will link HES data and mortality data (date and cause of death) for each patient identified in the TARN cohort using the matching data file (containing NHS number, date of birth, gender and postcode) to the unique TARN identifier. The HES and mortality data will be at patient level and pseudonymised. NHS Digital will destroy the linkage file once linkage is achieved. The pseudonymised HES and mortality data with the linked TARN ID will be sent to the University of Oxford. \n\nTARN will send pseudonymised patient-level TARN non-sensitive data for all patients identified in the cohort with the linked TARN ID to the University of Oxford\n\nUniversity of Oxford will link the pseudonymised datasets received from NHS Digital and University of Manchester using the unique TARN identifier to yield a non-identifiable patient-level dataset linking TARN and HES data for all patients with an open fracture identified within the cohort.  The data will not be linked to any other data and only the linkages described are permitted under this Agreement.\n\nUniversity of Oxford will analyse the dataset to:\n\n1. estimate the clinical effectiveness and impact on costs to the NHS of the reorganisation of services into RTNs & MTCs in 2012.\n2. estimate the cost-effectiveness of the organisation of MTCs according to their level of compliance with BOAST4 guidance and their models of care.\n3. explore the influence of components of the BOAST4 care pathway and service structures on the clinical effectiveness of MTCs.\n4. provide evidence as to whether the introduction of new surgical standards and centralisation of services has led to improved patient outcomes compared with the previous models of care.\n\nAll outputs will be aggregated with small numbers suppressed in line with the HES analysis guide. No record level data falling under this agreement will be shared with any third-party.\n\nAll organisations party to this Agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract – i.e. employees, agents and contractors of the Data Recipient who may have access to that data.",
+  "e634c00d5bff": "At the conclusion of this study the University of Oxford will have provided the most robust evidence available to establish the clinical and cost effectiveness of MTCs in England and current recommendations for care for these injuries. The study team will be able to recommend service design considerations for better outcomes for patients sustaining open fractures of the lower limb.\n\nThe study team will deliver customised reports for the following organisations:\n•\tNICE\n•\tThe 22 Major Trauma Centres\n•\tNHS England\n•\tCentral Commissioning - Clinical Reference Group Major Trauma\n\nThese will be in addition to publications in peer-reviewed journals and at national conferences. A final and full research report detailing all the work undertaken and supporting technical appendices, an abstract and an executive summary will be provided at the end of the study. A set of PowerPoint slides will be provided presenting the main findings from the research for use of members of the research team and others in disseminating research findings to the NHS. The study team will publish a full and complete account of that research in the NIHR HS&DR Journal, ensuring the research is reported fully, and publicly available via the NIHR Journals Library website and Europe PubMed Central.\n\nTarget date: End of March 2023"
+ }
+}

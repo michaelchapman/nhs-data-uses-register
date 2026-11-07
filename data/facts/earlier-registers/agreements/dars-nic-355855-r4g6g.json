@@ -1,0 +1,553 @@
+{
+ "base_reference": "DARS-NIC-355855-R4G6G",
+ "versions": [
+  {
+   "reference": "DARS-NIC-355855-R4G6G",
+   "version": "",
+   "organisation": "Royal College of Anaesthetists",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "65a187cbf1a7"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Section 251(CAG 5-07(d)/2013 ) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (CAG-5-07(d)/2013) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v0.0",
+   "version": "0.0",
+   "organisation": "ROYAL COLLEGE OF ANAESTHETISTS",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "objective": "ed381fca97ed",
+     "activities": "04b8bea6bde3",
+     "expected_output": "7ee87d841f63",
+     "expected_benefits": "3bbdfe9e580d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v2.2",
+   "version": "2.2",
+   "organisation": "ROYAL COLLEGE OF ANAESTHETISTS",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "167832286145",
+     "activities": "f16bcde50ed0",
+     "expected_output": "23bb6e945701",
+     "expected_benefits": "3bbdfe9e580d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v3.10",
+   "version": "3.10",
+   "organisation": "ROYAL COLLEGE OF ANAESTHETISTS",
+   "organisation_type": "",
+   "listed": [
+    "2017-12-01",
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "objective": "23b7c2b33805",
+     "activities": "d6a741b1c37a",
+     "expected_output": "52c364a8a3b0",
+     "expected_benefits": "3bbdfe9e580d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v4.1",
+   "version": "4.1",
+   "organisation": "Royal College of Anaesthetists",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "23b7c2b33805",
+     "activities": "d6a741b1c37a",
+     "expected_output": "52c364a8a3b0",
+     "expected_benefits": "3bbdfe9e580d"
+    },
+    {
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "objective": "23b7c2b33805",
+     "activities": "d6a741b1c37a",
+     "expected_output": "52c364a8a3b0",
+     "expected_benefits": "3bbdfe9e580d",
+     "yielded_benefits": "dd3eca854d43"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25",
+      "2018-10-01"
+     ],
+     "rows": 5
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v5.10",
+   "version": "5.10",
+   "organisation": "Royal College of Anaesthetists",
+   "organisation_type": "",
+   "listed": [
+    "2019-05-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-05-01"
+     ],
+     "objective": "02ba34b658a6",
+     "activities": "7efe0c3ab43f",
+     "expected_output": "64550fdc40d7",
+     "expected_benefits": "c58c4890f1bc",
+     "yielded_benefits": "a85c5b6aad35"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v6.2",
+   "version": "6.2",
+   "organisation": "Royal College of Anaesthetists",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01",
+    "2019-09-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-04-01",
+    "2020-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01",
+      "2019-09-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-04-01",
+      "2020-06-01"
+     ],
+     "objective": "02ba34b658a6",
+     "activities": "7efe0c3ab43f",
+     "expected_output": "64550fdc40d7",
+     "expected_benefits": "c58c4890f1bc",
+     "yielded_benefits": "a85c5b6aad35"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-06-01",
+      "2019-07-01",
+      "2019-09-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-04-01",
+      "2020-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-06-01",
+      "2019-09-01",
+      "2020-01-01",
+      "2020-04-01",
+      "2020-06-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-08-01",
+      "2020-02-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-08-01",
+      "2020-02-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-02-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-355855-R4G6G-v7.2",
+   "version": "7.2",
+   "organisation": "Royal College of Anaesthetists",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-09-01",
+    "2020-12-01",
+    "2021-03-01",
+    "2021-04-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-09-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-06-01"
+     ],
+     "objective": "02ba34b658a6",
+     "activities": "7efe0c3ab43f",
+     "expected_output": "64550fdc40d7",
+     "expected_benefits": "c58c4890f1bc",
+     "yielded_benefits": "a85c5b6aad35"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2021-03-01",
+      "2021-04-01"
+     ],
+     "rows": 4
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "02ba34b658a6": "HQIP has put forward Article 6(1)(e) as their legal basis under GDPR. However, HQIP are currently seeking legal advice on whether this is the most appropriate legal basis. Further to receipt of that legal advice, the stated GDPR lawful basis may change, and the NHS Digital data release register would be updated to reflect this.\n\nEmergency abdominal surgery (or emergency laparotomy) is associated with significant morbidity and mortality worldwide.  The aim of The National Emergency Laparotomy Audit (NELA) is to enable the improvement of the quality of care of patients undergoing emergency laparotomy by providing high quality comparative information of the clinical practice and outcomes of all NHS providers of emergency laparotomy in England and Wales. NELA is a national clinical audit commissioned by the Healthcare Quality Improvement Partnership (HQIP) as part of the National Clinical and Patient Outcomes Programme (NCAPOP).\n\nHQIP have commissioned the Royal College of Anaesthetists (RCoA) to deliver the audit. RCoA are working in partnership with the Clinical Effectiveness Unit of the Royal College of Surgeons (RCS) and therefore make   up the NELA project team.  There are no other organisations involved.  HQIP act as data controllers for the national clinical audit but do not have access to any data collected or analysed by the RCoA and RCS who are the data processors.  \n\nThe analysis by the NELA project team will only involve pseudonymised datasets that links information submitted by NHS hospitals and data supplied by NHS Digital. Date of death (mortality data) comes from the hospitals if it occurs during the hospital admission.  For deaths outside hospital, NELA uses the NHS Digital mortality data which is linked along with the NELA audit data to NHS Digital data and then analysed by substantive employees of RCS and substantive or contracted employees of RCoA. \n  \nThe RCoA and RCS wish to link the patient records submitted to NELA with the Hospital Episode Statistics (HES) records for those patients.  The NELA records relate only to an individual admission, and by linking to inpatient HES data, the Audit will be able to provide more precise and relevant information to NHS hospitals by allowing the RCoA and RCS to describe longer term outcomes (e.g., readmission rates) and to improve RCoA’s and RCS’s risk-adjustment models by using the extensive information on comorbid conditions held within HES. (eg to calculate the Charlson Comorbidity score)\n\nThe RCoA and RCS also wish to link the patient records submitted to NELA with the Mortality Data on a quarterly basis to enable the Audit to monitor changes in postoperative outcomes (both short and longer-term mortality) for those patients.  Access to this linked information will support this national clinical audit to improve the quality of care within NHS hospitals for a high-risk patient group.\n\nAll patients over the age of 18 years, having a general surgical emergency laparotomy in all NHS hospitals in England and Wales are eligible for the audit and the trusts/hospitals will submit their records.\n\nThe aim is to include all emergency gastrointestinal procedures on the stomach, large and small bowel, for conditions such as perforation, bleeding, abdominal abscess or obstruction, via open or laparoscopic approaches. \nEmergency laparotomies following elective surgical complications will also be included in the NELA.\n\nThe Project is requesting a three year DSA as this covers the length of the current National Audit contract with HQIP (NHS England & Welsh Government).The NELA includes all NHS hospitals in England and Wales that carry out emergency laparotomy. This includes any hospitals with acute admission, emergency departments, or specialist centres which carry out emergency laparotomy as a complication of other types of surgery.\n\nNELA began in 2013 and the requested historic data provides important data when looking to improve mortality and length of stay.\n\nThe objectives of the Audit are:\n1. To enable secondary care providers to improve the delivery of care to patients undergoing emergency laparotomy using information produced by the audit;\n2. To provide comparative information on the organisation of care by providers of Emergency Laparotomy.\n3. To provide comparative information on patient outcomes following surgery for Emergency Laparotomy.\n4. To facilitate the development of effective change (quality improvement) initiatives and thereby spread examples of best practice and help local providers make the best possible use of audit results \n\nIn summary, the purpose of this request is to support national clinical audit, quality improvement within hospitals, and research on methods to monitor surgical outcomes.\n\nThe request for the addition of the HES Critical Care Data is for similar reasons to those for why the RCoA/RCS are requesting other data sets. These specific data would allow investigation of the patterns of critical care across NHS Hospitals and examine whether patients with similar conditions and risk of death are being treated in a consistent way that is compatible with guideline recommendations.  The NELA team continue to look for ways in which to enhance the audit.  The NELA team has received feedback from participants and stakeholders that information about the delivery of critical care to Emergency Laparotomy patients would help to inform the development of local Quality Improvement initiatives, and the project would use the Critical Care data to develop performance indicators to provide hospitals with this information.",
+  "04b8bea6bde3": "The RCoA are the principal data processors for NELA and manage the extraction of the records from the NELA IT system. \n \nRCoA will send the file of patient identifiers and the NELA ID to the HSCIC for linkage to HES and ONS fields. RCoA will receive Pseudonymised files from the HSCIC that contain the HES and ONS fields with the NELA ID variable added. \n\nIn all cases, the data received from HSCIC will not be linked back to the identifiable NELA database which contains date of death for patients that have died in hospital from hospital reports. An extract of anonymised data which includes date of death is taken from the NELA database. This data will be linked to the HES-ONS data via the NELA ID. \n\nA copy of the pseudonymised data fields along with the unique NELA ID will be sent to RCS. The only  identifiable fields received by RCS are ONS Date of Death and Cause of death. The full Date of Death is required to be able to calculate survival at multiple time points (30 day, 90 day, etc.). RCS will not use ONS Date of Death to identify any individual patients.\n\nAnalysts from RCS who work on the pseudonymised data set do not have access to the identifiable data set held by the RoCA. All individuals with access to the data are employed by RCoA or RCS. RCoA or RCS will not be linking HES/ONS data with any other dataset. Linkage with any other datasets would be subject to a future application and would be supported by an appropriate legal basis.\n\nThe majority of the analysis will be conducted by the RCS statisticians who form part of the NELA Project Team. Statisticians from RCoA will be involved in some of the data analysis however this is restricted to the preparation of NELA National Reports.",
+  "167832286145": "Emergency abdominal surgery (or emergency laparotomy) is associated with significant morbidity and mortality worldwide.  The aim of The National Emergency Laparotomy Audit (NELA) is to enable the improvement of the quality of care of patients undergoing emergency laparotomy by providing high quality comparative information of the clinical practice and outcomes of all NHS providers of emergency laparotomy in England and Wales. NELA is a national clinical audit commissioned by the Healthcare Quality Improvement Partnership (HQIP) as part of the National Clinical and Patient Outcomes Programme (NCAPOP).\n\nHQIP have commissioned the Royal College of Anaesthetists (RCoA) to deliver the audit. RCoA are working in partnership with the Clinical Effectiveness Unit of the Royal College of Surgeons (RCS) and therefore make up the NELA project team.  HQIP act as data controllers for the national clinical audit but do not have access to any data collected or analysed by the RCoA and RCS who are the data processors.  The analysis by the NELA project team will only involve pseudonymised (with exception to full Date of Death and Cause of Death) datasets that combine information submitted by NHS hospitals and data supplied by NHS Digital / ONS.  Members of the project team work at either the RCoA or Clinical Effectiveness Unit at the RCS, however analysis of the NHS Digital, ONS, and an extract of pseudonymised NELA data (including full Date of Death obtained via hospitals) will only be processed and stored at RCS.\n\nThe RCoA and RCS wish to link the patient records submitted to NELA with the Hospital Episode Statistics (HES) records for those patients.  The NELA records relate only to an individual admission, and by linking to inpatient HES data, the Audit will be able to provide more precise and relevant information to NHS hospitals by allowing the RCoA and RCS to describe longer term outcomes (e.g., readmission rates) and to improve RCoA’s and RCS’s risk-adjustment models by using the extensive information on comorbid conditions held within HES. (eg to calculate the Charlson Comorbidity score)\n\nThe RCoA and RCS also wish to link the patient records submitted to NELA with the Office for National Statistics (ONS) Death Register on a quarterly basis to enable the Audit to monitor changes in postoperative outcomes (both short and longer-term mortality) for those patients.  Access to this linked information will support this national clinical audit to improve the quality of care within NHS hospitals for a high-risk patient group.\n\nThe objectives of the Audit are:\n1. To enable secondary care providers to improve the delivery of care to patients undergoing emergency laparotomy using information produced by the audit;\n2. To provide comparative information on the organisation of care by providers of Emergency Laparotomy.\n3. To provide comparative information on patient outcomes following surgery for Emergency Laparotomy.\n4. To facilitate the development of effective change (quality improvement) initiatives and thereby spread examples of best practice and help local providers make the best possible use of audit results \n\nIn summary, the purpose of this request is to support national clinical audit, quality improvement within hospital, and research on methods to monitor surgical outcomes.\nThe NELA team is planning to request patient level clinical data from Intensive Care National Audit and Research Centre (ICNARC).",
+  "23b7c2b33805": "Emergency abdominal surgery (or emergency laparotomy) is associated with significant morbidity and mortality worldwide.  The aim of The National Emergency Laparotomy Audit (NELA) is to enable the improvement of the quality of care of patients undergoing emergency laparotomy by providing high quality comparative information of the clinical practice and outcomes of all NHS providers of emergency laparotomy in England and Wales. NELA is a national clinical audit commissioned by the Healthcare Quality Improvement Partnership (HQIP) as part of the National Clinical and Patient Outcomes Programme (NCAPOP).\n\nHQIP have commissioned the Royal College of Anaesthetists (RCoA) to deliver the audit. RCoA are working in partnership with the Clinical Effectiveness Unit of the Royal College of Surgeons (RCS) and therefore make up the NELA project team.  HQIP act as data controllers for the national clinical audit but do not have access to any data collected or analysed by the RCoA and RCS who are the data processors.  The analysis by the NELA project team will only involve pseudonymised (with exception to full Date of Death and Cause of Death) datasets that combine information submitted by NHS hospitals and data supplied by NHS Digital / ONS.  Members of the project team work at either the RCoA or Clinical Effectiveness Unit at the RCS, however analysis of the NHS Digital, ONS, and an extract of pseudonymised NELA data (including full Date of Death obtained via hospitals) will only be processed and stored at RCS.\n\nThe RCoA and RCS wish to link the patient records submitted to NELA with the Hospital Episode Statistics (HES) records for those patients.  The NELA records relate only to an individual admission, and by linking to inpatient HES data, the Audit will be able to provide more precise and relevant information to NHS hospitals by allowing the RCoA and RCS to describe longer term outcomes (e.g., readmission rates) and to improve RCoA’s and RCS’s risk-adjustment models by using the extensive information on comorbid conditions held within HES. (eg to calculate the Charlson Comorbidity score)\n\nThe RCoA and RCS also wish to link the patient records submitted to NELA with the Office for National Statistics (ONS) Death Register on a quarterly basis to enable the Audit to monitor changes in postoperative outcomes (both short and longer-term mortality) for those patients.  Access to this linked information will support this national clinical audit to improve the quality of care within NHS hospitals for a high-risk patient group.\n\nThe objectives of the Audit are:\n1. To enable secondary care providers to improve the delivery of care to patients undergoing emergency laparotomy using information produced by the audit;\n2. To provide comparative information on the organisation of care by providers of Emergency Laparotomy.\n3. To provide comparative information on patient outcomes following surgery for Emergency Laparotomy.\n4. To facilitate the development of effective change (quality improvement) initiatives and thereby spread examples of best practice and help local providers make the best possible use of audit results \n\nIn summary, the purpose of this request is to support national clinical audit, quality improvement within hospitals, and research on methods to monitor surgical outcomes.\nThe NELA team is planning to request patient level clinical data from Intensive Care National Audit and Research Centre (ICNARC).",
+  "23bb6e945701": "The linked dataset will be a product of this process and will enhance the quality of the comparative data for the audit in subsequent years. \n\nThe NELA is commissioned to produce a \"State of the Nation\" annual report each year. The first 2 reports utilising patient level information were published in June 2015 & June 2016 and are available to view on the NELA website. Subsequent reports are scheduled to be published yearly.\n\nIn order to more widely disseminate the findings of the audit, additional scientific publications will be produced. These outputs will be in the form of peer-review articles and conference presentations. \n\nThe results of the audit will also be disseminated at professional medical conferences and in peer-reviewed journals (e.g. BMJ, BJA, ASGBI journal, AAGBI journal) at the time of the launch of the report or shortly after. Publications related to the Audit methods (e.g., a risk-adjustment model) rather than information of clinical practice and outcomes will be published on an ad hoc basis.\n\nIn response to participant feedback a Quality Improvement Report Dashboard has been created on the NELA Online Web Tool to assist sites with audit data collection and to promote local Quality Improvement work (Local hospital data can only be viewed by registered local hospital participants). The Quality Improvement Report Dashboard will only provide local units with aggregated information to compare their performance against a national average.  The figures available to each unit will be based on their own local data (supplied by the units) and the Dashboard may therefore present small numbers on some occasions. Each individual user has their own login to the webtool which gives them access to only their own hospital local data. To access the webtool they require a username and password.\n\nThe first phase of the Dashboard which has now been launched focuses on Case Ascertainment and Patient Demographics. The Patient Demographics section allows local participants to view some basic information on their hospital's population of patients undergoing emergency laparotomy, and how it compares to the audit-wide average. It focuses on characteristics such as patient age and operative urgency. \n\nThe Case Ascertainment aims at increasing case completeness and submission by providing a monthly list of cases entered/completed/not completed.\n\nThe next phase of the Dashboard will focus much more on Quality Improvement, feeding back key QI indicators and comparing hospital's local data with national audit-wide averages. Some of the measures reported back will include; Documentation of risk, Direct Admission to critical care etc.\n\nThe Royal College of Anaesthetists are currently in the process of developing the QI dashboard and hope to make further additions in the next few months.\n\nAll outputs will be aggregated with small numbers suppressed and will follow the ONS/HES guide on reporting.",
+  "3bbdfe9e580d": "The NELA audit is highly relevant to current clinical practice and publications will allow widespread disseminate of the findings amongst health professionals. Linkage to the HES/ONS data allows the Audit to report more extensively on patterns of care beyond the initial hospital admission and longer-term outcomes, such as 90-day mortality. The Audit is able to examine issues such as readmission rates and the most common reasons for these post-discharge complications, e.g.: respiratory complications and anastomotic leaks.\n\nThe audit will produce useful indicators that describe the standard of care in a variety of clinical areas. The indicators will identify NHS providers that are performing well and those requiring improvement to the quality of care received by patients. \nOngoing improvement in the processes of care and clinical outcomes should lead to a reduction in the postoperative mortality rates and thus an overall improvement in patient outcomes. Outcomes will be measured by re-auditing individual sites and therefore regular data linkage would be required.  It is hoped that this improvement in care would be identified by the end of the currently proposed commissioned audit period (Dec 2018).\n\nThe intended audience for the audit annual reports are clinicians, healthcare professionals, Medical Directors, Chief Executives, audit managers, commissioners, NHS England, public and patients. Trusts will use the process indicators and outcomes reported in the annual reports to assess their care against national standards and benchmark against other NHS trusts. This will enable providers to identify areas requiring improvement and take action which in turn will provide a benefit to patient care. \n\nReporting will identify whether NHS trusts are meeting national guidance such as NICE recommendations and will identify variations in the provision of care. The Audit outcomes such as postoperative mortality are risk-adjusted and any potential outlying trusts are identified as part of the Audit outlier policy. \n\nAny Trust showing as an alarm will be notified which will allow for investigation into the cause; this can be attributable to either data quality issues or clinical practice. This notification will enable the trust to address the cause and either review the data submitted to the Audit or their clinical practice. Any resultant improvements in clinical practice will directly impact on improvements in patient care.\n\nThe trust profiles are publically available, providing transparency and enabling patient choice.\n\nPublishing in peer-reviewed journals will allow greater discussion of the strengths and weaknesses of the results, and will provide the benefit of peer-review of the work from third parties. \n\nIt is anticipated that the reports produced as a result of the audit will contribute to clinical guidance and national policy.",
+  "52c364a8a3b0": "The linked dataset will be a product of this process and will enhance the quality of the comparative data for the audit in subsequent years. \n\nThe NELA is commissioned to produce a \"State of the Nation\" annual report each year. The first 2 reports utilising patient level information were published in June 2015 & June 2016 and are available to view on the NELA website. Subsequent reports are scheduled to be published yearly.\n\nIn order to more widely disseminate the findings of the audit, additional scientific publications will be produced. These outputs will be in the form of peer-review articles and conference presentations. \n\nThe results of the audit will also be disseminated at professional medical conferences and in peer-reviewed journals e.g. BMJ (British Medical Journal), BJA (British Journal of Anaesthesia), ASGBI (Association of Surgeons of Great Britain and Ireland) journal, and AAGBI (The Association of Anaesthetists of Great Britain and Ireland) journal at the time of the launch of the report or shortly after. Publications related to the Audit methods (e.g., a risk-adjustment model) rather than information of clinical practice and outcomes will be published on an ad hoc basis.\n\nIn response to participant feedback a Quality Improvement Report Dashboard has been created on the NELA Online Web Tool to assist sites with audit data collection and to promote local Quality Improvement work (Local hospital data can only be viewed by registered local hospital participants). The Quality Improvement Report Dashboard will only provide local units with aggregated information to compare their performance against a national average.  The figures available to each unit will be based on their own local data (supplied by the units) and the Dashboard may therefore present small numbers on some occasions. Each individual user has their own login to the webtool which gives them access to only their own hospital local data. To access the webtool they require a username and password. No data supplied from NHS Digital is held or accessed here.\n\nThe first phase of the Dashboard which has now been launched focuses on Case Ascertainment and Patient Demographics. The Patient Demographics section allows local participants to view some basic information on their hospital's population of patients undergoing emergency laparotomy, and how it compares to the audit-wide average. It focuses on characteristics such as patient age and operative urgency. \n\nThe Case Ascertainment aims at increasing case completeness and submission by providing a monthly list of cases entered/completed/not completed.\n\nThe next phase of the Dashboard will focus much more on Quality Improvement, feeding back key QI indicators and comparing hospital's local data with national audit-wide averages. Some of the measures reported back will include; Documentation of risk, Direct Admission to critical care etc.\n\nThe Royal College of Anaesthetists are currently in the process of developing the QI dashboard and hope to make further additions in the next few months.\n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nAll processing of ONS data will be in line with ONS standard conditions.\n\nThere will be no requirement nor attempt to re-identify individuals from the data.\n\nThe data will not be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.",
+  "64550fdc40d7": "The linked dataset will be a product of this process and will enhance the quality of the comparative data for the audit in subsequent years. \n\nThe NELA is commissioned to produce a \"State of the Nation\" annual report each year. The first 4 reports utilising patient level information were published in June 2015, July 2016, October 2017 & 2018 and are available to view on the NELA website. Subsequent reports are scheduled to be published yearly.\n\nIn order to more widely disseminate the findings of the audit, additional scientific publications will be produced. These outputs will be in the form of peer-review articles and conference presentations. \n\nThe results of the audit will also be disseminated at professional medical conferences and in peer-reviewed journals e.g. BMJ (British Medical Journal), BJA (British Journal of Anaesthesia), ASGBI (Association of Surgeons of Great Britain and Ireland) journal, and AAGBI (The Association of Anaesthetists of Great Britain and Ireland) journal at the time of the launch of the report or shortly after. Publications related to the Audit methods (e.g., a risk-adjustment model) rather than information of clinical practice and outcomes will be published on an ad hoc basis.\n\nIn response to participant feedback a Quality Improvement Report Dashboard has been created on the NELA Online Web Tool to assist sites with audit data collection and to promote local Quality Improvement work (Local hospital data can only be viewed by registered local hospital participants). The Quality Improvement Report Dashboard will only provide local units with aggregated information to compare their performance against a national average.  The figures available to each unit will be based on their own local data (supplied by the units) and the Dashboard may therefore present small numbers on some occasions. Each individual user has their own login to the webtool which gives them access to only their own hospital local data. To access the webtool they require a username and password. No data supplied from NHS Digital is held or accessed here.\n\nThe first phase of the Dashboard which has now been launched focuses on Case Ascertainment and Patient Demographics. The Patient Demographics section allows local participants to view some basic information on their hospital's population of patients undergoing emergency laparotomy, and how it compares to the audit-wide average. It focuses on characteristics such as patient age and operative urgency. \n\nThe Case Ascertainment aims at increasing case completeness and submission by providing a monthly list of cases entered/completed/not completed.\n\nThe next phase of the Dashboard will focus much more on Quality Improvement, feeding back key QI indicators and comparing hospital's local data with national audit-wide averages. Some of the measures reported back will include; Documentation of risk, Direct Admission to critical care etc.\n\nThe Royal College of Anaesthetists are currently in the process of developing the QI dashboard and hope to make further additions in the next few months.\n \nThe following Reports and Publications have been created:\n-          4 National Patient Audit Reports published in 2015, 2016, 2017, 2018\n-          2 Organisational Audit reports published in 2014 and 2017\n-          Quarterly hospital reports provided to participants since the start of 2017 and ongoing\n-          Quarterly Reports at AHSN level provided since Year 4 Quarter 3\n\nIn addition,\n-       Data is being used by CQC on their Dashboard (no record level data - all aggregated with small numbers suppressed)\n-       Data being used on MyNHS website (no record level data - all aggregated with small numbers suppressed)\n-       Work has started on introducing a BPT for Emergency Laparotomy using the audit data. NHS England are looking to introduce this BPT in 2019. The BPT will be using audit data to ensure compliance.\n\nAll outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nThere will be no requirement nor attempt to re-identify individuals from the data.\n\nThe data will not be made available to any third parties except in the form of aggregated outputs with small numbers suppressed in line with the HES Analysis Guide.\n\nRCoA/RCS have requested permission to release a small number of items from HES data back to participating hospitals sites. This would be provided only to hospitals via the online webtool so they could see which patients have been coded as Emergency Laparotomies in HES. RCoA/RCS would not be releasing information that the hospital does not already have, as they submitted it to HES in the first place.\n\nRCoA/RCS have requested permission to release a small number of items – unsuppressed, at record-level – from HES data back to participating hospitals sites, to enable clinicians to explore and understand low-volume activity in their Trusts, to understand case ascertainment and - specifically - identify which patients have not had their data uploaded to NELA. This would be provided only to hospitals via the online webtool so they could see which patients have been coded as Emergency Laparotomies in HES. RCoA/RCS would not be releasing information that the hospital does not already have, as they submitted it – originally as SUS, then transformed by NHS Digital into HES –  in the first place.",
+  "65a187cbf1a7": "1. To enable secondary care providers to improve the delivery of care to patients undergoing emergency laparotomy using information produced by the audit;\n2. To provide comparative information on the organisation of care by providers of Emergency Laparotomy.\n3. To provide comparative information on patient outcomes following surgery for Emergency Laparotomy.\n4. To facilitate the development of effective change (quality improvement) initiatives and thereby spread examples of best practice and help local providers make the best possible use of audit results \nHQIP have commissioned The Royal College of Anaesthetists (RCoA) to deliver the audit. RCoA are working in partnership with the Clinical Effectiveness Unit of the Royal College of Surgeons (RCS).",
+  "7ee87d841f63": "The linked dataset will be a product of this process and will enhance the quality of the comparative data for the audit in subsequent years. \n\nThe NELA is commissioned to produce a \"State of the Nation\" annual report each year. The first report using patient level information was published in June 2015 and is available to view on the NELA website. Subsequent reports are scheduled to be published June 2016 and June 2017. \n\nIn order to more widely disseminate the findings of the audit , additional scientific publications will be produced. These outputs will be in the form of peer-review articles and conference presentations. \n\nThe results of the audit will also be disseminated at professional medical conferences and in peer-reviewed journals (e.g. BMJ, BJA, ASGBI journal, AAGBI journal) at the time of the launch of the report or shortly after. Publications related to the Audit methods (e.g., a risk-adjustment model) rather than information of clinical practice and outcomes will be published on an ad hoc basis.\n\nIn response to participant feedback a Quality Improvement Report Dashboard has been created on the NELA Online Web Tool to assist sites with audit data collection and to promote local Quality Improvement work (Local hospital data can only be viewed by registered local participants).\n\nThe first phase of the Dashboard which has now been launched focuses on Case Ascertainment and Patient Demographics. The Patient Demographics section allows local participants to view some basic information on their hospital's population of patients undergoing emergency laparotomy, and how it compares to the audit-wide average. It focuses on characteristics such as patient age and operative urgency. \n\nThe Case Ascertainment aims at increasing case completeness and submission by providing a monthly list of cases entered/completed/not completed.\n\nThe next phase of the Dashboard will focus much more on Quality Improvement, feeding back key QI indicators and comparing hospital's local data with national audit-wide averages. Some of the measures reported back will include; Documentation of risk, Direct Admission to critical care etc.\n\nThe Royal College of Anaesthetists are currently in the process of developing the QI dashboard and hope to make further additions in the next few months.\n\nAll outputs will be aggregated with small numbers suppressed and will follow the ONS/HES guide on reporting.",
+  "7efe0c3ab43f": "The RCoA are the principal data processors for NELA and manage the extraction of the records from the NELA IT system. \n \nRCoA will send the file of patient identifiers, NHS Number, date of Birth and Postcode, and the NELA ID to NHS Digital for\nlinkage to HES and Mortality Data fields. Pseudonymised files from NHS Digital will contain the HES and Mortality Data fields with the NELA ID variable added (no patient identifiers are to be returned to the NELA team).   The pseudonymised files of HES / Mortality Data will be received by the RCS and RCoA and held on the secure data servers within each organisation.\n\nIn all cases, the data received from NHS Digital will not be linked back to the identifiable NELA database held at RCoA. An extract of pseudonymised data is taken from the NELA database and this data will be linked to the HES-Mortality data via the NELA ID. Date of Death submitted from the NELA database is provided as this includes an important data quality step. There are potential missed linkages if RCS and RCoA do not have this information when processing the data. This also helps to validate the data entered into NELA. No data provided by NHS Digital is sent to RCoA to correct fields in the NELA database.\n\nA copy of the pseudonymised data fields along with the unique NELA ID will be analysed by project team members from both RCS and RCoA at the RCS Clinical Effectiveness Unit and RCoA. The full Date of Death is required to be able to calculate survival at multiple time points (30 day, 90 day, etc.). There will be no capacity for RCS / RCoA analysts to use the Date of Death to identify any individual patients.\n\nThe analysis involving the pseudonymised linked patient dataset will be conducted by the RCS & RCoA statisticians who form part of the NELA Project Team. Those Statisticians involved in the analysis of the patient-level dataset will be located at the RCS and RCoA to undertake this work. In either case, all individuals with access to the data are substantively employed by either RCS or RCoA or have contracted agreements with RCoA and are required to sign a  Memorandum of Understanding (MoU) Agreement before access to NHS Digital data is granted.\n\nAnalysts from RCS / RCoA who work on the pseudonymised data set do not have access to the identifiable data set held within the NELA IT system and managed by the RCoA, nor the list of patient identifiers sent to NHS digital for linkage purposes. The list of patient identifiers sent to NHS digital is only accessible by a senior member of the RCoA.  RCoA or RCS will not be linking HES/Mortality Data with any other dataset (apart from an extract of NELA). Linkage with any other datasets would be subject to a future application and would be supported by an appropriate legal basis.\n\nThe majority of the analysis involving the pseudonymised linked patient dataset will be conducted by the RCS statisticians who form part of the NELA Project Team. The remainder would consist of statisticians from RCoA who would be involved in some of the analysis of the patient-level dataset and will be located at the RCoA and RCS Clinical Effectiveness Unit to undertake this work.  In either case, all individuals with access to the data are substantively employed or have contracted agreements by either RCoA, or RCS and are required to sign a Confidentiality Agreement before access is granted.\n\nIn line with current contract with HQIP and the introduction of Best Practice Tariff for Emergency Laparotomies, it is important for hospitals to be able to understand their case ascertainment and identify which patients have not had their data uploaded to NELA. For this purpose, RCoA will return to trusts their own HES data – originally submitted by Trusts as SUS, then transformed by NHS Digital into HES – in order to identify patients that have not been submitted to the audit.  This requires hospital access to their own unsuppressed record-level data. The following data items will be returned; Patient year of birth, Patient sex, Date of admission, Date of operation, OPERTN_01, DIAG_01.  Only data that has emanated from the Trust will be returned to the Trust.\n \nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "a85c5b6aad35": "Benefits derived from the research so far:\n\nHeadlines from reports of the last 4 years:\n> national 30-day mortality rate falling from 11.8 per cent to 9.5. per cent over four years, represents around 700 lives saved each year in comparison 2013-2014.\n> Average length of stay has fallen to 15.6 days from 19.2 days in year one.\n> Making recommendations in the reports for local participating sites to follow. Includes recommendation for NELA Local Leads, Clinical Directors, Commissioners, Medical Directors, Multidisciplinary Teams, Royal Colleges and other professional stakeholders.\n> Running regional NELA Quality Improvement workshops to assist hospital sites in using their local data to improve patient care\n \nPeer Reviewed Papers Published:\n- C.M. Oliver, M.G. Bassett, T.E. Poulton, I.D. Anderson, D.M. Murray, M.P. Grocott, S.R. Moonesinghe for the National Emergency Laparotomy Audit collaborators. Organisational factors and mortality after an emergency laparotomy: multilevel analysis of 39 903 National Emergency Laparotomy Audit patients. BJA. 2018 Dec;121(6):1346-1356\n- N. Eugene, C.M. Oliver, M.G. Bassett, T.E. Poulton, A. Kuryba, C. Johnston, I.D. Anderson, S.R. Moonesinghe, M.P. Grocott, D.M. Murray, D.A. Cromwell, K. Walker on behalf of the NELA collaboration§ Development and internal validation of a novel risk adjustment model for adult patients undergoing emergency laparotomy surgery: the National Emergency Laparotomy Audit risk model. BJA 2018 Oct;121(4):739-748\n\n- O. Peacock, M. G. Bassett, A. Kuryba, K. Walker, E. Davies, I. Anderson et al. Thirty‐day mortality in patients undergoing laparotomy for small bowel obstruction. BJS March 2018; 105: 1006-1013.\n\nNon-peer reviewed paper published:\n- ‘NELA; Engaging with emergency laparotomy patients’ - RCoA Bulletin March 2018.\n- Using data to improve care: NELA regional workshops - RCoA Bulletin July 2018\n- Leeds Teaching Hospitals NHS Trust - NELA Nurse Leads - Blog for RCoA Website - July 2018\n- NELA: more than just another audit - Sarah Hare Blog for RCoA Website - November 2018\n\nConferences/Presentations Attended:\nThere are multiple as the NELA Project Team attend many meetings throughout the year. The meetings listed below have taken place in the last 6 months (July - December 2018)\n\n- National Clinical Audit Summit - London\n- AAGBI Congress - London\n- NELA London QI Workshop\n- ICNARC Conference -London\n- South East Thames Society of Anaesthetics - Maidstone\n- NAP 6 Launch – London\n- ELC Welsh Meeting - Cardiff\n- ASGBI Congress - Liverpool\n- Age Anaesthesia Conference - London\n- RCoA Anaesthesia 2018 - London\n- AAGBI Conference – Telford\n- RCoA College Tutors – Leeds\n- NENC AHSN Meeting – Newcastle\n- Ebpom – London\n- AAGBI Meeting – London\n- NELA meets NASBO – Birmingham\n- South West ELC Meeting - Bath\n- Local/Regional Trainee FFICM Meeting – Bristol",
+  "c58c4890f1bc": "The NELA audit is highly relevant to current clinical practice and publications will allow widespread dissemination of the findings amongst health professionals. Linkage to the HES/Mortality data allows the Audit to report more extensively on patterns of care beyond the initial hospital admission and longer-term outcomes, such as 90-day mortality. The Audit is able to examine issues such as readmission rates and the most common reasons for these post-discharge complications, e.g.: respiratory complications and anastomotic leaks.\n\nThe audit will produce useful indicators that describe the standard of care in a variety of clinical areas. The indicators will identify NHS providers that are performing well and those requiring improvement to the quality of care received by patients. \n\nOngoing improvement in the processes of care and clinical outcomes should lead to a reduction in the postoperative mortality rates and thus an overall improvement in patient outcomes.   Outcomes will be measured by re-auditing individual sites and therefore regular data linkage would be required.  It is hoped that this improvement in care would be identified by the end of the currently proposed commissioned audit period (Dec 2020).  Since the start of the audit in 2013, 30 day mortality rate has fallen from 11.8% to 9.5%.\n\nTrusts will use the process indicators and outcomes reported in the annual reports to assess their care against national standards and benchmark against other NHS trusts. This will enable providers to identify areas requiring improvement and take action which in turn will provide a benefit to patient care. \n\nThe audit outcomes/reporting will identify whether NHS trusts are meeting national guidance such as NICE recommendations and will identify variations in the provision of care. The benefits of this outcome include; improving the quality of patient care and reduction in mortality.    \n\nAny Trust showing as an alarm will be notified which will allow for investigation into the cause; this can be attributable to either data quality issues or clinical practice. This notification will enable the trust to address the cause and either review the data submitted to the Audit or their clinical practice. Any resultant improvements in clinical practice will directly impact on improvements in patient care.\n\nThe NHS trust profiles are publicly available, providing transparency and enabling patient choice.  These can be found via the NELA website and:  \n-      Data is being used by CQC on their Dashboard (no record level data - all aggregated with small numbers suppressed)\n-       Data being used on MyNHS website (no record level data - all aggregated with small numbers suppressed)\n-       Work has started on introducing a Best Practice Tariff (BPT) for Emergency Laparotomy using the audit data. NHS England are looking to introduce this BPT in 2019. The BPT will be using audit data to ensure compliance.\n  \nPublishing in peer-reviewed journals will allow greater discussion of the strengths and weaknesses of the results and will provide the benefit of peer-review of the work from third parties. \n\nIt is anticipated that the reports produced as a result of the audit will contribute to clinical guidance and national policy.  The reports produced are sent to a variety of organisations (including NHS England, NICE, CQC) and they can use this information to update guidance and influence policy. \n\nBy providing hospital sites with which patients have been coded as Emergency Laparotomies (ELs) in HES, it will allow hospital sites to investigate and improve both their case ascertainment rate and quality of care. The case ascertainment issue is likely to become a significant issue with the introduction of the Emergency Laparotomy Best Practice Tariff (BPT). Those with low Case Ascertainment due to coding issues will find that they don't meet the BPT because they are coding too many cases as ELs.",
+  "d6a741b1c37a": "The RCoA are the principal data processors for NELA and manage the extraction of the records from the NELA IT system. \n \nRCoA will send the file of patient identifiers, NHS Number, date of Birth and Postcode, and the NELA ID to NHS Digital for linkage to HES and ONS fields. Pseudonymised files (of which includes full date of death and Cause of Death (text)) from NHS Digital will contain the HES and ONS fields with the NELA ID variable added.  The pseudonymised files of HES / ONS data (including Date of Death and Cause of Death) will be received by the RCS and held on their secure data server.  \n\nIn all cases, the data received from NHS Digital will not be linked back to the identifiable NELA database held at RCoA. An extract of pseudonymised data of which includes date of death is taken from the NELA database and sent to RCS. This data will be linked to the HES-ONS data via the NELA ID. Date of Death from the NELA database is provided as this includes an important data quality step. There are potential missed linkages if RCS and RCoA do not have this information when processing the data at RCS. This also helps to validate the data entered into NELA.  No data provided by NHS Digital is sent to RCoA to correct fields in the NELA database.\n\nA copy of the de-identified data fields along with the unique NELA ID will be analysed by project team members from both RCS and RCoA at the RCS Clinical Effectiveness Unit only. The only identifiable fields received by RCS and RCoA analysts are ONS Date of Death and Cause of death. The full Date of Death is required to be able to calculate survival at multiple time points (30 day, 90 day, etc.). There will be no capacity for RCS / RCoA analysts to use the ONS Date of Death to identify any individual patients.\n\nAnalysts from RCS / RCoA who work on the de-identified data set do not have access to the identifiable data set held within the NELA IT system and managed by the RCoA, nor the list of patient identifiers sent to NHS digital for linkage purposes. All individuals with access to the de-identified data are substantively employed by RCoA or RCS. The list of patient identifiers sent to NHS digital is only accessible by a senior member of the RCoA.  RCoA or RCS will not be linking HES/ONS data with any other dataset (apart from an extract of NELA). Linkage with any other datasets would be subject to a future application and would be supported by an appropriate legal basis.\n\nThe majority of the analysis involving the de-identified linked patient dataset will be conducted by the RCS statisticians who form part of the NELA Project Team. The remainder would consist of statisticians from RCoA who would be involved in some of the analysis of the patient-level dataset and will be located at the RCS Clinical Effectiveness Unit to undertake this work.  In either case, all individuals with access to the data are substantively employed by either RCoA, or RCS and are required to sign a Confidentiality Agreement before access is granted.",
+  "dd3eca854d43": "Benefits derived from the research so far:\n\n-       Data is being used by CQC on their Dashboard (no record level data - all aggregated with small numbers suppressed)\n-       Data being used on MyNHS website (no record level data - all aggregated with small numbers suppressed)\n-       Work has started on introducing a BPT for Emergency Laparotomy using the audit data.\n-       Headlines from reports of the last 3 years:\no   national 30-day mortality rate falling from 11.8 per cent to 10.6 per cent over three years, representing approximately 300 patients lives saved each year compared to 2013-2014.\no   Making recommendations in the reports for local participating sites to follow\no   Running regional NELA Quality Improvement workshops to assist hospital sites in using their local data to improve patient care\n \nReports/Publications Created:\n \n-          3 National Patient Audit Reports published in 2015, 2016, 2017\n-          2 Organisational Audit reports published in 2014 and 2017\n-          Quarterly hospital reports provided to participants since the start of 2017\n \nConferences/Presentations Attended:\nThere are multiple as the NELA Project Team attend many meetings throughout the year. Here are a few of the more recent ones:\n\n-          -Emergency Laparotomy Collaborative Event - 2017\n-          -HQIP - Patient First Event - 2017\n-          -RCoA Patient Safety Conference - 2017\n-          -AAGBI Winter Scientific Meeting – January 2017\n-          - Sweden emergency surgery meeting - 14th March 2017\n-          - Royal Society of Medicine - Anaesthesia & Surgery Mtg – April 2017\n-          - Age Anaesthesia Association Meeting 25th May 2017\n-          - ASGBI Surgical Conference – May 2017\n-          - HSRUK Symposium 2017 - July 6th-7th, 2017",
+  "ed381fca97ed": "Emergency abdominal surgery (or emergency laparotomy) is associated with significant morbidity and mortality worldwide.  The aim of The National Emergency Laparotomy Audit (NELA) is to enable the improvement of the quality of care of patients undergoing emergency laparotomy by providing high quality comparative information of the clinical practice and outcomes of all NHS providers of emergency laparotomy in England and Wales. NELA is a national clinical audit commissioned by the Healthcare Quality Improvement Partnership (HQIP) as part of the National Clinical and Patient Outcomes Programme (NCAPOP).\n\nThe RCoA and RCS wish to link the patient records submitted to NELA with the Hospital Episode Statistics (HES) records for those patients.  The NELA records relate only to an individual admission, and by linking to inpatient HES data, the Audit will be able to provide more precise and relevant information to NHS hospitals by allowing the RCoA and RCS to describe longer term outcomes (e.g., readmission rates) and to improve RCoA’s and RCS’s risk-adjustment models by using the extensive information on conditions held within HES. \n\nThe RCoA and RCS also wish to link the patient records submitted to NELA with the Office for National Statistics (ONS) Death Register on a quarterly basis to enable the Audit to monitor changes in postoperative outcomes (both short and longer-term mortality) for those patients.  Access to this linked information will support this national clinical audit to improve the quality of care within NHS hospitals for a high-risk patient group.\n\nThe objectives of the Audit are:\n1.\tTo enable secondary care providers to improve the delivery of care to patients undergoing emergency laparotomy using information produced by the audit;\n2.\tTo provide comparative information on the organisation of care by providers of Emergency Laparotomy.\n3.\tTo provide comparative information on patient outcomes following surgery for Emergency Laparotomy.\n4.\tTo facilitate the development of effective change (quality improvement) initiatives and thereby spread examples of best practice and help local providers make the best possible use of audit results \n\nHQIP have commissioned The Royal College of Anaesthetists (RCoA) to deliver the audit. RCoA are working in partnership with the Clinical Effectiveness Unit of the Royal College of Surgeons (RCS). \n\nIn summary, the purpose of this request is to support national clinical audit, quality improvement within hospital, and research on methods to monitor surgical outcomes.\nThe NELA team is planning to request patient level clinical data from Intensive Care National Audit and Research Centre (ICNARC).",
+  "f16bcde50ed0": "The RCoA are the principal data processors for NELA and manage the extraction of the records from the NELA IT system. \n \nRCoA will send the file of patient identifiers and the NELA ID to NHS Digital for linkage to HES and ONS fields. Pseudonymised files (of which includes full date of death and Cause of Death (text)) from NHS Digital will contain the HES and ONS fields with the NELA ID variable added.  The pseudonymised files of HES / ONS data (including Date of Death and Cause of Death) will be received by the RCS and held on their secure data server.  \n\nIn all cases, the data received from NHS Digital will not be linked back to the identifiable NELA database held at RCoA. An extract of pseudonymised data of which includes date of death is taken from the NELA database and sent to RCS. This data will be linked to the HES-ONS data via the NELA ID. Date of Death from the NELA database is provided as this includes an important data quality step. There are potential missed linkages if RCS and RCoA do not have this information when processing the data at RCS. This also helps to validate the data entered into NELA.  No data provided by NHS Digital is sent to RCoA to correct fields in the NELA database.\n\nA copy of the de-identified data fields along with the unique NELA ID will be analysed by project team members from both RCS and RCoA at the RCS Clinical Effectiveness Unit only. The only identifiable fields received by RCS and RCoA analysts are ONS Date of Death and Cause of death. The full Date of Death is required to be able to calculate survival at multiple time points (30 day, 90 day, etc.). There will be no capacity for RCS / RCoA analysts to use the ONS Date of Death to identify any individual patients.\n\nAnalysts from RCS / RCoA who work on the de-identified data set do not have access to the identifiable data set held within the NELA IT system and managed by the RCoA, nor the list of patient identifiers sent to NHS digital for linkage purposes. All individuals with access to the de-identified data are substantively employed by RCoA or RCS. The list of patient identifiers sent to NHS digital is only accessible by a senior member of the RCoA.  RCoA or RCS will not be linking HES/ONS data with any other dataset (apart from an extract of NELA). Linkage with any other datasets would be subject to a future application and would be supported by an appropriate legal basis.\n\nThe majority of the analysis involving the de-identified linked patient dataset will be conducted by the RCS statisticians who form part of the NELA Project Team. The remainder would consist of statisticians from RCoA would be involved in some of the analysis of the patient-level dataset and will be located at the RCS Clinical Effectiveness Unit to undertake this work.  In either case, all individuals with access to the data are substantively employed by either RCoA, or RCS and are required to sign a Confidentiality Agreement before access is granted."
+ }
+}

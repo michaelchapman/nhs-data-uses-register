@@ -1,0 +1,82 @@
+{
+ "base_reference": "DARS-NIC-352310-L8R7H",
+ "versions": [
+  {
+   "reference": "DARS-NIC-352310-L8R7H",
+   "version": "",
+   "organisation": "King's College London",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "ec8f46c07025"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(15/CAG/1036) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(15/CAG/1036) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(15/CAG/1036) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251(15/CAG/1036) is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "ec8f46c07025": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC: \nObjective for processing: \nThe aims of this project are to examine the associations between alcohol misuse, mental health and physical morbidity (and accidents and injuries) in UK serving and ex-serving military personnel. Physical morbidity will be assessed using ICD-10 diagnosis codes recorded in secondary healthcare records for England, Scotland and Wales (this application for HES data from the HSCIC will run in parallel with applications for Scottish and Welsh secondary care data), which will be linked to the King’s Centre for Military Health Research (KCMHR) cohort study that includes assessments of mental health and alcohol use. This study will also include economic analyses that will identify predictors of the costs for the number of inpatient days, outpatient visits and A&E attendances examining alcohol misuse and mental health as exposures. \n\nObjectives:\n[1]: What are the most common physical disorders and accidents/injuries reported in the military?\nEstimation of the prevalence of physical health conditions, and accidents and injuries to examine which are most common in personnel from the KCMHR cohort from the date of phase 2 completion to 2014. A further aim of these analyses will be to determine which physical health conditions and accidents and injuries should be included in the later predictive models, which will focus on the ten conditions most prevalent within each of these two categories. \n[2]: Are alcohol misuse and mental health problems the best predictors of physical health conditions and accidents and injuries in military personnel, and are the associations the same across different sub-groups in the military?\nMeasures of alcohol misuse and mental health from phase 2 of the KCMHR cohort will be examined as exposures for physical health conditions and accidents/injuries identified in secondary healthcare records as occurring between the phase 2 KCMHR data collection and 2014. Survival analysis models will examine i) pre-military factors (e.g. childhood adversity), ii) military characteristics (e.g. rank, deployment history and deployment-related exposures), iii) social factors (e.g. marital status, social support), iv) smoking status at phase 2 and v) longstanding health conditions (recorded in hospital records between 2004 to phase 2), as confounders in the models to determine the extent that mental health (e.g. Post Traumatic Stress Disorder (PTSD)) and alcohol misuse are contributing to the outcome after accounting for these factors. A further aim is to determine whether there are potential interactions between the pre-military and military characteristic variables with alcohol misuse on the outcome of physical health conditions, and if there is an interaction between alcohol misuse and mental health status on the physical health outcome (i.e. the effects of alcohol misuse may be greater in individuals with a mental health problem).\n[3]: What are the predictors of health service use and costs in the military? \nRegression models will be developed to identify predictors of the costs for the number of inpatient days, outpatient visits and A&E attendances examining alcohol misuse and mental health as exposures after controlling for the confounders from aim 2.\n\nProcessing activities: \nLinkage:\nSecondary care data on inpatient admissions, outpatient, critical care and A & E visits from HES will be linked to the KCMHR cohort (https://www.kcl.ac.uk/kcmhr/research/kcmhr/Flow-diagram-for-data-linkage.pdf ). A dataset from the KCMHR cohort including an encrypted ID number, NHS number, name, sex and date of birth (that will be encrypted and password protected) will be given to the HSCIC. The data linkage will then be conducted by the HSCIC and the administrative dataset will be linked individually to all of the HES datasets that have been applied for. The pseudonymised linked datasets will then be downloaded from the HSCIC in an encrypted format. The outpatient, inpatient and A & E data will all be stored as individual datasets and each year of data will also be provided individually, so there will be multiple files which will be managed by an Informatician and the KCMHR database manager. \n\nProcessing of all data:\nSecondary healthcare records data from 2003-2014 for England, Scotland and Wales on inpatient admissions, outpatient and A & E visits will be requested from the Health and Social Care Information Centre (HSCIC), NHS National Services Scotland (NSS), and from the Secure Anonymised Linkage (SAIL) Databank. These organisations will link the healthcare data to an administrative data file that will be supplied from KCMHR including demographic data for the 86.4% of phase 2 participants that consented to allow access to their medical records. This processs will be the same for all three organisations, as outlined in the above section on ‘linkage’.\n\nOnce the English, Welsh and Scottish data has been received by KCMHR the datasets will initially all be stored separately and the data extraction of relevant health outcomes will be conducted by the Informatician in the individual datasets. All of these datasets will contain the same encrypted participant ID. \n\nEach event from the healthcare records data will have a separate row and the admissions and events will be ordered by the date of the first event so that the first event for a particular disease category can be identified, in addition to the date of that event. For each participant there may be multiple events that will be extracted by the informatician, if the participant has experienced more than one of the health conditions that is relevant to this study. The data will be extracted by the informatician using the relevant ICD codes. The main focus will be on an individual receiving a diagnosis, rather than the number of admissions and events for a single diagnosis; however, this information on number of events and days for an inpatient admission (for the most common categories of physical illness and accidents and injuries) will be extracted for the economic analyses. Multiple diagnoses within an individual, relating to admissions and visits for a different diagnosis, will be counted.\n\nOnce the relevant data has been extracted from the electronic healthcare records, and these datasets are reduced, the English, Welsh and Scottish datasest will be individually linked to the main KCMHR cohort dataset (including the self-report data, e.g. on mental health and alcohol misuse) so that the main analyses can be conducted.\n\nSecurity:\nData will be processed and stored within KCMHR and held on the secure server. The server is a virtual server and runs on one of the KCL physical servers. The physical server is stored within a locked cabinet within a locked room which is in a swipe card access only corridor in a swipe access only building at KCL at the Strand campus (Strand, London WC2R 2LS). All data are stored in an encrypted form using an AES-256 encryption algorithm.\nThe administrative data file (including the identifiable administrative data) will be stored in a separate encrypted folder with a full security audit on SQL server 2008, on the KCMHR secure server. Server access is restricted via a VLAN to nominated machines within KCMHR at the Weston Education Centre, nominated users and restricted TCP ports in KCMHR and the IT department machine at King’s College London. Backups are to LTO-4 tape. The drive unit and room are locked. The tapes are then transferred to the fire safe.\nA new study ID will be created to replace original KCMHR study IDs and the mapping ID (the only ID that links the administrative data to the pseudonymised data) will be kept separately in an encrypted database on an encrypted physical device (e.g. IronKey) that will be stored in a secure safe at KCMHR. Only the KCMHR Data Managers and Project Manager have access to this safe.\nA username and password is allocated to each member of staff by the IT department on joining King’s College London. On receipt of the login details, the password is changed in line with KCMHR’s password policy (minimum of 12 digits, containing letters, numbers, and symbols).  KCMHR staff change their password every 6 months. The KCL system also has a firewall.\n\nSpecific outputs expected, including target date(s): All outputs from this project will present anonymized data and will be aggregated, and no data on rare conditions or other small numbers will be presented.\nAcademic papers: 1. “Using hospital records to identify the most common physical disorders in the UK military” (to be submitted to the BMJ); 2. “Are alcohol misuse and mental health problems the best predictors of physical morbidity in the UK military?” (to be submitted to Social Science & Medicine); 3. “What are the predictors of health service use and costs in the UK military” (to be submitted to Plos One). [The aim is for all academic articles to be submitted by end of 2016].\nGuide to the data linkage: A guide highlighting any difficulties with the linkage and the data extraction. This will be useful for researchers planning a similar linkage and for future plans to link the KCMHR cohort to primary records. [This will be produced in Summer 2016].\nBooklets for dissemination: Booklet providing a summary of the research findings and the implications. These will be distributed to the Department of Health, Ministry of Defence, NHS England and third sector organisations (e.g. Royal British Legion or Combat Stress) through existing KCMHR links and by the study partner (The Armed Forces and Veterans’ Health Policy Team, Department of Health). [Published before the public engagement event at the end of the project.]\nPublic seminar: To be held at the Strand campus at KCL at the end of the project. A range of public sector professionals (e.g. from Ministry of Defence, Departmentt of Health and NHS England) and third sector professionals (e.g. from Royal British Legion and Combat Stress) will be invited to this event. [Summer 2016]\n\nExpected measurable benefits to health and/or social care, including target date(s): \nINFORMING THE COMMISSIONING OF FUTURE SERVICES: As outlined in the Murrison report “Fighting Fit: a mental health plan for servicemen and veterans”, the current and future health care of serving and ex-servicemen and women has become of high social, health and political importance. Commitments on future health care form an important part of the Military Covenant, now written into law. While military healthcare is a current priority for NHS England, there remains a remarkable dearth of data on need, access, provision and outcome, partly because of difficulties in identifying service personnel and veterans in all the key data sets normally used for such a purpose. The proposed study is an excellent opportunity to utilise KCMHR’s experience and knowledge to identify which conditions are most common among service personnel and veterans. The findings of this study will be disseminated to organisations such as NHS England through the project links with the Department of Health and also through the public engagement event and information booklet. This will provide vital information for these organisations in planning specialised commissioning. \nTACKLING ALCOHOL USE WITHIN MILITARY CULTURE: \nThe Government’s 2012 Alcohol Strategy highlighted the national issue of binge-drinking, with a focus on approaches to reducing access to alcohol such as setting a minimum unit price in order to decrease the associated harm and costs. The military can be considered as a separate population with different norms regarding the use of alcohol, including higher levels of alcohol misuse. When the Strategy was released, the Secretary of State estimated the annual cost of alcohol-related hospital admissions at £3.5 billion; this cost will likely be greater for military personnel, given evidence of higher consumption levels. The proposed research study can quantify and investigate the links between alcohol use and physical morbidity in military personnel as well as providing economic implications. This evidence will be disseminated to the MoD through existing links with KCMHR and also through the public engagement event and related materials, which may support the MoD in changing policies regarding alcohol use within the military. \nIDENTIFYING AT RISK GROUPS WITHIN THE MILITARY: \nThe Armed Forces Covenant was developed to redress disadvantages that military personnel may face compared to other citizens. Whilst this relates to the military as a whole, there may be sub-populations within the military which face greater physical health inequality, such as reservists or personnel of lower ranks. Findings from the current study will inform future health-care commitments in the Covenant, through dissemination to NHS England, the Department of Health and other healthcare organisations, by identifying those personnel at greatest need of health services. \nINFORMING MILITARY CHARITIES AND THE NATIONAL VETERANS MENTAL HEALTH NETWORK: \nKCMHR’s work is already supported by several veterans’ charities; including RBL and Combat Stress and these collaborations will provide a ready opportunity for dissemination within these and other charities. RBL and Combat Stress have recently partnered for a three-year programme focussing on the mental health needs of service personnel and veterans, and regularly lobby the MoD and DH. The new National Veterans’ Mental Health Network has been set up by DH to develop the provision of future services, drawing on the combined expertise of clinicians, academics, and military charities; to provide the evidence base for the development of services. Links have been developed between this study and the National Veteran’s Mental Health Network, as part of the study steering group, to ensure that these findings can be disseminated appropriately. This study would therefore be conducted at a time when there is optimal opportunity to shape services and when strong scientific evidence can most easily be translated into clinical practice and policy."
+ }
+}

@@ -1,0 +1,145 @@
+{
+ "base_reference": "DARS-NIC-147794-JDPT1",
+ "versions": [
+  {
+   "reference": "DARS-NIC-147794-JDPT1",
+   "version": "",
+   "organisation": "Public Health England (PHE)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "57046a4acbf7"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "e09f7e9953dd"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "98b7e8b9dbd4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS Mortality data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS Mortality data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Regulation 2 of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Regulation 3 of the Health Service (Control of Patient Information) Regulations 2002",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by the Office for National Statistics under the Statistics and Registration Service Act 2007 section 42(4) for the purposes of assisting the Secretary of State for Health or the Welsh Ministers in the performance of his or their functions in relation to the Health Service and for the release of ONS mortality data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-147794-JDPT1-v0.0",
+   "version": "0.0",
+   "organisation": "PUBLIC HEALTH ENGLAND (PHE)",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "objective": "8d02590449f0"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Other-NHS Regulations (3)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-NHS Regulations (3)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "57046a4acbf7": "Survival analysis of a cohort of Clostridium difficile infected and non- infected patients admitted to Addenbrooke’s Hospital between 2005 and 2007 To determine if Clostridium difficile (C. difficile) infection is associated with excess all cause mortality. Data access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC.",
+  "8d02590449f0": "Survival analysis of a cohort of Clostridium difficile infected and non- infected patients admitted to Addenbrooke’s Hospital between 2005 and 2007 \n\nTo determine if Clostridium difficile (C. difficile) infection is associated with excess all cause mortality.",
+  "98b7e8b9dbd4": "To determine if Clostridium difficile (C. difficile) infection is associated with excess all cause mortality.",
+  "e09f7e9953dd": "Survival analysis of a cohort of Clostridium difficile infected and non- infected patients admitted to Addenbrooke’s Hospital between 2005 and 2007 \n\nTo determine if Clostridium difficile (C. difficile) infection is associated with excess all cause mortality.\n\nData access is restricted to those named in section 7 of this agreement. Any changes will be notified to the NHS IC."
+ }
+}

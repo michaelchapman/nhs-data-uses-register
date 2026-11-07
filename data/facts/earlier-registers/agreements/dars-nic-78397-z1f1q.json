@@ -1,0 +1,167 @@
+{
+ "base_reference": "DARS-NIC-78397-Z1F1Q",
+ "versions": [
+  {
+   "reference": "DARS-NIC-78397-Z1F1Q-v0.13",
+   "version": "0.13",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01"
+     ],
+     "objective": "14c554fec04c",
+     "activities": "08a44051616f",
+     "expected_output": "37cdb2b54ee8",
+     "expected_benefits": "9938d56cc6b2"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 20
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 6
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-78397-Z1F1Q-v1.6",
+   "version": "1.6",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "14c554fec04c",
+     "activities": "9930b0c42d2b",
+     "expected_output": "7efb5fd2d772",
+     "expected_benefits": "9938d56cc6b2"
+    },
+    {
+     "periods": [
+      "2018-05-25"
+     ],
+     "objective": "14c554fec04c",
+     "activities": "9930b0c42d2b",
+     "expected_output": "7efb5fd2d772",
+     "expected_benefits": "ea76bab92ef3"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "08a44051616f": "The data supplied to NHS Digital by CTSU for each participant will be: unique ACST-1 trial Identifier (ID); first and last name; date of birth, and NHS number. The data will be in an encrypted format via the Oxford secure data transfer system.\n \nThe data received back from NHS Digital will include the ACST-1 trial ID, date of birth (as provided by CTSU), gender, and outcomes of potential relevance (e.g. strokes and dementia) from the following datasets: HES Admitted Patient Care, HES Outpatients, and A&E, Mental Health, and Date of Death (obtained from demographics). The data will be securely transferred to the secure database at Clinical Trial Service Unit (CTSU), Richard Doll Building, University of Oxford. Upon receipt, these data will be entered into the existing ACST-1 trial database, and hence will remain identifiable. However, access to this database is tightly restricted, and any outputs are aggregated and entirely non-identifiable.\n\nDate of birth is required back from NHS Digital in order apply a two-fold validation of the individual records by linking participants in the original trial dataset with their health recorded in the hospital episode statistics. This is due to policy at CTSU to employ rigorous data-checking procedures for all imported data. By doing this, CTSU can have higher confidence that matching of data is accurate. \n\nThe ACST-1 trial has a study specific database that is password protected and held securely on one University drive only. The ACST-1 database contains detail from the original ASCT-1 study where members are archived according to the original paper consent forms and records. These records include full name and date of birth but these are the only identifiable data contained within the ACST-1 database. The identifiable HES data will be stored in an encrypted TrueCrypt container where all such access will be granted on the instruction of the Information Asset Owner for ACST-1. The database with imported NHS Digital information will be modified and only Trial ID and age will be used in the database for analysis. Pseudonymised data (with exception to date of death) will only be available for analysis. Access is routinely reviewed and revoked when the team member leaves ACST-1. Only personnel substantively employed by the University of Oxford and are involved in this long-term follow-up study for ACST-1 study (processing and analysing data) will have access to this data.   \n\nThe data received will be combined with existing information on rates of stroke, other vascular disease and death (obtained previously up to 2008) and used to compare rates of dementia (and also stroke) amongst participants originally allocated to undergo carotid surgery versus those managed with medical therapy alone (i.e. intention-to-treat analyses).\n\nThe ACST-1 study team shall not make the data provided by NHS Digital available to any third party or allow use of the data by or on behalf of any third party or for any purpose other than those described, in whole or in part or as linked data within the ACST-1 database.",
+  "14c554fec04c": "Stroke is the third leading cause of disability and premature death worldwide, Around 20% of all strokes are caused by narrowing of carotid arteries, when fatty deposits break off from such lesions and lodge in the brain, thereby causing a stroke and over 80% of these carotid related strokes occur without warning.  ACST-1 showed that preventative surgery to remove carotid narrowing (carotid endarterectomy) halves the risk of stroke up to 10-years following a successful procedure and these operations are performed widely worldwide (around 200,000 per year in US and Europe). There is a strong association between carotid stenosis and dementia, but (unlike the link between carotid disease and stroke) it is not clear if this association is causal, and whether carotid surgery could also prevent cognitive decline. Determination of causality requires randomised evidence, and this is the purpose of this study.\n\nACST-1 (ISRCTN26156392), randomly allocated 3120 participants with asymptomatic narrowing of the carotid artery to carotid surgery (endarterectomy) plus best medical therapy or to best medical therapy alone.  Procedural complications (i.e. those occurring within 1 month) were recorded by surgeons collaborating in the trial, and thereafter participants informed the trial coordinators of any late strokes by means of an annual postal questionnaire, the last of which was mailed in 2008. Cause specific mortality was also provided by ONS for the 1069 UK participants. The relationship between carotid disease and dementia was not well recognised when ACST-1 was designed in the early 1990s, nor was dementia the major public health priority that it now is. Accordingly, ACST-1 did not routinely collect information on cognitive decline. However, this trial provides a unique opportunity to reliably assess the effect of carotid surgery on dementia. This question is also being assessed (at considerable expense) by a similar trial currently underway in North America (CREST-2), but meaningful results may only emerge in around 10 years’ time.  \n\nThis work will be conducted by the MRC Population Health Research Unit, Clinical Trial Service Unit (CTSU), Nuffield Department of Population Health, which is based at the University of Oxford. The aim of the Unit is to generate and disseminate reliable evidence from observational epidemiology and from randomised trials that leads to practicable methods of avoiding premature death and disability. Prevention of premature vascular death and morbidity is a major focus of CTSU’s work, and the effects of drugs such as statins and aspirin on dementia are currently being investigated (led by members of CTSU). Consequently, the proposed study fits within an established research program, and the required specialist skills and knowledge exist at CTSU. \n \nWhilst CTSU have data on stroke rates at up to 10-years post-surgery, CTSU did not collect information on incident dementia during ACST-1 follow-up which ended in 2008, and CTSU have no information on any health outcomes after 2008. Indirect follow-up via routinely collected health records is necessary to assess rates of dementia in this cohort of participants thereby allowing a complete and unbiased follow-up of the UK ACST-1 participants.  \n\nThe data held prior to 2008 does not contain information on incident dementia. The CTSU seeks data on dementia from before this date as well as after to answer an additional question on whether patients who had carotid surgery (endarterectomy) in the original cohort also had a lower risk of contracting dementia. \n\nDementia is an insidious process which takes a number of years (usually decades) to develop which is why if only a short time was requested CTSU would miss potential dementia and stroke diagnoses. The risk of stroke and dementia increases with age which is why this is such an important study in a high-risk elderly cohort. CTSU know that the 5 and 10 year results of ACST-1 trial highlighted the benefit of carotid endarterectomy however CTSU do not know the longer term and potentially enhanced benefits seen at >20 years post-intervention. Data on incident dementia is required going back to as early as possible for this reason.\n\nACST-1 Long-term follow-up study is funded by an Alzheimer’s Society project grant and also by core funding from the Clinical Trial Service Unit (CTSU), University of Oxford.",
+  "37cdb2b54ee8": "All outputs will consist of aggregate data only with small numbers suppressed in line with the HES analysis guide.  \n\nResults of the analyses will be presented at relevant international scientific meetings 2018-2019. The results of this analysis will be posted on the ACST-1 section of website www.acst-2.org in a similar manner to multiple previous ACST-1-related publications and will also be available through the ISRCTN registry. The target time frame for publication of the results of analyses is 2018-2020. \n\nIf ACST-1 can reliably demonstrate that carotid intervention (carotid endarterectomy or carotid stenting) in middle age leads to a reduction in the risk of dementia, stroke or death in the longer term this may increase the number of carotid interventions performed and help patients make better decisions about their treatment.  The outcome of the research will inform clinicians and patients about potential preventative treatment pathways. Any change in medical practice will need to be discussed with advisory boards (eg, NICE) but patients will be informed of the outcome in discussions with their doctor. Alzheimer’s Society have provided CTSU a lay network monitors and CTSU will be taking on their advice with regard to disseminating this information into the public forum.\n\nThe results will be presented during 2018 at international scientific meetings and published in a prominent peer-reviewed medical journal by 2019. The results of the research will be disseminated in leading peer-reviewed, high impact-factor journals and conferences including the American Heart Association, UK Stroke Forum, European Society of Cardiology, European Society for Vascular Surgery and the European Stroke Organisation Conference.",
+  "7efb5fd2d772": "All outputs will consist of aggregate data only with small numbers suppressed in line with the HES analysis guide.  \n\nResults of the analyses will be presented at relevant international scientific meetings 2018-2019. The results of this analysis will be posted on the ACST-1 section of website www.acst-2.org in a similar manner to multiple previous ACST-1-related publications and will also be available through the ISRCTN registry. The target time frame for publication of the results of analyses is 2018-2020. \n\nIf ACST-1 can reliably demonstrate that carotid intervention (carotid endarterectomy or carotid stenting) in middle age leads to a reduction in the risk of dementia, stroke or death in the longer term this may increase the number of carotid interventions performed and help patients make better decisions about their treatment.  The outcome of the research will inform clinicians and patients about potential preventative treatment pathways. Any change in medical practice will need to be discussed with advisory boards (eg, NICE) but patients will be informed of the outcome in discussions with their doctor. CTSU will be taking  the Alzheimer’s Society advice with regard to disseminating this information into the public forum.\n\nThe results will be presented during 2018 at international scientific meetings and published in a prominent peer-reviewed medical journal by 2019. The results of the research will be disseminated in leading peer-reviewed, high impact-factor journals and conferences including the American Heart Association, UK Stroke Forum, European Society of Cardiology, European Society for Vascular Surgery and the European Stroke Organisation Conference.",
+  "9930b0c42d2b": "The data supplied to NHS Digital by CTSU for each participant will be: unique ACST-1 trial Identifier (ID); first and last name; date of birth, and NHS number. The data will be in an encrypted format via the Oxford secure data transfer system.\n \nThe data received back from NHS Digital will include the ACST-1 trial ID, date of birth (as provided by CTSU), gender, and outcomes of potential relevance (e.g. strokes and dementia) from the following datasets: HES Admitted Patient Care, HES Outpatients, and A&E, Mental Health, ONS Mortality (including Date of Death and Cause of Death, and National Dementia and Anti-psychotic Prescribing Audit (DAP). The data will be securely transferred to the secure database at Clinical Trial Service Unit (CTSU), Richard Doll Building, University of Oxford. Upon receipt, these data will be entered into the existing ACST-1 trial database, and hence will remain identifiable. However, access to this database is tightly restricted, and any outputs are aggregated and entirely non-identifiable.\n\nDate of birth is required back from NHS Digital in order apply a two-fold validation of the individual records by linking participants in the original trial dataset with their health recorded in the hospital episode statistics. This is due to policy at CTSU to employ rigorous data-checking procedures for all imported data. By doing this, CTSU can have higher confidence that matching of data is accurate. \n\nThe ACST-1 trial has a study specific database that is password protected and held securely on one University drive only. The ACST-1 database contains detail from the original ASCT-1 study where members are archived according to the original paper consent forms and records. These records include full name and date of birth but these are the only identifiable data contained within the ACST-1 database. The identifiable HES data will be stored in an encrypted TrueCrypt container where all such access will be granted on the instruction of the Information Asset Owner for ACST-1. The database with imported NHS Digital information will be modified and only Trial ID and age will be used in the database for analysis. Pseudonymised data (with exception to date of death) will only be available for analysis. Access is routinely reviewed and revoked when the team member leaves ACST-1. Only personnel substantively employed by the University of Oxford and are involved in this long-term follow-up study for ACST-1 study (processing and analysing data) will have access to this data.   \n\nCause specific mortality is required for three reasons:\n1) Since the primary outcomes will be time-to-event analyses, the date of death is required to determine the population at risk for stroke and dementia (censoring);\n2) Detect incident stroke;\n3) Detect incident dementia (which is frequently recorded in death certificates as the underlying cause of death or as a contributing factor) \n\nThe National Dementia and Anti-psychotic Prescribing Audit (DAP) will identify UK ACST-1 participants who were prescribed medications exclusively used in the management of dementia, thereby serving as a dementia-diagnosis equivalent.\n\nThe data received will be combined with existing information on rates of stroke, other vascular disease and death (obtained previously up to 2008) and used to compare rates of dementia (and also stroke) amongst participants originally allocated to undergo carotid surgery versus those managed with medical therapy alone (i.e. intention-to-treat analyses).\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nNo data will be shared with collaborators in the UK or Sweden including NHS Scotland, University of Uppsala Sweden, University Lund Sweden or with any other 3rd parties. \n\nThe Data will only be used for the purposes described in this agreement.\n\nAll ONS terms and conditions described in this agreement will be adhered to.",
+  "9938d56cc6b2": "The ACST-1 trial showed that early carotid surgery prevents future fatal and disabling strokes for at least 10 years. This finding changed clinical practice worldwide, with rates of asymptomatic carotid intervention rising sharply in the UK and Europe. However, due to improvements in medical therapy (chiefly better lipid-lowering drugs) there is renewed uncertainty about the benefits of preventative carotid surgery and rates of intervention are falling (particularly in the UK). If this study shows an additional benefit of carotid surgery on dementia risk (NB: Statins do not protect against dementia in several very large randomised trials), then rates of carotid intervention may rise again, thereby preventing large numbers of strokes and also helping to prevent dementia. Rates may rise once advisory boards have been notified. This is common practice in any change of medical practice. E.g. NICE, and the Royal College of Surgeons will need to be involved to advise on the best treatment dependent on results.\n\nCTSU know that at 5 and 10 years, carotid endarterectomy reduces stroke (Lancet 2004, 2010). However CTSU do not know whether it still reduces stroke rates in the longer-term (e.g. median 22 years).  In addition, no other large randomized controlled trial has investigated whether this type of surgery reduces the rate of dementia with results within the next year. No other surgical study has looked at dementia. This is the first and CTSU have a large cohort. There are other surgical studies looking at dementia but their results will not be available for a number of years. The ACST-1 trial  5, and 10 year results (Lancet 2004, 2010)  showed that surgery reduced the risk of stroke at 5 and 10 years after the operation substantially and changed medical practice worldwide. CTSU anticipate that the results of this long-term study will have a similar impact.\n\nDementia develops over many years, and intervention may take a long time to have an effect so long-term follow-up is vital. The ACST-1 trial has >15 years of follow up and is therefore uniquely placed to help answer the question of whether increased rates of carotid intervention prevent large numbers of strokes and help prevent dementia.  It may be able to detect an effect of carotid intervention on dementia more reliably than any previous study.  The study is funded by a grant from the Alzheimer’s Society who supports this research question as part of their emphasis on dementia prevention and also by the University of Oxford as sponsor*, the Clinical Trials Service Unit and the Nuffield Dept. of Population Health.  \n\n*'Sponsor' in this context means the legal establishment which:\n•\ttakes legal responsibility for initiation and management of the study;\n•\tprovides insurance for the study;\n•\tis required for all clinical research not just trials\n•\tis not necessarily the funder. Many funding bodies are unable to provide Sponsorship.",
+  "ea76bab92ef3": "The ACST-1 trial showed that early carotid surgery prevents future fatal and disabling strokes for at least 10 years. This finding changed clinical practice worldwide, with rates of asymptomatic carotid intervention rising sharply in the UK and Europe. However, due to improvements in medical therapy (chiefly better lipid-lowering drugs) there is renewed uncertainty about the benefits of preventative carotid surgery and rates of intervention are falling (particularly in the UK). If this study shows an additional benefit of carotid surgery on dementia risk (NB: Statins do not protect against dementia in several very large randomised trials), then rates of carotid intervention may rise again, thereby preventing large numbers of strokes and also helping to prevent dementia. Rates may rise once advisory boards have been notified. This is common practice in any change of medical practice. E.g. NICE, and the Royal College of Surgeons will need to be involved to advise on the best treatment dependent on results.\n\nCTSU know that at 5 and 10 years, carotid endarterectomy reduces stroke (Lancet 2004, 2010). However CTSU do not know whether it still reduces stroke rates in the longer-term (e.g. median 22 years).  In addition, no other large randomized controlled trial has investigated whether this type of surgery reduces the rate of dementia with results within the next year. No other surgical study has looked at dementia. This is the first and CTSU have a large cohort. There are other surgical studies looking at dementia but their results will not be available for a number of years. The ACST-1 trial  5, and 10 year results (Lancet 2004, 2010)  showed that surgery reduced the risk of stroke at 5 and 10 years after the operation substantially and changed medical practice worldwide. CTSU anticipate that the results of this long-term study will have a similar impact.\n\nDementia develops over many years, and intervention may take a long time to have an effect so long-term follow-up is vital. The ACST-1 trial has >15 years of follow up and is therefore uniquely placed to help answer the question of whether increased rates of carotid intervention prevent large numbers of strokes and help prevent dementia.  It may be able to detect an effect of carotid intervention on dementia more reliably than any previous study.  The study is funded by a grant from the Alzheimer’s Society who supports this research question as part of their emphasis on dementia prevention and also by the University of Oxford as sponsor*, the Clinical Trials Service Unit and the Nuffield Dept. of Population Health.  \n\n*'Sponsor' in this context means the legal establishment which:\n• takes legal responsibility for initiation and management of the study;\n• provides insurance for the study;\n• is required for all clinical research not just trials\n• is not necessarily the funder. Many funding bodies are unable to provide Sponsorship."
+ }
+}

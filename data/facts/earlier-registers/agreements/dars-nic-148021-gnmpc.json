@@ -1,0 +1,165 @@
+{
+ "base_reference": "DARS-NIC-148021-GNMPC",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148021-GNMPC",
+   "version": "",
+   "organisation": "The Medical School - Newcastle upon Tyne",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "ca297c48f56e"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "77bfb05b37d0"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC and for the release of ONS mortality data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient Consent to permit the receipt and processing of data by the HSCIC and for the release of ONS data.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148021-GNMPC-v0.0",
+   "version": "0.0",
+   "organisation": "NEWCASTLE UNIVERSITY",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01",
+    "2017-06-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-06-01"
+     ],
+     "objective": "83df82d963c2"
+    },
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "3f722eb83ef7"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3f722eb83ef7": "The data supplied by the NHSIC to Newcastle University will be used only for the approved  Medical Research project MR87.",
+  "77bfb05b37d0": "The data supplied by NHS IC to Newcastle University will be used only for the approved Medical Research Project identified above.",
+  "83df82d963c2": "The data supplied by the NHSIC to Newcastle University will be used only for the approved  Medical Research project MR87.",
+  "ca297c48f56e": "A follow up of people involved in a family study of the health of children which began in 1947 and continued until1962. The subjects born in 1947 are now adult and many have children of their own. The aim is to trace and compare life circumstances of this third generation with those of their parents, (i.e. the subjects born in 1947) and their grandparents. (May 1979)This is a new follow-up of the Newcastle Thousand Families Study, a longitudinal birth cohort established in 1947. The last major follow-up was at age 50, although subsequent smaller studies have taken place since then, as have additional analyses of existing samples and data. The age 50 follow-up had approval from a number of Research Ethics Committees, while subsequent studies of both the data and samples have also had a favourable ethical opinion."
+ }
+}

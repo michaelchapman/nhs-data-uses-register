@@ -1,0 +1,71 @@
+{
+ "base_reference": "DARS-NIC-366103-V5L5J",
+ "versions": [
+  {
+   "reference": "DARS-NIC-366103-V5L5J",
+   "version": "",
+   "organisation": "IMS Health LTD",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "e989ee8af46d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "e989ee8af46d": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC: \nObjective for processing: \nIMS Health Ltd believes that there is a need for longitudinal information on treatment and drug usage in secondary care in England to create insight into the interaction between disease, treatment and prescribing. To this end, we have collaborated with the NHS Health and Social Care Information Centre (HSCIC) to create a linked pseudonymous record secondary care data repository – Hospital Treatment Insights (HTI). \nHospital Treatment Insights is a pseudonymised longitudinal patient database covering patient treatment in hospital in England. Trusts who have signed up to provide data supply an extract of patient level hospital dispensed data, including patient identifiers, to the HSCIC. The HSCIC’s Data Linkage and Extract Service link this patient level data to HES data. We started with a pilot involving 7 hospital trusts and, due to the success of the project, have now rolled it out across England. We have a contract with the HSCIC to link 70 hospital trusts.\nHospital Treatment Insights is strictly controlled and managed by IMS Health in an ISO27001 certified data warehouse. Only named researchers are able to access and analyse the patient level data. All queries made on the data are logged for auditing purposes. Additionally, only small number suppressed aggregate tables can be exported from the data warehouse.\nAs well as partnering with the HSCIC to create Hospital Treatment Insights, IMS Health Ltd have further collaborated with the Clinical Practice Research Datalink to link Hospital Treatment Insights with CPRD GOLD. This has created a subset of the Hospital Treatment Insights database linking pseudonymous treatment data in secondary care with primary care to provide an end-to-end view of patient treatment in England – “HTI-CPRD GOLD”. All the restrictions described for Hospital Treatment Insights in this application also apply to HTI-CPRD GOLD.\n\nProcessing activities: \nNHS trusts sign up individually to provide pharmacy data to the Hospital Treatment Insights study. These hospital trusts extract pharmacy data and send it directly to the HSCIC. The HSCIC receive and link identifiable pharmacy data to patient level HES data on behalf of IMS Health Ltd. A pseudonymised output is returned to IMS Health on a quarterly basis. Identifiable data does not flow to IMS Health and IMS Health do not hold any identifiable data.\nIMS Health arrange for each Trust to generate 3 files each month: non-patient identifiable dispensed data; patient identifiable dispensed data; data definition. Each extract contains only the data for the previous month, as opposed to a refresh of earlier months. The HSCIC retains the file containing patient identifiable data and passes the other two files (containing no identifiable data) on to IMS Health for processing. The HSCIC uses the patient identifiable file to link the patient level hospital pharmacy and HES information.\nGoing forward, IMS Health Ltd is investigating options to work with other software systems, as detailed in our contract with the HSCIC’s DLES team. As a result, there may be slightly different linking processes for trusts using different software systems. The essentials will remain the same across trusts and software systems – all identifiable data will be sent to the HSCIC and never to IMS Health.\nOnce the data are linked, the identifiable data are pseudonymised by the HSCIC. The pseudonymised data, linked to HTI-anonymised ID, are passed on to IMS Health Ltd on a quarterly basis. The data also has all geographic identifiers removed to prevent longitudinal records being reconstructed at identifiable Trust level. \nData are downloaded on a quarterly basis from SEFT to a server owned by “The Bunker” and logically and physically located in Ash, Kent. The Bunker provides hosting services only and is not involved in any processing activities. The Bunker have been contracted to provide these hosting services to their ISO27001 accreditation and the high level of security guaranteed for the data. \nAccess to the patient level data is strictly restricted to specific named individuals who must carry out training and sign additional confidentiality agreements with IMS Health Ltd. These individuals are all currently IMS Health employees, contractors working for IMS Health Ltd or CPRD employees. We are hoping to increase our level of engagement with the MHRA in the near future such that they will also be able to access the patient level data for regulatory purposes. All statistical analysis on the patient level data takes place within the server environment by named individuals. Only small number suppressed, aggregated tables can be exported from the remote server into the IMS Health network. A two step export process has been implemented for maximum security so that no individual can both manipulate patient level data and export data. Additionally all users with exporting ability are IMS Health UK employees who are physically located in the UK.\nAll queries on the patient level data and exports are stored in a separate, non-editable warehouse for auditing as part of ISO27001 re-certification.\nTo confirm: IMS Health Ltd do not receive any identifiable data from either the HSCIC or individual hospital Trusts. IMS Health Ltd receive linked non-sensitive and non-patient identifiable fields from APC, A&E, Outpatient HES datasets.\n\nSpecific outputs expected, including target date(s): \nThe s251 approval for Hospital Treatment Insights limits use of the database to only studies for the benefit of “medical research”. This includes studies that: (i) improve pharmacovigilance; (ii) improve monitoring and uptake of appropriate use of drugs; (iii) improve assessment of the value of medicines; (iv) improve healthcare management.\nThe studies are sponsored by IMS Health’s clients who would like to answer specific healthcare questions. An example deliverable, which has been anonymised, is attached to this application. In this project, the client sponsor was interested in understanding the utilization patterns of low molecular weight heparins in English hospitals. Before studies can begin using Hospital Treatment Insights, a scientific protocol must be submitted and approved by either an Independent Scientific and Advisory Ethical Committee or the CPRD’s Independent Scientific Advisory Committee to show sufficient benefit to the scientific and healthcare communities. All studies carried out on the database are also logged and a list of studies carried out over the previous year is sent annually to the national Research Ethics Committee, Confidentiality Advisory Group and to all contributing trusts.\nThose working with the Hospital Treatment Insights database carry out patient level analysis in order to answer these healthcare questions, which are delivered in the form of consultative projects to the client sponsors, depending on the needs of the IMS Health Ltd’s customers.\nWhile only the specific named list of users has access to the patient level data within the secure warehouse, after the small number suppressed aggregate tables are exported into the IMS Health Ltd network by named IMS Health Ltd employees, they are not restricted in terms of access.\nTo confirm: Outputs only include aggregated data with small numbers suppressed in line with the HES analysis guide.  No record level data are supplied to any third-party organisation\n\nExpected measurable benefits to health and/or social care, including target date(s): \nThere is a need for longitudinal information on treatment and drug usage in primary and secondary care in England to create insight into the interaction between disease, treatment and prescribing. IMS Health Ltd’s collaboration with the Health and Social Care Information Centre (HSCIC) and Clinical Practice Research Datalink (CPRD) aspires to enable real world analysis of the impact and outcomes of healthcare provision and patient treatment. \nIMS Health’s customer’s commission studies for the benefit of “medical research”. This includes studies that: (i) improve pharmacovigilance; (ii) improve monitoring and uptake of appropriate use of drugs; (iii) improve assessment of the value of medicines; (iv) improve healthcare management. \nStudies completed include but are not limited to:  adherence to NICE guidelines when prescribing drugs post-surgery; usage by indication of prescribed products; the treatment pathway, including time between diagnosis and treatment for a specialty therapy area; and resource utilization and associated costs of patient treatment.  As well as studies for IMS Health Ltd’s customers, Hospital Treatment Insights is being used to write and publish academic papers. A recent paper “Prescribing of antipsychotics in people with dementia in acute general hospitals in England: 2010-2012.\" has been accepted for publication in European Geriatric Medicine. Further papers are also currently being written and have been submitted for publication. Several study sponsors are also working towards publishing the outcome of their sponsored studies.\nA white paper titled “Hepatitis C: Inequalities in Access to Medicines” was published in March 2015 used the linked database. This has been shared widely with physicians, thought leaders and other healthcare professionals. A copy of the paper, and a resulting HSJ article, has been enclosed with this article.\nThe Hospital Treatment Insights link between patient treatment and prescribing allows IMS Health Ltd and CPRD to carry out studies on patient safety and drug utilization for the indisputable benefit of all patients. IMS Health are also engaging with other potential collaborators, including the MHRA, such that they will also be able to use the dataset to carry out studies of this type.\nAs well as providing the CPRD GOLD dataset for linking to create HTI-CPRD GOLD, the CPRD are also able to work directly with the HTI-CPRD GOLD dataset and to access and analyse the patient level linked data for research. As for IMS Health, patient level analysis must take place within the secure server environment and, once aggregate small number suppressed."
+ }
+}

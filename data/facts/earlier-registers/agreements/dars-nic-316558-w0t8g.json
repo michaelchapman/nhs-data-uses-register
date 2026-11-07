@@ -1,0 +1,130 @@
+{
+ "base_reference": "DARS-NIC-316558-W0T8G",
+ "versions": [
+  {
+   "reference": "DARS-NIC-316558-W0T8G",
+   "version": "",
+   "organisation": "Cardiff University",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "eef9409b1420"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-316558-W0T8G-v0.0",
+   "version": "0.0",
+   "organisation": "Cardiff University",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01",
+    "2018-03-01",
+    "2019-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01",
+      "2018-03-01",
+      "2019-03-01"
+     ],
+     "objective": "260f97ced1fe"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01",
+      "2018-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "260f97ced1fe": "Treatment choice and outcome substantially decided by age.\nPatients <60 years have a significantly improved survival.\nOf patients >60 years treated intensively over the last 15 years there is little evidence of improvements in survival, CR rate not improved beyond 60% and relapse in 85% of patients.\nLarge groups of patients >60 years are not considered fit for intensive treatment - median survival 4 months.\nMedian age of disease is 65 years\nAs the general population lives longer, the number of patients in this age group will increase.\nUrgent need to find new treatments for patients >60 years who are not catered for in most trials.",
+  "eef9409b1420": "Acute Myeloid Leukemia (AML) and Myelodysplasia (MDS) are malignant conditions of the bone marrow. They both result in failure of the bone marrow to manufacture enough blood cells (red, white and platelets), because the marrow contains too many leukemia cells. There are two approaches to treatment. The first is to use intensive chemoterapywhich comprises between 2 and 4 courses of intensive chemotherapywhich are given 4-6 weeks apart, usually as an inpatient. The aim of this treatment is to kill off the leukemia cells and allow the marrow to work normally which is called disease remission. Because there is a risk of the disease comng back, a further 2 or 3 treatments are given. This approach has risks associated with it and may not be considered because of age or other medical reasons. The second approach, which is called non-intensive, is to try to use drugs to control the leukemia cells in the bone marrow retaher that to try and get rid of them completely. This approach is less intensive and some of the treatments can be gien by mouth and taken as an outpatient. The chances of the disease going into remission are lower, but much less time in hospital is required. For some patients, particularly those who are less fit or have other medical conditions, this may be thought to be a better approach. Which treatment is adopted will be decidd after the patient has had a discussion with their dooctor."
+ }
+}

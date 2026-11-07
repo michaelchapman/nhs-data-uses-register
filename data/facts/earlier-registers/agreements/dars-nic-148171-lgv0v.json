@@ -1,0 +1,125 @@
+{
+ "base_reference": "DARS-NIC-148171-LGV0V",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148171-LGV0V",
+   "version": "",
+   "organisation": "CTSU",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "22ab97fdee2f"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "9718c3fd25c1"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251/ Class Support (CR37/2014 ) approval is in place for the flow of identifiable data to and from the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approval for ONS data has been granted by Approved Researcher status.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (CR37/2014 ) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148171-LGV0V-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY OF OXFORD",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "objective": "3c22a1a2fcb6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01"
+     ],
+     "rows": 2
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "22ab97fdee2f": "The data supplied by NHS IC to Clinical Trial Research Unit is to be used only for the approved Medical Research Project identified above.",
+  "3c22a1a2fcb6": "The data supplied to the Clinical Trial Service Unit (CTSU) will be used only for the approved medical research project - MR200 Leukaemia Trials (CLL2)",
+  "9718c3fd25c1": "To compare the use of two drugs in treating leukaemia. To collect information about the disease and factors such as morbidity resulting from treatment and the effect on duration of survival"
+ }
+}

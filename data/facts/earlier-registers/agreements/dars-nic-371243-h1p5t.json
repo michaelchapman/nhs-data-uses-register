@@ -1,0 +1,774 @@
+{
+ "base_reference": "DARS-NIC-371243-H1P5T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-371243-H1P5T",
+   "version": "",
+   "organisation": "NHS North and East London Commissioning Support Unit",
+   "organisation_type": "",
+   "listed": [
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "c34806d10545"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "8aef79471063"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Standard Monthly Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Inpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Standard Monthly Extract : HES Outpatient",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-371243-H1P5T-v0.1",
+   "version": "0.1",
+   "organisation": "NHS North and East London Commissioning Support Unit",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "18ed15b2ebc0",
+     "activities": "c3e6fdcec093",
+     "expected_output": "62da60d82ad4",
+     "expected_benefits": "e0e37b5eaf64"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-371243-H1P5T-v2.3",
+   "version": "2.3",
+   "organisation": "NHS NORTH AND EAST LONDON COMMISSIONING SUPPORT UNIT",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "objective": "e93924cc6bcc",
+     "activities": "51dea5cbcc13",
+     "expected_output": "8a32fdda50e6",
+     "expected_benefits": "c95aec280fea"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 6
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-371243-H1P5T-v4.3",
+   "version": "4.3",
+   "organisation": "NHS North and East London Commissioning Support Unit",
+   "organisation_type": "",
+   "listed": [
+    "2018-10-01",
+    "2019-01-01",
+    "2019-02-01",
+    "2019-03-01",
+    "2019-04-01",
+    "2019-05-01",
+    "2019-06-01",
+    "2019-07-01",
+    "2019-08-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01"
+     ],
+     "objective": "e091e348fc87",
+     "activities": "9fc90710e00c",
+     "expected_output": "4c226f9867f1",
+     "expected_benefits": "c47398eb581a",
+     "yielded_benefits": "f8601a4b6dc3"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01"
+     ],
+     "rows": 14
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-02-01",
+      "2019-03-01",
+      "2019-04-01",
+      "2019-05-01",
+      "2019-06-01",
+      "2019-07-01",
+      "2019-08-01"
+     ],
+     "rows": 14
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-371243-H1P5T-v5.5",
+   "version": "5.5",
+   "organisation": "NHS North and East London Commissioning Support Unit",
+   "organisation_type": "Commissioning Support Unit (CSU)",
+   "listed": [
+    "2019-11-01",
+    "2019-12-01",
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01",
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01",
+    "2020-08-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01"
+     ],
+     "objective": "662fa6810def",
+     "activities": "24d2b8bd85d8",
+     "expected_output": "9a48bb5343df",
+     "expected_benefits": "e34672cf0fff",
+     "yielded_benefits": "124313c879c4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-11-01",
+      "2020-02-01",
+      "2020-06-01",
+      "2020-07-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-11-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2019-11-01",
+      "2019-12-01",
+      "2020-01-01",
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01",
+      "2020-08-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-02-01",
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-07-01",
+      "2020-08-01"
+     ],
+     "rows": 6
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-371243-H1P5T-v6.3",
+   "version": "6.3",
+   "organisation": "NHS North and East London Commissioning Support Unit",
+   "organisation_type": "Commissioning Support Unit (CSU)",
+   "listed": [
+    "2020-09-01",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-12-01",
+    "2021-01-01",
+    "2021-02-01",
+    "2021-03-01",
+    "2021-04-01",
+    "2021-05-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "objective": "c928c10ddfce",
+     "activities": "8449e313e165",
+     "expected_output": "9a48bb5343df",
+     "expected_benefits": "e34672cf0fff",
+     "yielded_benefits": "124313c879c4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Emergency Care Data Set (ECDS)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "Frequent Adhoc Flow",
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-11-01",
+      "2020-12-01",
+      "2021-01-01",
+      "2021-02-01",
+      "2021-03-01",
+      "2021-04-01",
+      "2021-05-01",
+      "2021-06-01"
+     ],
+     "rows": 10
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "124313c879c4": "Some of the yielded benefits of HES data to date are:\n\n1)  Assisting NHS England in London, at identifying the rates of GP referrals to hospitals across all the CCGs in London. \n\nThere is a lot of variation, both between CCGs and between GP Practices within a CCG area and NELCSU have compared these in a way that accounts for these areas very different populations (in statistical terms this is known as “standardisation”. \nThe NHS is experiencing significant pressure and unprecedented levels of demand. The average annual growth in GP referrals between 2009/10 and 2014/15 was 3.9%. Growth in 2015/16 compared to 2014/15 was 5.4%. For the same period, other referrals, which include consultant to consultant referrals grew by 6.7%. There is clearly a significant need for the NHS to manage the demand that flows into hospitals by ensuring that cases are prioritised appropriately referred for face to face consultation. There is also evidence to suggest that a referral to hospital is not always necessary.\nNHS England have published a demand management “Good Practice Guide” covering areas such as “peer review of referrals”, “shared decision making” and “advice and guidance”. The results of this analysis help identify which geographies to target, inform the conversation around appropriate areas to change and help monitor the impact of any implemented demand management schemes.\n\n2) Assisting a CCG in the South of England implement improvements in the area of diabetes and respiratory disease. \nThe improvements will involve the health system – GPs, hospitals, community services – working more effectively together (or in the jargon working in a more “integrated” way). HES data has been used to identify variation in “outcomes” to identify potential areas to target. For example HES data was used to identify the numbers of patients admitted with complications of diabetes, as these are an indicator that a patient’s condition has deteriorated, something that could possibly be counteracted with better management of a patient’s condition within primary care.  Are these numbers high relative to other areas? How much do they vary by GP practice? What is the real reason behind this variation?\nIntegrated care schemes internationally have evidenced significant benefits in improving patient outcomes, experience of care and reducing costs to the health system. This project is the first stage of a pilot, and will be extended out to a wider geography and to other clinical areas.\n\n3) Identifying potential influences on high A&E attendance rates. \n\nWithin London, most A&E departments are under huge pressure from rising A&E demand. However, the rate of increase does vary significantly by geography and by patient group. By using national HES data NHS North and East London Commissioning Support Unit were able to undertake statistical modelling of most of the known drivers of A&E attendance and try to understand the relative importance of each. For example, patient ethnicity appears to be one influence. Those ethnic groups with high attendance rates can be targeted through communication campaigns or through their GPs to encourage use of alternative services where possible. The better that the reasons for growing A&E demand can be understood, the more effective commissioners can be in tackling the root cause of the issue.",
+  "18ed15b2ebc0": "The HES data will only be used by North and East London Commissioning Support Unit (NELCSU) and its approved users (via secure access to the HES Cube) to support CCGs to meet their statutory duties under the Health & Social Care Act 2012 and NHS health economy wide transformation projects that require detailed hospital level data.\nThe data is proposed to be used on two levels:\nObjective 1\nHES extracts: pseudonymised record level HES data is interrogated only by approved in-house NELCSU analysts to provide benchmarking and comparative information to NELCSU CCG clients and NHS health economy wide transformation projects that require detailed hospital level data.\nThe full set of HES data allows complex and detailed modelling and benchmarking of activity, essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care. This will especially support benchmarking work for CCG clients taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data (for example from local SUS data feeds the applicant only receives data for their CCG’s registered population, which does not allow whole trust activity to be considered) and allow CCGs to benchmark and identify best practice in similar health economies anywhere in England.\nOutputs released will be aggregated with small number suppression and provided, by data sharing agreement, only for use in the NHS Health and Social Care sector to meet statutory requirements under the Health and Social Care Act 2012 and is not for commercial use.\nObjective 2\nHES Cube: to populate a a stand-alone secure data tool containing summary stand-alone data to allow a broader range of users (than objective 1) without access to the full HES datasets to get quick and easy access to information on common and simple counts of hospital activity, for the same purposes as output 1, to support the successful commissioning. \nThis tool can generate small numbers from its restricted number of derived data fields (please see ‘Processing activities’ section below for further information on what the tool contains). Any output released from the cube must be aggregated and have small numbers suppressed (see Summary section above for details of data sharing agreement in place). \nThe HES Cube will be used by the following: \n-\tin-house NELCSU analysts, \n-\tby approved analytics staff in NELCSU customer CCGs and by approved public health analysts within Local Authorities(LA) within CCG customer areas that have signed a local data sharing agreement (see Appendices A and B – supporting documentation SD3 and SD4) which include agreement to comply with the HES protocol and suppress the release of small numbers. This permits access to the tool and to aggregated summary data containing small numbers.\nAccess to Local Authority Public Health teams is given to support CCGs to meet their obligations to Public Health teams through the provision of aggregated data in support of joint duties to under the Health & Social Care Act 2012. Public Health teams lost existing access to HES and SUS data in 2013 when they moved from PCTs to Local Authorities, and therefore their ability to support CCGs has been difficult since.\nThese purposes are;\n\tAggregate outputs with small numbers suppressed to support health needs assessment, including supporting the delivery of Joint Strategic Needs Assessments (JSNAs) [joint with CCGs]\n\tAggregate outputs with small numbers suppressed to support the development of CCG commissioning intentions, commissioning strategies and QIPP plans\n\tAggregate outputs with small numbers suppressed to support Public Health activity relating to protecting the health of the population in XXXX LA’.\nRecipients are not permitted to onwardly share the data unless the HSCIC gives explicit permission for them to do so and should permission be granted this would be for anonymized aggregated data with small numbers suppressed only. \nAccess to the HES data will not be given to any other organisations, other than those stated above.",
+  "24d2b8bd85d8": "The processing activities permitted under this agreement are:\n1. Data will be received and stored by the data management service within the CSUs. These are dedicated teams responsible for the organisations data warehouses and incoming/outgoing flows of data. The HES datasets will initially land in the teams secure file share before being uploaded to a SQL Server data warehouse or Cloud asset as per this agreement. Both file share and SQL server data are securely hosted within a commercial grade data centre or on the Microsoft Azure Cloud. \n2. The data management service will create derived fields based on the data received such as Ambulatory care sensitive condition flag, procedure of limited clinical value flag etc.\n3. Data Management teams may group and cost the HES data using standard grouping processes, NHS Groupers and national reference data.\n4. Data will be used to populate secure databases, data cubes (a multidimensional dataset) or similar objects for use by analysts within any CSU.  The data being made available within any CSU will be record level the data will not be identifiable.  Only the minimum required data fields will be used to populate each object.\n5. Data will be used by any CSU support team to populate the relevant dashboards and reports within any CSU BI systems. No patient level data will be available to BI Tool users outside of the CSUs.  Small number suppression rules will be adhered to in line with the HES Analysis Guide.\n6. Record level HES data will only be linked to the other NHS Digital-supplied datasets specified in this agreement and will not be linked to any other dataset.\n\nStaff follow strict rules on accessing, analysing and processing data (under NHS England's policies and rules).  The pseudonymised record level HES and DIDs data is interrogated only by approved CSU substantively employed analysts to provide benchmarking and comparative information to CSU clients and NHS health economy wide transformation projects, that require detailed hospital level data.\n\nOnly aggregate data will leave the CSUs. All small numbers will be suppressed before any data is made visible to commissioners outside of the organisation. Small numbers will be suppressed in line with the HES analysis guide.\n\nData is pseudonymised within NHS Digital and released to the CSUs.  The pseudonym is not reversible.  Re-identification is not permitted within this agreement.\n\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \n\nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG or commissioning body to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects or other commissioning initiatives that require detailed and comprehensive hospital level data.\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be destroyed e.g. the 2008/2009 data year will be destroyed once the final complete 2018/19 data year has been received. The CSUs will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to NHS Digital.\n\nThe data is being held within a data centre which also holds data on behalf of other organisations.  CSUs agree that the data under this agreement must be held and remain separate to all other data (except where explicitly stated within the agreement) and accepts full responsibility for the breach of this agreement should this not be the case. \n\nData is to be stored in the Microsoft Azure cloud.  Microsoft Ltd is named as a data processor in this agreement. Microsoft Azure allows for flexibility in storage requirements should they expand or contract. Microsoft Azure has all relevant accreditation required for safe storage.\n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nUniversity Hospitals Bristol NHS Foundation Trust, Pulsant, Ilkeston Community Hospital and Interxion do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nBlackpool Victoria Hospital and Lima Networks LTD supply IT infrastructure and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nGreater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.",
+  "4c226f9867f1": "Outputs are on an on going basis (i.e., no target date) as the HES and DIDs data are used to support general commissioning and public health needs, and are not aimed at a specific report or deadline for use.\n\nHES allows NELCSU to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs or other commissioning bodies) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data.\n\nAll outputs informed by information retrieved from the HES data tables are governed by adherence to the HES guidance on suppression of small numbers. Users of the data abide by the HES Analysis Guide which means that all outputs released must be aggregated with small numbers suppressed.\n\nCommissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across, for example, the North London area. \n\nOutputs expected are aggregated data to support reports or decisions across examples such as the following:\n• Elements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc.\n• Quality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care.\n• Providing data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England, and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘Commissioning for Value’ (on behalf of NHSE). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible.\n• It is anticipated that with the transition to Integrated Care systems/organisations the need for better intelligence around health outcomes of systems/populations will become increasingly important, The further demand, to look holistically at activity and cost across a whole clinical pathway necessitates linkage between datasets which is why linked datasets are important.\n\nDiagnostic Imaging is an acknowledged area of unexplained variation between areas and so a fruitful area for NELCSU to investigate and to support improvement initiatives (eg Right Care). The DIDs data with linkage to HES will help with any deep dives and provide further opportunities for gaining insight from this data. As an example some of NELCSU customer CCGs have very high diagnostic intervention rates per head of population (eg for MRIs). Having DIDs data allows NELCSU to have the detailed data to be able to investigate these type of issues in more detail and provide useful outputs.\n\nNELCSU core customers for analytics services (typically benchmarking analysis, or whole provider modelling). \n\nSTP/CCG areas:\n\nNorth London Partners in Health and Care (in North Central London): Barnet, Camden, Enfield, Haringey, Islington .\nSouth East London: Bexley, Bromley, Greenwich, Lambeth, Lewisham, Southwark \nSouth West London: Croydon, Kingston, Merton, Richmond, Sutton and Wandsworth \nEast London Health and Care Partnership (in North East London). Barking and Dagenham, Havering, Redbridge, Tower Hamlets, City and Hackney, Newham, Waltham Forest\n\nAreas outside London : Luton CCG , Northamptonshire CCG, Surrey (Surrey Downs) \n\nNELCSU has also had customers in the following areas (some have been off-boarded or are in the process of ) : Norfolk, South Essex, Kent (off-boarded end January 2018)",
+  "51dea5cbcc13": "Only an approved list of NELCSU substantively employed analysts have access to the full set of pseudonymised data tables, via secure server based Structured Query Language (SQL) querying. The data will only be for the purposes described in this document and not for any other purposes, including being used in data tools.\n\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \n\nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects or other commissioning initiatives that require detailed and comprehensive hospital level data.\n\nAnalysts will only release aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nThe data is being held within a data centre which also holds data on behalf of other organisations.  The applicant agrees that the data under this agreement must be held and remain separate to all other data (except where explicitly stated within the agreement), and accepts full responsibility for the breach of this agreement should this not be the case.  In order to mitigate this risk, it is strongly recommended that the applicant considers the best practice controls as detailed in ISO 27017:2015 Code of practice for information security controls based on ISO/IEC 27002 and ISO 27018:2014, which establish commonly accepted control objectives, controls and guidelines for implementing measures to protect Personally Identifiable Data.\n\nFor clarity, any access by Interxion to data held under this agreement would be considered a breach of the agreement.  This includes granting of access to the database[s] containing the data.",
+  "62da60d82ad4": "Objective One and Two\nOutputs are on an ongoing basis (i.e., no target date) as the HES data in general and the HES Cube are used to support general commissioning and public health needs, and is not aimed at a specific report or deadline for use.\nAll outputs informed by information retrieved from the HES data tables and the HES Cube are governed by adherence to the HES guidance on suppression of small numbers. Users of the data are bound by signed data sharing agreements (see Appendices A and B - supporting documentation SD3 and SD4) with conditions that they abide by HES guidance which means that all outputs released must be aggregate with small numbers suppressed.\nHES allows NELCSU to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data\nCommissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across, for example, the North London area. \nOutputs expected are aggregated data to support reports or decisions across examples such as the following:\n•\tElements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc.\n•\tQuality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care.\n•\tProviding data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England, and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘ Commissioning for Value’ (on behalf of NHSE). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible.\nAggregated outputs will only be used for NHS Health and Social Care use; or by organisations who are commissioned by NHS Health and Social Care for a specific purpose as outline above.",
+  "662fa6810def": "Commissioning Support Units (CSUs) are part of NHS England (NHS E), and provide comprehensive business intelligence (BI) services to a wide range of NHS organisations, this includes both standard analytics and reporting, deep-dives and diagnostic exercises to offer insight and intelligence on a commissioner’s health economy. In addition, CSUs offer business intelligence applications allowing self-service access to a range of dashboards and configurable reports. Tools are available on a subscription-basis only to NHS organisations, limited to Clinical Commissioning Groups (CCGs), internally within the CSUs through specialist support teams, by CCG member practices, and by local authorities.\n\nThe Commissioning Support Units providing the services are:\n- North East London Commissioning Support Unit\n- North of England Commissioning Support Unit\n- South, Central and West Commissioning Support Unit\n- Midlands and Lancashire Commissioning Support Unit\n- Arden and Greater East Midlands Commissioning Support Unit\n\nNHS England’s lawful basis for processing is 6(1)(e) ‘…exercise of official authority…’. For special categories (health) data the basis is 9(2)(h) ‘…health or social care…’.\n\nNHS England (as the legal entity) is the sole data controller, and the CSUs (as part of NHS England) are data processors. Microsoft Azure provides cloud storage services and is a data processor.  Other organisations referred to in this agreement only supply the IT infrastructure or building and do not have access to the data.\n\nHospital Episode Statistics (HES), Emergency Care Data Set (ECDS) and Diagnostic Imaging Data (DIDs) are required to provide support to CCGs, other commissioning bodies, and local authorities working with CSUs to meet their statutory duties under the Health & Social Care Act 2012 and to support NHS health economy wide transformation projects.\n\nThe full, national set of HES, ECDS and DIDs data allows complex and detailed modelling and benchmarking of activity and diagnostic interventions (numbers and rates), essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care and use of diagnostic services. This will especially support benchmarking work for CCGs, other commissioning clients and local authorities taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data. \n\nThere will be no direct linkage between HES data records and other data already used by any CSU or in the BI tools. HES data may be presented alongside other data but not linked to it – for example a report may contain HES data alongside workforce statistics, weather reports etc. \n\nCCGs only receive local/regional commissioning flows of data such as SUS and local flows filtered by resident/registered populations, so analysis undertaken on national data such as HES provides significant added value. These data sources will allow CCGs, other commissioning organisations and local authorities to benchmark and highlight areas of variation, so that best practice can be identified in similar health economies anywhere in England.\n\nThe data purpose relates to the need for national data for comparative analysis, benchmarking and forecasting, and this requirement for CSUs has specified support from NHS England. Having an extended time trend also provides valuable longer-term context when looking at health populations (e.g. health needs analysis, health economics) and service transformation. National data covering a number of years is required for benchmarking purposes, enabling users to compare themselves on a national footprint. CSUs therefore require HES data with a 10-year rolling history to enable them to provide accurate time-series forecasting methodologies. Forecasting, particularly with regards to winter surge management or financial planning, are key areas of interest for the NHS currently and are areas that the NHS North of England CSU (NECS) have used the HES data to support most recently.\n\nAs the NHS evolves, there is a greater emphasis on CCGs forming part of larger collaborations called Sustainability and Transformation Partnerships (STPs), and CSUs need to accelerate this way of working throughout the country, through partnerships of care providers and commissioners in an area STPs. Some areas are now ready to go further and more fully integrate their services and funding, and CSUs will back them in doing so (Integrated Care Systems). Provision of modelling support to emergent Integrated Care Systems (ICSs) thus supporting the whole health system through modelling demand and capacity primarily in secondary care. \n\nTo support the on-going budgetary pressures the NHS is faced with, the BI services and CSU BI tools offer significant support to commissioners on their Quality, Innovation, Productivity and Prevention (QIPP) programmes. Identifying service areas where the commissioner is an outlier that may then require re-procurement of a clinical service, comparisons with peer groups and best practice to understand how a change in approach might deliver a financial saving.\n\nWorking together with patients and the public, NHS commissioners and providers, as well as local authorities and other providers of health and care services, ICS’s will plan how best to provide care, while taking on new responsibilities for improving the health and wellbeing of the population they cover.  \n\nUnder this agreement, the CSUs will use the data provided for 2 purposes:\ni) benchmarking dashboards and reports, and\nii) bespoke analytics and reporting.\n\nThe HES data will be utilised within CSU BI tools to provide a range of benchmarking dashboards and reports as required to address specific priorities. This may include mortality, end of life, procedures of limited clinical value, new to follow-up ratios, readmissions etc. The ability to present a national and peer-group picture of locally defined indicators is the ambition. HES data will be presented independently of existing data flows within a bespoke dashboard as well as to supplement current reports/dashboards, for example using HES to calculate a national readmission rate to be presented on a locally fed readmission report. \n\nAs well as within the BI tool, HES data will be used by the BI team for bespoke analytics and reporting. This will include analysis on behalf of individual CCGs who have requested a deep dive, for a particular area and want to understand how they compare to other areas. It will also help support whole provider and health economy analysis where service re-configurations are being proposed.",
+  "8449e313e165": "The processing activities permitted under this agreement are:\n1. Data will be received and stored by the data management service within the CSUs. These are dedicated teams responsible for the organisations data warehouses and incoming/outgoing flows of data. The HES datasets will initially land in the teams secure file share before being uploaded to a SQL Server data warehouse or Cloud asset as per this agreement. Both file share and SQL server data are securely hosted within a commercial grade data centre or on the Microsoft Azure Cloud. \n2. The data management service will create derived fields based on the data received such as Ambulatory care sensitive condition flag, procedure of limited clinical value flag etc.\n3. Data Management teams may group and cost the HES data using standard grouping processes, NHS Groupers and national reference data.\n4. Data will be used to populate secure databases, data cubes (a multidimensional dataset) or similar objects for use by analysts within any CSU.  The data being made available within any CSU will be record level the data will not be identifiable.  Only the minimum required data fields will be used to populate each object.\n5. Data will be used by any CSU support team to populate the relevant dashboards and reports within any CSU BI systems. No patient level data will be available to BI Tool users outside of the CSUs.  Small number suppression rules will be adhered to in line with the HES Analysis Guide.\n6. Record level HES data will only be linked to the other NHS Digital-supplied datasets specified in this agreement and will not be linked to any other dataset.\n\nStaff follow strict rules on accessing, analysing and processing data (under NHS England's policies and rules).  The pseudonymised record level HES and DIDs data is interrogated only by approved CSU substantively employed analysts to provide benchmarking and comparative information to CSU clients and NHS health economy wide transformation projects, that require detailed hospital level data.\n\nOnly aggregate data will leave the CSUs. All small numbers will be suppressed before any data is made visible to commissioners outside of the organisation. Small numbers will be suppressed in line with the HES analysis guide.\n\nData is pseudonymised within NHS Digital and released to the CSUs.  The pseudonym is not reversible.  Re-identification is not permitted within this agreement.\n\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \n\nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG or commissioning body to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects or other commissioning initiatives that require detailed and comprehensive hospital level data.\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be destroyed e.g. the 2009/2010 data year will be destroyed once the final complete 2019/2020 data year has been received. The CSUs will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to NHS Digital.\n\nThe data is being held within a data centre which also holds data on behalf of other organisations.  CSUs agree that the data under this agreement must be held and remain separate to all other data (except where explicitly stated within the agreement) and accepts full responsibility for the breach of this agreement should this not be the case. \n\nData is to be stored in the Microsoft Limited cloud.  Microsoft Limited is named as a data processor in this agreement. Microsoft Limited allows for flexibility in storage requirements should they expand or contract. Microsoft Limited has all relevant accreditation required for safe storage.\n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nUniversity Hospitals Bristol NHS Foundation Trust, Pulsant, Ilkeston Community Hospital and Interxion do not access data held under this agreement as they only supply the building. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nLima Networks LTD supply IT infrastructure and are therefore listed as a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\nGreater Manchester Shared Services (hosted by NHS Oldham CCG) supply IT infrastructure for Arden and GEM Commissioning Support Unit and are therefore listed as data processors. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.",
+  "8a32fdda50e6": "Outputs are on an on going basis (i.e., no target date) as the HES data in general is used to support general commissioning and public health needs, and is not aimed at a specific report or deadline for use.\n\nAll outputs informed by information retrieved from the HES data tables are governed by adherence to the HES guidance on suppression of small numbers. Users of the data abide by the HES Analysis Guide which means that all outputs released must be aggregated with small numbers suppressed.\n\nHES allows NELCSU to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data.\n\nCommissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across, for example, the North London area. \n\nOutputs expected are aggregated data to support reports or decisions across examples such as the following:\n• Elements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc.\n• Quality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care.\n• Providing data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England, and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘Commissioning for Value’ (on behalf of NHSE). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible.\n\nDiagnostic Imaging is an acknowledged area of over/ duplicate treatment and so a fruitful area for NELCSU to investigate and to support improvement initiatives (eg Right Care). The DIDs data with linkage to HES will help with any deep dives and provide further opportunities for gaining insight from this data. As an example some of NELCSU customer CCGs have very high diagnostic intervention rates per head of population (eg for MRIs). Having DIDs data allows NELCSU to have the detailed data to be able to investigate these type of issues in more detail and provide useful outputs.",
+  "8aef79471063": "The HES data will only be used by North and East London Commissioning Support Unit (NELCSU) and its approved users (via secure access to the HES Cube) to support CCGs to meet their statutory duties under the Health & Social Care Act 2012 and NHS health economy wide transformation projects that require detailed hospital level data.\nThe data is proposed to be used on two levels:\nObjective 1\nHES extracts: pseudonymised record level HES data is interrogated only by approved in-house NELCSU analysts to provide benchmarking and comparative information to NELCSU CCG clients and NHS health economy wide transformation projects that require detailed hospital level data.\nThe full set of HES data allows complex and detailed modelling and benchmarking of activity, essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care. This will especially support benchmarking work for CCG clients taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data (for example from local SUS data feeds the applicant only receives data for their CCG’s registered population, which does not allow whole trust activity to be considered) and allow CCGs to benchmark and identify best practice in similar health economies anywhere in England.\nOutputs released will be aggregated with small number suppression and provided, by data sharing agreement, only for use in the NHS Health and Social Care sector to meet statutory requirements under the Health and Social Care Act 2012 and is not for commercial use.\nObjective 2\nHES Cube: to populate a a stand-alone secure data tool containing summary stand-alone data to allow a broader range of users (than objective 1) without access to the full HES datasets to get quick and easy access to information on common and simple counts of hospital activity, for the same purposes as output 1, to support the successful commissioning. \nThis tool can generate small numbers from its restricted number of derived data fields (please see ‘Processing activities’ section below for further information on what the tool contains). Any output released from the cube must be aggregated and have small numbers suppressed (see Summary section above for details of data sharing agreement in place). \nThe HES Cube will be used by the following: \n- in-house NELCSU analysts, \n- by approved analytics staff in NELCSU customer CCGs and by approved public health analysts within Local Authorities(LA) within CCG customer areas that have signed a local data sharing agreement (see Appendices A and B – supporting documentation SD3 and SD4) which include agreement to comply with the HES protocol and suppress the release of small numbers. This permits access to the tool and to aggregated summary data containing small numbers.\nAccess to Local Authority Public Health teams is given to support CCGs to meet their obligations to Public Health teams through the provision of aggregated data in support of joint duties to under the Health & Social Care Act 2012. Public Health teams lost existing access to HES and SUS data in 2013 when they moved from PCTs to Local Authorities, and therefore their ability to support CCGs has been difficult since.\nThese purposes are;\n Aggregate outputs with small numbers suppressed to support health needs assessment, including supporting the delivery of Joint Strategic Needs Assessments (JSNAs) [joint with CCGs]\n Aggregate outputs with small numbers suppressed to support the development of CCG commissioning intentions, commissioning strategies and QIPP plans\n Aggregate outputs with small numbers suppressed to support Public Health activity relating to protecting the health of the population in XXXX LA’.\nRecipients are not permitted to onwardly share the data unless the HSCIC gives explicit permission for them to do so and should permission be granted this would be for anonymized aggregated data with small numbers suppressed only. \nAccess to the HES data will not be given to any other organisations, other than those stated above.\n\nProcessing Activities\n Processing ActivitiesObjective 1 Only an approved list of NELCSU analysts have access to the full set of pseudonymised data tables, via secure server based (Structured Query Language (SQL) querying. CSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. National data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data Analysts must only release aggregate data with small numbers suppressed. Objective 2 HES Cube: The HES Cube seeks to provide a quick and flexible way to get information on common questions on hospital activity, such as: • How many admissions, what was the source and type? • How much activity by diagnosis, procedure, HRG? • How many discharges, how long were stays in hospital? • How much activity does a population generate – by resident, commissioner? • How do age bands, gender, ethnicity relate to activity? To do this, NELCSU summarises data in a selection of HES fields to create a stand-alone data table aggregated with small numbers included. The full list of HES fields is shown below in this section. Data periods included are from 2007 to the latest held. A software application (currently Microsoft Excel) is then applied to a summarised data table to enable the user to produce different views of the data according to their needs, via a simple pivot table presentation. No other data is included in the cube or can be linked to it. For any user (both in-house and external clients, i.e., customer CCGs and associated Public Health Teams), the HES Cube as a package is made available in an existing secure online environment, the NELCSU Information Exchange (NELIE). Only named approved users are allowed to access NELIE, and the list and access rights are maintained by NELCSU. NELIE users agree to a data sharing agreement. Users have varying access rights to levels of NELIE information, which includes, for example, general health service activity and contracting/financial reporting, all governed by agreements with the applicants CCG clients. Access specifically to the HES Cube itself is governed by access rights separate from the other information on NELIE. As specified above, external analysts who need access to the HES cube (such as Public Health teams) must sign a data sharing agreement that includes abiding by the HES protocol and they also need approval from their CCG partners. External clients are restricted to two analysts each with access to the HES cube. The “HES Cube” is a self-contained application with no links to other datasets. Also there are no record level identifiers within the cube that would make this possible and the data is aggregated by default but small numbers may be included. What users actually see: The users see a pivoted summary view of counts of hospital activity in which any of the 20 fields can be included as variable to enable flexible and meaningful counts of data. Although a drill down facility exists this will only drill to the limited amount of summary data physically held within the cube. For the tool to be flexible and capable of sufficient combinations to support a useful and meaningful range of work, it must contain enough variables (HES data fields) to meet these needs. As a by-product (but not a requirement) of the combination of variables, it is possible to drill down to counts of small numbers in the tool. The cube summary table contains 20 fields (out of 400+ possible already pseudonymised HES fields) with derived items such as age banding (rather that single ages) and Ward level geography (instead of Lower Super Output Areas or postcode), to help ensure that the occurrence of small numbers is reduced to a minimum. The majority of output from the cube will be unlikely to result in small numbers due to its prime use for benchmarking of a large number of providers/population areas - but any aggregate output with small numbers is required to be suppressed before wider dissemination, as specified in the data sharing agreements. The set of HES data fields processed into a separate data table for the HES Cube are the following: Admission date [ADMIDATE] - Admission Method [ADMIMETH] - Five Year Age Bands derived from [STARTAGE] - Diagnosis [DIAG_01] - Discharge Date [DISDATE] - Discharge Destination [DISDEST] - Discharge Method [DISMETH] - Electoral Ward [RESLADST_CURRWARD] - Episode Order [EPIORDER] - Episode Type [EPITYPE] - Ethnicity [ETHNOS] - Gender [SEX] - Commissioner CCG [GPPRAC] - GP practice [GPPRAC] - HRG [SUSHRG] - IMD Decile [IMD04RK] - Patient Classification [CLASSPAT] - Primary Procedure [OPERTN_01] - Responsible Commissioner [PCTCODE06] - Service Provider [PROCODE] - Source of Admission [ADMISORC] - Specialty [MAINSPEF] \nObjective 1\nOnly an approved list of NELCSU analysts have access to the full set of pseudonymised data tables, via secure server based (Structured Query Language (SQL) querying.\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data\nAnalysts must only release aggregate data with small numbers suppressed.\nObjective 2\nHES Cube: The HES Cube seeks to provide a quick and flexible way to get information on common questions on hospital activity, such as:\n• How many admissions, what was the source and type?\n• How much activity by diagnosis, procedure, HRG?\n• How many discharges, how long were stays in hospital?\n• How much activity does a population generate – by resident, commissioner?\n• How do age bands, gender, ethnicity relate to activity?\n\nTo do this, NELCSU summarises data in a selection of HES fields to create a stand-alone data table aggregated with small numbers included. The full list of HES fields is shown below in this section. Data periods included are from 2007 to the latest held. \nA software application (currently Microsoft Excel) is then applied to a summarised data table to enable the user to produce different views of the data according to their needs, via a simple pivot table presentation. No other data is included in the cube or can be linked to it.\nFor any user (both in-house and external clients, i.e., customer CCGs and associated Public Health Teams), the HES Cube as a package is made available in an existing secure online environment, the NELCSU Information Exchange (NELIE). Only named approved users are allowed to access NELIE, and the list and access rights are maintained by NELCSU. NELIE users agree to a data sharing agreement. Users have varying access rights to levels of NELIE information, which includes, for example, general health service activity and contracting/financial reporting, all governed by agreements with the applicants CCG clients. \nAccess specifically to the HES Cube itself is governed by access rights separate from the other information on NELIE. As specified above, external analysts who need access to the HES cube (such as Public Health teams) must sign a data sharing agreement that includes abiding by the HES protocol and they also need approval from their CCG partners. External clients are restricted to two analysts each with access to the HES cube. \nThe “HES Cube” is a self-contained application with no links to other datasets. Also there are no record level identifiers within the cube that would make this possible and the data is aggregated by default but small numbers may be included. \nWhat users actually see: The users see a pivoted summary view of counts of hospital activity in which any of the 20 fields can be included as variable to enable flexible and meaningful counts of data. Although a drill down facility exists this will only drill to the limited amount of summary data physically held within the cube.\nFor the tool to be flexible and capable of sufficient combinations to support a useful and meaningful range of work, it must contain enough variables (HES data fields) to meet these needs.\nAs a by-product (but not a requirement) of the combination of variables, it is possible to drill down to counts of small numbers in the tool. \nThe cube summary table contains 20 fields (out of 400+ possible already pseudonymised HES fields) with derived items such as age banding (rather that single ages) and Ward level geography (instead of Lower Super Output Areas or postcode), to help ensure that the occurrence of small numbers is reduced to a minimum.\nThe majority of output from the cube will be unlikely to result in small numbers due to its prime use for benchmarking of a large number of providers/population areas - but any aggregate output with small numbers is required to be suppressed before wider dissemination, as specified in the data sharing agreements.\nThe set of HES data fields processed into a separate data table for the HES Cube are the following:\nAdmission date [ADMIDATE]\n- Admission Method [ADMIMETH]\n- Five Year Age Bands derived from [STARTAGE]\n- Diagnosis [DIAG_01]\n- Discharge Date [DISDATE]\n- Discharge Destination [DISDEST]\n- Discharge Method [DISMETH]\n- Electoral Ward [RESLADST_CURRWARD]\n- Episode Order [EPIORDER]\n- Episode Type [EPITYPE]\n- Ethnicity [ETHNOS]\n- Gender [SEX] \n- Commissioner CCG [GPPRAC]\n- GP practice [GPPRAC]\n- HRG [SUSHRG]\n- IMD Decile [IMD04RK]\n- Patient Classification [CLASSPAT]\n- Primary Procedure [OPERTN_01]\n- Responsible Commissioner [PCTCODE06] \n- Service Provider [PROCODE]\n- Source of Admission [ADMISORC]\n- Specialty [MAINSPEF] \n\nExpected Output\nExpected OutputObjective One and Two Outputs are on an ongoing basis (i.e., no target date) as the HES data in general and the HES Cube are used to support general commissioning and public health needs, and is not aimed at a specific report or deadline for use. All outputs informed by information retrieved from the HES data tables and the HES Cube are governed by adherence to the HES guidance on suppression of small numbers. Users of the data are bound by signed data sharing agreements (see Appendices A and B - supporting documentation SD3 and SD4) with conditions that they abide by HES guidance which means that all outputs released must be aggregate with small numbers suppressed. HES allows NELCSU to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data Commissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across, for example, the North London area. Outputs expected are aggregated data to support reports or decisions across examples such as the following: • Elements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc. • Quality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care. • Providing data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England, and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘ Commissioning for Value’ (on behalf of NHSE). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible. Aggregated outputs will only be used for NHS Health and Social Care use; or by organisations who are commissioned by NHS Health and Social Care for a specific purpose as outline above. \nObjective One and Two\nOutputs are on an ongoing basis (i.e., no target date) as the HES data in general and the HES Cube are used to support general commissioning and public health needs, and is not aimed at a specific report or deadline for use.\nAll outputs informed by information retrieved from the HES data tables and the HES Cube are governed by adherence to the HES guidance on suppression of small numbers. Users of the data are bound by signed data sharing agreements (see Appendices A and B - supporting documentation SD3 and SD4) with conditions that they abide by HES guidance which means that all outputs released must be aggregate with small numbers suppressed.\nHES allows NELCSU to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data\nCommissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across, for example, the North London area. \nOutputs expected are aggregated data to support reports or decisions across examples such as the following:\n• Elements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc.\n• Quality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care.\n• Providing data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England, and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘ Commissioning for Value’ (on behalf of NHSE). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible.\nAggregated outputs will only be used for NHS Health and Social Care use; or by organisations who are commissioned by NHS Health and Social Care for a specific purpose as outline above.\n\nExpected Measurable Benefits\nExpected Measurable BenefitsCCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable. Access to HES data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data). Measurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm. \nCCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable.\nAccess to HES data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data).\nMeasurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm.",
+  "9a48bb5343df": "Outputs are on an on-going basis (i.e., no target date) as the HES and DIDs data are used to support general commissioning and public health needs, and are not aimed at a specific report or deadline for use. Continued refinement of dashboards and reports available via the BI tools to registered users covering a range of benchmarking and comparative analysis. This will include a focus on for example:\na.\tHospital mortality\nb.\tReadmissions\nc.\tNew to Follow-up ratios for outpatients\nd.\tProcedures of limited clinical value\ne.\tFalls\nf.\tFrequent flyers\ng.\tDelayed transfers of care\n\nThis will allow commissioners to compare the impact of their programmes and work streams against peer groups and nationally and will help determine their effectiveness and inform future commissioning decisions.\n\nOutputs will include graphs/charts showing a national and peer group figure and also tables detailing how each commissioner compares to others.\n\nHES allows CSUs to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs or other commissioning bodies) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data.\n\nAll outputs informed by information retrieved from the HES data tables are governed by adherence to the HES guidance on suppression of small numbers. Users of the data abide by the HES Analysis Guide which means that all outputs released must contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nCommissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across such as an STP footprint. \n\nOutputs expected are aggregated data to support reports or decisions across examples such as the following:\n• Elements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc.\n• Quality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care.\n• Providing data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘Commissioning for Value’ (on behalf of NHS England). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible.\n• It is anticipated that with the transition to Integrated Care systems/organisations the need for better intelligence around health outcomes of systems/populations will become increasingly important, The further demand, to look holistically at activity and cost across a whole clinical pathway necessitates linkage between datasets which is why linked datasets are important.\n\nDiagnostic Imaging is an acknowledged area of unexplained variation between areas and so a fruitful area for CSUs to investigate and to support improvement initiatives (eg Right Care). The DIDs data with linkage to HES will help with any deep dives and provide further opportunities for gaining insight from this data. As an example, some CCGs have very high diagnostic intervention rates per head of population (eg for MRIs). Having DIDs data allows commissioners to have the detailed data to be able to investigate these type of issues in more detail and provide useful outputs.\n\nCSUs support commissioners for analytics services (typically benchmarking analysis, or whole provider modelling). \n\nCSUs will utilise the HES datasets to undertake various analyses both locally and in support of a range of national projects. Having the full catchment/provider data (commissioners generally only have their registered population) will facilitate accurate modelling of services and a view of complete patient pathways. Current projects where HES data would add significant value to the CSU’s services include:\na.\tSupporting CCG vanguard: CSUs are providing support to a number of vanguards, validating their activity/financial models and plans. Not having direct access to a standardised national dataset limits the support that can be provided.\nb.\tService and pathway transformation: redesigning care pathways on behalf of CCGs requires access to activity data covering the entire provider with HES the only source for this. Commissioning plans must be based on accurate and complete information. \nThe business intelligence teams within the CSUs will continue to use the HES data to produce deep-dive reports and analysis on specific projects whilst ensuring small number suppression is followed for all outputs and no row level data is shared outside the organisation.\nc. Future commissioning architecture: Having a comprehensive dataset covering the local population will allow the CSUs to support local and national Sustainability and Transformation Plans (STPs) as they evolve and transform care at a local level.\n\nSpecifically:\ni.\tDevelopment of a Regional ICS frailty outcomes framework across Cumbria and the North East – using HES data to develop and monitor metrics for the framework, specifically around national benchmarks of secondary care activity for the over 65 population.\n\nii.\tQIPP planning - HES has been used to support the build of the 19/20 QIPP plan for CCGs both to proactively benchmark against locality (non-RightCare) peers and to test the potential benefit of QIPP pipeline ideas.\n\niii.\tHES benchmarking used frequently to report on progress of CCG RightCare schemes and to contrast the performance across CCGs and their local health economies.\n\niv.\tRealising Every Asset in Community Health (REACH) – The CSUs are analysing non elective admissions due to urgent care sensitive conditions for NHSE and pilot areas to identify priorities for pathway improvement. HES provides a level of detail that is unavailable in published reports and will be critical in monitoring the impact of pathway improvements.",
+  "9fc90710e00c": "All organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e.: employees, agents and contractors of the Data Recipient who may have access to that data). The data will only be for the purposes described in this document and not for any other purposes, including being used in data tools.\n\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \n\nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG or commissioning body to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects or other commissioning initiatives that require detailed and comprehensive hospital level data.\n\nA maximum of ten years data will be retained at any point, such that as each new data year is received, the oldest year will be deleted e.g. the 2007/08 data year will be deleted once the final complete 2017/18 data year has been received. The CSU will securely destroy the year’s data within six weeks of receiving the latest annual dataset and provide a data destruction certificate to NHS Digital.\n\nAnalysts will only release aggregated data with small numbers suppressed in line with the HES Analysis Guide.\n\nThe data is being held within a data centre which also holds data on behalf of other organisations.  NELCSU agrees that the data under this agreement must be held and remain separate to all other data (except where explicitly stated within the agreement), and accepts full responsibility for the breach of this agreement should this not be the case. \n\nFor clarity, any access by Interxion to data held under this agreement would be considered a breach of the agreement.  This includes granting of access to the database[s] containing the data.",
+  "c34806d10545": "The Data Recipient agrees to process the Data only for the following purposes agreed with the HSCIC: \nObjective for processing: \nThe HES data will only be used by North and East London Commissioning Support Unit (NELCSU) and its approved users (via secure access to the HES Cube) to support CCGs to meet their statutory duties under the Health & Social Care Act 2012 and NHS health economy wide transformation projects that require detailed hospital level data.\nThe data is proposed to be used on two levels:\nObjective 1\nHES extracts: pseudonymised record level HES data is interrogated only by approved in-house NELCSU analysts to provide benchmarking and comparative information to NELCSU CCG clients and NHS health economy wide transformation projects that require detailed hospital level data.\nThe full set of HES data allows complex and detailed modelling and benchmarking of activity, essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care. This will especially support benchmarking work for CCG clients taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data (for example from local SUS data feeds the applicant only receives data for their CCG’s registered population, which does not allow whole trust activity to be considered) and allow CCGs to benchmark and identify best practice in similar health economies anywhere in England.\nOutputs released will be aggregated with small number suppression and provided, by data sharing agreement, only for use in the NHS Health and Social Care sector to meet statutory requirements under the Health and Social Care Act 2012 and is not for commercial use.\nObjective 2\nHES Cube: to populate a a stand-alone secure data tool containing summary stand-alone data to allow a broader range of users (than objective 1) without access to the full HES datasets to get quick and easy access to information on common and simple counts of hospital activity, for the same purposes as output 1, to support the successful commissioning. \nThis tool can generate small numbers from its restricted number of derived data fields (please see ‘Processing activities’ section below for further information on what the tool contains). Any output released from the cube must be aggregated and have small numbers suppressed (see Summary section above for details of data sharing agreement in place). \nThe HES Cube will be used by the following: \n- in-house NELCSU analysts, \n- by approved analytics staff in NELCSU customer CCGs and by approved public health analysts within Local Authorities(LA) within CCG customer areas that have signed a local data sharing agreement (see Appendices A and B – supporting documentation SD3 and SD4) which include agreement to comply with the HES protocol and suppress the release of small numbers. This permits access to the tool and to aggregated summary data containing small numbers.\nAccess to Local Authority Public Health teams is given to support CCGs to meet their obligations to Public Health teams through the provision of aggregated data in support of joint duties to under the Health & Social Care Act 2012. Public Health teams lost existing access to HES and SUS data in 2013 when they moved from PCTs to Local Authorities, and therefore their ability to support CCGs has been difficult since.\nThese purposes are;\n Aggregate outputs with small numbers suppressed to support health needs assessment, including supporting the delivery of Joint Strategic Needs Assessments (JSNAs) [joint with CCGs]\n Aggregate outputs with small numbers suppressed to support the development of CCG commissioning intentions, commissioning strategies and QIPP plans\n Aggregate outputs with small numbers suppressed to support Public Health activity relating to protecting the health of the population in XXXX LA’.\nRecipients are not permitted to onwardly share the data unless the HSCIC gives explicit permission for them to do so and should permission be granted this would be for anonymized aggregated data with small numbers suppressed only. \nAccess to the HES data will not be given to any other organisations, other than those stated above.\n\nProcessing activities: \nObjective 1\nOnly an approved list of NELCSU analysts have access to the full set of pseudonymised data tables, via secure server based (Structured Query Language (SQL) querying.\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data\nAnalysts must only release aggregate data with small numbers suppressed.\nObjective 2\nHES Cube:  The HES Cube seeks to provide a quick and flexible way to get information on common questions on hospital activity, such as:\n•     How many admissions, what was the source and type?\n•     How much activity by diagnosis, procedure, HRG?\n•     How many discharges, how long were stays in hospital?\n•     How much activity does a population generate – by resident, commissioner?\n•     How do age bands, gender, ethnicity relate to activity?\n\nTo do this, NELCSU summarises data in a selection of HES fields to create a stand-alone data table aggregated with small numbers included. The full list of HES fields is shown below in this section. Data periods included are from 2007 to the latest held. \nA software application (currently Microsoft Excel) is then applied to a summarised data table to enable the user to produce different views of the data according to their needs, via a simple pivot table presentation. No other data is included in the cube or can be linked to it.\nFor any user (both in-house and external clients, i.e., customer CCGs and associated Public Health Teams), the HES Cube as a package is made available in an existing secure online environment, the NELCSU Information Exchange (NELIE). Only named approved users are allowed to access NELIE, and the list and access rights are maintained by NELCSU. NELIE users agree to a data sharing agreement. Users have varying access rights to levels of NELIE information, which includes, for example, general health service activity and contracting/financial reporting, all governed by agreements with the applicants CCG clients. \nAccess specifically to the HES Cube itself is governed by access rights separate from the other information on NELIE. As specified above, external analysts who need access to the HES cube (such as Public Health teams) must sign a data sharing agreement that includes abiding by the HES protocol and they also need approval from their CCG partners. External clients are restricted to two analysts each with access to the HES cube.  \nThe “HES Cube” is a self-contained application with no links to other datasets. Also there are no record level identifiers within the cube that would make this possible and the data is aggregated by default but small numbers may be included. \nWhat users actually see: The users see a pivoted summary view of counts of hospital activity in which any of the 20 fields can be included as variable to enable flexible and meaningful counts of data. Although a drill down facility exists this will only drill to the limited amount of summary data physically held within the cube.\nFor the tool to be flexible and capable of sufficient combinations to support a useful and meaningful range of work, it must contain enough variables (HES data fields) to meet these needs.\nAs a by-product (but not a requirement) of the combination of variables, it is possible to drill down to counts of small numbers in the tool.  \nThe cube summary table contains 20 fields (out of 400+ possible already pseudonymised HES fields) with derived items such as age banding (rather that single ages) and Ward level geography (instead of Lower Super Output Areas or postcode), to help ensure that the occurrence of small numbers is reduced to a minimum.\nThe majority of output from the cube will be unlikely to result in small numbers due to its prime use for benchmarking of a large number of providers/population areas - but any aggregate output with small numbers is required to be suppressed before wider dissemination, as specified in the data sharing agreements.\nThe set of HES data fields processed into a separate data table for the HES Cube are the following:\nAdmission date [ADMIDATE]\n- Admission Method [ADMIMETH]\n- Five Year Age Bands derived from [STARTAGE]\n- Diagnosis [DIAG_01]\n- Discharge Date [DISDATE]\n- Discharge Destination [DISDEST]\n- Discharge Method [DISMETH]\n- Electoral Ward [RESLADST_CURRWARD]\n- Episode Order [EPIORDER]\n- Episode Type [EPITYPE]\n- Ethnicity [ETHNOS]\n- Gender [SEX] \n- Commissioner CCG [GPPRAC]\n- GP practice [GPPRAC]\n- HRG [SUSHRG]\n- IMD Decile [IMD04RK]\n- Patient Classification [CLASSPAT]\n- Primary Procedure  [OPERTN_01]\n- Responsible Commissioner  [PCTCODE06] \n- Service Provider [PROCODE]\n- Source of Admission  [ADMISORC]\n- Specialty [MAINSPEF]  \nSpecific outputs expected, including target date(s): \nObjective One and Two\nOutputs are on an ongoing basis (i.e., no target date) as the HES data in general and the HES Cube are used to support general commissioning and public health needs, and is not aimed at a specific report or deadline for use.\nAll outputs informed by information retrieved from the HES data tables and the HES Cube are governed by adherence to the HES guidance on suppression of small numbers. Users of the data are bound by signed data sharing agreements (see Appendices A and B - supporting documentation SD3 and SD4) with conditions that they abide by HES guidance which means that all outputs released must be aggregate with small numbers suppressed.\nHES allows NELCSU to provide intelligence for programmes whose scope demands activity benchmarking of the CSU's clients (CCGs) against similar health economies or populations in England. SUS data does not allow this scope. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data\nCommissioners can compare with any service known to have better outcomes or new pathways, or support large scale transformation projects that may impact several commissioners across, for example, the North London area. \nOutputs expected are aggregated data to support reports or decisions across examples such as the following:\n• Elements of Joint Strategic Needs Assessments (JSNA) - to support CCGs/Local Authorities to consider the needs of their local populations and in how they respond with effective commissioning of services to properly meet those needs, by enabling, for example views of the use of secondary services by different patient groups by condition, ethnicity, etc.\n• Quality, Innovation, Productivity and Prevention (QIPP) development - identifying and benchmarking areas across England with better practice than locally, to help evaluate high costs and poor outcomes in hospital care.\n• Providing data on hospital admissions in-year to support monitoring of national ambitions, such as avoiding unnecessary admissions across CCGs, by practice, condition, hospital trust. CCGs are required to monitor and make progress on national outcome measures and ambitions by NHS England, and use of national benchmarking is promoted heavily by initiatives such as Right Care ‘ Commissioning for Value’ (on behalf of NHSE). Without access to national data such as HES, CCGs cannot be ultimately certain that they are making progress or making decisions on the best basis possible.\nAggregated outputs will only be used for NHS Health and Social Care use; or by organisations who are commissioned by NHS Health and Social Care for a specific purpose as outline above.\n\nExpected measurable benefits to health and/or social care, including target date(s): \nCCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable.\nAccess to HES data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data).\nMeasurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm.\n\nCommercial Considerations:\nThe CSU does not operate a commercial model for the provision of HES data or the HES cube (the majority of outputs being used to support work for core customer CCGs). \nWhere the outputs are used for distinct pieces of paid for work this is merely to inform the analysis or service improvement recommendations. Summary data (i.e. no small numbers) only is used.\nBespoke consultancy or additional services are charged at lead provider framework daily rates. NELCSU will not generate margin payment for the onward provision of HES data.",
+  "c3e6fdcec093": "Objective 1\nOnly an approved list of NELCSU analysts have access to the full set of pseudonymised data tables, via secure server based (Structured Query Language (SQL) querying.\nCSU analysts interrogate the data to produce aggregated output for monitoring care outcome and activity for a CCG’s population, patient group, condition or service provider, including trends over time in any given activity or care process. For example, trends over time can be modelled to produce forecasts of future activity, taking into account population growth or changes in service configuration. \nNational data is necessary to benchmark against any CCG peer groups (as defined by NHS England), or any other care pathway or group of patients. Benchmarking allows an individual CCG to evaluate its own care processes and outcomes against other similar commissioning populations, with a view to identifying areas for improvement or to identify best practice. National data also supports NHS health economy wide transformation projects that require detailed and comprehensive hospital level data\nAnalysts must only release aggregate data with small numbers suppressed.\nObjective 2\nHES Cube:  The HES Cube seeks to provide a quick and flexible way to get information on common questions on hospital activity, such as:\n•\tHow many admissions, what was the source and type?\n•\tHow much activity by diagnosis, procedure, HRG?\n•\tHow many discharges, how long were stays in hospital?\n•\tHow much activity does a population generate – by resident, commissioner?\n•\tHow do age bands, gender, ethnicity relate to activity?\n\nTo do this, NELCSU summarises data in a selection of HES fields to create a stand-alone data table aggregated with small numbers included. The full list of HES fields is shown below in this section. Data periods included are from 2007 to the latest held. \nA software application (currently Microsoft Excel) is then applied to a summarised data table to enable the user to produce different views of the data according to their needs, via a simple pivot table presentation. No other data is included in the cube or can be linked to it.\nFor any user (both in-house and external clients, i.e., customer CCGs and associated Public Health Teams), the HES Cube as a package is made available in an existing secure online environment, the NELCSU Information Exchange (NELIE). Only named approved users are allowed to access NELIE, and the list and access rights are maintained by NELCSU. NELIE users agree to a data sharing agreement. Users have varying access rights to levels of NELIE information, which includes, for example, general health service activity and contracting/financial reporting, all governed by agreements with the applicants CCG clients. \nAccess specifically to the HES Cube itself is governed by access rights separate from the other information on NELIE. As specified above, external analysts who need access to the HES cube (such as Public Health teams) must sign a data sharing agreement that includes abiding by the HES protocol and they also need approval from their CCG partners. External clients are restricted to two analysts each with access to the HES cube.  \nThe “HES Cube” is a self-contained application with no links to other datasets. Also there are no record level identifiers within the cube that would make this possible and the data is aggregated by default but small numbers may be included. \nWhat users actually see: The users see a pivoted summary view of counts of hospital activity in which any of the 20 fields can be included as variable to enable flexible and meaningful counts of data. Although a drill down facility exists this will only drill to the limited amount of summary data physically held within the cube.\nFor the tool to be flexible and capable of sufficient combinations to support a useful and meaningful range of work, it must contain enough variables (HES data fields) to meet these needs.\nAs a by-product (but not a requirement) of the combination of variables, it is possible to drill down to counts of small numbers in the tool.  \nThe cube summary table contains 20 fields (out of 400+ possible already pseudonymised HES fields) with derived items such as age banding (rather that single ages) and Ward level geography (instead of Lower Super Output Areas or postcode), to help ensure that the occurrence of small numbers is reduced to a minimum.\nThe majority of output from the cube will be unlikely to result in small numbers due to its prime use for benchmarking of a large number of providers/population areas - but any aggregate output with small numbers is required to be suppressed before wider dissemination, as specified in the data sharing agreements.\nThe set of HES data fields processed into a separate data table for the HES Cube are the following:\nAdmission date [ADMIDATE]\n-\tAdmission Method [ADMIMETH]\n-\tFive Year Age Bands derived from [STARTAGE]\n-\tDiagnosis [DIAG_01]\n-\tDischarge Date [DISDATE]\n-\tDischarge Destination [DISDEST]\n-\tDischarge Method [DISMETH]\n-\tElectoral Ward [RESLADST_CURRWARD]\n-\tEpisode Order [EPIORDER]\n-\tEpisode Type [EPITYPE]\n-\tEthnicity [ETHNOS]\n-\tGender [SEX] \n-\tCommissioner CCG [GPPRAC]\n-\tGP practice [GPPRAC]\n-\tHRG [SUSHRG]\n-\tIMD Decile [IMD04RK]\n-\tPatient Classification [CLASSPAT]\n-\tPrimary Procedure  [OPERTN_01]\n-\tResponsible Commissioner  [PCTCODE06] \n-\tService Provider [PROCODE]\n-\tSource of Admission  [ADMISORC]\n-\tSpecialty [MAINSPEF]",
+  "c47398eb581a": "CCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable.\n\nAnalysis of HES and DIDs data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data).\n\nMeasurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm.\n\nExample of benefits anticipated in the future period:\n\nAs an accredited Rightcare partner, NHS North and East London Commissioning Support Unit expect to support CCGs with support and guidance on realising the benefits of the commissioning for value packs published by NHS England. This could involve further deep dives into areas identified in the packs or further benchmarking in areas of interest. \n\nNHS North and East London Commissioning Support Unit expects to be on the framework for provision of analytics support to integrated care organisations. NHS North and East London Commissioning Support Unit expect this support will involve the application of advanced analytics to ICO geographies to understand issues better and identify (through benchmarking) areas of opportunity or sub-optimal outcomes. This benchmarking requires detailed whole country data . \n\nAs a team with GIS mapping and econometric expertise NHS North and East London Commissioning Support Unit will want to apply this to the HES data to the benefits of the CCG customers (or others who approach NHS North and East London Commissioning Support Unit). One example of this work is supplied in the “yielded benefits” section below where regression analysis of A&E data (controlling for factors such as age,sex and deprivation) for a hospital catchment area identified some important drivers of A&E activity that could be used to target interventions for specific population groupings.",
+  "c928c10ddfce": "Commissioning Support Units (CSUs) are part of NHS England (NHS E), and provide comprehensive business intelligence (BI) services to a wide range of NHS organisations, this includes both standard analytics and reporting, deep-dives and diagnostic exercises to offer insight and intelligence on a commissioner’s health economy. In addition, CSUs offer business intelligence applications allowing self-service access to a range of dashboards and configurable reports. Tools are available on a subscription-basis only to NHS organisations, limited to Clinical Commissioning Groups (CCGs), internally within the CSUs through specialist support teams, by CCG member practices, and by local authorities.\n\nThe Commissioning Support Units providing the services are:\n- North East London Commissioning Support Unit\n- North of England Commissioning Support Unit\n- South, Central and West Commissioning Support Unit\n- Midlands and Lancashire Commissioning Support Unit\n- Arden and Greater East Midlands Commissioning Support Unit\n\nNHS England’s lawful basis for processing is 6(1)(e) ‘…exercise of official authority…’. For special categories (health) data the basis is 9(2)(h) ‘…health or social care…’.\n\nNHS England (as the legal entity) is the sole data controller, and the CSUs (as part of NHS England) are data processors. Microsoft Azure provides cloud storage services for all commissioning support units and is therefore a data processor. They supply support to the system, but do not access data. Therefore, any access to the data held under this agreement would be considered a breach of the agreement. This includes granting of access to the database[s] containing the data.\n\n ANS Group Ltd are assisting South Central and West CSU to transition to CLOUD services and are therefore a data processor. ANS Group will be supplying support, platform build and management services for SCW CSU’s Cloud environment.  As such, they could have access to pseudonymised / aggregate / anonymous data through system administration accounts. Whilst ANS Group are a data processor as they will have sight of the data, they will not process the data for any other purpose than IT support. ANS Group using the data for any other purpose would be considered a breach of this agreement.\n\nHospital Episode Statistics (HES)and Emergency Care Data Set (ECDS)  are required to provide support to CCGs, other commissioning bodies, and local authorities working with CSUs to meet their statutory duties under the Health & Social Care Act 2012 and to support NHS health economy wide transformation projects.\n\nThe full, national set of HES and ECDS data allows complex and detailed modelling and benchmarking of activity and diagnostic interventions (numbers and rates), essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care and use of diagnostic services. This will especially support benchmarking work for CCGs, other commissioning clients and local authorities taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data. \n\nThere will be no direct linkage between HES data records and other data already used by any CSU or in the BI tools. HES data may be presented alongside other data but not linked to it – for example a report may contain HES data alongside workforce statistics, weather reports etc. \n\nCCGs only receive local/regional commissioning flows of data such as SUS and local flows filtered by resident/registered populations, so analysis undertaken on national data such as HES provides significant added value. These data sources will allow CCGs, other commissioning organisations and local authorities to benchmark and highlight areas of variation, so that best practice can be identified in similar health economies anywhere in England.\n\nThe data purpose relates to the need for national data for comparative analysis, benchmarking and forecasting, and this requirement for CSUs has specified support from NHS England. Having an extended time trend also provides valuable longer-term context when looking at health populations (e.g. health needs analysis, health economics) and service transformation. National data covering a number of years is required for benchmarking purposes, enabling users to compare themselves on a national footprint. CSUs therefore require HES data with a 10-year rolling history to enable them to provide accurate time-series forecasting methodologies. Forecasting, particularly with regards to winter surge management or financial planning, are key areas of interest for the NHS currently and are areas that the NHS North of England CSU (NECS) have used the HES data to support most recently.\n\nAs the NHS evolves, there is a greater emphasis on CCGs forming part of larger collaborations called Sustainability and Transformation Partnerships (STPs), and CSUs need to accelerate this way of working throughout the country, through partnerships of care providers and commissioners in an area STPs. Some areas are now ready to go further and more fully integrate their services and funding, and CSUs will back them in doing so (Integrated Care Systems). Provision of modelling support to emergent Integrated Care Systems (ICSs) thus supporting the whole health system through modelling demand and capacity primarily in secondary care. \n\nTo support the on-going budgetary pressures the NHS is faced with, the BI services and CSU BI tools offer significant support to commissioners on their Quality, Innovation, Productivity and Prevention (QIPP) programmes. Identifying service areas where the commissioner is an outlier that may then require re-procurement of a clinical service, comparisons with peer groups and best practice to understand how a change in approach might deliver a financial saving.\n\nWorking together with patients and the public, NHS commissioners and providers, as well as local authorities and other providers of health and care services, ICS’s will plan how best to provide care, while taking on new responsibilities for improving the health and wellbeing of the population they cover.  \n\nUnder this agreement, the CSUs will use the data provided for 2 purposes:\ni) benchmarking dashboards and reports, and\nii) bespoke analytics and reporting.\n\nThe HES data will be utilised within CSU BI tools to provide a range of benchmarking dashboards and reports as required to address specific priorities. This may include mortality, end of life, procedures of limited clinical value, new to follow-up ratios, readmissions etc. The ability to present a national and peer-group picture of locally defined indicators is the ambition. HES data will be presented independently of existing data flows within a bespoke dashboard as well as to supplement current reports/dashboards, for example using HES to calculate a national readmission rate to be presented on a locally fed readmission report. \n\nAs well as within the BI tool, HES data will be used by the BI team for bespoke analytics and reporting. This will include analysis on behalf of individual CCGs who have requested a deep dive, for a particular area and want to understand how they compare to other areas. It will also help support whole provider and health economy analysis where service re-configurations are being proposed.",
+  "c95aec280fea": "CCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable.\n\nAnalysis of HES and DIDs data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data).\n\nMeasurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm.\n\nExamples of benefits achieved to date include:\na.\tNELCSU supported a major reconfiguration of cancer and cardiac services in North London. The detailed numbers to support the case for change were extracted from the raw HES data. This was a complex exercise, requiring clinical input to define the primary and secondary coding of the patient cohorts affected by the change. This would only be possible through using very granular data which covers whole hospital activity (rather than for our customer CCGs). The rigour of the work helped with forming realistic planning assumptions and obtaining clinical and provider buy in for changes.\nb.\tNELCSU are currently supporting NHS England with work identifying the highest and lowest referrers within London by CCG and by GP Practices within each CCG. This work requires whole London data and as it adopts age and sex standardisation needs data to a very granular level. We have also applied certain filters that improve the accuracy of the benchmarking from detailed analysis of the data. This project is currently supporting NHS England in a London-wide demand management programme which aims to ease the pressure on acute hospitals by targeting those CCGs and practices with abnormally referral rates.",
+  "e091e348fc87": "The North and East London Commissioning Support Unit (NELCSU) will use the Hospital Episode Statistics (HES) and Diagnostic Imaging Data (DIDs) to provide support to Clinical Commissioning Groups (CCGs), other commissioning bodies and local authorities working with NELCSU to meet their statutory duties under the Health & Social Care Act 2012, and to support NHS health economy wide transformation projects.\n\nThe full, national set of HES and DIDs data allows complex and detailed modelling and benchmarking of activity and diagnostic interventions (numbers and rates), essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care and use of diagnostic services. This will especially support benchmarking work for CCGs, other commissioning clients and local authorities taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data. CCGs only receive local commissioning flows of data, so analysis undertaken on national data provides significant added value. DIDs data, for example, is published at a high level of aggregation and is provider not population focussed and is not part of commissioning data flows. These data sources will allow CCGs, other commissioning organisations and local authorities to benchmark and highlight areas of variation so that best practice can be identified in similar health economies anywhere in England.\n\nThe data purpose relates to the need for national data for comparative analysis,  benchmarking and forecasting, and this requirement for the CSU has specified support from NHS England. Having a long time trend also provides valuable longer term context when looking at health populations (e.g. health needs analysis, health economics) and service transformation. As the NHS evolves, there is a greater emphasis on CCGs forming part of larger collaborations called Sustainability and Transformation Partnerships (STPs), and NELCSU wants to accelerate this way of working to more of the country, through partnerships of care providers and commissioners in an area (STPs). Some areas are now ready to go further and more fully integrate their services and funding, and NELCUS will back them in doing so (Accountable Care Systems). Working together with patients and the public, NHS commissioners and providers, as well as local authorities and other providers of health and care services, they will gain new powers and freedoms to plan how best to provide care, while taking on new responsibilities for improving the health and wellbeing of the population they cover.  \n\nThe pseudonymised record level HES and DIDs data is interrogated only by approved NELCSU substantively employed analysts to provide benchmarking and comparative information to NELCSU clients and NHS health economy wide transformation projects that require detailed hospital level data. The outputs provided to customers will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "e0e37b5eaf64": "CCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable.\nAccess to HES data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data).\nMeasurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm.",
+  "e34672cf0fff": "CCGs and Local Authorities (Public Health teams) have joint statutory duties under the Health and Social Care Act 2012 to plan and commission services and jointly assess the needs of their patients and populations, to ensure that health improvements and better outcomes are measurable, identifiable and attainable.\n\nAnalysis of HES and DIDs data helps these organisations achieve this by providing the greatest scope to evaluate outcomes of care and improvement in their health services against peer groups and national achievement – providing a more extensive and complete base of knowledge for decision making than data on their own patients alone (SUS data).\n\nMeasurable benefits can occur, for example, through gradual improvement in outcome over a number of years, to more immediate commissioning new services where a gap is identified, or de-commissioning failing services by identifying lower outcomes than is acceptable, compared to the norm.\n\nExample of benefits anticipated in the future period:\n\nAs accredited Rightcare partners, Commissioning Support Units expect to support CCGs with support and guidance on realising the benefits of the commissioning for value packs published by NHS England. This could involve further deep dives into areas identified in the packs or further benchmarking in areas of interest. \n\nCSUs expect to be on the framework for provision of analytics support to Integrated Care Systems (ICSs). CSUs expect this support will involve the application of advanced analytics to ICS geographies to understand issues better and identify (through benchmarking) areas of opportunity or sub-optimal outcomes. This benchmarking requires detailed whole country data. \n\nCSUs teams have GIS mapping and econometric expertise and may want to apply this to the HES data to the benefits of the CCGs (or other commissioning bodies, or Local Authorities). One example of this work is supplied in the “yielded benefits” section below where regression analysis of A&E data (controlling for factors such as age, sex and deprivation) for a hospital catchment area identified some important drivers of A&E activity that could be used to target interventions for specific population groupings.",
+  "e93924cc6bcc": "The HES data will only be used by North and East London Commissioning Support Unit (NELCSU) to provide support to Clinical Commissioning Groups (CCGs) and other commissioning bodies working with NELCSU to meet their statutory duties under the Health & Social Care Act 2012 and NHS health economy wide transformation projects that require detailed hospital level data.\n\nThe pseudonymised record level HES data is interrogated only by approved NELCSU substantively employed analysts to provide benchmarking and comparative information to NELCSU clients and NHS health economy wide transformation projects that require detailed hospital level data.\n\nThe full, national set of HES data allows complex and detailed modelling and benchmarking of activity, essential to successful commissioning of services and contract monitoring, including analysing relationships and influences between A&E, Inpatient and outpatient care. This will especially support benchmarking work for CCG clients taking part in health economy wide transformation projects that require detailed and comprehensive hospital level data (for example from local SUS data feeds the applicant only receives data for their CCG’s registered population, which does not allow whole trust activity to be considered) and allow CCGs to benchmark and identify best practice in similar health economies anywhere in England.\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "f8601a4b6dc3": "Some of the yielded benefits of HES data to date are:\n\n1)  Assisting NHS England in London, at identifying the rates of GP referrals to hospitals across all the CCGs in London. \n\nThere is a lot of variation, both between CCGs and between GP Practices within a CCG area and NELCSU have compared these in a way that accounts for these areas very different populations (in statistical terms this is known as “standardisation”. \nThe NHS is experiencing significant pressure and unprecedented levels of demand. The average annual growth in GP referrals between 2009/10 and 2014/15 was 3.9%. Growth in 2015/16 compared to 2014/15 was 5.4%. For the same period, other referrals, which include consultant to consultant referrals grew by 6.7%. There is clearly a significant need for the NHS to manage the demand that flows into hospitals by ensuring that only the most appropriate cases are referred for face to face consultation. There is also evidence to suggest that a referral to hospital is not always necessary.\nNHS England have published a demand management “Good Practice Guide” covering areas such as “peer review of referrals”, “shared decision making” and “advice and guidance”. The results of this analysis help identify which geographies to target, inform the conversation around appropriate areas to change and help monitor the impact of any implemented demand management schemes.\n\n2) Assisting a CCG in the South of England implement improvements in the area of diabetes and respiratory disease. \nThe improvements will involve the health system – GPs, hospitals, community services – working more effectively together (or in the jargon working in a more “integrated” way). HES data has been used to identify variation in “outcomes” to identify potential areas to target. For example HES data was used to identify the numbers of patients admitted with complications of diabetes, as these are an indicator that a patient’s condition has deteriorated, something that could possibly be counteracted with better management of a patient’s condition within primary care.  Are these numbers high relative to other areas? How much do they vary by GP practice? What is the real reason behind this variation?\nIntegrated care schemes internationally have evidenced significant benefits in improving patient outcomes, experience of care and reducing costs to the health system. This project is the first stage of a pilot, and will be extended out to a wider geography and to other clinical areas.\n\n3) Identifying potential influences on high A&E attendance rates. \n\nWithin London, most A&E departments are under huge pressure from rising A&E demand. However, the rate of increase does vary significantly by geography and by patient group. By using national HES data NHS North and East London Commissioning Support Unit were able to undertake statistical modelling of most of the known drivers of A&E attendance and try to understand the relative importance of each. For example, patient ethnicity appears to be one influence. Those ethnic groups with high attendance rates can be targeted through communication campaigns or through their GPs to encourage use of alternative services where possible. The better that the reasons for growing A&E demand can be understood, the more effective commissioners can be in tackling the root cause of the issue."
+ }
+}

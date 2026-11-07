@@ -1,0 +1,140 @@
+{
+ "base_reference": "DARS-NIC-24810-Q6T3B",
+ "versions": [
+  {
+   "reference": "DARS-NIC-24810-Q6T3B-v0.12",
+   "version": "0.12",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "",
+   "listed": [
+    "2017-06-01",
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "objective": "a4b336aa04a7",
+     "activities": "26e41d6b49a9",
+     "expected_output": "45ed4006311f",
+     "expected_benefits": "75acd000608a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-06-01",
+      "2017-09-01"
+     ],
+     "rows": 9
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-24810-Q6T3B-v2.2",
+   "version": "2.2",
+   "organisation": "UNIVERSITY OF BIRMINGHAM",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "a4b336aa04a7",
+     "activities": "43d0b40745e8",
+     "expected_output": "150dcbe71768",
+     "expected_benefits": "75acd000608a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Mortality Data from the Office of National Statistics",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "150dcbe71768": "A report will be submitted to the funders (NIHR) in January 2018.  This will provide a narrative on the methodology, the results, the conclusions and recommendations.  If the results indicate that the current indices or uses of indices are not sufficient or could be improved upon, the report will contain evidence-based recommendations for a new index including what factors at what stage of diagnosis indicate levels of risk of future hospitalisation due to COPD and recommendations for earlier treatments to reduce future hospitalisation rates and improve outcomes.\n\nThe findings of the overall study and the results of interim analyses during the study period will also be and, in the case of some interim findings, have been be disseminated via academic peer-reviewed papers and conference presentations.  Publications and presentations may continue beyond the current study period. \n \nOutputs will present group-level data only (e.g. proportion of patients with specified characteristics/outcomes). All data included in outputs are aggregated with small numbers suppressed in line with the HES Analysis Guide. The funder’s report will be solely for the purposes of the funding body. All academic publications will be ‘open-access’ (available to members of the public without cost) and will be available on the websites of the publishing journal as well as the study website (www.birmingham.ac.uk/bliss).\n\nAll outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.",
+  "26e41d6b49a9": "Patients were recruited to the study between June 2012 and June 2014. Following their baseline study assessment, patients were sent six-monthly postal questionnaires until the date of the follow-up study assessment (approx. 2.5 years after baseline). The research team also disseminated newsletters to all patients, providing study updates and notifying patients of relevant information.\n\nDue to the dissemination of postal questionnaires and other study correspondence, the team were able to maintain current contact details for study participants, often receiving returned correspondence or contact from patients’ relatives if they had moved address or died. If patients had moved address, the study team contacted patients’ GP practices to obtain new contact details. \n\nAt the time of recruitment, the participants were provided with the Patient Information Leaflet and asked to sign the Consent form.  All participants were written to in the summer of 2014, giving further information about the sharing of data with HSCIC (now NHS Digital) for linkage purposes and offering the opportunity for participants to object.  This information and clarification of the intention to seek mortality data via the HSCIC was also published on the BLISS study’s website in the section: ‘Information for patients and the public’.  \n\nThe data requested via NHS Digital will be downloaded to a University of Birmingham computer, saving it in a restricted area of the University server that is only accessible to specified members of the research team. Data within this area of the server will be backed up internally (not on to tape), so that data can be fully deleted within 2 weeks of a deletion request from NHS Digital. All data will be processed and stored at the University of Birmingham and only accessed by substantive employees of University of Birmingham.\n\nThe Birmingham COPD Cohort study started in 2012, with patient-level data being obtained from various sources (patient study assessments, patient self-completion questionnaires and general practice clinical systems) between study commencement and the current time. Baseline and 3 year follow-up study assessments are conducted by trained research assistants, with patients returning six-monthly self-completion questionnaire via post between these time points. Routine data (e.g. comorbidities and prior test results) was extracted from general practice clinical systems, covered by the patient informed consent obtained at baseline and signed Data Sharing Agreements with each participating general practice.\n\nThe data collected from these sources are stored in pseudonymised form and linked using common participant-specific study ID numbers.  Participant identifiers linked to the study ID numbers are stored separately and held only for administrative purposes and for use in facilitating linkage to other data.\n\n2,291 participants have consented to participate in the COPD Cohort Study and HES data  plus linked ONS mortality data (supplied under section 42(4) of the Statistics and Registration Service Act 2007) are requested in relation to these participants. The University of Birmingham will send to NHS Digital NHS Number, Surname, Forename, Date of Birth, Postcode, and sex plus a unique study ID for use in linking the data.  Pseudonymised data will be returned to the University of Birmingham with the study ID as the only identifier.  NHS Digital will supply month and year of death but not full date of death to maintain effective pseudonymisation.\n\nThe supplementary HES and ONS data will be merged into the existing pseudonymised dataset using study ID. It will not be re-identified and will be stored separately from the participant identifiers. \n\nLinking the stated data sources will allow the research team to explore health care usage and prognosis of COPD patients.  The analyses will use the pseudonymised data only.\n\nPrognostic indices are used in various diseases, such as heart disease, to identify patients at risk of developing a negative health outcome e.g. heart attack.  The ability to assess patients’ level of risk is then used to inform the shared decision making process as well as treatment decisions, to optimise patient outcomes.  Several multidimensional prognostic indices (PI) for COPD have been developed, mostly based on patients with moderate/severe COPD.  PIs have been developed to predict a range of outcomes including mortality, hospitalisations and exacerbations.  The Birmingham COPD Cohort study will examine the performance of these indices in a primary care COPD population, and the study team needs HES data to generate these indices.  Prognostic indices are based on various components (e.g. the ADO index is based on Age Dyspnoea Obstruction; the DOSE index is based on Dyspnoea, Obstruction Smoking Exacerbations; the HADO-AH index is based on Health Activity Dyspnoea Obstruction Age Hospitalisations, etc.)  While the study team has collected much of the data from the study patients, some of the data (e.g. hospitalisations, exacerbations) are only accurately held by HES.  For example, although study patients are asked about hospitalisations in study postal questionnaires, not all patients reply and self-reported is subject to recall bias (memory).  HES data should be complete and reliable.  The study team is examining the performance of the prognostic indices to determine if they accurately predict primary care patients’ risk of events (e.g. hospitalisation or death).  If indices are not found to be accurate, the team will modify the indices or develop a new prognostic index to more accurately predict future events.",
+  "43d0b40745e8": "Patients were recruited to the study between June 2012 and June 2014. Following their baseline study assessment, patients were sent six-monthly postal questionnaires until the date of the follow-up study assessment (approx. 2.5 years after baseline). The research team also disseminated newsletters to all patients, providing study updates and notifying patients of relevant information.\n\nDue to the dissemination of postal questionnaires and other study correspondence, the team were able to maintain current contact details for study participants, often receiving returned correspondence or contact from patients’ relatives if they had moved address or died. If patients had moved address, the study team contacted patients’ GP practices to obtain new contact details. \n\nAt the time of recruitment, the participants were provided with the Patient Information Leaflet and asked to sign the Consent form.  All participants were written to in the summer of 2014, giving further information about the sharing of data with HSCIC (now NHS Digital) for linkage purposes and offering the opportunity for participants to object.  This information and clarification of the intention to seek mortality data via the HSCIC was also published on the BLISS study’s website in the section: ‘Information for patients and the public’.  \n\nThe data requested via NHS Digital will be downloaded to a University of Birmingham computer, saving it in a restricted area of the University server that is only accessible to specified members of the research team. Data within this area of the server will be backed up internally (not on to tape), so that data can be fully deleted within 2 weeks of a deletion request from NHS Digital. All data will be processed and stored at the University of Birmingham and only accessed by substantive employees of University of Birmingham.\n\nThe Birmingham COPD Cohort study started in 2012, with patient-level data being obtained from various sources (patient study assessments, patient self-completion questionnaires and general practice clinical systems) between study commencement and the current time. Baseline and 3 year follow-up study assessments are conducted by trained research assistants, with patients returning six-monthly self-completion questionnaire via post between these time points. Routine data (e.g. comorbidities and prior test results) was extracted from general practice clinical systems, covered by the patient informed consent obtained at baseline and signed Data Sharing Agreements with each participating general practice.\n\nThe data collected from these sources are stored in pseudonymised form and linked using common participant-specific study ID numbers.  Participant identifiers linked to the study ID numbers are stored separately and held only for administrative purposes and for use in facilitating linkage to other data.\n\n2,291 participants have consented to participate in the COPD Cohort Study and HES data  plus linked ONS mortality data (supplied under section 42(4) of the Statistics and Registration Service Act 2007) are requested in relation to these participants. The University of Birmingham will send to NHS Digital NHS Number, Surname, Forename, Date of Birth, Postcode, and sex plus a unique study ID for use in linking the data.  Pseudonymised data will be returned to the University of Birmingham with the study ID as the only identifier.  NHS Digital will supply month and year of death but not full date of death to maintain effective pseudonymisation.\n\nThe supplementary HES and ONS data will be merged into the existing pseudonymised dataset using study ID. It will not be re-identified and will be stored separately from the participant identifiers. \n\nLinking the stated data sources will allow the research team to explore health care usage and prognosis of COPD patients.  The analyses will use the pseudonymised data only.\n\nPrognostic indices are used in various diseases, such as heart disease, to identify patients at risk of developing a negative health outcome e.g. heart attack.  The ability to assess patients’ level of risk is then used to inform the shared decision making process as well as treatment decisions, to optimise patient outcomes.  Several multidimensional prognostic indices (PI) for COPD have been developed, mostly based on patients with moderate/severe COPD.  PIs have been developed to predict a range of outcomes including mortality, hospitalisations and exacerbations.  The Birmingham COPD Cohort study will examine the performance of these indices in a primary care COPD population, and the study team needs HES data to generate these indices.  Prognostic indices are based on various components (e.g. the ADO index is based on Age Dyspnoea Obstruction; the DOSE index is based on Dyspnoea, Obstruction Smoking Exacerbations; the HADO-AH index is based on Health Activity Dyspnoea Obstruction Age Hospitalisations, etc.)  While the study team has collected much of the data from the study patients, some of the data (e.g. hospitalisations, exacerbations) are only accurately held by HES.  For example, although study patients are asked about hospitalisations in study postal questionnaires, not all patients reply and self-reported is subject to recall bias (memory).  HES data should be complete and reliable.  The study team is examining the performance of the prognostic indices to determine if they accurately predict primary care patients’ risk of events (e.g. hospitalisation or death).  If indices are not found to be accurate, the team will modify the indices or develop a new prognostic index to more accurately predict future events.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "45ed4006311f": "A report will be submitted to the funders (NIHR) in January 2018.  This will provide a narrative on the methodology, the results, the conclusions and recommendations.  If the results indicate that the current indices or uses of indices are not sufficient or could be improved upon, the report will contain evidence-based recommendations for a new index including what factors at what stage of diagnosis indicate levels of risk of future hospitalisation due to COPD and recommendations for earlier treatments to reduce future hospitalisation rates and improve outcomes.\n\nThe findings of the overall study and the results of interim analyses during the study period will also be and, in the case of some interim findings, have been be disseminated via academic peer-reviewed papers and conference presentations.  Publications and presentations may continue beyond the current study period. \n \nOutputs will present group-level data only (e.g. proportion of patients with specified characteristics/outcomes). All data included in outputs are aggregated with small numbers suppressed in line with the HES Analysis Guide. The funder’s report will be solely for the purposes of the funding body. All academic publications will be ‘open-access’ (available to members of the public without cost) and will be available on the websites of the publishing journal as well as the study website (www.birmingham.ac.uk/bliss).",
+  "75acd000608a": "The funder is an NHS organisation that rigorously peer reviewed the aims of the research and was satisfied that there is a benefit for this work within the health and social care sector. \n\nPrognostic indices are useful for communicating with patients and for planning health services. The existing prognostic indices are based on patients with more advanced COPD but the BLISS research team will use the data collected from this cohort study to examine the validity of these indices in a primary care COPD population, including patients with very early disease. If the current indices do not accurately predict the risk of exacerbations, hospitalisations or death amongst primary care COPD patients, the result could be inappropriate patient care decisions and treatment. More accurate prognostic estimation will also be of use to health service planners and policy makers in predicting the future need for services. Based on the study findings, the team will modify or develop a more appropriate index for use in primary care if required, that would be published in academic peer-reviewed journals and presented at relevant conferences during 2017/18. \n\nSuch outputs will address an important evidence gap within respiratory health, leading to improved patient outcomes (e.g. symptoms, hospitalisation rates) and reduced costs to the NHS.\n\nThe planned disseminations are expected to lead to evaluation of the findings by NIHR and other interested parties involved in setting national guidelines such as NICE.  The BLISS study team hopes its recommendations for new/improved indices will be implemented in primary care within 5 years of study completion.  This time frame reflects the fact that the outputs from this study will contribute to a body of evidence from multiple research studies that provide cumulative evidence forming a consensus on which policy and best practice guidelines are based.\n\nPatients will benefit because their COPD will be recognised earlier and treatment options will be available to them.  Better treatment decisions will be possible (therefore potentially improving their quality of life and survival) as a result of both the new severity score and the possibility of two new interventions in the future (exercise and occupational assessment) being explored separately within this programme of work.  They may also be able to return to, or remain longer in productive work.",
+  "a4b336aa04a7": "The Birmingham COPD Cohort study is a three-year longitudinal study of primary care COPD patients; a substantial work package within a NIHR-funded research programme grant (ref: RP-PG-0109-10061, 01/01/2011 – 31/12/2016). Chronic Obstructive Pulmonary Disease (COPD) is an important health problem, accounting for significant health service and societal costs.  However the natural history and factors affecting prognosis are poorly understood and interventions for early disease are limited. There is also considerable under-diagnosis, resulting in potential unmet need. \n\nA better understanding of factors that determine prognosis, particularly those that are modifiable, is essential for informing future interventions. In addition, a better understanding of prognosis helps inform patient management decisions, and facilitates doctor patient relationships.  A number of prognostic indices have been developed and are currently used, which typically aim to predict either mortality or hospitalisation. The BLISS research team wishes to process data relating to hospitalisation and mortality in order to generate the prognostic indices for the COPD Cohort Study participants.  These data are unavailable from other sources and will be more accurate and complete than self-reported information. \n\nThe Birmingham COPD Cohort study uses all-cause hospitalisation within three years as the primary outcome, with secondary outcomes including number and duration of hospitalisations, respiratory hospitalisations, healthcare costs and mortality.\n\nCOPD patients are at high risk of hospitalisations due to exacerbations, when their symptoms worsen and cannot be adequately controlled at home. However, due to the number of comorbidities common in this patient group (e.g. heart disease) and the complex interactions between them, the cause of hospitalisation is often miscoded. If the data requested were limited to admissions coded as being respiratory-related, a substantial proportion of admissions would be missed, therefore underrepresenting the burden on hospitals associated with COPD. Only age-appropriate variables (e.g. not paediatric or maternity) are requested, hence adhering to data minimisation. The data fields requested were critically reviewed in the initial application leading to a reduction in the number of fields requested.\n\nFor the above reasons, the study protocol was written with all-cause hospitalisations as the primary outcome. The study is funded by the NIHR to answer specific research questions; primarily the prediction of all-cause hospitalisation within this patient group. A power calculation was used to determine the number of recruited patients needed to answer the question, and result in statistically significant findings. Now the study is nearing completion the primary outcome cannot be changed, as this would contravene the study protocol and the funding agreement with the NIHR.\n\nThe study is also funded to collect and analyse secondary outcomes including A&E admissions and outpatient appointments, to assess how patients’ lung health affects healthcare utilisation overall.\n\nThe above explains why A&E attendance, outpatients, admitted patient care and critical care products are requested."
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "base_reference": "DARS-NIC-374630-G7W3K",
+ "versions": [
+  {
+   "reference": "DARS-NIC-374630-G7W3K",
+   "version": "",
+   "organisation": "Leicester Royal Infirmary NHS Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "24aafafb1b04"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "24aafafb1b04": "Objective for processing: \nTo identify if there is a link between deprivation and rate of wrist fracture and type of treatment for the fracture. This will be calculated per hospital region. Data at hospital level only will be published in a PhD thesis and peer reviewed journals.  \nThe main benefits of this work will be twofold:\n1) Distal radius fracture is a very common injury with a significant burden on healthcare resources. The 2 main surgical treatment methods are volar locking plates (VLP) and k-wires. Over the past 20 years volar locking plates (VLP) have become increasingly popular in the treatment of displaced distal radius fractures. K-wire fixation is quicker to perform and less costly than VLPs which cost over £700 more per patient. Recent evidence in large comparative randomised trials has failed to demonstrate that VLP treatment is superior to k-wires.\nPrevious work suggests there is wide variation across hospital regions in the use of the more expensive VLPs despite no strong evidence that they improve patient outcome. This work will investigate this in much more detail and calculate the variation across hospital regions and identify regions with a significantly higher rate of VLP use. This information can be used by healthcare providers to potentially produce large cost savings by encouraging k-wire use.\n2) A local audit, previously undertaken by the Trust for the whole of Leicestershire, has shown that deprivation is associated with wrist fracture with deprived patients having a significantly higher rate of fracture. This is especially true for elderly patients. With the HES data the Trust will investigate if this is also true nationwide and across hospital regions. Rates of fracture per age, gender and deprivation IMD quintile can be produced per region. This will allow identification of patient groups across the country who are at highest risk of wrist fracture. It is known that patients who suffer a wrist fracture are at high risk of subsequently suffering a hip fracture. This is a devastating injury requiring hospital admission, surgery and has a high mortality and associated financial cost. This work will allow preventative strategies to be targeted at high risk patients to prevent wrist fracture and therefore future hip fracture and reduce morbidity, mortality and healthcare costs.\nFollowing on from this work and the identification of patient groups at high risk of fracture the Trust intends to submit a grant application for funding to carry out a study where strategies and therapies to prevent fracture be delivered directly to those at risk patients. Access to HSCIC data for this follow-on work would be subject to a future application to HSCIC.\n\nProcessing activities: \nWhen the data is received data will be checked against the Trust’s manually recorded local database for the same period to identify any gaps in the data or obvious outliers suggesting inaccuracy.\nThe database does include patient-identifiable and record-level data. However, no attempt will be made to link the HES data to the data already held within this database.\nA table will then be producing summarising the data per region including patient demographics, number of fractures, number who underwent surgery and type of surgery.\nInitial analysis will involve calculating crude rates of fracture and rates of fracture fixation to identify any obvious discrepancies or focuses for further investigation.  Using statistical techniques, such as poisson regression, variation in fracture frequency and rate of surgical intervention per hospital region will be analysed with adjustment for age, gender, and deprivation IMD score. Poisson regression assesses the influence of variables such as age, gender and IMD on the number of events which occur i.e. fractures. Further analysis will investigate the relationship between deprivation and rate of fracture and rate and type of surgical intervention per hospital region and nationally.\n\nSpecific outputs expected, including target date: \nThe outputs below will be reported at national and hospital region level only. Data at hospital level only will be published in a PhD thesis and peer reviewed journals. The Target date for all is September 2018\n•\tRate of fracture, rate of surgical intervention including type of surgery(per gender, age and deprivation IMD band) - nationwide and per hospital region\n•\tOverall summary and comparison of fracture patient demographics and deprivation per region. \n•\tVariation in rate of surgical intervention and type of surgery across hospital regions (including sub analysis of age, gender and deprivation) \n•\tRelationship between deprivation and rate of fracture and rate of surgical intervention(including type of surgery) – nationwide and hospital region\nOutputs will include only aggregated data. Small numbers will be supressed in line with the HES analysis guide\n\nExpected measurable benefits to health and/or social care including target date: \nThe aim is for this work to be reported in a PhD thesis in 2018 with presentation at national and international meetings in late 2016/2017. This research has benefits to clinicians of many different specialties including general practice, A&E, geriatricians, rheumatologists and orthopaedic and plastic surgeons who are involved in the treatment and also the prevention of wrist and other fractures.\nThe evidence regarding variation in surgical techniques for treating distal radius fractures will be presented to local, national and international audiences of surgeons and clinicians involved in the treatment of these fractures at meetings at which clinical directors and health care commissioners will be present. Possible cost savings depending on techniques used will be discussed and the evidence can then be used by local clinical management groups to potentially alter practise and reduce cost. The results will be published in widely read internationally respected publications read by those with responsibility for surgical treatment of distal radius fractures and responsibility for health care budgets.\nThe work identifying those at risk of fracture is applicable to those in primary care and many specialties in secondary care such as general medicine, emergency medicine, rheumatology, elderly medicine and surgeons. This evidence will be presented directly to those clinicians and specialties involved with primary and secondary prevention of fractures at large multi-disciplinary conferences such as those organised by the national osteoporosis society and bone research society. This work would be published in very widely read broad specialty journals such as the BMJ or Lancet.            \nRecommendations of those at high risk and in need of investigation and potential intervention would be produced. For primary care doctors and those involved with care of the elderly the identification of additional risk factors and further understanding of those at high risk of fracture can enable primary prevention to be initiated to appropriate patients. For those presenting to secondary care with a fracture increased awareness of those at risk amongst physicians, emergency medicine clinicians and surgeons allows secondary prevention therapies to be initiated or appropriate referral for further assessment to be made.\nIt is expected that this evidence may lead to changes in clinical guidelines for prevention of further fractures."
+ }
+}

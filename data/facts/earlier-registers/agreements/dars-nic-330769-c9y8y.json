@@ -1,0 +1,165 @@
+{
+ "base_reference": "DARS-NIC-330769-C9Y8Y",
+ "versions": [
+  {
+   "reference": "DARS-NIC-330769-C9Y8Y",
+   "version": "",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "d12bfd35055d"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES A&E",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES ONS Mortality",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One off",
+     "periods": [
+      "2015-07-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-330769-C9Y8Y-v5.3",
+   "version": "5.3",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2019-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-07-01"
+     ],
+     "objective": "6474a0af2d44",
+     "activities": "b7b3c150cf68",
+     "expected_output": "9c7b72dc13a8",
+     "expected_benefits": "cf831af58162",
+     "yielded_benefits": "d81cf8387f43"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 8
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 11
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "6474a0af2d44": "Due to an error by one of the GP computer system suppliers (TPP), NHS Digital did not receive updated details on patients who opted out after 1 April 2016 in GP practices running SystmOne (run by TPP). This means that information may have been incorrectly included when NHS Digital provided information to approved organisations, up until 27th May 2018.\n\nThis amendment is to re-supply the data previously held under this agreement. The applicant organisation has destroyed all data previously held under this agreement, including the affected data, and supplied a data destruction certificate.\n****************************\nImproving the transition of young people from child-centred to adult-centred health care systems has been a health policy priority for successive governments. There is clear evidence that poor transitions result in poor health outcomes, particularly related to drop-out from healthcare at a key time in chronic disease management. Conversely, there is now reasonable quality evidence that improving transitions improves outcomes in diseases such as diabetes and chronic renal disease/transplantation. Such evidence has resulted in a decade of clear guidance to health services on the importance of providing good transitional care in England. Yet despite this, and subsequent Department of Health (DH) initiatives, such as the Transitions Champions programme, there appears to have been little change in the majority of health services in England. It is anecdotally believed that the majority of young people with long-standing conditions in England do not receive appropriate transitional care, although routine data on transitional care are not collected. \n\nThe objective for processing the data is to investigate, using a contemporary UK sample, the effect of transitioning from paediatric to adult care on indicators of illness management relating primarily to health service usage. University College London (UCL) will also investigate how specific features of the transition to adult services are associated with these outcomes to contribute to the evidence-base regarding the features of successful transitions. This research is limited to the following three purposes:\n\n1) Examine the health impact of transitions from paediatric to adult care.\nThis will help determine the extent to which current transition arrangements are fit for purpose. This entails examining whether transition itself is associated with detrimental health-related outcomes such as changes in planned health service use, increases use of inpatient, A&E and critical care services and changes in the frequency of missed outpatient appointments.\n\n2) Guide healthcare policy to improve health transitions.\nThis research will identify factors associated with good transition outcomes to guide policy efforts to improve healthcare transitions. First, UCL will examine how age of transition is associated with transition-related outcomes. This may influence guidance regarding appropriate age of transition. Secondly, UCL will examine the impact of the frequency of outpatient appointments in paediatric care on adult outcomes. Finally, UCL will examine differences in transition outcomes across sentinel health conditions and specialties: diabetes, renal disease and gastroenterology. This will identify areas requiring improvement in transition approaches.\n\n3) Contribute to the development of a measurable outcome metric for transition that could be included in the NHS outcomes framework, to drive improved attention to transition by providers.\nThe research will constitute a trial of an approach to measuring transition outcomes using routine health data. Health outcomes which are found to be associated with health transitions could form the basis of quality measures for transition across regions, specialties or health authorities.",
+  "9c7b72dc13a8": "Key outputs will be produced based on the data analyses:\n1) Briefing reports targeted at health practitioners (particularly DH), who are funding the research) which summarise the key findings and suggest policy measures for maximizing health outcomes resulting from service transition. Policy guidance may include the development of measures for monitoring transition care and outcomes especially in children and adolescent.\n2) Peer-reviewed publication(s) designed to disseminate the findings from the health transitions research and from the quality measures for children’s health services.\n3) Presentations to conferences will also be prepared. \n\nThe output will presented in following format for all of the above: \n• Descriptive statistics for disease cohorts in the analyses will presented. The cohorts will be combined on predictors selected from inpatient appointments pre- and post-transition, A&E and critical care appointments pre- and post-transition. Means and Frequency distribution will be provided on only aggregated level data with small numbers suppressed in line with HES analysis guide. \n• Regression co-efficient showing association or causal pathway for the outcomes and predictors. \n\nThe outputs will focused to explain the hypothesis to the DH policy makers, clinicians and academics. No data will be shared with third parties. The original target date of finishing the project was December, 2018, however due to restrictions on the processing of data as a result of being notified of the Type 2 Patient Opt Out error in TPP GP Practises. Therefore, the conclusion to the project has been pushed to March 2019.\n\nAll outputs will be aggregated with small numbers suppressed in line with the HES Analysis Guide. No data will be linked to record patient level data, and record-level data will not be removed from the secure servers.",
+  "b7b3c150cf68": "Data will be stored in and accessed through UCL’s ‘Information Data Safe Haven’ (IDHS) which ensures the appropriate and safe handling of sensitive data (see: http://www.ucl.ac.uk/isd/itforslms/services/handling-sens-data/tech-soln). Only authorised UCL staff members will have access to the data and it will not be accessible by any third parties, nor will it be accessed outside the UK. \n\nData analyses will be conducted in Stata to extract summary statistics. UCL will determine age of transition with reference to paediatric and adult codes within the data. UCL will also define two additional characteristics of transition for each patient: the delay in transition (the gap between last paediatric code and first adult code), and retention in adult services (including changes in regular, planned outpatient appointments). The analysis is limited to comparing outcomes pre and post transition, and examining the effect of age of outcome, delays in transition to adult services and retention in adult services on these outcomes. UCL will conduct this analyses across conditions, as well as in three sentinel conditions: renal pathologies, diabetes and gastroentological diseases.\n\nOutcomes are limited to use of inpatient care, A&E attendances, frequency of hospital admissions, critical care admissions,  and mortality.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "cf831af58162": "UCL's previous work using HES data was useful to provide proof of concept of their transition analyses; and they were able to identify disease cohorts and operationalise definitions of successful transition within the cohorts. UCL provided a briefing paper for the Dept of Health (DH) on these emerging findings, plus presented data at conferences.\n\nUCL researchers found overall system performance on transition was poor, with high dropout and lack of engagement in adult services was common. Furthermore, there were substantial inequalities across social groups and region. Evidence was found linking poor transition to poor outcomes, namely within diabetes; poor transitions are associated with higher risk of death in 5 years post-transition as well as higher A&E use and emergency admissions.\n\nUCL's research suggests several pathways for achieving improved transition. Firstly, targeting under-served groups based on socio-economic status, ethnicity and area is critical in more equitable transition services. Second, research suggests that a general delaying of transition age could improve transition outcomes. They also provide some support for the use of age-appropriate services, but the enactment of this model would need to be handled well to avoid additional difficulties in transitioning among services. \n\nHowever, UCL also identified several limitations in their work, particularly relating to the definition of disease cohorts. UCL researchers use ICD10 admission codes to define disease cohorts, and then examine transition from paediatric to adult outpatient activity. Therefore currently, cohorts may under-estimate the proportions who transition; as these could only include those with ICD10 codes from inpatient admissions >age 10 years. Further researchers  are unable to examine the transition of cohorts younger than those 10-19 years in 2004/05, limiting the generalisability of their findings. Additionally, UCL wish to look at wider quality markers in addition to (as well as) transition, and examining younger cohorts will be important for this. \n\nTherefore, UCL aim that this project and previous work will add towards the expected measurable benefits on health and social care to include:\n\n1)\tImproved transition-related health policy\nThis research will guide Department of Health policy on the need, as well as specific policy measures, for improving transitions from paediatric care. This research will inform policy recommendations regarding appropriate age of transition and measures for reducing upheaval to service provision during the transition to adult services including frequency of appointments in late paediatric care and improving retention in adult services.\n\n2)\tDeveloping quality measures for children’s health services and transition\nThe research will investigate the feasibility and value of measuring key aspect of quality gaps as identified from the recent RCPCH (oyal College of Paediatrics and Child Health) research. These will help identify health services where improved transition is justified and may contribute to the development of standards for transition quality.\n\nMeasurable benefits resulting from this research would relate to improved health outcomes and healthcare (including, for example, retainment in adult services, fewer missed appointments and less usage of emergency services) stemming from improved transition services.",
+  "d12bfd35055d": "Objective for processing: Improving the transition of young people from child-centred to adult-centred health care systems has been a health policy priority for successive governments. There is clear evidence that poor transitions result in poor health outcomes, particularly related to drop-out from healthcare at a key time in chronic disease management. Conversely, there is now reasonable quality evidence that improving transitions improves outcomes in diseases such as diabetes and chronic renal disease/transplantation. Such evidence has resulted in a decade of clear guidance to health services on the importance of providing good transitional care in England. Yet despite this, and subsequent DH initiatives, such as the Transitions Champions programme, there appears to have been little change in the majority of health services in England. It is anecdotally believed that the majority of young people with long-standing conditions in England do not receive appropriate transitional care, although routine data on transitional care are not collected. The objective for processing the data is to investigate, using a contemporary UK sample, the effect of transitioning from paediatric to adult care on indicators of illness management relating primarily to health service usage. UCL will also investigate how specific features of the transition to adult services are associated with these outcomes to contribute to the evidence-base regarding the features of successful transitions. This research is limited to the following three purposes: 1) Examine the health impact of transitions from paediatric to adult care. This will help determine the extent to which current transition arrangements are fit for purpose. This entails examining whether transition itself is associated with detrimental health-related outcomes such as changes in planned health service use, increases use of inpatient, A&E and critical care services and changes in the frequency of missed outpatient appointments. 2) Guide healthcare policy to improve health transitions. This research will identify factors associated with good transition outcomes to guide policy efforts to improve healthcare transitions. First, UCL will examine how age of transition is associated with transition-related outcomes. This may influence guidance regarding appropriate age of transition. Secondly, UCL will examine the impact of the frequency of outpatient appointments in paediatric care on adult outcomes. Finally, UCL will examine differences in transition outcomes across sentinel health conditions and specialties: diabetes, renal disease and gastroenterology. This will identify areas requiring improvement in transition approaches. 3) Contribute to the development of a measureable outcome metric for transition that could be included in the NHS outcomes framework, to drive improved attention to transition by providers. The research will constitute a trial of an approach to measuring transition outcomes using routine health data. Health outcomes which are found to be associated with health transitions could form the basis of quality measures for transition across regions, specialties or health authorities. Processing activities: Data will be stored in and accessed through UCL’s ‘Information Data Safe Haven’ (IDHS) which ensures the appropriate and safe handling of sensitive data (see: http://www.ucl.ac.uk/isd/itforslms/services/handling-sens-data/tech-soln). Only authorisd UCL staff members will have access to the data and it will not be accessible by any third parties, nor will it be accessed outside the UK. Data analyses will be conducted in Stata to extract summary statistics. UCL will determine age of transition with reference to paediatric and adult codes within the data. UCL will also define two additional characteristics of transition for each patient: the delay in transition (the gap between last paediatric code and first adult code), and retention in adult services (including changes in regular, planned outpatient appointments). The analysis is limited to comparing outcomes pre and post transition, and examining the effect of age of outcome, delays in transition to adult services and retention in adult services on these outcomes. UCL will conduct this analyses across conditions, as well as in three sentinel conditions: renal pathologies, diabetes and gastroentological diseases. Outcomes are limited to use of inpatient care, A&E attendances, frequency of hospital admissions, critical care admissions, and mortality. Specific outputs expected, including target date: Two key outputs will be produced based on the data analyses: Peer-reviewed publication(s) designed to disseminate the findings regarding the effect of transition from paediatric to adult care on subsequent service use including inpatient and A&E use, missed hospital appointments and changes in the frequency of healthcare appointments. Paedeatrics Journals, the Lancet and the Journal of Public Health planned to be targeted. They aim to publish this by the end 2016. These publications will target researchers and practitioners to stimulate debate and subsequent research regarding alternative transition models, evidence-based improvements to existing transition services and reducing the negative impacts of poor transition. The Department of Health, who are funding the research, will be sent briefing reports in mid-2016 (before they are published in peer review journals) summarising the key findings and suggesting policy measures for maximising health outcomes resulting from service transition. Policy guidance may include the development of measures for monitoring transition care and outcomes. Outputs will include aggregated data only and will be limited to: - Average age of transition overall and across sentinel health conditions - Frequency of inpatient appointments pre- and post-transition - Frequency of inpatient, A&E and critical care appointments pre- and post-transition - Frequency of missed appointments pre- and post-transition Due to the nature of the aggregated data in the outputs, there will be no cases of small numbers requiring suppression. Expected measurable benefits to health and/or social care including target date: 1) Improved transition-related health policy 2) This research will guide Department of Health policy on the need, as well as specific policy measures, for improving transitions from paediatric care. This research will inform policy recommendations regarding appropriate age of transition and measures for reducing upheaval to service provision during the transition to adult services including frequency of appointments in late paediatric care and improving retention in adult services. 3) The development of recommendations of quality indicators for health transition. 4) UCL will develop recommendations of indicators of high-quality transition (based on the outcomes studied within the research). With support from the Department of Health, these recommendations would help health services identify where improved transition is justified and may subsequently contribute to the development of standards for transition quality. Subsequent benefits resulting from this research would relate to improved health outcomes and healthcare (including, for example, retainment in adult services, fewer missed appointments and less usage of emergency services) stemming from improved transition services. Planned target date is December 2016.",
+  "d81cf8387f43": "UCL's previous work using HES data was useful to provide proof of concept of transition analyses; researchers were able to identify disease cohorts and operationalise definitions of successful transition within the cohorts. Overall system performance on transition was found to be poor, with high dropout and lack of engagement in adult services. Furthermore, there were substantial inequalities across social groups and region. Researchers found some evidence linking poor transition to poor outcomes, namely within diabetes; poor transitions are associated with higher risk of death in 5 years post-transition as well as higher A&E use and emergency admissions. The research also suggests several pathways for achieving improved transition. Firstly, targeting under-served groups based on socio-economic status, ethnicity and area is critical in more equitable transition services. Second, general delaying of transition age could improve transition outcomes. Findings also provide some support for the use of age-appropriate services, but the enactment of this model would need to be handled well to avoid additional difficulties in transitioning among services. \n\nUCL researchers provided a briefing paper for DH on these emerging findings, plus presented data at conferences. The Briefing report outlines the results from the analysis and background and is for the policy makers within DH. In addition, a poster on ‘Optimising healthcare transitions for young people: a systematic review of reviews’ was presented to the Royal College of Physicians Conference, 2015; which researchers have previously also presented to the European Society for Prevention Research 6th Annual Conference, 2015 and Royal College of Paediatrics and Child Health, 2016."
+ }
+}

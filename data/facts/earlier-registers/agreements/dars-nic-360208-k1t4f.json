@@ -1,0 +1,125 @@
+{
+ "base_reference": "DARS-NIC-360208-K1T4F",
+ "versions": [
+  {
+   "reference": "DARS-NIC-360208-K1T4F-v0.24",
+   "version": "0.24",
+   "organisation": "Cambridge University Hospitals NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2019-07-01",
+    "2019-08-01",
+    "2019-10-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-07-01",
+      "2019-08-01",
+      "2019-10-01"
+     ],
+     "objective": "595c56583387",
+     "activities": "35aa4f0d4387",
+     "expected_output": "ab0d1d3fdc8e",
+     "expected_benefits": "c7c4809ee5af"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-08-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bridge file: Hospital Episode Statistics to Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Diagnostic Imaging Dataset",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 12
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 22
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-10-01"
+     ],
+     "rows": 16
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "35aa4f0d4387": "The Academic Department of Medical Genetics at the University of Cambridge, Work strand 1 of UK-PBC, will securely transfer the list of NHS numbers and study IDs to the NHS Digital team (these are the only identifiers allowed to be shared by the project's consent materials) for all participants (currently 4,448) who have signed the Consent Form version 5. The NHS numbers will be collected by the UK-PBC research nurses at the English Trusts and Welsh Health Boards, as part of the study. \n\nWith regard to the list cleaning purpose Work Strand 1 of UK-PBC within the University of Cambridge will supply NHS number and Study ID. This information will be reviewed by NHS Digital for participants in UK-PBC. This list will be cleaned for the purpose of updating and filling in information not provided by cohort when they signed up to the study.  This will allow updating of information so linkage to other data sets will be possible for the whole participant cohort. \n\nOnce the data has been extracted by NHS Digital team, data with only the study id and date of birth and no other direct patient identifiers will be returned to University of Cambridge. Work Strand 1 of UK-PBC within the University of Cambridge will then receive a dataset with the Health Data, while the Study ID and date of birth will be the only identifiers, and the NHS number omitted.\nThe transfer, to NHS Digital and back, will take place using a secure system, SEFT. The traffic will be directly between the Data Manager of the study and NHS Digital. \n\nThe only individuals accessing the NHS Digital data are the lead investigators and their teams who are substantive employees of the University of Cambridge and who have honorary contracts with the Cambridge University Hospitals NHS Trust. NHS Digital Data will be accessed from NHS Trust computers located within the Academic Department of Medical Genetics at the University of Cambridge. As per completed Security Questions Section, there will be no data storage on laptops or mobile devices; data will only be accessed from NHS Trust computers located within the Academic Department of Medical Genetics at the University of Cambridge.\n\nFor the avoidance of doubt, data from NHS Digital will be stored on CUHFT servers behind N3 but it will never be uploaded into the UK-PBC Database, nor will it be used to correct information already contained in the UK-PBC Database. This is to ensure that there is no onward access to NHS Digital datasets, in any form. \nData from NHS Digital will be used solely by the UK-PBC research team within Work Strand 1 at the University of Cambridge for prognostic modelling and will subsequently be electronically shredded.\nThe findings will be presented in aggregated format with small numbers suppressed at medical or scientific conferences, and meetings of the PBC Foundation (the leading PBC support group in the UK). Furthermore, findings will be published in medical and scientific journals, and the newsletters of the PBC Foundation and the UK-PBC project. Please note that participant identifiable details will never be presented or published.\n\nAll outputs will be restricted to aggregate data with small numbers suppressed in line with the HES Analysis Guide. \n\nThe data from NHS Digital will not be used for any other purpose other than that outlined in this Agreement.\n\nNHS Digital reminds all organisations party to this agreement of the need to comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data)\n\nThe participant’s title, full name and address (including post-code) are details collected by the research team upon enrolment (only NHS number is allowed to be transferred to NHS Digital by the consent materials). As a result, there is no requirement for NHS Digital to provide them. Also, UK-PBC researchers have selected the fewest possible variables that focus on diagnoses, investigations, procedures and treatments. Dates requested are very specific and essential to prognostic modelling, in terms of identifying inter-correlations between such important events and the point in time they happened. \n\nHowever, the UK-PBC project intends to collect data only from the date of diagnosis (PBC) until the date of data linkage. The date of diagnosis is sometimes known to be several decades back for some participants, therefore, all data product periods have been selected, in an attempt to collect data as close to the date of diagnosis as possible. Data updates for the cohort would ideally be provided on an annual basis, after the first data extract by NHS Digital.\n\nPlease note that record level data will not be onwardly shared. Only aggregated data will get published with small numbers suppressed in line with the HES Analysis Guide.",
+  "595c56583387": "Primary biliary cholangitis (PBC, formerly primary biliary cirrhosis) is a rare, chronic liver disease characterised by autoimmune destruction of the small, intrahepatic bile ducts. PBC eventually leads to end-stage liver disease in a substantial proportion of cases. The disease affects up to 20,000 people in the UK, where it remains a leading indication for liver transplantation (LT).\n\nUK-PBC is a UK-wide precision medicine initiative that is aimed at improving understanding of PBC and developing precision medicine for PBC. It was established with a Stratified Medicine Award from the Medical Research Council (MRC). UK-PBC is led by Newcastle University, Imperial College, London, the University of Birmingham and the University of Cambridge. More than 150 NHS Trusts or Health Boards across the UK are collaborating in the project. UK-PBC is divided into 3 Work Strands (WS): \nWS1 is led from the Academic Department of Medical Genetics at the University of Cambridge. The focus of WS1 is to recruit and characterise a large, prospective PBC cohort (the UK-PBC Research Cohort). This involves the collection of detailed clinical information including results of medical investigations, important clinical events and life events (date of death, cause of death and date of birth) from participants and collaborating centres. These data are stored in the UK-PBC Database, located on an NHS server behind the N3 firewall at Addenbrookes Hospital, Cambridge University Hospitals NHS Foundation Trust (CUH); they are used for statistical modelling of disease. For avoidance of doubt, data from NHS Digital will never be uploaded into the UK-PBC Database; these data will be stored separately on NHS CUH servers behind N3 firewall for the agreed duration; they will be used to identify discrepancies or missing data in the clinical data already collected by UK-PBC for the purpose of statistical modelling of disease. \nWS2 of UK-PBC is focused on the mechanistic basis of PBC. This work is informed by the statistical models of disease derived by WS1. For the avoidance of doubt, WS2 has NO access to clinical data collected and curated by WS1. WS2 will have NO access to NHS Digital data. \nWS3 is focussed on clinical trial design and patient education. Clinical trial design by WS3 is informed by the statistical models of disease derived by WS1. For the avoidance of doubt, WS3 has NO access to clinical data collected and curated by WS1. There will be NO sharing of NHS Digital data with WS3.  This data sharing agreement (DSA) is with the University of Cambridge, which is the Joint Data Controller for WS1 of UK-PBC, together with CUHFT. As stated above, there will be NO linkage of NHS Digital data to other UK-PBC datasets, and there will be NO sharing of NHS Digital data to any other work strands in UK-PBC. \n\nWS1 of UK-PBC is now funded via Immune-Mediated Inflammatory Disease Biobanks – UK (IMIDBio-UK). IMIDBio-UK is a multi-centre collaboration between academia, the NHS, industry and patient groups that is aimed at cross-disease meta-analysis of existing and future research datasets across diverse autoimmune and auto-inflammatory disease to identify shared and unique mechanisms for autoimmunity. IMIDBio-UK is funded by the MRC. The lead research organisation is the University of Glasgow.  Cambridge, representing WS1 of UK-PBC, is a named collaborator in IMIDBio-UK, one of five key academic partners who will receive funding under the IMIDBio-UK MRC Award (ref MR/R014191/1). \nFor avoidance of doubt:\n1)\tIMID-Bio UK does not itself generate research data. The aim of IMIDBio-UK is to provide a platform for the sharing of research data generated by fully- independent, ethically approved research projects, each having its own ethics approval and study documentation (e.g. participant information sheet and informed consent form). There is no requirement for the ethics approvals and study documentation of the respective, independent research projects to be aligned - there is only a requirement for the participants in the respective projects to have consented to the sharing of pseudonymised research data (for the avoidance of doubt, however, it is re-iterated that there is NO onward access to NHS Digital Data from UK-PBC to IMIDBio-UK or any other organisation. There is only sharing of research data generated by UK-PBC [e.g. transcriptional datasets]). \n2)\tThe respective research projects generating research data that will be shared with IMIDBio- UK are completely independent of one another. Thus, Cambridge/UK-PBC is not influenced by any of the other academic partners collaborating in IMIDBio-UK. These other academic partners have no say in how UK-PBC-related research data are collected, generated, organised or stored by Cambridge. They have no special access to research data collected and curated by UK-PBC. Likewise, Cambridge/UK-PBC does not influence the research projects of these other academic partners. Furthermore, as stated above, there is NO onward access of NHS Digital Data from UK-PBC to IMIDBio-UK; other academic centres collaborating in IMIDBio-UK, or any other organisation. Thus, because Cambridge/UK-PBC is completely independent of the other academic partners collaborating in IMIDBio-UK and because no onward access of NHS Digital Data is granted to any other organisation, there is no need for a data controller in the other academic centres listed in the funding award letter. \nIMIDBio-UK was awarded £1,707,539 by the MRC. Of this, £221,276 was allocated to Cambridge to support UK-PBC-related research activities (see page 1, paragraph 2 of the funding award letter). The remainder (~£1.5M) was divided between the other academic centres to support their respective research activities. As stated above, the respective research projects supported by the IMIDBio-UK award are completely independent of one another. Thus, the research activities undertaken by one academic partner are not influenced by any other academic partners. The implication is that the other academic partners collaborating in IMIDBio-UK have nothing to do with this application. The role of UK-PBC in IMIDBio-UK is to share existing and future research datasets (for example, genetic or transcriptional data) for cross-disease meta-analysis, as described above. To reiterate, however, and for the avoidance of doubt, data derived from NHS Digital will NOT be shared with IMIDBio-UK; there will be NO onward access to data derived from NHS Digital. \n3)\tThe applicant apologises for the confusing and similar terms. IMIDBio-UK has two Work Streams, Work Stream 1 and Work Stream 2. Work Stream 1 of IMIDBio-UK is completely separate to Work Strand 1 of UK-PBC.  \n4)\tSeveral Pharmaceutical companies are also named collaborators in IMIDBio-UK. This is because Pharma are interested in finding new indications for existing immune-modulatory agents, as well as the identification of new therapeutic targets in autoimmune conditions. The MRC, which funds IMIDBio-UK, actively encourages collaboration with Industry to ensure that research findings are rapidly translated into clinical practice. For the avoidance of doubt, however, Cambridge (representing WS1 of UK-PBC) does NOT receive funding from the Pharmaceutical companies collaborating in IMIDBio-UK. These companies have no influence on UK-PBC and no special access to research data collected and curated by UK-PBC.\nNHS Digital datasets offer important information corresponding to the clinical data already captured from participants and collaborating centres in this study.  The important clinical events and investigations to be collected exist within: Hospital Episodes Statistics (HES); Inpatient episodes, Outpatient appointments, Accident and Emergency attendances, Diagnostic Imaging Dataset, Cancer data and Mortality data. These products are listing all the specific variables that would help link PBC medical information with important health events, part of the purpose of the project, as outlined above.",
+  "ab0d1d3fdc8e": "The verified clinical characteristic data will be presented in an aggregated format with small numbers suppressed in line with the HES Analysis Guide, within scientific journals dependent on research submission and acceptance for publication. Research will be presented at conferences and meetings such as; British Association for the Study of Liver Disease (BASL) this is an annual conference within the UK for the study of liver disease, European Association for the Study of Liver Disease (EASL) this is an annual conference within Europe for the study of liver disease and American Association for the Study of Liver Disease (AASLD) this is an annual conference within America for the study of liver disease. The findings will also be presented at meetings of the PBC Foundation (the leading PBC support group in the UK), and the newsletters of the PBC Foundation and the UK-PBC project. \nThe following general principles apply: \n- All outputs and publications contain only aggregated data with small numbers suppressed in line with the HES Analysis Guide. \n- Within summary tables, numbers will be rounded to the nearest 10 observations. \n- All outputs will be checked by the UK-PBC Data Management Committee to ensure that no subject is identifiable from the information presented.  \n- Individual level data will never be presented or published. Only summary data will be presented or published. \n- Data from NHS Digital will be used as part of the work with Work Strand 1 within Cambridge to complete missing data and resolve discrepancies between participant and clinician completed questionnaires. \n- List of fields of data already collected have been supplied to NHS Digital. All data requested from NHS Digital is already captured as part of the data capture. The data already captured will be downloaded from the UK-PBC Database on NHS computers behind the N3 firewall. \n- Any discrepancies or missing data in the project's data capture will be verified and completed using NHS Digital data.\n\nOutputs: Publication of the research is dependent on the timeline it takes for the data to be sent. The project envisages approximately 16-18 months from the date the data is received; however it is dependent on the data being received.",
+  "c7c4809ee5af": "UK-PBC is aimed at developing a precision medicine approach to PBC treatment; delivering the right treatment to the right patient at the right time. This will be achieved by identification of patient groups within the PBC patient cohort who are more likely to respond to one type of therapy or another and to identify groups of patients at the point of diagnosis who are likely to have more aggressive disease and need closer monitoring and surveillance. Identification of patient sub-groups promptly at the point of diagnosis will allow patients at highest risk of progressive liver disease to be promptly treated with second line therapy, or newer agents and/or to be included into medical trials. This will also enable these high-risk groups to be included in closer surveillance and clinical follow-up within the healthcare setting.\nThe goals:\n1) Establishment of the stratified therapy model in PBC. Whereby patients with the greatest need receive the most appropriate treatment at the point of diagnosis.\n2) Increase understanding of the mechanism(s) of UDCA (ursodeoxycholic acid, normally present in the bile) non-response through a systematic programme of innovative research. \n3) To develop markers to identify patients likely to respond poorly or not at all to treatment, allowing these poor-responders and non-responders to be followed-up closely.\n\nTo achieve the goals, complete clinical characterisation of patients using detailed clinical information including medical investigations and important clinical events (including the date and cause of death) is key. Data from NHS Digital will allow the project to verify the existing collected clinical characteristic data for accurate identification of sub groups of patients within the PBC cohort and treatment stratification so that patients with the greatest need are started on the most appropriate treatment and receive the greatest benefit. This stratified treatment approach will lead to improved disease outcomes and a more cost- effective approach to patient care. This will have a major impact in PBC enabling accurate identification of patients with sub-phenotypes, who might then be prioritised for mechanistic studies and clinical trials. Second-line treatment for PBC is expensive, e.g. obeticholic acid (OCA) at a standard dose of 5- 10mg once daily costs ~£80 per day (£29,000 per year). A large prospective cohort that is well-characterised in terms of disease severity, healthcare utilization, symptoms and health utility is essential for accurate health economic modelling and informed health economic opinion.  This will benefit patients within the UK with PBC which at present is estimated at 20,000."
+ }
+}

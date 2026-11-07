@@ -1,0 +1,122 @@
+{
+ "base_reference": "DARS-NIC-381891-X5K3X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-381891-X5K3X",
+   "version": "",
+   "organisation": "North Bristol NHS Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "294c2c685b36"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-381891-X5K3X-v0.0",
+   "version": "0.0",
+   "organisation": "NORTH BRISTOL NHS TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ]
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data (linkable to HES)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "294c2c685b36": "Objective for processing:  \nThis is a retrospective cohort study using historical data from national datasets.  Patients with mesothelioma, diagnosed in the UK between 01/01/05 and 31/12/14 will be identified.  Within this cohort, patients who suffered pleural infection will be identified.  Survival times in patients with pleural infection will then be compared with patients who had mesothelioma but did not suffer pleural infection.  This group will provide an internal control group.  \nThere are between 2,000 and 2,500 new diagnoses of mesothelioma per year in the UK so the cohort is estimated to contain approximately 22,500 people.  This 10 year period represents the time during which hospitals have been reliably recording data on mesothelioma cases as part of routine care.  Therefore using data from this period will ensure it is reliable. The sample size of 22,500 has been chosen to allow rigorous regression analysis to be undertaken with the data.  Of the estimated 22,500 people with mesothelioma, approximately 5%, or 1125 will have experienced pleural infection.  Extracting fewer people’s data would reduce the number of patients with pleural infection in the cohort and make robust statistical analysis less likely.\nThe aim of the study is to assess whether the presence of pleural infection has any effect on survival in people with mesothelioma.  This could lead to the development of new therapeutic agents for mesothelioma, based on stimulating the immune response in a similar way to infection.\nProcessing activities:\nThe HSCIC will produce an extract from Hospital Episode Statistics containing all inpatient, outpatient and critical care episodes between 01/01/2005 and 31/12/2014 for patients aged 18 and over.  This will comprise the study cohort.  The HSCIC will also report any diagnoses of pleural infection.  This will enable the cohort to be split into patients with mesothelioma and pleural infection (cases) and patients with mesothelioma but not pleural infection (controls).\nThe full cohort will be linked to mortality data from the Office of National Statistics to allow calculation of survival times in the presence and absence of pleural infection. Cause of death data will also be required to determine whether pleural infection contributed to the death of those patients who experienced it, or whether all patients died of mesothelioma regardless of whether they experienced pleural infection. \nData analysis\nThe main exposure is whether a patient experienced an episode of pleural infection.  The main outcome is all-cause mortality.  The aim of the study is to examine the difference in mortality outcomes (survival and cause of death) depending on whether patients with mesothelioma had pleural infection or not.  Descriptive analyses (chi-squared, t-test and Kruskal-Wallis tests) will be used to compare people who did and did not experience a pleural infection. \nKaplan Meier survival curves will be plotted to inspect the survival between patients who had an episode of pleural infection and those who did not.  These curves will be compared with log rank tests. Survival analysis will be performed using Cox proportional hazards models. \nThe main analysis will include all patients.  A priori sub-group analyses will stratify patients according to the timing of infection and oncological treatment received.  Because infection is more likely in patients with an in-dwelling pleural catheter in situ, and patients who choose this over an intercostal chest drain may differ in terms of their survival, the main analysis may be affected by confounding by indication.  To address this, a sensitivity analysis will be performed, restricting the analysis to patients with an in-dwelling pleural catheter in situ.  This will explore the robustness of any observed relationship in the main analysis.\nData flow\nData will be provided by HSCIC in pseudonymised form.  It will be stored and analysed at North Bristol NHS Trust and will not be transferred anywhere else.  Access will be restricted to the two approved researchers.\nSpecific outputs expected, including target date:\nInitial results from this analysis will be presented as a written abstract at the American Thoracic Society Conference May 2016.  The American Thoracic Society is a well-respected society that is attended by many NHS doctors. Data will be presented aggregated in tables, and graphs, with small numbers suppressed in line with the HES Analysis Guide.   \nThe final report will be prepared for submission in a peer-reviewed journal (in the first instance, Thorax), aiming for submission in September 2016.  The aim of this is to disseminate any relevant findings that arise from analysis of the raw data.  HSCIC will be acknowledged for data access and retrieval. Thorax Journal is extensively read by respiratory physicians in the UK (and further afield).  Publishing the results in this journal will contribute to NHS clinicians’ understanding of pleura infection and mesothelioma, thus enhancing day-to-day practice within the NHS.\nIf a relationship is found between pleural infection and survival with mesothelioma, this will raise the possibility of using bacterial agents as a potential treatment option.  This will lead onto a clinical trial of one such bacterial agent (see below).\nResults will also be disseminated amongst patient groups, including the Bristol & Beyond Asbestos Family Support Group.  This will be done via an informal presentation.  Simplified representations of the results, including graphs with small numbers suppressed in line with the HES Analysis Guide.\nNationally, a short written report will be submitted of the results to charities such as the British Lung Foundation and Mesothelioma UK for publication in their monthly newsletters.  The purpose of this is to reassure patients living with mesothelioma that North Bristol NHS Trust is undertaking important, interesting and relevant research onto this disease, and to provide hope that one day new treatments may be available.\nExpected measurable benefits to health and/or social care including target date: \nThe expected benefits of this work are as follows:\n1)\tRaising the profile of mesothelioma research by presenting data at an international conference (May 2016).\n2)\tEnhancing knowledge of the underlying pathophysiology of mesothelioma by publishing a paper in peer-reviewed journal (September 2016).  \n3)\tIf the results from this data analysis demonstrate a relationship between pleural infection and longer survival with mesothelioma, the published outputs from this work will encourage the investigation of alternative immuno-therapeutic approaches in mesothelioma, including a planned phase 2 trial to be undertaken by the group (a new application will submitted for this work by North Bristol NHS Trust).\nThe long-term aim of this research is to contribute to the development of a new treatment for mesothelioma.  The Academic Respiratory Unit has obtained access to a new treatment agent Lipo-teichoic Acid (LTAT) that consists of part of a bacterial cell wall.  A trial has been designed that will use this agent to mimic pleural infection, and stimulate the immune system to attack mesothelioma.  In designing this trial opinion was solicited from patients and the public, via mesothelioma support groups.  Discussions have taken place with a number of experts in the field.  An application has been submitted to NIHR (National Institute of Health Research) to fund this research.  Positive initial feedback has been received on this application, and the North Bristol NHS Trust has been advised that if additional supporting evidence for the hypothesis linking pleural infection with enhanced survival is provided, then this is a strong position to be granted funding.  Analysis of HSCIC data, its publication in a peer-reviewed journal, and its inclusion in the funding application will provide necessary evidence to support the subsequent clinical trial, and related funding application.  For clarification, the data provided will only be used and/or retained for the purpose specified above (excluding the proposed trial) and any change in purpose or request to use data for a future clinical trial would be subject to a further application to the HSCIC.\nIt is anticipated that the proposed clinical trial (a feasibility phase 2 study) will lead into a larger phase 3 randomised controlled trial of LTAT.  The results of both these trials will be published in high-impact scientific journals. It is hoped to demonstrate that this agent is safe and effective in treating mesothelioma, and ultimately support its use as a new treatment option for mesothelioma.\nThis is important because at present there is only one chemotherapy regimen available for people with mesothelioma (Cisplatin and Pemetrexed, which costs approx. £1,500 per treatment cycle, and almost £12,000 for an average 8 cycle treatment).  Bacterial agents, the use of which will be supported by this research, are significantly cheaper (in the range of £250 for a full treatment regimen).  Consequently there is huge potential to save the NHS money as well as improving the patient experience, and potential extending life-expectancy. \nThe proposed analysis of HSCIC data is the first step in elucidating the relationship between bacteria in the pleural space and survival with mesothelioma.  It is hoped that it will support a subsequent clinical trial that is planned, and from there will contribute to the development and design of further clinical trials to be undertaken by the group.\nAnalysis of HSCIC data, therefore, has the potential to lead to the development of a new treatment that could potentially prolong life and reduce symptoms with this fatal condition."
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "base_reference": "DARS-NIC-03422-Y7Y0Z",
+ "versions": [
+  {
+   "reference": "DARS-NIC-03422-Y7Y0Z-v0.2",
+   "version": "0.2",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "56b9fba0944d",
+     "activities": "713982b3bcf0",
+     "expected_output": "9b285cee94f4",
+     "expected_benefits": "2482d9ee83c8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "2482d9ee83c8": "The aim of GALA-5 was to establish whether the combined use of 5-ALA and Carmustine wafers during surgery in patients diagnosed with Glioblastoma (GBM) is safe and does not compromise delivery of standard chemo radiotherapy. The results of the GALA-5 trial are also expected to guide the protocol for a new phase III trial that will further explore the use of 5-ALA and Carmustine wafers during surgery in patients diagnosed with Glioblastoma (GBM). This trial will also be run by the Cancer Research UK and UCL Cancer Trials Centre.  The data provided will inform the clinical impact of combination therapy incorporating Carmustine wafers with Temozolomide by providing additional information regarding the cause of death in patients given this combination. The data will also inform reappraisal of NICE TA121 (https://www.nice.org.uk/guidance/ta121).\nWhile the NICE TA121 guidelines comment on the use of carmustine wafers and temozolomide, they do not comment on the combined use of carmustine wafers and temozolomide, and are based on historical studies that antedate temozolomide and 5-ALA. By treating patients with both 5-ALA, carmustine and temozolomide, GALA-5 will therefore inform reappraisal of NICE TA121 (and hence patient treatment). Results will be disseminated to NICE by forwarding the final publication. No record level data will be disseminated to NICE.",
+  "56b9fba0944d": "Date and cause of death are being requested to enable the assessment of patient survival in the GALA-5 trial. As some patients have become lost to follow up over time, obtaining this information for these patients will ensure that the dataset is as complete as possible. Mortality information is being requested only for patients that have become lost to follow up.  The primary objective of the GALA-5 trial is to establish whether the combined use of 5-ALA and Carmustine wafers is safe and does not compromise a patient from receiving or completing standard chemoRT. The secondary objective of this study is to gather preliminary evidence as to whether the combined use of 5-ALA and Carmustine wafers at surgery has the potential to improve clinical outcome.",
+  "713982b3bcf0": "The Cancer Research UK and UCL Cancer Trials Centre will provide patient date of birth, NHS number and date of diagnosis of glioblastoma to the HSCIC in order to identify these patients. Data from the HSCIC will be integrated into the existing anonymised trial dataset in a MACRO database (internally maintained database) by the Trial Coordinator. This dataset is held at the Cancer Research UK and UCL Cancer Trials Centre at UCL. Data will be stored electronically on servers with restricted access. There will be no linkage of the received data to other datasets. No third parties have access to these data. This dataset will be analysed by the trial statistician at the Cancer Research UK and UCL Cancer Trials Centre using STATA (statistical programme software) to produce statistical outputs for publications.",
+  "9b285cee94f4": "The mortality data obtained from HSCIC will be used to calculate the overall survival of GALA-5 trial patients otherwise lost to follow-up. The GALA-5 trial dataset will be analysed as soon as data are received (ie early in 2016), and will submit the trial results for publication in a peer reviewed journal. \nThe manuscript will most likely be submitted to the Journal of Neuro-Oncology. Once the manuscript has been accepted for publication, the results will also be entered on the clinicaltrials.gov database, the EU Clinical Trial Register, and potentially NICE (see below). No record level data will be disseminated. The publication will also be forwarded to Cancer Research UK, who will produce a lay summary that will be uploaded on to the CRUK website. End of trial reports for the GALA-5 trial have been submitted to the REC and MHRA, which summarised the main findings. Submitting these requirements within 12 months of end of trial being declared was a requirement. No further report will be required by the MHRA.  \nSurvival data of individual patients will not be published, no individuals will be identifiable from any publications, nor will record level data be shared with third parties."
+ }
+}

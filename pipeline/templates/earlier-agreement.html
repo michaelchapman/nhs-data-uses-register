@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% from "_earlier.html" import earlier_flag, earlier_version with context %}
+{% from "_fold.html" import fold_summary %}
+{% set v = agreement.latest %}
+{% block title %}{{ agreement.base_reference }} — {{ agreement.organisation|org }} — {{ meta.site_name }}{% endblock %}
+{% block description %}{{ agreement.organisation|org }} held agreement {{ agreement.base_reference }}, listed in NHS Digital's release registers from {{ agreement.first_label or "before July 2021" }}{% if agreement.last_label %} to {{ agreement.last_label }}{% endif %}.{% endblock %}
+{% block content %}
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="{{ meta.base_path }}/">Home</a></li>
+    <li><a href="{{ meta.base_path }}/agreements/">Agreements</a></li>
+    <li><a href="{{ meta.base_path }}/agreements/earlier/">Earlier registers only</a></li>
+    <li aria-current="page">{{ agreement.base_reference }}</li>
+  </ol>
+</nav>
+
+<h1>{{ agreement.base_reference }}</h1>
+<p class="lede">{% if agreement.organisation_slug in org_slugs %}<a href="{{ meta.base_path }}/organisations/{{ agreement.organisation_slug }}/">{{ agreement.organisation|org }}</a>{% else %}{{ agreement.organisation|org or "Organisation not stated" }}{% endif %}{% if agreement.organisation_type %} · {{ agreement.organisation_type }}{% endif %}</p>
+<p class="notice"><strong>Never in the Data Uses Register.</strong> This agreement appears only in the release registers NHS Digital published before July 2021{% if agreement.last_label %}, last in {{ agreement.last_label }}{% endif %}. The registers don't say why an agreement stops appearing: most likely it ended, or no data was released under it after then. It is not counted in this site's figures.</p>
+{{ earlier_flag() }}
+
+<dl class="key-facts">
+  <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
+  <div><dt>Latest version listed</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>
+  <div><dt>First listed receiving data</dt><dd>{{ agreement.first_label or "No release recorded" }}</dd></div>
+  <div><dt>Last listed</dt><dd>{{ agreement.last_label or "—" }}</dd></div>
+  <div><dt>Registers listing it</dt><dd>{{ agreement.periods_listed }} of {{ earlier_periods }}</dd></div>
+  <div><dt>Datasets released</dt><dd>{{ agreement.dataset_names|length }}</dd></div>
+</dl>
+
+<h2 id="purpose">Why the data was released</h2>
+{% if v.text_period %}<p class="hint">As the {{ v.text_period }} release register gave it for {{ v.reference }}.</p>{% endif %}
+{% for section, key in [
+  ("Objective for processing", "objective"),
+  ("Processing activities", "activities"),
+  ("Expected output", "expected_output"),
+  ("Expected measurable benefits", "expected_benefits"),
+  ("Benefits reported", "yielded_benefits"),
+] %}
+<div class="prose-block">
+<h3>{{ section }}</h3>
+<details class="fold"{% if loop.first and v.texts[key] %} open{% endif %}>
+  {{ fold_summary(section|lower) }}
+  {% if v.texts[key] %}
+    {% for para in v.texts[key]|paragraphs %}<p>{{ para }}</p>{% endfor %}
+  {% else %}
+    <p class="empty">Not stated in the release register{% if key == "yielded_benefits" %}, which asked for reported benefits only from May 2018{% endif %}.</p>
+  {% endif %}
+</details>
+</div>
+{% endfor %}
+
+<h2 id="history">Versions</h2>
+<p>{{ agreement.versions|length }} version{{ "s" if agreement.versions|length != 1 }} listed, newest first. Text is shown where it differs from the version after it.</p>
+{% for version, newer in rows %}
+{{ earlier_version(version, newer, open=loop.first) }}
+{% endfor %}
+
+<p class="source-note">Source: NHS Digital release registers, {{ earlier_span }}, published under the Open Government Licence v3.0. Search those workbooks for <code>{{ agreement.base_reference|replace("DARS-", "") }}</code> to see the original rows.</p>
+{% endblock %}

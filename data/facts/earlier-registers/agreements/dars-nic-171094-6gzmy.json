@@ -1,0 +1,154 @@
+{
+ "base_reference": "DARS-NIC-171094-6GZMY",
+ "versions": [
+  {
+   "reference": "DARS-NIC-171094-6GZMY",
+   "version": "",
+   "organisation": "Capita Surveys and Research",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01"
+     ],
+     "objective": "390ef81229f2"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "0359074171b3"
+    },
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "b9ac9d6329ef"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Exception - IG accreditation process to permit the receipt and processing of data by the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-171094-6GZMY-v0.0",
+   "version": "0.0",
+   "organisation": "CAPITA",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-12-01",
+    "2017-03-01",
+    "2017-06-01",
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01",
+    "2018-05-25"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "b9ac9d6329ef"
+    },
+    {
+     "periods": [
+      "2016-12-01",
+      "2017-03-01",
+      "2017-06-01",
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01",
+      "2018-05-25"
+     ],
+     "objective": "9a622d4b8ca7"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-Exception IG accreditation process",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-Exception IG accreditation process",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-12-01",
+      "2017-03-01",
+      "2017-06-01"
+     ],
+     "rows": 11
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Other-Exception - IG accreditation process",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 6
+    },
+    {
+     "dataset": "MRIS - List Cleaning Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Exception - IG accreditation process",
+     "frequency": "One-Off",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 4
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0359074171b3": "To distribute, collect, process and submit PROMS questionnaires.\n\nAny changes will be notified to the HSCIC.",
+  "390ef81229f2": "To distribute, collect, process and submit PROMS questionnaires. Any changes will be notified to the HSCIC.",
+  "9a622d4b8ca7": "To distribute, collect, process and submit PROMs questionnaires.",
+  "b9ac9d6329ef": "Update to demographic data prior to supplier sending out pre and post op questionnaires (This is not a Medical Research study We are providing List Cleaning to return NHS No’s where not complete, fact of death and latest address of the living. This is in order to update demographic data prior to supplier sending out pre and post op questionnaires. The only purpose is to get the latest address)"
+ }
+}

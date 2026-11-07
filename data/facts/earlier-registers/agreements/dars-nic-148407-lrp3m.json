@@ -1,0 +1,562 @@
+{
+ "base_reference": "DARS-NIC-148407-LRP3M",
+ "versions": [
+  {
+   "reference": "DARS-NIC-148407-LRP3M",
+   "version": "",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2015-07-01",
+    "2015-10-01",
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2015-07-01",
+      "2016-01-01"
+     ],
+     "objective": "5de4935695e0"
+    },
+    {
+     "periods": [
+      "2015-10-01"
+     ],
+     "objective": "b0b6f598ee8a"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 ( ECC8-02(FT5)/2010) is in place for the flow of identifiable data to and from the HSCIC. Informed Patient Consent to permit the receipt and processing of data by the HSCIC.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-07-01",
+      "2015-10-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Cancer Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: ONS Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2015-10-01",
+      "2016-01-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "Medical Research: NHS Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 (ECC 8-02(FT5)/2010) is in place for the flow of identifiable data to and from the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148407-LRP3M-v0.0",
+   "version": "0.0",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2016-09-01",
+    "2016-12-01",
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01"
+     ],
+     "objective": "27cf4355b1da"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01"
+     ],
+     "rows": 22
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2016-09-01",
+      "2016-12-01",
+      "2017-03-01"
+     ],
+     "rows": 16
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 3
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148407-LRP3M-v2.2",
+   "version": "2.2",
+   "organisation": "UNIVERSITY COLLEGE LONDON (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2017-12-01",
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "objective": "40fd0a133517",
+     "activities": "784f62289fee",
+     "expected_output": "d02fe1765593",
+     "expected_benefits": "9b2aede613ad"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 28
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Other-Data originally supplied on the basis of National Health Service Act 2001 – s60. Subsequent data releases under Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Other-Data originally supplied on the basis of National Health Service Act 2001 – s60, and subsequently National Health Service Act 2006 - s251 - 'Control of patient information'. | New data to be disseminated on the basis of Informed Patient consent to",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Other-Data originally supplied on the basis of National Health Service Act 2001 – s60, and subsequently National Health Service Act 2006 - s251.",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148407-LRP3M-v3.4",
+   "version": "3.4",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "",
+   "listed": [
+    "2018-03-01",
+    "2018-05-25",
+    "2018-10-01",
+    "2019-01-01",
+    "2019-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2018-03-01"
+     ],
+     "objective": "e86161353190",
+     "activities": "5e8109845c40",
+     "expected_output": "16a4976b9320",
+     "expected_benefits": "4029d1acd74a"
+    },
+    {
+     "periods": [
+      "2018-05-25",
+      "2018-10-01",
+      "2019-01-01",
+      "2019-03-01"
+     ],
+     "objective": "e86161353190",
+     "activities": "5e8109845c40",
+     "expected_output": "16a4976b9320",
+     "expected_benefits": "4029d1acd74a",
+     "yielded_benefits": "d6fd9202db35"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Flagging Current Status Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-05-25"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01",
+      "2019-01-01",
+      "2019-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by NHS Digital",
+     "frequency": "Ongoing",
+     "periods": [
+      "2018-10-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148407-LRP3M-v4.12",
+   "version": "4.12",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-11-01",
+    "2020-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-11-01",
+      "2020-01-01"
+     ],
+     "objective": "4db1a4e8593e",
+     "activities": "eb62fb177baa",
+     "expected_output": "bd1b08de32e8",
+     "expected_benefits": "bb452132a918",
+     "yielded_benefits": "ef9ff1f276a4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148407-LRP3M-v5.3",
+   "version": "5.3",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-03-01",
+    "2020-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "objective": "4db1a4e8593e",
+     "activities": "eb62fb177baa",
+     "expected_output": "bd1b08de32e8",
+     "expected_benefits": "bb452132a918",
+     "yielded_benefits": "ef9ff1f276a4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-03-01",
+      "2020-06-01"
+     ],
+     "rows": 2
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-148407-LRP3M-v6.3",
+   "version": "6.3",
+   "organisation": "University College London (UCL)",
+   "organisation_type": "Academic",
+   "listed": [
+    "2020-09-01",
+    "2020-10-01",
+    "2020-12-01",
+    "2021-03-01",
+    "2021-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2020-09-01",
+      "2020-10-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "objective": "4db1a4e8593e",
+     "activities": "eb62fb177baa",
+     "expected_output": "bd1b08de32e8",
+     "expected_benefits": "bb452132a918",
+     "yielded_benefits": "ef9ff1f276a4"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Demographics",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-09-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Cancer Registration Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "Ongoing",
+     "periods": [
+      "2020-10-01",
+      "2020-12-01",
+      "2021-03-01",
+      "2021-06-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2020-10-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "16a4976b9320": "Study findings will continue to be published in peer-reviewed scientific journals, predominantly related to epidemiology, cardiovascular and metabolic disorders, cognitive, physical and psychological function, but also including more generic journals such as the BMJ, reflecting the increasing focus on overall health in older age.  Publications will contain only aggregate level data without local identifiers and with suppression of small numbers in line with HES analysis guide.\n\nPublications to date are listed on the study website: www.sabrestudy.org. All publications since 2008 are open-access.  The audience is expected to consist mainly of academic researchers and clinicians. \n\nIn addition to journal publications, UCL will continue to submit abstracts for presentation at national and international conferences, such as Diabetes UK, the European Association for the Study of Diabetes, the European Society of Cardiology, Artery, and the British Hypertension Society. All data for abstracts/presentations will be at aggregate level with suppression of small numbers in line with HES analysis guide.\n\nThe study team at UCL will further disseminate findings via participant and GP feedback sessions; newsletters, and the study website. \n\nAt the end of the current funding period (2018) a report will be submitted to the funders (the British Heart Foundation) summarising findings.  This may be published on their website.  \n\nUpdate (February 2018) : Since the previous data sharing agreement was approved, the study has been in active clinical follow-up.  However,  a number of new research papers  based on this cohort have been published during the period which utilise cardiovascular outcome data, some examples:\n\n- Air pollution and cardiovascular mortality with over 25 years follow-up: A combined analysis of two British cohorts.  \n\n- Ethnic Differences in Associations Between Blood Pressure and Stroke in South Asian and European Men.",
+  "27cf4355b1da": "The data supplied by the NHS IC to University College London will be used only for the approved Medical Research Project MR472.",
+  "4029d1acd74a": "The rich phenotypic and genotypic dataset gathered over a 25 year period will enable analyses assessing mid-life predictors of health and ill-health in older age and will enable unique analyses of how these associations may be related to ethnicity and migration.  Good physical and cognitive functions are vital to healthy ageing and factors which influence these across the life course are poorly understood, particularly in non-European populations.  As the cohort is reaching older age, an increase in risk of heart failure, which can be severely debilitating, is expected. Ethnic differentials in heart failure rates are not well studied to date.  Increasing length of follow-up and novel analytic techniques, both statistical and relating to stored images and samples bring opportunities for more sophisticated analyses and the addition of hospital admission data to key outcome variables enhances the study’s power to identify events and to further elucidate mechanisms underlying the very marked ethnic differences in cardiometabolic disorders.  \n\nUnderstanding of underlying causes of difference in physical and cognitive function in people of different ethnicities will ultimately lead to appropriate preventive strategies and treatments at different stages of life.\nThe addition of HES data to 2017 is key to maximising event ascertainment in old age.    \n\nSABRE has recently reached the end of the 25 year wave of active clinical follow-up, which includes detailed clinical assessment of cardiometabolic health in addition to self reported health, function, lifestyle and behaviours.  Participants are now on average aged 78 years.  Following data cleaning, detailed analyses of measured and self reported health in conjunction with medical history derived from hospital episode statistics will be conducted and findings related to risk factors and health at baseline and at the 20 year follow-up, thus using this rich dataset to  build on understanding of mid and later life risk factors in determining health, function and wellbeing in older age and to continue to study potential underlying causes for any ethnicity and gender differences in these outcomes.  \nFurther analyses are planned in order to meet the stated objectives for the 25 year follow-up and we anticipate that paper addressing primary objectives will be ready for submission for publication during the period 2018-2021.",
+  "40fd0a133517": "University College London (UCL) requires notifications of mortality and cancer registrations and linked HES data for its study cohort for use in the Medical Research Project: SABRE (Southall And Brent Revisited. This is a population-based cohort study, conducted at University College London, funded by the British Heart Foundation in its current 25 year follow-up phase.  It is unique as a long-standing tri-ethnic cohort consisting of people of European descent and first generation migrants of South Asian or African Caribbean descent.  This is an academic research study focusing on identifying and understanding the underlying reasons for ethnic group and sex differences in cardiometabolic disease and in physical, psychological and cognitive function in older age.\n\nSpecific questions for the 25 year follow-up study are:\n1. How large are ethnic /sex differences in cardiac function, cognitive function and hippocampal volumes in older age?\n2. To what extent do cardiac function, cognitive function and hippocampal volumes change over a 5 year period in each ethnic group?\n3. Which risk factors measured in mid-life and in early old age are most strongly associated with current cardiac and cognitive function and hippocampal volumes and with 5 year changes in these parameters? Can these risk factors explain ethnic differences in cardiac and cognitive function?\n4. How large are gender differences in current disorders of cardiac and cognitive function and in their associations with current risk factors?\n5. Do ethnic differences in incident cardiometabolic disorders persist into older age?\n6. Which risk factors or risk factor profiles measured in mid-life and early old age are most strongly associated with incident cardiometabolic disorders and which best explain ethnic differences in incidence?\n\nThe study receives ongoing notifications of mortality and cancer registrations from NHS Digital.  Continuing supply of this data is required in order to meet study objectives.  Death and cause of death are key outcomes for the research objectives and cancer registrations are also key to understanding ethnic disparities in development and survival from the most frequent types of cancer and how these impact upon function in older age.\n\nThe study has previously utilised the List Cleaning service from time to time when in active follow-up in order to ensure that the correct participant addresses are used in order to contact participants.   Use of this service has helped the study to avoid trying to contact deceased participants.  The List Cleaning outputs were used to update the administration database (held separately from other data within the UCL data safe haven) so that UCL could write to as many participants as possible inviting them to complete questionnaires or come into the UCL clinic for a detailed investigation.  Under this Data Sharing Agreement, UCL may retain List Cleaning outputs received previously but is not permitted to make further use of the List Cleaning service.\n\nLinked HES data is required to identify incident cardiometabolic events (in particular coronary heart disease, heart failure, stroke, dementia, diabetes), and other events which may affect physical and cognitive function, which have occurred during the follow-up period.  Details of all hospital episodes involving the cohort (not limited to the previously stated conditions) are required to address key study objectives with regard to physical and cognitive function in older age in association with current and mid-life risk factors.  Analysis needs to consider any and all potential contributing factors.\n\nThese events will supplement information provided by participant self-report at 20 and 25 years, from primary care medical record review conducted during the 20 year follow-up and from cancer and mortality flagging, together with detailed clinical measurements made at the SABRE clinics at baseline, 20 and 25 year follow-up.   The SABRE cohort is increasingly elderly (median age of survivors in 2016=77 years, range 65-98) and at visit 3, although many are willing and able to visit UCL’s clinic and/or to complete questionnaires, many who attended at the last follow-up 5 years ago are now too frail or unwell to attend the 25 year follow-up clinic or to complete the health and lifestyle questionnaires, and sadly many have died (approximately 1,500 (31%)).  Diagnosis of disease events/states identified during admission to hospital is increasingly important in assessing health in this elderly cohort and will inform all key event outcomes.  This is particularly important in assessing health in those otherwise lost to direct follow-up.  The data will be used to analyse risk factors measured in mid- and later life in association with these incident events in order to build on current understanding of causal mechanisms.\n\nData from 1989 to the present is required because participants underwent detailed examinations at baseline (1989-91) and the aim is to follow this cohort through their experiences since to understand what happened in later life and relate that to the baseline.   This will enable UCL to gain as complete as possible a picture of hospital admissions, and hence incident events, over the entire cohort follow-up.  Data from the entire study period are crucial for determining age of onset of events, as well as the extent and nature of ill-health from mid to later life, and for relating these to current and mid-life cardiometabolic and other risk factors and how these influence the key study outcomes of physical and cognitive function in older  life in each of the three ethnic groups.",
+  "4db1a4e8593e": "University College London (UCL) requires notifications of mortality and cancer registrations and linked HES data for its study cohort for use in the Medical Research Project: SABRE (Southall And Brent Revisited). This is a population-based cohort study, conducted at University College London, funded by the British Heart Foundation in its current 25 year follow-up phase.  It is unique as a long-standing tri-ethnic cohort consisting of people of European descent and first generation migrants of South Asian or African Caribbean descent.  This is an academic research study focusing on identifying and understanding the underlying reasons for ethnic group and sex differences in cardiometabolic disease and in physical, psychological and cognitive function in older age.\n\nSpecific questions for the 25 year follow-up study are:\n1. How large are ethnic /sex differences in cardiac function, cognitive function and hippocampal volumes in older age?\n2. To what extent do cardiac function, cognitive function and hippocampal volumes change over a 5 year period in each ethnic group?\n3. Which risk factors measured in mid-life and in early old age are most strongly associated with current cardiac and cognitive function and hippocampal volumes and with 5 year changes in these parameters? Can these risk factors explain ethnic differences in cardiac and cognitive function?\n4. How large are gender differences in current disorders of cardiac and cognitive function and in their associations with current risk factors?\n5. Do ethnic differences in incident cardiometabolic disorders persist into older age?\n6. Which risk factors or risk factor profiles measured in mid-life and early old age are most strongly associated with incident cardiometabolic disorders and which best explain ethnic differences in incidence?\n\nThe study receives ongoing notifications of mortality and cancer registrations from NHS Digital.  Continuing supply of this data is required in order to meet study objectives.  Death and cause of death are key outcomes for the research objectives and cancer registrations are also key to understanding ethnic disparities in development and survival from the most frequent types of cancer and how these impact upon function in older age.\n\nThe study has previously utilised the List Cleaning service from time to time when in active follow-up in order to ensure that the correct participant addresses are used in order to contact participants.   Use of this service has helped the study to avoid trying to contact deceased participants.  The List Cleaning outputs were used to update the administration database (held separately from other data within the UCL data safe haven) so that UCL could write to as many participants as possible inviting them to complete questionnaires or come into the UCL clinic for a detailed investigation.  Under this Data Sharing Agreement, UCL may retain List Cleaning outputs received previously but is not permitted to make further use of the List Cleaning service.\n\nLinked HES APC data from NHS Digital has previously been disseminated to the SABRE study in order to identify incident cardiometabolic events (in particular coronary heart disease, heart failure, stroke, dementia, diabetes), and other events which may affect physical and cognitive function, which have occurred during the follow-up period.  Details of all hospital episodes involving the cohort (not limited to the previously stated conditions) were required to address key study objectives with regard to physical and cognitive function in older age in association with current and mid-life risk factors.  \n\nAnalysis considers any and all potential contributing factors.  \n\nThese events will supplement information provided by participant self-report at 20 and 25 years, from primary care medical record review conducted during the 20 year follow-up and from cancer and mortality flagging, together with detailed clinical measurements made at the SABRE clinics at baseline, 20 and 25 year follow-up.   The data will be used to analyse risk factors measured in mid- and later life in association with these incident events in order to build on current understanding of causal mechanisms.\n\nData from 1989 to the present are required because participants underwent detailed examinations at baseline (1989-91) and the aim is to follow this cohort through their experiences since to understand what happened in later life and relate that to the baseline.   This will enable UCL to gain as complete as possible a picture of hospital admissions, and hence incident events, over the entire cohort follow-up.  Data from the entire study period are crucial for determining age of onset of events, as well as the extent and nature of ill-health from mid to later life, and for relating these to current and mid-life cardiometabolic and other risk factors and how these influence the key study outcomes of physical and cognitive function in older life in each of the three ethnic groups.  \n\nThis request is to extend the term of the data sharing agreement to complete the complex analyses which will be required to integrate outcomes derived from HES data with mortality and cancer registration data and the very detailed phenotypic data collected during the course of the study period since 1989.  In addition, this request is also to continue to receive mortality and cancer registration data, as these are, sadly, key outcomes which can be related to risk factors identified in earlier life.  It is also important that notifications of death are received. No raw HES data from NHS Digital are being disseminated under this new agreement.\n\nThere are a number of reasons why UCL had not sought to consent all study participants for study health data linkage:\n\n- At the start of the third wave of follow-up (2014-2018) UCL conducted a pilot study to assess whether it was feasible to obtain consent for data linkage using a postal approach to existing participants (UCL sent out a covering letter, participant information, consent form including an item on data linkage, health and lifestyle questionnaire and reply paid return envelope).  At that time there were 3400 surviving participants, aged between 65 and 98 years.  UCL approached 773 participants who had visited the clinic at the previous phase of follow-up.  Of these people, who UCL had considered to be highly motivated participants, UCL received positive responses from 65%, negative responses from 9%, no response from 17%, address incorrect (1%) and a further 10% who requested time to consider or who asked to be contacted again in the future.  Of the latter group, although UCL know that they have received the information, very few have been contactable with regard to the study, bringing the total estimated non-response rate in this group to approximately 25%.   This non-response rate was unexpectedly high and likely to be related to ill health, particularly cognitive impairment. \n\n- With a 17-25% non-response rate already demonstrated in the pilot study of the highly motivated group, UCL had reasonable grounds for assuming a much higher non-response rate in the rest of the cohort (2070 survivors), with undoubted risk to the scientific integrity of the follow-up study. UCL had consulted with the Confidentiality Advisory Group (CAG) and followed their advice regarding application for section 251 support.  With CAG agreement UCL modified the approach to existing participants by removing the item on consent to data linkage from the postal consent form, while adding an item at the start of the questionnaire that enabled participants to opt-out of data linkage even if they chose not to come in to the clinic.  21 people chose to opt out of data linkage in this way.  UCL then placed an additional item requesting consent for data linkage in the clinic consent form for responders who had agreed to visit UCL for clinical follow-up.  \n\n- Loss to follow-up is an important problem in older cohorts.  People who do not respond, or are lost to follow-up in other ways, may be different from those who participate - often they are more unwell than responders.  This is likely to lead to bias and to jeopardise the scientific value of the findings and grossly bias public health messages and potential interventions.   Given the unique experiences of the first generation migrants in this cohort, which may be vital in informing health service strategies in an increasingly migratory world, UCL believe that it would be a waste of the data and commitment to the study in earlier years if UCL are unable to reach sound scientific conclusions due to loss to follow-up.  This is where linkage to health service records can minimise the effects of loss to follow-up due to non-response.\n\nThis agreement is for university research, the lawful basis for processing data is GDPR article 6(1)(e): ‘Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller’. Also referred to as ‘Public Task’. As the research involves health data, which is included in the definition of special categories of personal data, it requires an additional condition for processing. Based on guidance, for health research this is article 9(2)(j), which details that processing is necessary for scientific and research purposes, subject to appropriate safeguards. The aim of this study - understanding of underlying causes of difference in physical and cognitive function in people of different ethnicities is in the public interest, because it will ultimately lead to appropriate preventive strategies and treatments at different stages of life.",
+  "5de4935695e0": "This study aims to investigate the aetiology and complications of hypertension in Afro-Caribbeans in the UK, and thereby provide information to assist in the formulation of health promotion strategies to prevent disease. Objectives of the study include the estimation of the prevalence of hypertention, non-insulin-dependant diabetes mellitus _NIDDM) andcoronary heart disease (CHD) in Afro-Caribbeans as compared with Europeans. Further, we wish to determine the prevalence of hyperensive end organ damage to the heart and kidney in both ethnic groups and explore reasons for the observed high rates of target organ damage in other Black African populations. We wish to test a specific hypothesis which may account for this finding, that the diural blood pressure pattern is different in the two ethnic groups, such that for a given level of resting bllod pressure, Afro-caribbeans are exposed to higher levels of whole day blood pressure than their European counerparts. Further, we will measure risk factors for CHD in an attempt to explain why Afro-Caribbeans have relatively low rates of CHD, despite a high prevalence of both hypertension and NIDDM.",
+  "5e8109845c40": "The identifiers of SABRE participants have previously been shared with NHS Digital’s predecessor organisation(s) and NHS Digital has provided regular event notifications including notifications of mortality and cancer registrations.  The cohort was previously split into two groups: cancer notifiable participants and non-cancer notifiable participants.\n\nThe cohort has been reorganised into three groups, under three data sharing agreements: participants who gave informed consent (cancer notifiable) (NIC-148407-LRP3M); cancer notifiable participants covered by section 251 support and approved researcher (NIC-91374-Z5V6Y), and non-cancer notifiable participants covered by section 251 support (NIC-99077-Q0K6Z).  To ensure that participants are correctly re-organised into the appropriate groups, UCL has sent NHS Digital 3 separate files (one for each respective group) containing participant identifiers.\n\nNHS Digital will then provide reports on a quarterly  basis.  \n\nNHS Digital have linked the respective cohort groups to HES data and supplied to UCL encrypted files containing hospital admissions data identified only by study Pseudo-ID and encrypted HESID and containing no other identifiers.  The datasets were placed immediately into UCL’s Data Safe Haven.\n\nUsing the Pseudo-ID, the data will be processed within the Data Safe Haven to provide derived variables, for example:  summary diagnostic categories of interest (as described below) for hospital admission episodes with year of admission, summary cause of death with year of death, summary region of cancer and year of diagnosis.  There will be no direct linkage of data provided by NHS Digital to other study data.  The provided data are stored in an encrypted file within the Data Safe Haven at the Gower Street location.  The data can be remotely accessed at the Institute of Cardiovascular Science by accredited SABRE study researchers only – all of whom are substantive employees of UCL.  Access must be approved by the Data Manager.\n\nThe data supplied by NHS Digital will not be downloaded or otherwise transferred from the Data Safe Haven.  Data including variables derived from the NHS Digital data may be downloaded from the Data Safe Haven and stored on a UCL server at the Institute of Cardiovascular Science to be used solely for the purposes of statistical analyses in accordance with the study objectives.  \n\nThe HES and PDS data are stored separately to participant identifiers and will not be relinked.  The data will remain pseudonymised.  Month and Year of Death are stored in the dataset and used for statistical analyses but the dataset does not include full Date of Death.  Participant identifiers are retained separately within the data safe haven solely for study administration purposes.\n\nNo new HES data is being disseminated under this new agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "784f62289fee": "The identifiers of SABRE participants have previously been shared with NHS Digital’s predecessor organisation(s) and NHS Digital has provided regular event notifications including notifications of mortality and cancer registrations.  The cohort was previously split into two groups: cancer notifiable participants and non-cancer notifiable participants.\n\nThe cohort will be reorganised into three groups: participants who gave informed consent (cancer notifiable); cancer notifiable participants covered by section 251 support, and non-cancer notifiable participants covered by section 251 support.  To ensure that participants are correctly reorganised into the appropriate groups, UCL will send NHS Digital 3 separate files (one for each respective group) containing participant identifiers.\n\nNHS Digital will then provide reports on a monthly basis  while the study is in active follow-up.  Notifications will contain no participant identifiers other than unique study Pseudo-IDs.  Month and Year of Death will also be included.\n\nNHS Digital will link the respective cohort groups to HES data and will supply to UCL encrypted files containing hospital admissions data identified only by study Pseudo-ID and encrypted HESID and containing no other identifiers.  The dataset will be placed immediately into UCL’s Data Safe Haven.\n\nUsing the Pseudo-ID, the data is linked at record level to the existing dataset of mortality and cancer records, clinical measures, primary care record review and participant responses to health and lifestyle questionnaires across the course of the study.  The data is stored in an encrypted file within the Data Safe Haven at the Gower Street location.  The data can be remotely accessed at the Institute of Cardiovascular Science by accredited SABRE study researchers only – all of whom are substantive employees of UCL.  Access must be approved by the Data Manager.\n\nThe data supplied by NHS Digital will not be downloaded or otherwise transferred from the Data Safe Haven.  Data including variables derived from the NHS Digital data may be downloaded from the Data Safe Haven and stored on a UCL server at the Institute of Cardiovascular Science to be used solely for the purposes of statistical analyses in accordance with the study objectives.  Such variables include, for example, date of first admission related to a diagnosis of coronary heart disease but will not include any part of the dataset supplied by NHS Digital.  Using this pseudonymised dataset, study analysts will examine associations between risk factors measured during the course of the study and cardiometabolic events.  The rich phenotypic and genotypic dataset will enable identification of ethnic differences in cardiometabolic disease risk and physical, mental and cognitive function into older age and it will be possible to identify which measured risk factors may explain ethnic differentials and at which period of life they may act most strongly.   \n\nTo meet study objectives UCL require information on admissions where diagnostic code lists include coronary heart disease, stroke, heart failure, diabetes, renal failure, dementia, retinopathy, hypertension, other cardiovascular disease.   Respiratory diseases will also be studied and mental health disorders and other common disorders may be added which are considered to exert important influences on function and well-being in older age.  As an example, from the HES extract, and within the UCL Data Safe Haven, it is expected that a variable will be generated which identifies a first or subsequent admission with coronary heart disease (ICD-9 codes 410 through 415 or ICD-10 codes I200 through I259, or any of the following operation codes from the Office of Populations and Surveys classification of interventions and procedures: K401 through K469, K491 through K504, K751 through K759, or U541 (coronary revascularization interventions or rehabilitation for ischemic heart disease)).  Date of first or subsequent event would be summarised as year of event. \n\nThe data is stored separately to participant identifiers.  The two datasets will not be re-linked and the data will remain pseudonymised as described above.  Month and Year of Death are stored in the dataset and used for statistical analyses but the dataset does not include full Date of Death.  Participant identifiers are retained separately solely for study administration purposes.",
+  "9b2aede613ad": "The rich phenotypic and genotypic dataset gathered over a 25 year period will enable analyses assessing mid-life predictors of health and ill-health in older age and will enable unique analyses of how these associations may be related to ethnicity and migration.  Good physical and cognitive functions are vital to healthy ageing and factors which influence these across the life course are poorly understood, particularly in non-European populations.  As the cohort is reaching older age, an increase in risk of heart failure, which can be severely debilitating, is expected. Ethnic differentials in heart failure rates are not well studied to date.  Increasing length of follow-up and novel analytic techniques, both statistical and relating to stored images and samples bring opportunities for more sophisticated analyses and the addition of hospital admission data to key outcome variables enhances the study’s power to identify events and to further elucidate mechanisms underlying the very marked ethnic differences in cardiometabolic disorders which were observed at visit 2.  \n\nUnderstanding of mechanisms in people of different ethnicities will ultimately lead to appropriate preventive strategies and treatments at different stages of life.\n\nAs noted with some detailed examples under ‘specific outputs’, previous use of HES data (1989-2011) enabled improved ascertainment of incident coronary heart disease and stroke events and resulted in 10 publications in high impact journals relating these outcomes to risk factors measured in mid-life (ages 40-70 at baseline).  A brief summary of some of these findings in the cohort to 2011 follows:\n\nDiabetes incidence in older British South Asians and African Caribbeans remains at least 2-fold even at age 80 years compared with British Europeans. The ethnic differentials in women were largely explained by midlife truncal obesity and insulin resistance, but the study was unable to explain the ethnic difference in men.  The study showed that obesity cut-points of 24 and 27 kg/m2 in South Asians and African Caribbeans respectively were equivalent to a body mass index of 30kg/m2 in Europeans in terms of diabetes risk; these latter analyses contributed to recent NICE guidelines for prevention of diabetes.  Diabetes was also found to be more ‘toxic’ in terms of stroke risk in the ethnic minorities.  Widely used tools (Framingham and QRISK2) for estimation of cardiovascular disease risk were found to be less precise in South Asians and African Caribbeans (particularly women), while a selection of 3 metabolic markers measured by NMR spectroscopy was found to be strongly predictive of cardiovascular risk regardless of ethnicity.  \n\nLack of adherence to four combined health behaviours was associated with 2 to 3-fold increased risk of incident CVD in Europeans and South Asians. A substantial population impact in the South Asian group indicates important potential for disease prevention in this high-risk group by adherence to healthy behaviours.  \n\nThe study also found marked ethnic differences in associations between blood pressure parameters and stroke and concluded that undue focus on systolic blood pressure for risk prediction, and current age and treatment thresholds may be inappropriate for individuals of South Asian ancestry.  This is not an exhaustive list of study findings in relation to incident cardiometabolic disease but indicates that the study is building a steady accumulation of understanding of ethnic differentials. There is clear need for further study, which this cohort is uniquely able to address.  The addition of HES data to 2016 is key to maximising event ascertainment in old age.",
+  "b0b6f598ee8a": "SABRE (Southall and Brent Revisited) Ethnic differences in risks and outcomes of the cardio metabolic syndrome (SABRE STUDY)\n\nThe aims of the study are to continue to follow up this tri-ethnic cohort, first studied 1988-91, in order to examine whether ethnic group differences in morbidity and mortality persist into older age and to determine underlying mechanisms for any such ethnic differentials.\n\nData access is restricted to those named in section 7 of this agreement. Any changes will be notified to the HSCIC.",
+  "bb452132a918": "The rich phenotypic and genotypic dataset gathered over a 25-30 year period since1988 will enable analyses assessing mid-life predictors of health and ill-health in older age and will enable unique analyses of how these associations may be related to ethnicity and migration.  Good physical and cognitive functions are vital to healthy ageing and factors which influence these across the life course are poorly understood, particularly in non-European populations.  As the cohort is reaching older age, an increase in risk of heart failure, which can be severely debilitating, is expected. Ethnic differentials in heart failure rates are not well studied to date.  Increasing length of follow-up and novel analytic techniques, both statistical and relating to stored images and samples bring opportunities for more sophisticated analyses and the addition of hospital admission data to key outcome variables enhances the study’s power to identify events and to further elucidate mechanisms underlying the very marked ethnic differences in cardiometabolic disorders.  \n\nUnderstanding of underlying causes of difference in physical and cognitive function in people of different ethnicities will ultimately lead to appropriate preventive strategies and treatments at different stages of life.\n  \nSABRE has recently reached the end of the 25-30 year wave of active clinical follow-up in January 2019, which includes detailed clinical assessment of cardiometabolic health in addition to self reported health, function, lifestyle and behaviours.  Participants are now on average aged 79 years.  Following data cleaning, detailed analyses of measured and self reported health in conjunction with medical history derived from hospital episode statistics will be conducted and findings related to risk factors and health at baseline and at the 20 year follow-up, thus using this rich dataset to  build on understanding of mid and later life risk factors in determining health, function and wellbeing in older age and to continue to study potential underlying causes for any ethnicity and gender differences in these outcomes.  \nFurther analyses are planned in order to meet the stated objectives for the 25-30 year follow-up and we anticipate that papers addressing primary objectives will be ready for submission for publication during the period 2019-2021.",
+  "bd1b08de32e8": "Study findings will continue to be published in peer-reviewed scientific journals, predominantly related to epidemiology, cardiovascular and metabolic disorders, cognitive, physical and psychological function, but also including more generic journals such as the BMJ, reflecting the increasing focus on overall health and function  in older age.  Publications will contain only aggregate level data without local identifiers and with suppression of small numbers in line with HES analysis guide.\n\nPublications to date are listed on the study website: www.sabrestudy.org. All publications since 2008 are open-access.  The audience is expected to consist mainly of academic researchers and clinicians. \nThe study team at UCL will further disseminate findings via participant and GP feedback sessions; newsletters, and the study website. \n\nAt the end of the current funding period (extended to December 2020) a report will be submitted to the funders (the British Heart Foundation) summarising findings.  This may be published on their website.  \n\nUpdate (May2019) : Since the previous data sharing agreement was approved in 2018, the study has been in active clinical follow-up (ended January 2019) and data preparation is not yet complete.  However,  a number of new research papers  based on this cohort have been submitted for publication or published during the period, some of which utilise earlier cardiovascular outcome data, some examples:\nTargets: \nComplete clinical data preparation and processing of HES, mortality and cancer data during 2019-20, ready for analysis and write up.  \nOutputs are expected to include dissemination of key findings to participants and their GPs during 2019-2020.  \nRelevant professional conference attendances with abstract presentations: include British Society of Cardiology, European Society of Cardiology, European Association for the Study of Diabetes, British and Irish Hypertension Society, Artery. 2019-2020 and ongoing. Note: All data for abstracts/presentations will be at aggregate level with suppression of small numbers in line with HES analysis guide.\nPapers to be prepared for submission to peer-reviewed journals during 2019-2020 will include studies of  risk factors over 30 years of follow-up in association with:  \n- ethnicity and  all-cause and cardiovascular disease-related  mortality, \n- ethnicity and  acute and chronic cardiovascular disease , including heart failure\n- ethnicity and diabetes incidence and complications\n- ethnicity and cancer\n- ethnicity and mental health",
+  "d02fe1765593": "Study findings will continue to be published in peer-reviewed scientific journals, predominantly related to epidemiology, cardiovascular and metabolic disorders, cognitive, physical and psychological function, but also including more generic journals such as the BMJ, reflecting the increasing focus on overall health in older age.  Publications will contain only aggregate level data without local identifiers and with suppression of small numbers in line with HES analysis guide.\n\nPublications to date are listed on the study website: www.sabrestudy.org. All publications since 2008 are open-access.  The audience is expected to consist mainly of academic researchers and clinicians. \n\nTwo examples of previous SABRE study related publications are listed below, both sets of analyses were importantly informed by data from a previous HES extract (no longer retained), and were published in high-impact factor peer-reviewed journals.  These generated considerable media interest and are widely cited.  \n\nTillin T, Hughes AD, Mayet J, Whincup P, Sattar N, Forouhi NG, McKeigue PM, Chaturvedi N. The relationship between metabolic risk factors and incident cardiovascular disease in Europeans, South Asians and African Caribbeans. SABRE (Southall and Brent revisited) – a prospective population based study. J Am Coll Cardiol. 2013 Apr 30;61(17):1777-86. http://dx.doi.org/10.1016/j.jacc.2012.12.046.   This paper published in JACC, the world no 1 cardiology journal (impact factor 16.5) confirmed ongoing excess coronary heart disease incidence in South Asians, with lower incidence in African Caribbeans compared with Europeans and confirmed elevated risk of stroke in both ethnic minority groups.  Measured baseline metabolic risk factors could not explain the ethnic group differences.  Future work in the cohort will examine whether these ethnic differentials continue into older age and whether newer genetic, epigenetic and metabolomic analyses will add to understanding of the underlying mechanisms.  Of particular concern was a much stronger association between diabetes and stroke risk in both ethnic minority groups compared with Europeans with diabetes- an association which is the subject of ongoing study in the SABRE cohort.  HES data, although not directly reported in the manuscript, contributed importantly to the identification of incident coronary and stroke events reported in these analyses. \n\nTillin T, Hughes AD, Godsland IF, Whincup P, Forouhi NG, Welsh P, Sattar N, McKeigue PM, Chaturvedi N. Insulin resistance and truncal obesity as important determinants of the greater incidence of diabetes in Indian Asians and African Caribbeans compared to Europeans? The Southall And Brent REvisited (SABRE) cohort. Diabetes Care 2013;36(2)(383-393). http://care.diabetesjournals.org/content/36/2/383.long. This paper demonstrated the extraordinarily high risk of incident diabetes continuing into old age in South Asians and African Caribbeans in comparison with Europeans.  Metabolic pathways leading to diabetes remain poorly understood. The study found that baseline insulin resistance and truncal obesity could explain the ethnic differences in women but not in men.  Further work continues to determine the reasons for the excess risk in men and to understand what underlies insulin resistance and truncal obesity.  HES data, although not directly reported in this manuscript, supported these analyses by enabling sensitivity analyses to assess the effects of bias due to loss to follow-up.\n\nA further 8 journal publications have examined associations between baseline risk factors and incident coronary heart disease or stroke where the outcomes were a composite of first events identified through participant reported events, primary care record review identified events and  HES identified hospital admissions.  One of these was published in Circulation (Wurtz et al), impact factor 14.3 and demonstrated in 3 separate population based studies (including SABRE) that metabolite profiling in large prospective cohorts identified phenylalanine, monounsaturated fatty acids, and polyunsaturated fatty acids as biomarkers for cardiovascular risk, substantiating the value of high-throughput metabolomics for biomarker discovery and improved risk assessment. Another publication in Heart (Tillin et al) identified that 2 widely used cardiovascular risk prediction tools (QRISK2 and Framingham) did not  perform consistently well in all ethnic groups and suggested that  further validation of QRISK2 in other multi-ethnic datasets, and better methods for identifying high risk African Caribbeans and South Asian women, are required.\n\nIn addition to journal publications, UCL will continue to submit abstracts for presentation at national and international conferences, such as Diabetes UK, the European Association for the Study of Diabetes, the European Society of Cardiology, Artery, and the British Hypertension Society. All data for abstracts/presentations will be at aggregate level with suppression of small numbers in line with HES analysis guide.\n\nThe study team will further disseminate findings via participant and GP feedback sessions; newsletters, and the study website.  All data for these occasions will be at aggregate level with suppression of small numbers in line with HES analysis guide.\n\nAt the end of the current funding period (2018) a report will be submitted to the funders (the British Heart Foundation) summarising findings.  This may be published on their website.  It will only contain at most aggregate level data, with small numbers suppressed in line with HES Analysis Guide.",
+  "d6fd9202db35": "The research has also enabled improved ascertainment of incident coronary heart disease and stroke events and resulted in 10 publications in high impact journals relating these outcomes to risk factors measured in mid-life (ages 40-70 at baseline).  Findings include:\n\n- Diabetes incidence in older British South Asians and African Caribbeans remains at least 2-fold even at age 80 years compared with British Europeans. The ethnic differentials in women were largely explained by midlife truncal obesity and insulin resistance, but the study was unable to explain the ethnic difference in men.  The study showed that obesity cut-points of 24 and 27 kg/m2 in South Asians and African Caribbeans respectively were equivalent to a body mass index of 30kg/m2 in Europeans in terms of diabetes risk; these latter analyses contributed to recent NICE guidelines for prevention of diabetes.  Diabetes was also found to be more ‘toxic’ in terms of stroke risk in the ethnic minorities.  Widely used tools (Framingham and QRISK2) for estimation of cardiovascular disease risk were found to be less precise in South Asians and African Caribbeans (particularly women), while a selection of 3 metabolic markers measured by NMR spectroscopy was found to be strongly predictive of cardiovascular risk regardless of ethnicity.  \n\n- Lack of adherence to four combined health behaviours was associated with a 2 to 3-fold increased risk of incident CVD in Europeans and South Asians. A substantial population impact in the South Asian group indicates important potential for disease prevention in this high-risk group by adherence to healthy behaviours.  \n\n- The study has also found marked ethnic differences in associations between blood pressure parameters and stroke and concluded that undue focus on systolic blood pressure for risk prediction, and current age and treatment thresholds may be inappropriate for individuals of South Asian ancestry.  \n\n- The study reported detrimental associations between air pollution (particulate measures) and cardiovascular disease mortality in both the SABRE and NHSD cohorts.  The study highlighted ethnic differences in associations between prediabetes in midlife and later development of coronary heart disease and stroke. \n\n- The study has confirmed ongoing excess coronary heart disease incidence in South Asians, with lower incidence in African Caribbeans compared with Europeans and confirmed elevated risk of stroke in both ethnic minority groups.  Measured baseline metabolic risk factors could not explain the ethnic group differences.  Future work in the cohort will examine whether these ethnic differentials continue into older age and whether newer genetic, epigenetic and metabolomic analyses will add to understanding of the underlying mechanisms.  Of particular concern was a much stronger association between diabetes and stroke risk in both ethnic minority groups compared with Europeans with diabetes- an association which is the subject of ongoing study in the SABRE cohort.  HES data contributed importantly to the identification of incident coronary and stroke events reported in these analyses.",
+  "e86161353190": "University College London (UCL) requires notifications of mortality and cancer registrations and linked HES data for its study cohort for use in the Medical Research Project: SABRE (Southall And Brent Revisited). This is a population-based cohort study, conducted at University College London, funded by the British Heart Foundation in its current 25 year follow-up phase.  It is unique as a long-standing tri-ethnic cohort consisting of people of European descent and first generation migrants of South Asian or African Caribbean descent.  This is an academic research study focusing on identifying and understanding the underlying reasons for ethnic group and sex differences in cardiometabolic disease and in physical, psychological and cognitive function in older age.\n\nSpecific questions for the 25 year follow-up study are:\n1. How large are ethnic /sex differences in cardiac function, cognitive function and hippocampal volumes in older age?\n2. To what extent do cardiac function, cognitive function and hippocampal volumes change over a 5 year period in each ethnic group?\n3. Which risk factors measured in mid-life and in early old age are most strongly associated with current cardiac and cognitive function and hippocampal volumes and with 5 year changes in these parameters? Can these risk factors explain ethnic differences in cardiac and cognitive function?\n4. How large are gender differences in current disorders of cardiac and cognitive function and in their associations with current risk factors?\n5. Do ethnic differences in incident cardiometabolic disorders persist into older age?\n6. Which risk factors or risk factor profiles measured in mid-life and early old age are most strongly associated with incident cardiometabolic disorders and which best explain ethnic differences in incidence?\n\nThe study receives ongoing notifications of mortality and cancer registrations from NHS Digital.  Continuing supply of this data is required in order to meet study objectives.  Death and cause of death are key outcomes for the research objectives and cancer registrations are also key to understanding ethnic disparities in development and survival from the most frequent types of cancer and how these impact upon function in older age.\n\nThe study has previously utilised the List Cleaning service from time to time when in active follow-up in order to ensure that the correct participant addresses are used in order to contact participants.   Use of this service has helped the study to avoid trying to contact deceased participants.  The List Cleaning outputs were used to update the administration database (held separately from other data within the UCL data safe haven) so that UCL could write to as many participants as possible inviting them to complete questionnaires or come into the UCL clinic for a detailed investigation.  Under this Data Sharing Agreement, UCL may retain List Cleaning outputs received previously but is not permitted to make further use of the List Cleaning service.\n\nLinked HES data has previously been disseminated in order to identify incident cardiometabolic events (in particular coronary heart disease, heart failure, stroke, dementia, diabetes), and other events which may affect physical and cognitive function, which have occurred during the follow-up period.  Details of all hospital episodes involving the cohort (not limited to the previously stated conditions) were required to address key study objectives with regard to physical and cognitive function in older age in association with current and mid-life risk factors.  Analysis considers any and all potential contributing factors.  No HES data is requested under this agreement.\n\nThese events will supplement information provided by participant self-report at 20 and 25 years, from primary care medical record review conducted during the 20 year follow-up and from cancer and mortality flagging, together with detailed clinical measurements made at the SABRE clinics at baseline, 20 and 25 year follow-up.   The data will be used to analyse risk factors measured in mid- and later life in association with these incident events in order to build on current understanding of causal mechanisms.\n\nData from 1989 to the present are required because participants underwent detailed examinations at baseline (1989-91) and the aim is to follow this cohort through their experiences since to understand what happened in later life and relate that to the baseline.   This will enable UCL to gain as complete as possible a picture of hospital admissions, and hence incident events, over the entire cohort follow-up.  Data from the entire study period are crucial for determining age of onset of events, as well as the extent and nature of ill-health from mid to later life, and for relating these to current and mid-life cardiometabolic and other risk factors and how these influence the key study outcomes of physical and cognitive function in older  life in each of the three ethnic groups.  \n\nDue to having only recently received the HES data, this request is to extend the term of the data sharing agreement to complete the complex analyses which will be required to integrate outcomes derived from HES data with mortality and cancer registration data and the very detailed phenotypic data collected during the course of the study period since 1989.  In addition, this request is also to add an additional 90 participants to the cohort and to receive and continue to receive mortality and cancer registration data on the existing cohort, as these are, sadly, key outcomes which can be related to risk factors identified in earlier life.  It is also important that notifications of death are received.  No HES data is being disseminated under this new agreement.\n\nData will not be used for commercial purposes, nor provided in record level to any third party, nor used for marketing purposes.  \n\nFollowing the previous request for the HES extract, the IGARD committee asked UCL to clarify to participants their rights to withdraw at any time from the study and to improve the participant information sheet with regard to data linkage. In order to meet these requirements, UCL firstly sent out a participant newsletter (before the end of July 2017 as requested, content approved by NHS Digital) which included both withdrawal from the study and a clearer description of data linkage. As requested, UCL have also modified the participant information sheet to include these items and these amendments have been approved by REC at UCL.  \n\nIGARD also requested clarification as to why UCL had not sought to consent all study participants for study health data linkage.  There are a number of reasons:\n\n- At the start of the third wave of follow-up (2014-2018) UCL conducted a pilot study to assess whether it was feasible to obtain consent for data linkage using a postal approach to existing participants (UCL sent out a covering letter, participant information, consent form including an item on data linkage, health and lifestyle questionnaire and reply paid return envelope).  At that time there were 3400 surviving participants, aged between 65 and 98 years.  UCL approached 773 participants who had visited the clinic at the previous phase of follow-up.  Of these people, who UCL had considered to be highly motivated participants, UCL received positive responses from 65%, negative responses from 9%, no response from 17%, address incorrect (1%) and a further 10% who requested time to consider or who asked to be contacted again in the future.  Of the latter group, although UCL know that they have received the information, very few have been contactable with regard to the study, bringing the total estimated non-response rate in this group to approximately 25%.   This non-response rate was unexpectedly high and likely to be related to ill health, particularly cognitive impairment. \n\n- With a 17-25% non-response rate already demonstrated in the pilot study of the highly motivated group, UCL had reasonable grounds for assuming a much higher non-response rate in the rest of the cohort (2070 survivors), with undoubted risk to the scientific integrity of the follow-up study. UCL had consulted with the Confidentiality Advisory Group (CAG) and followed their advice regarding application for section 251 support.  With CAG agreement UCL modified the approach to existing participants  by removing the item on consent to data linkage from the postal consent form, while adding an item at the start of the questionnaire that enabled participants to opt-out of data linkage even if they chose not to come in to the clinic.  21 people chose to opt out of data linkage in this way.  UCL then placed an additional item requesting consent for data linkage in the clinic consent form for responders who had agreed to visit UCL for clinical follow-up.  \n\n- Loss to follow-up is an important problem in older cohorts.  People who do not respond, or are lost to follow-up in other ways, may be different from those who participate - often they are more unwell than responders.  This is likely to lead to bias and to jeopardise the scientific value of the findings and grossly bias public health messages and potential  interventions.   Given the unique experiences of the first generation migrants in this cohort, which may be vital in informing health service strategies in an increasingly migratory world,  UCL believe that it would be a waste of the data and commitment to the study in earlier years if UCL are unable to reach sound scientific conclusions due to loss to follow-up.  This is where linkage to health service records can minimise the effects of loss to follow-up due to non-response.",
+  "eb62fb177baa": "The identifiers of SABRE participants have previously been shared with NHS Digital’s predecessor organisation(s) and NHS Digital has provided regular event notifications including notifications of mortality and cancer registrations.  The cohort was previously split into two groups: cancer notifiable participants and non-cancer notifiable participants.\n\nThe cohort has been reorganised into three groups, under three data sharing agreements: participants who gave informed consent (cancer notifiable) (NIC-148407-LRP3M); cancer notifiable participants covered by section 251 support and approved researcher (NIC-91374-Z5V6Y), and non-cancer notifiable participants covered by section 251 support (NIC-99077-Q0K6Z).  To ensure that participants are correctly re-organised into the appropriate groups, UCL has sent NHS Digital 3 separate files (one for each respective group) containing participant identifiers.\n\nNHS Digital will then provide reports on a quarterly  basis.  \n\nNHS Digital have linked the respective cohort groups to HES data and supplied to UCL encrypted files containing hospital admissions data identified only by study Pseudo-ID and encrypted HESID and containing no other identifiers.  The datasets were placed immediately into UCL’s Data Safe Haven.\n\nUsing the Pseudo-ID, the data will be processed within the Data Safe Haven to provide derived variables, for example:  summary diagnostic categories of interest (as described below) for hospital admission episodes with year of admission, summary cause of death with year of death, summary region of cancer and year of diagnosis.  There will be no direct linkage of data provided by NHS Digital to other study data.  The provided data are stored in an encrypted file within the Data Safe Haven at the Gower Street location.  The data can be remotely accessed at the Institute of Cardiovascular Science by accredited SABRE study researchers only – all of whom are substantive employees of UCL.  Access must be approved by the Data Manager.\n\nThe raw data supplied by NHS Digital will not be downloaded or otherwise transferred from the Data Safe Haven.  Summary variables derived from the NHS Digital data may be downloaded from the Data Safe Haven.  These derived summary variables are stored on a UCL server at the Institute of Cardiovascular Science to be used solely for the purposes of statistical analyses in accordance with the study objectives.  \n\nThe HES and PDS data are stored separately to participant identifiers and will not be relinked.  The data will remain pseudonymised.  Month and Year of Death are stored in the dataset and used for statistical analyses but the dataset does not include full Date of Death.  Participant identifiers are retained separately within the data safe haven solely for study administration purposes.\n\nData will not be used for commercial purposes, nor provided in record level to any third party, nor used for marketing purposes.  \n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "ef9ff1f276a4": "The research has also enabled improved ascertainment of incident coronary heart disease and stroke events and resulted in 10 publications in high impact journals relating these outcomes to risk factors measured in mid-life (ages 40-70 at baseline).  Findings include:\n\n- Diabetes incidence in older British South Asians and African Caribbeans remains at least 2-fold even at age 80 years compared with British Europeans. The ethnic differentials in women were largely explained by midlife truncal obesity and insulin resistance, but the study was unable to explain the ethnic difference in men. It is anticipated that more recent follow-up may elucidate these mechanisms. \n-The study showed that obesity cut-points of 24 and 27 kg/m2 in South Asians and African Caribbeans respectively were equivalent to a body mass index of 30kg/m2 in Europeans in terms of diabetes risk; these latter analyses contributed to recent NICE guidelines for prevention of diabetes.  Diabetes was also found to be more ‘toxic’ in terms of stroke risk in the ethnic minorities.  \n-Widely used tools (Framingham and QRISK2) for estimation of cardiovascular disease risk were found to be less precise in South Asians and African Caribbeans (particularly women), while a selection of 3 metabolic markers measured by NMR spectroscopy was found to be strongly predictive of cardiovascular risk regardless of ethnicity.  \n- Lack of adherence to four combined health behaviours was associated with a 2 to 3-fold increased risk of incident CVD in Europeans and South Asians. A substantial population impact in the South Asian group indicates important potential for disease prevention in this high-risk group by adherence to healthy behaviours.  \n- The study has also found marked ethnic differences in associations between blood pressure parameters and stroke and concluded that undue focus on systolic blood pressure for risk prediction, and current age and treatment thresholds may be inappropriate for individuals of South Asian ancestry.  \n- The study reported detrimental associations between air pollution (particulate measures) and cardiovascular disease mortality in both the SABRE and Whitehall cohorts.  The study highlighted ethnic differences in associations between prediabetes in midlife and later development of coronary heart disease and stroke. \n- The study has confirmed ongoing excess coronary heart disease incidence in South Asians, with lower incidence in African Caribbeans compared with Europeans and confirmed elevated risk of stroke in both ethnic minority groups.  Measured baseline metabolic risk factors could not explain the ethnic group differences.  Future work in the cohort will examine whether these ethnic differentials continue into older age and whether newer genetic, epigenetic and metabolomic analyses will add to understanding of the underlying mechanisms.  Of particular concern was a much stronger association between diabetes and stroke risk in both ethnic minority groups compared with Europeans with diabetes- an association which is the subject of ongoing study in the SABRE cohort.  HES data contributed importantly to the identification of incident coronary and stroke events reported in these analyses.\n- The study has also shown ethnic differences in sleep quality which related to cardiovascular disease and cancer mortality, notably difficulty in falling asleep was associated with increased risk of all-cause mortality in South Asians, while early morning waking was associated with increased risk of cardiovascular death in Europeans\n-We have also shown that different markers of kidney function predict cardiovascular disease and mortality in Europeans compared with South Asians, suggesting that urinary albumin: creatinine ratio may have greater utility in South Asians and that estimated glomerular filtration rate may be more useful in Europeans\n\nRecently accepted for publication:\nVictoria Garfield, Roshni Joshi, Jorge Garcia-Hernandez, Therese Tillin, Nish Chaturvedi\nThe relationship between sleep quality and all-cause, CVD and cancer mortality: The Southall and Brent REvisited Study (SABRE).  Sleep Medicine, in press\nDehbi HM, Blangiardo M, Gulliver J, Fecht D, de Hoogh K, Al-Kanaani Z, Tillin T, Hardy R, Chaturvedi N, Hansell AL Air pollution and cardiovascular mortality with over 25years follow-up: A combined analysis of two British cohorts. Environ Int. 2017 Feb;99:275-281. doi: 10.1016/j.envint.2016.12.004. Epub 2016 Dec 7.\nHalonen JI, Dehbi HM, Hansell AL, Gulliver J, Fecht D, Blangiardo M, Kelly FJ, Chaturvedi N, Kivimäki M, Tonne C. Associations of night-time road traffic noise with carotid intima-media thickness and blood pressure: The Whitehall II and SABRE study cohorts. Environ Int. 2017 Jan;98:54-61. doi: 10.1016/j.envint.2016.09.023. Epub 2016 Oct 3.\n\nRecently submitted:\nJournal: The Lancet\nTitle:  Age at natural menopause and risk of incident cardiovascular disease: A pooled analysis of 15 studies.\nGita Mishra;  Dongshan Zhu; Hsin-Fang Chung; Annette J Dobson; Nirmala Pandeya; Graham G Giles; Fiona Bruinsma; Eric J Brunner; Diana Kuh; Rebecca Hardy; Nancy E Avis; Ellen B Gold; Carol A Derby; Karen A Matthews; Janet E Cade; Darren C Greenwood; Panayotes Demakakos; Daniel E Brown; Lynnette L Sievert; Debra Anderson; Kunihiko Hayashi; Jung Su Lee; Hideki Mizunuma; Therese Tillin; Mette K Simonsen; Hans-Olov Adami; Elisabete Weiderpass; \n\nJournal:\nInternational Journal of Cardiology\nWang J, Tillin T, Hughes AD, Chaturvedi NC. Associations between family history and coronary artery calcification and coronary heart disease in Europeans and South Asians\nJournal: Nephrology, Dialysis and Transplantation\nEastwood S, Chaturvedi N, Sattar N, Welsh P, Hughes AD, Tillin T. Associations between markers of kidney function and mortality or incident cardiovascular disease; a comparison of UK South Asian and European groups"
+ }
+}

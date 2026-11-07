@@ -1,0 +1,78 @@
+{
+ "base_reference": "DARS-NIC-07787-Z1W1X",
+ "versions": [
+  {
+   "reference": "DARS-NIC-07787-Z1W1X-v0.4",
+   "version": "0.4",
+   "organisation": "Oxford University Hospitals NHS Trust",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "75c9473bcea6",
+     "activities": "06beb4c3cce4",
+     "expected_output": "33b7efea680c",
+     "expected_benefits": "6a1b944dc6d8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 42(4) of the Statistics and Registration Service Act (2007) as amended by section 287 of the Health and Social Care Act (2012)",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 7
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-07787-Z1W1X-v1.4",
+   "version": "1.4",
+   "organisation": "OXFORD UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2017-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-12-01"
+     ],
+     "objective": "75c9473bcea6",
+     "activities": "06beb4c3cce4",
+     "expected_output": "717aabf78580",
+     "expected_benefits": "6a1b944dc6d8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-12-01"
+     ],
+     "rows": 8
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "06beb4c3cce4": "Case-mix adjusted outcomes in patients admitted to acute/general medicine will be compared with Trust-level antibiotic usage data from the English Surveillance Programme for Antimicrobial Utilisation and Resistance (ESPAUR), in an observational ecological (Trust-level) analysis. Hospital-level data will be used as a proxy for consumption in acute/general medicine as speciality-level data is not yet available in ESPAUR. Four outcomes will be considered:\n•\tMortality by 14 and 30 days after admission (in and out of hospital) (binary indicator)\n•\tAdmission to intensive care unit or high-dependency unit within this admission (identified from number of days of high-dependency/augmented care within each spell)\n•\tLength of stay of the admission spell, both to actual discharge date and date medically ready for discharge\n•\tRe-admission (non-elective) within 30 days of discharge (regardless of re-admission speciality)\n\nAntibiotic use will be considered at the level of each Trust in terms of defined daily doses (DDDs: a World Health Organisation system for standardising antibiotic usage), overall and by drug class, per quarter, per year and over the 5 year study period. Broad spectrum will be defined as: co-amoxiclav; meropenem; second (eg cefuroxime), third (e.g. ceftriaxone ceftazidime) or fourth (e.g. cefepime) generation cephalosporins; quinolones; piperacillin/tazobactam.\n\nThe following potential confounders will be adjusted for age at admission (years); gender; ethnicity; index of multiple deprivation (IMD) score; Clinical Classifications Software (CCS) group of primary diagnosis code; Charlson co-morbidity score (calculated from secondary diagnosis codes associated with the first consultant episode within each spell, or the second consultant episode if the first is A&E); immunosuppression (calculated from the secondary diagnosis codes); intended management (admitted overnight, not admitted overnight, etc.); patient classification (actual management: admitted overnight, not admitted overnight etc.); admission day of the week, day of the year; calendar year; admission method; admission source; number of admissions (excluding as day case) in the previous year.\n\nThe null hypothesis is that there is no association between Trust-level antibiotic usage and outcomes in patients admitted to acute/general medicine.\n\nThe analysis will be conducted by medical statisticians only. Any individual using the data for such analysis will be either employed by the Trust or by the University of Oxford, with an honorary contract with the Trust in place. The data will be stored and processed on an NHS server housed within the Oxford University Hospitals NHS Trust (OUH), within the NHS N3 firewall. A database manager/software engineer will process the data onto the NHS server.\nNo third parties will store, process or access record-level data.",
+  "33b7efea680c": "The results of these analyses will be published in a peer-reviewed medical journal - no record-level data will be an output and any small numbers will be suppressed in line with the HES analysis guide. These analyses are comparing Trust-level outcome data with Trust-level antibiotic usage (see protocol for further details). Therefore, even though the Trust will make every attempt to adjust for case-mix and other factors that could influence outcomes and antibiotic usage, such adjustments may be imperfect, and any residual association does not necessarily imply causation. Interpretation of results from these analyses will explicitly highlight this. Standardly, such biases can occur in either direction, making it impossible to work out whether effects observed in observational studies are optimistic or conservative; hence, the need to rely on randomised controlled trials for unbiased inference regarding intervention effects. However, a priori, in this specific context of adults admitted to acute general/medical specialities, it is highly likely that any residual bias is primarily in one direction, namely that “less sick” individuals (at lower risk of the various clinical outcomes) have lower antibiotic exposure. Given this, not observing harm in these observational analyses is necessary to conclude that no harm would be associated with an intervention to reduce antibiotic use in this group of patients. If one observes evidence for harm from this observational analysis, after adjustment for as many confounders as possible, this would seriously undermine the rationale for the proposed trial within the larger Programme Grant, necessitating high-level review of the larger project.\n\nIt is expected that a publication will be submitted to a medical journal within 1 year of receiving the data from HSCIC. The Trust will also disseminate findings through the patient and public engagement activities ongoing within ARK and the Oxford Biomedical Research Centre within which key team members also work. The Trust are requesting for the data to be retained for 18 months from the date of provision, to allow for queries during the publication process.",
+  "6a1b944dc6d8": "This analysis would inform the development of a behavioural intervention to reduce antibiotic usage in acute/general medical inpatients. If the behaviour intervention reduces antibiotic use without changing patient outcomes, then it would be immediately ready for NHS deployment. It would be freely available to the NHS (under the terms of the contract with NIHR).\n\nProviding that the results do not suggest that substantial harm could result from reducing antibiotic use (in which case the whole Programme Grant will be reviewed by the funders and the Programme Steering Committee), the results will be used, together with other published studies, to inform the development of a ‘review &revise’ behavioural intervention package for inpatients/carers and healthcare professionals aimed at reducing antibiotic usage. This behavioural intervention will then be tested in a large cluster-randomised stepped-wedge trial during years 3-5 of the Programme Grant.",
+  "717aabf78580": "The results of these analyses will be published in a peer-reviewed medical journal - no record-level data will be an output and any small numbers will be suppressed in line with the HES analysis guide. These analyses are comparing Trust-level outcome data with Trust-level antibiotic usage (see protocol for further details). Therefore, even though the Trust will make every attempt to adjust for case-mix and other factors that could influence outcomes and antibiotic usage, such adjustments may be imperfect, and any residual association does not necessarily imply causation. Interpretation of results from these analyses will explicitly highlight this. Standardly, such biases can occur in either direction, making it impossible to work out whether effects observed in observational studies are optimistic or conservative; hence, the need to rely on randomised controlled trials for unbiased inference regarding intervention effects. However, a priori, in this specific context of adults admitted to acute general/medical specialities, it is highly likely that any residual bias is primarily in one direction, namely that “less sick” individuals (at lower risk of the various clinical outcomes) have lower antibiotic exposure. Given this, not observing harm in these observational analyses is necessary to conclude that no harm would be associated with an intervention to reduce antibiotic use in this group of patients. If one observes evidence for harm from this observational analysis, after adjustment for as many confounders as possible, this would seriously undermine the rationale for the proposed trial within the larger Programme Grant, necessitating high-level review of the larger project.\n\nIt is expected that a publication will be submitted to a medical journal within 1 year of receiving the data from HSCIC. The Trust will also disseminate findings through the patient and public engagement activities ongoing within ARK and the Oxford Biomedical Research Centre within which key team members also work. The Trust are requesting for the data to be retained for 12 months from the date of provision, to allow for queries during the publication process.",
+  "75c9473bcea6": "To identify whether there is any evidence from existing electronic health record data to support the key prescriber concern that early antibiotic review leading to reduced antimicrobial usage will cause greater rates of treatment failure/mortality. \n\nThe Antibiotic Reduction & Konservation (ARK) programme’s overarching aim is to reduce the incidence of serious infections caused by antibiotic-resistant bacteria in the future, through substantially and safely reducing antibiotic use in hospitals now. The programme has three specific research questions \n(i) how can antibiotic prescription ‘review & revise’ strategies be implemented optimally to reduce antibiotic use safely within hospitals? \n(ii) can a feasible inexpensive package of interventions that increase prescriber compliance with ‘review & revise’, and patient acceptability of shorter antibiotic therapy durations driven by ‘review & revise’ be built? \n(iii) are ‘review & revise’ strategies cost-effective across a range of scenarios reflecting plausible associations between antibiotic use now and future resistance leading to loss of antibiotic options? \n\nThe goal of reducing total antibiotic burden in acute/general medical inpatients by at least 15% will be addressed through 6 work-packages. WP1-WP3 will provide underpinning data for design and piloting in WP4 of a ‘review & revise’ intervention package for inpatients/carers and healthcare professionals. WP5 will evaluate its effectiveness and safety, and WP6 will conduct health-economic evaluations. This request for data is for observational analysis as part of WP2."
+ }
+}

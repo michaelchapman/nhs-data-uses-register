@@ -1,0 +1,76 @@
+{
+ "base_reference": "DARS-NIC-49238-R7G6V",
+ "versions": [
+  {
+   "reference": "DARS-NIC-49238-R7G6V-v0.20",
+   "version": "0.20",
+   "organisation": "BRADFORD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01",
+    "2017-12-01",
+    "2018-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "objective": "c368e9bcf303",
+     "activities": "265052d73898",
+     "expected_output": "3820bf2d61be",
+     "expected_benefits": "6065ac4640d6"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01",
+      "2017-12-01",
+      "2018-03-01"
+     ],
+     "rows": 3
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "265052d73898": "HDIS will be only be accessed by an analyst at the Bradford Institute for Health Research (BIHR). BIHR employees have Bradford Teaching Hospitals NHS Foundation Trust (BTHFT) employment contracts. \n\nNo data is being sent as part of this request by BTHFT to NHS Digital.\nThis application/agreement is for online access to the record-level HES database via the HDIS system. The system is hosted and audited by NHS Digital meaning that large transfers of data to on-site servers is reduced and NHS Digital has the ability to audit the use and access to the data.  Users are only permitted to download aggregated data (which may contain small numbers) from the system. Downloading of record-level data or record-level linkage is not permitted under this agreement. \n\nHDIS is accessed via a two-factor secure authentication method to approved users who are in receipt of an encryption token ID.  Users have to attend training before the account is set up and users are only permitted to access the datasets that are agreed within this agreement.  Users log onto the HDIS system and are presented with a SAS software application called Enterprise Guide which presents the users with a list of available data sets and available reference data tables so that they can return appropriate descriptions to the coded data.\n\nThe access and use of the system is fully auditable and all users have to comply with the use of the data as specified in this agreement.  The software tool also provides users with the ability to perform full data minimisation and filtering of the HES data as part of processing activities. Users are not permitted to upload data into the system.\nHDIS will provide BTHFT with access to all HES data available through HDIS but only a filtered subset will be used by BTHFT for this feasibility assessment. The filtered subset will only include data for Bradford and Airedale Trusts.\n\nThere will be no linkage with other record-level data, nor will there be any attempt to re-identify an individual through the use of the data.\n\nIt is not expected that the HDIS will provide BTHFT with information required to identify early indicators, risk factors and current pathways due to the fact that the data is only available online and cannot be downloaded. Further requests for HES extracts may provide this information.\n\nIf identified as feasible BTHFT will use this information to identify early indicators, risk factors and current pathways in relation to childhood obesity and asthma and elderly frailty.\n\nBTHFT expect to identify the following for the Bradford population:\n\ni. child health - childhood obesity related episodes\nii. child health – childhood asthma episodes\niii. elderly frailty population related episodes\niv. child health – childhood autism episodes\n\nFrom these episodes, BTHFT will also be able to determine:\na) time to be seen by a consultant\nb) time for treatment\nc) admittance to emergency care during the day and night including any patterns\nd) target population by ethnicity, age or geographical location\ne) length of stays\nf) inpatient and outpatient information\nThese will then inform the process to request HES data that can be downloaded at BTHFT.",
+  "3820bf2d61be": "For the four areas of childhood obesity, autism and asthma and elderly frailty, BTHFT expect to identify early indicators, risk factors and the current pathways. \n\nA specific researcher based at the Bradford Institute for Health Research will analyse the HES data in HDIS to identify these elements. A report will be produced as a result of informal discussions with the statistician and the chief investigator to discuss what HES data would be useful to the child health and elderly frailty projects.\nThe use of HDIS in the early stages will help define the expected requirement for a HES extract in future.  It may also indicate which care pathways should be analysed in more detail.\n\nThe outputs will only contain recommendations on further use of HES data. All outputs will contain only data that is aggregated with small numbers suppressed in line with the HES Analysis Guide.\n\nFurther work is expected in the future, using a HES extract, to model care pathways and alternative pathways (offering mitigation, risk reduction and cost/benefit savings to the NHS) will be produced.",
+  "6065ac4640d6": "The primary benefit to working with HDIS is to establish the requirements for a HES extract, so as to minimise the amount of data being processed by BTHFT.  The majority of the benefit to health will come from working with the HES extract itself.\n\nBTHFT expect that by the end of December 2017, they will have identified the following service improvements to pathways of care using routine electronic data as a result of the analysis for the Bradford population:\n\ni. child health - childhood obesity related episodes\nii. child health – childhood asthma episodes\niii. elderly frailty population related episodes\niv. Improving the pathway for the diagnosis of autism in children\n\n1)     Identifying health needs of the elderly population\n2)     Identifying health needs of the childhood population that are obese or at risk of becoming obese\n3)\tImproving public health intelligence by risk stratification\n4)\tUnderstanding patient flow problems to redesign care pathways\n5)     Developing quality improvement projects to provide supportive care to patients who most need it\n6)     Understanding problems in patient flow and urgent care \n7)     Effectively design and evaluate quality improvement projects to improve the effectiveness of healthcare delivery\n8)     Identify and target interventions for patients at higher risk of needing increased care \n9)    Targeted supported self-management care pathway for people with frailty, targeted at those most likely to gain benefit, to improve quality of life in older age\n10)  Develop risk prediction models that will identify children at risk of hospital admission and redesign care pathways to promote preventative care and appropriate adherence.\n11)  Identify patterns in childhood to help BTHFT understand how obesity affects the population in Bradford and to target interventions to prevent obesity in children\n12) Frailty affects adulthood and one in ten people aged over 65 and up to half of those aged over 85. The presence of frailty identifies a subgroup of older people with multi-morbidity at especially high risk of adverse outcomes including falls, disability, hospitalisation, loneliness, care home admission and death. \n13) proportion of older people who utilise hospital services\n14)To identify health needs of childhood population diagnosed with autism or at risk of being diagnosed with autism\n15) proportion of children that have autism diagnosis using hospital services",
+  "c368e9bcf303": "Bradford Teaching Hospital NHS Foundation Trust (BTHFT) require access to the HES datasets through the HDIS for the purpose of identifying the data required to support a larger programme of work in relation to improving patients health and social care in Bradford.\n\nOn a point of vocabulary, this and the following sections (Objectives for Processing, Processing Activities, Specific Outputs, Expected Benefits) of the agreement/application make frequent use of the work \"identify\".  For clarity, there will be no linkage with other record-level data, nor will there be any attempt to re-identify an individual through the use of the data.  Where the word \"identify\" is used, it should be considered to mean \"establish\" or \"determine\".\n\nConnected Yorkshire Connected Health City (www.connectedhealthcities.org/connected-health-cities/yorkshire-humber/) (CYCHC) is a region-wide digital community programme covering over five million people that will provide a shared platform for developing innovative approaches to improving health and wellbeing. \n\nThe work of BTHFT helps support the CYCHC programme, but is limited in scope to Bradford, and no other organisation will have access to any data other than where it is aggregated with small numbers supressed in line with the HES Analysis Guide.\n\nAlthough linked to the CHC programme this data request is to provide access to HES data to support specifically four Bradford projects being undertaken for the Connected Yorkshire CHC programme by BTHFT: - \ni.\tPromoting healthier child growth\nii.\tUrgent care for childhood asthma\niii.\tEmpowering independence in older people\niv.\tImproving the pathway for the diagnosis of autism in children\n\nThe Connected Yorkshire CHC collaboration identifies the other partners (University of Leeds, University of Sheffield, and University of York) involved that have been allocated an award, work on their local respective projects but do not in any way influence the Bradford projects. For example, Bradford has a project on child health and the project team work for BTHFT. Any decisions regarding the child health project are made by the project manager assigned to that project. The statistician in Bradford is only supporting the child health projects in Bradford.\n\nThe overall project of work is to look at four  areas of health and social care within the Bradford area. These areas are childhood obesity, autism and asthma and elderly frailty. BTHFT expect to use an extract of HES to identify early indicators, risk factors and the current pathways to identify methodologies for improving early identification of these issues. Prior to requesting a HES extract BTHFT would like to use HDIS to access the pseudonymised HES data through the HDIS for the following:\n\nTo look at the feasibility of identifying the following for the Bradford population:\n\ni. child health - childhood obesity related episodes\nii. child health – childhood asthma episodes\niii. elderly frailty population related episodes\niv. child health – child autism episodes\nOnce these have been identified BTHFT would then test the feasibility of identifying the following in relation to the episodes:\nFor the above episodes, BTHFT will also be able to evaluate: -\na) time to be seen by a consultant\nb) time for treatment\nc) admittance to emergency care during the day and night including any patterns\nd) target population by ethnicity, age or geographical location\ne) length of stays\nf) inpatient and outpatient information\n\nIf identified as feasible BTHFT will use this information to identify early indicators, risk factors and current pathways in relation to childhood obesity and asthma and elderly frailty.\nAnalysts will also explore the data to define whether the HES data is suitable to answer/address the areas being explored and to evaluate what further data is needed for the projects in Bradford to improve patient’s health and social care in Bradford. \n\nIf this project identifies it is feasible to identify the above information from the HES data accessed through HDIS BTHFT will make a separate application for an extract of HES data in order to undertake the full programme of work in relation to childhood obesity and asthma, childhood autism and elderly frailty.\n\nChildhood obesity causes poor health in childhood and later life, and research has shown it is one of the biggest public health threats facing this country.  By analysing routinely collected data to identify patterns in childhood to understand how obesity affects BTHFT population in Bradford, identify target populations based on geographical location and ethnicity will enable interventions to be targeted to prevent obesity in children.    \n\nThe incidence and prevalence of asthma among Bradford children is high, and poorly controlled asthma can be life-threatening.  Asthma is one of the commonest reasons for urgent admissions to secondary care among children in Bradford, accounting for around 30% of the total.  Carers are using emergency hospital care more and more as their initial health provider and there is a steady rise in A&E attendances.  Unplanned admissions to hospital result in considerable stress for the child and family, and they are also costly for the family and the wider health economy.\n\nAdditionally frailty affects adults and one in ten people aged over 65 and up to half of those aged over 85. The presence of frailty identifies a subgroup of older people with multi-morbidity at especially high risk of adverse outcomes including falls, disability, hospitalisation, loneliness, care home admission and death. These outcomes have considerable impact on health and well-being of older people and their carers, and are of major importance for UK health and social care services.\n\nAutism is a neurodevelopmental disorder (present from birth) that leads to impaired reciprocal social interaction, communication and stereotyped behaviour.  The impact of this condition is profound but children with autism often wait many years before they are referred to a clinic that can diagnose the condition.  This is often despite considerable family contact with different parts of the health service, and the child struggling within the school environment.  Health professionals and teachers commonly lack the knowledge or confidence to suggest referral for assessment, and thus the pathway through the health service to get a diagnosis is often long and frustrating. By analysing routinely collected data to identify the incidence of autism in hospital records, identify patterns and target populations based on geographical locations, age and ethnicity to better identify children at higher risk of later diagnosis of child autism."
+ }
+}

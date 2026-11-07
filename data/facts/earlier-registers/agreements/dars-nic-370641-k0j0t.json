@@ -1,0 +1,163 @@
+{
+ "base_reference": "DARS-NIC-370641-K0J0T",
+ "versions": [
+  {
+   "reference": "DARS-NIC-370641-K0J0T",
+   "version": "",
+   "organisation": "University of Leicester",
+   "organisation_type": "",
+   "listed": [
+    "2016-01-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-01-01"
+     ],
+     "objective": "5989ea6165b8"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Bespoke Extract/Linkage : HES A&E",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Critical Care",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Inpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES ONS Mortality",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Approved researcher accreditation under section 39(4)(i) and 39(5) of the Statistical Registration Service Act 2007",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Bespoke Extract/Linkage : HES Outpatients",
+     "form": "Pseudonymised",
+     "sensitivity": "Non-Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-off",
+     "periods": [
+      "2016-01-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-370641-K0J0T-v1.4",
+   "version": "1.4",
+   "organisation": "UNIVERSITY OF LEICESTER",
+   "organisation_type": "",
+   "listed": [
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-03-01"
+     ],
+     "objective": "d849e67cfe3a",
+     "activities": "05271b9c2c9b",
+     "expected_output": "4144efa19df4",
+     "expected_benefits": "c4fb4ba35d18"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Office for National Statistics Mortality Data",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "One-Off",
+     "periods": [
+      "2017-03-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "05271b9c2c9b": "1.\tNAAASP will identify all men invited for screening in the 2013/2014 English screening cohort and all men with small AAA already under NAAASP surveillance. NAAASP holds this personal information for these men for the purposes of their clinical care. \nNAAASP will provide screening outcome data for the cohort to the University of Leicester. This data will contain a study ID for each individual.  No personal data will be transferred to the University of Leicester.\nNAAASP will provide the NHS numbers of these men to the HSCIC, together with a study ID.  \n\n2.\tHSCIC will link the patients identified by NAAASP with HES/HES-ONS data using the NHS numbers and provide this linked data to the research team at the University of Leicester, using the same study ID as those used by NAAASP to transfer data to the University of Leicester. \nHSCIC will then supply the University of Leicester with HES/HES-ONS data stripped of identifiers other than the study ID supplied by NAAASP.\nThe University of Leicester will apply for updated linkage reports on a yearly basis.\n\n3.\tThe University of Leicester will receive data from both NAAASP and HSCIC. This data will be linked using the study ID and analysed. \nThe University of Leicester will provide NAAASP with annual reports based upon the data, the content of which will be determined by NAAASP but will primarily consist of all-cause and aneurysm-specific mortality and aneurysm-related morbidity. \nThe University of Leicester will also analyse the data for the purposes of producing research papers focussed on the description of mid- to long-term outcomes of contemporary AAA screening. \nNo personal data will be held or processed by the University of Leicester.",
+  "4144efa19df4": "The University of Leicester will use this data for research purposes and to feedback to NAAASP outcomes for service evaluation.  Only de-identified data will be supplied to the University of Leicester.  Due to the long-term nature of AAA related outcomes after screening the University of Leicester expect that the research outputs will not occur for at least 5 years and will continue to be produced at such intervals for at least 15 years. The service evaluation aspects of this work will be produced on a yearly basis.  The University of Leicester will produce an annual report for the NHS AAA Screening Programme based on the linked cohort.  The University of Leicester will produce research publications from the data.\nThe NAAASP annual report will be sent directly to NAAASP.  NAAASP will include summary data in their publically available national programme reports.  The University of Leicester’s data table suppression rules are adhered to in the report they send to NAAASP. Research publications will be open-access and available to the public.  The University of Leicester will again ensure that the University’s table suppression rules are adhered to in the preparation of these publications.  These suppression rules are aligned with the HES analysis guide and where they differ the University’s rules are more robust.",
+  "5989ea6165b8": "Objective for processing:  \nCommunity screening for Abdominal Aortic Aneurysm (AAA) by ultrasound has been proven to reduce AAA related deaths and has recently been adopted by the NHS with national coverage established in 2013 and from this year onwards, over 300,000 men will be screened for AAA every year with approximately 4000 AAA detected.\nCommunity screening for AAA in England is carried out by the NHS AAA Screening Programme (NAAASP), part of Public Health England (PHE). NAAASP invites all men for AAA screening in the year of their 65th birthday. Screening is carried out by ultrasound and is both clinically effective and cost effective. NAAASP records the infra-renal aortic diameter for all men who attend for screening. Men found to have an AAA (aortic diameter >30mm) are either entered into a surveillance programme that is also run by NAAASP (AAA 30mm to 54mm) or referred to a vascular surgeon for consideration of surgical repair (AAA >54mm). In order to ensure cost-efficiency.\nThe incidence of AAA is falling in western populations and this raises the question of whether AAA screening will remain effective in the long-term. In addition, the NHS AAA Screening Programme (NAAASP), who has become part of Public Health England (PHE), will detect a large number of patients with small AAA that will require regular surveillance imaging.  The University of Leicester propose to determine the outcomes of men being invited for screening by the NAAASP and investigate clinical factors associated with outcomes by linking a single-year cohort of men invited for AAA screening by NAAASP with multiple years of Hospital Episode Statistics (HES) data via the Health and Social Care Information Centre (HSCIC).  \nIn this project NAAASP will control all personal data and process this into a dataset that contains both pseudonymised and study identifiers. The University of Leicester will receive a dataset from NAAASP detailing the outcomes of screening. NAAASP will send HSCIC dataset comprising a list of NHS numbers and the study identifiers. HSCIC will use this dataset to identify the HES/HES-ONS records for the men in the dataset and provide this data to the University of Leicester with only the study identifiers. The University of Leicester will link the NAAASP data and the HES/HES-ONS data and perform analysis. \nThe outcomes of patients attending the NAAASP are partially unknown. Patients with AAA are followed up by NAAASP through AAA surveillance and the outcomes of patients referred for surgery are recorded. The cause of death in patients with AAA who die whilst under surveillance is not automatically made available to NAAASP. In addition, those screened and found not to have AAA are discharged from NAAASP follow-up and some patients do not attend for screening.\nThere is some evidence that patients with a normal aortic diameter at age 65 may develop an AAA later in life and therefore be at risk of AAA related death. Also, NAAASP utilises a technique for the assessment of aortic diameter that results in a smaller measurement when compared to other methods and discharges patients if their aorta is below a 3.0cm threshold. This technique may therefore result in some patients being discharged by NAAASP who may be entered into surveillance in other screening programmes. It is not known whether this puts discharged patients at risk of aortic rupture.\nThe University of Leicester propose to link all patients invited for screening by NAAASP in 2013/2014, and all patients diagnosed with AAA to date under NAAASP surveillance, with the HSCIC to obtain HES data as outcomes, with yearly updates.\nProcessing activities:\n1.\tNAAASP will identify all men invited for screening in the 2013/2014 English screening cohort and all men with small AAA already under NAAASP surveillance. NAAASP holds this personal information for these men for the purposes of their clinical care. \nNAAASP will provide screening outcome data for the cohort to the University of Leicester. This data will contain a study ID for each individual.  No personal data will be transferred to the University of Leicester.\nNAAASP will provide the NHS numbers of these men to the HSCIC, together with a study ID.  \n\n2.\tHSCIC will link the patients identified by NAAASP with HES/HES-ONS data using the NHS numbers and provide this linked data to the research team at the University of Leicester, using the same study ID as those used by NAAASP to transfer data to the University of Leicester. \nHSCIC will then supply the University of Leicester with HES/HES-ONS data stripped of identifiers other than the study ID supplied by NAAASP.\nThe University of Leicester will apply for updated linkage reports on a yearly basis.\n\n3.\tThe University of Leicester will receive data from both NAAASP and HSCIC. This data will be linked using the study ID and analysed. \nThe University of Leicester will provide NAAASP with annual reports based upon the data, the content of which will be determined by NAAASP but will primarily consist of all-cause and aneurysm-specific mortality and aneurysm-related morbidity. \nThe University of Leicester will also analyse the data for the purposes of producing research papers focussed on the description of mid- to long-term outcomes of contemporary AAA screening. \nNo personal data will be held or processed by the University of Leicester.\n\nSpecific outputs expected, including target date:\nThe University of Leicester will use this data for research purposes and to feedback to NAAASP outcomes for service evaluation.  Only de-identified data will be supplied to the University of Leicester.  Due to the long-term nature of AAA related outcomes after screening the University of Leicester expect that the research outputs will not occur for at least 5 years and will continue to be produced at such intervals for at least 15 years. The service evaluation aspects of this work will be produced on a yearly basis.  The University of Leicester will produce an annual report for the NHS AAA Screening Programme based on the linked cohort.  The University of Leicester will produce research publications from the data.\nThe NAAASP annual report will be sent directly to NAAASP.  NAAASP will include summary data in their publically available national programme reports.  The University of Leicester’s data table suppression rules are adhered to in the report they send to NAAASP. Research publications will be open-access and available to the public.  The University of Leicester will again ensure that the University’s table suppression rules are adhered to in the preparation of these publications.  These suppression rules are aligned with the HES analysis guide and where they differ the University’s rules are more robust.\n\nExpected measurable benefits to health and/or social care including target date:\nIn 2013/14 the NHS completed its first year of national screening for AAA.  In the NAAASP men in the year of their 65th birthday are invited to have an ultrasound scan of their abdomen to screen for AAA. Screening men for AAA by ultrasound has proven to be clinically and cost-effective.  If an AAA is detected there are well established pathways for treatment of large AAA, which are at risk of bursting (surgery), and clinical monitoring of small AAA, which are at low risk of causing harm. All men with AAA are followed-up by NAAASP. \nOnly around 1.5% of men screened for AAA are found to have an AAA however.  NAAASP screens over 300,000 men every year and measures the diameter of their abdominal aorta.  It has been well established that aortic diameter is an indicator for the risk of dying from cardiovascular disease, with the highest risk in those with very small or very large aortic diameters.  Whilst NAAASP measures and records aortic diameter in the men it screens for AAA it does not follow these men up.  Furthermore, attendance rates for AAA screening are in the region of 80% and nothing is known about the long-term risk of AAA-related morbidity/mortality in the men who do not attend for screening.\nIn this project the University of Leicester wish to determine whether there are opportunities to improve the health of men attending for AAA screening beyond simply the detection and treatment of AAA.  Since NAAASP has already been set up and is measuring aortic diameters in all men attending for screening, if the University of Leicester can identify those men at high risk of cardiovascular events and flag these men for the institution of secondary prevention in primary care, the University of Leicester can add significant value to the process of AAA screening.  Secondarily, the University of Leicester wish to identify whether screening non-attenders are at high-risk or low-risk of AAA-related or cardiovascular events to determine whether additional effort in re-inviting these non-attenders would be worthwhile or not.",
+  "c4fb4ba35d18": "In 2013/14 the NHS completed its first year of national screening for AAA.  In the NAAASP men in the year of their 65th birthday are invited to have an ultrasound scan of their abdomen to screen for AAA. Screening men for AAA by ultrasound has proven to be clinically and cost-effective.  If an AAA is detected there are well established pathways for treatment of large AAA, which are at risk of bursting (surgery), and clinical monitoring of small AAA, which are at low risk of causing harm. All men with AAA are followed-up by NAAASP. \nOnly around 1.5% of men screened for AAA are found to have an AAA however.  NAAASP screens over 300,000 men every year and measures the diameter of their abdominal aorta.  It has been well established that aortic diameter is an indicator for the risk of dying from cardiovascular disease, with the highest risk in those with very small or very large aortic diameters.  Whilst NAAASP measures and records aortic diameter in the men it screens for AAA it does not follow these men up.  Furthermore, attendance rates for AAA screening are in the region of 80% and nothing is known about the long-term risk of AAA-related morbidity/mortality in the men who do not attend for screening.\nIn this project the University of Leicester wish to determine whether there are opportunities to improve the health of men attending for AAA screening beyond simply the detection and treatment of AAA.  Since NAAASP has already been set up and is measuring aortic diameters in all men attending for screening, if the University of Leicester can identify those men at high risk of cardiovascular events and flag these men for the institution of secondary prevention in primary care, the University of Leicester can add significant value to the process of AAA screening.  Secondarily, the University of Leicester wish to identify whether screening non-attenders are at high-risk or low-risk of AAA-related or cardiovascular events to determine whether additional effort in re-inviting these non-attenders would be worthwhile or not.",
+  "d849e67cfe3a": "Community screening for Abdominal Aortic Aneurysm (AAA) by ultrasound has been proven to reduce AAA related deaths and has recently been adopted by the NHS with national coverage established in 2013 and from this year onwards, over 300,000 men will be screened for AAA every year with approximately 4000 AAA detected.\nCommunity screening for AAA in England is carried out by the NHS AAA Screening Programme (NAAASP), part of Public Health England (PHE). NAAASP invites all men for AAA screening in the year of their 65th birthday. Screening is carried out by ultrasound and is both clinically effective and cost effective. NAAASP records the infra-renal aortic diameter for all men who attend for screening. Men found to have an AAA (aortic diameter >30mm) are either entered into a surveillance programme that is also run by NAAASP (AAA 30mm to 54mm) or referred to a vascular surgeon for consideration of surgical repair (AAA >54mm). In order to ensure cost-efficiency.\nThe incidence of AAA is falling in western populations and this raises the question of whether AAA screening will remain effective in the long-term. In addition, the NHS AAA Screening Programme (NAAASP), who has become part of Public Health England (PHE), will detect a large number of patients with small AAA that will require regular surveillance imaging.  The University of Leicester propose to determine the outcomes of men being invited for screening by the NAAASP and investigate clinical factors associated with outcomes by linking a single-year cohort of men invited for AAA screening by NAAASP with multiple years of Hospital Episode Statistics (HES) data via the Health and Social Care Information Centre (HSCIC).  \nIn this project NAAASP will control all personal data and process this into a dataset that contains both pseudonymised and study identifiers. The University of Leicester will receive a dataset from NAAASP detailing the outcomes of screening. NAAASP will send HSCIC dataset comprising a list of NHS numbers and the study identifiers. HSCIC will use this dataset to identify the HES/HES-ONS records for the men in the dataset and provide this data to the University of Leicester with only the study identifiers. The University of Leicester will link the NAAASP data and the HES/HES-ONS data and perform analysis. \nThe outcomes of patients attending the NAAASP are partially unknown. Patients with AAA are followed up by NAAASP through AAA surveillance and the outcomes of patients referred for surgery are recorded. The cause of death in patients with AAA who die whilst under surveillance is not automatically made available to NAAASP. In addition, those screened and found not to have AAA are discharged from NAAASP follow-up and some patients do not attend for screening.\nThere is some evidence that patients with a normal aortic diameter at age 65 may develop an AAA later in life and therefore be at risk of AAA related death. Also, NAAASP utilises a technique for the assessment of aortic diameter that results in a smaller measurement when compared to other methods and discharges patients if their aorta is below a 3.0cm threshold. This technique may therefore result in some patients being discharged by NAAASP who may be entered into surveillance in other screening programmes. It is not known whether this puts discharged patients at risk of aortic rupture.\nThe University of Leicester propose to link all patients invited for screening by NAAASP in 2013/2014 with the HSCIC to obtain HES data as outcomes, with yearly updates."
+ }
+}

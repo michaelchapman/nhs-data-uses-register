@@ -1,0 +1,121 @@
+{
+ "base_reference": "DARS-NIC-48891-P6Y8H",
+ "versions": [
+  {
+   "reference": "DARS-NIC-48891-P6Y8H",
+   "version": "",
+   "organisation": "NHS NEWARK AND SHERWOOD CCG",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "517aad105ccd",
+     "activities": "3c5fa6600900",
+     "expected_output": "4a29118fb7b1",
+     "expected_benefits": "5a01dd769cef"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Children and Young People's Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Improving Access to Psychological Therapies Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Local Provider Data - Acute, Ambulance, Community, Emergency Care, Mental Health, Other not elsewhere classified, Population Data, Primary Care, Public Health & Screening services",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health Services Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "SUS (Accident & Emergency, Inpatient and Outpatient data)",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Section 251 approval is in place for the flow of identifiable data",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "3c5fa6600900": "Yorkshire DSCRO will apply Type 2 objections (from 14th October 2016 onwards) before any identifiable data leaves the DSCRO.\nInvoice Validation\n1. SUS Data is obtained from the SUS Repository by Yorkshire Data Services for Commissioners Regional Office (DSCRO). \n2. Yorkshire DSCRO pushes a one-way data flow of SUS data into Nottinghamshire Health Informatics Service who land the data. The data is the passed directly to the Controlled Environment for Finance (CEfF) located within the individual CCG .\n3. The CEfF conduct the following processing activities for invoice validation purposes:\na. Checking the individual is registered to the Clinical Commissioning Group (CCG) by using the derived commissioner field in SUS and associated with an invoice from the national SUS data flow to validate the corresponding record in the backing data flow\nb. Once the backing information is received, this will be checked against national NHS and local commissioning policies as well as being checked against system access and reports provided by the HSCIC to confirm the payments are:\ni. In line with Payment by Results tariffs\nii. Are in relation to a patient registered with the CCG GP or resident within the CCG area.\niii. The health care provided should be paid by the CCG in line with CCG guidance. \n4. The CCG are notified by the CEfF that the invoice has been validated and can be paid. Any discrepancies or non-validated invoices are investigated and resolved \n\nRisk Stratification\n1. Identifiable SUS data is obtained from the SUS Repository by Yorkshire Data Services for Commissioners Regional Office (DSCRO). \n2. Data quality management and standardisation of data is completed by Yorkshire DSCRO and the data identifiable at the level of NHS number is transferred securely to to Nottinghamshire Health Informatics Service (NHIS), who hold the SUS data within the secure Data Centre on N3.  \n3. SUS data is linked to GP data in the risk stratification tool by the data processor.\n4. NHS Rushcliffe CCG host an electronic information portal with secure role-based access control . GPs have access to the data (through the portal) for patients with whom the GP has a legitimate direct care relationship and highlights those classed as at risk. The only identifier available to GPs is the NHS numbers of their own patients. Any further identification of the patients will be completed by the GP on their own systems.\n5. Access by NHIS, who host the risk stratification system that holds SUS data is limited to those administrative staff with authorised user accounts and only substantive employees of the organisation used for identification and authentication. Data stored for risk stratification purposes is stored separately from other data and this cannot be linked to other data. \n6. Access by NHS Rushcliffe CCG, who host the secure electronic information portal, is limited to those administrative staff with authorised user accounts used for identification and authentication.\n7. Once NHIS has completed the processing, the CCGs can access the online system hosted by NHS Rushcliffe CCG via a secure N3 connection to access the data pseudonymised at patient level\n\nPseudonymised – SUS and Local Flows\n1. Yorkshire Data Services for Commissioners Regional Office (DSCRO) obtains a flow of SUS identifiable data for the CCG from the SUS Repository. Yorkshire DSCRO also receives identifiable local provider data for the CCG directly from Providers. \n2. Data quality management of data is completed by the DSCRO and the pseudonymised data is then passed securely to Nottinghamshire Health Informatics Service (NHIS) for the addition of derived fields, linkage of data sets and analysis. \n3. NHIS then provide access to the processed, pseudonymised and linkable data to the CCG via an electronic portal. The CCG analyse the data to see patient journeys for pathways or service design, re-design and de-commissioning. Pseudonymised data is stored separately from identifiable data \n4. NHS Rushcliffe CCG host the electronic information portal with secure role-based access control which provides automated analysis and reporting of the pseudonymised data held by NHIS for the CCG. \n5. Aggregation of required data for CCG management use will be completed by the the CCG \n6. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression in line with the HES analysis guide can be shared where contractual arrangements are in place.\n\nPseudonymised – Mental Health, MSDS, IAPT, CYPHS and DIDS\n1. Yorkshire Data Services for Commissioning Regional Office (DSCRO) will obtain a flow of pseudonymised patient level data for each CCG for Mental Health (MHSDS, MHMDS, MHLDDS), Improving Access to Psychological Therapies (IAPT), Maternity (MSDS), Child and Young People’s Health (CYPHS) and Diagnostic Imaging (DIDS) for commissioning purposes.\n2. Data quality management of data is completed by the DSCRO and the pseudonymised data is then passed securely to Nottinghamshire Health Informatics Service (NHIS) for the addition of derived fields, linkage of data sets and analysis.\n3. NHIS then provide access to the processed, pseudonymised and linked data to the CCG who analyse the data to see patient journeys for pathways or service design, re-design and de-commissioning. Pseudonymised data is stored separately from identifiable data.\n4. The CCG analyses the data to see patient journeys for pathway or service design, re-design and de-commissioning.\n5. NHS Rushcliffe CCG host an electronic information portal with secure role-based access control which provides automated analysis and reporting of the pseudonymised data held by NHIS. \n6. The CCG completes aggregation of required data for CCG management use – disclosing any outputs at the appropriate level \n7. Patient level data will not be shared outside of the CCG and will only be shared within the CCG on a need to know basis, as per the purposes stipulated within the Data Sharing Agreement. External aggregated reports only with small number suppression can be shared where contractual arrangements are in place.",
+  "4a29118fb7b1": "Invoice Validation\n1. Addressing poor data quality issues \n2. Production of reports for business intelligence\n3. Budget reporting\n4. Validation of invoices for non-contracted events\n\nRisk Stratification\n1. As part of the risk stratification processing activity detailed above, GPs have access to the risk stratification tool which highlights patients for whom the GP is responsible and have been classed as at risk. The only identifier available to GPs is the NHS numbers of their own patients. Any further identification of the patients will be completed by the GP on their own systems.\n2. Output from the risk stratification tool will provide aggregate reporting of number and percentage of population found to be at risk.\n3. Record level output will be available for commissioners pseudonymised at patient level \n4. GP Practices will be able to view the risk scores for individual patients with the ability to display the underlying SUS data for the individual patients when it is required for direct care purposes by someone who has a legitimate relationship with the patient. \n\nPseudonymised – SUS and Local Flows\n1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of acute / community / mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports include high flyers.  \n\nPseudonymised – Mental Health, Maternity, IAPT, CYPHS and DIDS\n1. Commissioner reporting:\na. Summary by provider view - plan & actuals year to date (YTD). \nb. Summary by Patient Outcome Data (POD) view - plan & actuals YTD. \nc. Summary by provider view - activity & finance variance by POD. \nd. Planned care by provider view - activity & finance plan & actuals YTD.\ne. Planned care by POD view - activity plan & actuals YTD.\nf. Provider reporting.\ng. Statutory returns.\nh. Statutory returns - monthly activity return. \ni. Statutory returns - quarterly activity return. \nj. Delayed discharges. \nk. Quality & performance referral to treatment reporting. \n2. Readmissions analysis.\n3. Production of aggregate reports for CCG Business Intelligence.\n4. Production of project / programme level dashboards.\n5. Monitoring of mental health quality matrix.\n6. Clinical coding reviews / audits.\n7. Budget reporting down to individual GP Practice level.\n8. GP Practice level dashboard reports include high flyers.",
+  "517aad105ccd": "Invoice Validation\nAs an approved Controlled Environment for Finance (CEfF), the CCG receives SUS data identifiable at the level of NHS number according to S.251 CAG 7-07(a) and (b)/2013. The data is required for the purpose of invoice validation. The NHS number is only used to confirm the accuracy of backing-data sets and will not be shared outside of the CEfF.\n\nRisk Stratification\nTo use SUS data identifiable at the level of NHS number according to S.251 CAG 7-04(a) (and Primary Care Data) for the purpose of Risk Stratification. Risk Stratification provides a forecast of future demand by identifying high risk patients.  This enables commissioners to initiate proactive management plans for patients that are potentially high service users. Risk Stratification enables GPs to better target intervention in Primary Care\n\nPseudonymised – SUS and Local Flows\nTo use pseudonymised data to provide intelligence to support commissioning of health services. The pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\nThe CCGs commission services from a range of providers covering a wide array of services. Each of the data flow categories requested supports the commissioned activity of one or more providers. \n\nPseudonymised – Mental Health, Maternity, IAPT, CYPHS and DIDS\nTo use pseudonymised data for the following datasets to provide intelligence to support commissioning of health services :\n- Mental Health Minimum Data Set (MHMDS)\n- Mental Health Learning Disability Data Set (MHLDDS)\n- Mental Health Services Data Set (MHSDS)\n- Maternity Services Data Set (MSDS)\n- Improving Access to Psychological Therapy (IAPT)\n- Child and Young People Health Service (CYPHS)\n- Diagnostic Imaging Data Set (DIDS)\nThe pseudonymised data is required to ensure that analysis of health care provision can be completed to support the needs of the health profile of the population within the CCG area based on the full analysis of multiple pseudonymised datasets.\n\nNo record level data will be linked other than as specifically detailed within this application/agreement. Data will only be shared with those parties listed and will only be used for the purposes laid out in the application/agreement. The data to be released from the HSCIC will not be national data, but only that data relating to the specific locality of interest of the applicant.",
+  "5a01dd769cef": "Invoice Validation\n1. Financial validation of activity \n2. CCG Budget control\n3. Commissioning and performance management\n4. Meeting commissioning objectives without compromising patient confidentiality \n5. The avoidance of misappropriation of public funds to ensure the ongoing delivery of patient care\n\nRisk Stratification\nRisk stratification promotes improved case management in primary care and will lead to the following benefits being realised: \n1. Improved planning by better understanding patient flows through the healthcare system, thus allowing commissioners to design appropriate pathways to improve patient flow and allowing commissioners to identify priorities and identify plans to address these.\n2. Improved quality of services through reduced emergency readmissions, especially avoidable emergency admissions. This is achieved through mapping of frequent users of emergency services and early intervention of appropriate care.\n3. Improved access to services by identifying which services may be in demand but have poor access, and from this identify areas where improvement is required.\n4. Potentially reduced premature mortality by more targeted intervention in primary care, which supports the commissioner to meets its requirement to reduce premature mortality in line with the CCG Outcome Framework.\n5. Better understanding of the health of and the variations in health outcomes within the population to help understand local population characteristics.  \nAll of the above lead to improved patient experience through more effective commissioning of services.\n\nPseudonymised – SUS and Local Flows\n1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, integrated care and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against 18 weeks wait targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\nd. Analysis to understand emergency care and linking A&E and Emergency Urgent Care Flows (EUCC).\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.\ni. Understanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level.     \n\nPseudonymised – Mental Health, Maternity, IAPT, CYPHS and DIDS\n1. Supporting Quality Innovation Productivity and Prevention (QIPP) to review demand management, Integrated care and pathways.\na. Analysis to support full business cases. \nb. Develop business models.\nc. Monitor In year projects.  \n2. Supporting Joint Strategic Needs Assessment (JSNA) for specific disease types.\n3. Health economic modelling using:\na. Analysis on provider performance against targets.\nb. Learning from and predicting likely patient pathways for certain conditions, in order to influence early interventions and other treatments for patients.\nc. Analysis of outcome measures for differential treatments, accounting for the full patient pathway.\n4. Commissioning cycle support for grouping and re-costing previous activity.\n5. Enables monitoring of:\na. CCG outcome indicators.\nb. Non-financial validation of activity.\nc. Successful delivery of integrated care within the CCG.\nd. Checking frequent or multiple attendances to improve early intervention and avoid admissions.\ne. Case management.\nf. Care service planning.\ng. Commissioning and performance management.\nh. List size verification by GP practices.\ni. Understanding the care of patients in nursing homes.\n6. Feedback to NHS service providers on data quality at an aggregate and individual record level."
+ }
+}

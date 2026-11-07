@@ -1,0 +1,44 @@
+{
+ "base_reference": "DARS-NIC-39944-D4M0D",
+ "versions": [
+  {
+   "reference": "DARS-NIC-39944-D4M0D-v0.3",
+   "version": "0.3",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-09-01"
+     ],
+     "objective": "9cb830bd4364",
+     "activities": "bf5604bc6d40",
+     "expected_output": "132d5859aa2f",
+     "expected_benefits": "0569aaad83c9"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "One-Off",
+     "periods": [
+      "2016-09-01"
+     ],
+     "rows": 4
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "0569aaad83c9": "The preliminary research for this project has identified, through a survey of 150 GPs across England, that currently only 37% of GPs with access to risk stratification think it is actually useful to their practice. Nevertheless, they are financially incentivised to use it though the NHS Enhanced Service specification on Admission Avoidance, which requires GP to identify the top 2% high risk patients on their list, and provide them with special services. There is a need to try and improve the usefulness of risk stratification. \n\nThis research aims:\n\n - to improve the accuracy of risk prediction; and \n - to provide healthcare professionals with the tools to do the analysis and provide patient-centred, effective care.\n\n1) The research aims to identify new and improved methods to perform risk prediction. Improved risk stratification methods will allow GPs to target their interventions more accurately, to those patients who need it most. This will improve care for high-risk patients and reduce their need for emergency admissions. Preventing emergency admissions will have a positive impact on all three elements of the Triple Aim of healthcare: Patients receive high quality care, the negative experience of an emergency hospitalisation is avoided, and costly emergency care is prevented.\n\n2) If a software tool or manual is developed based on new and improved methods, GPs and CCGs will be able to conduct their own risk prediction analysis. Currently, the majority of GPs (82%, according to our survey) receive only a list of names for the high risk patients, with no additional analysis or insights. If they run their own risk prediction analysis they can understand what is driving the high risk of each patient and see the full picture. This information can then be used to personalise interventions and improve care.",
+  "132d5859aa2f": "·   A PhD on data analysis methods to segment patients - submission Jun 2017 \n      \n·   A paper published in a peer reviewed journal focused on a health professionals audience (e.g. BMJ or Health Affairs) - expected initial submission Dec 2016. This paper will describe the research, and if applicable, provide a reference to where the software tool or manual (as per below) can be found. This will ensure a widespread dissemination of both the knowledge and the actual method.\n\n·   A software tool or manual for risk stratification, based on the method that was found to be most accurate - March 2017 (Note - this is contingent on the results of the analysis). If a method is found that significantly improves on current methods, Imperial College London will develop either a software solution or a manual that describes how to do the analysis in an existing software package (e.g. SPSS). This will be made available on a not-for-profit basis to CCGs and GPs for use in their practice.\n\nImperial College will share results with the Data team at NHS England. This has already been discussed with the Chief Data Officer, and Imperial expect to share with him the results of the study, to ensure it reaches the right people. This will include any negative results.\n\nHES data will only be used to identify the optimal methods for risk prediction, but that the actual tool will contain no HES data. Instead, it will be run from GPs’ or CCGs’ own data.",
+  "9cb830bd4364": "While predicting the risk of emergency admissions is becoming ingrained in healthcare delivery and financing in England, the models that are being used have limited predictive power. Most models are linear regressions, based on simple, static predictor variables. As such, there is significant scope to improve on these methods. \n\nThe aim of this project is to develop a new method to predict risk in healthcare, going beyond linear regression, by using data science methods. The aim is to explore the different options such as artificial neural networks and to explore which method offers the most potential to revolutionise risk prediction. \n\nSimple risk algorithms that require no advanced data analysis will also be explored. Using HES data, the different techniques will be analysed and compared. If successful, the new risk prediction models will be developed into a tool or manual for the NHS to use.",
+  "bf5604bc6d40": "The data will be used to test the different predictive models. Data from the years 2011-2014 will be used to predict emergency readmissions in 2015. \n\nThe following steps will be taken to create a dataset to which the different predictive models can be applied:\n\n•\tA range of predictor variables (such as hospital admissions, demographics including age and gender, and diagnoses of specific long-term conditions) will be extracted from the 2011-2014 data\n\n•\tThese predictor variables will be used to create a patient-level file, with on each line a patient, his/her predictive variables, and whether or not the patient had an emergency admission in 2015\n\n•\tThe patient-level file will be split into a training and a test dataset, consisting of either 10% and 10%, or 50% and 50% of the population (depending on computing power available). The training data will be used to train the predictive methods, and the test dataset will be used to evaluate the predictive power of the developed models in a new population.\n\n•\tThe models will be tested for predictive power using the area under the receiver operator characteristic (ROC) curve, and the positive predictive value.\n\n•\tIn addition, the different methods will be compared by looking at the high-risk population (e.g. top 5%) they identify."
+ }
+}

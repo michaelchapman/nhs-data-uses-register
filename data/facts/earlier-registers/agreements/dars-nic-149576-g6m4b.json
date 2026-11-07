@@ -1,0 +1,66 @@
+{
+ "base_reference": "DARS-NIC-149576-G6M4B",
+ "versions": [
+  {
+   "reference": "DARS-NIC-149576-G6M4B-v0.9",
+   "version": "0.9",
+   "organisation": "University of Edinburgh",
+   "organisation_type": "",
+   "listed": [
+    "2019-06-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-06-01"
+     ],
+     "objective": "92632da23a9d",
+     "activities": "ed8b6eb597d6",
+     "expected_output": "fa7e4069ada4",
+     "expected_benefits": "d3fa71bf70cf"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-06-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-06-01"
+     ],
+     "rows": 7
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "92632da23a9d": "The University of Edinburgh will use the data for the REstart or STop Antithrombotics Randomised Trial.\n\nRESTART is studying the potentially beneficial effects of starting antiplatelet drugs (one or more of aspirin, clopidogrel or dipyridamole, chosen by the patients physician), on the risks of a heart attack, stroke and other clotting problems as well as their effect on the risk of a brain haemorrhage happening again, for adults surviving a stroke due to bleeding in the brain and who were taking a prescribed antithrombotic (i.e. anticoagulant or antiplatelet) drug for the prevention of illnesses such as angina, heart attack or stroke before their bleed. \nA magnetic resonance imaging (MRI) sub-study will also study whether the presence of brain microbleeds modify the effects of antiplatelet drugs.\n\n537 consented participants were recruited from 103 recruiting sites in NHS hospitals throughout the UK and randomly allocated to take an antiplatelet or avoid taking antiplatelets. All participants are followed up for at least 6 months after randomisation either by postal or telephone questionnaire to check for the occurrence of any relevant events or outcomes and their medications. In addition, participants GPs, and the hospital which recruited them, provide information on any relevant adverse events which occur during the follow up period including hospital admissions and deaths. These events will be compared in those taking an antiplatelet and those avoiding it to compare the event rate. \n\nRecruitment commenced on the 22nd May 2013 and closed at midday on the 31st May 2018 with 537 participants (97 from Scotland). Follow-up will be completed for events that occur by the end of November 2018.\n\nThis proposal for NHS Digital data along with the data from NHS Scotland will enable RESTART to more accurately determine the number of outcome events which occur after the date of a patient’s randomisation, until the time of this data extract or the last period of data available. It is already known that the primary source of ascertainment of these outcome events (annual postal questionnaires to participants’ general practitioners) misses some events that participants have reported. Therefore, RESTART seeks secondary data to improve the accuracy of its data on the occurrence of the trial’s major outcomes, which will improve the scientific validity of the trial’s findings. The primary objective of the trial is to estimate, when all participants have completed at least 6 months of follow-up, the relative and absolute effects of antiplatelet drugs on the risk of brain haemorrhage happening again associated with a policy of starting antiplatelet drugs after the acute phase of brain haemorrhage. Ultimately, RESTART intends to determine whether antiplatelet drugs are beneficial for patients after brain haemorrhage because the gains from prevention of clotting problems outweigh the risks of bleeding at any site. \n\nA brain MRI sub-study is incorporated into the trial protocol to determine whether patients with tiny deposits of blood in the brain called 'microbleeds' on an MRI brain scan have an increased risk of having a recurrent brain haemorrhage if prescribed antiplatelet drugs following a brain haemorrhage.\nThis specific proposal will allow RESTART to identify any missing primary and secondary outcome events in the trial which were not reported using the primary sources of follow-up (patient and GP follow-up, ad hoc reports from patients or research staff at participating sites) and determine the long-term survival of participants. This will enable RESTART to determine whether antiplatelet drugs are a safe and effective treatment.",
+  "d3fa71bf70cf": "More than one third of the adults with a stroke due to bleeding into the brain – known as brain haemorrhage – are taking drugs to prevent clotting when they have a brain haemorrhage. These patients had previously suffered illnesses like angina, heart attack, or stroke due to blood vessel blockage, which is why they are treated with drugs to prevent further clots occurring. These drugs are usually stopped when the brain haemorrhage occurs. But when patients recover from brain haemorrhage, they and their doctors are often uncertain about whether to restart these drugs to prevent further clots occurring, or whether to avoid them in case they increase the risk of brain haemorrhage happening again. \n\nRESTART will study the potentially beneficial effects of antiplatelet drugs such as aspirin on the risks of heart attack, stroke and other clotting problems as well as their effect on the risk of a brain haemorrhage happening again. \n\nIf RESTART can reliably demonstrate this it will help patients make better decisions about their treatment and inform clinicians and patients about potential preventative treatment pathways.",
+  "ed8b6eb597d6": "The processing of NHS Digital data will be carried out within the University of Edinburgh Safe Haven. A similar application is being made to the Public Benefit and Privacy Panel for Health and Social Care for data relating to patients recruited in Scotland.\n\nRESTART will supply NHS Digital with patients’ identifiers (forename, surname, date of birth, NHS No., postcode, and RESTART study id [i.e. pseudonymous identifier]) to facilitate the linkage and the participant’s date of randomisation to limit the data extraction from this date to the end of the available follow up period. RESTART will not request data on any patient who has withdrawn consent following recruitment. \n\nThe data received back from NHS Digital will include the RESTART trial ID (as provided) and any dates of admission to NHS hospitals and the primary diagnosis leading to these admissions from HES Admitted Patient Care, as well as Mortality data (including Date of Death and Cause of Death). The data will be securely transferred to the University of Edinburgh Safe Haven.\n\nA copy of the RESTART trial dataset will be transferred to the Safe Haven. The Data manager will link these dataset with the data provided by NHS Digital, using the RESTART study number. The two datasets will then be compared in order to find the Outcome Events (Intracranial events, Extracranial Cardiovascular events, and Death of any cause which are present in the NHS data but not in the RESTART trial dataset. If the record-level data provided by NHS Digital indicate that any of these outcomes might have occurred, University of Edinburgh will obtain source data from participating sites to verify or refute the occurrence of these outcomes. For any outcomes that are verified, two fields will be manually populated in the trial database for relevant participants after characterising the outcome (outcome event type and date); this will not involve importing record-level data provided by NHS Digital. This will be the only linkage with the NHS Digital data. \n\nRESTART has a study-specific database that is password protected and held securely on University Datastore. Access is routinely reviewed and revoked when any team member leaves RESTART.\n\nData will only be accessed and processed by substantive employees of the University of Edinburgh and will not be accessed or processed by any other third parties not mentioned in this agreement.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those  regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract i.e. employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "fa7e4069ada4": "All outputs will consist of aggregate data only with small numbers suppressed in line with the HES analysis guide.\nAfter database lock in the second week of January 2019, the final trial results will be submitted to The Lancet in February/March 2019 after approval by the Steering Committee. If the data is not received from NHS Digital by the second week then the results will be used in a subsequent publication later in the year. The results will be presented at the European Stroke Organisation Conference in May 2019, hopefully alongside simultaneous publication in The Lancet (or other prominent peer-reviewed medical journal, if not accepted by The Lancet). The trial report will be published open access, to enable professional and lay audiences to access it.\n\nThe results will be shared with participants/carers (who have expressed a wish for this to be done) in June 2019. This report will be prepared with reference to the HRA guidelines, and with input from the Chief Investigator's patient reference group.\n\nPresentations will be made to non-medical audiences after publication of the trial report, although the dates and venues have not yet been determined.\n\nA final report will be prepared for the trial funder, based on aggregate data and the final results, and submitted to the British Heart Foundation in May 2019.\n\nWhen processing has been completed, the following will have been created:\n1. A trial database which will be kept securely in the University of Edinburgh Safe Haven  - patient level data identifiable.\n2. A completely pseudonymised version of the patient-level data used for the primary analysis will be made available, behind access controls that require approval by the Trial Steering Committee, for use by the wider research community upon reasonable request. These outputs are primarily for health professionals to guide their patient care and for those developing evidence based guidelines. This output does not include record level data provided by NHS Digital, the processing of which has been detailed in the processing activities section of the application.\n3. Pseudonymised data which is for use solely for the RESTART trial by the University of Edinburgh (and includes NHS Digital data).\n4. Presentations for healthcare staff and lay audiences - aggregated data only \n5. Open access papers in peer reviewed journals - aggregated data only."
+ }
+}

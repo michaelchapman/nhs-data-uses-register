@@ -1,0 +1,217 @@
+{
+ "base_reference": "DARS-NIC-302604-S7H2N",
+ "versions": [
+  {
+   "reference": "DARS-NIC-302604-S7H2N-v0.0",
+   "version": "0.0",
+   "organisation": "IMPERIAL COLLEGE LONDON",
+   "organisation_type": "",
+   "listed": [
+    "2016-04-01",
+    "2017-03-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-04-01"
+     ],
+     "objective": "858fc6b92ad9"
+    },
+    {
+     "periods": [
+      "2017-03-01"
+     ],
+     "objective": "289ff08ae32f"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01",
+      "2017-03-01"
+     ],
+     "rows": 7
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "MRIS - Scottish NHS / Registration",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Informed Patient consent to permit the receipt, processing and release of data by the HSCIC",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-04-01"
+     ],
+     "rows": 11
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302604-S7H2N-v1.16",
+   "version": "1.16",
+   "organisation": "Imperial College London",
+   "organisation_type": "",
+   "listed": [
+    "2019-01-01",
+    "2019-03-01",
+    "2019-07-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-01-01",
+      "2019-03-01",
+      "2019-07-01"
+     ],
+     "objective": "81230ffb03b3",
+     "activities": "998d73a89817",
+     "expected_output": "36477b137184",
+     "expected_benefits": "c9397fc01f40",
+     "yielded_benefits": "25da272ba5af"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Members and Postings Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-01-01",
+      "2019-03-01"
+     ],
+     "rows": 2
+    },
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01",
+      "2019-07-01"
+     ],
+     "rows": 5
+    },
+    {
+     "dataset": "MRIS - Cohort Event Notification Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-03-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 3
+    },
+    {
+     "dataset": "Mental Health Minimum Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 16
+    },
+    {
+     "dataset": "Mental Health and Learning Disabilities Data Set",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(1) and s261(2)(b)(ii)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-07-01"
+     ],
+     "rows": 6
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-302604-S7H2N-v2.6",
+   "version": "2.6",
+   "organisation": "Imperial College London",
+   "organisation_type": "Academic",
+   "listed": [
+    "2019-11-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-11-01"
+     ],
+     "objective": "c5c3e6a3fbbc",
+     "activities": "998d73a89817",
+     "expected_output": "ecd6a8a3aa51",
+     "expected_benefits": "c9397fc01f40",
+     "yielded_benefits": "79e97b76d4da"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Cause of Death Report",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-11-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "25da272ba5af": "The data obtained on the cause of death for the ASCOT flagged patients has shown the long term benefits in the use of statins in the prevention of cardio-vascular disease. This has been influential in the debate around statin use, and UK guidelines.\n\nCholesterol and blood pressure trials have led to major changes in NICE and other international guidelines, by providing the necessary background evidence for the committees. The ASCOT trial is a major contributor to the Cholesterol Treatment Trialists Collaboration and the Blood Pressure Trialists Collaboration both have led to the recommendations for blood pressure and cholesterol lowering targets that are widely used the NHS and around the world. It is very important as it was one of the first trials to use a high intensity statin.\n\nIt has led to a number of publications e.g. Lancet. 2017 Jun 24;389(10088):2473-248, J Hypertens. 2011 Oct;29(10):2004-13, Eur Heart J. 2011 Oct;32(20):2525-32, J Hum Hypertens. 2013 Aug;27(8):492-6.",
+  "289ff08ae32f": "There is insufficient data comparing new with conventional hypertension therapy, particularly relating to effects on morbidity and mortality.  At least 50% of high risk hypertensives require two or more drugs to provide adequate blood pressure control in the long term.  Previous studies have allowed a wide range of possible drug combinations to be used making it impossible to make recommendations about specific combinations.  In ASCOT the allowed combinations are clearly specified as are subsequent add-on drugs which will be common to both limbs of the trial, and the agents used have been established as producing effects 24-hour BP control.  In the UK, Ireland and Scandinavia, over 40% of those on two drugs for hypertension use diuretics and beta-blockers and hence represent an appropriate standard against which other combinations should be compared.\n\nAlthough hypertensives have been included in previous lipid lowering trials, to date no trials of lipid lowering have been carried out specifically among hypertensives, and particularly among those whose total cholesterol is <6.5mmol/l.  Standard clinical practice in most of Europe does not, in primary prevention, usually involve the treatment of hypertensives with lipid lowering therapy.",
+  "36477b137184": "ASCOT expect the following outputs:\n\n1. An analysis of the effect of each drugs on dementia, hospitalisation, and cardiovascular outcomes in the very long term\n2. An analysis to determine whether the effects of the drugs on long term outcomes is affected by their baseline characteristics.\n\nWhen these outputs are available and submitted for publication, ASCOT will provide them to funders and other relevant boards. All outputs are publicised on the ASCOT website. Once data has been received by the ASCOT study team, they expect the initial analyses to take 18 months to 2 years.\n\nAll outputs will be that will be published will be aggregated with small numbers suppressed in line with the HES analysis guide. \n\nThe study aim to present the findings of the work at the European Stroke Conference, Alzheimer’s Research UK and European Stroke Organisation Conference within 12 – 24 months. The study have extensive contacts with the Alzheimer’s Society, the Stroke Association and the British Heart Foundation, which they will use to communicate to patient groups, and as a conduit to policy makers such as NICE and other national guideline bodies.\n\nThe ASCOT trial investigators will publish these outputs in major clinical journals (e.g. Lancet, BMJ, Stroke etc.) and present them in international meetings by study end, target 2019-2020 . it is anticipated these would contribute to national guidelines on reducing cardiovascular risk.\nImperial will present outputs at international academic conferences (European Stroke Organisation Conference etc.), as well as at national meeting for people with dementia.",
+  "79e97b76d4da": "The data obtained on the cause of death for the ASCOT flagged patients has shown the long term benefits in the use of statins in the prevention of cardio-vascular disease. This has been influential in the debate around statin use, and UK guidelines.\n\nCholesterol and blood pressure trials have led to major changes in NICE and other international guidelines, by providing the necessary background evidence for the committees. The ASCOT trial is a major contributor to the Cholesterol Treatment Trialists Collaboration and the Blood Pressure Trialists Collaboration both have led to the recommendations for blood pressure and cholesterol lowering targets that are widely used the NHS and around the world. It is very important as it was one of the first trials to use a high intensity statin.\n\nIt has led to a number of publications e.g. Lancet. 2017 Jun 24;389(10088):2473-248, J Hypertens. 2011 Oct;29(10):2004-13, Eur Heart J. 2011 Oct;32(20):2525-32, J Hum Hypertens. 2013 Aug;27(8):492-6.\n\nNo benefits from the additional linkage have been achieved, as no data has been received for hospitalisation from NHS Digital.",
+  "81230ffb03b3": "The purpose of this application is to extend the linkage of participants in the Anglo-Scandinavian Cardiac Outcomes Trial (ASCOT)  to all death, HES and mental health records. \n\nThe ASCOT trial was a large trial comparing the health of participants randomly allocated to a statin (atorvastatin) or placebo, and to one of two blood pressure lowering drugs (amlodopine+/- perindopril or atenelol +/- bendrofluazide). The trial followed up participants for 5-years within the trial, and concentrated on measuring cardiovascular events, such as myocardial infarction and stroke.\n\nThe trial was designed in 1995, and recruited participants between 1998 and 2000. At the time the trial was designed the relationship between  blood pressure and dementia, and cholesterol and dementia was not well defined, and dementia was not a public health priority.  Dementia is an insidious process that takes many years to develop. Data that is held within trial follow-up and mortality records contains very little information on the occurrence of dementia, and it is believed that by linking to HES and mental health records that ASCOT will be able to contribute to the understanding of the effect of blood pressure or cholesterol lowering on dementia. \n\nThe ASCOT trial investigators would therefore now like to evaluate the effects of the randomised treatments on dementia and other measures of long term health.\n\nASCOT was a large 2x2 factorial trial based in general practice in the UK, Ireland and Nordic countries. 19,342 patients with hypertension (i.e. SBP≥160mmHg if untreated, or ≥140mmHg if treated, or DBP≥100mmHg if untreated or ≥90mmHg if treated) and who had with ≥3 risk factors for cardiovascular disease, and no history of coronary heart disease (though some with a history of stroke)  were eligible for the ASCOT-Blood Pressure–Lowering Arm (BPLA). Participants were randomized between 2 blood pressure lowering strategies: amlodipine with or without perindopril (amlodipine based) or atenolol with or without bendroflumethiazide (atenolol based). 10306 participants with fasting cholesterol of ≤6.5 mmol/L untreated with a cholesterol lowering agent were randomized to atorvastatin 10mg or placebo to ASCOT-Lipid–Lowering Arm (LLA). \n\nAtorvastatin led to a significant reduction in the hazard of the primary endpoint, fatal CHD and non-fatal MI (hazard ratio [HR], 0.64 [95% CI, 0.50–0.83). Although the amlodipine regime did not lead to a reduction in hazards of the primary endpoint, it was association with a reduction in fatal and non-fatal stroke (0.77 [0.66-0.89]) and all-cause mortality (0.89 [0.81-0.99]).\n\nLarge observational studies have demonstrated associations between higher blood pressure and higher cholesterol in mid-life and a higher risk of dementia. However, there is little support from randomised trials or Mendelian randomisation studies for a strategy of lowering midlife blood pressure, or prescribing statins to prevent dementia. Therefore more data is needed in order to support public health interventions to prevent dementia.\nTherefore Imperial need access to records which measure the incidence of dementia. Dementia records are found in records of HES, emergency department admission and mental health records, and therefore Imperial will need to access all of these record types.\n\nDementia is an insidious condition, and probably develops over many years. Very long term trials may not be feasible, would be extremely expensive, and would take many years before they could have an impact on public health. In order to lengthen the follow up period of existing trials, Imperial  propose to follow up UK participants in ASCOT by using information in the electronic health records of the English, Scottish, and Welsh national health systems and to measure the development of dementia over the very long term.\n\nThe study therefore aims to determine whether: \n\n1.\tParticipants randomised to atorvastatin have a lower long term risk of dementia, stroke diabetes and other vascular events compared to patients randomised to placebo\n2.\tParticipants randomised to an amlodipine-based regime have a lower risk of dementia, stroke, diabetes and other vascular events than patients randomised to an atenolol-based regime.\n\nThe overall aims of ASCOT, are to determine the effect of higher LDL cholesterol and higher blood pressure on human health, remains the same as when it was founded.\n\nLinkage to mortality for participant in the UK was begun as part of the initial ASCOT study, though Imperial are now requesting more detailed information on hospitalisations for other reasons (including mental health)  in order to detect whether the treatments studies in the trial had any impact on the long term incidence of long term conditions including myocardial infarction, stroke, dementia or diabetes.  Section 251 approval has been sought and obtained to cover the cohort linkage.\n\nThe aim of this study is to determine the effect of different regimes of lowering blood pressure and LDL-cholesterol on the long term health. Therefore significant years of follow-up are useful because:\n\nLong term health conditions are often under-recorded in each individual hospitalisation. It is necessary to try to ascertain these in multiple hospitalisations over the course of a participant’s life from the time of randomisation into the trial. Therefore, in the first instance, many years of follow-up increase the chance of ascertaining these illnesses.\nConditions such as dementia and diabetes may take many years to develop, sometimes 10 or 20 years. Therefore, in the second instance, many years of follow-up allow time for these conditions to develop, particularly diseases associated with ageing.",
+  "858fc6b92ad9": "The data supplied by the NHS IC to University of Cambridge will be used only for the approved Medical Research Project identified above.",
+  "998d73a89817": "NHS Digital already hold the identifiers from participants in the ASCOT trial, from their previous consent to mortality linkage. NHS Digital will use these identifiers to further link participants to other aspects of the EHR. Also, each individual is currently identified by an ASCOT trial number.\n\nThe ASCOT trial investigators do not hold identifiers for each individual, but do hold trial numbers.\n\nData received by Imperial will include ASCOT trial ID, age at recruitment and age at death or event, outcomes of relevance, and data from: HES admitted patient care, HES outpatients, A&E, mental health, date and cause of death. In addition Imperial are requesting data from a UK-wide dementia audit, that Imperial have previously been informed is linkable.\n\nThe ASCOT trial investigators will then use the trial ID to link data received from NHS Digital to other non-identifiable data held by the ASCOT team (for example randomised allocation, in-trial events. etc.)\n\nThe ASCOT trial investigators will receive and link these datasets in a IG toolkit environment. For Imperial's purposes, this data is not identifiable, and investigators will then export the dataset with trial ID and age (to nearest year only) and age at death for analysis. This dataset will be available to bona fide researchers who approach the ASCOT team chief investigator.  \n\nThe long term effect of blood pressure and LDL cholesterol lowering treatments is of great interest. In order to power studies of these questions adequately, meta-analysis of study data may be needed. If such meta-analyses are performed, Imperial will share either ASCOT level summary estimates, or where appropriate anonymised individual level data with approved collaborators.\n\nBecause the long term follow-up of clinical trials is a matter of great interest, and the utility of clinical trial data many years after collection has often been proved to be greater than at the time of approvals (ASCOT has a number of good examples), Imperial would propose to keep an anonymised dataset indefinitely for the following reasons:.\n\n1. Long term data retention is necessary to allow tabular data sharing which is now a requirement for publishing in high impact journals.  Any tabulations would be aggregated with small number suppressed in line with the HES analysis guide\n2. The study may wish to request further data depending on the results of this study.\n\nFor data from the Mental Health (MHSDS, MHLDDS, MHMDS) data sets, the following disclosure control rules must be applied:\n•           National-level figures only may be presented unrounded, without small number suppression\n•           Suppress all numbers between 0 and 5\n•           Round all other numbers to the nearest 5\n•           Percentages can be calculated based on unrounded values, but need to be rounded to the nearest integer in any outputs \n•           In addition for Learning Disability data in Mental Health (MHSDS, MHLDDS, MHMDS), the England-level data also must apply the suppression of all numbers between 0 and 5, and rounding of other numbers to the nearest 5.\n\nUniversity of Edinburgh will not have access to any record level data.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).",
+  "c5c3e6a3fbbc": "The lawful basis for Imperial College London to process this data under GDPR is Article 6(1)(e) - Task in the public interest, and Article 9(2)(j) - Scientific or historical research in accordance with Article 89(1).\n\nThe purpose of this application is to extend the linkage of participants in the Anglo-Scandinavian Cardiac Outcomes Trial (ASCOT)  to all death, HES and mental health records. \n\nThe ASCOT trial was a large trial comparing the health of participants randomly allocated to a statin (atorvastatin) or placebo, and to one of two blood pressure lowering drugs (amlodopine+/- perindopril or atenelol +/- bendrofluazide). The trial followed up participants for 5-years within the trial, and concentrated on measuring cardiovascular events, such as myocardial infarction and stroke.\n\nThe trial was designed in 1995, and recruited participants between 1998 and 2000. At the time the trial was designed the relationship between  blood pressure and dementia, and cholesterol and dementia was not well defined, and dementia was not a public health priority.  Dementia is an insidious process that takes many years to develop. Data that is held within trial follow-up and mortality records contains very little information on the occurrence of dementia, and it is believed that by linking to HES and mental health records that ASCOT will be able to contribute to the understanding of the effect of blood pressure or cholesterol lowering on dementia. \n\nThe ASCOT trial investigators would therefore now like to evaluate the effects of the randomised treatments on dementia and other measures of long term health.\n\nASCOT was a large 2x2 factorial trial based in general practice in the UK, Ireland and Nordic countries. 19,342 patients with hypertension (i.e. SBP≥160mmHg if untreated, or ≥140mmHg if treated, or DBP≥100mmHg if untreated or ≥90mmHg if treated) and who had with ≥3 risk factors for cardiovascular disease, and no history of coronary heart disease (though some with a history of stroke)  were eligible for the ASCOT-Blood Pressure–Lowering Arm (BPLA). Participants were randomized between 2 blood pressure lowering strategies: amlodipine with or without perindopril (amlodipine based) or atenolol with or without bendroflumethiazide (atenolol based). 10306 participants with fasting cholesterol of ≤6.5 mmol/L untreated with a cholesterol lowering agent were randomized to atorvastatin 10mg or placebo to ASCOT-Lipid–Lowering Arm (LLA). \n\nAtorvastatin led to a significant reduction in the hazard of the primary endpoint, fatal CHD and non-fatal MI (hazard ratio [HR], 0.64 [95% CI, 0.50–0.83). Although the amlodipine regime did not lead to a reduction in hazards of the primary endpoint, it was association with a reduction in fatal and non-fatal stroke (0.77 [0.66-0.89]) and all-cause mortality (0.89 [0.81-0.99]).\n\nLarge observational studies have demonstrated associations between higher blood pressure and higher cholesterol in mid-life and a higher risk of dementia. However, there is little support from randomised trials or Mendelian randomisation studies for a strategy of lowering midlife blood pressure, or prescribing statins to prevent dementia. Therefore more data is needed in order to support public health interventions to prevent dementia.\nTherefore Imperial need access to records which measure the incidence of dementia. Dementia records are found in records of HES, emergency department admission and mental health records, and therefore Imperial will need to access all of these record types.\n\nDementia is an insidious condition, and probably develops over many years. Very long term trials may not be feasible, would be extremely expensive, and would take many years before they could have an impact on public health. In order to lengthen the follow up period of existing trials, Imperial  propose to follow up UK participants in ASCOT by using information in the electronic health records of the English, Scottish, and Welsh national health systems and to measure the development of dementia over the very long term.\n\nThe study therefore aims to determine whether: \n\n1.\tParticipants randomised to atorvastatin have a lower long term risk of dementia, stroke diabetes and other vascular events compared to patients randomised to placebo\n2.\tParticipants randomised to an amlodipine-based regime have a lower risk of dementia, stroke, diabetes and other vascular events than patients randomised to an atenolol-based regime.\n\nThe overall aims of ASCOT, are to determine the effect of higher LDL cholesterol and higher blood pressure on human health, remains the same as when it was founded.\n\nLinkage to mortality for participant in the UK was begun as part of the initial ASCOT study, though Imperial are now requesting more detailed information on hospitalisations for other reasons (including mental health)  in order to detect whether the treatments studies in the trial had any impact on the long term incidence of long term conditions including myocardial infarction, stroke, dementia or diabetes.  Section 251 approval has been sought and obtained to cover the cohort linkage.\n\nThe aim of this study is to determine the effect of different regimes of lowering blood pressure and LDL-cholesterol on the long term health. Therefore significant years of follow-up are useful because:\n\nLong term health conditions are often under-recorded in each individual hospitalisation. It is necessary to try to ascertain these in multiple hospitalisations over the course of a participant’s life from the time of randomisation into the trial. Therefore, in the first instance, many years of follow-up increase the chance of ascertaining these illnesses.\nConditions such as dementia and diabetes may take many years to develop, sometimes 10 or 20 years. Therefore, in the second instance, many years of follow-up allow time for these conditions to develop, particularly diseases associated with ageing.",
+  "c9397fc01f40": "Long term follow up of the UK cohort of the ASCOT population has shown that, 11 years after randomisation and approximately 8 years after trial closure, there was a significant reduction in all-cause mortality in subjects initially randomised to atorvastatin, suggesting a legacy effect of statins which persists many years after treatment (Sever PS et al, Eur Heart J 2011). Analysis of mortality data a further four years after trial closure showed further persistence of the legacy effect of atorvastatin on all-cause mortality (data presented at British Hypertension Society 2016.). \n\nHowever, no such legacy benefits were apparent for the blood pressure lowering arm of the study. In order to strengthen the information on the legacy benefits of statins, and to ascertain whether such benefits exist for blood pressure lowering, It is proposed to extend the analysis to include all fatal and non-fatal events, such as dementia, diabetes, and fatal and non-fatal vascular events.\n\nIt is believed that the results of this research will be of benefit to patients considering the long term benefits and harms of vascular secondary preventative medication, for example those in mid-life who are considering taking a statin or blood pressure lowering medication.\n\nDetermining precisely the roles of higher blood pressure and LDL-cholesterol for dementia prevention is a priority for public health. \n\nIf the control of vascular risk in mid-life or effective treatment of pre-symptomatic cerebral vascular disease could be shown to prevent or delay dementia, this would have considerable implications for the global burden of vascular-mediated dementia and for public policy. \n\nIt would expand the number of people eligible for intervention at a younger age; and identify new methods to target interventions (currently targeted based on absolute risk of heart attack and stroke, not dementia). The cost-savings estimated from risk factor control (£60 million saved for every year’s delay in dementia in the 1% of the population with vascular risk factors) have been estimated solely from observational data (nice.org.uk/Guidance/NG16). Data from this analysis might substantially modify these estimates, giving commissioners better evidence to weigh the benefits of different interventions. If, on the other hand, a causal role for vascular risk factors or pre-symptomatic cerebral vascular disease cannot be demonstrated, this would lead to a radical shift in both research and public health priorities.",
+  "ecd6a8a3aa51": "ASCOT expect the following outputs:\n\n1. An analysis of the effect of each drugs on dementia, hospitalisation, and cardiovascular outcomes in the very long term\n2. An analysis to determine whether the effects of the drugs on long term outcomes is affected by their baseline characteristics.\n\nWhen these outputs are available and submitted for publication, ASCOT will provide them to funders and other relevant boards. All outputs are publicised on the ASCOT website. Once data has been received by the ASCOT study team, they expect the initial analyses to take 18 months to 2 years.\n\nAll outputs will be that will be published will be aggregated with small numbers suppressed in line with the HES analysis guide. \n\nThe study aim to present the findings of the work at the European Stroke Conference, Alzheimer’s Research UK and European Stroke Organisation Conference within 12 – 24 months. The study have extensive contacts with the Alzheimer’s Society, the Stroke Association and the British Heart Foundation, which they will use to communicate to patient groups, and as a conduit to policy makers such as NICE and other national guideline bodies.\n\nThe ASCOT trial investigators will publish these outputs in major clinical journals (e.g. Lancet, BMJ, Stroke etc.) and present them in international meetings by study end, target 2019-2020 . it is anticipated these would contribute to national guidelines on reducing cardiovascular risk.\nImperial will present outputs at international academic conferences (European Stroke Organisation Conference etc.), as well as at national meeting for people with dementia.\n\nWe are seeking an extension as we have to receive HES data from NHS Digital."
+ }
+}

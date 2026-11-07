@@ -1,0 +1,77 @@
+{
+ "base_reference": "DARS-NIC-48781-Z5C2L",
+ "versions": [
+  {
+   "reference": "DARS-NIC-48781-Z5C2L-v0.2",
+   "version": "0.2",
+   "organisation": "OFFICE FOR NATIONAL STATISTICS (ONS)",
+   "organisation_type": "",
+   "listed": [
+    "2016-12-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2016-12-01"
+     ],
+     "objective": "b9998ee7bebf",
+     "activities": "7013f869c729",
+     "expected_output": "731d43293166",
+     "expected_benefits": "d4b20b319ce5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Bespoke",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2016-12-01"
+     ],
+     "rows": 1
+    }
+   ]
+  },
+  {
+   "reference": "DARS-NIC-48781-Z5C2L-v1.2",
+   "version": "1.2",
+   "organisation": "OFFICE FOR NATIONAL STATISTICS (ONS)",
+   "organisation_type": "",
+   "listed": [
+    "2017-09-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2017-09-01"
+     ],
+     "objective": "b9998ee7bebf",
+     "activities": "7013f869c729",
+     "expected_output": "731d43293166",
+     "expected_benefits": "d4b20b319ce5"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "MRIS - Bespoke",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012",
+     "frequency": "Ongoing",
+     "periods": [
+      "2017-09-01"
+     ],
+     "rows": 1
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "7013f869c729": "Compare PDS death notifications with GRO death registrations. NHS Digital will extract identifiable data (NHS Number, gender, date of birth, date of registration and ICD 10 primary cause of death code from ONS Mortality data) for persons with a date of death recorded between 1st Jan 2011 and 31th June 2016. NHS Digital will then link these data, using NHS Number, to data from Patient Demographic Service (PDS). For linked records NHS Digital will extract informal date of death and the PDS-system notification date, the formal date of death and ONS date of registration. NHS Digital will calculate age at formal date of death (using informal date if formal date not available) and stratify to the following age bands: < 5 years; 5-14 years; 15-44 years; 45-64 years; 65-74 years; 75-84 years; 85+ years. NHS Digital will calculate A. the difference between the ONS date of death and the informal date of death from PDS [ONS-PDS] and stratify as follows: zero days, 1-7 days; 8-14 days; 15-28 days; 29-90 days; 91-182 days; 183-365 days; 366-730 days; 731+ days; no ONS death recorded; no PDS death recorded. NHS Digital will calculate B. the difference between ONS date of registration and the PDS informal death system notification date [ONS registration-PDS notification], and stratify as follows: zero days, 1-7 days; 8-14 days; 15-28 days; 29-90 days; 91-182 days; 183-365 days; 366-730 days; 731+ days, no ONS death recorded; no PDS death recorded. The above difference-records (A and B separately) will be aggregated and tabulated by i) sex, ii) ICD-10 chapter, iii) age group and iv) year of death (from formal death date); and by all pairs of i) to iv). The difference-records (A and B) will also be cross-tabulated, separately for each co-variate level of the following four covariates: i) sex, ii) ICD-10 chapter, iii) age group and iv) year of death (from formal death date) Tabulations will compare the difference between the formal date of death (fDoD) and the informal date of death (iDoD), indicating the quality/accuracy of the informal death date; they will also compare the difference between the date of registration and date the informal death was recorded in PDS, indicating the days gained in advance notification using the informal date vs the formal date. In addition, we’d like to know, for each calendar year [2011 to 2015], how many iDODs were notified in that calendar year for whom there was no fDOD prior to 1 January 2016 had been notified by 30 June 2016. We’d like these counts, if possible, to be provided separately for each covariate-level of the following two covariates i) gender and iii) informal age group where age-group at death is based on iDOD (since, for these cases, fDOD has not been registered). Moreover, C. we’d like the death registration delay to be computed as [31 December 2015 – iDOD] and stratified as follows: zero days, 1-7 days; 8-14 days; 15-28 days; 29-90 days; 91-182 days; 183-365 days; 366-730 days; 731-1096 days; 1097-1462; 1463-1827. The difference-records [C.] will be aggregated and tabulated by i) sex, iii) age group and iv) year of iDOD; and by all pairs of i) to iv). Tabulated outputs, with small number suppression applied, will be provided to ONS. No record level or identifiable data will be released by NHS Digital.",
+  "731d43293166": "The outputs will inform an assessment as to the potential advantages of using informal date of death to notify research studies of deaths in their study cohorts. At present, research-teams need to delay their record-linkage requests [for follow-up to 31 December 2015, say] by at least two years to be almost sure that ONS has been notified of almost all deaths that actually occurred in England and Wales on or before 31 December 2015. If iDoD is substantially accurate, this undesirable delay to record-linkage studies could be avoided if informal date of death was available to researchers. The research team will not know ICD-10 chapter for cause of death but in many studies, only fact-of-death was needed and, in others, imputation for likely cause-of-death may be technically possible. These are huge advantages for the discovery potential from approved record-linkage studies but are dependent on knowing how reliable iDOD is likely to be. Among those for whom iDoD exists in 2011 but no fDoD was notified by 30 June 2016, there may be falsely assigned notifications (eg in terms of NHS number) so that the number (%) of C-differences which exceed 4-years provides an upper limit for this error-rate.",
+  "b9998ee7bebf": "Provide an assessment of the quality of the informal date of death contained within PDS death notifications, compared with formal date of death. Provide an indication as to whether the informal date of death is sufficiently accurate, and whether there would be benefit in providing this date to researchers in advance of the formal notification. To establish what advantages of timeliness this provision could bring, and whether there is any variation by age, gender and cause of death.",
+  "d4b20b319ce5": "Expected measurable benefits to health and/or social care including target date: More timely notification of deaths to medical researchers will benefit the health and social care system by substantially reducing delays in the discovery-potential from record-linkage studies. Currently, research-teams may observe that a subject’s series of court appearances or benefits claims has ceased but cannot know assuredly - due to lateness of notification of fDoD - whether the explanation is that the subject has died or that s/he has been rehabilitated/employed. The research team has to allow about 2-years to account for late registered deaths, which delays deriving new knowledge, in this example about criminal sanctions or benefits."
+ }
+}

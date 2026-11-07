@@ -1,0 +1,99 @@
+{
+ "base_reference": "DARS-NIC-35562-V6G5W",
+ "versions": [
+  {
+   "reference": "DARS-NIC-35562-V6G5W-v0.19",
+   "version": "0.19",
+   "organisation": "University Hospitals Bristol NHS Foundation Trust",
+   "organisation_type": "",
+   "listed": [
+    "2019-05-01"
+   ],
+   "states": [
+    {
+     "periods": [
+      "2019-05-01"
+     ],
+     "objective": "13f00ddfd520",
+     "activities": "2edb9f5f6a8e",
+     "expected_output": "df5bfba2a451",
+     "expected_benefits": "84a8de448c90"
+    }
+   ],
+   "releases": [
+    {
+     "dataset": "Civil Registration - Deaths",
+     "form": "Identifiable",
+     "sensitivity": "Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "HES:Civil Registration (Deaths) bridge",
+     "form": "Anonymised - ICO code compliant",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(2)(c)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 1
+    },
+    {
+     "dataset": "Hospital Episode Statistics Accident and Emergency",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Admitted Patient Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Critical Care",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 4
+    },
+    {
+     "dataset": "Hospital Episode Statistics Outpatients",
+     "form": "Identifiable",
+     "sensitivity": "Non Sensitive",
+     "legal_basis": "Health and Social Care Act 2012 – s261(7)",
+     "frequency": "One-Off",
+     "periods": [
+      "2019-05-01"
+     ],
+     "rows": 4
+    }
+   ]
+  }
+ ],
+ "texts": {
+  "13f00ddfd520": "This study has been funded by the NIHR (12/167/102) under the NIHR Health Technology Assessment Award as part of an Open Call.\n\nData provided by NHS Digital will be used as part of a research project which will provide the NHS with evidence of how best to treat out of hospital cardiac arrests (OHCA).  The study team are undertaking a large randomised controlled trial (RCT) in four English NHS ambulance services and 100 hospitals to determine whether placing a breathing tube in the windpipe (intubation) or the best available supraglottic airway device (called the i-gel) gives the best chance of recovery following OHCA. The four English NHS ambulance services involved are South Western Ambulance Service NHS Foundation Trust (SWAST), Yorkshire Ambulance Service NHS Trust (YAS), East of England Ambulance Service NHS Trust (EAST) and East Midlands Ambulance Service NHS Trust (EMAS). The study team are following up recruited patients for 6 months after OHCA to find out the quality of life of survivors and the NHS resources used. The study team will use HES/ONS data to capture secondary care resource use and deaths that occur after OHCA during study follow up. \n\nObjectives for data processing are to:\n\n- determine which intervention (intubation or i-gel) is more clinically effective and cost effective for treating OHCA;\n\n- optimise the care pathway for patients with OHCA in the NHS;\n\n- improve the outcomes of patients with OHCA in the UK.\n\nHES/ONS data provided by NHS Digital will be linked to trial data collected by the Clinical Trials and Evaluation Unit, University Hospitals Bristol NHS Foundation Trust. University Hospitals Bristol NHS Foundation Trust will share the linked data with the health economists at the Nuffield Department of Population Health, University of Oxford, who will conduct an economic evaluation for the study. The data to be shared will be at record level, and will initially be sent to the ONS named users. The data will be shared with the health economists at the Nuffield Department of Population Health, University of Oxford via the study database, which is stored on NHS servers. Health economists will be required to set up a database account and will be granted access to a specific 'Downloads' section of the study database. At no point will the health economists have access to patient identifiable data on the study database. Files to be downloaded will be password encrypted.",
+  "2edb9f5f6a8e": "Patient identifiable data (Study ID, NHS Number, Date of Birth, Surname, Forename, Gender, Postcode) will be sent by UHBristol to NHS Digital. HES/ONS data will be returned by NHS Digital to UHBristol. The coordinating centre at UHBristol will undertake 4 main tasks using the HES/ONS data: (1) Check the degree of successful linkage with HES and, if low, explore patterns in the AIRWAYS-2 data set that might explain this, (2) Cross check the length of ICU stay and hospital stay with the information collected on the AIRWAYS-2 data collection forms, including filling in any missing data which can be ascertained from HES. These outcomes will be analysed and reported by the Bristol team, (3) Cross-check and update the survival status of patients who consented to active follow-up where missing. This data is currently missing for 148 patients. This outcome is analysed and reported by the Bristol team, and (4) Code relevant AIRWAYS-2 trial data to the HES records ready for the health economic analysis to proceed.\n\nFollowing these tasks, the linked trial and HES records will be pseudonymised by the coordinating centre at UHBristol and transferred to the Nuffield Department of Population Health (NDPH) at the University of Oxford. Please note that the Health Economics Research Centre (HERC) is part of the Nuffield Department of Population Health who will undertake analysis. \nThis pseudonymised data will be shared with the health economists at the Nuffield Department of Population Health at University of Oxford using encrypted email. The coordinating centre at UHBristol will provide the health economists in Oxford with the document ‘Accessing Encrypted Emails Guide for Non-NHSmail users, HSCIC’, and the health economists will register for the encryption service. Guidance in the document ‘Encryption Guide for NHSmail, HSCIC’ will be followed. The coordinating centre at UHBristol will use an NHS.net email account to send the data via encrypted email to the health economists in Oxford. The data attached to the email will also be password protected. The coordinating centre in Bristol will provide the password to the health economists in Oxford via telephone. At no point will the health economists have access to patient identifiable data. SWAST will have oversight of the processes in their role of Sponsor. At no point will SWAST have access to any record level data - they will only see the aggregated outputs with small numbers suppressed in line with the HES analysis guidelines.\n\nPatient identifiable data for AIRWAY-2 patients will be sent to NHS digital along with each patients' unique study ID, in order that HES/ONS data for these patients can be sent back, with a unique study ID together with patient identifiers and relevant data items from HES/ONS. \n\nThese data will be linked to the trial data by the team named at CTEU Bristol. The dataset (including HES and ONS data) will be validated before being pseudonymised for transfer to the health economists at the Nuffield Department of Population Health at University of Oxford.\n\nThe trial aims to determine whether the i-gel is superior to tracheal intubation in non-traumatic OHCA in adults, in terms of both clinical and cost effectiveness. \n\nOne of the secondary outcome measures is mortality; the ONS data will be used to assist in the estimation of the difference in mortality between groups.  Those patients who are deceased upon arrival at hospital are included within the study.\n\nOne of the main objectives of the study in line with the NIHR objective is to estimate the cost effectiveness of the trial interventions; data (including HES and ONS data) will be used to estimate the costs and Quality Adjusted Life Years (QALYs) gained by each patient over the course of the 6 months of follow-up, and these estimates will be used in the cost-effectiveness analysis. For each patient, data on survival (some of which will be ONS data) and quality of life estimates from survivors will be used to estimate QALYs gained to 6 months. Costs and QALYs will be summarised by trial group.\n\nExplanation of organisations involved in the study can be found below;\n\nSouth Western Ambulance Service NHS Foundation Trust hold the contract with the DH for the study. Data Controller (joint)\nSWAS NHS Trust will have no access to the record level data.\n\nUniversity of Oxford Data Controller (joint) Will have access to the record level data pseudonymised\n\nUniversity Hospital Bristol NHS Foundation Trust Data Controller (joint) will have access to the record level data with identifiers.\n\nUniversity West of England Bristol , Royal United Hospital Bath NHS Trust and Imperial College London were initially involved in the grant proposal and provided initial clinical input into the protocol.  These organisations do not have any influence over how the data is being analysed, they will not have access to any data other that what is put in the public domain.\n\nAll organisations party to this agreement must comply with the Data Sharing Framework Contract requirements, including those regarding the use (and purposes of that use) by “Personnel” (as defined within the Data Sharing Framework Contract ie: employees, agents and contractors of the Data Recipient who may have access to that data).\n\nSouth Western Ambulance Service NHS Foundation Trust and the University of Bristol  will not have access to any of the data as a processor and will only see aggregated outputs with small numbers suppressed.\n\nThere will be no data linkage undertaken with NHS Digital data provided under this agreement that is not already noted in the agreement.\n\nThe data controller(s) is/are responsible for the activities of all individuals (“Individuals”) who have access to the patient data disseminated by NHS Digital (\"Data\") and are engaged by any data controller or data processor listed in this agreement, regardless of whether such Individual is described as an employee, contractor, secondee, PhD or post-doctoral student or honorary employee.",
+  "84a8de448c90": "Because resuscitation for OHCA is strongly protocol driven, the study team anticipates that the findings from AIRWAYS-2 will be readily adopted into practice (by 2019) through changes to accepted guidelines. Changes to internationally accepted resuscitation guidelines are made by ILCOR, the International Liaison Committee on Resuscitation. ILCOR was formed in 1992 to provide a forum for liaison between principal resuscitation organisations worldwide. At present, ILCOR comprises representatives of:\nAmerican Heart Association (AHA)\nEuropean Resuscitation Council (ERC) (includes the Resuscitation Council UK)\nHeart and Stroke Foundation of Canada (HSFC)\nAustralian and New Zealand Committee on Resuscitation (ANZCOR)\nResuscitation Councils of Southern Africa (RCSA)\nInter American Heart Foundation (IAHF)\nResuscitation Council of Asia (RCA)\n\nOne of the AIRWAYS-2 co-applicant team is a past Chairman of the Resuscitation Council UK.  They are Editor-in-Chief of the journal Resuscitation and Vice-Chairman of the European Resuscitation Council, the immediate past co-chairman of ILCOR and co-editor for the 2015 international resuscitation guidelines. Professor Nolan is ideally placed to ensure that the findings from AIRWAYS-2 are immediately incorporated into ILCOR's rapid review process (see https://volunteer.heart.org/apps/pico/Pages/default.aspx ) and then into internationally accepted and adopted resuscitation guidance, thereby ensuring rapid and effective implementation. Supported by the wider research team, Professor Nolan will ensure that ILCOR is fully updated on the findings of AIRWAYS-2 as soon as these become available.\n\nExpected benefits include;\n- improved clinical outcomes for patients with OHCA\n- evidence-based guidelines\n- reduction in inequalities as a result of clear guidelines for treatment in OHCA patients\n- rationalisation of training and equipment in ambulance services\n- answers to questions about the cost effectiveness of different airway management for the NHS and society as a whole.\n\nThe report to the funding body will be sent to the NIHR, and will provide a summary of the work undertaken during the life of the project. The target journals for the main study paper and cost effectiveness publications have not been identified, but these will be Open Access. These will communicate the results of the primary and secondary outcomes. The summary for stakeholders will be aimed both externally (e.g. general public/patients, media, commissioners) and internally (e.g. participating Trust stuff, operational staff).\nAll outputs will be reviewed by the Chief Investigator and other collaborators, as necessary.",
+  "df5bfba2a451": "- Report to funding body (HTA): October 2018\n- Main study paper: Clinical effectiveness: September 2018\n- Cost effectiveness publication: January 2019\n- Summary to relevant stakeholders: January 2019\n\nThe report to the funding body will be sent to the NIHR, and will provide a summary of the work undertaken during the life of the project. The target journals for the main study paper and cost effectiveness publications have not been identified, but these will be Open Access. These will communicate the results of the primary and secondary outcomes of the study. The summary for stakeholders will be aimed both externally (e.g. general public/patients, media, commissioners) and internally (e.g. participating Trust stuff, operational staff).\n\nAll outputs will be reviewed by the Chief Investigator and other collaborators, as necessary.  All outputs will be aggregated with small numbers suppressed in line with the HES analysis guide.\n\nFindings will be shared with the National Association of Ambulance Medical Directors (NASMED), the National Ambulance Research Steering Group and the Research and Publications Committee of the Royal College of Emergency Medicine. The Chief Investigator and co-applicants have close links with these groups which are already aware of the trial and awaiting its results, and the study team intend to make presentations at all of them. The Chief Investigator is also the National Clinical Director for Urgent and Emergency Care at NHS England, and so is ideally placed to support national dissemination and implementation. An electronic summary of the results will be circulated widely in a range of formats, and made publicly available. Presentations will be given at national and international conferences relevant to pre-hospital care and emergency medicine. Examples include the 999 EMS Research Forum, the Annual Scientific Meeting of the Royal College of Emergency Medicine, the International Conference on Emergency Medicine and the American Heart Association Resuscitation Science Symposium.\n\nThe data will not be linked to any other data not already noted in this agreement."
+ }
+}
