@@ -165,7 +165,9 @@
    says so first. It never calls a paper a benefit: see `pipeline.outputs`. #}
 {% macro paper(p) -%}
 <li><a href="{{ p.url }}">{{ p.title }}</a>{% if p.untitled %} <span class="hint">(title not available)</span>{% endif %}{% if p.year %} <span class="hint">({{ p.year }})</span>{% endif %}
-  {%- if p.basis == "found" and p.register_cited %} <span class="hint">· also cited in the register</span>{% endif %}</li>
+  {%- if p.basis == "found" and p.register_cited %} <span class="hint">· also cited in the register</span>{% endif %}
+  {#- The heading already says the rest weren't confirmed; only an unread paper needs a note. #}
+  {%- if p.basis == "unreadable" %}<br><span class="hint paper-result">Not checked: full text not openly available</span>{% endif %}</li>
 {%- endmacro %}
 {# The five newest show; a long list folds the rest, so the datasets and file
    releases below stay in reach on an agreement with dozens of papers. #}
@@ -195,10 +197,10 @@
 {% endif %}
 {{ paper_list(papers.found, "papers found to have used this agreement's data") }}
 {% endif %}
-{% if papers.unreadable %}
-<h3>Cited by the register, not checked</h3>
-<p class="hint">Cited in the register's benefit text; the full text isn't openly available, so the review couldn't check it.</p>
-{{ paper_list(papers.unreadable, "papers cited by the register") }}
+{% if papers.cited %}
+<h3>Cited in the register, not confirmed by the review</h3>
+<p class="hint">The applicant cites these papers in the register's benefit text. The review couldn't confirm they used this agreement's data.</p>
+{{ paper_list(papers.cited, "papers cited in the register") }}
 {% endif %}
 </section>
 {% endif %}

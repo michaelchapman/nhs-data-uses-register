@@ -24,9 +24,9 @@
     <select id="reason" data-filter-select data-key="reason" aria-describedby="reason-hint">
       <option value="">Any</option>
       <option value="found">Found to have used the data ({{ found|length|commas }})</option>
-      <option value="unreadable">Cited by the register, not checked ({{ (papers|length - found|length)|commas }})</option>
+      <option value="cited">Cited in the register, not confirmed ({{ (papers|length - found|length)|commas }})</option>
     </select>
-    <p class="hint" id="reason-hint">"Cited by the register, not checked": cited in the register's benefit text, but the full text isn't openly available, so the review couldn't check it.</p>
+    <p class="hint" id="reason-hint">"Cited in the register, not confirmed": the applicant cites the paper in the register's benefit text, but the review couldn't confirm it used the agreement's data.</p>
   </div>
   <div class="field">
     <label for="org">Organisation</label>
@@ -67,11 +67,11 @@
       <td data-label="Agreements" data-sort="{{ p.agreements|length }}">
         <ul class="paper-agreements">
           {% for link in p.agreements %}{% set a = link.agreement %}
-          <li><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title|truncate(90) }}</a> <span class="hint">{{ a.organisation|org }} · {{ a.base_reference }}{% if p.basis == "found" and link.basis == "unreadable" %} · cited by the register for this agreement, not checked{% endif %}</span></li>
+          <li><a href="{{ meta.base_path }}/agreements/{{ a.slug }}/">{{ a.title|truncate(90) }}</a> <span class="hint">{{ a.organisation|org }} · {{ a.base_reference }}{% if link.result %} · cited in the register; review: {{ link.result }}{% endif %}</span></li>
           {% endfor %}
         </ul>
       </td>
-      <td data-label="Why listed">{{ "Found to have used the data" if p.basis == "found" else "Cited by the register, not checked" }}{% if p.basis == "found" and p.register_cited %}; also cited in the register{% endif %}</td>
+      <td data-label="Why listed">{{ "Found to have used the data" if p.basis == "found" else "Cited in the register, not confirmed" }}{% if p.basis == "found" and p.register_cited %}; also cited in the register{% endif %}</td>
     </tr>
   {% endfor %}
   </tbody>
