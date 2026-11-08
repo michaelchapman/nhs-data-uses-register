@@ -31,6 +31,9 @@ that stays true once an agreement ends ("is using", "currently"). It sends
 only the overview, not the register text, and asks for the tense to change and
 nothing else, so it costs a fraction of `run` and the facts stay the ones
 already checked. A rewrite that adds or drops a name or number is flagged.
+A flagged rewording is kept beside the overview as `retense_draft`, with its
+`retense_flags`, and the page goes on showing the overview it had; a person
+copies the draft over `summary`, or deletes it, after reading it.
 `--pilot` writes `_summaries/retense-pilot.md`, before and after, instead.
 
 The overviews are not part of the register, and every page that shows one says
@@ -239,7 +242,8 @@ name, not with "This agreement".
 - Reply with the overview only."""
 
 # Wording that says what an organisation is doing now.
-PRESENT = re.compile(r"\b(?:is|are) (?:currently |now )?\w+ing\b|\buses\b|\bcurrently\b|\bnow\b", re.I)
+# Case matters for "uses", which the Secondary Uses Service also has.
+PRESENT = re.compile(r"\b(?:[Ii]s|[Aa]re) (?:currently |now )?\w+ing\b|\buses\b|\b[Cc]urrently\b|\b[Nn]ow\b")
 NUMBERS = re.compile(r"\d[\d,.]*")
 RETENSE_PILOT_COUNT = 40
 
@@ -263,12 +267,16 @@ def drift(before: str, after: str) -> list[str]:
     def names(text: str) -> set[str]:
         return {re.sub(r"[\'’]s$", "", w) for w in CAPITALISED.findall(text)}
 
+    def words(text: str) -> set[str]:
+        # Every word, wherever it falls: a name may move to the start of a sentence.
+        return {re.sub(r"[\'’]s$", "", w) for w in re.findall(r"\b[A-Z][A-Za-z0-9&'-]+\b", text)}
+
     def numbers(text: str) -> set[str]:
         return {n.rstrip(".,") for n in NUMBERS.findall(text)}
 
     flags = []
-    added = sorted((names(after) - names(before)) | (numbers(after) - numbers(before)))
-    dropped = sorted((names(before) - names(after)) | (numbers(before) - numbers(after)))
+    added = sorted((names(after) - words(before)) | (numbers(after) - numbers(before)))
+    dropped = sorted((names(before) - words(after)) | (numbers(before) - numbers(after)))
     if added:
         flags.append("rewording added: " + ", ".join(added))
     if dropped:
@@ -322,13 +330,16 @@ def store_retense(record: dict, fetched: dict) -> None:
         if not entry or entry.get("hash") != record["hashes"][reference] or entry.get("summary") != before:
             print(f"  {reference}: overview changed since the batch was sent, left as it is")
             continue
-        entry = {**entry, "summary": after, "retensed": {"model": record["model"], "written": written}}
         flags = retense_flags(before, after)
         if flags:
-            entry["flags"] = flags
-            entry["before_retense"] = before
+            # The overview the page shows now stays until a person has read
+            # the rewording, rather than the page losing its overview.
+            entry = {**entry, "retense_draft": after, "retense_flags": flags}
             flagged += 1
             print(f"  {reference}: " + "; ".join(flags))
+        else:
+            entry = {**entry, "summary": after}
+        entry["retensed"] = {"model": record["model"], "written": written}
         entries[reference] = entry
         stored += 1
     overviews.write(entries)

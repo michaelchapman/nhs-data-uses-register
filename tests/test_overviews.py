@@ -130,6 +130,7 @@ class Retense(unittest.TestCase):
         self.assertTrue(summarise.needs_retense({"summary": self.BEFORE}))
         self.assertTrue(summarise.needs_retense({"summary": "Leeds uses HES data."}))
         self.assertFalse(summarise.needs_retense({"summary": "Leeds's agreement covers HES data."}))
+        self.assertFalse(summarise.needs_retense({"summary": "Leeds's agreement covers Secondary Uses Service data."}))
         self.assertFalse(summarise.needs_retense({"summary": self.BEFORE, "retensed": {}}))
 
     def test_the_request_sends_only_the_overview(self):
@@ -147,6 +148,11 @@ class Retense(unittest.TestCase):
         self.assertIn("rewording added: 2011, ONS", flags)
         self.assertIn("rewording dropped: 2010, 3", flags)
 
+    def test_a_name_moved_to_the_start_of_a_sentence_is_not_dropped(self):
+        before = "Leeds studies prescribing. So far, ICBs have used its analyses."
+        after = "Leeds's agreement covers prescribing. ICBs have used its analyses."
+        self.assertEqual(summarise.drift(before, after), [])
+
     def test_wording_still_in_the_present_is_flagged(self):
         flags = summarise.retense_flags(self.BEFORE, self.BEFORE)
         self.assertIn("still in the present: is using", flags)
@@ -157,16 +163,24 @@ class Retense(unittest.TestCase):
             entries = {
                 "A": {"hash": "h1", "summary": self.BEFORE, "model": "claude-sonnet-5-5", "written": "2026-10-31"},
                 "B": {"hash": "h2", "summary": "B is using HES.", "model": "claude-sonnet-5-5", "written": "2026-10-31"},
+                "C": {"hash": "h3", "summary": "C is using HES.", "model": "claude-sonnet-5-5", "written": "2026-10-31"},
             }
             overviews.write(entries, path)
             record = {"model": "claude-sonnet-5-5", "submitted": "2026-11-08T08:00:00+00:00",
-                      "hashes": {"A": "h1", "B": "old"}, "originals": {"A": self.BEFORE, "B": "B is using HES."}}
+                      "hashes": {"A": "h1", "B": "old", "C": "h3"},
+                      "originals": {"A": self.BEFORE, "B": "B is using HES.", "C": "C is using HES."}}
             after = "University of Leeds's agreement covers HES data from 2010, to study hospital stays. It published 3 papers."
             with mock.patch.object(overviews, "PATH", path):
-                summarise.store_retense(record, {"texts": {"A": after, "B": "B's agreement covers HES."}})
+                summarise.store_retense(record, {"texts": {"A": after, "B": "B's agreement covers HES.",
+                                                          "C": "C is using HES and ONS data."}})
             stored = overviews.load(path)
         self.assertEqual(stored["A"]["summary"], after)
         self.assertEqual(stored["A"]["hash"], "h1")
         self.assertEqual(stored["A"]["retensed"], {"model": "claude-sonnet-5-5", "written": "2026-11-08"})
         self.assertNotIn("flags", stored["A"])
         self.assertEqual(stored["B"]["summary"], "B is using HES.")
+        # A flagged rewording waits beside the overview, which stays shown.
+        self.assertEqual(stored["C"]["summary"], "C is using HES.")
+        self.assertEqual(stored["C"]["retense_draft"], "C is using HES and ONS data.")
+        self.assertNotIn("flags", stored["C"])
+        self.assertTrue(stored["C"]["retense_flags"])
