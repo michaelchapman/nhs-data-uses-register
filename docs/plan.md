@@ -197,6 +197,17 @@ is what decides the rules below.
 - **Never stale.** Each overview records a hash of the text it was written
   from (`pipeline/overviews.py`). When NHS England edits the text, the hash no
   longer matches, and the page shows no overview until the next run.
+- **True after the agreement ends.** The first overviews said "is using",
+  which stops being true when an agreement ends, and an overview isn't
+  rewritten then. The instructions now ask for wording that outlives the term.
+  In November 2026 Michael chose to fix the existing ones cheaply:
+  `summarise retense` sent only each overview to Haiku, asking it to change
+  the tense and nothing else ($0.17 for 2,533, against about $5.80 to rewrite
+  the ended agreements' overviews from the register text with Sonnet). A
+  rewording that added or dropped a name or number, or still spoke in the
+  present, was held back beside the overview it would replace, as
+  `retense_draft`. Pages for ended agreements also say, under the overview,
+  that the term has passed.
 - **Checked before it is shown.** An overview is held back, with its reasons
   in `flags`, if it runs past 90 words, says whether data was or was not
   released (the release views' wording rules apply), trips `clichecheck`, or

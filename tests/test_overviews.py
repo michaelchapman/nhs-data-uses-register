@@ -184,3 +184,13 @@ class Retense(unittest.TestCase):
         self.assertEqual(stored["C"]["retense_draft"], "C is using HES and ONS data.")
         self.assertNotIn("flags", stored["C"])
         self.assertTrue(stored["C"]["retense_flags"])
+
+
+class RewordingModels(unittest.TestCase):
+    def test_only_rewordings_that_are_shown_count(self):
+        entries = {
+            "A": {"model": "claude-sonnet-5-5", "retensed": {"model": "claude-haiku-5-5"}},
+            "B": {"model": "claude-sonnet-5-5", "retensed": {"model": "claude-opus-5-5"}, "retense_draft": "x"},
+            "C": {"model": "claude-sonnet-5-5"},
+        }
+        self.assertEqual(overviews.rewording_models(entries), ["Claude Haiku 5.5"])
