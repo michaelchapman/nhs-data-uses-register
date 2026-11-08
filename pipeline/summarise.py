@@ -5,6 +5,8 @@
     python -m pipeline.summarise run               # every agreement without a current overview
     python -m pipeline.summarise run --limit 100   # the first 100 of them
     python -m pipeline.summarise collect --wait    # fetch finished batches
+    python -m pipeline.summarise retense --pilot   # 40 overviews reworded to outlive their term
+    python -m pipeline.summarise retense           # every overview that still needs it
 
 Agreements found only in the earlier release registers (`pipeline.earlier`)
 have pages too, so `estimate` and `run` include them, written from the text
@@ -23,6 +25,13 @@ is published.
 `pipeline.overviews`). Each overview is checked before it is stored. An
 overview that fails a check is stored with its `flags` and not shown until a
 person has read it and deleted the flags.
+
+`retense` fixes overviews written before the instructions asked for wording
+that stays true once an agreement ends ("is using", "currently"). It sends
+only the overview, not the register text, and asks for the tense to change and
+nothing else, so it costs a fraction of `run` and the facts stay the ones
+already checked. A rewrite that adds or drops a name or number is flagged.
+`--pilot` writes `_summaries/retense-pilot.md`, before and after, instead.
 
 The overviews are not part of the register, and every page that shows one says
 so. See docs/plan.md, "AI overviews".
@@ -207,6 +216,146 @@ def check(summary: str, source: str) -> list[str]:
     return flags
 
 
+# Rewording overviews to outlive their term ----------------------------------
+
+RETENSE_INSTRUCTIONS = """\
+You edit a short overview of an NHS England data sharing agreement, shown on a \
+public web page. It was written as if the agreement were in effect now. The \
+page must stay true after the agreement ends, and the overview is not \
+rewritten then. Reword it so that it describes what the agreement allows, not \
+what the organisation is doing now.
+
+Rules:
+- Change only the wording this needs. Keep every fact, name and number, and \
+the order of the sentences. Add nothing and drop nothing.
+- Use wording that is true during and after the term, such as "The University \
+of Leeds's agreement covers...", "The agreement allows..." or "The data is \
+for...". Never "is using", "uses", "currently" or "now".
+- Keep what has already happened in the past tense, such as a published \
+paper or a report already used.
+- Keep UK spelling and at most 75 words, and start with the organisation's \
+name, not with "This agreement".
+- If nothing needs changing, reply with the overview unchanged.
+- Reply with the overview only."""
+
+# Wording that says what an organisation is doing now.
+PRESENT = re.compile(r"\b(?:is|are) (?:currently |now )?\w+ing\b|\buses\b|\bcurrently\b|\bnow\b", re.I)
+NUMBERS = re.compile(r"\d[\d,.]*")
+RETENSE_PILOT_COUNT = 40
+
+
+def needs_retense(entry: dict) -> bool:
+    return bool(entry.get("summary")) and "retensed" not in entry and bool(PRESENT.search(entry["summary"]))
+
+
+def retense_params(summary: str, model: str) -> dict:
+    return {
+        "model": model,
+        "max_tokens": 2048,
+        "output_config": {"effort": "low"},
+        "system": RETENSE_INSTRUCTIONS,
+        "messages": [{"role": "user", "content": summary}],
+    }
+
+
+def drift(before: str, after: str) -> list[str]:
+    """Names and numbers a rewording added or dropped. Empty if none."""
+    def names(text: str) -> set[str]:
+        return {re.sub(r"[\'’]s$", "", w) for w in CAPITALISED.findall(text)}
+
+    def numbers(text: str) -> set[str]:
+        return {n.rstrip(".,") for n in NUMBERS.findall(text)}
+
+    flags = []
+    added = sorted((names(after) - names(before)) | (numbers(after) - numbers(before)))
+    dropped = sorted((names(before) - names(after)) | (numbers(before) - numbers(after)))
+    if added:
+        flags.append("rewording added: " + ", ".join(added))
+    if dropped:
+        flags.append("rewording dropped: " + ", ".join(dropped))
+    present = PRESENT.search(after)
+    if present:
+        flags.append("still in the present: " + present.group())
+    return flags
+
+
+def retense_flags(before: str, after: str) -> list[str]:
+    """`check`'s flags other than names (`drift` compares those with the
+    overview, which was itself checked against the text), plus `drift`'s."""
+    return [f for f in check(after, before) if not f.startswith("names not in the text")] + drift(before, after)
+
+
+def submit_retense(entries: dict[str, dict], references: list[str], model: str, kind: str) -> dict:
+    from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
+    from anthropic.types.messages.batch_create_params import Request
+
+    requests = [
+        Request(custom_id=r, params=MessageCreateParamsNonStreaming(**retense_params(entries[r]["summary"], model)))  # type: ignore[typeddict-item]
+        for r in references
+    ]
+    batch = client().messages.batches.create(requests=requests)
+    record = {
+        "id": batch.id,
+        "kind": kind,
+        "model": model,
+        "submitted": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+        # The overview each request rewords, so a rewording isn't stored over
+        # an overview that `run` has replaced meanwhile.
+        "hashes": {r: entries[r]["hash"] for r in references},
+        "originals": {r: entries[r]["summary"] for r in references},
+        "collected": False,
+    }
+    state = load_state()
+    state.append(record)
+    save_state(state)
+    print(f"submitted {len(requests)} rewordings to {model}: batch {batch.id}")
+    return record
+
+
+def store_retense(record: dict, fetched: dict) -> None:
+    entries = overviews.load()
+    written = record["submitted"][:10]
+    stored = flagged = 0
+    for reference, after in fetched["texts"].items():
+        entry = entries.get(reference)
+        before = record["originals"][reference]
+        if not entry or entry.get("hash") != record["hashes"][reference] or entry.get("summary") != before:
+            print(f"  {reference}: overview changed since the batch was sent, left as it is")
+            continue
+        entry = {**entry, "summary": after, "retensed": {"model": record["model"], "written": written}}
+        flags = retense_flags(before, after)
+        if flags:
+            entry["flags"] = flags
+            entry["before_retense"] = before
+            flagged += 1
+            print(f"  {reference}: " + "; ".join(flags))
+        entries[reference] = entry
+        stored += 1
+    overviews.write(entries)
+    print(f"reworded {stored} overviews in {overviews.PATH}, {flagged} flagged for review")
+
+
+def write_retense_pilot(record: dict, fetched: dict, candidates: int) -> Path:
+    usage = fetched["usage"]
+    spent = cost(record["model"], usage["input"], usage["output"])
+    sample = len(record["originals"]) or 1
+    lines = ["# Rewording pilot", "",
+             f"{sample} overviews reworded by {record['model']}: {usage['input']:,} input and "
+             f"{usage['output']:,} output tokens, about ${spent:.3f} as a batch. "
+             f"{candidates:,} overviews need rewording, so all of them would cost about "
+             f"${spent * candidates / sample:.2f}.", ""]
+    for reference, before in sorted(record["originals"].items()):
+        after = fetched["texts"].get(reference, "(not written)")
+        lines += [f"## {reference}", "", f"**Before:** {before}", "", f"**After:** {after}", ""]
+        flags = retense_flags(before, after)
+        if flags:
+            lines += [f"_Flagged: {'; '.join(flags)}_", ""]
+    path = WORK / "retense-pilot.md"
+    WORK.mkdir(exist_ok=True)
+    path.write_text("\n".join(lines))
+    return path
+
+
 # Batches --------------------------------------------------------------------
 
 
@@ -380,6 +529,13 @@ def cmd_estimate(args) -> None:
     print(f"{len(agreements):,} agreements need an overview: about {tokens_in / 1e6:.1f}M input tokens")
     for model in PRICES:
         print(f"  {model}: about ${cost(model, int(tokens_in), tokens_out):.2f} as a batch")
+    entries = overviews.load()
+    rewording = [e["summary"] for e in entries.values() if needs_retense(e)]
+    tokens_in = sum(len(RETENSE_INSTRUCTIONS) + len(s) for s in rewording) / CHARS_PER_TOKEN
+    tokens_out = 150 * len(rewording)
+    print(f"{len(rewording):,} overviews need rewording (`retense`): about {tokens_in / 1e6:.1f}M input tokens")
+    for model in PRICES:
+        print(f"  {model}: about ${cost(model, int(tokens_in), tokens_out):.2f} as a batch")
 
 
 def cmd_pilot(args) -> None:
@@ -404,6 +560,21 @@ def cmd_run(args) -> None:
     print("run `python -m pipeline.summarise collect --wait` to fetch them")
 
 
+def cmd_retense(args) -> None:
+    entries = overviews.load()
+    pending = {r for record in load_state() if not record["collected"] for r in record["hashes"]}
+    references = sorted(r for r, e in entries.items() if needs_retense(e) and r not in pending)
+    if not references:
+        print("no overview needs rewording, or the rewordings are on their way")
+        return
+    if args.pilot:
+        references = random.Random(PILOT_SEED).sample(references, min(RETENSE_PILOT_COUNT, len(references)))
+    elif args.limit:
+        references = references[: args.limit]
+    submit_retense(entries, references, args.model, "retense-pilot" if args.pilot else "retense")
+    print("run `python -m pipeline.summarise collect --wait` to fetch them")
+
+
 def cmd_collect(args) -> None:
     by_reference = {a["base_reference"].upper(): a for a in all_agreements()}
     while True:
@@ -421,11 +592,17 @@ def cmd_collect(args) -> None:
                 continue
             if record["kind"] == "pilot":
                 pilot_results[record["id"]] = fetched
+                continue
+            if record["kind"] == "retense-pilot":
+                candidates = sum(needs_retense(e) for e in overviews.load().values())
+                print(f"wrote {write_retense_pilot(record, fetched, candidates).relative_to(ROOT)}")
+            elif record["kind"] == "retense":
+                store_retense(record, fetched)
             else:
                 store(record, fetched, by_reference)
-                record["collected"] = True
-                usage = fetched["usage"]
-                print(f"  cost about ${cost(record['model'], usage['input'], usage['output']):.2f}")
+            record["collected"] = True
+            usage = fetched["usage"]
+            print(f"  cost about ${cost(record['model'], usage['input'], usage['output']):.2f}")
         if pilot and len(pilot_results) == len(pilot):
             path = write_pilot(pilot, pilot_results, by_reference)
             for record in pilot:
@@ -450,6 +627,11 @@ def main(argv: list[str] | None = None) -> None:
     run.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(PRICES))
     run.add_argument("--limit", type=int, help="submit at most this many")
     run.set_defaults(func=cmd_run)
+    retense = commands.add_parser("retense", help="reword overviews written in the present tense")
+    retense.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(PRICES))
+    retense.add_argument("--pilot", action="store_true", help=f"reword {RETENSE_PILOT_COUNT} and write them up")
+    retense.add_argument("--limit", type=int, help="submit at most this many")
+    retense.set_defaults(func=cmd_retense)
     collect = commands.add_parser("collect", help="fetch batches that have ended")
     collect.add_argument("--wait", action="store_true", help="keep checking every minute until all have ended")
     collect.set_defaults(func=cmd_collect)
