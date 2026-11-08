@@ -206,7 +206,11 @@ is what decides the rules below.
   the ended agreements' overviews from the register text with Sonnet). A
   rewording that added or dropped a name or number, or still spoke in the
   present, was held back beside the overview it would replace, as
-  `retense_draft`. Pages for ended agreements also say, under the overview,
+  `retense_draft`. Michael then asked for those to be fixed: the 110 held
+  back and 3 that failed were reworded again by Sonnet ($0.15, with
+  `retense --flagged`), and the 45 it was flagged on were read and accepted,
+  4 with a small edit, so every reworded overview is shown. Pages for ended
+  agreements also say, under the overview,
   that the term has passed.
 - **Checked before it is shown.** An overview is held back, with its reasons
   in `flags`, if it runs past 90 words, says whether data was or was not

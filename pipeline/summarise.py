@@ -255,7 +255,7 @@ def needs_retense(entry: dict) -> bool:
 def retense_params(summary: str, model: str) -> dict:
     return {
         "model": model,
-        "max_tokens": 2048,
+        "max_tokens": 4096,
         "output_config": {"effort": "low"},
         "system": RETENSE_INSTRUCTIONS,
         "messages": [{"role": "user", "content": summary}],
@@ -264,12 +264,16 @@ def retense_params(summary: str, model: str) -> dict:
 
 def drift(before: str, after: str) -> list[str]:
     """Names and numbers a rewording added or dropped. Empty if none."""
+    def parts(found: list[str]) -> set[str]:
+        # By part, so "Southend-on-Sea" counts the same at the start of a sentence.
+        return {re.sub(r"[\'’]s$", "", p) for w in found for p in w.split("-") if p[:1].isupper()}
+
     def names(text: str) -> set[str]:
-        return {re.sub(r"[\'’]s$", "", w) for w in CAPITALISED.findall(text)}
+        return parts(CAPITALISED.findall(text))
 
     def words(text: str) -> set[str]:
         # Every word, wherever it falls: a name may move to the start of a sentence.
-        return {re.sub(r"[\'’]s$", "", w) for w in re.findall(r"\b[A-Z][A-Za-z0-9&'-]+\b", text)}
+        return parts(re.findall(r"\b[A-Z][A-Za-z0-9&'-]+\b", text))
 
     def numbers(text: str) -> set[str]:
         return {n.rstrip(".,") for n in NUMBERS.findall(text)}
@@ -338,7 +342,8 @@ def store_retense(record: dict, fetched: dict) -> None:
             flagged += 1
             print(f"  {reference}: " + "; ".join(flags))
         else:
-            entry = {**entry, "summary": after}
+            entry = {k: v for k, v in entry.items() if k not in ("retense_draft", "retense_flags")}
+            entry["summary"] = after
         entry["retensed"] = {"model": record["model"], "written": written}
         entries[reference] = entry
         stored += 1
@@ -574,7 +579,8 @@ def cmd_run(args) -> None:
 def cmd_retense(args) -> None:
     entries = overviews.load()
     pending = {r for record in load_state() if not record["collected"] for r in record["hashes"]}
-    references = sorted(r for r, e in entries.items() if needs_retense(e) and r not in pending)
+    references = sorted(r for r, e in entries.items()
+                        if (needs_retense(e) or (args.flagged and "retense_draft" in e)) and r not in pending)
     if not references:
         print("no overview needs rewording, or the rewordings are on their way")
         return
@@ -642,6 +648,8 @@ def main(argv: list[str] | None = None) -> None:
     retense.add_argument("--model", default=DEFAULT_MODEL, choices=sorted(PRICES))
     retense.add_argument("--pilot", action="store_true", help=f"reword {RETENSE_PILOT_COUNT} and write them up")
     retense.add_argument("--limit", type=int, help="submit at most this many")
+    retense.add_argument("--flagged", action="store_true",
+                         help="also reword again the overviews whose last rewording was held back")
     retense.set_defaults(func=cmd_retense)
     collect = commands.add_parser("collect", help="fetch batches that have ended")
     collect.add_argument("--wait", action="store_true", help="keep checking every minute until all have ended")
