@@ -121,3 +121,76 @@ class Checks(unittest.TestCase):
         params = summarise.request_params(agreement, "claude-haiku-5-5")
         self.assertEqual(params["model"], "claude-haiku-5-5")
         self.assertEqual(params["system"], summarise.INSTRUCTIONS)
+
+
+class Retense(unittest.TestCase):
+    BEFORE = "University of Leeds is using HES data from 2010 to study hospital stays. It published 3 papers."
+
+    def test_present_tense_overviews_need_rewording_once(self):
+        self.assertTrue(summarise.needs_retense({"summary": self.BEFORE}))
+        self.assertTrue(summarise.needs_retense({"summary": "Leeds uses HES data."}))
+        self.assertFalse(summarise.needs_retense({"summary": "Leeds's agreement covers HES data."}))
+        self.assertFalse(summarise.needs_retense({"summary": "Leeds's agreement covers Secondary Uses Service data."}))
+        self.assertFalse(summarise.needs_retense({"summary": self.BEFORE, "retensed": {}}))
+
+    def test_the_request_sends_only_the_overview(self):
+        params = summarise.retense_params(self.BEFORE, "claude-sonnet-5-5")
+        self.assertEqual(params["system"], summarise.RETENSE_INSTRUCTIONS)
+        self.assertEqual(params["messages"], [{"role": "user", "content": self.BEFORE}])
+
+    def test_a_faithful_rewording_passes(self):
+        after = "University of Leeds's agreement covers HES data from 2010, to study hospital stays. It published 3 papers."
+        self.assertEqual(summarise.retense_flags(self.BEFORE, after), [])
+
+    def test_added_or_dropped_names_and_numbers_are_flagged(self):
+        after = "University of Leeds's agreement covers HES and ONS data from 2011 for hospital stays."
+        flags = summarise.retense_flags(self.BEFORE, after)
+        self.assertIn("rewording added: 2011, ONS", flags)
+        self.assertIn("rewording dropped: 2010, 3", flags)
+
+    def test_a_name_moved_to_the_start_of_a_sentence_is_not_dropped(self):
+        before = "Leeds studies prescribing. So far, ICBs have used its analyses."
+        after = "Leeds's agreement covers prescribing. ICBs have used its analyses."
+        self.assertEqual(summarise.drift(before, after), [])
+
+    def test_wording_still_in_the_present_is_flagged(self):
+        flags = summarise.retense_flags(self.BEFORE, self.BEFORE)
+        self.assertIn("still in the present: is using", flags)
+
+    def test_a_rewording_is_stored_only_over_the_overview_it_was_made_from(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "summaries.json"
+            entries = {
+                "A": {"hash": "h1", "summary": self.BEFORE, "model": "claude-sonnet-5-5", "written": "2026-10-31"},
+                "B": {"hash": "h2", "summary": "B is using HES.", "model": "claude-sonnet-5-5", "written": "2026-10-31"},
+                "C": {"hash": "h3", "summary": "C is using HES.", "model": "claude-sonnet-5-5", "written": "2026-10-31"},
+            }
+            overviews.write(entries, path)
+            record = {"model": "claude-sonnet-5-5", "submitted": "2026-11-08T08:00:00+00:00",
+                      "hashes": {"A": "h1", "B": "old", "C": "h3"},
+                      "originals": {"A": self.BEFORE, "B": "B is using HES.", "C": "C is using HES."}}
+            after = "University of Leeds's agreement covers HES data from 2010, to study hospital stays. It published 3 papers."
+            with mock.patch.object(overviews, "PATH", path):
+                summarise.store_retense(record, {"texts": {"A": after, "B": "B's agreement covers HES.",
+                                                          "C": "C is using HES and ONS data."}})
+            stored = overviews.load(path)
+        self.assertEqual(stored["A"]["summary"], after)
+        self.assertEqual(stored["A"]["hash"], "h1")
+        self.assertEqual(stored["A"]["retensed"], {"model": "claude-sonnet-5-5", "written": "2026-11-08"})
+        self.assertNotIn("flags", stored["A"])
+        self.assertEqual(stored["B"]["summary"], "B is using HES.")
+        # A flagged rewording waits beside the overview, which stays shown.
+        self.assertEqual(stored["C"]["summary"], "C is using HES.")
+        self.assertEqual(stored["C"]["retense_draft"], "C is using HES and ONS data.")
+        self.assertNotIn("flags", stored["C"])
+        self.assertTrue(stored["C"]["retense_flags"])
+
+
+class RewordingModels(unittest.TestCase):
+    def test_only_rewordings_that_are_shown_count(self):
+        entries = {
+            "A": {"model": "claude-sonnet-5-5", "retensed": {"model": "claude-haiku-5-5"}},
+            "B": {"model": "claude-sonnet-5-5", "retensed": {"model": "claude-opus-5-5"}, "retense_draft": "x"},
+            "C": {"model": "claude-sonnet-5-5"},
+        }
+        self.assertEqual(overviews.rewording_models(entries), ["Claude Haiku 5.5"])

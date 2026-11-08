@@ -93,3 +93,10 @@ def earlier_source(view: dict) -> dict:
 def models_used(entries: dict[str, dict]) -> list[str]:
     """The names of the models that wrote the overviews, for the About page."""
     return sorted({MODEL_NAMES.get(e.get("model", ""), e.get("model", "")) for e in entries.values() if e.get("model")})
+
+
+def rewording_models(entries: dict[str, dict]) -> list[str]:
+    """The names of the models that reworded overviews to outlive their term
+    (`pipeline.summarise retense`), counting only rewordings that are shown."""
+    return sorted({MODEL_NAMES.get(e["retensed"].get("model", ""), e["retensed"].get("model", ""))
+                   for e in entries.values() if e.get("retensed") and "retense_draft" not in e})

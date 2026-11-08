@@ -734,6 +734,7 @@ def build(
         "about/index.html",
         site_feed=site_feed,
         overview_models=overviews.models_used(overview_entries),
+        rewording_models=overviews.rewording_models(overview_entries),
         output_stats=outputs.stats(output_links, {a["base_reference"].upper() for a in data["agreements"]}),
         output_lag=outputs.lag(all_papers),
         earlier_stats={
