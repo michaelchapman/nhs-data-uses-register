@@ -223,8 +223,9 @@
       })
       .filter(function (list) { return list.table; });
     function filterArchived(value) {
-      if (!text) return;
+      if (!text) return 0;
       var terms = searchWords(value);
+      var matched = 0;
       apart.forEach(function (list) {
         var rows = Array.prototype.slice.call(list.table.tBodies[0].rows);
         var shown = 0;
@@ -233,6 +234,7 @@
           row.hidden = !match;
           if (match) shown++;
         });
+        if (terms.length) matched += shown;
         (list.table.closest(".table-scroll") || list.table).hidden = shown === 0;
         if (list.count) {
           list.count.hidden = !terms.length;
@@ -242,6 +244,7 @@
             : shown + " of " + total.toLocaleString("en-GB") + " match the search.";
         }
       });
+      return matched;
     }
 
     // Where a search here also looks up organisation and dataset names. The
@@ -270,6 +273,10 @@
       }
       var terms = (text && text.value || "").toLowerCase().split(/\s+/).filter(Boolean);
       var shown = 0;
+      // Rows the search finds but another filter hides, such as an expired
+      // agreement while "In term" is ticked: the count says so, so a search for
+      // a reference never reads as if the agreement weren't there.
+      var outside = 0;
       // An agreement opened from a search shows where the words are: its page
       // reads `q` and highlights them (assets/highlight.js).
       var carried = indexUrl && text && text.value.trim() ? "?q=" + encodeURIComponent(text.value.trim()) : "";
@@ -284,6 +291,7 @@
           var haystack = row.dataset.search || row.textContent.toLowerCase();
           match = terms.every(function (term) { return haystack.indexOf(term) !== -1; });
         }
+        var found = match;
 
         if (match) {
           match = selects.every(function (select) {
@@ -313,14 +321,36 @@
 
         row.hidden = !match;
         if (match) shown++;
+        else if (found && terms.length) outside++;
       });
+      // The lists kept apart below the table (agreements no longer listed, or
+      // only in the earlier registers) have counts of their own.
+      var apartShown = filterArchived(text ? text.value : "");
 
       if (count) {
-        count.textContent = shown === 0
+        var outsideText = outside.toLocaleString("en-GB") + " " + (outside === 1 ? noun.replace(/s$/, "") : noun);
+        count.textContent = shown === 0 && outside
+          ? "None shown with these filters, but " + outsideText + " " + (outside === 1 ? "matches" : "match") + " the search. "
+          : shown === 0 && apartShown
+          ? "No " + noun + " in the register match. " + apartShown.toLocaleString("en-GB") + " listed below " + (apartShown === 1 ? "does." : "do.")
+          : shown === 0
           ? "No " + noun + " match. Try fewer or shorter search words" + (resetLabel ? ", or " + resetLabel.replace(" filters", " the filters") : "") + "."
           : shown === total
           ? "Showing all " + total.toLocaleString("en-GB") + " " + noun + "."
-          : "Showing " + shown.toLocaleString("en-GB") + " of " + total.toLocaleString("en-GB") + " " + noun + ".";
+          : "Showing " + shown.toLocaleString("en-GB") + " of " + total.toLocaleString("en-GB") + " " + noun + "." +
+            (outside ? " " + outside.toLocaleString("en-GB") + " more " + (outside === 1 ? noun.replace(/s$/, "") + " matches" : noun + " match") + " outside these filters. " : "");
+        if (outside) {
+          var showAll = document.createElement("button");
+          showAll.type = "button";
+          showAll.className = "link-button";
+          showAll.textContent = outside === 1 ? "Show it" : "Show them";
+          showAll.addEventListener("click", function () {
+            selects.forEach(function (select) { select.value = ""; });
+            flags.forEach(function (flag) { flag.checked = false; });
+            apply();
+          });
+          count.appendChild(showAll);
+        }
       }
       // An empty table is only a row of headings, so it goes while nothing
       // matches. A table folded away that a search finds rows in is unfolded.
@@ -333,7 +363,6 @@
 
       labelToggle();
       showNames();
-      filterArchived(text ? text.value : "");
       if (text) setParam("q", text.value.trim());
       selects.forEach(function (select) { setParam(select.dataset.key, select.value); });
       flags.forEach(function (flag) { setParam(flag.dataset.key, flagParam(flag)); });

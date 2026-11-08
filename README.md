@@ -1,4 +1,4 @@
-# NHS Data Access Explorer
+# Health Data Uses Explorer
 
 [![Build and deploy](https://github.com/michaelchapman/nhs-data-uses-register/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/michaelchapman/nhs-data-uses-register/actions/workflows/build.yml)
 [![Site](https://img.shields.io/website?url=https%3A%2F%2Fhealthdatauses.uk&label=healthdatauses.uk)](https://healthdatauses.uk)
@@ -26,6 +26,10 @@ From one edition of the register (~5,500 agreement versions):
   which agreements name this dataset.
 - **A "what changed" page** — agreements added, amended or withdrawn since the
   previous edition.
+- **Atom feeds of what changed** — one for the register at
+  `/changes/feed.xml`, and one on each organisation's and dataset's page, so
+  a feed reader can follow them. Dated by edition, so a rebuild writes the
+  same feeds.
 - **Projects and papers under sublicensing agreements** — for the agreements
   that permit sublicensing and are held by cohorts, research databases and data
   services, links to each holder's own release register, list of approved
@@ -70,6 +74,18 @@ configured in `pyproject.toml`:
 .venv/bin/python -m unittest
 .venv/bin/ruff check pipeline tests
 .venv/bin/mypy
+```
+
+After the build, CI also checks the built site: its internal links, that each
+figure agrees wherever it appears, and the agreements search in a browser.
+The build itself runs with `--strict`, so a warning fails it.
+
+```bash
+.venv/bin/python -m pipeline.run --strict
+.venv/bin/python -m pipeline.linkcheck _site
+.venv/bin/python -m pipeline.sitecheck _site
+.venv/bin/pip install -r requirements-browser.txt && .venv/bin/python -m playwright install chromium
+.venv/bin/python -m unittest discover -s tests/browser
 ```
 
 Useful flags:
@@ -189,13 +205,16 @@ pipeline/clichecheck.py         flags LLM-cliché phrasing in the repo's own pro
 pipeline/overviews.py           the AI overviews an agreement page shows, and when it shows one
 pipeline/summarise.py           writes those overviews with the Claude Batch API (maintainer only)
 pipeline/linkcheck.py           finds internal links in a built site that point nowhere
+pipeline/sitecheck.py           checks a built site states each figure the same way on every page
 pipeline/templates/             Jinja2 templates
 tests/                          unit tests and a synthetic register (python -m unittest)
+tests/browser/                  the agreements search, tested in a browser against a built site
 assets/                         CSS, and the scripts for filtering, search highlighting, citing and printing
 .github/actions/check/          the checks and build both workflows run
 pyproject.toml                  ruff and mypy settings
 requirements.txt                what the build needs, pinned
 requirements-dev.txt            the checkers, pinned
+requirements-browser.txt        Playwright, for the browser tests, pinned
 requirements-summarise.txt      what pipeline.summarise needs, pinned
 data/raw/                       downloaded workbooks (gitignored)
 data/facts/                     committed facts: every edition, and the manifest

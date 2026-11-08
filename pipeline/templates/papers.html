@@ -8,9 +8,9 @@
    every row is in the HTML, so the page still reads with JavaScript off. #}
 {% set found = papers|selectattr("basis", "equalto", "found")|list %}
 <h1>Published papers</h1>
-<p class="lede">{{ papers|length|commas }} published papers linked to agreements in the register, each listed once with the agreements it is linked to.</p>
+<p class="lede">{{ papers|length|commas }} published papers linked to agreements in the register, each listed once with the agreements it is linked to. Papers linked only to agreements in NHS Digital's earlier release registers are shown on those agreements' pages, not here.</p>
 <p class="papers-flag"><strong>Not part of the register.</strong>
-  These links come from a separate review of open-access papers, made against the {{ outputs_meta.register_edition|edition }} edition of the register (<a href="{{ meta.repo_url }}/commit/{{ outputs_meta.source_commit }}">{{ outputs_meta.source_commit }}</a>) and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. A listed paper shows the data was used in published work, not what difference that work made. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a></p>
+  These links come from a separate review of open-access papers, made against the {{ outputs_meta.register_edition|edition }} edition of the register and refreshed about every six months. The list is incomplete: the review reads open-access papers only, and finds about half of the papers the register itself cites. A listed paper shows the data was used in published work, not what difference that work made. <a href="{{ meta.base_path }}/about/#papers">How papers are linked</a></p>
 
 <dl class="key-facts">
   <div><dt>Published papers</dt><dd>{{ papers|length|commas }}</dd></div>

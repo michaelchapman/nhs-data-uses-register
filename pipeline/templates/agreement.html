@@ -101,18 +101,27 @@
   <p class="overview-flag"><strong>AI-generated summary, not part of the register.</strong>
     Written from the register's text under <a href="#purpose">Why the data was released</a>, which is the authoritative version. It may contain mistakes. <a href="{{ meta.base_path }}/about/#ai-overviews">How these summaries are written</a></p>
   <p class="overview-text">{{ overview.summary }}</p>
+  {% if (agreement.archived or not in_term) and agreement.coverage_end %}
+  {# Overviews are rewritten only when the text changes, not when the term ends,
+     so an older one can read as if the agreement were still running. #}
+  <p class="overview-flag">The agreement's latest version ended on {{ agreement.coverage_end|date }}, so read the summary as what it was for, even where it speaks of the present.</p>
+  {% endif %}
 </section>
 {% endif %}
 <dl class="key-facts">
   <div><dt>Reference</dt><dd>{{ agreement.base_reference }}</dd></div>
   <div><dt>{{ now|capitalize }} version</dt><dd>{{ "v" ~ v.version if v.version else "Not versioned" }}</dd></div>
   <div><dt>Term of {{ now }} version</dt><dd>{{ v.start_date|date }} to {{ v.end_date|date }}</dd></div>
-  <div><dt>Start date</dt><dd>{{ "Before " if not agreement.first_start_known else "" }}{{ agreement.first_start|date }}</dd></div>
+  {# "Since", as the agreements list calls it: the earliest date any register
+     gives, which is the earlier release registers' where they list data
+     released before the Data Uses Register's first start date. #}
+  {% set listed_first = earlier and earlier.first_listed and (not agreement.first_start or earlier.first_listed < agreement.first_start) %}
+  <div><dt>Since</dt><dd>{% if listed_first %}<a href="#earlier-registers">{{ earlier.first_label }}</a> <span class="hint">first listed receiving data</span>{% else %}{{ "Before " if not agreement.first_start_known else "" }}{{ agreement.first_start|date }}{% endif %}</dd></div>
   <div><dt>Data controller</dt><dd>{{ v.controller_basis or "Not stated" }}</dd></div>
   <div><dt>Commercial purposes</dt><dd>{{ v.commercial or "Not stated" }}</dd></div>
   <div><dt>Sublicensing</dt><dd>{{ v.sublicensing or "Not stated" }}</dd></div>
-  <div><dt>Files released to date</dt><dd>{{ agreement.files_released|commas }}</dd></div>
-  {% if earlier and earlier.first_label %}<div><dt>First listed receiving data</dt><dd><a href="#earlier-registers">{{ earlier.first_label }}</a></dd></div>{% endif %}
+  <div><dt>Files released to date</dt><dd>{{ agreement.files_released|commas }}{% if earlier and earlier.first_label and not agreement.files_released %} <span class="hint">recorded in the Data Uses Register. The <a href="#earlier-registers">earlier registers</a> list data released under it from {{ earlier.first_label }}.</span>{% endif %}</dd></div>
+  {% if earlier and earlier.first_label and not listed_first %}<div><dt>First listed receiving data</dt><dd><a href="#earlier-registers">{{ earlier.first_label }}</a></dd></div>{% endif %}
 </dl>
 
 {% set show_controllers = v.controllers and (v.controllers|length > 1 or v.controllers[0] != agreement.organisation) %}

@@ -56,7 +56,8 @@ class Page(unittest.TestCase):
         self.assertIn("Papers found to have used this agreement's data", page)
         self.assertIn('<a href="https://doi.org/10.1136/bmj-2024-000001">Maternity outcomes in England</a>', page)
         self.assertIn("November 2026 edition", page)
-        self.assertIn("/commit/c65350e", page)
+        # The export's commit is for maintainers, not readers.
+        self.assertNotIn("c65350e", page)
         self.assertIn('href="#papers"', page)
         self.assertNotIn("benefit of", page.lower())
         # The fixture's register reports no benefits, so the page says the

@@ -1,0 +1,4 @@
+{#- A link to the page's Atom feed (pipeline/feeds.py), where it has one. -#}
+{% macro feed_link(feed_url, what) -%}
+{% if feed_url %}<p class="feed-link"><a href="{{ feed_url }}">Follow changes to {{ what }} in a feed reader</a> <span class="hint">(an Atom feed, updated with each edition: <a href="{{ meta.base_path }}/about/#feeds">about feeds</a>)</span></p>{% endif %}
+{%- endmacro %}

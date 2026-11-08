@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from pipeline import build, linkcheck, model
+from pipeline import build, linkcheck, model, sitecheck
 from pipeline.extract import extract
 from pipeline.rules import Rules
 
@@ -24,6 +24,35 @@ class BuiltSite(unittest.TestCase):
             broken, pages = linkcheck.check(out)
         self.assertGreater(pages, 5)
         self.assertEqual(dict(broken), {})
+
+    def test_the_site_is_assembled_before_any_page_is_written(self):
+        # `assemble` works out every figure without writing anything, so a
+        # test can check numbers without reading HTML.
+        with dataset_aliases():
+            data = extract(workbook_bytes())
+            site = build.assemble(data, site_meta(), FIRST_EDITION)
+        self.assertEqual(site.stats["agreements"], len(data["agreements"]))
+        self.assertTrue(all("since" in a for a in data["agreements"]))
+        self.assertEqual(set(site.by_slug), {a["slug"] for a in data["agreements"]})
+
+    def test_every_figure_agrees_across_pages(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+            self.assertGreater(len(sitecheck.list_rows(out)), 0)
+            self.assertEqual(sitecheck.check(out), [])
+            # A page that disagrees with the list is caught.
+            page = next(out.glob("agreements/dars-nic-*/index.html"))
+            text = page.read_text()
+            page.write_text(text.replace("<dt>Files released to date</dt><dd>", "<dt>Files released to date</dt><dd>9", 1))
+            self.assertTrue(any("files in the list" in problem for problem in sitecheck.check(out)))
+
+    def test_a_hand_kept_file_naming_a_missing_page_is_a_warning(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            build_site(out)
+        # The real onward-registers file names ICB pages the fixture lacks.
+        self.assertTrue(any(w.startswith("onward:") for w in build.WARNINGS))
 
     def test_no_broken_links_under_a_base_path(self):
         with tempfile.TemporaryDirectory() as directory:

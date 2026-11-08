@@ -102,6 +102,10 @@ names or context from elsewhere.
 reports that separately.
 - Spell out an acronym the first time if the text spells it out; otherwise \
 keep it as written.
+- The overview must stay true after the agreement ends, since it is not \
+rewritten then. Describe what the agreement allows, not what the \
+organisation is doing now: write "The University of Leeds's agreement \
+covers..." or "The data is for...", never "is using", "uses" or "currently".
 - No headings, bullet points or quotation of the text. Start with the \
 organisation's name, not with "This agreement".
 - Reply with the overview only."""
